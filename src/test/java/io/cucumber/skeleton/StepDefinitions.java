@@ -1,5 +1,6 @@
 package io.cucumber.skeleton;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
@@ -17,13 +18,16 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
+import static org.junit.Assert.assertTrue;
+
 public class StepDefinitions {
+
+    private WebDriver driver;
+    public WebDriverWait wait;
 
     @Before
     public void setup() throws MalformedURLException{
 
-        WebDriver driver;
-        WebDriverWait wait;
         File rootPath = new File(System.getProperty("user.dir"));
         File appDir = new File(rootPath,"src/test/resources");
         File app = new File(appDir,"owncloud.apk");
@@ -43,24 +47,30 @@ public class StepDefinitions {
 
     }
 
-    @Given("I have {int} cukes in my belly")
-    public void I_have_cukes_in_my_belly(int cukes) throws Throwable {
-        Belly belly = new Belly();
-        belly.eat(cukes);
+    @Given("I am a valid user")
+    public void I_am_a_valid_user() throws Throwable {
+        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+        driver.findElement(By.id("skip")).click();
+
     }
 
-    @When("I wait {int} hour")
-    public void i_wait_hours(int hours) throws Throwable {
-        Thread.sleep(hours);
+    @When("I login as {string}")
+    public void i_login_as(String username) throws Throwable {
+        driver.findElement(By.id("hostUrlInput")).sendKeys("demo.owncloud.com");
+        driver.findElement(By.id("embeddedCheckServerButton")).click();
+        driver.findElement(By.id("account_username")).sendKeys(username);
+        driver.findElement(By.id("account_password")).sendKeys("demo");
+        driver.findElement(By.id("loginButton")).click();
+        driver.findElement(By.xpath("//*[@text='ALLOW']")).click();
     }
 
-    @Then("my belly should growl")
-    public void my_belly_should_growl() {
-        int a = 1+1;
+    @Then("I can see the main page")
+    public void i_can_see_the_main_page() {
+        assertTrue(driver.findElements(By.xpath("//*[@text='ownCloud']")).size() > 0);
     }
 
     @After
     public void tearDown(){
-
+        driver.quit();
     }
 }
