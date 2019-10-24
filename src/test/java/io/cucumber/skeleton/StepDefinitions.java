@@ -54,11 +54,11 @@ public class StepDefinitions {
 
     }
 
-    @When("I login as {string}")
-    public void i_login_as(String username) throws Throwable {
+    @When("I login as demo")
+    public void i_login_as_demo() throws Throwable {
         driver.findElement(By.id("hostUrlInput")).sendKeys("demo.owncloud.com");
         driver.findElement(By.id("embeddedCheckServerButton")).click();
-        driver.findElement(By.id("account_username")).sendKeys(username);
+        driver.findElement(By.id("account_username")).sendKeys("demo");
         driver.findElement(By.id("account_password")).sendKeys("demo");
         driver.findElement(By.id("loginButton")).click();
         driver.findElement(By.xpath("//*[@text='ALLOW']")).click();
