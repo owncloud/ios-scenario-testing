@@ -11,7 +11,8 @@ import io.appium.java_client.android.AndroidDriver;
 
 public class AppiumManager {
 
-    protected AndroidDriver driver;
+    private AndroidDriver driver;
+    private final String driverURL = "http://127.0.0.1:4723/wd/hub";
 
     public void init() throws MalformedURLException {
 
@@ -27,7 +28,7 @@ public class AppiumManager {
         capabilities.setCapability ("appPackage", "com.owncloud.android");
         capabilities.setCapability ("appActivity", ".ui.activity.FileDisplayActivity");
 
-        driver = new AndroidDriver (new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
+        driver = new AndroidDriver (new URL(driverURL), capabilities);
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
     }
 
