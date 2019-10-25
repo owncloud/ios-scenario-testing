@@ -23,44 +23,20 @@ public class StepDefinitions {
 
     @Before
     public void setup() throws MalformedURLException{
-
-        /*File rootPath = new File(System.getProperty("user.dir"));
-        File appDir = new File(rootPath,"src/test/resources");
-        File app = new File(appDir,"owncloud.apk");
-
-        DesiredCapabilities capabilities = new DesiredCapabilities();
-
-        capabilities.setCapability ("platformName", "Android");
-        capabilities.setCapability ("deviceName", "test");
-        capabilities.setCapability ("app", app.getAbsolutePath());
-        capabilities.setCapability ("appPackage", "com.owncloud.android");
-        capabilities.setCapability ("appActivity", ".ui.activity.FileDisplayActivity");
-
-        driver = new AndroidDriver (new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
-        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);*/
-
         AppiumManager manager = new AppiumManager();
         manager.init();
         driver = manager.getDriver();
-
     }
 
     @Given("^I am a valid user$")
     public void i_am_a_valid_user() throws Throwable {
-        //driver.findElement(By.id("skip")).click();
         WizardPage wizardPage = new WizardPage(driver);
         wizardPage.skip();
-
     }
 
     @When("^I login as (.+) with password (.+)$")
-    public void i_login_as_string_with_password_string(String username, String password) throws Throwable {
-        /*driver.findElement(By.id("hostUrlInput")).sendKeys(serverURL);
-        driver.findElement(By.id("embeddedCheckServerButton")).click();
-        driver.findElement(By.id("account_username")).sendKeys(username);
-        driver.findElement(By.id("account_password")).sendKeys(password);
-        driver.findElement(By.id("loginButton")).click();
-        driver.findElement(By.xpath("//*[@text='ALLOW']")).click();*/
+    public void i_login_as_string_with_password_string(String username, String password)
+            throws Throwable {
         LoginPage loginPage = new LoginPage(driver);
         loginPage.typeURL();
         loginPage.typeCredentials(username, password);
@@ -68,27 +44,21 @@ public class StepDefinitions {
     }
 
     @When("^I login as (.+) with incorrect password (.+)$")
-    public void i_login_as_string_with_incorrect_password_string(String username, String password) throws Throwable {
-        /*driver.findElement(By.id("hostUrlInput")).sendKeys(serverURL);
-        driver.findElement(By.id("embeddedCheckServerButton")).click();
-        driver.findElement(By.id("account_username")).sendKeys(username);
-        driver.findElement(By.id("account_password")).sendKeys(password);
-        driver.findElement(By.id("loginButton")).click();*/
+    public void i_login_as_string_with_incorrect_password_string(String username, String password)
+            throws Throwable {
         LoginPage loginPage = new LoginPage(driver);
         loginPage.typeURL();
         loginPage.typeCredentials(username, password);
     }
 
     @Then("^I can see the main page$")
-    public void i_can_see_the_main_page() {
-        //assertTrue(driver.findElements(By.xpath("//*[@text='ownCloud']")).size() > 0);
+    public void i_can_see_the_main_page() throws Throwable {
         FileListPage fileListPage = new FileListPage(driver);
         assertTrue(fileListPage.isHeader());
     }
 
     @Then("^I see an error message$")
-    public void i_see_an_error_message() {
-        //assertTrue(driver.findElements(By.xpath("//*[@text='Wrong username or password']")).size() > 0 );
+    public void i_see_an_error_message() throws Throwable {
         LoginPage loginPage = new LoginPage(driver);
         assertTrue(loginPage.isCredentialsErrorMessage());
     }
