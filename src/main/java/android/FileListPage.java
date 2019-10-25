@@ -2,11 +2,16 @@ package android;
 
 import org.openqa.selenium.By;
 
-public class FileListPage extends AppiumManager {
+import io.appium.java_client.android.AndroidDriver;
 
-    private String headertext_xpath = "//*[@text='Wrong username or password']";
+public class FileListPage {
 
-    public FileListPage() {}
+    private AndroidDriver driver;
+    private String headertext_xpath = "//*[@text='ownCloud']";
+
+    public FileListPage(AndroidDriver driver) {
+        this.driver = driver;
+    }
 
     public boolean isHeader(){
         return driver.findElements(By.xpath(headertext_xpath)).size() > 0;

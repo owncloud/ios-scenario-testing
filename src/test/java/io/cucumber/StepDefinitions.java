@@ -41,13 +41,14 @@ public class StepDefinitions {
 
         AppiumManager manager = new AppiumManager();
         manager.init();
+        driver = manager.getDriver();
 
     }
 
     @Given("^I am a valid user$")
     public void i_am_a_valid_user() throws Throwable {
         //driver.findElement(By.id("skip")).click();
-        WizardPage wizardPage = new WizardPage();
+        WizardPage wizardPage = new WizardPage(driver);
         wizardPage.skip();
 
     }
@@ -60,7 +61,7 @@ public class StepDefinitions {
         driver.findElement(By.id("account_password")).sendKeys(password);
         driver.findElement(By.id("loginButton")).click();
         driver.findElement(By.xpath("//*[@text='ALLOW']")).click();*/
-        LoginPage loginPage = new LoginPage();
+        LoginPage loginPage = new LoginPage(driver);
         loginPage.typeURL();
         loginPage.typeCredentials(username, password);
         loginPage.allowPermissions();
@@ -73,7 +74,7 @@ public class StepDefinitions {
         driver.findElement(By.id("account_username")).sendKeys(username);
         driver.findElement(By.id("account_password")).sendKeys(password);
         driver.findElement(By.id("loginButton")).click();*/
-        LoginPage loginPage = new LoginPage();
+        LoginPage loginPage = new LoginPage(driver);
         loginPage.typeURL();
         loginPage.typeCredentials(username, password);
     }
@@ -81,14 +82,14 @@ public class StepDefinitions {
     @Then("^I can see the main page$")
     public void i_can_see_the_main_page() {
         //assertTrue(driver.findElements(By.xpath("//*[@text='ownCloud']")).size() > 0);
-        FileListPage fileListPage = new FileListPage();
+        FileListPage fileListPage = new FileListPage(driver);
         assertTrue(fileListPage.isHeader());
     }
 
     @Then("^I see an error message$")
     public void i_see_an_error_message() {
         //assertTrue(driver.findElements(By.xpath("//*[@text='Wrong username or password']")).size() > 0 );
-        LoginPage loginPage = new LoginPage();
+        LoginPage loginPage = new LoginPage(driver);
         assertTrue(loginPage.isCredentialsErrorMessage());
     }
 
