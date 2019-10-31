@@ -39,17 +39,24 @@ public class ShareSteps {
         loginPage.allowPermissions();
     }
 
-    @When("^I select Documents to share$")
-    public void i_select_documents_share() throws Throwable {
+    @When("^I select (.+) to share with (.+)$")
+    public void i_select_to_share_with(String itemName, String sharee) throws Throwable {
         FileListPage fileListPage = new FileListPage(driver);
-        fileListPage.longPress();
-        fileListPage.shareAction();
+        fileListPage.shareAction(itemName);
+        SharePage sharePage = new SharePage(driver);
+        sharePage.shareWith(sharee);
     }
 
-    @Then("^I see the Share view$")
-    public void documents_is_shared() throws Throwable {
+    @Then("^(.+) is shared with (.+)$")
+    public void is_shared_with(String itenName, String sharee) throws Throwable {
         SharePage sharePage = new SharePage(driver);
-        assertTrue(sharePage.isHeader());
+        assertTrue(sharePage.isUserInList(sharee));
+    }
+
+    @Then("^(.+) sees (.+) in the file list$")
+    public void sees_in_file_list(String sharee, String item) throws Throwable {
+        SharePage sharePage = new SharePage(driver);
+        assertTrue(sharePage.isUserInList(sharee));
     }
 
     @After

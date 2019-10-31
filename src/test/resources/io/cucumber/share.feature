@@ -1,6 +1,12 @@
 Feature: Share
 
-  Scenario: Correct share
+  @Current
+  Scenario Outline: Correct share
     Given I am logged
-    When I select Documents to share
-    Then I see the Share view
+    When I select <item> to share with <user>
+    Then <item> is shared with <user>
+    And <user> sees <item> in the file list
+
+    Examples:
+      |    item     |   user    |
+      |  Documents  |   user2   |
