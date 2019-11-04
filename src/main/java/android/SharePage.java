@@ -2,21 +2,16 @@ package android;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 
 import io.appium.java_client.android.AndroidDriver;
 
-public class SharePage {
-
-    private AndroidDriver driver;
-    private Actions actions;
+public class SharePage extends CommonPage {
 
     private String addshareebutton_id = "addUserButton";
     private String searchSrctext_id = "search_src_text";
 
     public SharePage(AndroidDriver driver){
-        this.driver = driver;
-        actions = new Actions(driver);
+        super(driver);
     }
 
     public boolean isHeader() {
@@ -28,11 +23,9 @@ public class SharePage {
         actions.click(addSharee).perform();
         WebElement searchText = driver.findElement(By.id(searchSrctext_id));
         actions.sendKeys(searchText, "user2").perform();
-        Thread.sleep(5000);
+        Thread.sleep(2000);
         driver.navigate().back();
         driver.navigate().back();
-        Thread.sleep(5000);
-        //WebElement shareess = driver.findElement(By.xpath("//*[@text='user2']"));
 
     }
 

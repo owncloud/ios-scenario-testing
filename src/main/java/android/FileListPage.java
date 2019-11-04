@@ -2,21 +2,17 @@ package android;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 
 import io.appium.java_client.android.AndroidDriver;
 
-public class FileListPage {
+public class FileListPage extends CommonPage{
 
-    private AndroidDriver driver;
-    private Actions actions;
     private String headertext_xpath = "//*[@text='ownCloud']";
     private String documentstext_description = "LinearLayout-";
     private String sharebutton_id = "action_share_file";
 
     public FileListPage(AndroidDriver driver) {
-        this.driver = driver;
-        actions = new Actions(driver);
+        super(driver);
     }
 
     public void shareAction (String itemName){

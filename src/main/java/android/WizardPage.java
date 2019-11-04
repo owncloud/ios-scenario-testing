@@ -4,13 +4,12 @@ import org.openqa.selenium.By;
 
 import io.appium.java_client.android.AndroidDriver;
 
-public class WizardPage {
+public class WizardPage extends CommonPage {
 
     private String skip_id = "skip";
-    private AndroidDriver driver;
 
     public WizardPage(AndroidDriver driver){
-        this.driver = driver;
+        super(driver);
     }
 
     public void skip(){
