@@ -22,3 +22,7 @@ dependencies {
 repositories {
     mavenCentral()
 }
+
+test {
+    systemProperty "cucumber.options", System.getProperty("cucumber.options")
+}
