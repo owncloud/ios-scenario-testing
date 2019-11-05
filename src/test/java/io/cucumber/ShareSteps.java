@@ -3,6 +3,8 @@ package io.cucumber;
 import android.AppiumManager;
 import android.FileListPage;
 import android.LoginPage;
+import android.PublicLinkPage;
+import android.SearchShareePage;
 import android.SharePage;
 import android.WizardPage;
 
@@ -20,13 +22,14 @@ import static org.junit.Assert.assertTrue;
 public class ShareSteps {
 
     //Involved pages
-    private WizardPage wizardPage;
-    private LoginPage loginPage;
-    private SharePage sharePage;
-    private FileListPage fileListPage;
+    protected WizardPage wizardPage;
+    protected LoginPage loginPage;
+    protected SharePage sharePage;
+    protected FileListPage fileListPage;
+    protected SearchShareePage searchShareePage;
+    protected PublicLinkPage publicLinkPage;
 
-    private AndroidDriver driver;
-    private final String serverURL = "http://10.40.40.198:17000";
+    protected AndroidDriver driver;
 
     @Before
     public void setup() throws MalformedURLException {
@@ -38,6 +41,8 @@ public class ShareSteps {
         loginPage = new LoginPage(driver);
         sharePage = new SharePage(driver);
         fileListPage = new FileListPage(driver);
+        searchShareePage = new SearchShareePage(driver);
+        publicLinkPage = new PublicLinkPage(driver);
     }
 
     @Given("^I am logged$")
@@ -51,18 +56,20 @@ public class ShareSteps {
     @When("^I select (.+) to share with (.+)$")
     public void i_select_to_share_with(String itemName, String sharee) throws Throwable {
         fileListPage.shareAction(itemName);
-        sharePage.shareWith(sharee);
+        sharePage.addPrivateShare();
+        searchShareePage.shareWithUser(sharee);
     }
 
     @When("^i select (.+) to create link with name (.+)$")
     public void i_select_to_link_with_name(String itemName, String name) throws Throwable {
         fileListPage.shareAction(itemName);
-        sharePage.shareLink(name);
+        sharePage.addPublicLink();
+        publicLinkPage.createLink(name);
     }
 
     @Then("^(.+) is shared with (.+)$")
     public void is_shared_with(String itenName, String sharee) throws Throwable {
-        sharePage.backListShares();
+        searchShareePage.backListShares();
         assertTrue(sharePage.isItemInList(itenName));
         assertTrue(sharePage.isUserInList(sharee));
     }
@@ -74,7 +81,7 @@ public class ShareSteps {
 
     @Then("^public link is created with the name (.+)")
     public void public_link_created(String name) throws Throwable {
-        assertTrue(sharePage.isNameInList(name));
+        assertTrue(sharePage.isPublicLinkNameInList(name));
     }
 
     @After
