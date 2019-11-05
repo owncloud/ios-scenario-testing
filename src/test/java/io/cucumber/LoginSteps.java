@@ -16,7 +16,7 @@ import io.cucumber.java.en.When;
 
 import static org.junit.Assert.assertTrue;
 
-public class StepDefinitions {
+public class LoginSteps {
 
     private AndroidDriver driver;
     private final String serverURL = "http://10.40.40.198:17000";

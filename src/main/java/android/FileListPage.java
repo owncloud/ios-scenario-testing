@@ -16,11 +16,11 @@ public class FileListPage extends CommonPage{
     }
 
     public void shareAction (String itemName){
+        //Actions needed to longpress
         WebElement element =
                 driver.findElementByAndroidUIAutomator("new UiSelector().description(\""+documentstext_description+itemName+"\");");
         actions.clickAndHold(element).perform();
-        WebElement shareButton = driver.findElement(By.id(sharebutton_id));
-        actions.click(shareButton).perform();
+        driver.findElement(By.id(sharebutton_id)).click();
     }
 
     public boolean isHeader(){

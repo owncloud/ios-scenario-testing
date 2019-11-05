@@ -12,7 +12,7 @@ public class LoginPage extends CommonPage{
     private String passwordtext_id = "account_password";
     private String loginbutton_id = "loginButton";
     private String errorcredentialstext_xpath = "//*[@text='Wrong username or password']";
-    private String allowbutton_xpath = "//*[@text='Allow']";
+    private String allowbutton_xpath = "//*[@text='ALLOW']";
 
     private final String serverURL = "http://10.40.40.198:29000";
 
