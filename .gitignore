@@ -9,3 +9,5 @@
 .classpath
 .project
 .settings
+local.properties
+.DS_Store
