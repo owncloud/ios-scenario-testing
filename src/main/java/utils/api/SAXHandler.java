@@ -4,9 +4,11 @@ import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler;
 
+import utils.entities.Share;
+
 public class SAXHandler extends DefaultHandler {
 
-    private PublicShare publicShare;
+    private Share share;
     private static String text = null;
 
 
@@ -14,7 +16,7 @@ public class SAXHandler extends DefaultHandler {
     public void startElement(String uri, String localName, String node, Attributes attributes)
             throws SAXException {
             if (node.equals("element")){
-                publicShare = new PublicShare();
+                share = new Share();
             }
 
     }
@@ -22,13 +24,13 @@ public class SAXHandler extends DefaultHandler {
     @Override
     public void endElement(String uri, String localName, String node) throws SAXException {
             if (node.equals("id")){
-                publicShare.setId(text);
+                share.setId(text);
             } else if (node.equals("uid_owner")){
-                publicShare.setOwner(text);
+                share.setOwner(text);
             } else if (node.equals("share_type")){
-                publicShare.setType(text);
+                share.setType(text);
             } else if (node.equals("share_with")){
-                publicShare.setShareeName(text);
+                share.setShareeName(text);
             }
     }
 
@@ -37,8 +39,8 @@ public class SAXHandler extends DefaultHandler {
         text = String.copyValueOf(ch, start, length).trim();
     }
 
-    public PublicShare getPublicShare(){
-        return publicShare;
+    public Share getShare(){
+        return share;
     }
 
 }

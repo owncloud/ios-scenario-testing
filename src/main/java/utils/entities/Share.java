@@ -1,6 +1,6 @@
-package utils.api;
+package utils.entities;
 
-public class PublicShare {
+public class Share {
 
     private String id;
     private String owner;
@@ -9,7 +9,7 @@ public class PublicShare {
     private String shareeName;
 
 
-    public PublicShare(){}
+    public Share(){}
 
     public String getId() {
         return id;

@@ -14,6 +14,7 @@ import javax.xml.parsers.SAXParserFactory;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
+import utils.entities.Share;
 
 public class ShareAPI {
 
@@ -35,8 +36,8 @@ public class ShareAPI {
                 .build();
 
         Response response = httpClient.newCall(request).execute();
-        PublicShare publicShare = getId(response);
-        return publicShare.getId();
+        Share share = getId(response);
+        return share.getId();
 
     }
 
@@ -53,11 +54,11 @@ public class ShareAPI {
                 .build();
 
         Response response = httpClient.newCall(request).execute();
-        PublicShare publicShare = getId(response);
-        if ((publicShare.getId().equals(id)) &&
-                (publicShare.getShareeName().equals(shareeName)) &&
-                (publicShare.getType().equals(type)) &&
-                (publicShare.getOwner().equals("user1")))
+        Share share = getId(response);
+        if ((share.getId().equals(id)) &&
+                (share.getShareeName().equals(shareeName)) &&
+                (share.getType().equals(type)) &&
+                (share.getOwner().equals("user1")))
             return true;
         else
             return false;
@@ -79,7 +80,7 @@ public class ShareAPI {
 
     }
 
-    public PublicShare getId(Response httpResponse)
+    public Share getId(Response httpResponse)
             throws IOException, SAXException, ParserConfigurationException{
         //Create SAX parser
         SAXParserFactory parserFactor = SAXParserFactory.newInstance();
@@ -87,7 +88,7 @@ public class ShareAPI {
         SAXHandler handler = new SAXHandler();
 
         parser.parse(new InputSource(new StringReader(httpResponse.body().string())), handler);
-        return handler.getPublicShare();
+        return handler.getShare();
     }
 
 }

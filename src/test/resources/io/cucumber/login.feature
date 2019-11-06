@@ -11,7 +11,6 @@ Feature: Login
       | username     | password |
       |  user1       |    a     |
       |  user2       |    a     |
-      |  admin       |  admin   |
       |  hola hola   |    a     |
       |  e@solid     |    $%    |
 
