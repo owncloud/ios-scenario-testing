@@ -23,13 +23,14 @@ public class ShareAPI {
 
     }
 
-    public String getIdShare() throws IOException, SAXException, ParserConfigurationException, InterruptedException {
+    public String getIdShare()
+            throws IOException, SAXException, ParserConfigurationException, InterruptedException {
         Request request = new Request.Builder()
-                .url("http://10.40.40.198:29000/ocs/v2.php/apps/files_sharing/api/v1/shares?path=/Documents")
+                .url("http://10.40.40.198:17000/ocs/v2.php/apps/files_sharing/api/v1/shares?path=/Documents")
                 .addHeader("OCS-APIREQUEST", "true")
                 .addHeader("User-Agent", "Mozilla/5.0 (Android) ownCloud-android/2.13.1")
-                .addHeader("Authorization", "Basic dXNlcjE6YQ=")
-                .addHeader("Host", "10.40.40.198:29000")
+                .addHeader("Authorization", "Basic dXNlcjE6YQ==")
+                .addHeader("Host", "10.40.40.198:17000")
                 .get()
                 .build();
 
@@ -43,11 +44,11 @@ public class ShareAPI {
             throws IOException, SAXException, ParserConfigurationException {
 
         Request request = new Request.Builder()
-                .url("http://10.40.40.198:29000/ocs/v2.php/apps/files_sharing/api/v1/shares/"+id)
+                .url("http://10.40.40.198:17000/ocs/v2.php/apps/files_sharing/api/v1/shares/"+id)
                 .addHeader("OCS-APIREQUEST", "true")
                 .addHeader("User-Agent", "Mozilla/5.0 (Android) ownCloud-android/2.13.1")
-                .addHeader("Authorization", "Basic dXNlcjE6YQ=")
-                .addHeader("Host", "10.40.40.198:29000")
+                .addHeader("Authorization", "Basic dXNlcjE6YQ==")
+                .addHeader("Host", "10.40.40.198:17000")
                 .get()
                 .build();
 
@@ -66,11 +67,11 @@ public class ShareAPI {
     public void removeShare(String id) throws IOException {
 
         Request request = new Request.Builder()
-                .url("http://10.40.40.198:29000/ocs/v2.php/apps/files_sharing/api/v1/shares/"+id)
+                .url("http://10.40.40.198:17000/ocs/v2.php/apps/files_sharing/api/v1/shares/"+id)
                 .addHeader("OCS-APIREQUEST", "true")
                 .addHeader("User-Agent", "Mozilla/5.0 (Android) ownCloud-android/2.13.1")
-                .addHeader("Authorization", "Basic dXNlcjE6YQ=")
-                .addHeader("Host", "10.40.40.198:29000")
+                .addHeader("Authorization", "Basic dXNlcjE6YQ==")
+                .addHeader("Host", "10.40.40.198:17000")
                 .delete()
                 .build();
 
@@ -78,7 +79,8 @@ public class ShareAPI {
 
     }
 
-    public PublicShare getId(Response httpResponse) throws IOException, SAXException, ParserConfigurationException{
+    public PublicShare getId(Response httpResponse)
+            throws IOException, SAXException, ParserConfigurationException{
         //Create SAX parser
         SAXParserFactory parserFactor = SAXParserFactory.newInstance();
         SAXParser parser = parserFactor.newSAXParser();
