@@ -8,7 +8,12 @@ import android.SearchShareePage;
 import android.SharePage;
 import android.WizardPage;
 
+import org.xml.sax.SAXException;
+
+import java.io.IOException;
 import java.net.MalformedURLException;
+
+import javax.xml.parsers.ParserConfigurationException;
 
 import io.appium.java_client.android.AndroidDriver;
 import io.cucumber.java.After;
@@ -16,6 +21,7 @@ import io.cucumber.java.Before;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import utils.api.ShareAPI;
 
 import static org.junit.Assert.assertTrue;
 
@@ -29,7 +35,13 @@ public class ShareSteps {
     protected SearchShareePage searchShareePage;
     protected PublicLinkPage publicLinkPage;
 
+    //APIs to call
+    protected ShareAPI shareAPI;
+
+    //Appium driver
     protected AndroidDriver driver;
+
+    private String shareId;
 
     @Before
     public void setup() throws MalformedURLException {
@@ -43,6 +55,8 @@ public class ShareSteps {
         fileListPage = new FileListPage(driver);
         searchShareePage = new SearchShareePage(driver);
         publicLinkPage = new PublicLinkPage(driver);
+
+        shareAPI = new ShareAPI();
     }
 
     @Given("^I am logged$")
@@ -74,18 +88,24 @@ public class ShareSteps {
         assertTrue(sharePage.isUserInList(sharee));
     }
 
-    @Then("^(.+) sees (.+) in the file list$")
+    @Then("^(.+) has (.+) in the file list$")
     public void sees_in_file_list(String sharee, String item) throws Throwable {
-        //API check
+        shareId = shareAPI.getIdShare();
+        assertTrue(shareAPI.checkCorrectShared(shareId, item, "0", sharee));
+
     }
 
     @Then("^public link is created with the name (.+)")
     public void public_link_created(String name) throws Throwable {
         assertTrue(sharePage.isPublicLinkNameInList(name));
+        shareId = shareAPI.getIdShare();
     }
 
     @After
-    public void tearDown(){
+    public void tearDown() throws IOException, SAXException, ParserConfigurationException, InterruptedException{
+        // Link must be removed via API
+        shareAPI.removeShare(shareId);
+
         driver.removeApp("com.owncloud.android");
         driver.quit();
     }

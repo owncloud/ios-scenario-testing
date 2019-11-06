@@ -17,6 +17,7 @@ dependencies {
     implementation files('libs/okio-1.14.0.jar')
     implementation files('libs/commons-lang3-3.1.jar')
     implementation files('libs/commons-lang3-3.1-sources.jar')
+    implementation 'com.squareup.okhttp3:okhttp:3.10.0'
 }
 
 repositories {

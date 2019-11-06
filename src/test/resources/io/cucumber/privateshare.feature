@@ -7,7 +7,7 @@ Feature: Private Share
   Scenario Outline: Correct share
     When I select <item> to share with <user>
     Then <item> is shared with <user>
-    And <user> sees <item> in the file list
+    And <user> has <item> in the file list
 
     Examples:
       |    item     |   user    |
