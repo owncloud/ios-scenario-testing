@@ -9,18 +9,20 @@ public class FileListPage extends CommonPage{
 
     private String headertext_xpath = "//*[@text='ownCloud']";
     private String documentstext_description = "LinearLayout-";
-    private String sharebutton_id = "action_share_file";
+    private String sharebutton_id = "com.owncloud.android:id/action_share_file";
 
     public FileListPage(AndroidDriver driver) {
         super(driver);
     }
 
-    public void shareAction (String itemName){
+    public void shareAction (String itemName) throws InterruptedException {
         //Actions needed to longpress
-        WebElement element =
+        WebElement itemInList =
                 driver.findElementByAndroidUIAutomator("new UiSelector().description(\""+documentstext_description+itemName+"\");");
-        actions.clickAndHold(element).perform();
-        driver.findElement(By.id(sharebutton_id)).click();
+        actions.clickAndHold(itemInList).perform();
+        WebElement shareAction =
+                driver.findElementByAndroidUIAutomator("new UiSelector().resourceId(\""+sharebutton_id+"\");");
+        actions.click(shareAction).perform();;
     }
 
     public boolean isHeader(){

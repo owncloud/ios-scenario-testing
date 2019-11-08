@@ -17,17 +17,18 @@ public class SearchShareePage extends CommonPage {
     public void shareWithUser (String sharee) throws  InterruptedException{
         driver.findElement(By.id(searchSrctext_id)).sendKeys(sharee);
         //REDO: find another way to click in recipients' list
-        Thread.sleep(2000);
+        Thread.sleep(1000);
         TouchAction selectSharee = new TouchAction(driver);
         selectSharee.tap(PointOption.point(500, 470)).perform();
         //Go back to Share Page
         backListShares();
     }
 
-    public void backListShares(){
+    private void backListShares() throws InterruptedException{
         driver.hideKeyboard();
+        //By setting only once, it does not work... check why
         driver.navigate().back();
-        //driver.navigate().back();
+        driver.navigate().back();
     }
 
 }

@@ -83,7 +83,6 @@ public class ShareSteps {
 
     @Then("^(.+) is shared with (.+)$")
     public void is_shared_with(String itenName, String sharee) throws Throwable {
-        searchShareePage.backListShares();
         assertTrue(sharePage.isItemInList(itenName));
         assertTrue(sharePage.isUserInList(sharee));
     }
