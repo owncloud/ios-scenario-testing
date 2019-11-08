@@ -8,7 +8,7 @@ import io.appium.java_client.touch.offset.PointOption;
 
 public class SearchShareePage extends CommonPage {
 
-    private String searchSrctext_id = "search_src_text";
+    private final String searchSrctext_id = "search_src_text";
 
     public SearchShareePage(AndroidDriver driver){
         super(driver);

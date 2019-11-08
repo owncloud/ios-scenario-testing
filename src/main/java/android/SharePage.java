@@ -6,8 +6,8 @@ import io.appium.java_client.android.AndroidDriver;
 
 public class SharePage extends CommonPage {
 
-    private String addshareebutton_id = "addUserButton";
-    private String addPublicLinkButton_id = "addPublicLinkButton";
+    private final String addshareebutton_id = "addUserButton";
+    private final String addPublicLinkButton_id = "addPublicLinkButton";
 
     public SharePage(AndroidDriver driver){
         super(driver);
