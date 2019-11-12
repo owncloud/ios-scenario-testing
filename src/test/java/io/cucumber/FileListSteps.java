@@ -9,6 +9,7 @@ import android.WizardPage;
 import java.net.MalformedURLException;
 
 import io.appium.java_client.android.AndroidDriver;
+import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
@@ -58,5 +59,11 @@ public class FileListSteps {
     public void i_see_the_item(String itemName) throws Throwable {
         fileListPage.isItemInList(itemName);
         shareAPI.removeFolder(itemName);
+    }
+
+    @After
+    public void tearDown() {
+        driver.removeApp("com.owncloud.android");
+        driver.quit();
     }
 }

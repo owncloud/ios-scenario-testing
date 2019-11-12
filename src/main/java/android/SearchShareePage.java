@@ -24,7 +24,7 @@ public class SearchShareePage extends CommonPage {
         backListShares();
     }
 
-    private void backListShares() throws InterruptedException{
+    private void backListShares() {
         driver.hideKeyboard();
         //By setting only once, it does not work... check why
         driver.navigate().back();
