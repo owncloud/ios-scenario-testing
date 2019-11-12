@@ -65,10 +65,49 @@ public class ShareAPI {
 
     }
 
+    public boolean checkReceivedShare (String id, String itemName, String type, String shareeName)
+            throws IOException, SAXException, ParserConfigurationException {
+
+        Request request = new Request.Builder()
+                .url("http://10.40.40.198:17000/ocs/v2.php/apps/files_sharing/api/v1/shares?shared_with_me=true")
+                .addHeader("OCS-APIREQUEST", "true")
+                .addHeader("User-Agent", "Mozilla/5.0 (Android) ownCloud-android/2.13.1")
+                .addHeader("Authorization", "Basic dXNlcjI6YQ==")
+                .addHeader("Host", "10.40.40.198:17000")
+                .get()
+                .build();
+
+        Response response = httpClient.newCall(request).execute();
+        Share share = getId(response);
+        if ((share.getId().equals(id)) &&
+                (share.getShareeName().equals(shareeName)) &&
+                (share.getType().equals(type)) &&
+                (share.getOwner().equals("user1")))
+            return true;
+        else
+            return false;
+
+    }
+
     public void removeShare(String id) throws IOException {
 
         Request request = new Request.Builder()
                 .url("http://10.40.40.198:17000/ocs/v2.php/apps/files_sharing/api/v1/shares/"+id)
+                .addHeader("OCS-APIREQUEST", "true")
+                .addHeader("User-Agent", "Mozilla/5.0 (Android) ownCloud-android/2.13.1")
+                .addHeader("Authorization", "Basic dXNlcjE6YQ==")
+                .addHeader("Host", "10.40.40.198:17000")
+                .delete()
+                .build();
+
+        httpClient.newCall(request).execute();
+
+    }
+
+    public void removeFolder(String folderName) throws IOException {
+
+        Request request = new Request.Builder()
+                .url("http://10.40.40.198:17000/remote.php/dav/files/user1/"+folderName+"/")
                 .addHeader("OCS-APIREQUEST", "true")
                 .addHeader("User-Agent", "Mozilla/5.0 (Android) ownCloud-android/2.13.1")
                 .addHeader("Authorization", "Basic dXNlcjE6YQ==")

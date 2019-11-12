@@ -91,6 +91,7 @@ public class ShareSteps {
     public void sees_in_file_list(String sharee, String item) throws Throwable {
         shareId = shareAPI.getIdShare();
         assertTrue(shareAPI.checkCorrectShared(shareId, item, "0", sharee));
+        assertTrue(shareAPI.checkReceivedShare(shareId, item, "0", sharee));
 
     }
 

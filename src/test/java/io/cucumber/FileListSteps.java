@@ -57,5 +57,6 @@ public class FileListSteps {
     @Then("^I see (.+) in my file list$")
     public void i_see_the_item(String itemName) throws Throwable {
         fileListPage.isItemInList(itemName);
+        shareAPI.removeFolder(itemName);
     }
 }

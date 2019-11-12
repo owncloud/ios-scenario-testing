@@ -23,7 +23,7 @@ public class AppiumManager {
         DesiredCapabilities capabilities = new DesiredCapabilities();
 
         capabilities.setCapability ("platformName", "Android");
-        capabilities.setCapability ("platformVersion", "7.1.2");
+        //capabilities.setCapability ("platformVersion", "7.1.2");
         capabilities.setCapability ("deviceName", "test");
         capabilities.setCapability ("app", app.getAbsolutePath());
         capabilities.setCapability ("appPackage", "com.owncloud.android");
