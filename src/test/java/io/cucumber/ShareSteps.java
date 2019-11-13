@@ -88,17 +88,17 @@ public class ShareSteps {
     }
 
     @Then("^(.+) has (.+) in the file list$")
-    public void sees_in_file_list(String sharee, String item) throws Throwable {
-        shareId = shareAPI.getIdShare();
-        assertTrue(shareAPI.checkCorrectShared(shareId, item, "0", sharee));
-        assertTrue(shareAPI.checkReceivedShare(shareId, item, "0", sharee));
+    public void sees_in_file_list(String sharee, String itemPath) throws Throwable {
+        shareId = shareAPI.getIdShare(itemPath);
+        assertTrue(shareAPI.checkCorrectShared(shareId, itemPath, "0", sharee));
+        assertTrue(shareAPI.checkReceivedShare(shareId, itemPath, "0", sharee));
 
     }
 
-    @Then("^public link is created with the name (.+)")
-    public void public_link_created(String name) throws Throwable {
-        assertTrue(sharePage.isPublicLinkNameInList(name));
-        shareId = shareAPI.getIdShare();
+    @Then("^public link is created on (.+) with the name (.+)")
+    public void public_link_created(String itemPath, String itemName) throws Throwable {
+        assertTrue(sharePage.isPublicLinkNameInList(itemName));
+        shareId = shareAPI.getIdShare(itemPath);
     }
 
     @After

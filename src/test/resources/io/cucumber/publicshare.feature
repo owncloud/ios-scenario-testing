@@ -6,7 +6,7 @@ Feature: Public Share
   @SmokeTest
   Scenario Outline: Create a public link with name
     When i select <item> to create link with name <name>
-    Then public link is created with the name <name>
+    Then public link is created on <item> with the name <name>
 
     Examples:
       |    item     |   name    |

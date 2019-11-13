@@ -14,7 +14,7 @@ import io.cucumber.java.Before;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import utils.api.ShareAPI;
+import utils.api.FilesAPI;
 
 public class FileListSteps {
 
@@ -25,7 +25,7 @@ public class FileListSteps {
     protected CreateFolderPage createFolderPage;
 
     //APIs to call
-    protected ShareAPI shareAPI;
+    protected FilesAPI filesAPI;
 
     //Appium driver
     protected AndroidDriver driver;
@@ -42,7 +42,7 @@ public class FileListSteps {
         fileListPage = new FileListPage(driver);
         createFolderPage = new CreateFolderPage(driver);
 
-        shareAPI = new ShareAPI();
+        filesAPI = new FilesAPI();
     }
 
     @When("I select the option Create Folder")
@@ -58,7 +58,7 @@ public class FileListSteps {
     @Then("^I see (.+) in my file list$")
     public void i_see_the_item(String itemName) throws Throwable {
         fileListPage.isItemInList(itemName);
-        shareAPI.removeFolder(itemName);
+        filesAPI.removeFolder(itemName);
     }
 
     @After
