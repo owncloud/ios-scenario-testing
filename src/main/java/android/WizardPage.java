@@ -1,7 +1,6 @@
 package android;
 
-import org.openqa.selenium.By;
-
+import io.appium.java_client.MobileBy;
 import io.appium.java_client.android.AndroidDriver;
 
 public class WizardPage extends CommonPage {
@@ -13,7 +12,7 @@ public class WizardPage extends CommonPage {
     }
 
     public void skip(){
-        driver.findElement(By.id(skip_id)).click();
+        driver.findElement(MobileBy.id(skip_id)).click();
     }
 
 }

@@ -18,18 +18,10 @@ import utils.entities.Share;
 
 public class ShareAPI extends CommonAPI {
 
-    private String serverUrl = "http://10.40.40.198:17000";
-    private String host = "10.40.40.198:17000";
-    private String sharingEndpoint = "/ocs/v2.php/apps/files_sharing/api/v1/shares";
-    private String sharingUser = "user1";
+    private String sharingEndpoint = "/ocs/v2.php/apps/files_sharing/api/v1/shares";;
     private String shareeUser = "user2";
-    private String sharingPassword = "a";
     private String shareePassword = "a";
-    private String userAgent = "Mozilla/5.0 (Android) ownCloud-android/2.13.1";
-    private String ownerName = "user1";
-    private String credentialsB64 = Base64.getEncoder().encodeToString((sharingUser+":"+sharingPassword).getBytes());
-    private String credentialsB64Sharee = Base64.getEncoder().encodeToString((shareeUser+":"+sharingPassword).getBytes());
-
+    private String credentialsB64Sharee = Base64.getEncoder().encodeToString((shareeUser+":"+shareePassword).getBytes());
 
     public ShareAPI(){
         super();
@@ -38,7 +30,7 @@ public class ShareAPI extends CommonAPI {
     public String getIdShare(String itemPath)
             throws IOException, SAXException, ParserConfigurationException, InterruptedException {
 
-        String requestString = serverUrl + sharingEndpoint + "?path=/" + itemPath;
+        String requestString = urlServer + sharingEndpoint + "?path=/" + itemPath;
 
         Request request = new Request.Builder()
                 .url(requestString)
@@ -58,7 +50,7 @@ public class ShareAPI extends CommonAPI {
     public boolean checkCorrectShared (String id, String itemName, String type, String shareeName)
             throws IOException, SAXException, ParserConfigurationException {
 
-        String requestString = serverUrl + sharingEndpoint + "/" + id;
+        String requestString = urlServer + sharingEndpoint + "/" + id;
 
         Request request = new Request.Builder()
                 .url(requestString)
@@ -74,7 +66,7 @@ public class ShareAPI extends CommonAPI {
         if ((share.getId().equals(id)) &&
                 (share.getShareeName().equals(shareeName)) &&
                 (share.getType().equals(type)) &&
-                (share.getOwner().equals(ownerName)))
+                (share.getOwner().equals(user)))
             return true;
         else
             return false;
@@ -84,7 +76,7 @@ public class ShareAPI extends CommonAPI {
     public boolean checkReceivedShare (String id, String itemName, String type, String shareeName)
             throws IOException, SAXException, ParserConfigurationException {
 
-        String requestString = serverUrl + sharingEndpoint + "?shared_with_me=true";
+        String requestString = urlServer + sharingEndpoint + "?shared_with_me=true";
 
         Request request = new Request.Builder()
                 .url(requestString)
@@ -100,7 +92,7 @@ public class ShareAPI extends CommonAPI {
         if ((share.getId().equals(id)) &&
                 (share.getShareeName().equals(shareeName)) &&
                 (share.getType().equals(type)) &&
-                (share.getOwner().equals(ownerName)))
+                (share.getOwner().equals(user)))
             return true;
         else
             return false;
@@ -109,7 +101,7 @@ public class ShareAPI extends CommonAPI {
 
     public void removeShare(String id) throws IOException {
 
-        String requestString = serverUrl + sharingEndpoint + "/" + id;
+        String requestString = urlServer + sharingEndpoint + "/" + id;
 
         Request request = new Request.Builder()
                 .url(requestString)
