@@ -18,7 +18,6 @@ import javax.xml.parsers.ParserConfigurationException;
 import io.appium.java_client.android.AndroidDriver;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
-import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import utils.api.ShareAPI;
@@ -59,13 +58,7 @@ public class ShareSteps {
         shareAPI = new ShareAPI();
     }
 
-    @Given("^I am logged$")
-    public void i_am_logged() throws Throwable {
-        wizardPage.skip();
-        loginPage.typeURL();
-        loginPage.typeCredentials("user1", "a");
-        loginPage.allowPermissions();
-    }
+
 
     @When("^I select (.+) to share with (.+)$")
     public void i_select_to_share_with(String itemName, String sharee) throws Throwable {
