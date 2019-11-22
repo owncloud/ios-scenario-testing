@@ -1,15 +1,14 @@
 package android;
 
 import io.appium.java_client.MobileBy;
-import io.appium.java_client.android.AndroidDriver;
 
 public class InputNamePage extends CommonPage {
 
     private final String itemnametext_id = "user_input";
     private final String acceptbutton_id = "android:id/button1";
 
-    public InputNamePage(AndroidDriver driver){
-        super(driver);
+    public InputNamePage(){
+        super();
     }
 
     public void setItemName(String name){

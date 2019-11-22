@@ -5,7 +5,6 @@ import org.openqa.selenium.By;
 import io.appium.java_client.MobileBy;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.TouchAction;
-import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.touch.offset.PointOption;
 
 public class FileListPage extends CommonPage{
@@ -17,8 +16,8 @@ public class FileListPage extends CommonPage{
     private String fab_id = "fab_expand_menu_button";
     private String createfolder_id = "fab_mkdir";
 
-    public FileListPage(AndroidDriver driver) {
-        super(driver);
+    public FileListPage() {
+        super();
     }
 
     public void shareAction (String itemName){
@@ -29,6 +28,7 @@ public class FileListPage extends CommonPage{
     }
 
     public void createFolder(){
+        waitById(5, fab_id);
         driver.findElement(MobileBy.id(fab_id)).click();
         driver.findElement(MobileBy.id(createfolder_id)).click();
     }
@@ -52,6 +52,7 @@ public class FileListPage extends CommonPage{
     }
 
     public void selectItemList(String itemName){
+        waitById(10, "new UiSelector().description(\""+documentstext_description+itemName+"\");");
         MobileElement itemInList = (MobileElement)
                 driver.findElementByAndroidUIAutomator("new UiSelector().description(\""+documentstext_description+itemName+"\");");
         actions.clickAndHold(itemInList).perform();

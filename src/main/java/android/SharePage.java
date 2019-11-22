@@ -1,15 +1,14 @@
 package android;
 
 import io.appium.java_client.MobileBy;
-import io.appium.java_client.android.AndroidDriver;
 
 public class SharePage extends CommonPage {
 
     private final String addshareebutton_id = "addUserButton";
     private final String addPublicLinkButton_id = "addPublicLinkButton";
 
-    public SharePage(AndroidDriver driver){
-        super(driver);
+    public SharePage(){
+        super();
     }
 
     public boolean isHeader() {

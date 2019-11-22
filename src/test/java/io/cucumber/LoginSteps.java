@@ -7,9 +7,7 @@ import android.WizardPage;
 
 import java.net.MalformedURLException;
 
-import io.appium.java_client.android.AndroidDriver;
 import io.cucumber.java.After;
-import io.cucumber.java.Before;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -19,22 +17,25 @@ import static org.junit.Assert.assertTrue;
 public class LoginSteps {
 
     //Involved pages
-    private WizardPage wizardPage;
-    private LoginPage loginPage;
-    private FileListPage fileListPage;
+    private WizardPage wizardPage = new WizardPage();
+    private LoginPage loginPage = new LoginPage();
+    private FileListPage fileListPage = new FileListPage();
 
-    private AndroidDriver driver;
+    //private AndroidDriver driver;
 
-    @Before
-    public void setup() throws MalformedURLException{
+    /*@Before
+    public void setup() {
         AppiumManager manager = new AppiumManager();
         manager.init();
         driver = manager.getDriver();
+        System.out.println("BEFORE LOGIN STEPS");
 
-        wizardPage = new WizardPage(driver);
-        loginPage = new LoginPage(driver);
-        fileListPage = new FileListPage(driver);
-    }
+        AppiumManager.getManager().getDriver().launchApp();
+
+        /*wizardPage = new WizardPage();
+        loginPage = new LoginPage();
+        fileListPage = new FileListPage();
+    }*/
 
     @Given("^I am a valid user$")
     public void i_am_a_valid_user() throws Throwable {
@@ -67,8 +68,9 @@ public class LoginSteps {
     }
 
     @After
-    public void tearDown(){
-        driver.removeApp("com.owncloud.android");
-        driver.quit();
+    public void tearDown() throws MalformedURLException{
+        System.out.println("AFTER LOGIN STEPS");
+        AppiumManager.getManager().getDriver().removeApp("com.owncloud.android");
+        //AppiumManager.getManager().getDriver().close();
     }
 }

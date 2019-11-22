@@ -1,16 +1,10 @@
 package io.cucumber;
 
-import android.AppiumManager;
 import android.FileListPage;
 import android.InputNamePage;
 import android.LoginPage;
 import android.WizardPage;
 
-import java.net.MalformedURLException;
-
-import io.appium.java_client.android.AndroidDriver;
-import io.cucumber.java.After;
-import io.cucumber.java.Before;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import utils.api.FilesAPI;
@@ -21,18 +15,18 @@ import static org.junit.Assert.assertTrue;
 public class FileListSteps {
 
     //Involved pages
-    protected WizardPage wizardPage;
-    protected LoginPage loginPage;
-    protected FileListPage fileListPage;
-    protected InputNamePage inputNamePage;
+    protected WizardPage wizardPage = new WizardPage();
+    protected LoginPage loginPage = new LoginPage();
+    protected FileListPage fileListPage = new FileListPage();
+    protected InputNamePage inputNamePage = new InputNamePage();
 
     //APIs to call
-    protected FilesAPI filesAPI;
+    protected FilesAPI filesAPI = new FilesAPI();
 
     //Appium driver
-    protected AndroidDriver driver;
+    //protected AndroidDriver driver;
 
-    @Before
+    /*@Before
     public void setup() throws MalformedURLException {
         AppiumManager manager = new AppiumManager();
         manager.init();
@@ -44,7 +38,7 @@ public class FileListSteps {
         inputNamePage = new InputNamePage(driver);
 
         filesAPI = new FilesAPI();
-    }
+    }*/
 
     @When("I select the option Create Folder")
     public void i_select_create_folder() throws Throwable {
@@ -73,9 +67,10 @@ public class FileListSteps {
         assertFalse(fileListPage.isItemInList(itemName));
     }
 
-    @After
-    public void tearDown() {
-        driver.removeApp("com.owncloud.android");
-        driver.quit();
-    }
+    /*@After
+    public void tearDown() throws MalformedURLException {
+        System.out.println("AFTER FILE LIST STEPS");
+        AppiumManager.getManager().getDriver().removeApp("com.owncloud.android");
+        //AppiumManager.getManager().getDriver().close();
+    }*/
 }
