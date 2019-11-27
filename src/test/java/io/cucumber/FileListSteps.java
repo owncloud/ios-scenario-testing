@@ -3,6 +3,7 @@ package io.cucumber;
 import android.FileListPage;
 import android.InputNamePage;
 import android.LoginPage;
+import android.RemoveDialogPage;
 import android.WizardPage;
 
 import io.cucumber.java.en.Then;
@@ -19,12 +20,13 @@ public class FileListSteps {
     protected LoginPage loginPage = new LoginPage();
     protected FileListPage fileListPage = new FileListPage();
     protected InputNamePage inputNamePage = new InputNamePage();
+    protected RemoveDialogPage removeDialogPage = new RemoveDialogPage();
 
     //APIs to call
     protected FilesAPI filesAPI = new FilesAPI();
 
     @When("I select the option Create Folder")
-    public void i_select_create_folder() throws Throwable {
+    public void i_select_create_folder() {
         fileListPage.createFolder();
     }
 
@@ -34,19 +36,32 @@ public class FileListSteps {
         fileListPage.renameAction(itemName);
     }
 
+    @When("I select the item (.+) to delete")
+    public void i_select_item_to_delete(String itemName) {
+        filesAPI.createFolder(itemName);
+        fileListPage.deleteAction(itemName);
+    }
+
+    @When("I accept the deletion")
+    public void i_accept_the_deletion(){
+        removeDialogPage.removeAll();
+    }
+
     @When("^I set (.+) as name")
-    public void i_set_new_name(String itemName) throws Throwable {
+    public void i_set_new_name(String itemName) {
         inputNamePage.setItemName(itemName);
     }
 
     @Then("^I see (.+) in my file list$")
-    public void i_see_the_item(String itemName) throws Throwable {
+    public void i_see_the_item(String itemName) {
         assertTrue(fileListPage.isItemInList(itemName));
+        assertTrue(filesAPI.itemExist(itemName));
         filesAPI.removeItem(itemName);
     }
 
     @Then("^I do not see (.+) in my file list$")
-    public void i_do_not_see_the_item(String itemName) throws Throwable {
+    public void i_do_not_see_the_item(String itemName) {
         assertFalse(fileListPage.isItemInList(itemName));
+        assertFalse(filesAPI.itemExist(itemName));
     }
 }

@@ -30,12 +30,20 @@ public class FileListPage extends CommonPage{
         driver.findElement(MobileBy.id(createfolder_id)).click();
     }
 
-    public void renameAction(String itemName) throws InterruptedException{
+    public void renameAction(String itemName) {
         selectItemList(itemName);
         MobileElement threeDotButton = (MobileElement)
                 driver.findElementByAndroidUIAutomator("new UiSelector().description(\"More options\");");
         actions.click(threeDotButton).perform();
         selectOperation("Rename");
+    }
+
+    public void deleteAction(String itemName) {
+        selectItemList(itemName);
+        MobileElement threeDotButton = (MobileElement)
+                driver.findElementByAndroidUIAutomator("new UiSelector().description(\"More options\");");
+        actions.click(threeDotButton).perform();
+        selectOperation("Remove");
     }
 
     public boolean isItemInList (String itemName) {
@@ -46,13 +54,13 @@ public class FileListPage extends CommonPage{
         return !driver.findElements(By.xpath(headertext_xpath)).isEmpty();
     }
 
-    public void selectItemList(String itemName){
+    public void selectItemList(String itemName) {
         MobileElement itemInList = (MobileElement)
                 driver.findElementByAndroidUIAutomator("new UiSelector().description(\""+documentstext_description+itemName+"\");");
         actions.clickAndHold(itemInList).perform();
     }
 
-    public void selectOperation(String operation){
+    public void selectOperation(String operation) {
         MobileElement selection = (MobileElement)
                 driver.findElementByAndroidUIAutomator("new UiSelector().text(\""+ operation +"\");");
         actions.click(selection).perform();

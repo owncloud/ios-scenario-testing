@@ -37,23 +37,18 @@ public class AppiumManager {
         } catch (MalformedURLException e) {
             e.printStackTrace();
         }
-        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(8, TimeUnit.SECONDS);
     }
 
     public static AppiumManager getManager() {
-
-        //System.out.println("CREANDO MANAGER");
         if (appiumManager == null) {
-            //System.out.println("APPIUM MANAGER NULO");
             appiumManager = new AppiumManager();
         } else {
-            //System.out.println("APPIUM MANAGER NO NULO");
         }
         return appiumManager;
     }
 
     public AndroidDriver getDriver(){
-        //System.out.println("DEVOLVEMOS DRIVER");
         return driver;
     }
 
