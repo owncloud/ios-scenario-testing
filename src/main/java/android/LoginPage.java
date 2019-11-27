@@ -1,8 +1,6 @@
 package android;
 
-import org.openqa.selenium.By;
-
-import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.MobileBy;
 
 public class LoginPage extends CommonPage{
 
@@ -16,27 +14,31 @@ public class LoginPage extends CommonPage{
 
     private final String serverURL = "http://10.40.40.198:17000";
 
-    public LoginPage(AndroidDriver driver){
-        super(driver);
+    public LoginPage(){
+        super();
     }
 
     public void typeURL(){
-        driver.findElement(By.id(urltext_id)).sendKeys(serverURL);
-        driver.findElement(By.id(embeddedbutton_id)).click();
+        waitById(5, urltext_id);
+        driver.findElement(MobileBy.id(urltext_id)).sendKeys(serverURL);
+        driver.findElement(MobileBy.id(embeddedbutton_id)).click();
     }
 
     public void typeCredentials(String username, String password){
-        driver.findElement(By.id(usernametext_id)).sendKeys(username);
-        driver.findElement(By.id(passwordtext_id)).sendKeys(password);
-        driver.findElement(By.id(loginbutton_id)).click();
+        waitById(5, usernametext_id);
+        driver.findElement(MobileBy.id(usernametext_id)).sendKeys(username);
+        driver.findElement(MobileBy.id(passwordtext_id)).sendKeys(password);
+        waitById(5, loginbutton_id);
+        driver.findElement(MobileBy.id(loginbutton_id)).click();
     }
 
     public void allowPermissions(){
-        driver.findElement(By.xpath(allowbutton_xpath)).click();
+        waitByXpath(5, allowbutton_xpath);
+        driver.findElement(MobileBy.xpath(allowbutton_xpath)).click();
     }
 
     public boolean isCredentialsErrorMessage(){
-        return driver.findElements(By.xpath(errorcredentialstext_xpath)).size() > 0;
+        return driver.findElements(MobileBy.xpath(errorcredentialstext_xpath)).size() > 0;
     }
 
 }

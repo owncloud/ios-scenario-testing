@@ -1,40 +1,38 @@
 package android;
 
-import org.openqa.selenium.By;
-
-import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.MobileBy;
 
 public class SharePage extends CommonPage {
 
-    private String addshareebutton_id = "addUserButton";
-    private String addPublicLinkButton_id = "addPublicLinkButton";
+    private final String addshareebutton_id = "addUserButton";
+    private final String addPublicLinkButton_id = "addPublicLinkButton";
 
-    public SharePage(AndroidDriver driver){
-        super(driver);
+    public SharePage(){
+        super();
     }
 
     public boolean isHeader() {
-        return driver.findElementsByAndroidUIAutomator("new UiSelector().text(\"Share\");").size() > 0;
+        return !driver.findElementsByAndroidUIAutomator("new UiSelector().text(\"Share\");").isEmpty();
     }
 
     public void addPrivateShare(){
-        driver.findElement(By.id(addshareebutton_id)).click();
+        driver.findElement(MobileBy.id(addshareebutton_id)).click();
     }
 
     public void addPublicLink(){
-        driver.findElement(By.id(addPublicLinkButton_id)).click();
+        driver.findElement(MobileBy.id(addPublicLinkButton_id)).click();
     }
 
     public boolean isUserInList(String username) {
-        return driver.findElementsByAndroidUIAutomator("new UiSelector().text(\""+username+"\");").size() > 0;
+        return !driver.findElementsByAndroidUIAutomator("new UiSelector().text(\""+username+"\");").isEmpty();
     }
 
     public boolean isItemInList(String item) {
-        return driver.findElementsByAndroidUIAutomator("new UiSelector().text(\""+item+"\");").size() > 0;
+        return !driver.findElementsByAndroidUIAutomator("new UiSelector().text(\""+item+"\");").isEmpty();
     }
 
     public boolean isPublicLinkNameInList(String name) {
-        return driver.findElementsByAndroidUIAutomator("new UiSelector().text(\""+name+"\");").size() > 0;
+        return !driver.findElementsByAndroidUIAutomator("new UiSelector().text(\""+name+"\");").isEmpty();
     }
 
 }

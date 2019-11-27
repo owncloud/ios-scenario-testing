@@ -8,16 +8,8 @@ import android.SearchShareePage;
 import android.SharePage;
 import android.WizardPage;
 
-import org.xml.sax.SAXException;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.io.IOException;
-import java.net.MalformedURLException;
-
-import javax.xml.parsers.ParserConfigurationException;
-
-import io.appium.java_client.android.AndroidDriver;
-import io.cucumber.java.After;
-import io.cucumber.java.Before;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -28,36 +20,19 @@ import static org.junit.Assert.assertTrue;
 public class ShareSteps {
 
     //Involved pages
-    protected WizardPage wizardPage;
-    protected LoginPage loginPage;
-    protected SharePage sharePage;
-    protected FileListPage fileListPage;
-    protected SearchShareePage searchShareePage;
-    protected PublicLinkPage publicLinkPage;
+    protected WizardPage wizardPage = new WizardPage();
+    protected LoginPage loginPage = new LoginPage();
+    protected SharePage sharePage = new SharePage();
+    protected FileListPage fileListPage = new FileListPage();
+    protected SearchShareePage searchShareePage = new SearchShareePage();
+    protected PublicLinkPage publicLinkPage = new PublicLinkPage();
 
     //APIs to call
-    protected ShareAPI shareAPI;
+    protected ShareAPI shareAPI = new ShareAPI();
 
-    //Appium driver
-    protected AndroidDriver driver;
+    protected WebDriverWait wait = new WebDriverWait(AppiumManager.getManager().getDriver(), 5);
 
     private String shareId;
-
-    @Before
-    public void setup() throws MalformedURLException {
-        AppiumManager manager = new AppiumManager();
-        manager.init();
-        driver = manager.getDriver();
-
-        wizardPage = new WizardPage(driver);
-        loginPage = new LoginPage(driver);
-        sharePage = new SharePage(driver);
-        fileListPage = new FileListPage(driver);
-        searchShareePage = new SearchShareePage(driver);
-        publicLinkPage = new PublicLinkPage(driver);
-
-        shareAPI = new ShareAPI();
-    }
 
     @Given("^I am logged$")
     public void i_am_logged() throws Throwable {
@@ -89,23 +64,17 @@ public class ShareSteps {
 
     @Then("^(.+) has (.+) in the file list$")
     public void sees_in_file_list(String sharee, String item) throws Throwable {
-        shareId = shareAPI.getIdShare();
+        shareId = shareAPI.getIdShare(item);
         assertTrue(shareAPI.checkCorrectShared(shareId, item, "0", sharee));
-
-    }
-
-    @Then("^public link is created with the name (.+)")
-    public void public_link_created(String name) throws Throwable {
-        assertTrue(sharePage.isPublicLinkNameInList(name));
-        shareId = shareAPI.getIdShare();
-    }
-
-    @After
-    public void tearDown() throws IOException, SAXException, ParserConfigurationException, InterruptedException{
-        // Link must be removed via API
         shareAPI.removeShare(shareId);
-
-        driver.removeApp("com.owncloud.android");
-        driver.quit();
     }
+    
+    @Then("^public link is created on (.+) with the name (.+)")
+    public void public_link_created(String itemName, String linkName) throws Throwable {
+        assertTrue(sharePage.isPublicLinkNameInList(linkName));
+        shareId = shareAPI.getIdShare(itemName);
+        // Link must be removed via API;
+        shareAPI.removeShare(shareId);
+    }
+
 }

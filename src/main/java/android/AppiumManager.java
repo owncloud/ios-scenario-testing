@@ -11,10 +11,15 @@ import io.appium.java_client.android.AndroidDriver;
 
 public class AppiumManager {
 
-    private AndroidDriver driver;
-    private final String driverURL = "http://127.0.0.1:4723/wd/hub";
+    private static AppiumManager appiumManager;
+    private static AndroidDriver driver;
+    private static final String driverURL = "http://127.0.0.1:4723/wd/hub";
 
-    public void init() throws MalformedURLException {
+    private AppiumManager() {
+        init();
+    }
+
+    private static void init()  {
 
         File rootPath = new File(System.getProperty("user.dir"));
         File appDir = new File(rootPath,"src/test/resources");
@@ -23,17 +28,32 @@ public class AppiumManager {
         DesiredCapabilities capabilities = new DesiredCapabilities();
 
         capabilities.setCapability ("platformName", "Android");
-        capabilities.setCapability ("platformVersion", "7.1.2");
         capabilities.setCapability ("deviceName", "test");
         capabilities.setCapability ("app", app.getAbsolutePath());
         capabilities.setCapability ("appPackage", "com.owncloud.android");
         capabilities.setCapability ("appActivity", ".ui.activity.FileDisplayActivity");
-
-        driver = new AndroidDriver (new URL(driverURL), capabilities);
+        try {
+            driver = new AndroidDriver (new URL(driverURL), capabilities);
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+        }
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
     }
 
+    public static AppiumManager getManager() {
+
+        //System.out.println("CREANDO MANAGER");
+        if (appiumManager == null) {
+            //System.out.println("APPIUM MANAGER NULO");
+            appiumManager = new AppiumManager();
+        } else {
+            //System.out.println("APPIUM MANAGER NO NULO");
+        }
+        return appiumManager;
+    }
+
     public AndroidDriver getDriver(){
+        //System.out.println("DEVOLVEMOS DRIVER");
         return driver;
     }
 
