@@ -8,17 +8,8 @@ import android.SearchShareePage;
 import android.SharePage;
 import android.WizardPage;
 
-import org.junit.AfterClass;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.xml.sax.SAXException;
 
-import java.io.IOException;
-import java.net.MalformedURLException;
-
-import javax.xml.parsers.ParserConfigurationException;
-
-import io.cucumber.java.After;
-import io.cucumber.java.Before;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -41,29 +32,7 @@ public class ShareSteps {
 
     protected WebDriverWait wait = new WebDriverWait(AppiumManager.getManager().getDriver(), 5);
 
-    //Appium driver
-    //protected AndroidDriver driver;
-
     private String shareId;
-
-    @Before
-    public void setup() throws MalformedURLException {
-        /*AppiumManager manager = new AppiumManager();
-        manager.init();
-        driver = manager.getDriver();*/
-
-        System.out.println("BEFORE");
-        AppiumManager.getManager().getDriver().launchApp();
-
-        /*wizardPage = new WizardPage();
-        loginPage = new LoginPage();
-        sharePage = new SharePage();
-        fileListPage = new FileListPage();
-        searchShareePage = new SearchShareePage();
-        publicLinkPage = new PublicLinkPage();*/
-
-        //shareAPI = new ShareAPI();
-    }
 
     @Given("^I am logged$")
     public void i_am_logged() throws Throwable {
@@ -97,29 +66,15 @@ public class ShareSteps {
     public void sees_in_file_list(String sharee, String item) throws Throwable {
         shareId = shareAPI.getIdShare(item);
         assertTrue(shareAPI.checkCorrectShared(shareId, item, "0", sharee));
-
+        shareAPI.removeShare(shareId);
     }
     
-    @Then("^public link is created with the name (.+)")
-    public void public_link_created(String name) throws Throwable {
-        assertTrue(sharePage.isPublicLinkNameInList(name));
-        shareId = shareAPI.getIdShare(name);
-    }
-
-    @After
-    public void tearDown() throws IOException, SAXException, ParserConfigurationException, InterruptedException{
-        // Link must be removed via API
-        System.out.println("AFTER SHARE STEPS");
+    @Then("^public link is created on (.+) with the name (.+)")
+    public void public_link_created(String itemName, String linkName) throws Throwable {
+        assertTrue(sharePage.isPublicLinkNameInList(linkName));
+        shareId = shareAPI.getIdShare(itemName);
+        // Link must be removed via API;
         shareAPI.removeShare(shareId);
-
-        AppiumManager.getManager().getDriver().removeApp("com.owncloud.android");
-        //AppiumManager.getManager().getDriver().close();
-    }
-
-    @AfterClass
-    public static void afterclass() throws MalformedURLException{
-        System.out.println("AFTER class");
-        AppiumManager.getManager().getDriver().quit();
     }
 
 }

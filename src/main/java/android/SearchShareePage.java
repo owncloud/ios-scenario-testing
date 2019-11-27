@@ -2,6 +2,8 @@ package android;
 
 import org.openqa.selenium.By;
 
+import io.appium.java_client.MobileBy;
+import io.appium.java_client.MobileElement;
 import io.appium.java_client.TouchAction;
 import io.appium.java_client.touch.offset.PointOption;
 
@@ -14,6 +16,7 @@ public class SearchShareePage extends CommonPage {
     }
 
     public void shareWithUser (String sharee) throws  InterruptedException{
+        waitById(10,searchSrctext_id);
         driver.findElement(By.id(searchSrctext_id)).sendKeys(sharee);
         //REDO: find another way to click in recipients' list
         Thread.sleep(1000);
@@ -24,10 +27,13 @@ public class SearchShareePage extends CommonPage {
     }
 
     private void backListShares() throws InterruptedException{
-        driver.hideKeyboard();
+        //driver.hideKeyboard();
         //By setting only once, it does not work... check why
-        driver.navigate().back();
-        driver.navigate().back();
+        //driver.navigate().back();
+        //driver.navigate().back();
+        MobileElement back = (MobileElement)
+            driver.findElement(MobileBy.xpath("//android.widget.ImageButton[@content-desc=\"Navigate up\"]"));
+        actions.click(back).perform();
     }
 
 }

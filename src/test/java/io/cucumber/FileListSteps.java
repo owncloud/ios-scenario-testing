@@ -23,23 +23,6 @@ public class FileListSteps {
     //APIs to call
     protected FilesAPI filesAPI = new FilesAPI();
 
-    //Appium driver
-    //protected AndroidDriver driver;
-
-    /*@Before
-    public void setup() throws MalformedURLException {
-        AppiumManager manager = new AppiumManager();
-        manager.init();
-        driver = manager.getDriver();
-
-        wizardPage = new WizardPage(driver);
-        loginPage = new LoginPage(driver);
-        fileListPage = new FileListPage(driver);
-        inputNamePage = new InputNamePage(driver);
-
-        filesAPI = new FilesAPI();
-    }*/
-
     @When("I select the option Create Folder")
     public void i_select_create_folder() throws Throwable {
         fileListPage.createFolder();
@@ -66,11 +49,4 @@ public class FileListSteps {
     public void i_do_not_see_the_item(String itemName) throws Throwable {
         assertFalse(fileListPage.isItemInList(itemName));
     }
-
-    /*@After
-    public void tearDown() throws MalformedURLException {
-        System.out.println("AFTER FILE LIST STEPS");
-        AppiumManager.getManager().getDriver().removeApp("com.owncloud.android");
-        //AppiumManager.getManager().getDriver().close();
-    }*/
 }

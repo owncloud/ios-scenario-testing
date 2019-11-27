@@ -1,13 +1,9 @@
 package io.cucumber;
 
-import android.AppiumManager;
 import android.FileListPage;
 import android.LoginPage;
 import android.WizardPage;
 
-import java.net.MalformedURLException;
-
-import io.cucumber.java.After;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -20,22 +16,6 @@ public class LoginSteps {
     private WizardPage wizardPage = new WizardPage();
     private LoginPage loginPage = new LoginPage();
     private FileListPage fileListPage = new FileListPage();
-
-    //private AndroidDriver driver;
-
-    /*@Before
-    public void setup() {
-        AppiumManager manager = new AppiumManager();
-        manager.init();
-        driver = manager.getDriver();
-        System.out.println("BEFORE LOGIN STEPS");
-
-        AppiumManager.getManager().getDriver().launchApp();
-
-        /*wizardPage = new WizardPage();
-        loginPage = new LoginPage();
-        fileListPage = new FileListPage();
-    }*/
 
     @Given("^I am a valid user$")
     public void i_am_a_valid_user() throws Throwable {
@@ -65,12 +45,5 @@ public class LoginSteps {
     @Then("^I see an error message$")
     public void i_see_an_error_message() throws Throwable {
         assertTrue(loginPage.isCredentialsErrorMessage());
-    }
-
-    @After
-    public void tearDown() throws MalformedURLException{
-        System.out.println("AFTER LOGIN STEPS");
-        AppiumManager.getManager().getDriver().removeApp("com.owncloud.android");
-        //AppiumManager.getManager().getDriver().close();
     }
 }

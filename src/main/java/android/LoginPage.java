@@ -33,7 +33,7 @@ public class LoginPage extends CommonPage{
     }
 
     public void allowPermissions(){
-        wait(5, allowbutton_xpath);
+        waitByXpath(5, allowbutton_xpath);
         driver.findElement(MobileBy.xpath(allowbutton_xpath)).click();
     }
 

@@ -7,7 +7,6 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import io.appium.java_client.MobileBy;
 import io.appium.java_client.android.AndroidDriver;
-import io.appium.java_client.android.AndroidElement;
 
 public class CommonPage {
 
@@ -20,36 +19,15 @@ public class CommonPage {
         actions = new Actions(driver);
     }
 
-    public static boolean wait(int timeToWait, String resourceId){
+    public static void waitByXpath(int timeToWait, String resourceId){
         AndroidDriver driver = AppiumManager.getManager().getDriver();
         WebDriverWait wait = new WebDriverWait(driver, timeToWait);
-        boolean isElementPresent = false;
-        try{
-            AndroidElement mobileElement =  (AndroidElement) driver.findElement(By.xpath(resourceId));;
-            wait.until(ExpectedConditions.visibilityOf(mobileElement));
-            isElementPresent = mobileElement.isDisplayed();
-            return isElementPresent;
-        } catch(Exception e){
-            isElementPresent = false;
-            System.out.println(e.getMessage());
-            return isElementPresent;
-        }
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(resourceId)));
     }
 
-    public static boolean waitById(int timeToWait, String resourceId){
+    public static void waitById(int timeToWait, String resourceId){
         AndroidDriver driver = AppiumManager.getManager().getDriver();
         WebDriverWait wait = new WebDriverWait(driver, timeToWait);
-        boolean isElementPresent = false;
-        try{
-
-            AndroidElement mobileElement =  (AndroidElement) driver.findElement(MobileBy.id(resourceId));
-            wait.until(ExpectedConditions.visibilityOf(mobileElement));
-            isElementPresent = mobileElement.isDisplayed();
-            return isElementPresent;
-        } catch(Exception e){
-            isElementPresent = false;
-            System.out.println(e.getMessage());
-            return isElementPresent;
-        }
+        wait.until(ExpectedConditions.visibilityOfElementLocated(MobileBy.id(resourceId)));
     }
 }

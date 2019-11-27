@@ -4,13 +4,10 @@ import org.openqa.selenium.By;
 
 import io.appium.java_client.MobileBy;
 import io.appium.java_client.MobileElement;
-import io.appium.java_client.TouchAction;
-import io.appium.java_client.touch.offset.PointOption;
 
 public class FileListPage extends CommonPage{
 
     private String headertext_xpath = "//*[@text='ownCloud']";
-    private String rename_xpath = "/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.ListView/android.widget.LinearLayout[6]/android.widget.LinearLayout/android.widget.RelativeLayout/android.widget.TextView";
     private String documentstext_description = "LinearLayout-";
     private String sharebutton_id = "com.owncloud.android:id/action_share_file";
     private String fab_id = "fab_expand_menu_button";
@@ -35,12 +32,10 @@ public class FileListPage extends CommonPage{
 
     public void renameAction(String itemName) throws InterruptedException{
         selectItemList(itemName);
-        //REDO: chek how to click in three-dot-button.
-        Thread.sleep(1000);
-        TouchAction n3dot = new TouchAction(driver);
-        n3dot.tap(PointOption.point(960, 102)).perform();
-        //REDO: How to select an option inside the menu
-        driver.findElement(MobileBy.xpath(rename_xpath)).click();
+        MobileElement threeDotButton = (MobileElement)
+                driver.findElementByAndroidUIAutomator("new UiSelector().description(\"More options\");");
+        actions.click(threeDotButton).perform();
+        selectOperation("Rename");
     }
 
     public boolean isItemInList (String itemName) {
@@ -52,10 +47,15 @@ public class FileListPage extends CommonPage{
     }
 
     public void selectItemList(String itemName){
-        waitById(10, "new UiSelector().description(\""+documentstext_description+itemName+"\");");
         MobileElement itemInList = (MobileElement)
                 driver.findElementByAndroidUIAutomator("new UiSelector().description(\""+documentstext_description+itemName+"\");");
         actions.clickAndHold(itemInList).perform();
+    }
+
+    public void selectOperation(String operation){
+        MobileElement selection = (MobileElement)
+                driver.findElementByAndroidUIAutomator("new UiSelector().text(\""+ operation +"\");");
+        actions.click(selection).perform();
     }
 
 }
