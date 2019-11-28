@@ -10,7 +10,7 @@ public class LoginPage extends CommonPage{
     private String passwordtext_id = "account_password";
     private String loginbutton_id = "loginButton";
     private String errorcredentialstext_xpath = "//*[@text='Wrong username or password']";
-    private String allowbutton_xpath = "//*[@text='Allow']";
+    private String allowbutton_id = "com.android.packageinstaller:id/permission_allow_button";
 
     private final String serverURL = "http://10.40.40.198:17000";
 
@@ -33,8 +33,8 @@ public class LoginPage extends CommonPage{
     }
 
     public void allowPermissions(){
-        waitByXpath(5, allowbutton_xpath);
-        driver.findElement(MobileBy.xpath(allowbutton_xpath)).click();
+        waitById(5, allowbutton_id);
+        driver.findElementById(allowbutton_id).click();
     }
 
     public boolean isCredentialsErrorMessage(){

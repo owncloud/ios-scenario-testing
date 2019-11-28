@@ -3,7 +3,7 @@ Feature: Rename an item
   Background: User is logged in
     Given I am logged
 
-  @TT
+
   Scenario: Rename an item
     When I select the item AL1234 to rename
     And I set BM4567 as name

@@ -74,7 +74,7 @@ public class FilesAPI extends CommonAPI {
             e.printStackTrace();
         }
 
-        switch (response.code()%100){
+        switch (response.code()/100){
             case(2): { //Response 2xx, item exists
                 return true;
             }
