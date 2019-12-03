@@ -1,10 +1,9 @@
 package io.cucumber;
 
 import android.FileListPage;
+import android.FolderPickerPage;
 import android.InputNamePage;
-import android.LoginPage;
 import android.RemoveDialogPage;
-import android.WizardPage;
 
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -16,10 +15,9 @@ import static org.junit.Assert.assertTrue;
 public class FileListSteps {
 
     //Involved pages
-    protected WizardPage wizardPage = new WizardPage();
-    protected LoginPage loginPage = new LoginPage();
     protected FileListPage fileListPage = new FileListPage();
     protected InputNamePage inputNamePage = new InputNamePage();
+    protected FolderPickerPage folderPickerPage = new FolderPickerPage();
     protected RemoveDialogPage removeDialogPage = new RemoveDialogPage();
 
     //APIs to call
@@ -42,6 +40,18 @@ public class FileListSteps {
         fileListPage.deleteAction(itemName);
     }
 
+    @When("I select the item (.+) to move")
+    public void i_select_item_to_move(String itemName) {
+        filesAPI.createFolder(itemName);
+        fileListPage.moveAction(itemName);
+    }
+
+    @When ("I select (.+) as target folder")
+    public void i_select_target_folder(String targetFolder) {
+        folderPickerPage.selectFolder(targetFolder);
+        folderPickerPage.accept();
+    }
+
     @When("I accept the deletion")
     public void i_accept_the_deletion(){
         removeDialogPage.removeAll();
@@ -54,7 +64,8 @@ public class FileListSteps {
 
     @Then("^I see (.+) in my file list$")
     public void i_see_the_item(String itemName) {
-        assertTrue(fileListPage.isItemInList(itemName));
+        //Get the last token of the item path
+        assertTrue(fileListPage.isItemInList(itemName.substring(itemName.lastIndexOf('/')+1)));
         assertTrue(filesAPI.itemExist(itemName));
         filesAPI.removeItem(itemName);
     }
@@ -64,4 +75,11 @@ public class FileListSteps {
         assertFalse(fileListPage.isItemInList(itemName));
         assertFalse(filesAPI.itemExist(itemName));
     }
+
+    @Then("I see (.+) inside the folder (.+)")
+    public void i_see_item_in_folder(String itemName, String targetFolder) {
+        fileListPage.browse(targetFolder);
+        i_see_the_item(targetFolder+"/"+itemName);
+    }
+
 }

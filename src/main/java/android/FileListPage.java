@@ -38,6 +38,14 @@ public class FileListPage extends CommonPage{
         selectOperation("Rename");
     }
 
+    public void moveAction(String itemName) {
+        selectItemList(itemName);
+        MobileElement threeDotButton = (MobileElement)
+                driver.findElementByAndroidUIAutomator("new UiSelector().description(\"More options\");");
+        actions.click(threeDotButton).perform();
+        selectOperation("Move");
+    }
+
     public void deleteAction(String itemName) {
         selectItemList(itemName);
         MobileElement threeDotButton = (MobileElement)
@@ -64,6 +72,12 @@ public class FileListPage extends CommonPage{
         MobileElement selection = (MobileElement)
                 driver.findElementByAndroidUIAutomator("new UiSelector().text(\""+ operation +"\");");
         actions.click(selection).perform();
+    }
+
+    public void browse(String folderName){
+        MobileElement folder = (MobileElement)
+            driver.findElementByAndroidUIAutomator("new UiSelector().description(\"" + documentstext_description + folderName + "\");");
+        actions.click(folder).perform();
     }
 
 }
