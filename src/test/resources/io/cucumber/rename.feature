@@ -4,7 +4,6 @@ Feature: Rename an item
     Given I am logged
 
 
-    @hola
   Scenario: Rename an item
     When I select the folder AL1234 to rename
     And I set BM4567 as name

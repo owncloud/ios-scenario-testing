@@ -26,11 +26,7 @@ public class SearchShareePage extends CommonPage {
         backListShares();
     }
 
-    private void backListShares() throws InterruptedException{
-        //driver.hideKeyboard();
-        //By setting only once, it does not work... check why
-        //driver.navigate().back();
-        //driver.navigate().back();
+    private void backListShares() {
         MobileElement back = (MobileElement)
             driver.findElement(MobileBy.xpath("//android.widget.ImageButton[@content-desc=\"Navigate up\"]"));
         actions.click(back).perform();

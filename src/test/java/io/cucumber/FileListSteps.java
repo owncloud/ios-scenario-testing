@@ -41,6 +41,9 @@ public class FileListSteps {
             case "move":
                 fileListPage.moveAction(itemName);
                 break;
+            case "copy":
+                fileListPage.copyAction(itemName);
+                break;
         }
     }
 
@@ -60,7 +63,7 @@ public class FileListSteps {
         inputNamePage.setItemName(itemName);
     }
 
-    @Then("I see (.+) in my file list")
+    @Then("I see (.+) in my file list$")
     public void i_see_the_item(String itemName) {
         //Get the last token of the item path
         assertTrue(fileListPage.isItemInList(itemName.substring(itemName.lastIndexOf('/')+1)));
@@ -78,6 +81,15 @@ public class FileListSteps {
     public void i_see_item_in_folder(String itemName, String targetFolder) {
         fileListPage.browse(targetFolder);
         i_see_the_item(targetFolder+"/"+itemName);
+    }
+
+    @Then("I see (.+) in my file list as original")
+    public void i_see_original_the_item(String itemName) throws InterruptedException {
+        //Copy keeps the selection mode. To improve.
+        fileListPage.closeSelectionMode();
+        assertTrue(fileListPage.isItemInList(itemName.substring(itemName.lastIndexOf('/')+1)));
+        assertTrue(filesAPI.itemExist(itemName));
+        filesAPI.removeItem(itemName);
     }
 
 }

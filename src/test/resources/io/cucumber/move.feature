@@ -3,7 +3,6 @@ Feature: Move item
   Background: User is logged in
     Given I am logged
 
-    @hola
   Scenario: Move an existent folder to another location
     When I select the folder moveMe to move
     And I select Documents as target folder
