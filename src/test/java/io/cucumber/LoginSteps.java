@@ -23,8 +23,7 @@ public class LoginSteps {
     }
 
     @When("^I login as (.+) with password (.+)$")
-    public void i_login_as_string_with_password_string(String username, String password)
-            throws Throwable {
+    public void i_login_as_string_with_password_string(String username, String password) {
         loginPage.typeURL();
         loginPage.typeCredentials(username, password);
         loginPage.allowPermissions();

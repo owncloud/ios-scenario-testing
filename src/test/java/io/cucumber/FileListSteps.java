@@ -28,22 +28,20 @@ public class FileListSteps {
         fileListPage.createFolder();
     }
 
-    @When("I select the item (.+) to rename")
-    public void i_select_item_to_rename(String itemName) throws Throwable {
+    @When("I select the folder (.+) to (.+)")
+    public void i_select_folder_to_some_operation(String itemName, String operation){
         filesAPI.createFolder(itemName);
-        fileListPage.renameAction(itemName);
-    }
-
-    @When("I select the item (.+) to delete")
-    public void i_select_item_to_delete(String itemName) {
-        filesAPI.createFolder(itemName);
-        fileListPage.deleteAction(itemName);
-    }
-
-    @When("I select the item (.+) to move")
-    public void i_select_item_to_move(String itemName) {
-        filesAPI.createFolder(itemName);
-        fileListPage.moveAction(itemName);
+        switch (operation){
+            case "rename":
+                fileListPage.renameAction(itemName);
+                break;
+            case "delete":
+                fileListPage.deleteAction(itemName);
+                break;
+            case "move":
+                fileListPage.moveAction(itemName);
+                break;
+        }
     }
 
     @When ("I select (.+) as target folder")
@@ -57,12 +55,12 @@ public class FileListSteps {
         removeDialogPage.removeAll();
     }
 
-    @When("^I set (.+) as name")
+    @When("I set (.+) as name")
     public void i_set_new_name(String itemName) {
         inputNamePage.setItemName(itemName);
     }
 
-    @Then("^I see (.+) in my file list$")
+    @Then("I see (.+) in my file list")
     public void i_see_the_item(String itemName) {
         //Get the last token of the item path
         assertTrue(fileListPage.isItemInList(itemName.substring(itemName.lastIndexOf('/')+1)));
@@ -70,7 +68,7 @@ public class FileListSteps {
         filesAPI.removeItem(itemName);
     }
 
-    @Then("^I do not see (.+) in my file list$")
+    @Then("I do not see (.+) in my file list")
     public void i_do_not_see_the_item(String itemName) {
         assertFalse(fileListPage.isItemInList(itemName));
         assertFalse(filesAPI.itemExist(itemName));
