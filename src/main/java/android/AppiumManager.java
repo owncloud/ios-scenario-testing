@@ -23,7 +23,7 @@ public class AppiumManager {
 
         File rootPath = new File(System.getProperty("user.dir"));
         File appDir = new File(rootPath,"src/test/resources");
-        File app = new File(appDir,"owncloud.apk");
+        File app = new File(appDir,"owncloud_2.13.1-release.apk");
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
 
@@ -31,7 +31,9 @@ public class AppiumManager {
         capabilities.setCapability ("deviceName", "test");
         capabilities.setCapability ("app", app.getAbsolutePath());
         capabilities.setCapability ("appPackage", "com.owncloud.android");
-        capabilities.setCapability ("appActivity", ".ui.activity.FileDisplayActivity");
+        capabilities.setCapability ("appActivity", "com.owncloud.android.ui.activity.SplashActivity");
+        capabilities.setCapability ("appWaitPackage", "com.owncloud.android");
+        capabilities.setCapability ("appWaitActivity", "com.owncloud.android.ui.activity.WhatsNewActivity");
         try {
             driver = new AndroidDriver (new URL(driverURL), capabilities);
         } catch (MalformedURLException e) {

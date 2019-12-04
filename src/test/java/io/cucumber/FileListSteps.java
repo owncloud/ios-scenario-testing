@@ -29,7 +29,7 @@ public class FileListSteps {
     }
 
     @When("I select the folder (.+) to (.+)")
-    public void i_select_folder_to_some_operation(String itemName, String operation){
+    public void i_select_folder_to_some_operation(String itemName, String operation) {
         filesAPI.createFolder(itemName);
         switch (operation){
             case "rename":
@@ -84,7 +84,7 @@ public class FileListSteps {
     }
 
     @Then("I see (.+) in my file list as original")
-    public void i_see_original_the_item(String itemName) throws InterruptedException {
+    public void i_see_original_the_item(String itemName) {
         //Copy keeps the selection mode. To improve.
         fileListPage.closeSelectionMode();
         assertTrue(fileListPage.isItemInList(itemName.substring(itemName.lastIndexOf('/')+1)));

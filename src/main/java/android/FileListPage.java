@@ -8,7 +8,6 @@ import io.appium.java_client.MobileElement;
 public class FileListPage extends CommonPage{
 
     private String headertext_xpath = "//*[@text='ownCloud']";
-    private String documentstext_description = "LinearLayout-";
     private String sharebutton_id = "com.owncloud.android:id/action_share_file";
     private String closeselection_id = "com.owncloud.android:id/action_mode_close_button";
     private String fab_id = "fab_expand_menu_button";
@@ -46,8 +45,12 @@ public class FileListPage extends CommonPage{
         actions.click(threeDotButton).perform();
         selectOperation("Move");
     }
-    public void copyAction(String itemName) {
-        selectItemList(itemName);
+    public void copyAction(String itemName) throws InterruptedException{
+        //selectItemList(itemName);
+        MobileElement itemInList = (MobileElement)
+                driver.findElementByAndroidUIAutomator("new UiSelector().text(\""+itemName+"\");");
+        actions.clickAndHold(itemInList).perform();
+
         MobileElement threeDotButton = (MobileElement)
                 driver.findElementByAndroidUIAutomator("new UiSelector().description(\"More options\");");
         actions.click(threeDotButton).perform();
@@ -63,7 +66,7 @@ public class FileListPage extends CommonPage{
     }
 
     public boolean isItemInList (String itemName) {
-        return !driver.findElementsByAndroidUIAutomator("new UiSelector().description(\"" + documentstext_description + itemName + "\");").isEmpty();
+        return !driver.findElementsByAndroidUIAutomator("new UiSelector().text(\"" + itemName + "\");").isEmpty();
     }
 
     public boolean isHeader(){
@@ -72,7 +75,7 @@ public class FileListPage extends CommonPage{
 
     public void selectItemList(String itemName) {
         MobileElement itemInList = (MobileElement)
-                driver.findElementByAndroidUIAutomator("new UiSelector().description(\""+documentstext_description+itemName+"\");");
+                driver.findElementByAndroidUIAutomator("new UiSelector().text(\""+itemName+"\");");
         actions.clickAndHold(itemInList).perform();
     }
 
@@ -84,7 +87,7 @@ public class FileListPage extends CommonPage{
 
     public void browse(String folderName){
         MobileElement folder = (MobileElement)
-            driver.findElementByAndroidUIAutomator("new UiSelector().description(\"" + documentstext_description + folderName + "\");");
+            driver.findElementByAndroidUIAutomator("new UiSelector().text(\"" + folderName + "\");");
         actions.click(folder).perform();
     }
 
