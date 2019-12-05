@@ -6,6 +6,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import io.appium.java_client.MobileBy;
+import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 
 public class CommonPage {
@@ -30,4 +31,17 @@ public class CommonPage {
         WebDriverWait wait = new WebDriverWait(driver, timeToWait);
         wait.until(ExpectedConditions.visibilityOfElementLocated(MobileBy.id(resourceId)));
     }
+
+    protected MobileElement matchByText(String text){
+        MobileElement selection = (MobileElement)
+                driver.findElementByAndroidUIAutomator("new UiSelector().text(\""+ text +"\");");
+        return selection;
+    }
+
+    protected MobileElement matchById(String text){
+        MobileElement selection = (MobileElement)
+                driver.findElementByAndroidUIAutomator("new UiSelector().resourceId(\""+ text +"\");");
+        return selection;
+    }
+
 }

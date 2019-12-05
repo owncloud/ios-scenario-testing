@@ -17,51 +17,37 @@ public class FileListPage extends CommonPage{
         super();
     }
 
-    public void shareAction (String itemName){
-        selectItemList(itemName);
-        MobileElement shareAction = (MobileElement)
-                driver.findElementByAndroidUIAutomator("new UiSelector().resourceId(\""+sharebutton_id+"\");");
-        actions.click(shareAction).perform();
-    }
-
     public void createFolder(){
         waitById(5, fab_id);
         driver.findElement(MobileBy.id(fab_id)).click();
         driver.findElement(MobileBy.id(createfolder_id)).click();
     }
 
+    public void shareAction (String itemName){
+        selectItemList(itemName);
+        actions.click(matchById(sharebutton_id)).perform();
+    }
+
     public void renameAction(String itemName) {
         selectItemList(itemName);
-        MobileElement threeDotButton = (MobileElement)
-                driver.findElementByAndroidUIAutomator("new UiSelector().description(\"More options\");");
-        actions.click(threeDotButton).perform();
+        openOptions();
         selectOperation("Rename");
     }
 
     public void moveAction(String itemName) {
         selectItemList(itemName);
-        MobileElement threeDotButton = (MobileElement)
-                driver.findElementByAndroidUIAutomator("new UiSelector().description(\"More options\");");
-        actions.click(threeDotButton).perform();
+        openOptions();
         selectOperation("Move");
     }
-    public void copyAction(String itemName) throws InterruptedException{
-        //selectItemList(itemName);
-        MobileElement itemInList = (MobileElement)
-                driver.findElementByAndroidUIAutomator("new UiSelector().text(\""+itemName+"\");");
-        actions.clickAndHold(itemInList).perform();
-
-        MobileElement threeDotButton = (MobileElement)
-                driver.findElementByAndroidUIAutomator("new UiSelector().description(\"More options\");");
-        actions.click(threeDotButton).perform();
+    public void copyAction(String itemName) {
+        selectItemList(itemName);
+        openOptions();
         selectOperation("Copy");
     }
 
     public void deleteAction(String itemName) {
         selectItemList(itemName);
-        MobileElement threeDotButton = (MobileElement)
-                driver.findElementByAndroidUIAutomator("new UiSelector().description(\"More options\");");
-        actions.click(threeDotButton).perform();
+        openOptions();
         selectOperation("Remove");
     }
 
@@ -74,21 +60,16 @@ public class FileListPage extends CommonPage{
     }
 
     public void selectItemList(String itemName) {
-        MobileElement itemInList = (MobileElement)
-                driver.findElementByAndroidUIAutomator("new UiSelector().text(\""+itemName+"\");");
-        actions.clickAndHold(itemInList).perform();
+        matchByText(itemName);
+        actions.clickAndHold(matchByText(itemName)).perform();
     }
 
     public void selectOperation(String operation) {
-        MobileElement selection = (MobileElement)
-                driver.findElementByAndroidUIAutomator("new UiSelector().text(\""+ operation +"\");");
-        actions.click(selection).perform();
+        actions.click(matchByText(operation)).perform();
     }
 
     public void browse(String folderName){
-        MobileElement folder = (MobileElement)
-            driver.findElementByAndroidUIAutomator("new UiSelector().text(\"" + folderName + "\");");
-        actions.click(folder).perform();
+        actions.click(matchByText(folderName)).perform();
     }
 
     public void closeSelectionMode(){
@@ -97,4 +78,9 @@ public class FileListPage extends CommonPage{
         actions.click(backArrow).perform();
     }
 
+    private void openOptions(){
+        MobileElement threeDotButton = (MobileElement)
+                driver.findElementByAndroidUIAutomator("new UiSelector().description(\"More options\");");
+        actions.click(threeDotButton).perform();
+    }
 }
