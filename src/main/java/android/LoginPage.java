@@ -12,7 +12,7 @@ public class LoginPage extends CommonPage{
     private String errorcredentialstext_xpath = "//*[@text='Wrong username or password']";
     private String allowbutton_id = "com.android.packageinstaller:id/permission_allow_button";
 
-    private final String serverURL = "http://10.40.40.198:17000";
+    private final String serverURL = "http://10.40.40.198:19000";
 
     public LoginPage(){
         super();
