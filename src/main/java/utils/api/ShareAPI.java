@@ -14,13 +14,14 @@ import javax.xml.parsers.SAXParserFactory;
 
 import okhttp3.Request;
 import okhttp3.Response;
+import utils.LocProperties;
 import utils.entities.Share;
 
 public class ShareAPI extends CommonAPI {
 
-    private String sharingEndpoint = "/ocs/v2.php/apps/files_sharing/api/v1/shares";;
-    private String shareeUser = "user2";
-    private String shareePassword = "a";
+    private String sharingEndpoint = "/ocs/v2.php/apps/files_sharing/api/v1/shares";
+    private String shareeUser = LocProperties.getProperties().getProperty("userToShare");
+    private String shareePassword = LocProperties.getProperties().getProperty("userToSharePwd");
     private String credentialsB64Sharee = Base64.getEncoder().encodeToString((shareeUser+":"+shareePassword).getBytes());
 
     public ShareAPI(){

@@ -3,16 +3,17 @@ package utils.api;
 import java.util.Base64;
 
 import okhttp3.OkHttpClient;
+import utils.LocProperties;
 
 public class CommonAPI {
 
     protected final OkHttpClient httpClient = new OkHttpClient();
 
-    protected String urlServer = "http://10.40.40.198:19000";
-    protected String userAgent = "Mozilla/5.0 (Android) ownCloud-android/2.13.1";
-    protected String host = "10.40.40.198:19000";
-    protected String user = "user1";
-    protected String password = "a";
+    protected String urlServer = LocProperties.getProperties().getProperty("serverURL");
+    protected String userAgent = LocProperties.getProperties().getProperty("userAgent");
+    protected String host = LocProperties.getProperties().getProperty("hostName");
+    protected String user = LocProperties.getProperties().getProperty("userName1");
+    protected String password = LocProperties.getProperties().getProperty("passw1");;
     protected String credentialsB64 = Base64.getEncoder().encodeToString((user+":"+password).getBytes());
 
     public CommonAPI(){

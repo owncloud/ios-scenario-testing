@@ -8,12 +8,13 @@ import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
 import io.appium.java_client.android.AndroidDriver;
+import utils.LocProperties;
 
 public class AppiumManager {
 
     private static AppiumManager appiumManager;
     private static AndroidDriver driver;
-    private static final String driverURL = "http://127.0.0.1:4723/wd/hub";
+    private static final String driverURL = LocProperties.getProperties().getProperty("appiumURL");
 
     private AppiumManager() {
         init();
@@ -22,17 +23,17 @@ public class AppiumManager {
     private static void init()  {
 
         File rootPath = new File(System.getProperty("user.dir"));
-        File appDir = new File(rootPath,"src/test/resources");
-        File app = new File(appDir,"owncloud_2.13.1-release.apk");
+        File appDir = new File(rootPath, LocProperties.getProperties().getProperty("testResourcesPath"));
+        File app = new File(appDir, LocProperties.getProperties().getProperty("apkName"));
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
 
         capabilities.setCapability ("platformName", "Android");
         capabilities.setCapability ("deviceName", "test");
         capabilities.setCapability ("app", app.getAbsolutePath());
-        capabilities.setCapability ("appPackage", "com.owncloud.android");
+        capabilities.setCapability ("appPackage", LocProperties.getProperties().getProperty("appPackage"));
         capabilities.setCapability ("appActivity", "com.owncloud.android.ui.activity.SplashActivity");
-        capabilities.setCapability ("appWaitPackage", "com.owncloud.android");
+        capabilities.setCapability ("appWaitPackage", LocProperties.getProperties().getProperty("appPackage"));
         capabilities.setCapability ("appWaitActivity", "com.owncloud.android.ui.activity.WhatsNewActivity");
         try {
             driver = new AndroidDriver (new URL(driverURL), capabilities);

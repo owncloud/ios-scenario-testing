@@ -1,6 +1,7 @@
 package android;
 
 import io.appium.java_client.MobileBy;
+import utils.LocProperties;
 
 public class LoginPage extends CommonPage{
 
@@ -12,7 +13,7 @@ public class LoginPage extends CommonPage{
     private String errorcredentialstext_xpath = "//*[@text='Wrong username or password']";
     private String allowbutton_id = "com.android.packageinstaller:id/permission_allow_button";
 
-    private final String serverURL = "http://10.40.40.198:19000";
+    private final String serverURL = LocProperties.getProperties().getProperty("serverURL");
 
     public LoginPage(){
         super();
