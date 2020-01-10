@@ -2,16 +2,20 @@ package android;
 
 import org.openqa.selenium.By;
 
+import java.io.UnsupportedEncodingException;
+import java.net.URLEncoder;
+
 import io.appium.java_client.MobileBy;
 import io.appium.java_client.MobileElement;
+import utils.LocProperties;
 
 public class FileListPage extends CommonPage{
-
     private String headertext_xpath = "//*[@text='ownCloud']";
     private String sharebutton_id = "com.owncloud.android:id/action_share_file";
     private String closeselection_id = "com.owncloud.android:id/action_mode_close_button";
     private String fab_id = "fab_expand_menu_button";
     private String createfolder_id = "fab_mkdir";
+    private String downloaded_id = "com.owncloud.android:id/localFileIndicator";
 
     public FileListPage() {
         super();
@@ -51,6 +55,10 @@ public class FileListPage extends CommonPage{
         selectOperation("Remove");
     }
 
+    public void downloadAction(String itemName) {
+        actions.click(matchByText(itemName)).perform();
+    }
+
     public boolean isItemInList (String itemName) {
         return !driver.findElementsByAndroidUIAutomator("new UiSelector().text(\"" + itemName + "\");").isEmpty();
     }
@@ -76,6 +84,23 @@ public class FileListPage extends CommonPage{
         MobileElement backArrow = (MobileElement)
                 driver.findElementByAndroidUIAutomator("new UiSelector().resourceId(\""+closeselection_id+"\");");
         actions.click(backArrow).perform();
+    }
+
+    public boolean fileIsDownloaded(String fileName)  {
+        //Checking file is downloaded inside the device
+        try {
+            byte[] downloadedFile = driver.pullFile("/sdcard/owncloud/" +
+                    LocProperties.getProperties().getProperty("userName1") +
+                    "@" +
+                    URLEncoder.encode(LocProperties.getProperties().getProperty("hostName"), "UTF-8") + "/" +
+                    fileName);
+            return driver.findElement(By.id(downloaded_id)).isDisplayed() &&
+                    downloadedFile!=null &&
+                    downloadedFile.length>0;
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
+        return false;
     }
 
     private void openOptions(){

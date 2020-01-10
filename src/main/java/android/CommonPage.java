@@ -32,6 +32,12 @@ public class CommonPage {
         wait.until(ExpectedConditions.visibilityOfElementLocated(MobileBy.id(resourceId)));
     }
 
+    public static void waitByIdInvisible(int timeToWait, String resourceId){
+        AndroidDriver driver = AppiumManager.getManager().getDriver();
+        WebDriverWait wait = new WebDriverWait(driver, timeToWait);
+        wait.until(ExpectedConditions.invisibilityOfElementLocated(MobileBy.id(resourceId)));
+    }
+
     protected MobileElement matchByText(String text){
         MobileElement selection = (MobileElement)
                 driver.findElementByAndroidUIAutomator("new UiSelector().text(\""+ text +"\");");

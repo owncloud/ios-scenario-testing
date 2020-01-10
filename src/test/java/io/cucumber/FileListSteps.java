@@ -1,14 +1,17 @@
 package io.cucumber;
 
+import android.DetailsPage;
 import android.FileListPage;
 import android.FolderPickerPage;
 import android.InputNamePage;
 import android.RemoveDialogPage;
 
+import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import utils.api.FilesAPI;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
@@ -19,9 +22,15 @@ public class FileListSteps {
     protected InputNamePage inputNamePage = new InputNamePage();
     protected FolderPickerPage folderPickerPage = new FolderPickerPage();
     protected RemoveDialogPage removeDialogPage = new RemoveDialogPage();
+    protected DetailsPage detailsPage = new DetailsPage();
 
     //APIs to call
     protected FilesAPI filesAPI = new FilesAPI();
+
+    @Given("There is an item called (.+) in the account")
+    public void item_in_account(String itemName){
+        filesAPI.itemExist(itemName);
+    }
 
     @When("I select the option Create Folder")
     public void i_select_create_folder() {
@@ -43,6 +52,10 @@ public class FileListSteps {
                 break;
             case "copy":
                 fileListPage.copyAction(itemName);
+                break;
+            case "download":
+                fileListPage.downloadAction(itemName);
+                detailsPage.waitFinishedDownload(10);
                 break;
         }
     }
@@ -90,6 +103,20 @@ public class FileListSteps {
         assertTrue(fileListPage.isItemInList(itemName.substring(itemName.lastIndexOf('/')+1)));
         assertTrue(filesAPI.itemExist(itemName));
         filesAPI.removeItem(itemName);
+    }
+
+    @Then("The item (.+) is downloaded to the device")
+    public void item_downloaded(String itemName) {
+        detailsPage.backListFiles();
+        assertTrue(fileListPage.fileIsDownloaded(itemName));
+    }
+
+    @Then("I see the detailed information: (.+), (.+), and (.+)")
+    public void preview_in_screen(String itemName, String type, String size) {
+        detailsPage.closeOpenIn();
+        assertEquals(detailsPage.getName(), itemName);
+        assertEquals(detailsPage.getSize(), size);
+        assertEquals(detailsPage.getType(), type);
     }
 
 }
