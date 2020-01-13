@@ -3,7 +3,6 @@ Feature: Login
   Background: Valid user, skipping welcome wizard
     Given I am a valid user
 
-   @prop
   Scenario Outline: A valid login
     When I login as <username> with password <password>
     Then I can see the main page

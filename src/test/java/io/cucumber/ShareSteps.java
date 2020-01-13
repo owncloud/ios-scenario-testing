@@ -44,14 +44,14 @@ public class ShareSteps {
 
     @When("^I select (.+) to share with (.+)$")
     public void i_select_to_share_with(String itemName, String sharee) throws Throwable {
-        fileListPage.shareAction(itemName);
+        fileListPage.executeOperation("Share", itemName);
         sharePage.addPrivateShare();
         searchShareePage.shareWithUser(sharee);
     }
 
     @When("^i select (.+) to create link with name (.+)$")
     public void i_select_to_link_with_name(String itemName, String name) throws Throwable {
-        fileListPage.shareAction(itemName);
+        fileListPage.executeOperation("Share", itemName);
         sharePage.addPublicLink();
         publicLinkPage.createLink(name);
     }

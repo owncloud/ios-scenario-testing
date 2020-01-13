@@ -42,16 +42,16 @@ public class FileListSteps {
         filesAPI.createFolder(itemName);
         switch (operation){
             case "rename":
-                fileListPage.renameAction(itemName);
+                fileListPage.executeOperation("Rename", itemName);
                 break;
             case "delete":
-                fileListPage.deleteAction(itemName);
+                fileListPage.executeOperation("Remove", itemName);
                 break;
             case "move":
-                fileListPage.moveAction(itemName);
+                fileListPage.executeOperation("Move", itemName);
                 break;
             case "copy":
-                fileListPage.copyAction(itemName);
+                fileListPage.executeOperation("Copy" ,itemName);
                 break;
             case "download":
                 fileListPage.downloadAction(itemName);
@@ -121,7 +121,7 @@ public class FileListSteps {
 
     @Then("The item (.+) is marked as downloaded")
     public void item_marked_as_downloaded(String itemName) {
-        assertTrue(fileListPage.isMarkedAsDownloaded(itemName));
+        assertTrue(fileListPage.fileIsMarkedAsDownloaded(itemName));
     }
 
     @Then("Item is opened and previewed")
