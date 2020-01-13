@@ -94,13 +94,16 @@ public class FileListPage extends CommonPage{
                     "@" +
                     URLEncoder.encode(LocProperties.getProperties().getProperty("hostName"), "UTF-8") + "/" +
                     fileName);
-            return driver.findElement(By.id(downloaded_id)).isDisplayed() &&
-                    downloadedFile!=null &&
-                    downloadedFile.length>0;
+            return downloadedFile!=null && downloadedFile.length>0;
         } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
         }
         return false;
+    }
+
+    public boolean isMarkedAsDownloaded(String itemName){
+        //Enforce this.. downloaded file must fit the itemName
+        return driver.findElement(By.id(downloaded_id)).isDisplayed();
     }
 
     private void openOptions(){

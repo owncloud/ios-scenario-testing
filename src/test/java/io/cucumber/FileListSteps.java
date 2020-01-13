@@ -37,7 +37,7 @@ public class FileListSteps {
         fileListPage.createFolder();
     }
 
-    @When("I select the folder (.+) to (.+)")
+    @When("I select the item (.+) to (.+)")
     public void i_select_folder_to_some_operation(String itemName, String operation) {
         filesAPI.createFolder(itemName);
         switch (operation){
@@ -105,9 +105,8 @@ public class FileListSteps {
         filesAPI.removeItem(itemName);
     }
 
-    @Then("The item (.+) is downloaded to the device")
+    @Then("The item (.+) is stored in the device")
     public void item_downloaded(String itemName) {
-        detailsPage.backListFiles();
         assertTrue(fileListPage.fileIsDownloaded(itemName));
     }
 
@@ -117,6 +116,17 @@ public class FileListSteps {
         assertEquals(detailsPage.getName(), itemName);
         assertEquals(detailsPage.getSize(), size);
         assertEquals(detailsPage.getType(), type);
+        detailsPage.backListFiles();
+    }
+
+    @Then("The item (.+) is marked as downloaded")
+    public void item_marked_as_downloaded(String itemName) {
+        assertTrue(fileListPage.isMarkedAsDownloaded(itemName));
+    }
+
+    @Then("Item is opened and previewed")
+    public void item_opened_previewed(){
+        assertTrue(detailsPage.itemPreviewed());
     }
 
 }

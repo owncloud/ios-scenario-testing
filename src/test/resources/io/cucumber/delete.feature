@@ -4,6 +4,6 @@ Feature: Delete item
     Given I am logged
 
   Scenario: Delete an existent folder
-    When I select the folder deleteMe to delete
+    When I select the item deleteMe to delete
     And I accept the deletion
     Then I do not see deleteMe in my file list

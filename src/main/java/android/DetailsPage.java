@@ -11,6 +11,7 @@ public class DetailsPage extends CommonPage {
     private String itemType_id = "com.owncloud.android:id/fdType";
     private String itemSize_id = "com.owncloud.android:id/fdSize";
     private String downloading_id = "com.owncloud.android:id/fdProgressText";
+    private String photoview_id = "com.owncloud.android:id/photo_view";
 
     public DetailsPage(){
         super();
@@ -36,6 +37,10 @@ public class DetailsPage extends CommonPage {
 
     public void closeOpenIn(){
         driver.navigate().back();
+    }
+
+    public boolean itemPreviewed(){
+        return driver.findElement(By.id(photoview_id)).isDisplayed();
     }
 
     public void waitFinishedDownload(int seconds){
