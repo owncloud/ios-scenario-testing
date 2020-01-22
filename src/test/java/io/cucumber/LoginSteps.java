@@ -26,7 +26,6 @@ public class LoginSteps {
     public void i_login_as_string_with_password_string(String username, String password) {
         loginPage.typeURL();
         loginPage.typeCredentials(username, password);
-        loginPage.allowPermissions();
     }
 
     @When("^I login as (.+) with incorrect password (.+)$")

@@ -39,7 +39,6 @@ public class ShareSteps {
         wizardPage.skip();
         loginPage.typeURL();
         loginPage.typeCredentials("user1", "a");
-        loginPage.allowPermissions();
     }
 
     @When("^I select (.+) to share with (.+)$")
