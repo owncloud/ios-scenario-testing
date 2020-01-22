@@ -57,6 +57,9 @@ public class FileListSteps {
                 fileListPage.downloadAction(itemName);
                 detailsPage.waitFinishedDownload(10);
                 break;
+            case "av.offline":
+                fileListPage.executeOperation("AvOffline", itemName);
+                break;
         }
     }
 
@@ -122,6 +125,11 @@ public class FileListSteps {
     @Then("The item (.+) is marked as downloaded")
     public void item_marked_as_downloaded(String itemName) {
         assertTrue(fileListPage.fileIsMarkedAsDownloaded(itemName));
+    }
+
+    @Then("I see the item (.+) as av.offline")
+    public void item_marked_as_avOffline(String itemName) {
+        assertTrue(fileListPage.fileIsMarkedAsAvOffline(itemName));
     }
 
     @Then("Item is opened and previewed")

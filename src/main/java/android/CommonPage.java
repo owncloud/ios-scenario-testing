@@ -11,7 +11,7 @@ import io.appium.java_client.android.AndroidDriver;
 
 public class CommonPage {
 
-    protected AndroidDriver driver;
+    protected static AndroidDriver driver = AppiumManager.getManager().getDriver();;
     protected Actions actions;
 
     public CommonPage()  {
@@ -21,19 +21,16 @@ public class CommonPage {
     }
 
     public static void waitByXpath(int timeToWait, String resourceId){
-        AndroidDriver driver = AppiumManager.getManager().getDriver();
         WebDriverWait wait = new WebDriverWait(driver, timeToWait);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(resourceId)));
     }
 
     public static void waitById(int timeToWait, String resourceId){
-        AndroidDriver driver = AppiumManager.getManager().getDriver();
         WebDriverWait wait = new WebDriverWait(driver, timeToWait);
         wait.until(ExpectedConditions.visibilityOfElementLocated(MobileBy.id(resourceId)));
     }
 
     public static void waitByIdInvisible(int timeToWait, String resourceId){
-        AndroidDriver driver = AppiumManager.getManager().getDriver();
         WebDriverWait wait = new WebDriverWait(driver, timeToWait);
         wait.until(ExpectedConditions.invisibilityOfElementLocated(MobileBy.id(resourceId)));
     }
