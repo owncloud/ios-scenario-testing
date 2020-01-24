@@ -1,10 +1,14 @@
 package android;
 
+import com.google.common.collect.Lists;
+
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 import java.io.File;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 import io.appium.java_client.android.AndroidDriver;
@@ -54,6 +58,13 @@ public class AppiumManager {
 
     public AndroidDriver getDriver(){
         return driver;
+    }
+
+    public void cleanFolder(){
+        Map<String, Object> args = new HashMap<>();
+        args.put("command", "rm -r");
+        args.put("args", Lists.newArrayList("/sdcard/owncloud/"));
+        getDriver().executeScript("mobile:shell", args);
     }
 
 }

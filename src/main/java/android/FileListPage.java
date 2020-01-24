@@ -36,7 +36,7 @@ public class FileListPage extends CommonPage{
         operationsMap.put("Move", moveoption_id);
         operationsMap.put("Copy", copyoption_id);
         operationsMap.put("Remove", removeoption_id);
-        operationsMap.put("AvOffline", avofflineoption_id);
+        operationsMap.put("Set as available offline", avofflineoption_id);
     }
 
     public void createFolder(){
@@ -117,6 +117,7 @@ public class FileListPage extends CommonPage{
         MobileElement threeDotButton = (MobileElement)
                 driver.findElementByAndroidUIAutomator("new UiSelector().description(\"More options\");");
         actions.click(threeDotButton).perform();
+        System.out.println(operationName.toUpperCase());
         actions.click(matchByText(operationName)).perform();
     }
 

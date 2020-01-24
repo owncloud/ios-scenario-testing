@@ -58,7 +58,7 @@ public class FileListSteps {
                 detailsPage.waitFinishedDownload(10);
                 break;
             case "av.offline":
-                fileListPage.executeOperation("AvOffline", itemName);
+                fileListPage.executeOperation("Set as available offline", itemName);
                 break;
         }
     }

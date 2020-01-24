@@ -14,6 +14,7 @@ public class Hooks {
 
     @After
     public void tearDown(){
-        AppiumManager.getManager().getDriver().removeApp("com.owncloud.android");
+        AppiumManager.getManager().getDriver().removeApp("com.owncloud.android"); //remove the oC app
+        AppiumManager.getManager().cleanFolder(); //remove the oC folder from device
     }
 }
