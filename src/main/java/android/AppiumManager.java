@@ -61,6 +61,7 @@ public class AppiumManager {
     }
 
     public void cleanFolder(){
+        //needed Appium with option --allow-insecure=adb_shell
         Map<String, Object> args = new HashMap<>();
         args.put("command", "rm -r");
         args.put("args", Lists.newArrayList("/sdcard/owncloud/"));

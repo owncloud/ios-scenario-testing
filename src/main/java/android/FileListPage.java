@@ -117,7 +117,6 @@ public class FileListPage extends CommonPage{
         MobileElement threeDotButton = (MobileElement)
                 driver.findElementByAndroidUIAutomator("new UiSelector().description(\"More options\");");
         actions.click(threeDotButton).perform();
-        System.out.println(operationName.toUpperCase());
         actions.click(matchByText(operationName)).perform();
     }
 
