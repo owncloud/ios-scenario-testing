@@ -11,12 +11,10 @@ import io.appium.java_client.android.AndroidDriver;
 
 public class CommonPage {
 
-    protected static AndroidDriver driver = AppiumManager.getManager().getDriver();;
+    protected static AndroidDriver driver = AppiumManager.getManager().getDriver();
     protected Actions actions;
 
     public CommonPage()  {
-        AppiumManager manager = AppiumManager.getManager();
-        driver = manager.getDriver();
         actions = new Actions(driver);
     }
 
