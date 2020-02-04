@@ -2,6 +2,8 @@ package android;
 
 import org.openqa.selenium.By;
 
+import java.io.File;
+import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 import java.util.HashMap;
@@ -15,6 +17,8 @@ public class FileListPage extends CommonPage{
     private String closeselection_id = "com.owncloud.android:id/action_mode_close_button";
     private String fab_id = "fab_expand_menu_button";
     private String createfolder_id = "fab_mkdir";
+    private String uploadfab_id = "fab_upload";
+    private String uploadoption_id = "files_linear_layout";
     private String downloaded_id = "com.owncloud.android:id/localFileIndicator";
     private String avoffline_id = "com.owncloud.android:id/localFileIndicator";
 
@@ -43,6 +47,25 @@ public class FileListPage extends CommonPage{
         waitById(5, fab_id);
         driver.findElement(MobileBy.id(fab_id)).click();
         driver.findElement(MobileBy.id(createfolder_id)).click();
+    }
+
+    public void upload(){
+        waitById(5, fab_id);
+        driver.findElement(MobileBy.id(fab_id)).click();
+        driver.findElement(MobileBy.id(uploadfab_id)).click();
+        driver.findElement(MobileBy.id(uploadoption_id)).click();
+    }
+
+    public void pushFile(String itemName){
+        File rootPath = new File(System.getProperty("user.dir"));
+        File appDir = new File(rootPath, LocProperties.getProperties().getProperty("testResourcesPath"));
+        File app = new File(appDir, "io/cucumber/example-files/AAA.txt");
+
+        try {
+            driver.pushFile("/mnt/sdcard/Download/aaa.txt", app);
+        } catch (IOException e){
+            e.printStackTrace();
+        }
     }
 
     public void executeOperation(String operation, String itemName){
@@ -118,6 +141,18 @@ public class FileListPage extends CommonPage{
                 driver.findElementByAndroidUIAutomator("new UiSelector().description(\"More options\");");
         actions.click(threeDotButton).perform();
         actions.click(matchByText(operationName)).perform();
+    }
+
+    public void selectFileUpload(String itemName){
+        MobileElement hamburger = (MobileElement)
+                driver.findElementByAndroidUIAutomator("new UiSelector().description(\"Show roots\");");
+        actions.click(hamburger).perform();
+        MobileElement downloadOption = (MobileElement)
+                driver.findElementByAndroidUIAutomator("new UiSelector().text(\"Downloads\");");
+        actions.click(downloadOption).perform();
+        MobileElement item = (MobileElement)
+                driver.findElementByAndroidUIAutomator("new UiSelector().text(\""+ itemName +"\");");
+        actions.click(item).perform();
     }
 
 }

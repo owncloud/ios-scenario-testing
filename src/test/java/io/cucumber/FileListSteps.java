@@ -32,6 +32,11 @@ public class FileListSteps {
         filesAPI.itemExist(itemName);
     }
 
+    @Given("There is an item called (.+) in the folder Downloads of the device")
+    public void push_file_to_device(String itemName){
+        fileListPage.pushFile(itemName);
+    }
+
     @When("I select the option Create Folder")
     public void i_select_create_folder() {
         fileListPage.createFolder();
@@ -60,6 +65,9 @@ public class FileListSteps {
             case "av.offline":
                 fileListPage.executeOperation("Set as available offline", itemName);
                 break;
+            case "upload":
+                fileListPage.selectFileUpload(itemName);
+                break;
         }
     }
 
@@ -67,6 +75,11 @@ public class FileListSteps {
     public void i_select_target_folder(String targetFolder) {
         folderPickerPage.selectFolder(targetFolder);
         folderPickerPage.accept();
+    }
+
+    @When("I select the option upload")
+    public void i_select_upload() {
+        fileListPage.upload();
     }
 
     @When("I accept the deletion")
