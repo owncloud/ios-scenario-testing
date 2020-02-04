@@ -1,10 +1,12 @@
 Feature: Create a new folder
 
-  Background: User is logged in
-    Given I am logged
+  As an user, i want to be able to create new folders,
+  so that i can put order in my file structure
 
-    @demo
+  Background: User is logged in
+    Given user1 is logged
+
   Scenario: Create a new folder
-    When I select the option Create Folder
-    And I set FolderTest as name
-    Then I see FolderTest in my file list
+    When user selects the option Create Folder
+    And user sets FolderTest as name
+    Then user sees FolderTest in the file list

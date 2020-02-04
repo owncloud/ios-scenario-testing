@@ -1,10 +1,10 @@
 Feature: Public Share
 
   Background: User is logged in
-    Given I am logged
+    Given user1 is logged
 
   Scenario Outline: Create a public link with name
-    When i select <item> to create link with name <name>
+    When user selects <item> to create link with name <name>
     Then public link is created on <item> with the name <name>
 
     Examples:

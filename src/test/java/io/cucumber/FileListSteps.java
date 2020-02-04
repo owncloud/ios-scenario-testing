@@ -27,22 +27,22 @@ public class FileListSteps {
     //APIs to call
     protected FilesAPI filesAPI = new FilesAPI();
 
-    @Given("There is an item called (.+) in the account")
+    @Given("there is an item called (.+) in the account")
     public void item_in_account(String itemName){
         filesAPI.itemExist(itemName);
     }
 
-    @Given("There is an item called (.+) in the folder Downloads of the device")
+    @Given("there is an item called (.+) in the folder Downloads of the device")
     public void push_file_to_device(String itemName){
         fileListPage.pushFile(itemName);
     }
 
-    @When("I select the option Create Folder")
+    @When("user selects the option Create Folder")
     public void i_select_create_folder() {
         fileListPage.createFolder();
     }
 
-    @When("I select the item (.+) to (.+)")
+    @When("user selects the item (.+) to (.+)")
     public void i_select_folder_to_some_operation(String itemName, String operation) {
         filesAPI.createFolder(itemName);
         switch (operation){
@@ -71,28 +71,28 @@ public class FileListSteps {
         }
     }
 
-    @When ("I select (.+) as target folder")
+    @When ("user selects (.+) as target folder")
     public void i_select_target_folder(String targetFolder) {
         folderPickerPage.selectFolder(targetFolder);
         folderPickerPage.accept();
     }
 
-    @When("I select the option upload")
+    @When("user selects the option upload")
     public void i_select_upload() {
         fileListPage.upload();
     }
 
-    @When("I accept the deletion")
+    @When("user accepts the deletion")
     public void i_accept_the_deletion(){
         removeDialogPage.removeAll();
     }
 
-    @When("I set (.+) as name")
+    @When("user sets (.+) as name")
     public void i_set_new_name(String itemName) {
         inputNamePage.setItemName(itemName);
     }
 
-    @Then("I see (.+) in my file list$")
+    @Then("user sees (.+) in the file list$")
     public void i_see_the_item(String itemName) {
         //Get the last token of the item path
         assertTrue(fileListPage.isItemInList(itemName.substring(itemName.lastIndexOf('/')+1)));
@@ -100,19 +100,19 @@ public class FileListSteps {
         filesAPI.removeItem(itemName);
     }
 
-    @Then("I do not see (.+) in my file list")
+    @Then("user does not see (.+) in the file list")
     public void i_do_not_see_the_item(String itemName) {
         assertFalse(fileListPage.isItemInList(itemName));
         assertFalse(filesAPI.itemExist(itemName));
     }
 
-    @Then("I see (.+) inside the folder (.+)")
+    @Then("user sees (.+) inside the folder (.+)")
     public void i_see_item_in_folder(String itemName, String targetFolder) {
         fileListPage.browse(targetFolder);
         i_see_the_item(targetFolder+"/"+itemName);
     }
 
-    @Then("I see (.+) in my file list as original")
+    @Then("user sees (.+) in the file list as original")
     public void i_see_original_the_item(String itemName) {
         //Copy keeps the selection mode. To improve.
         fileListPage.closeSelectionMode();
@@ -121,12 +121,12 @@ public class FileListSteps {
         filesAPI.removeItem(itemName);
     }
 
-    @Then("The item (.+) is stored in the device")
+    @Then("the item (.+) is stored in the device")
     public void item_downloaded(String itemName) {
         assertTrue(fileListPage.fileIsDownloaded(itemName));
     }
 
-    @Then("I see the detailed information: (.+), (.+), and (.+)")
+    @Then("user sees the detailed information: (.+), (.+), and (.+)")
     public void preview_in_screen(String itemName, String type, String size) {
         detailsPage.closeOpenIn();
         assertEquals(detailsPage.getName(), itemName);
@@ -135,17 +135,17 @@ public class FileListSteps {
         detailsPage.backListFiles();
     }
 
-    @Then("The item (.+) is marked as downloaded")
+    @Then("the item (.+) is marked as downloaded")
     public void item_marked_as_downloaded(String itemName) {
         assertTrue(fileListPage.fileIsMarkedAsDownloaded(itemName));
     }
 
-    @Then("I see the item (.+) as av.offline")
+    @Then("user sees the item (.+) as av.offline")
     public void item_marked_as_avOffline(String itemName) {
         assertTrue(fileListPage.fileIsMarkedAsAvOffline(itemName));
     }
 
-    @Then("Item is opened and previewed")
+    @Then("the item is opened and previewed")
     public void item_opened_previewed(){
         assertTrue(detailsPage.itemPreviewed());
     }

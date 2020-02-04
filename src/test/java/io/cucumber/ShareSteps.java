@@ -34,21 +34,21 @@ public class ShareSteps {
 
     private String shareId;
 
-    @Given("^I am logged$")
-    public void i_am_logged() throws Throwable {
+    @Given("^user1 is logged$")
+    public void i_am_logged() {
         wizardPage.skip();
         loginPage.typeURL();
         loginPage.typeCredentials("user1", "a");
     }
 
-    @When("^I select (.+) to share with (.+)$")
+    @When("^user selects (.+) to share with (.+)$")
     public void i_select_to_share_with(String itemName, String sharee) throws Throwable {
         fileListPage.executeOperation("Share", itemName);
         sharePage.addPrivateShare();
         searchShareePage.shareWithUser(sharee);
     }
 
-    @When("^i select (.+) to create link with name (.+)$")
+    @When("^user selects (.+) to create link with name (.+)$")
     public void i_select_to_link_with_name(String itemName, String name) throws Throwable {
         fileListPage.executeOperation("Share", itemName);
         sharePage.addPublicLink();
