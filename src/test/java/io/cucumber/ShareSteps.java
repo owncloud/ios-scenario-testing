@@ -13,6 +13,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import utils.LocProperties;
 import utils.api.ShareAPI;
 
 import static org.junit.Assert.assertTrue;
@@ -38,7 +39,8 @@ public class ShareSteps {
     public void i_am_logged() {
         wizardPage.skip();
         loginPage.typeURL();
-        loginPage.typeCredentials("user1", "a");
+        loginPage.typeCredentials(LocProperties.getProperties().getProperty("userName1"),
+                LocProperties.getProperties().getProperty("passw1"));
     }
 
     @When("^user selects (.+) to share with (.+)$")

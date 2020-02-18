@@ -29,8 +29,7 @@ public class LoginSteps {
     }
 
     @When("^user logins as (.+) with incorrect password (.+)$")
-    public void i_login_as_string_with_incorrect_password_string(String username, String password)
-            throws Throwable {
+    public void i_login_as_string_with_incorrect_password_string(String username, String password) {
         loginPage.typeURL();
         loginPage.typeCredentials(username, password);
     }

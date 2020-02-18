@@ -8,5 +8,6 @@ Feature: Public Share
     Then public link is created on <item> with the name <name>
 
     Examples:
-      |    item     |   name    |
-      |  Documents  |   link1   |
+      |        item        |   name    |
+      |  Documents         |   link1   |
+      |  San Francisco.jpg |   link2   |
