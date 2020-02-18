@@ -1,12 +1,11 @@
 Feature: Login
 
   Background: Valid user, skipping welcome wizard
-    Given I am a valid user
+    Given user is a valid user
 
-   @prop
   Scenario Outline: A valid login
-    When I login as <username> with password <password>
-    Then I can see the main page
+    When user logins as <username> with password <password>
+    Then user can see the main page
 
     Examples:
       | username     | password |
@@ -17,8 +16,8 @@ Feature: Login
 
 
   Scenario Outline: An invalid login
-    When I login as <username> with incorrect password <password>
-    Then I see an error message
+    When user logins as <username> with incorrect password <password>
+    Then user sees an error message
 
     Examples:
       | username     | password |

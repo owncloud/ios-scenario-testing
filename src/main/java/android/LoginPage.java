@@ -11,7 +11,6 @@ public class LoginPage extends CommonPage{
     private String passwordtext_id = "account_password";
     private String loginbutton_id = "loginButton";
     private String errorcredentialstext_xpath = "//*[@text='Wrong username or password']";
-    private String allowbutton_id = "com.android.packageinstaller:id/permission_allow_button";
 
     private final String serverURL = LocProperties.getProperties().getProperty("serverURL");
 
@@ -31,11 +30,6 @@ public class LoginPage extends CommonPage{
         driver.findElement(MobileBy.id(passwordtext_id)).sendKeys(password);
         waitById(5, loginbutton_id);
         driver.findElement(MobileBy.id(loginbutton_id)).click();
-    }
-
-    public void allowPermissions(){
-        waitById(5, allowbutton_id);
-        driver.findElementById(allowbutton_id).click();
     }
 
     public boolean isCredentialsErrorMessage(){

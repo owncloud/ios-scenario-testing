@@ -1,10 +1,14 @@
 package android;
 
+import com.google.common.collect.Lists;
+
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 import java.io.File;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 import io.appium.java_client.android.AndroidDriver;
@@ -34,6 +38,7 @@ public class AppiumManager {
         capabilities.setCapability ("appPackage", LocProperties.getProperties().getProperty("appPackage"));
         capabilities.setCapability ("appActivity", "com.owncloud.android.ui.activity.SplashActivity");
         capabilities.setCapability ("appWaitPackage", LocProperties.getProperties().getProperty("appPackage"));
+        capabilities.setCapability ("autoGrantPermissions", "true");
         capabilities.setCapability ("appWaitActivity", "com.owncloud.android.ui.activity.WhatsNewActivity");
         try {
             driver = new AndroidDriver (new URL(driverURL), capabilities);
@@ -53,6 +58,14 @@ public class AppiumManager {
 
     public AndroidDriver getDriver(){
         return driver;
+    }
+
+    public void cleanFolder(){
+        //needed Appium with option --allow-insecure=adb_shell
+        Map<String, Object> args = new HashMap<>();
+        args.put("command", "rm -r");
+        args.put("args", Lists.newArrayList("/sdcard/owncloud/"));
+        getDriver().executeScript("mobile:shell", args);
     }
 
 }

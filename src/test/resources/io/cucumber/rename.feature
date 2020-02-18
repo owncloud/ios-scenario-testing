@@ -1,11 +1,11 @@
 Feature: Rename an item
 
   Background: User is logged in
-    Given I am logged
+    Given user1 is logged
 
 
   Scenario: Rename an item
-    When I select the folder AL1234 to rename
-    And I set BM4567 as name
-    Then I see BM4567 in my file list
-    And I do not see AL1234 in my file list
+    When user selects the item AL1234 to rename
+    And user sets BM4567 as name
+    Then user sees BM4567 in the file list
+    And user does not see AL1234 in the file list
