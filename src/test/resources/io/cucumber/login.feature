@@ -4,7 +4,8 @@ Feature: Login
     Given user is a valid user
 
   Scenario Outline: A valid login
-    When user logins as <username> with password <password>
+    When server with basic auth is available
+    And user logins as <username> with password <password> as basic auth credentials
     Then user can see the main page
 
     Examples:
@@ -16,10 +17,17 @@ Feature: Login
 
 
   Scenario Outline: An invalid login
-    When user logins as <username> with incorrect password <password>
+    When server is available
+    And user logins as <username> with incorrect password <password>
     Then user sees an error message
 
     Examples:
       | username     | password |
       |  user1       |    as    |
       |  user2       |    as    |
+
+
+  Scenario: A valid login with OAuth2
+    When server with OAuth2 is available
+    And user logins as user1 with password a as Oauth2 credentials
+    Then user can see the main page

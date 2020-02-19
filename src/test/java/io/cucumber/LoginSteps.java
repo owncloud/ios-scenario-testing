@@ -20,16 +20,28 @@ public class LoginSteps {
     @Given("^user is a valid user$")
     public void i_am_a_valid_user() throws Throwable {
         wizardPage.skip();
+        //Check user is created and enabled in BE
     }
 
-    @When("^user logins as (.+) with password (.+)$")
-    public void i_login_as_string_with_password_string(String username, String password) {
+    @When("^server with (.+) is available$")
+    public void server_available(String authMethod) {
         loginPage.typeURL();
-        loginPage.typeCredentials(username, password);
+    }
+
+
+    @When("^user logins as (.+) with password (.+) as (.+) credentials$")
+    public void login_with_password_auth_method(String username, String password, String authMethod) {
+        switch (authMethod) {
+            case "basic auth":
+                loginPage.typeCredentials(username, password);
+                break;
+            case "OAuth2":
+                break;
+        }
     }
 
     @When("^user logins as (.+) with incorrect password (.+)$")
-    public void i_login_as_string_with_incorrect_password_string(String username, String password) {
+    public void i_login_with_incorrect_password(String username, String password) {
         loginPage.typeURL();
         loginPage.typeCredentials(username, password);
     }
