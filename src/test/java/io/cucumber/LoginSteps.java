@@ -1,5 +1,6 @@
 package io.cucumber;
 
+import android.ChromeCustomTab;
 import android.FileListPage;
 import android.LoginPage;
 import android.WizardPage;
@@ -25,24 +26,30 @@ public class LoginSteps {
 
     @When("^server with (.+) is available$")
     public void server_available(String authMethod) {
-        loginPage.typeURL();
+        loginPage.typeURL(authMethod);
     }
 
 
     @When("^user logins as (.+) with password (.+) as (.+) credentials$")
     public void login_with_password_auth_method(String username, String password, String authMethod) {
+        ChromeCustomTab chromeCustomTabPage = new ChromeCustomTab();
         switch (authMethod) {
             case "basic auth":
                 loginPage.typeCredentials(username, password);
                 break;
             case "OAuth2":
+                loginPage.submitLogin();
+                chromeCustomTabPage.enterCredentials(username, password);
+                chromeCustomTabPage.authorize();
+                break;
+            default:
                 break;
         }
     }
 
     @When("^user logins as (.+) with incorrect password (.+)$")
     public void i_login_with_incorrect_password(String username, String password) {
-        loginPage.typeURL();
+        loginPage.typeURL("basic auth");
         loginPage.typeCredentials(username, password);
     }
 

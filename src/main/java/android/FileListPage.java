@@ -111,7 +111,7 @@ public class FileListPage extends CommonPage{
 
     public void closeSelectionMode(){
         MobileElement backArrow = (MobileElement)
-                driver.findElementByAndroidUIAutomator("new UiSelector().resourceId(\""+closeselection_id+"\");");
+                driver.findElement(MobileBy.AndroidUIAutomator("new UiSelector().resourceId(\""+closeselection_id+"\");"));
         actions.click(backArrow).perform();
     }
 
@@ -143,7 +143,7 @@ public class FileListPage extends CommonPage{
 
     private void selectOperationMenu(String operationName){
         MobileElement threeDotButton = (MobileElement)
-                driver.findElementByAndroidUIAutomator("new UiSelector().description(\"More options\");");
+                driver.findElement(MobileBy.AndroidUIAutomator("new UiSelector().description(\"More options\");"));
         actions.click(threeDotButton).perform();
         actions.click(matchByText(operationName)).perform();
     }

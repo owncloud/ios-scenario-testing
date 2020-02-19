@@ -17,7 +17,7 @@ Feature: Login
 
 
   Scenario Outline: An invalid login
-    When server is available
+    When server with basic auth is available
     And user logins as <username> with incorrect password <password>
     Then user sees an error message
 
@@ -29,5 +29,5 @@ Feature: Login
 
   Scenario: A valid login with OAuth2
     When server with OAuth2 is available
-    And user logins as user1 with password a as Oauth2 credentials
+    And user logins as user1 with password a as OAuth2 credentials
     Then user can see the main page

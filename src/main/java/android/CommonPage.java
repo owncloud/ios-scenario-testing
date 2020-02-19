@@ -35,13 +35,13 @@ public class CommonPage {
 
     protected MobileElement matchByText(String text){
         MobileElement selection = (MobileElement)
-                driver.findElementByAndroidUIAutomator("new UiSelector().text(\""+ text +"\");");
+                driver.findElement(MobileBy.AndroidUIAutomator("new UiSelector().text(\""+ text +"\");"));
         return selection;
     }
 
     protected MobileElement matchById(String text){
         MobileElement selection = (MobileElement)
-                driver.findElementByAndroidUIAutomator("new UiSelector().resourceId(\""+ text +"\");");
+                driver.findElement(MobileBy.AndroidUIAutomator("new UiSelector().resourceId(\""+ text +"\");"));
         return selection;
     }
 

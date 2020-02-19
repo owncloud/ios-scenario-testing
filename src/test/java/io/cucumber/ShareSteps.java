@@ -38,7 +38,7 @@ public class ShareSteps {
     @Given("^user1 is logged$")
     public void i_am_logged() {
         wizardPage.skip();
-        loginPage.typeURL();
+        loginPage.typeURL("basic auth");
         loginPage.typeCredentials(LocProperties.getProperties().getProperty("userName1"),
                 LocProperties.getProperties().getProperty("passw1"));
     }

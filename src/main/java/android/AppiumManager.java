@@ -40,6 +40,7 @@ public class AppiumManager {
         capabilities.setCapability ("appWaitPackage", LocProperties.getProperties().getProperty("appPackage"));
         capabilities.setCapability ("autoGrantPermissions", "true");
         capabilities.setCapability ("appWaitActivity", "com.owncloud.android.ui.activity.WhatsNewActivity");
+
         try {
             driver = new AndroidDriver (new URL(driverURL), capabilities);
         } catch (MalformedURLException e) {
