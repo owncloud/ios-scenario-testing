@@ -1,6 +1,5 @@
 package utils.api;
 
-
 import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
 
@@ -15,7 +14,8 @@ import javax.xml.parsers.SAXParserFactory;
 import okhttp3.Request;
 import okhttp3.Response;
 import utils.LocProperties;
-import utils.entities.Share;
+import utils.entities.OCShare;
+import utils.parser.ShareSAXHandler;
 
 public class ShareAPI extends CommonAPI {
 
@@ -43,7 +43,7 @@ public class ShareAPI extends CommonAPI {
                 .build();
 
         Response response = httpClient.newCall(request).execute();
-        Share share = getId(response);
+        OCShare share = getId(response);
         return share.getId();
 
     }
@@ -63,7 +63,7 @@ public class ShareAPI extends CommonAPI {
                 .build();
 
         Response response = httpClient.newCall(request).execute();
-        Share share = getId(response);
+        OCShare share = getId(response);
         if ((share.getId().equals(id)) &&
                 (share.getShareeName().equals(shareeName)) &&
                 (share.getType().equals(type)) &&
@@ -71,7 +71,6 @@ public class ShareAPI extends CommonAPI {
             return true;
         else
             return false;
-
     }
 
     public boolean checkReceivedShare (String id, String itemName, String type, String shareeName)
@@ -89,7 +88,7 @@ public class ShareAPI extends CommonAPI {
                 .build();
 
         Response response = httpClient.newCall(request).execute();
-        Share share = getId(response);
+        OCShare share = getId(response);
         if ((share.getId().equals(id)) &&
                 (share.getShareeName().equals(shareeName)) &&
                 (share.getType().equals(type)) &&
@@ -117,12 +116,12 @@ public class ShareAPI extends CommonAPI {
 
     }
 
-    private Share getId(Response httpResponse)
+    private OCShare getId(Response httpResponse)
             throws IOException, SAXException, ParserConfigurationException{
         //Create SAX parser
         SAXParserFactory parserFactor = SAXParserFactory.newInstance();
         SAXParser parser = parserFactor.newSAXParser();
-        SAXHandler handler = new SAXHandler();
+        ShareSAXHandler handler = new ShareSAXHandler();
 
         parser.parse(new InputSource(new StringReader(httpResponse.body().string())), handler);
         return handler.getShare();

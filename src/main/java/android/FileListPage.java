@@ -6,11 +6,14 @@ import java.io.File;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Iterator;
 
 import io.appium.java_client.MobileBy;
 import io.appium.java_client.MobileElement;
 import utils.LocProperties;
+import utils.entities.OCFile;
 
 public class FileListPage extends CommonPage{
     private String headertext_xpath = "//*[@text='ownCloud']";
@@ -29,6 +32,8 @@ public class FileListPage extends CommonPage{
     private String copyoption_id = "com.owncloud.android:id/copy_file";
     private String removeoption_id = "com.owncloud.android:id/action_remove_file";
     private String avofflineoption_id = "com.owncloud.android:id/action_set_available_offline";
+    private String syncoption_id = "com.owncloud.android:id/action_sync_account";
+    private String syncoption_text = "Refresh account";
 
     private HashMap<String, String> operationsMap = new HashMap<String, String>();
 
@@ -159,6 +164,21 @@ public class FileListPage extends CommonPage{
         driver.findElement(MobileBy.AndroidUIAutomator("new UiSelector().text(\""+ itemName +"\");")).click();
         //Give some seconds to perform the action to return to the file list
         //waitByXpath(8, headertext_xpath);*/
+    }
+
+    public boolean displayedList(ArrayList<OCFile> listServer){
+        driver.findElement(MobileBy.AndroidUIAutomator("new UiSelector().description(\"More options\");")).click();
+        driver.findElementByAndroidUIAutomator("new UiSelector().text(\"" + syncoption_text + "\");").click();
+        Iterator iterator = listServer.iterator();
+        while (iterator.hasNext()){
+            OCFile ocfile = (OCFile) iterator.next();
+            if(ocfile.getName().equals(LocProperties.getProperties().getProperty("userName1"))) {
+                continue;
+            } else if (!isItemInList(ocfile.getName())){
+                return false;
+            }
+        }
+        return true;
     }
 
 }

@@ -6,10 +6,13 @@ import android.FolderPickerPage;
 import android.InputNamePage;
 import android.RemoveDialogPage;
 
+import java.util.ArrayList;
+
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import utils.api.FilesAPI;
+import utils.entities.OCFile;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
@@ -149,5 +152,14 @@ public class FileListSteps {
     public void item_opened_previewed(){
         assertTrue(detailsPage.itemPreviewed());
     }
+
+    @Then("the list of files matches with the server")
+    public void list_matches_server(){
+        ArrayList<OCFile> listServer = filesAPI.listItems();
+        assertTrue(fileListPage.displayedList(listServer));
+    }
+
+
+
 
 }

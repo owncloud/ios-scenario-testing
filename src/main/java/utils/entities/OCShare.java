@@ -1,6 +1,6 @@
 package utils.entities;
 
-public class Share {
+public class OCShare {
 
     private String id;
     private String owner;
@@ -9,7 +9,7 @@ public class Share {
     private String shareeName;
 
 
-    public Share(){}
+    public OCShare(){}
 
     public String getId() {
         return id;
