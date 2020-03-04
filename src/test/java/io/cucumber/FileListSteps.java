@@ -153,10 +153,10 @@ public class FileListSteps {
         assertTrue(detailsPage.itemPreviewed());
     }
 
-    @Then("the list of files matches with the server")
-    public void list_matches_server(){
-        ArrayList<OCFile> listServer = filesAPI.listItems();
-        assertTrue(fileListPage.displayedList(listServer));
+    @Then("the list of files in (.+) folder matches with the server")
+    public void list_matches_server(String path){
+        ArrayList<OCFile> listServer = filesAPI.listItems(path);
+        assertTrue(fileListPage.displayedList(path, listServer));
     }
 
 

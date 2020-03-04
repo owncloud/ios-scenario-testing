@@ -62,10 +62,23 @@ public class AppiumManager {
 
     public void cleanFolder(){
         //needed Appium with option --allow-insecure=adb_shell
+        //cleaning only if folder exists
+        if (folderExists("/sdcard/owncloud/")) {
+            Map<String, Object> args = new HashMap<>();
+            args.put("command", "rm -r");
+            args.put("args", Lists.newArrayList("/sdcard/owncloud/"));
+            getDriver().executeScript("mobile:shell", args);
+        }
+    }
+
+    private boolean folderExists(String folderLocation){
         Map<String, Object> args = new HashMap<>();
-        args.put("command", "rm -r");
-        args.put("args", Lists.newArrayList("/sdcard/owncloud/"));
-        getDriver().executeScript("mobile:shell", args);
+        args.put("command",  "[ ! -d \""+ folderLocation+ "\" ] && echo 1 || echo 0");
+        String response = (String) getDriver().executeScript("mobile:shell", args);
+        if (response.equals(0))
+            return true;
+        else
+            return false;
     }
 
 }

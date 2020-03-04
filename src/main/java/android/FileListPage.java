@@ -166,9 +166,10 @@ public class FileListPage extends CommonPage{
         //waitByXpath(8, headertext_xpath);*/
     }
 
-    public boolean displayedList(ArrayList<OCFile> listServer){
+    public boolean displayedList(String path, ArrayList<OCFile> listServer){
         driver.findElement(MobileBy.AndroidUIAutomator("new UiSelector().description(\"More options\");")).click();
         driver.findElementByAndroidUIAutomator("new UiSelector().text(\"" + syncoption_text + "\");").click();
+        parsePath(path); //moving to the folder
         Iterator iterator = listServer.iterator();
         while (iterator.hasNext()){
             OCFile ocfile = (OCFile) iterator.next();
@@ -179,6 +180,15 @@ public class FileListPage extends CommonPage{
             }
         }
         return true;
+    }
+
+    private void parsePath(String path){
+        String[] route = path.split("/");
+        if (route.length > 0) { //we have to browse
+            for (int i = 1; i < route.length; i++) {
+                browse(route[i]);
+            }
+        }
     }
 
 }
