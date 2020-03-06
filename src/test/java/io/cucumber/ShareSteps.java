@@ -33,7 +33,7 @@ public class ShareSteps {
 
     protected WebDriverWait wait = new WebDriverWait(AppiumManager.getManager().getDriver(), 5);
 
-    private String shareId;
+    private String shareId = null;
 
     @Given("^user1 is logged$")
     public void i_am_logged() {
@@ -58,15 +58,18 @@ public class ShareSteps {
     }
 
     @Then("^(.+) is shared with (.+)$")
-    public void is_shared_with(String itenName, String sharee) throws Throwable {
-        assertTrue(sharePage.isItemInList(itenName));
+    public void is_shared_with(String itemName, String sharee) throws Throwable {
+        shareId = shareAPI.getIdShare(itemName);
+        assertTrue(sharePage.isItemInList(itemName));
         assertTrue(sharePage.isUserInList(sharee));
+        assertTrue(shareAPI.checkCorrectShared(shareId, "0", sharee));
     }
 
     @Then("^(.+) has (.+) in the file list$")
     public void sees_in_file_list(String sharee, String item) throws Throwable {
         shareId = shareAPI.getIdShare(item);
-        assertTrue(shareAPI.checkCorrectShared(shareId, item, "0", sharee));
+        assertTrue(shareAPI.checkReceivedShare(shareId, "0", sharee));
+        //Remove share
         shareAPI.removeShare(shareId);
     }
     

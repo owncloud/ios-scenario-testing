@@ -29,38 +29,23 @@ public class ShareAPI extends CommonAPI {
     }
 
     public String getIdShare(String itemPath)
-            throws IOException, SAXException, ParserConfigurationException, InterruptedException {
+            throws IOException, SAXException, ParserConfigurationException {
 
-        String requestString = urlServer + sharingEndpoint + "?path=/" + itemPath;
+        String url = urlServer + sharingEndpoint + "?path=/" + itemPath;
 
-        Request request = new Request.Builder()
-                .url(requestString)
-                .addHeader("OCS-APIREQUEST", "true")
-                .addHeader("User-Agent", userAgent)
-                .addHeader("Authorization", "Basic "+credentialsB64)
-                .addHeader("Host", host)
-                .get()
-                .build();
+        Request request = getRequest(url);
 
         Response response = httpClient.newCall(request).execute();
         OCShare share = getId(response);
         return share.getId();
-
     }
 
-    public boolean checkCorrectShared (String id, String itemName, String type, String shareeName)
+    public boolean checkCorrectShared (String id, String type, String shareeName)
             throws IOException, SAXException, ParserConfigurationException {
 
-        String requestString = urlServer + sharingEndpoint + "/" + id;
+        String url = urlServer + sharingEndpoint + "/" + id;
 
-        Request request = new Request.Builder()
-                .url(requestString)
-                .addHeader("OCS-APIREQUEST", "true")
-                .addHeader("User-Agent", userAgent)
-                .addHeader("Authorization", "Basic "+credentialsB64)
-                .addHeader("Host", host)
-                .get()
-                .build();
+        Request request = getRequest(url);
 
         Response response = httpClient.newCall(request).execute();
         OCShare share = getId(response);
@@ -73,19 +58,12 @@ public class ShareAPI extends CommonAPI {
             return false;
     }
 
-    public boolean checkReceivedShare (String id, String itemName, String type, String shareeName)
+    public boolean checkReceivedShare (String id, String type, String shareeName)
             throws IOException, SAXException, ParserConfigurationException {
 
-        String requestString = urlServer + sharingEndpoint + "?shared_with_me=true";
+        String url = urlServer + sharingEndpoint + "?shared_with_me=true";
 
-        Request request = new Request.Builder()
-                .url(requestString)
-                .addHeader("OCS-APIREQUEST", "true")
-                .addHeader("User-Agent", userAgent)
-                .addHeader("Authorization", "Basic "+credentialsB64Sharee)
-                .addHeader("Host", host)
-                .get()
-                .build();
+        Request request = getRequest(url, credentialsB64Sharee);
 
         Response response = httpClient.newCall(request).execute();
         OCShare share = getId(response);
@@ -96,24 +74,15 @@ public class ShareAPI extends CommonAPI {
             return true;
         else
             return false;
-
     }
 
     public void removeShare(String id) throws IOException {
 
-        String requestString = urlServer + sharingEndpoint + "/" + id;
+        String url = urlServer + sharingEndpoint + "/" + id;
 
-        Request request = new Request.Builder()
-                .url(requestString)
-                .addHeader("OCS-APIREQUEST", "true")
-                .addHeader("User-Agent", userAgent)
-                .addHeader("Authorization", "Basic "+credentialsB64)
-                .addHeader("Host", host)
-                .delete()
-                .build();
+        Request request = deleteRequest(url);
 
         httpClient.newCall(request).execute();
-
     }
 
     private OCShare getId(Response httpResponse)

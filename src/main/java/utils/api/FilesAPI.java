@@ -28,16 +28,9 @@ public class FilesAPI extends CommonAPI {
 
     public void removeItem(String itemName) {
 
-        String removeURL = urlServer+davEndpoint+user+"/";
+        String url = urlServer+davEndpoint+user+"/"+itemName+"/";
 
-        Request request = new Request.Builder()
-                .url(removeURL+itemName+"/")
-                .addHeader("OCS-APIREQUEST", "true")
-                .addHeader("User-Agent", userAgent)
-                .addHeader("Authorization", "Basic "+credentialsB64)
-                .addHeader("Host", host)
-                .delete()
-                .build();
+        Request request = deleteRequest(url);
 
         try {
             httpClient.newCall(request).execute();
@@ -49,37 +42,24 @@ public class FilesAPI extends CommonAPI {
 
     public void createFolder(String folderName) {
 
-        String createURL = urlServer+davEndpoint+user+"/";
+        String url = urlServer+davEndpoint+user+"/"+folderName+"/";
 
-        Request request = new Request.Builder()
-                .url(createURL+folderName+"/")
-                .addHeader("OCS-APIREQUEST", "true")
-                .addHeader("User-Agent", userAgent)
-                .addHeader("Authorization", "Basic "+credentialsB64)
-                .addHeader("Host", host)
-                .method("MKCOL", null)
-                .build();
+        Request request = davRequest(url, "MKCOL", null);
 
         try {
             httpClient.newCall(request).execute();
         } catch (IOException e){
             e.printStackTrace();
         }
-
     }
 
     public boolean itemExist(String itemName) {
-        String createURL = urlServer+davEndpoint+user+"/";
+
+        String url = urlServer+davEndpoint+user+"/"+itemName;
+
         Response response = null;
 
-        Request request = new Request.Builder()
-                .url(createURL+itemName)
-                .addHeader("OCS-APIREQUEST", "true")
-                .addHeader("User-Agent", userAgent)
-                .addHeader("Authorization", "Basic "+credentialsB64)
-                .addHeader("Host", host)
-                .method("PROPFIND", null)
-                .build();
+        Request request = davRequest(url, "PROPFIND", null);
 
         try {
             response = httpClient.newCall(request).execute();
@@ -102,41 +82,15 @@ public class FilesAPI extends CommonAPI {
 
     public ArrayList<OCFile> listItems(String path) {
         try {
-            String createURL = urlServer + davEndpoint + user + path;
-            Response response = null;
+            String url = urlServer + davEndpoint + user + path;
 
-            String xml = "<?xml version='1.0' encoding='UTF-8' ?>\n" +
-                    "<propfind xmlns=\"DAV:\" xmlns:CAL=\"urn:ietf:params:xml:ns:caldav\" xmlns:CARD=\"urn:ietf:params:xml:ns:carddav\" xmlns:SABRE=\"http://sabredav.org/ns\" xmlns:OC=\"http://owncloud.org/ns\">\n" +
-                    "  <prop>\n" +
-                    "    <displayname />\n" +
-                    "    <getcontenttype />\n" +
-                    "    <resourcetype />\n" +
-                    "    <getcontentlength />\n" +
-                    "    <getlastmodified />\n" +
-                    "    <creationdate />\n" +
-                    "    <getetag />\n" +
-                    "    <quota-used-bytes />\n" +
-                    "    <quota-available-bytes />\n" +
-                    "    <OC:permissions />\n" +
-                    "    <OC:id />\n" +
-                    "    <OC:size />\n" +
-                    "    <OC:privatelink />\n" +
-                    "  </prop>\n" +
-                    "</propfind>";
+            RequestBody body = RequestBody.create(MediaType.parse("application/xml; charset=utf-8"),
+                    basicPropfindBody);
 
-            RequestBody body = RequestBody.create(MediaType.parse("application/xml; charset=utf-8"), xml);
+            Request request = davRequest(url, "PROPFIND", body);
 
+            return getList(httpClient.newCall(request).execute());
 
-            Request request = new Request.Builder()
-                    .url(createURL)
-                    .addHeader("OCS-APIREQUEST", "true")
-                    .addHeader("User-Agent", userAgent)
-                    .addHeader("Authorization", "Basic " + credentialsB64)
-                    .addHeader("Host", host)
-                    .method("PROPFIND", body)
-                    .build();
-            response = httpClient.newCall(request).execute();
-            return getList(response);
         } catch (IOException e){
             e.printStackTrace();
         } catch (SAXException e){
