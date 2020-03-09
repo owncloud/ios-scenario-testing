@@ -14,7 +14,7 @@ Feature: Download a file in the account
 
     Examples:
       | itemName               | Type     | Size   |
-      | ownCloud Manual.pdf    | PDF file | 4.8 MB |
+      | ownCloud Manual.pdf    | PDF file | 5.8 MB |
 
   Scenario Outline: Download a file that is  previewable
     When user selects the item <itemName> to download

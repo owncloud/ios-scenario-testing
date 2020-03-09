@@ -75,10 +75,11 @@ public class AppiumManager {
         Map<String, Object> args = new HashMap<>();
         args.put("command",  "[ ! -d \""+ folderLocation+ "\" ] && echo 1 || echo 0");
         String response = (String) getDriver().executeScript("mobile:shell", args);
-        if (response.equals(0))
+        if (response.contains("0")) {
             return true;
-        else
+        } else {
             return false;
+        }
     }
 
 }
