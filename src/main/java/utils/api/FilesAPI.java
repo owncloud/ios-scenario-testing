@@ -33,7 +33,8 @@ public class FilesAPI extends CommonAPI {
         Request request = deleteRequest(url);
 
         try {
-            httpClient.newCall(request).execute();
+            Response response = httpClient.newCall(request).execute();
+            response.body().close();
         } catch (IOException e){
             e.printStackTrace();
         }
@@ -47,7 +48,8 @@ public class FilesAPI extends CommonAPI {
         Request request = davRequest(url, "MKCOL", null);
 
         try {
-            httpClient.newCall(request).execute();
+            Response response = httpClient.newCall(request).execute();
+            response.body().close();
         } catch (IOException e){
             e.printStackTrace();
         }
@@ -63,6 +65,7 @@ public class FilesAPI extends CommonAPI {
 
         try {
             response = httpClient.newCall(request).execute();
+            response.body().close();
         } catch (IOException e){
             e.printStackTrace();
         }
@@ -81,6 +84,7 @@ public class FilesAPI extends CommonAPI {
     }
 
     public ArrayList<OCFile> listItems(String path) {
+        Response response = null;
         try {
             String url = urlServer + davEndpoint + user + path;
 
@@ -88,8 +92,10 @@ public class FilesAPI extends CommonAPI {
                     basicPropfindBody);
 
             Request request = davRequest(url, "PROPFIND", body);
+            response = httpClient.newCall(request).execute();
+            response.body().close();
 
-            return getList(httpClient.newCall(request).execute());
+            return getList(response);
 
         } catch (IOException e){
             e.printStackTrace();
@@ -108,6 +114,7 @@ public class FilesAPI extends CommonAPI {
         SAXParser parser = parserFactor.newSAXParser();
         FileSAXHandler handler = new FileSAXHandler();
         parser.parse(new InputSource(new StringReader(httpResponse.body().string())), handler);
+        httpResponse.body().close();
         return handler.getListFiles();
     }
 }

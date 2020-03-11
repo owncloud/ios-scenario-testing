@@ -13,7 +13,7 @@ dependencies {
     implementation 'net.bytebuddy:byte-buddy:1.10.5'
     implementation 'com.google.guava:guava:25.0-jre'
     implementation 'io.appium:java-client:7.3.0'
-    implementation 'com.squareup.okhttp3:okhttp:3.11.0'
+    implementation 'com.squareup.okhttp3:okhttp:3.12.0'
     implementation 'com.squareup.okio:okio:1.14.0'
 }
 

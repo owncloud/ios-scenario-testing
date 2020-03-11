@@ -37,6 +37,7 @@ public class ShareAPI extends CommonAPI {
 
         Response response = httpClient.newCall(request).execute();
         OCShare share = getId(response);
+        response.body().close();
         return share.getId();
     }
 
@@ -49,6 +50,7 @@ public class ShareAPI extends CommonAPI {
 
         Response response = httpClient.newCall(request).execute();
         OCShare share = getId(response);
+        response.body().close();
         if ((share.getId().equals(id)) &&
                 (share.getShareeName().equals(shareeName)) &&
                 (share.getType().equals(type)) &&
@@ -67,6 +69,7 @@ public class ShareAPI extends CommonAPI {
 
         Response response = httpClient.newCall(request).execute();
         OCShare share = getId(response);
+        response.body().close();
         if ((share.getId().equals(id)) &&
                 (share.getShareeName().equals(shareeName)) &&
                 (share.getType().equals(type)) &&
@@ -93,6 +96,7 @@ public class ShareAPI extends CommonAPI {
         ShareSAXHandler handler = new ShareSAXHandler();
 
         parser.parse(new InputSource(new StringReader(httpResponse.body().string())), handler);
+        httpResponse.body().close();
         return handler.getShare();
     }
 

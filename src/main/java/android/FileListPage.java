@@ -34,6 +34,7 @@ public class FileListPage extends CommonPage{
     private String avofflineoption_id = "com.owncloud.android:id/action_set_available_offline";
     private String syncoption_id = "com.owncloud.android:id/action_sync_account";
     private String syncoption_text = "Refresh account";
+    private String syncfileption_id = "com.owncloud.android:id/action_sync_file";
 
     private HashMap<String, String> operationsMap = new HashMap<String, String>();
 
@@ -110,9 +111,7 @@ public class FileListPage extends CommonPage{
     }
 
     public void closeSelectionMode(){
-        MobileElement backArrow = (MobileElement)
-                driver.findElement(MobileBy.AndroidUIAutomator("new UiSelector().resourceId(\""+closeselection_id+"\");"));
-        actions.click(backArrow).perform();
+        actions.click(matchById(closeselection_id)).perform();
     }
 
     public boolean fileIsDownloaded(String fileName)  {
@@ -136,8 +135,9 @@ public class FileListPage extends CommonPage{
     }
 
     public boolean fileIsMarkedAsAvOffline(String itemName){
+        //Wait the file to be downloaded
+        waitById(10, syncfileption_id);
         //Enforce this.. av offline file must fit the itemName and distinguish from downloaded
-        waitById(3, avoffline_id);
         return driver.findElement(By.id(avoffline_id)).isDisplayed();
     }
 

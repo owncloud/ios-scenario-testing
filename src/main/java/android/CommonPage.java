@@ -1,6 +1,5 @@
 package android;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -20,7 +19,7 @@ public class CommonPage {
 
     public static void waitByXpath(int timeToWait, String resourceId){
         WebDriverWait wait = new WebDriverWait(driver, timeToWait);
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(resourceId)));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(MobileBy.xpath(resourceId)));
     }
 
     public static void waitById(int timeToWait, String resourceId){
@@ -36,6 +35,12 @@ public class CommonPage {
     protected MobileElement matchByText(String text){
         MobileElement selection = (MobileElement)
                 driver.findElement(MobileBy.AndroidUIAutomator("new UiSelector().text(\""+ text +"\");"));
+        return selection;
+    }
+
+    protected MobileElement matchByDescription(String description){
+        MobileElement selection = (MobileElement)
+                driver.findElement(MobileBy.AndroidUIAutomator("new UiSelector().description(\""+ description +"\");"));
         return selection;
     }
 
