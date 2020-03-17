@@ -93,7 +93,6 @@ public class FilesAPI extends CommonAPI {
 
             Request request = davRequest(url, "PROPFIND", body);
             response = httpClient.newCall(request).execute();
-            response.body().close();
 
             return getList(response);
 
