@@ -5,7 +5,8 @@ Feature: Download a file in the account
 
   Background: User is logged in
     Given user1 is logged
-    And there is an item called <itemName> in the account
+    And the following items exist in the account
+      | ownCloud Manual.pdf |
 
   Scenario Outline: Download a file that is not previewable
     When user selects the item <itemName> to download
@@ -18,7 +19,7 @@ Feature: Download a file in the account
 
   Scenario Outline: Download a file that is  previewable
     When user selects the item <itemName> to download
-    Then the item is opened and previewed
+    Then the item <itemName> is opened and previewed
     And the item <itemName> is stored in the device
 
     Examples:

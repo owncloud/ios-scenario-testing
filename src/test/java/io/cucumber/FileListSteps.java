@@ -7,7 +7,10 @@ import android.InputNamePage;
 import android.RemoveDialogPage;
 
 import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 
+import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -30,14 +33,21 @@ public class FileListSteps {
     //APIs to call
     protected FilesAPI filesAPI = new FilesAPI();
 
-    @Given("there is an item called (.+) in the account")
-    public void item_in_account(String itemName){
-        filesAPI.itemExist(itemName);
-    }
-
     @Given("there is an item called (.+) in the folder Downloads of the device")
     public void push_file_to_device(String itemName){
         fileListPage.pushFile(itemName);
+    }
+
+    @Given("the following items exist in the account")
+    public void item_exists(DataTable table){
+        List<String> listItems = (List<String>) table.asList();
+        Iterator iterator = listItems.iterator();
+        while(iterator.hasNext()) {
+            String itemName = (String)iterator.next();
+            if (!filesAPI.itemExist(itemName)) {
+                filesAPI.createFolder(itemName);
+            }
+        }
     }
 
     @When("user selects the option Create Folder")
@@ -47,7 +57,6 @@ public class FileListSteps {
 
     @When("user selects the item (.+) to (.+)")
     public void i_select_folder_to_some_operation(String itemName, String operation) {
-        filesAPI.createFolder(itemName);
         switch (operation){
             case "rename":
                 fileListPage.executeOperation("Rename", itemName);
@@ -103,7 +112,7 @@ public class FileListSteps {
         filesAPI.removeItem(itemName);
     }
 
-    @Then("user does not see (.+) in the file list")
+    @Then("user does not see (.+) in the file list anymore")
     public void i_do_not_see_the_item(String itemName) {
         assertFalse(fileListPage.isItemInList(itemName));
         assertFalse(filesAPI.itemExist(itemName));
@@ -148,8 +157,8 @@ public class FileListSteps {
         assertTrue(fileListPage.fileIsMarkedAsAvOffline(itemName));
     }
 
-    @Then("the item is opened and previewed")
-    public void item_opened_previewed(){
+    @Then("the item (.+) is opened and previewed")
+    public void item_opened_previewed(String itemName){
         assertTrue(detailsPage.itemPreviewed());
     }
 
@@ -158,8 +167,4 @@ public class FileListSteps {
         ArrayList<OCFile> listServer = filesAPI.listItems(path);
         assertTrue(fileListPage.displayedList(path, listServer));
     }
-
-
-
-
 }

@@ -1,22 +1,19 @@
 package android;
 
 import io.appium.java_client.MobileBy;
-import io.appium.java_client.MobileElement;
 
 public class FolderPickerPage extends CommonPage {
 
-    private String documentstext_description = "LinearLayout-";
-    private String chooseButton_id = "folder_picker_btn_choose";
-    private String cancelButton_id = "folder_picker_btn_cancel";
+    private String chooseButton_id = "com.owncloud.android:id/folder_picker_btn_choose";
+    private String cancelButton_id = "com.owncloud.android:id/folder_picker_btn_cancel";
 
     public FolderPickerPage() {
         super();
     }
 
     public void selectFolder(String targetFolder){
-        MobileElement folder = (MobileElement)
-                driver.findElementByAndroidUIAutomator("new UiSelector().text(\"" + targetFolder + "\");");
-        actions.click(folder).perform();
+        driver.findElement(MobileBy.AndroidUIAutomator(
+                "new UiSelector().text(\""+ targetFolder +"\");")).click();
     }
 
     public void accept(){

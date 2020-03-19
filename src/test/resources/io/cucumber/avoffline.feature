@@ -5,12 +5,12 @@ Feature: Set items as available offline (downloaded and synced)
 
   Background: User is logged in
     Given user1 is logged
-    And there is an item called <itemName> in the account
-
+    And the following items exist in the account
+      | ownCloud Manual.pdf |
 
   Scenario Outline: Set a file as available offline
     When user selects the item <itemName> to av.offline
-    Then user sees the item <itemName > as av.offline
+    Then user sees the item <itemName> as av.offline
     And the item <itemName> is stored in the device
 
     Examples:

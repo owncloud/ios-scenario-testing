@@ -11,7 +11,6 @@ import java.util.HashMap;
 import java.util.Iterator;
 
 import io.appium.java_client.MobileBy;
-import io.appium.java_client.MobileElement;
 import utils.LocProperties;
 import utils.entities.OCFile;
 
@@ -24,8 +23,6 @@ public class FileListPage extends CommonPage{
     private String uploadoption_id = "files_linear_layout";
     private String downloaded_id = "com.owncloud.android:id/localFileIndicator";
     private String avoffline_id = "com.owncloud.android:id/localFileIndicator";
-
-
     private String shareoption_id = "com.owncloud.android:id/action_share_file";
     private String renameoption_id = "com.owncloud.android:id/action_rename_file";
     private String moveoption_id = "com.owncloud.android:id/action_move";
@@ -80,11 +77,13 @@ public class FileListPage extends CommonPage{
     }
 
     public void downloadAction(String itemName) {
-        actions.click(matchByText(itemName)).perform();
+        driver.findElement(MobileBy.AndroidUIAutomator(
+                "new UiSelector().text(\""+ itemName +"\");")).click();
     }
 
     public boolean isItemInList (String itemName) {
-        return !driver.findElementsByAndroidUIAutomator("new UiSelector().text(\"" + itemName + "\");").isEmpty();
+        return !driver.findElementsByAndroidUIAutomator(
+                "new UiSelector().text(\"" + itemName + "\");").isEmpty();
     }
 
     public boolean isHeader(){
@@ -92,26 +91,30 @@ public class FileListPage extends CommonPage{
     }
 
     public void selectItemList(String itemName) {
-        matchByText(itemName);
-        actions.clickAndHold(matchByText(itemName)).perform();
+        actions.clickAndHold(driver.findElement(MobileBy.AndroidUIAutomator(
+                "new UiSelector().text(\""+ itemName +"\");"))).perform();
     }
 
     public void selectOperation(String operationName) {
-        if (driver.findElementsByAndroidUIAutomator("new UiSelector().resourceId(\"" + operationsMap.get(operationName) + "\");").isEmpty()){
+        if (driver.findElementsByAndroidUIAutomator(
+                "new UiSelector().resourceId(\"" + operationsMap.get(operationName) + "\");").isEmpty()){
             //Operation inside menu, matching by name
             selectOperationMenu(operationName);
         } else {
             //Operation in toolbar, matching by id
-            actions.click(matchById(operationsMap.get(operationName))).perform();
+            driver.findElement(MobileBy.AndroidUIAutomator(
+                    "new UiSelector().resourceId(\""+ operationsMap.get(operationName) +"\");")).click();
         }
     }
 
     public void browse(String folderName){
-        actions.click(matchByText(folderName)).perform();
+        driver.findElement(MobileBy.AndroidUIAutomator(
+                "new UiSelector().text(\""+ folderName +"\");")).click();
     }
 
     public void closeSelectionMode(){
-        actions.click(matchById(closeselection_id)).perform();
+        driver.findElement(MobileBy.AndroidUIAutomator(
+                "new UiSelector().resourceId(\""+ closeselection_id +"\");")).click();
     }
 
     public boolean fileIsDownloaded(String fileName)  {
@@ -120,9 +123,9 @@ public class FileListPage extends CommonPage{
             byte[] downloadedFile = driver.pullFile("/sdcard/owncloud/" +
                     LocProperties.getProperties().getProperty("userName1") +
                     "@" +
-                    URLEncoder.encode(LocProperties.getProperties().getProperty("hostName"), "UTF-8") + "/" +
-                    fileName);
-            return downloadedFile!=null && downloadedFile.length>0;
+                    URLEncoder.encode(LocProperties.getProperties().getProperty("hostName"),
+                            "UTF-8") + "/" + fileName);
+            return downloadedFile!=null && downloadedFile.length > 0;
         } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
             return false;
@@ -142,10 +145,10 @@ public class FileListPage extends CommonPage{
     }
 
     private void selectOperationMenu(String operationName){
-        MobileElement threeDotButton = (MobileElement)
-                driver.findElement(MobileBy.AndroidUIAutomator("new UiSelector().description(\"More options\");"));
-        actions.click(threeDotButton).perform();
-        actions.click(matchByText(operationName)).perform();
+        driver.findElement(MobileBy.AndroidUIAutomator(
+                "new UiSelector().description(\"More options\");")).click();
+        driver.findElement(MobileBy.AndroidUIAutomator(
+                "new UiSelector().text(\""+ operationName +"\");")).click();
     }
 
     public void selectFileUpload(String itemName){
@@ -167,8 +170,10 @@ public class FileListPage extends CommonPage{
     }
 
     public boolean displayedList(String path, ArrayList<OCFile> listServer){
-        driver.findElement(MobileBy.AndroidUIAutomator("new UiSelector().description(\"More options\");")).click();
-        driver.findElementByAndroidUIAutomator("new UiSelector().text(\"" + syncoption_text + "\");").click();
+        driver.findElement(MobileBy.AndroidUIAutomator(
+                "new UiSelector().description(\"More options\");")).click();
+        driver.findElementByAndroidUIAutomator(
+                "new UiSelector().text(\"" + syncoption_text + "\");").click();
         parsePath(path); //moving to the folder
         Iterator iterator = listServer.iterator();
         while (iterator.hasNext()){
@@ -190,5 +195,4 @@ public class FileListPage extends CommonPage{
             }
         }
     }
-
 }

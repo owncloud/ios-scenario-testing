@@ -3,13 +3,13 @@ package android;
 import org.openqa.selenium.By;
 
 import io.appium.java_client.MobileBy;
-import io.appium.java_client.MobileElement;
 import io.appium.java_client.TouchAction;
 import io.appium.java_client.touch.offset.PointOption;
 
 public class SearchShareePage extends CommonPage {
 
-    private String searchSrctext_id = "search_src_text";
+    private String searchSrctext_id = "com.owncloud.android:id/search_src_text";
+    private String navigateup_xpath = "//android.widget.ImageButton[@content-desc=\"Navigate up\"]";
 
     public SearchShareePage()  {
         super();
@@ -27,9 +27,6 @@ public class SearchShareePage extends CommonPage {
     }
 
     private void backListShares() {
-        MobileElement back = (MobileElement)
-            driver.findElement(MobileBy.xpath("//android.widget.ImageButton[@content-desc=\"Navigate up\"]"));
-        actions.click(back).perform();
+        driver.findElement(MobileBy.xpath(navigateup_xpath)).click();
     }
-
 }

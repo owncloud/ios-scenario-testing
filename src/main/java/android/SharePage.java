@@ -4,8 +4,8 @@ import io.appium.java_client.MobileBy;
 
 public class SharePage extends CommonPage {
 
-    private final String addshareebutton_id = "addUserButton";
-    private final String addPublicLinkButton_id = "addPublicLinkButton";
+    private final String addshareebutton_id = "com.owncloud.android:id/addUserButton";
+    private final String addPublicLinkButton_id = "com.owncloud.android:id/addPublicLinkButton";
 
     public SharePage(){
         super();
@@ -34,5 +34,4 @@ public class SharePage extends CommonPage {
     public boolean isPublicLinkNameInList(String name) {
         return !driver.findElementsByAndroidUIAutomator("new UiSelector().text(\""+name+"\");").isEmpty();
     }
-
 }

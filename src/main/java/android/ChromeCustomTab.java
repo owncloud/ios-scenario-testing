@@ -5,7 +5,7 @@ import org.openqa.selenium.By;
 public class ChromeCustomTab extends CommonPage{
 
     //ugly xpaths...
-    //Differents for Android 10
+    //Android 10
     private String username_xpath_10 = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/" +
             "android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout[1]" +
             "/android.widget.FrameLayout[2]/android.webkit.WebView/android.view.View[2]/" +
@@ -22,7 +22,7 @@ public class ChromeCustomTab extends CommonPage{
             "/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout[1]" +
             "/android.widget.FrameLayout[2]/android.webkit.WebView/android.view.View[2]/android.widget.Button";
 
-    //For Android older than 10
+    //Android older than 10
     private String username_xpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/" +
             "android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout[1]" +
             "/android.widget.FrameLayout[1]/android.webkit.WebView/android.view.View[2]/" +
@@ -43,7 +43,6 @@ public class ChromeCustomTab extends CommonPage{
 
     public ChromeCustomTab(){
         deviceVersion = (long) driver.getCapabilities().getCapability("deviceApiLevel");
-        System.out.println("Device version: " + deviceVersion);
     }
 
     public void enterCredentials(String username, String password){
@@ -69,5 +68,4 @@ public class ChromeCustomTab extends CommonPage{
             driver.findElement(By.xpath(authorizeButton_xpath)).click();
         }
     }
-
 }

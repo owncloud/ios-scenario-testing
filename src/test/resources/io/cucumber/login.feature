@@ -1,5 +1,8 @@
 Feature: Login
 
+  As an user, i want to be able to login in my account basic or OAuth2
+  so that i can manage the content inside
+
   Background: Valid user, skipping welcome wizard
     Given user is a valid user
 
@@ -12,13 +15,11 @@ Feature: Login
       | username     | password |
       |  user1       |    a     |
       |  user2       |    a     |
-      |  hola hola   |    a     |
       |  e@solid     |    $%    |
-
 
   Scenario Outline: An invalid login
     When server with basic auth is available
-    And user logins as <username> with incorrect password <password>
+    And user logins as <username> with password <password> as basic auth credentials
     Then user sees an error message
 
     Examples:

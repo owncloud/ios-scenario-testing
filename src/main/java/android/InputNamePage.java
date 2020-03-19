@@ -16,5 +16,4 @@ public class InputNamePage extends CommonPage {
         driver.findElement(MobileBy.id(itemnametext_id)).sendKeys(name);
         driver.findElement(MobileBy.id(acceptbutton_id)).click();
     }
-
 }

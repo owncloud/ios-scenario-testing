@@ -6,7 +6,11 @@ Feature: Create a new folder
   Background: User is logged in
     Given user1 is logged
 
-  Scenario: Create a new folder
+  Scenario Outline: Create a new folder
     When user selects the option Create Folder
-    And user sets FolderTest as name
-    Then user sees FolderTest in the file list
+    And user sets <newFolder> as name
+    Then user sees <newFolder> in the file list
+
+    Examples:
+      | newFolder   |
+      | FolderTest  |

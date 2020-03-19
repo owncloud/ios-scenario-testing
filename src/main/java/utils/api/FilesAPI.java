@@ -38,7 +38,6 @@ public class FilesAPI extends CommonAPI {
         } catch (IOException e){
             e.printStackTrace();
         }
-
     }
 
     public void createFolder(String folderName) {

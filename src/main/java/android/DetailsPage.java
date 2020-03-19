@@ -3,7 +3,6 @@ package android;
 import org.openqa.selenium.By;
 
 import io.appium.java_client.MobileBy;
-import io.appium.java_client.MobileElement;
 
 public class DetailsPage extends CommonPage {
 
@@ -12,6 +11,7 @@ public class DetailsPage extends CommonPage {
     private String itemSize_id = "com.owncloud.android:id/fdSize";
     private String downloading_id = "com.owncloud.android:id/fdProgressText";
     private String photoview_id = "com.owncloud.android:id/photo_view";
+    private String navigateup_xpath = "//android.widget.ImageButton[@content-desc=\"Navigate up\"]";
 
     public DetailsPage(){
         super();
@@ -30,9 +30,7 @@ public class DetailsPage extends CommonPage {
     }
 
     public void backListFiles() {
-        MobileElement back = (MobileElement)
-                driver.findElement(MobileBy.xpath("//android.widget.ImageButton[@content-desc=\"Navigate up\"]"));
-        actions.click(back).perform();
+        driver.findElement(MobileBy.xpath(navigateup_xpath)).click();
     }
 
     public void closeOpenIn(){

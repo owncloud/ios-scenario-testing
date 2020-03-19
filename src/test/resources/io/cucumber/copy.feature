@@ -1,10 +1,19 @@
 Feature: Copy item
 
+  As an user, i want to copy files inside my account
+  so that i have different copies in different places that i can modify separately
+
   Background: User is logged in
     Given user1 is logged
+    And the following items exist in the account
+      | copyMe |
 
-  Scenario: Copy an existent folder to another location
-    When user selects the item copyMe to copy
-    And user selects Documents as target folder
-    Then user sees copyMe in the file list as original
-    And user sees copyMe inside the folder Documents
+  Scenario Outline: Copy an existent folder to another location
+    When user selects the item <itemName> to copy
+    And user selects <destination> as target folder
+    Then user sees <itemName> in the file list as original
+    And user sees <itemName> inside the folder <destination>
+
+    Examples:
+      | itemName | destination |
+      | copyMe   | Documents   |

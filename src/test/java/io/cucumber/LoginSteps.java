@@ -29,7 +29,6 @@ public class LoginSteps {
         loginPage.typeURL(authMethod);
     }
 
-
     @When("^user logins as (.+) with password (.+) as (.+) credentials$")
     public void login_with_password_auth_method(String username, String password, String authMethod) {
         ChromeCustomTab chromeCustomTabPage = new ChromeCustomTab();
@@ -45,12 +44,6 @@ public class LoginSteps {
             default:
                 break;
         }
-    }
-
-    @When("^user logins as (.+) with incorrect password (.+)$")
-    public void i_login_with_incorrect_password(String username, String password) {
-        loginPage.typeURL("basic auth");
-        loginPage.typeCredentials(username, password);
     }
 
     @Then("^user can see the main page$")

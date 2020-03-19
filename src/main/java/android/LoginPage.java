@@ -13,6 +13,7 @@ public class LoginPage extends CommonPage{
     private String errorcredentialstext_xpath = "//*[@text='Wrong username or password']";
 
     private final String serverURL = LocProperties.getProperties().getProperty("serverURL");
+    private final String oauth2URL = LocProperties.getProperties().getProperty("OAuth2URL");
 
     public LoginPage(){
         super();
@@ -43,12 +44,11 @@ public class LoginPage extends CommonPage{
     private String selectURL(String authMehod){
         switch (authMehod){
             case "basic auth":
-                return LocProperties.getProperties().getProperty("serverURL");
+                return serverURL;
             case "OAuth2":
-                return LocProperties.getProperties().getProperty("OAuth2URL");
+                return oauth2URL;
             default:
                 return null;
         }
     }
-
 }
