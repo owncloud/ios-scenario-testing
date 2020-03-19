@@ -2,18 +2,14 @@ package io.cucumber;
 
 import android.AppiumManager;
 import android.FileListPage;
-import android.LoginPage;
 import android.PublicLinkPage;
 import android.SearchShareePage;
 import android.SharePage;
-import android.WizardPage;
 
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import utils.LocProperties;
 import utils.api.ShareAPI;
 
 import static org.junit.Assert.assertTrue;
@@ -21,8 +17,6 @@ import static org.junit.Assert.assertTrue;
 public class ShareSteps {
 
     //Involved pages
-    protected WizardPage wizardPage = new WizardPage();
-    protected LoginPage loginPage = new LoginPage();
     protected SharePage sharePage = new SharePage();
     protected FileListPage fileListPage = new FileListPage();
     protected SearchShareePage searchShareePage = new SearchShareePage();
@@ -34,14 +28,6 @@ public class ShareSteps {
     protected WebDriverWait wait = new WebDriverWait(AppiumManager.getManager().getDriver(), 5);
 
     private String shareId = null;
-
-    @Given("^user1 is logged$")
-    public void i_am_logged() {
-        wizardPage.skip();
-        loginPage.typeURL("basic auth");
-        loginPage.typeCredentials(LocProperties.getProperties().getProperty("userName1"),
-                LocProperties.getProperties().getProperty("passw1"));
-    }
 
     @When("^user selects (.+) to share with (.+)$")
     public void i_select_to_share_with(String itemName, String sharee) throws Throwable {
@@ -80,5 +66,4 @@ public class ShareSteps {
         // Link must be removed via API;
         shareAPI.removeShare(shareId);
     }
-
 }

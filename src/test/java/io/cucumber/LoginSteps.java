@@ -8,6 +8,7 @@ import android.WizardPage;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import utils.LocProperties;
 
 import static org.junit.Assert.assertTrue;
 
@@ -17,6 +18,14 @@ public class LoginSteps {
     private WizardPage wizardPage = new WizardPage();
     private LoginPage loginPage = new LoginPage();
     private FileListPage fileListPage = new FileListPage();
+
+    @Given("^user1 is logged$")
+    public void i_am_logged() {
+        wizardPage.skip();
+        loginPage.typeURL("basic auth");
+        loginPage.typeCredentials(LocProperties.getProperties().getProperty("userName1"),
+                LocProperties.getProperties().getProperty("passw1"));
+    }
 
     @Given("^user is a valid user$")
     public void i_am_a_valid_user() throws Throwable {

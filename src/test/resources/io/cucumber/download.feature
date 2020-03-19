@@ -7,6 +7,7 @@ Feature: Download a file in the account
     Given user1 is logged
     And the following items exist in the account
       | ownCloud Manual.pdf |
+      | San Francisco.jpg   |
 
   Scenario Outline: Download a file that is not previewable
     When user selects the item <itemName> to download
