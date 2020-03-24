@@ -6,6 +6,7 @@ import org.xml.sax.SAXException;
 import java.io.IOException;
 import java.io.StringReader;
 import java.util.ArrayList;
+import java.util.logging.Level;
 
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.parsers.SAXParser;
@@ -16,6 +17,7 @@ import okhttp3.Request;
 import okhttp3.RequestBody;
 import okhttp3.Response;
 import utils.entities.OCFile;
+import utils.log.Log;
 import utils.parser.FileSAXHandler;
 
 public class FilesAPI extends CommonAPI {
@@ -26,83 +28,63 @@ public class FilesAPI extends CommonAPI {
         super();
     }
 
-    public void removeItem(String itemName) {
-
+    public void removeItem(String itemName)
+            throws IOException {
         String url = urlServer+davEndpoint+user+"/"+itemName+"/";
-
+        Log.log(Level.FINE, "Starts: Request remove item from server");
+        Log.log(Level.FINE, "URL: " + url);
         Request request = deleteRequest(url);
-
-        try {
-            Response response = httpClient.newCall(request).execute();
-            response.body().close();
-        } catch (IOException e){
-            e.printStackTrace();
-        }
+        Response response = httpClient.newCall(request).execute();
+        response.body().close();
     }
 
-    public void createFolder(String folderName) {
-
+    public void createFolder(String folderName)
+            throws IOException {
         String url = urlServer+davEndpoint+user+"/"+folderName+"/";
-
+        Log.log(Level.FINE, "Starts: Request create folder");
+        Log.log(Level.FINE, "URL: " + url);
         Request request = davRequest(url, "MKCOL", null);
-
-        try {
-            Response response = httpClient.newCall(request).execute();
-            response.body().close();
-        } catch (IOException e){
-            e.printStackTrace();
-        }
+        Response response = httpClient.newCall(request).execute();
+        response.body().close();
     }
 
-    public boolean itemExist(String itemName) {
-
+    public boolean itemExist(String itemName)
+            throws IOException {
         String url = urlServer+davEndpoint+user+"/"+itemName;
-
+        Log.log(Level.FINE, "Starts: Request check if item exists in server");
+        Log.log(Level.FINE, "URL: " + url);
         Response response = null;
-
         Request request = davRequest(url, "PROPFIND", null);
-
-        try {
-            response = httpClient.newCall(request).execute();
-            response.body().close();
-        } catch (IOException e){
-            e.printStackTrace();
-        }
-
+        response = httpClient.newCall(request).execute();
+        response.body().close();
         switch (response.code()/100){
-            case(2): { //Response 2xx, item exists
+            case(2): {
+                Log.log(Level.FINE, "Response 2xx. Item exists");
                 return true;
             }
-            case(4): { //Response 4xx, item does not exist
+            case(4): {
+                Log.log(Level.FINE, "Response 4xx. Item does not exist");
                 return false;
             }
             default: {
+                Log.log(Level.WARNING, "Response neither 4xx nor 2xx. " +
+                        "Something went wrong");
                 return false;
             }
         }
     }
 
-    public ArrayList<OCFile> listItems(String path) {
-        Response response = null;
-        try {
-            String url = urlServer + davEndpoint + user + path;
-
-            RequestBody body = RequestBody.create(MediaType.parse("application/xml; charset=utf-8"),
-                    basicPropfindBody);
-
-            Request request = davRequest(url, "PROPFIND", body);
-            response = httpClient.newCall(request).execute();
-
-            return getList(response);
-
-        } catch (IOException e){
-            e.printStackTrace();
-        } catch (SAXException e){
-            e.printStackTrace();
-        } catch (ParserConfigurationException e){
-            e.printStackTrace();
-        }
-        return null;
+    public ArrayList<OCFile> listItems(String path)
+            throws IOException, SAXException, ParserConfigurationException {
+        Response response;
+        String url = urlServer + davEndpoint + user + path;
+        Log.log(Level.FINE, "Starts: Request to fetch list of items from server");
+        Log.log(Level.FINE, "URL: " + url);
+        RequestBody body = RequestBody.create(MediaType.parse("application/xml; charset=utf-8"),
+                basicPropfindBody);
+        Request request = davRequest(url, "PROPFIND", body);
+        response = httpClient.newCall(request).execute();
+        return getList(response);
     }
 
     private ArrayList<OCFile> getList(Response httpResponse)

@@ -10,6 +10,7 @@ import java.net.URL;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
+import java.util.logging.Level;
 
 import io.appium.java_client.android.AndroidDriver;
 import utils.LocProperties;
@@ -31,8 +32,6 @@ public class AppiumManager {
         File appDir = new File(rootPath, LocProperties.getProperties().getProperty("testResourcesPath"));
         File app = new File(appDir, LocProperties.getProperties().getProperty("apkName"));
 
-        Log.init();
-
         DesiredCapabilities capabilities = new DesiredCapabilities();
 
         capabilities.setCapability ("platformName", "Android");
@@ -49,6 +48,7 @@ public class AppiumManager {
         try {
             driver = new AndroidDriver (new URL(driverURL), capabilities);
         } catch (MalformedURLException e) {
+            Log.log(Level.SEVERE, "Driver could not be created\n" + e.getMessage());
             e.printStackTrace();
         }
         driver.manage().timeouts().implicitlyWait(8, TimeUnit.SECONDS);

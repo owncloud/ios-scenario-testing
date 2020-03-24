@@ -2,7 +2,10 @@ package android;
 
 import org.openqa.selenium.By;
 
+import java.util.logging.Level;
+
 import io.appium.java_client.MobileBy;
+import utils.log.Log;
 
 public class DetailsPage extends CommonPage {
 
@@ -30,10 +33,12 @@ public class DetailsPage extends CommonPage {
     }
 
     public void backListFiles() {
+        Log.log(Level.FINE, "Start: Back to the list of files");
         driver.findElement(MobileBy.xpath(navigateup_xpath)).click();
     }
 
     public void closeOpenIn(){
+        Log.log(Level.FINE, "Start: Close Open In");
         driver.navigate().back();
     }
 
@@ -44,5 +49,4 @@ public class DetailsPage extends CommonPage {
     public void waitFinishedDownload(int seconds){
         waitByIdInvisible(seconds, downloading_id);
     }
-
 }

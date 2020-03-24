@@ -9,7 +9,6 @@ Feature: Public Share
       |  Documents         |
       |  San Francisco.jpg |
 
-  @shared
   Scenario Outline: Create a public link with name
     When user selects <item> to create link with the following fields
         | name | <name> |

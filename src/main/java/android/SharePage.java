@@ -16,8 +16,6 @@ public class SharePage extends CommonPage {
     private final String editPublicLinkButton_id = "com.owncloud.android:id/editPublicLinkButton";
     private final String sharefilename_id = "com.owncloud.android:id/shareFileName";
 
-    //private static final Logger Log = Logger.getLogger(SharePage.class.getName());
-
     public SharePage(){
         super();
     }
@@ -27,16 +25,19 @@ public class SharePage extends CommonPage {
     }
 
     public void addPrivateShare(){
+        Log.log(Level.FINE, "Starts: add private share");
         waitById(5, sharefilename_id);
         driver.findElement(MobileBy.id(addshareebutton_id)).click();
     }
 
     public void addPublicLink(){
+        Log.log(Level.FINE, "Starts: add public link");
         waitById(5, sharefilename_id);
         driver.findElement(MobileBy.id(addPublicLinkButton_id)).click();
     }
 
     public void openLink(){
+        Log.log(Level.FINE, "Starts: open public link");
         driver.findElement(MobileBy.id(editPublicLinkButton_id)).click();
     }
 
@@ -93,18 +94,8 @@ public class SharePage extends CommonPage {
                 }
             }
         }
-
-        //if (shareType.equals("3") && remoteShare.hasPassword() && hasPassword) {
-        //    return true;
-        //}
+        Log.log(Level.FINE, "All fields match. Returning true");
         return true;
-        /*if ((share.getId().equals(mapBody.get("id"))) &&
-                (share.getShareeName().equals(shareeName)) &&
-                (share.getType().equals(type)) &&
-                (share.getOwner().equals(user)))
-            return true;
-        else
-            return false;*/
     }
 
     private HashMap turnListToHashmap(List<List<String>> dataList){

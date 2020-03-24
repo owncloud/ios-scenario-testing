@@ -1,7 +1,10 @@
 package android;
 
+import java.util.logging.Level;
+
 import io.appium.java_client.MobileBy;
 import utils.LocProperties;
+import utils.log.Log;
 
 public class LoginPage extends CommonPage{
 
@@ -20,12 +23,15 @@ public class LoginPage extends CommonPage{
     }
 
     public void typeURL(String authMethod){
+        Log.log(Level.FINE, "Starts: Type URL. Auth method: " + authMethod);
         waitById(5, urltext_id);
         driver.findElement(MobileBy.id(urltext_id)).sendKeys(selectURL(authMethod));
         driver.findElement(MobileBy.id(embeddedbutton_id)).click();
     }
 
     public void typeCredentials(String username, String password){
+        Log.log(Level.FINE, "Starts: Type credentials: username: "
+                + username + " - password: " + password);
         waitById(5, usernametext_id);
         driver.findElement(MobileBy.id(usernametext_id)).sendKeys(username);
         driver.findElement(MobileBy.id(passwordtext_id)).sendKeys(password);
@@ -33,6 +39,7 @@ public class LoginPage extends CommonPage{
     }
 
     public void submitLogin(){
+        Log.log(Level.FINE, "Starts: Submit login");
         waitById(5, loginbutton_id);
         driver.findElement(MobileBy.id(loginbutton_id)).click();
     }
@@ -44,10 +51,13 @@ public class LoginPage extends CommonPage{
     private String selectURL(String authMehod){
         switch (authMehod){
             case "basic auth":
+                Log.log(Level.FINE, "URL: " + serverURL);
                 return serverURL;
             case "OAuth2":
+                Log.log(Level.FINE, "URL: " + serverURL);
                 return oauth2URL;
             default:
+                Log.log(Level.WARNING, "No URL");
                 return null;
         }
     }

@@ -2,9 +2,12 @@ package android;
 
 import org.openqa.selenium.By;
 
+import java.util.logging.Level;
+
 import io.appium.java_client.MobileBy;
 import io.appium.java_client.TouchAction;
 import io.appium.java_client.touch.offset.PointOption;
+import utils.log.Log;
 
 public class SearchShareePage extends CommonPage {
 
@@ -15,9 +18,12 @@ public class SearchShareePage extends CommonPage {
         super();
     }
 
-    public void shareWithUser (String sharee) throws  InterruptedException{
+    public void shareWithUser (String sharee)
+            throws InterruptedException {
+        Log.log(Level.FINE, "Starts: Share with user: " + sharee);
         waitById(10,searchSrctext_id);
         driver.findElement(By.id(searchSrctext_id)).sendKeys(sharee);
+        Log.log(Level.WARNING, "Needed better implementation - failure possible");
         //REDO: find another way to click in recipients' list
         Thread.sleep(1000);
         TouchAction selectSharee = new TouchAction(driver);
@@ -27,6 +33,7 @@ public class SearchShareePage extends CommonPage {
     }
 
     private void backListShares() {
+        Log.log(Level.FINE, "Starts: Back to the list of shares");
         driver.findElement(MobileBy.xpath(navigateup_xpath)).click();
     }
 }

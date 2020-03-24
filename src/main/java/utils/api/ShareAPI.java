@@ -6,6 +6,7 @@ import org.xml.sax.SAXException;
 import java.io.IOException;
 import java.io.StringReader;
 import java.util.Base64;
+import java.util.logging.Level;
 
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.parsers.SAXParser;
@@ -15,6 +16,7 @@ import okhttp3.Request;
 import okhttp3.Response;
 import utils.LocProperties;
 import utils.entities.OCShare;
+import utils.log.Log;
 import utils.parser.ShareSAXHandler;
 
 public class ShareAPI extends CommonAPI {
@@ -28,115 +30,23 @@ public class ShareAPI extends CommonAPI {
         super();
     }
 
-    /*public String getIdShare(String itemPath)
-            throws IOException, SAXException, ParserConfigurationException {
-
-        String url = urlServer + sharingEndpoint + "?path=/" + itemPath;
-
-        Request request = getRequest(url);
-
-        Response response = httpClient.newCall(request).execute();
-        OCShare share = getId(response);
-        response.body().close();
-        return share.getId();
-    }*/
-
     public OCShare getShare(String itemPath)
             throws IOException, SAXException, ParserConfigurationException {
-
         String url = urlServer + sharingEndpoint + "?path=/" + itemPath;
+        Log.log(Level.FINE, "Starts: Request Share from server");
+        Log.log(Level.FINE, "URL: " + url);
         Request request = getRequest(url);
-
         Response response = httpClient.newCall(request).execute();
         OCShare share = getId(response);
         response.body().close();
         return share;
     }
-
-    /*public boolean checkCorrectShared (String id, String type, String shareeName)
-            throws IOException, SAXException, ParserConfigurationException {
-
-        String url = urlServer + sharingEndpoint + "/" + id;
-
-        Request request = getRequest(url);
-
-        Response response = httpClient.newCall(request).execute();
-        OCShare share = getId(response);
-        response.body().close();
-        if ((share.getId().equals(id)) &&
-                (share.getShareeName().equals(shareeName)) &&
-                (share.getType().equals(type)) &&
-                (share.getOwner().equals(user)))
-            return true;
-        else
-            return false;
-    }*/
-
-    /*public OCShare getShare (String itemName, List<List<String>> dataList)
-            throws IOException, SAXException, ParserConfigurationException {
-
-        HashMap<String, String> mapBody = new HashMap<String, String>();
-        boolean hasPassword = false;
-
-        mapBody.put("path",itemName + "\n");
-        StringBuilder body = new StringBuilder();
-        body.append("path: /" + itemName + "\n");
-        for (List<String> rows : dataList) {
-            mapBody.put(rows.get(0),rows.get(1));
-            body.append(rows.get(0) + ":" + rows.get(1) + "\n");
-        }
-        String url = urlServer + sharingEndpoint + "/" + mapBody.get("id");
-        String shareType = mapBody.get("shareType");
-        Request request = getRequest(url);
-
-        Response response = httpClient.newCall(request).execute();
-        OCShare share = getId(response);
-        response.body().close();
-
-        return share;
-
-    }*/
-
-    /*public boolean checkCorrectShared (String id, String type)
-            throws IOException, SAXException, ParserConfigurationException {
-
-        String url = urlServer + sharingEndpoint + "/" + id;
-
-        Request request = getRequest(url);
-
-        Response response = httpClient.newCall(request).execute();
-        OCShare share = getId(response);
-        response.body().close();
-        if ((share.getId().equals(id)) &&
-                (share.getType().equals(type)) &&
-                (share.getOwner().equals(user)))
-            return true;
-        else
-            return false;
-    }
-
-    public boolean checkReceivedShare (String id, String type, String shareeName)
-            throws IOException, SAXException, ParserConfigurationException {
-
-        String url = urlServer + sharingEndpoint + "?shared_with_me=true";
-
-        Request request = getRequest(url, credentialsB64Sharee);
-
-        Response response = httpClient.newCall(request).execute();
-        OCShare share = getId(response);
-        response.body().close();
-        if ((share.getId().equals(id)) &&
-                (share.getShareeName().equals(shareeName)) &&
-                (share.getType().equals(type)) &&
-                (share.getOwner().equals(user)))
-            return true;
-        else
-            return false;
-    }*/
 
     public void removeShare(String id)
             throws IOException {
         String url = urlServer + sharingEndpoint + "/" + id;
+        Log.log(Level.FINE, "Starts: Remove Share from server");
+        Log.log(Level.FINE, "URL: " + url);
         Request request = deleteRequest(url);
         httpClient.newCall(request).execute();
     }

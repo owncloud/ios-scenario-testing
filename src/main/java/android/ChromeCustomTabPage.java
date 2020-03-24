@@ -2,7 +2,11 @@ package android;
 
 import org.openqa.selenium.By;
 
-public class ChromeCustomTab extends CommonPage{
+import java.util.logging.Level;
+
+import utils.log.Log;
+
+public class ChromeCustomTabPage extends CommonPage {
 
     //ugly xpaths...
     //Android 10
@@ -41,17 +45,20 @@ public class ChromeCustomTab extends CommonPage{
 
     private long deviceVersion;
 
-    public ChromeCustomTab(){
+    public ChromeCustomTabPage(){
         deviceVersion = (long) driver.getCapabilities().getCapability("deviceApiLevel");
     }
 
     public void enterCredentials(String username, String password){
+        Log.log(Level.FINE, "Starts: enter OAuth2 credentials");
         if (deviceVersion >= 29) {
+            Log.log(Level.FINE, "Android 10");
             waitByXpath(5, username_xpath_10);
             driver.findElement(By.xpath(username_xpath_10)).sendKeys(username);
             driver.findElement(By.xpath(password_xpath_10)).sendKeys(password);
             driver.findElement(By.xpath(acceptButton_xpath_10)).click();
         } else {
+            Log.log(Level.FINE, "Android older than 10");
             waitByXpath(5, username_xpath);
             driver.findElement(By.xpath(username_xpath)).sendKeys(username);
             driver.findElement(By.xpath(password_xpath)).sendKeys(password);
@@ -60,10 +67,13 @@ public class ChromeCustomTab extends CommonPage{
     }
 
     public void authorize(){
+        Log.log(Level.FINE, "Starts: Authorize OAuth2");
         if (deviceVersion >= 29) {
+            Log.log(Level.FINE, "Android 10");
             waitByXpath(5, authorizeButton_xpath_10);
-            driver.findElement(By.xpath(authorizeButton_xpath_10)).click();
+            //driver.findElement(By.xpath(authorizeButton_xpath_10)).click();
         } else {
+            Log.log(Level.FINE, "Android older than 10");
             waitByXpath(5, authorizeButton_xpath);
             driver.findElement(By.xpath(authorizeButton_xpath)).click();
         }

@@ -9,10 +9,12 @@ import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
+import java.util.logging.Level;
 
 import io.appium.java_client.MobileBy;
 import utils.LocProperties;
 import utils.entities.OCFile;
+import utils.log.Log;
 
 public class FileListPage extends CommonPage{
     private String headertext_xpath = "//*[@text='ownCloud']";
@@ -29,7 +31,6 @@ public class FileListPage extends CommonPage{
     private String copyoption_id = "com.owncloud.android:id/copy_file";
     private String removeoption_id = "com.owncloud.android:id/action_remove_file";
     private String avofflineoption_id = "com.owncloud.android:id/action_set_available_offline";
-    private String syncoption_id = "com.owncloud.android:id/action_sync_account";
     private String syncoption_text = "Refresh account";
     private String syncfileption_id = "com.owncloud.android:id/action_sync_file";
 
@@ -47,12 +48,14 @@ public class FileListPage extends CommonPage{
     }
 
     public void createFolder(){
+        Log.log(Level.FINE, "Starts: create folder");
         waitById(5, fab_id);
         driver.findElement(MobileBy.id(fab_id)).click();
         driver.findElement(MobileBy.id(createfolder_id)).click();
     }
 
     public void upload(){
+        Log.log(Level.FINE, "Starts: upload");
         waitById(5, fab_id);
         driver.findElement(MobileBy.id(fab_id)).click();
         driver.findElement(MobileBy.id(uploadfab_id)).click();
@@ -60,10 +63,10 @@ public class FileListPage extends CommonPage{
     }
 
     public void pushFile(String itemName){
+        Log.log(Level.FINE, "Starts: push file: " + itemName);
         File rootPath = new File(System.getProperty("user.dir"));
         File appDir = new File(rootPath, LocProperties.getProperties().getProperty("testResourcesPath"));
         File app = new File(appDir, "io/cucumber/example-files/AAA.txt");
-
         try {
             driver.pushFile("/mnt/sdcard/Download/aaa.txt", app);
         } catch (IOException e){
@@ -72,11 +75,13 @@ public class FileListPage extends CommonPage{
     }
 
     public void executeOperation(String operation, String itemName){
+        Log.log(Level.FINE, "Starts: execute operation: " + operation + " " + itemName);
         selectItemList(itemName);
         selectOperation(operation);
     }
 
     public void downloadAction(String itemName) {
+        Log.log(Level.FINE, "Starts: download action: " + itemName);
         driver.findElement(MobileBy.AndroidUIAutomator(
                 "new UiSelector().text(\""+ itemName +"\");")).click();
     }
@@ -91,6 +96,7 @@ public class FileListPage extends CommonPage{
     }
 
     public void selectItemList(String itemName) {
+        Log.log(Level.FINE, "Starts: select item from list: " + itemName);
         actions.clickAndHold(driver.findElement(MobileBy.AndroidUIAutomator(
                 "new UiSelector().text(\""+ itemName +"\");"))).perform();
     }
@@ -99,25 +105,30 @@ public class FileListPage extends CommonPage{
         if (driver.findElementsByAndroidUIAutomator(
                 "new UiSelector().resourceId(\"" + operationsMap.get(operationName) + "\");").isEmpty()){
             //Operation inside menu, matching by name
+            Log.log(Level.FINE, "Operation: " + operationName + " placed in menu");
             selectOperationMenu(operationName);
         } else {
             //Operation in toolbar, matching by id
+            Log.log(Level.FINE, "Operation: " + operationName + " placed in toolbar");
             driver.findElement(MobileBy.AndroidUIAutomator(
                     "new UiSelector().resourceId(\""+ operationsMap.get(operationName) +"\");")).click();
         }
     }
 
     public void browse(String folderName){
+        Log.log(Level.FINE, "Starts: browse to " + folderName);
         driver.findElement(MobileBy.AndroidUIAutomator(
                 "new UiSelector().text(\""+ folderName +"\");")).click();
     }
 
     public void closeSelectionMode(){
+        Log.log(Level.FINE, "Starts: close selection mode");
         driver.findElement(MobileBy.AndroidUIAutomator(
                 "new UiSelector().resourceId(\""+ closeselection_id +"\");")).click();
     }
 
-    public boolean fileIsDownloaded(String fileName)  {
+    public boolean fileIsDownloaded(String fileName) {
+        Log.log(Level.FINE, "Starts: Checking file downloaded: " + fileName);
         //Checking file is downloaded inside the device
         try {
             byte[] downloadedFile = driver.pullFile("/sdcard/owncloud/" +
@@ -125,6 +136,7 @@ public class FileListPage extends CommonPage{
                     "@" +
                     URLEncoder.encode(LocProperties.getProperties().getProperty("hostName"),
                             "UTF-8") + "/" + fileName);
+            Log.log(Level.FINE, "Checking file in " + downloadedFile.toString());
             return downloadedFile!=null && downloadedFile.length > 0;
         } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
@@ -145,6 +157,7 @@ public class FileListPage extends CommonPage{
     }
 
     private void selectOperationMenu(String operationName){
+        Log.log(Level.FINE, "Starts: Select operation from the menu: " + operationName);
         driver.findElement(MobileBy.AndroidUIAutomator(
                 "new UiSelector().description(\"More options\");")).click();
         driver.findElement(MobileBy.AndroidUIAutomator(
@@ -152,6 +165,7 @@ public class FileListPage extends CommonPage{
     }
 
     public void selectFileUpload(String itemName){
+        Log.log(Level.FINE, "Starts: Select file to upload: "+ itemName);
         /*MobileElement hamburger = (MobileElement)
                 driver.findElementByAndroidUIAutomator("new UiSelector().description(\"Show roots\");");
         actions.click(hamburger).perform();
@@ -178,9 +192,11 @@ public class FileListPage extends CommonPage{
         Iterator iterator = listServer.iterator();
         while (iterator.hasNext()){
             OCFile ocfile = (OCFile) iterator.next();
+            Log.log(Level.FINE, "Checking item in list: " + ocfile.getName());
             if(ocfile.getName().equals(LocProperties.getProperties().getProperty("userName1"))) {
                 continue;
             } else if (!isItemInList(ocfile.getName())){
+                Log.log(Level.FINE, "Item " + ocfile.getName() + "not present in list");
                 return false;
             }
         }

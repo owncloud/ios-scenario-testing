@@ -79,7 +79,6 @@ public class CommonAPI {
                 .addHeader("Host", host)
                 .get()
                 .build();
-
         return request;
     }
 
@@ -93,8 +92,6 @@ public class CommonAPI {
                 .addHeader("Host", host)
                 .get()
                 .build();
-
         return request;
     }
-
 }
