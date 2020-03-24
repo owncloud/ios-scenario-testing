@@ -10,8 +10,8 @@ Feature: Private Share
 
   Scenario Outline: Correct share
     When user selects <item> to share with <user>
-    Then <item> is shared with <user>
-    And <user> has <item> in the file list
+    Then share is created on <item> with the following fields
+      | user | <user> |
 
     Examples:
       |    item     |   user    |

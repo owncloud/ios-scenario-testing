@@ -13,6 +13,7 @@ import java.util.concurrent.TimeUnit;
 
 import io.appium.java_client.android.AndroidDriver;
 import utils.LocProperties;
+import utils.log.Log;
 
 public class AppiumManager {
 
@@ -30,6 +31,8 @@ public class AppiumManager {
         File appDir = new File(rootPath, LocProperties.getProperties().getProperty("testResourcesPath"));
         File app = new File(appDir, LocProperties.getProperties().getProperty("apkName"));
 
+        Log.init();
+
         DesiredCapabilities capabilities = new DesiredCapabilities();
 
         capabilities.setCapability ("platformName", "Android");
@@ -39,6 +42,8 @@ public class AppiumManager {
         capabilities.setCapability ("appActivity", "com.owncloud.android.ui.activity.SplashActivity");
         capabilities.setCapability ("appWaitPackage", LocProperties.getProperties().getProperty("appPackage"));
         capabilities.setCapability ("autoGrantPermissions", "true");
+        capabilities.setCapability ("unicodeKeyboard", true);
+        capabilities.setCapability ("resetKeyboard", true);
         capabilities.setCapability ("appWaitActivity", "com.owncloud.android.ui.activity.WhatsNewActivity");
 
         try {
@@ -82,5 +87,4 @@ public class AppiumManager {
             return false;
         }
     }
-
 }

@@ -11,3 +11,4 @@
 .settings
 local.properties
 .DS_Store
+*.log

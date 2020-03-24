@@ -9,11 +9,26 @@ Feature: Public Share
       |  Documents         |
       |  San Francisco.jpg |
 
+  @shared
   Scenario Outline: Create a public link with name
-    When user selects <item> to create link with name <name>
-    Then public link is created on <item> with the name <name>
+    When user selects <item> to create link with the following fields
+        | name | <name> |
+    Then link is created on <item> with the following fields
+        | name | <name> |
 
     Examples:
       |  item              |  name    |
       |  Documents         |  link1   |
       |  San Francisco.jpg |  link2   |
+
+    Scenario Outline: Create a public link with password
+      When user selects <item> to create link with the following fields
+        | name     | <name>     |
+        | password | <password> |
+      Then link is created on <item> with the following fields
+        | name     | <name>     |
+        | password | <password> |
+
+    Examples:
+      |  item       |  name    | password |
+      |  Documents  |  link1   |    a     |

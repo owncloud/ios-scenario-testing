@@ -31,6 +31,8 @@ public class ShareSAXHandler extends DefaultHandler {
             share.setType(text);
         } else if (node.equals("share_with")){
             share.setShareeName(text);
+        } else if (node.equals("name")){
+            share.setItemName(text);
         }
     }
 

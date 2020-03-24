@@ -8,7 +8,6 @@ public class OCShare {
     private String itemName;
     private String shareeName;
 
-
     public OCShare(){}
 
     public String getId() {
@@ -51,5 +50,7 @@ public class OCShare {
         this.shareeName = shareeName;
     }
 
-
+    public boolean hasPassword() {
+        return type.equals("3") && shareeName != "" && shareeName != null;
+    }
 }
