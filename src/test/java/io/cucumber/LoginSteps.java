@@ -43,29 +43,29 @@ public class LoginSteps {
     @When("^server with (.+) is available$")
     public void server_available(String authMethod) {
         Log.log(Level.FINE, "----STEP----: " +
-                new Object(){}.getClass().getEnclosingMethod().getName() + authMethod);
+                new Object(){}.getClass().getEnclosingMethod().getName() + " with " + authMethod);
         loginPage.typeURL(authMethod);
     }
 
     @When("^user logins as (.+) with password (.+) as (.+) credentials$")
-    public void login_with_password_auth_method(String username, String password, String authMethod) {
-            Log.log(Level.FINE, "----STEP----: " +
-                    new Object() {
-                    }.getClass().getEnclosingMethod().getName()
-                    + ": " + username + "-" + password + "-" + authMethod);
-            ChromeCustomTabPage chromeCustomTabPage = new ChromeCustomTabPage();
-            switch (authMethod) {
-                case "basic auth":
-                    loginPage.typeCredentials(username, password);
-                    break;
-                case "OAuth2":
-                    loginPage.submitLogin();
-                    chromeCustomTabPage.enterCredentials(username, password);
-                    chromeCustomTabPage.authorize();
-                    break;
-                default:
-                    break;
-            }
+    public void login_with_password_auth_method(String username, String password,
+                                                String authMethod) {
+        Log.log(Level.FINE, "----STEP----: " +
+                new Object() {}.getClass().getEnclosingMethod().getName()
+                + ": " + username + " - " + password + " - " + authMethod);
+        ChromeCustomTabPage chromeCustomTabPage = new ChromeCustomTabPage();
+        switch (authMethod) {
+            case "basic auth":
+                loginPage.typeCredentials(username, password);
+                break;
+            case "OAuth2":
+                loginPage.submitLogin();
+                chromeCustomTabPage.enterCredentials(username, password);
+                chromeCustomTabPage.authorize();
+                break;
+            default:
+                break;
+        }
     }
 
     @Then("^user can see the main page$")

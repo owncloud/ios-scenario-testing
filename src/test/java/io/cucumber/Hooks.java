@@ -13,7 +13,6 @@ public class Hooks {
 
     @Before
     public void setup(Scenario scenario){
-        Log.init();
         Log.log(Level.FINE, "START SCENARIO EXECUTION: " + scenario.getName());
         AppiumManager.getManager().getDriver().launchApp();
     }

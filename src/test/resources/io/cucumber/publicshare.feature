@@ -9,6 +9,7 @@ Feature: Public Share
       |  Documents         |
       |  San Francisco.jpg |
 
+  @este
   Scenario Outline: Create a public link with name
     When user selects <item> to create link with the following fields
         | name | <name> |
@@ -20,6 +21,7 @@ Feature: Public Share
       |  Documents         |  link1   |
       |  San Francisco.jpg |  link2   |
 
+    @este
     Scenario Outline: Create a public link with password
       When user selects <item> to create link with the following fields
         | name     | <name>     |

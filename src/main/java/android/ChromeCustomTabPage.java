@@ -71,7 +71,7 @@ public class ChromeCustomTabPage extends CommonPage {
         if (deviceVersion >= 29) {
             Log.log(Level.FINE, "Android 10");
             waitByXpath(5, authorizeButton_xpath_10);
-            //driver.findElement(By.xpath(authorizeButton_xpath_10)).click();
+            driver.findElement(By.xpath(authorizeButton_xpath_10)).click();
         } else {
             Log.log(Level.FINE, "Android older than 10");
             waitByXpath(5, authorizeButton_xpath);

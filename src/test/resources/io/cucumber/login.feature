@@ -27,7 +27,6 @@ Feature: Login
       |  user1       |    as    |
       |  user2       |    as    |
 
-    @este
   Scenario: A valid login with OAuth2
     When server with OAuth2 is available
     And user logins as user1 with password a as OAuth2 credentials

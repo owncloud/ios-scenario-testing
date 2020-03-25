@@ -16,8 +16,8 @@ import utils.LocProperties;
 import utils.entities.OCFile;
 import utils.log.Log;
 
-public class FileListPage extends CommonPage{
-    private String headertext_xpath = "//*[@text='ownCloud']";
+public class FileListPage extends CommonPage {
+
     private String closeselection_id = "com.owncloud.android:id/action_mode_close_button";
     private String fab_id = "fab_expand_menu_button";
     private String createfolder_id = "fab_mkdir";
@@ -33,6 +33,7 @@ public class FileListPage extends CommonPage{
     private String avofflineoption_id = "com.owncloud.android:id/action_set_available_offline";
     private String syncoption_text = "Refresh account";
     private String syncfileption_id = "com.owncloud.android:id/action_sync_file";
+    private String toolbar_id = "toolbar";
 
     private HashMap<String, String> operationsMap = new HashMap<String, String>();
 
@@ -70,6 +71,7 @@ public class FileListPage extends CommonPage{
         try {
             driver.pushFile("/mnt/sdcard/Download/aaa.txt", app);
         } catch (IOException e){
+            Log.log(Level.SEVERE, "IO Exception: " + e.getMessage());
             e.printStackTrace();
         }
     }
@@ -92,7 +94,7 @@ public class FileListPage extends CommonPage{
     }
 
     public boolean isHeader(){
-        return !driver.findElements(By.xpath(headertext_xpath)).isEmpty();
+        return !driver.findElements(By.id(toolbar_id)).isEmpty();
     }
 
     public void selectItemList(String itemName) {
@@ -139,6 +141,7 @@ public class FileListPage extends CommonPage{
             Log.log(Level.FINE, "Checking file in " + downloadedFile.toString());
             return downloadedFile!=null && downloadedFile.length > 0;
         } catch (UnsupportedEncodingException e) {
+            Log.log(Level.SEVERE, "Unsupported Encoding Exception: " + e.getMessage());
             e.printStackTrace();
             return false;
         }
@@ -196,7 +199,7 @@ public class FileListPage extends CommonPage{
             if(ocfile.getName().equals(LocProperties.getProperties().getProperty("userName1"))) {
                 continue;
             } else if (!isItemInList(ocfile.getName())){
-                Log.log(Level.FINE, "Item " + ocfile.getName() + "not present in list");
+                Log.log(Level.FINE, "Item " + ocfile.getName() + " not present in list");
                 return false;
             }
         }

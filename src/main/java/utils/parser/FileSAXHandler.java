@@ -7,8 +7,10 @@ import org.xml.sax.helpers.DefaultHandler;
 import java.io.UnsupportedEncodingException;
 import java.net.URLDecoder;
 import java.util.ArrayList;
+import java.util.logging.Level;
 
 import utils.entities.OCFile;
+import utils.log.Log;
 
 public class FileSAXHandler extends DefaultHandler {
 
@@ -72,6 +74,7 @@ public class FileSAXHandler extends DefaultHandler {
             String[] pathSplitted = path.split("/");
             return URLDecoder.decode(pathSplitted[pathSplitted.length - 1], "UTF-8");
         } catch (UnsupportedEncodingException e){
+            Log.log(Level.SEVERE, "Unsupported Encoding Exception: " + e.getMessage());
             e.printStackTrace();
         }
         return null;

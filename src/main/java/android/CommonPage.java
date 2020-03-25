@@ -16,9 +16,9 @@ public class CommonPage {
         actions = new Actions(driver);
     }
 
-    public static void waitByXpath(int timeToWait, String resourceId){
+    public static void waitByXpath(int timeToWait, String resourceXpath){
         WebDriverWait wait = new WebDriverWait(driver, timeToWait);
-        wait.until(ExpectedConditions.visibilityOfElementLocated(MobileBy.xpath(resourceId)));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(MobileBy.xpath(resourceXpath)));
     }
 
     public static void waitById(int timeToWait, String resourceId){

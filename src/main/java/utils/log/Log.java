@@ -21,7 +21,7 @@ public class Log {
         try {
             //consoleHandler = new ConsoleHandler();
             Log.getLevel();
-            fileHandler  = new FileHandler("logs.log", true);
+            fileHandler  = new FileHandler("logs.log", 5*1024000, 1, true);
             fileHandler.setFormatter(new SimpleFormatter() {
                 private static final String format = "[%1$tF %1$tT] [%2$-7s] %3$s %n";
                 @Override

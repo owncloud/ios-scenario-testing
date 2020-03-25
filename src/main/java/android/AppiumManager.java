@@ -37,27 +37,41 @@ public class AppiumManager {
         capabilities.setCapability ("platformName", "Android");
         capabilities.setCapability ("deviceName", "test");
         capabilities.setCapability ("app", app.getAbsolutePath());
-        capabilities.setCapability ("appPackage", LocProperties.getProperties().getProperty("appPackage"));
-        capabilities.setCapability ("appActivity", "com.owncloud.android.ui.activity.SplashActivity");
-        capabilities.setCapability ("appWaitPackage", LocProperties.getProperties().getProperty("appPackage"));
+        capabilities.setCapability ("appPackage",
+                LocProperties.getProperties().getProperty("appPackage"));
+        capabilities.setCapability ("appActivity",
+                "com.owncloud.android.ui.activity.SplashActivity");
+        capabilities.setCapability ("appWaitPackage",
+                LocProperties.getProperties().getProperty("appPackage"));
         capabilities.setCapability ("autoGrantPermissions", "true");
         capabilities.setCapability ("unicodeKeyboard", true);
         capabilities.setCapability ("resetKeyboard", true);
-        capabilities.setCapability ("appWaitActivity", "com.owncloud.android.ui.activity.WhatsNewActivity");
+        capabilities.setCapability ("appWaitActivity",
+                "com.owncloud.android.ui.activity.WhatsNewActivity");
 
         try {
             driver = new AndroidDriver (new URL(driverURL), capabilities);
         } catch (MalformedURLException e) {
-            Log.log(Level.SEVERE, "Driver could not be created\n" + e.getMessage());
+            Log.log(Level.SEVERE, "Driver could not be created: " + e.getMessage());
             e.printStackTrace();
         }
         driver.manage().timeouts().implicitlyWait(8, TimeUnit.SECONDS);
+
+        Log.log(Level.FINE, "Device: " +
+                driver.getCapabilities().getCapability("deviceManufacturer") + " " +
+                driver.getCapabilities().getCapability("deviceModel"));
+        Log.log(Level.FINE, "Platform: " +
+                driver.getCapabilities().getCapability("platformName") + " " +
+                driver.getCapabilities().getCapability("platformVersion"));
+        Log.log(Level.FINE, "API Level: " +
+                driver.getCapabilities().getCapability("deviceApiLevel") + "\n");
+
+
     }
 
     public static AppiumManager getManager() {
         if (appiumManager == null) {
             appiumManager = new AppiumManager();
-        } else {
         }
         return appiumManager;
     }
