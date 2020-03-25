@@ -64,7 +64,7 @@ public class ShareSteps {
     }
 
     @Then("^(.*) is created on (.+) with the following fields$")
-    public void public_link_created(String type, String itemName, DataTable table)
+    public void share_created_with_fields(String type, String itemName, DataTable table)
             throws Throwable {
         Log.log(Level.FINE, "----STEP----: " +
                 new Object(){}.getClass().getEnclosingMethod().getName() + ": " + itemName);

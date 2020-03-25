@@ -34,6 +34,7 @@ public class FileListPage extends CommonPage {
     private String syncoption_text = "Refresh account";
     private String syncfileption_id = "com.owncloud.android:id/action_sync_file";
     private String toolbar_id = "toolbar";
+    private String progress_id = "com.owncloud.android:id/syncProgressBar";
 
     private HashMap<String, String> operationsMap = new HashMap<String, String>();
 
@@ -192,6 +193,7 @@ public class FileListPage extends CommonPage {
         driver.findElementByAndroidUIAutomator(
                 "new UiSelector().text(\"" + syncoption_text + "\");").click();
         parsePath(path); //moving to the folder
+        waitByIdInvisible(5, progress_id);
         Iterator iterator = listServer.iterator();
         while (iterator.hasNext()){
             OCFile ocfile = (OCFile) iterator.next();
@@ -211,6 +213,7 @@ public class FileListPage extends CommonPage {
         if (route.length > 0) { //we have to browse
             for (int i = 1; i < route.length; i++) {
                 browse(route[i]);
+                waitByIdInvisible(5, progress_id);
             }
         }
     }
