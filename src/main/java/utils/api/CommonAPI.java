@@ -17,8 +17,10 @@ public class CommonAPI {
 
     protected String user = LocProperties.getProperties().getProperty("userName1");
     protected String password = LocProperties.getProperties().getProperty("passw1");
+    protected String shareeUser = LocProperties.getProperties().getProperty("userToShare");
+    protected String shareePassword = LocProperties.getProperties().getProperty("userToSharePwd");
     protected String credentialsB64 = Base64.getEncoder().encodeToString((user+":"+password).getBytes());
-
+    protected String credentialsB64Sharee = Base64.getEncoder().encodeToString((shareeUser+":"+shareePassword).getBytes());
 
 
     protected String basicPropfindBody = "<?xml version='1.0' encoding='UTF-8' ?>\n" +
@@ -46,7 +48,7 @@ public class CommonAPI {
     public CommonAPI(){
     }
 
-    protected Request davRequest(String url, String method, RequestBody body){
+    protected Request davRequest(String url, String method, RequestBody body) {
         Request request = new Request.Builder()
                 .url(url)
                 .addHeader("OCS-APIREQUEST", "true")
@@ -70,12 +72,13 @@ public class CommonAPI {
         return request;
     }
 
-    protected Request getRequest(String url) {
+    protected Request getRequest(String url, boolean isSharee) {
+        String credentials = (isSharee) ? credentialsB64Sharee : credentialsB64;
         Request request = new Request.Builder()
                 .url(url)
                 .addHeader("OCS-APIREQUEST", "true")
                 .addHeader("User-Agent", userAgent)
-                .addHeader("Authorization", "Basic " + credentialsB64)
+                .addHeader("Authorization", "Basic " + credentials)
                 .addHeader("Host", host)
                 .get()
                 .build();

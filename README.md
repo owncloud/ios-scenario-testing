@@ -29,9 +29,30 @@ Defined for the [ownCloud Android app](https://github.com/owncloud/android)
 
 Different requirements:
 
-1. `Appium` instance running and reachable
+* `Appium` instance running and reachable
 
-2. Device attached. Check command `adb devices` to ensure `Appium` will get the device reference to talk with it
+* Device attached. Check command `adb devices` to ensure `Appium` will get the device reference to interact with it
+
+* A `local.properties` file should be included in the project with the following parameters:
+
+  * Remote set up:
+
+      * `serverURL`: Server URL with basic auth
+      * `OAuth2URL`: Server URL with OAuth2
+      * `userName1`: Username of existing user in all servers to test (to simplify)
+      * `passw1`: Password for the users defined in `userName1`
+      * `userToShare`: Existing user to search and share with
+      * `userToSharePwd`: Password of `userToShare`
+      * `hostName`: Name of the server host
+      * `appiumURL`: URL of running Appium server
+
+  * App parameters:
+
+      * `apkName`: Name of the apk
+      * `appPackage`: Package name of the app to test
+      * `userAgent`: User Agent of the client
+
+The environment variable `$ANDROID_HOME` needs to be correctly set up, pointing to the Android SDK folder
 
 ## How to test
 

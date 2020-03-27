@@ -22,17 +22,37 @@ public class ShareSAXHandler extends DefaultHandler {
     }
 
     @Override
-    public void endElement(String uri, String localName, String node) throws SAXException {
-        if (node.equals("id")){
-            share.setId(text);
-        } else if (node.equals("uid_owner")){
-            share.setOwner(text);
-        } else if (node.equals("share_type")){
-            share.setType(text);
-        } else if (node.equals("share_with")){
-            share.setShareeName(text);
-        } else if (node.equals("name")){
-            share.setItemName(text);
+    public void endElement(String uri, String localName, String node)
+            throws SAXException {
+        switch (node) {
+            case ("id"):{
+                share.setId(text);
+                break;
+            }
+            case ("uid_owner"):{
+                share.setOwner(text);
+                break;
+            }
+            case ("share_type"):{
+                share.setType(text);
+                break;
+            }
+            case ("share_with"):{
+                share.setShareeName(text);
+                break;
+            }
+            case ("name"):{
+                share.setLinkName(text);
+                break;
+            }
+            case ("itemName"):{
+                share.setItemName(text.substring(1, text.length()));
+                break;
+            }
+            case ("permissions"):{
+                share.setPermissions(text);
+                break;
+            }
         }
     }
 

@@ -95,4 +95,12 @@ public class ShareSteps {
         assertTrue(sharePage.checkCorrectShare(share, listItems));
         shareAPI.removeShare(share.getId());
     }
+
+    @Then("^(.+) has access to (.+)")
+        public void sharee_has_the_file (String userName, String itemName)
+                throws Throwable {
+            Log.log(Level.FINE, "----STEP----: " +
+                new Object(){}.getClass().getEnclosingMethod().getName() + ": " + itemName);
+            assertTrue(shareAPI.isSharedWithMe(itemName));
+        }
 }

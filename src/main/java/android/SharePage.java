@@ -77,6 +77,14 @@ public class SharePage extends CommonPage {
                     break;
                 }
                 case "name":{
+                    if (!remoteShare.getLinkName().equals(entry.getValue())){
+                        Log.log(Level.FINE, "Item name does not match - Remote: " + remoteShare.getItemName()
+                                + " - Expected: " + entry.getValue());
+                        return false;
+                    }
+                    break;
+                }
+                case "path":{
                     if (!remoteShare.getItemName().equals(entry.getValue())){
                         Log.log(Level.FINE, "Item name does not match - Remote: " + remoteShare.getItemName()
                                 + " - Expected: " + entry.getValue());

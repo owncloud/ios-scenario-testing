@@ -10,7 +10,8 @@ Feature: Private Share
 
   Scenario Outline: Correct share
     When user selects <item> to share with <user>
-    Then share is created on <item> with the following fields
+    Then <user> has access to <item>
+    And share is created on <item> with the following fields
       | user | <user> |
 
     Examples:

@@ -7,6 +7,8 @@ public class OCShare {
     private String type;
     private String itemName;
     private String shareeName;
+    private String linkName;
+    private String permissions;
 
     public OCShare(){}
 
@@ -34,12 +36,12 @@ public class OCShare {
         this.type = type;
     }
 
-    public String getItemName() {
-        return itemName;
+    public String getLinkName() {
+        return linkName;
     }
 
-    public void setItemName(String itemName) {
-        this.itemName = itemName;
+    public void setLinkName(String linkName) {
+        this.linkName = linkName;
     }
 
     public String getShareeName() {
@@ -52,5 +54,21 @@ public class OCShare {
 
     public boolean hasPassword() {
         return type.equals("3") && shareeName != "" && shareeName != null;
+    }
+
+    public String getItemName() {
+        return itemName;
+    }
+
+    public void setItemName(String itemName) {
+        this.itemName = itemName;
+    }
+
+    public String getPermissions() {
+        return permissions;
+    }
+
+    public void setPermissions(String permissions) {
+        this.permissions = permissions;
     }
 }

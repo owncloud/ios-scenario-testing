@@ -50,20 +50,20 @@ public class FilesAPI extends CommonAPI {
 
     public boolean itemExist(String itemName)
             throws IOException {
-        String url = urlServer+davEndpoint+user+"/"+itemName;
+        String url = urlServer + davEndpoint + user + "/" + itemName;
         Log.log(Level.FINE, "Starts: Request check if item exists in server");
         Log.log(Level.FINE, "URL: " + url);
-        Response response = null;
+        Response response;
         Request request = davRequest(url, "PROPFIND", null);
         response = httpClient.newCall(request).execute();
         response.body().close();
         switch (response.code()/100){
             case(2): {
-                Log.log(Level.FINE, "Response 2xx. Item exists");
+                Log.log(Level.FINE, "Response "+response.code()+". Item exists");
                 return true;
             }
             case(4): {
-                Log.log(Level.FINE, "Response 4xx. Item does not exist");
+                Log.log(Level.FINE, "Response "+response.code()+". Item does not exist");
                 return false;
             }
             default: {
