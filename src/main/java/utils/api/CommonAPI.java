@@ -60,6 +60,18 @@ public class CommonAPI {
         return request;
     }
 
+    protected Request postRequest(String url, RequestBody body) {
+        Request request = new Request.Builder()
+                .url(url)
+                .addHeader("OCS-APIREQUEST", "true")
+                .addHeader("User-Agent", userAgent)
+                .addHeader("Authorization", "Basic "+ credentialsB64)
+                .addHeader("Host", host)
+                .post(body)
+                .build();
+        return request;
+    }
+
     protected Request deleteRequest(String url){
         Request request = new Request.Builder()
                 .url(url)

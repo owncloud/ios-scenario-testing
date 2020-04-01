@@ -88,6 +88,9 @@ public class FileListSteps {
             case "av.offline":
                 fileListPage.executeOperation("Set as available offline", itemName);
                 break;
+            case "share":
+                fileListPage.executeOperation("Share", itemName);
+                break;
             case "upload":
                 fileListPage.selectFileUpload(itemName);
                 break;

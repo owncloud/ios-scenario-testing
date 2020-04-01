@@ -12,9 +12,12 @@ import utils.log.Log;
 public class SharePage extends CommonPage {
 
     private final String addshareebutton_id = "com.owncloud.android:id/addUserButton";
-    private final String addPublicLinkButton_id = "com.owncloud.android:id/addPublicLinkButton";
-    private final String editPublicLinkButton_id = "com.owncloud.android:id/editPublicLinkButton";
+    private final String addpubliclinkbutton_id = "com.owncloud.android:id/addPublicLinkButton";
+    private final String editpubliclinkbutton_id = "com.owncloud.android:id/editPublicLinkButton";
+    private final String editprivateshare_id = "com.owncloud.android:id/editShareButton";
     private final String sharefilename_id = "com.owncloud.android:id/shareFileName";
+    private final String unshareprivate_id = "com.owncloud.android:id/unshareButton";
+    private final String privatesharesectiontitle_id = "shareWithUsersSectionTitle";
 
     public SharePage(){
         super();
@@ -33,16 +36,26 @@ public class SharePage extends CommonPage {
     public void addPublicLink(){
         Log.log(Level.FINE, "Starts: add public link");
         waitById(5, sharefilename_id);
-        driver.findElement(MobileBy.id(addPublicLinkButton_id)).click();
+        driver.findElement(MobileBy.id(addpubliclinkbutton_id)).click();
     }
 
     public void openLink(){
         Log.log(Level.FINE, "Starts: open public link");
-        driver.findElement(MobileBy.id(editPublicLinkButton_id)).click();
+        driver.findElement(MobileBy.id(editpubliclinkbutton_id)).click();
+    }
+
+    public void editPrivateShare(String itemName){
+        Log.log(Level.FINE, "Starts: edit private share: " + itemName);
+        driver.findElement(MobileBy.id(editprivateshare_id)).click();
     }
 
     public boolean isItemInList(String item) {
+        waitById(5, privatesharesectiontitle_id);
         return !driver.findElementsByAndroidUIAutomator("new UiSelector().text(\""+item+"\");").isEmpty();
+    }
+
+    public void deletePrivateShare(){
+        driver.findElement(MobileBy.id(unshareprivate_id)).click();
     }
 
     public boolean checkCorrectShare(OCShare remoteShare, List<List<String>> dataList ){
@@ -95,6 +108,14 @@ public class SharePage extends CommonPage {
                 case "uid_owner":{
                     if (!remoteShare.getOwner().equals(entry.getValue())){
                         Log.log(Level.FINE, "Owner name does not match - Remote: " + remoteShare.getOwner()
+                                + " - Expected: " + entry.getValue());
+                        return false;
+                    }
+                    break;
+                }
+                case "permissions":{
+                    if (!remoteShare.getPermissions().equals(entry.getValue())){
+                        Log.log(Level.FINE, "Permissions do not match - Remote: " + remoteShare.getItemName()
                                 + " - Expected: " + entry.getValue());
                         return false;
                     }

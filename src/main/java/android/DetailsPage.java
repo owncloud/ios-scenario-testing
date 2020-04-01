@@ -5,6 +5,8 @@ import org.openqa.selenium.By;
 import java.util.logging.Level;
 
 import io.appium.java_client.MobileBy;
+import io.appium.java_client.android.nativekey.AndroidKey;
+import io.appium.java_client.android.nativekey.KeyEvent;
 import utils.log.Log;
 
 public class DetailsPage extends CommonPage {
@@ -39,7 +41,7 @@ public class DetailsPage extends CommonPage {
 
     public void closeOpenIn(){
         Log.log(Level.FINE, "Start: Close Open In");
-        driver.navigate().back();
+        driver.pressKey(new KeyEvent(AndroidKey.BACK));
     }
 
     public boolean itemPreviewed(){

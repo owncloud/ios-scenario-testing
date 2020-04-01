@@ -11,7 +11,9 @@ import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
 
+import okhttp3.FormBody;
 import okhttp3.Request;
+import okhttp3.RequestBody;
 import okhttp3.Response;
 import utils.entities.OCShare;
 import utils.log.Log;
@@ -23,6 +25,15 @@ public class ShareAPI extends CommonAPI {
 
     public ShareAPI(){
         super();
+    }
+
+    public void createShare(String itemPath, String sharee)
+            throws IOException, SAXException, ParserConfigurationException {
+        String url = urlServer + sharingEndpoint;
+        Log.log(Level.FINE, "Starts: Create Share - " + sharee + " " + itemPath);
+        Log.log(Level.FINE, "URL: " + url);
+        Request request = postRequest(url, createBody(itemPath,sharee));
+        httpClient.newCall(request).execute();
     }
 
     public OCShare getShare(String itemPath)
@@ -46,6 +57,10 @@ public class ShareAPI extends CommonAPI {
         Response response = httpClient.newCall(request).execute();
         OCShare share = getId(response);
         response.body().close();
+        if (share == null) {
+            Log.log(Level.FINE, itemName + " not shared with me");
+            return false;
+        }
         Log.log(Level.FINE, "Item returned: Sharee: " +
                 share.getShareeName() + " - Owner: " + share.getOwner());
         return share.getShareeName().equals("user2") && share.getOwner().equals("user1");
@@ -58,6 +73,16 @@ public class ShareAPI extends CommonAPI {
         Log.log(Level.FINE, "URL: " + url);
         Request request = deleteRequest(url);
         httpClient.newCall(request).execute();
+    }
+
+    private RequestBody createBody(String itemPath, String sharee){
+        RequestBody body = new FormBody.Builder()
+                .add("path", "\\" + itemPath + "\\")
+                .add("shareType", "0")
+                .add("shareWith", sharee)
+                .add("permissions", "31")  // default permission level in share creation
+            .build();
+        return body;
     }
 
     private OCShare getId(Response httpResponse)
