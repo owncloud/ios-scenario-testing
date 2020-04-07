@@ -6,16 +6,10 @@ Feature: List of files is correctly retrieved from server.
   Background: User is logged in
     Given user1 is logged
 
-  Scenario Outline: Check items in the list of files of root folder
+  Scenario Outline: Check items in the list of files of a folder
     Then the list of files in <path> folder matches with the server
 
     Examples:
-      | path  |
-      | /     |
-
-  Scenario Outline: Check items in the list of files of Photos folder
-    Then the list of files in <path> folder matches with the server
-
-    Examples:
-      | path      |
-      | /Photos   |
+      | path    |
+      | /       |
+      | /Photos |

@@ -16,20 +16,21 @@ Feature: Private Share
 
     Examples:
       |    item     |   user    |
-      |  Documents  |   user2   |
+      |  Files  |   user2   |
 
+    @new
   Scenario Outline: Edit existing share, removing permissions
     Given the item <item> is already shared with <user>
     When user selects the item <item> to share
     And user edits the share on <item> with permissions <permissions>
     Then <user> has access to <item>
-    And share is created on <item> with the following fields
+    Then share is created on <item> with the following fields
       | user        |  <user>        |
       | permissions |  <permissions> |
 
     Examples:
       |    item     |   user    | permissions |
-      |  Documents  |   user2   |   1         |
+      |  Files  |   user2   |   1         |
 
   Scenario Outline: Delete existing share
     Given the item <item> is already shared with <user>
@@ -40,4 +41,4 @@ Feature: Private Share
 
     Examples:
       |    item     |   user    |
-      |  Documents  |   user2   |
+      |  Files  |   user2   |
