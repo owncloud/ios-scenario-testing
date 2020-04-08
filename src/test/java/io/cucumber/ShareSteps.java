@@ -92,44 +92,45 @@ public class ShareSteps {
                 + " - " + permissions);
         sharePage.openPrivateShare(itemName);
         int permissionsToInt = Integer.parseInt(permissions);
-        String permissionsToString = String.format("%05d", permissionsToInt);
+        String permissionsToString =String.format("%5s", Integer.toBinaryString(permissionsToInt))
+                .replace(" ", "0");
         Log.log(Level.FINE, "Permissions converted: " + permissionsToString);
         for (int i=0 ; i<=permissionsToString.length()-1 ; i++){
-            switch(i){
+            switch(i) {
+                case(0):{
+                    Log.log(Level.FINE, "Check Share");
+                    char status = permissionsToString.charAt(i);
+                    boolean enabled = privateSharePage.isShareEnabled();
+                    Log.log(Level.FINE, "Status: " + status +". Enabled: "+ enabled);
+                    if (enabled != (status=='1'))
+                        privateSharePage.switchShare();
+                    break;
+                }
                 case(1):{
-                    Log.log(Level.FINE, "Check Change");
-                    char status = permissionsToString.charAt(2);
-                    boolean enabled = privateSharePage.isCreateSelected();
-                    Log.log(Level.FINE, "Status: " + status+". Enabled: "+ enabled);
-                    if (enabled != (status==1))
-                        privateSharePage.switchChange();
+                    Log.log(Level.FINE, "Check Delete");
+                    char status = permissionsToString.charAt(i);
+                    boolean enabled = privateSharePage.isDeleteSelected();
+                    Log.log(Level.FINE, "Status: " + status +". Enabled: "+ enabled);
+                    if (enabled != (status=='1'))
+                        privateSharePage.switchDelete();
                     break;
                 }
                 case(2):{
                     Log.log(Level.FINE, "Check Create");
-                    char status = permissionsToString.charAt(2);
+                    char status = permissionsToString.charAt(i);
                     boolean enabled = privateSharePage.isChangeSelected();
-                    Log.log(Level.FINE, "Status: " + status+". Enabled: "+ enabled);
-                    if (enabled != (status==1))
+                    Log.log(Level.FINE, "Status: " + status +". Enabled: "+ enabled);
+                    if (enabled != (status=='1'))
                         privateSharePage.switchCreate();
                     break;
                 }
                 case(3):{
-                    Log.log(Level.FINE, "Check Delete");
-                    char status = permissionsToString.charAt(2);
-                    boolean enabled = privateSharePage.isDeleteSelected();
-                    Log.log(Level.FINE, "Status: " + status+". Enabled: "+ enabled);
-                    if (enabled != (status==1))
-                        privateSharePage.switchDelete();
-                    break;
-                }
-                case(4):{
-                    Log.log(Level.FINE, "Check Share");
-                    char status = permissionsToString.charAt(2);
-                    boolean enabled = privateSharePage.isShareEnabled();
-                    Log.log(Level.FINE, "Status: " + status+". Enabled: "+ enabled);
-                    if (enabled != (status==1))
-                        privateSharePage.switchShare();
+                    Log.log(Level.FINE, "Check Change");
+                    char status = permissionsToString.charAt(i);
+                    boolean enabled = privateSharePage.isCreateSelected();
+                    Log.log(Level.FINE, "Status: " + status +". Enabled: "+ enabled);
+                    if (enabled != (status=='1'))
+                        privateSharePage.switchChange();
                     break;
                 }
                 default:

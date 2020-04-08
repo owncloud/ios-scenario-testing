@@ -8,7 +8,7 @@ Feature: Public Share
     And the following items exist in the account
       |  Documents         |
       |  San Francisco.jpg |
-  @new
+
   Scenario Outline: Create a public link with name
     When user selects <item> to create link with the following fields
         | name | <name> |
