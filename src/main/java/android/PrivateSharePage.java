@@ -13,8 +13,6 @@ public class PrivateSharePage extends CommonPage {
     private String changebox_id = "canEditChangeCheckBox";
     private String deletebox_id = "canEditDeleteCheckBox";
     private String sharebox_id = "canShareSwitch";
-    private String acceptdeletion_id = "android:id/button1";
-    private String canceldeletion_id = "android:id/button3";
 
     public PrivateSharePage(){
         super();
@@ -56,15 +54,13 @@ public class PrivateSharePage extends CommonPage {
         return driver.findElement(MobileBy.id(sharebox_id)).isEnabled();
     }
 
-    public void acceptDeletion(){
-        driver.findElement(MobileBy.id(acceptdeletion_id)).click();
+    public boolean isPasswordEnabled () {
+        return true;
     }
 
-    public void cancelDeletion(){
-        driver.findElement(MobileBy.id(canceldeletion_id)).click();
-    }
 
-    public void closeView(){
+
+    public void close(){
         driver.pressKey(new KeyEvent(AndroidKey.BACK));
     }
 }

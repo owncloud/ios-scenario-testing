@@ -15,9 +15,13 @@ public class SharePage extends CommonPage {
     private final String addpubliclinkbutton_id = "com.owncloud.android:id/addPublicLinkButton";
     private final String editpubliclinkbutton_id = "com.owncloud.android:id/editPublicLinkButton";
     private final String editprivateshare_id = "com.owncloud.android:id/editShareButton";
+    private final String editpubliclink_id = "com.owncloud.android:id/editPublicLinkButton";
     private final String sharefilename_id = "com.owncloud.android:id/shareFileName";
     private final String unshareprivate_id = "com.owncloud.android:id/unshareButton";
+    private final String deleteprivatelink_id = "com.owncloud.android:id/deletePublicLinkButton";
     private final String privatesharesectiontitle_id = "shareWithUsersSectionTitle";
+    private String acceptdeletion_id = "android:id/button1";
+    private String canceldeletion_id = "android:id/button3";
 
     public SharePage(){
         super();
@@ -39,14 +43,14 @@ public class SharePage extends CommonPage {
         driver.findElement(MobileBy.id(addpubliclinkbutton_id)).click();
     }
 
-    public void openLink(){
-        Log.log(Level.FINE, "Starts: open public link");
-        driver.findElement(MobileBy.id(editpubliclinkbutton_id)).click();
-    }
-
-    public void editPrivateShare(String itemName){
+    public void openPrivateShare(String itemName){
         Log.log(Level.FINE, "Starts: edit private share: " + itemName);
         driver.findElement(MobileBy.id(editprivateshare_id)).click();
+    }
+
+    public void openPublicLink(String itemName){
+        Log.log(Level.FINE, "Starts: edit public link: " + itemName);
+        driver.findElement(MobileBy.id(editpubliclink_id)).click();
     }
 
     public boolean isItemInList(String item) {
@@ -56,6 +60,10 @@ public class SharePage extends CommonPage {
 
     public void deletePrivateShare(){
         driver.findElement(MobileBy.id(unshareprivate_id)).click();
+    }
+
+    public void deletePublicShare(){
+        driver.findElement(MobileBy.id(deleteprivatelink_id)).click();
     }
 
     public boolean checkCorrectShare(OCShare remoteShare, List<List<String>> dataList ){
@@ -125,6 +133,14 @@ public class SharePage extends CommonPage {
         }
         Log.log(Level.FINE, "All fields match. Returning true");
         return true;
+    }
+
+    public void acceptDeletion(){
+        driver.findElement(MobileBy.id(acceptdeletion_id)).click();
+    }
+
+    public void cancelDeletion(){
+        driver.findElement(MobileBy.id(canceldeletion_id)).click();
     }
 
     private HashMap turnListToHashmap(List<List<String>> dataList){

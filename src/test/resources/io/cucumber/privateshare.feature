@@ -15,10 +15,9 @@ Feature: Private Share
       | user | <user> |
 
     Examples:
-      |    item     |   user    |
+      |  item   |   user    |
       |  Files  |   user2   |
 
-    @new
   Scenario Outline: Edit existing share, removing permissions
     Given the item <item> is already shared with <user>
     When user selects the item <item> to share
@@ -29,8 +28,9 @@ Feature: Private Share
       | permissions |  <permissions> |
 
     Examples:
-      |    item     |   user    | permissions |
+      |  item   |   user    | permissions |
       |  Files  |   user2   |   1         |
+      |  Files  |   user2   |   9         |
 
   Scenario Outline: Delete existing share
     Given the item <item> is already shared with <user>
@@ -40,5 +40,5 @@ Feature: Private Share
     And <item> is not shared anymore with <user>
 
     Examples:
-      |    item     |   user    |
-      |  Files  |   user2   |
+      |  item     |   user    |
+      |  Files    |   user2   |

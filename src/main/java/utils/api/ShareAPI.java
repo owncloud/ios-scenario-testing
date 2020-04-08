@@ -27,12 +27,14 @@ public class ShareAPI extends CommonAPI {
         super();
     }
 
-    public void createShare(String itemPath, String sharee)
+    public void createShare(String itemPath, String sharee, String type,
+                            String permissions, String name)
             throws IOException, SAXException, ParserConfigurationException {
         String url = urlServer + sharingEndpoint;
-        Log.log(Level.FINE, "Starts: Create Share - " + sharee + " " + itemPath);
+        Log.log(Level.FINE, "Starts: Create Share - " + sharee + " "
+                + itemPath + " " + type);
         Log.log(Level.FINE, "URL: " + url);
-        Request request = postRequest(url, createBody(itemPath,sharee));
+        Request request = postRequest(url, createBody(itemPath, sharee, type, permissions, name));
         httpClient.newCall(request).execute();
     }
 
@@ -75,12 +77,14 @@ public class ShareAPI extends CommonAPI {
         httpClient.newCall(request).execute();
     }
 
-    private RequestBody createBody(String itemPath, String sharee){
+    private RequestBody createBody(String itemPath, String sharee, String type,
+                                   String permissions, String name) {
         RequestBody body = new FormBody.Builder()
                 .add("path", "\\" + itemPath + "\\")
-                .add("shareType", "0")
+                .add("shareType", type)
                 .add("shareWith", sharee)
-                .add("permissions", "31")  // default permission level in share creation
+                .add("permissions", permissions)
+                .add("name", name)
             .build();
         return body;
     }

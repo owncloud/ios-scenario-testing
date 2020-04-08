@@ -10,9 +10,12 @@ public class PublicLinkPage extends CommonPage {
     private String namepubliclink_id = "com.owncloud.android:id/shareViaLinkNameValue";
     private String enablePassword_id = "com.owncloud.android:id/shareViaLinkPasswordSwitch";
     private String textpassword_id = "com.owncloud.android:id/shareViaLinkPasswordValue";
+    private String downloadview_id = "com.owncloud.android:id/shareViaLinkEditPermissionReadOnly";
+    private String downloadviewupload_id =
+            "com.owncloud.android:id/shareViaLinkEditPermissionReadAndWrite";
+    private String uploadonly_id = "com.owncloud.android:id/shareViaLinkEditPermissionUploadFiles";
     private String savebutton_id = "com.owncloud.android:id/saveButton";
     private String cancelbutton_id = "com.owncloud.android:id/cancelButton";
-
 
     public PublicLinkPage(){
         super();
@@ -35,6 +38,46 @@ public class PublicLinkPage extends CommonPage {
         boolean switchEnabled = driver.findElement(MobileBy.id(enablePassword_id)).isEnabled();
         boolean passVisible = driver.findElement(MobileBy.id(textpassword_id)).isDisplayed();
         return switchEnabled && passVisible;
+    }
+
+    public void selectDownloadView(){
+        Log.log(Level.FINE, "Starts: Select Download / View");
+        driver.findElement(MobileBy.id(downloadview_id)).click();
+    }
+
+    public void selectDownloadViewUpload(){
+        Log.log(Level.FINE, "Starts: Select Download / View / Upload");
+        driver.findElement(MobileBy.id(downloadviewupload_id)).click();
+    }
+
+    public void selectUploadOnly(){
+        Log.log(Level.FINE, "Starts: Select Upload Only (File drop)");
+        driver.findElement(MobileBy.id(uploadonly_id)).click();
+    }
+
+    public boolean checkPermissions(String permissions){
+            Log.log(Level.FINE, "Starts: Check permissions: " + permissions);
+            switch (permissions){
+                case("1"):{
+                    if (driver.findElement(MobileBy.id(downloadview_id)).isEnabled()){
+                        Log.log(Level.FINE, "Download / View is selected");
+                        return true;
+                    }
+                }
+                case("15"):{
+                    if (driver.findElement(MobileBy.id(downloadviewupload_id)).isEnabled()){
+                        Log.log(Level.FINE, "Download / View / Upload is selected");
+                        return true;
+                    }
+                }
+                case("4"):{
+                    if (driver.findElement(MobileBy.id(uploadonly_id)).isEnabled()){
+                        Log.log(Level.FINE, "Upload only is selected");
+                        return true;
+                    }
+                }
+            }
+            return false;
     }
 
     public void close(){
