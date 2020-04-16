@@ -19,23 +19,31 @@ public class PrivateSharePage extends CommonPage {
     }
 
     public void switchCreate() {
+        boolean status = isCreateSelected();
         Log.log(Level.FINE, "Starts: Click create checkbox");
         driver.findElement(MobileBy.id(createbox_id)).click();
+        waitTillStatus(5, createbox_id, !status);
     }
 
     public void switchChange() {
+        boolean status = isChangeSelected();
         Log.log(Level.FINE, "Starts: Click change checkbox");
         driver.findElement(MobileBy.id(changebox_id)).click();
+        waitTillStatus(5, changebox_id, !status);
     }
 
     public void switchDelete() {
+        boolean status = isDeleteSelected();
         Log.log(Level.FINE, "Starts: Click delete checkbox:");
         driver.findElement(MobileBy.id(deletebox_id)).click();
+        waitTillStatus(5, deletebox_id, !status);
     }
 
     public void switchShare() {
+        boolean status = isShareEnabled();
         Log.log(Level.FINE, "Starts: Switch share button");
         driver.findElement(MobileBy.id(sharebox_id)).click();
+        waitTillStatus(5, sharebox_id, !status);
     }
 
     public boolean isCreateSelected(){
@@ -57,8 +65,6 @@ public class PrivateSharePage extends CommonPage {
     public boolean isPasswordEnabled () {
         return true;
     }
-
-
 
     public void close(){
         driver.pressKey(new KeyEvent(AndroidKey.BACK));

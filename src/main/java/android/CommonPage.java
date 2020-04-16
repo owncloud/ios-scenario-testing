@@ -30,4 +30,9 @@ public class CommonPage {
         WebDriverWait wait = new WebDriverWait(driver, timeToWait);
         wait.until(ExpectedConditions.invisibilityOfElementLocated(MobileBy.id(resourceId)));
     }
+
+    public static void waitTillStatus(int timeToWait, String resourceId, boolean status){
+        WebDriverWait wait = new WebDriverWait(driver, timeToWait);
+        wait.until(ExpectedConditions.elementSelectionStateToBe(MobileBy.id(resourceId), status));
+    }
 }

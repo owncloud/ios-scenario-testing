@@ -68,6 +68,7 @@ public class FileListSteps {
         Log.log(Level.FINE, "----STEP----: " +
                 new Object(){}.getClass().getEnclosingMethod().getName() + ": "
                 + operation + " " + itemName);
+        fileListPage.waitToload();
         switch (operation){
             case "rename":
                 fileListPage.executeOperation("Rename", itemName);

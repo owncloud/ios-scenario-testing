@@ -10,7 +10,8 @@ Feature: Public Share
       |  San Francisco.jpg |
 
   Scenario Outline: Create a public link with name
-    When user selects <item> to create link with the following fields
+    When user selects the item <item> to share
+    And user creates link on <item> with the following fields
         | name | <name> |
     Then link is created on <item> with the following fields
         | name | <name> |
@@ -19,9 +20,10 @@ Feature: Public Share
       |  item              |  name    |
       |  Documents         |  link1   |
       |  San Francisco.jpg |  link2   |
-
+  @share
   Scenario Outline: Create a public link with password
-    When user selects <item> to create link with the following fields
+    When user selects the item <item> to share
+    And user creates link on <item> with the following fields
       | name     | <name>     |
       | password | <password> |
     Then link is created on <item> with the following fields

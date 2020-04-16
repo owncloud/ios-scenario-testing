@@ -29,7 +29,7 @@ Feature: Private Share
 
     Examples:
       |  item   |   user    | permissions |
-      |  Files  |   user2   |   1         |
+      #|  Files  |   user2   |   1         |
       |  Files  |   user2   |   9         |
 
   Scenario Outline: Delete existing share

@@ -1,3 +1,9 @@
+/**
+ * ownCloud Android Scenario Tests
+ *
+ * @author Jesús Recio Rincón (@jesmrec)
+ */
+
 package io.cucumber;
 
 import android.AppiumManager;
@@ -22,6 +28,7 @@ public class Hooks {
         Log.log(Level.FINE, "END SCENARIO EXECUTION: " + scenario.getName() + "\n\n");
         //remove the oC app
         AppiumManager.getManager().getDriver().removeApp("com.owncloud.android");
+        //remove Appium Settings
+        AppiumManager.getManager().getDriver().removeApp("io.appium.settings");
     }
-
 }

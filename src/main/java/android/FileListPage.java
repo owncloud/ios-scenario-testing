@@ -49,6 +49,10 @@ public class FileListPage extends CommonPage {
         operationsMap.put("Set as available offline", avofflineoption_id);
     }
 
+    public void waitToload(){
+        waitByIdInvisible(15, progress_id);
+    }
+
     public void createFolder(){
         Log.log(Level.FINE, "Starts: create folder");
         waitById(5, fab_id);
@@ -193,7 +197,7 @@ public class FileListPage extends CommonPage {
         driver.findElementByAndroidUIAutomator(
                 "new UiSelector().text(\"" + syncoption_text + "\");").click();
         parsePath(path); //moving to the folder
-        waitByIdInvisible(5, progress_id);
+        waitByIdInvisible(15, progress_id);
         Iterator iterator = listServer.iterator();
         while (iterator.hasNext()){
             OCFile ocfile = (OCFile) iterator.next();
