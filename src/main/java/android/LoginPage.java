@@ -24,7 +24,7 @@ public class LoginPage extends CommonPage{
 
     public void typeURL(String authMethod){
         Log.log(Level.FINE, "Starts: Type URL. Auth method: " + authMethod);
-        waitById(5, urltext_id);
+        waitById(15, urltext_id);
         driver.findElement(MobileBy.id(urltext_id)).sendKeys(selectURL(authMethod));
         driver.findElement(MobileBy.id(embeddedbutton_id)).click();
     }
@@ -32,7 +32,7 @@ public class LoginPage extends CommonPage{
     public void typeCredentials(String username, String password){
         Log.log(Level.FINE, "Starts: Type credentials: username: "
                 + username + " - password: " + password);
-        waitById(5, usernametext_id);
+        waitById(15, usernametext_id);
         driver.findElement(MobileBy.id(usernametext_id)).sendKeys(username);
         driver.findElement(MobileBy.id(passwordtext_id)).sendKeys(password);
         submitLogin();
@@ -40,7 +40,7 @@ public class LoginPage extends CommonPage{
 
     public void submitLogin(){
         Log.log(Level.FINE, "Starts: Submit login");
-        waitById(5, loginbutton_id);
+        waitById(15, loginbutton_id);
         driver.findElement(MobileBy.id(loginbutton_id)).click();
     }
 

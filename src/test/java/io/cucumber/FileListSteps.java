@@ -84,7 +84,7 @@ public class FileListSteps {
                 break;
             case "download":
                 fileListPage.downloadAction(itemName);
-                detailsPage.waitFinishedDownload(10);
+                detailsPage.waitFinishedDownload(30);
                 break;
             case "av.offline":
                 fileListPage.executeOperation("Set as available offline", itemName);
@@ -176,7 +176,6 @@ public class FileListSteps {
     public void preview_in_screen(String itemName, String type, String size) {
         Log.log(Level.FINE, "----STEP----: " +
                 new Object(){}.getClass().getEnclosingMethod().getName()  + ": " + itemName);
-        detailsPage.closeOpenIn();
         assertEquals(detailsPage.getName(), itemName);
         assertEquals(detailsPage.getSize(), size);
         assertEquals(detailsPage.getType(), type);

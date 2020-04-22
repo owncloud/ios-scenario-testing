@@ -8,6 +8,7 @@ Feature: Private Share
     And the following items exist in the account
       | Documents |
 
+  @NoEmulator
   Scenario Outline: Correct share
     When user selects <item> to share with <user>
     Then <user> has access to <item>

@@ -16,6 +16,7 @@ public class DetailsPage extends CommonPage {
     private String itemSize_id = "com.owncloud.android:id/fdSize";
     private String downloading_id = "com.owncloud.android:id/fdProgressText";
     private String photoview_id = "com.owncloud.android:id/photo_view";
+    private String textview_id = "com.owncloud.android:id/text_preview";
     private String navigateup_xpath = "//android.widget.ImageButton[@content-desc=\"Navigate up\"]";
 
     public DetailsPage(){
@@ -45,7 +46,7 @@ public class DetailsPage extends CommonPage {
     }
 
     public boolean itemPreviewed(){
-        return driver.findElement(By.id(photoview_id)).isDisplayed();
+        return driver.findElement(By.id(textview_id)).isDisplayed();
     }
 
     public void waitFinishedDownload(int seconds){

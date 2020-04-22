@@ -6,8 +6,8 @@ Feature: Public Share
   Background: User is logged in
     Given user1 is logged
     And the following items exist in the account
-      |  Documents         |
-      |  San Francisco.jpg |
+      | Documents        |
+      | textExample.txt  |
 
   Scenario Outline: Create a public link with name
     When user selects the item <item> to share
@@ -19,7 +19,8 @@ Feature: Public Share
     Examples:
       |  item              |  name    |
       |  Documents         |  link1   |
-      |  San Francisco.jpg |  link2   |
+      |  textExample.txt   |  link2   |
+
   @share
   Scenario Outline: Create a public link with password
     When user selects the item <item> to share

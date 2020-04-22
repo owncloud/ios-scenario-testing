@@ -32,6 +32,7 @@ public class PublicLinkPage extends CommonPage {
         driver.findElement(MobileBy.id(enablePassword_id)).click();
         waitById(5, textpassword_id);
         driver.findElement(MobileBy.id(textpassword_id)).sendKeys(password);
+        swipe(0.50, 0.45, 0.50, 0.30);
     }
 
     public boolean isPasswordEnabled () {
@@ -78,6 +79,17 @@ public class PublicLinkPage extends CommonPage {
                 }
             }
             return false;
+    }
+
+    public void closeKeyboard(){
+        Log.log(Level.FINE, "Starts: Close keyboard");
+        if (driver.isKeyboardShown()){
+            Log.log(Level.FINE, "Keyboard is displayed");
+            //((AppiumDriver)driver).hideKeyboard();
+            driver.navigate().back();
+        } else {
+            Log.log(Level.FINE, "Keyboard is NOT displayed");
+        }
     }
 
     public void close(){
