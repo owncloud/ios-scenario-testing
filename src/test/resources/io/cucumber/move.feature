@@ -1,3 +1,4 @@
+@move
 Feature: Move item
 
   As an user, i want to be able to move content to other place in the account

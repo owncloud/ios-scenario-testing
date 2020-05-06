@@ -1,3 +1,4 @@
+@download
 Feature: Download a file in the account
 
   As an user, i want to be able to download items locally

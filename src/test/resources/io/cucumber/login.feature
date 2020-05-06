@@ -1,3 +1,4 @@
+@login
 Feature: Login
 
   As an user, i want to be able to login in my account basic or OAuth2

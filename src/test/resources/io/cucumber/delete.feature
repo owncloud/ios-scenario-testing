@@ -1,3 +1,4 @@
+@delete
 Feature: Delete item
 
   As an user, i want to be able to delete content from my list

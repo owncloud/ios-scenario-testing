@@ -1,3 +1,4 @@
+@rename
 Feature: Rename an item
 
   As an user, i want to rename the items of my account

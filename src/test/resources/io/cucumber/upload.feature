@@ -1,3 +1,4 @@
+@upload
 Feature: Upload a local file to the server
 
   As an user, i want to upload new content to my account

@@ -30,7 +30,7 @@ public class PrivateShareSteps {
     //APIs to call
     protected ShareAPI shareAPI = new ShareAPI();
 
-    @Given("the item (.+) is already shared with (.+)")
+    @Given("^the item (.+) is already shared with (.+)$")
     public void item_already_shared(String itemName, String sharee)
             throws Throwable {
         Log.log(Level.FINE, "----STEP----: " +
@@ -145,7 +145,7 @@ public class PrivateShareSteps {
         shareAPI.removeShare(share.getId());
     }
 
-    @Then("^(.+) has access to (.+)")
+    @Then("^(.+) has access to (.+)$")
     public void sharee_has_the_file (String userName, String itemName)
             throws Throwable {
         Log.log(Level.FINE, "----STEP----: " +
@@ -153,7 +153,7 @@ public class PrivateShareSteps {
         assertTrue(shareAPI.isSharedWithMe(itemName));
     }
 
-    @Then("^(.+) does not have access to (.+)")
+    @Then("^(.+) does not have access to (.+)$")
     public void sharee_does_not_have_the_file (String userName, String itemName)
             throws Throwable {
         Log.log(Level.FINE, "----STEP----: " +

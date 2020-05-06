@@ -1,3 +1,4 @@
+@publicshare
 Feature: Public Share
 
   As an user, i want to create a direct link to the content in my account

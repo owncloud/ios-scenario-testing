@@ -1,3 +1,4 @@
+@copy
 Feature: Copy item
 
   As an user, i want to copy files inside my account

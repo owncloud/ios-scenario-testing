@@ -1,3 +1,4 @@
+@createfolder
 Feature: Create a new folder
 
   As an user, i want to be able to create new folders,

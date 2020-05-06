@@ -9,9 +9,11 @@ import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
+import java.util.List;
 import java.util.logging.Level;
 
 import io.appium.java_client.MobileBy;
+import io.appium.java_client.MobileElement;
 import utils.LocProperties;
 import utils.entities.OCFile;
 import utils.log.Log;
@@ -35,6 +37,9 @@ public class FileListPage extends CommonPage {
     private String syncfileption_id = "com.owncloud.android:id/action_sync_file";
     private String toolbar_id = "toolbar";
     private String progress_id = "com.owncloud.android:id/syncProgressBar";
+    private String listfiles_id = "com.owncloud.android:id/list_root";
+    private String listcell_id = "com.owncloud.android:id/file_list_constraint_layout";
+    private String listitemname_id = "com.owncloud.android:id/Filename";
 
     private HashMap<String, String> operationsMap = new HashMap<String, String>();
 
@@ -104,8 +109,8 @@ public class FileListPage extends CommonPage {
 
     public void selectItemList(String itemName) {
         Log.log(Level.FINE, "Starts: select item from list: " + itemName);
-        actions.clickAndHold(driver.findElement(MobileBy.AndroidUIAutomator(
-                "new UiSelector().text(\""+ itemName +"\");"))).perform();
+        MobileElement element = getElementFromFileList(itemName);
+        actions.clickAndHold(element).perform();
     }
 
     public void selectOperation(String operationName) {
@@ -154,14 +159,16 @@ public class FileListPage extends CommonPage {
 
     public boolean fileIsMarkedAsDownloaded(String itemName){
         //Enforce this.. downloaded file must fit the itemName
-        return driver.findElement(By.id(downloaded_id)).isDisplayed();
+        MobileElement element = getElementFromFileList(itemName);
+        return (element.findElement(By.id(downloaded_id)).isDisplayed());
+        //return driver.findElement(By.id(downloaded_id)).isDisplayed();
     }
 
     public boolean fileIsMarkedAsAvOffline(String itemName){
         //Wait the file to be downloaded
         waitById(15, syncfileption_id);
-        //Enforce this.. av offline file must fit the itemName and distinguish from downloaded
-        return driver.findElement(By.id(avoffline_id)).isDisplayed();
+        MobileElement element = getElementFromFileList(itemName);
+        return (element.findElement(By.id(avoffline_id)).isDisplayed());
     }
 
     private void selectOperationMenu(String operationName){
@@ -216,5 +223,20 @@ public class FileListPage extends CommonPage {
                 waitByIdInvisible(30, progress_id);
             }
         }
+    }
+
+    private MobileElement getElementFromFileList(String itemName){
+        Log.log(Level.FINE, "Starts: searching item in list: " + itemName);
+        List<MobileElement> elementsFileList = driver.findElement(MobileBy.id(listfiles_id))
+                .findElements(MobileBy.id(listcell_id));
+        for (MobileElement element : elementsFileList) {
+            if (element.findElement(By.id(listitemname_id)).getText()
+                    .equals(itemName)){
+                Log.log(Level.FINE, itemName + " found!!");
+                return element;
+            }
+        }
+        Log.log(Level.FINE, itemName + " not found");
+        return null;
     }
 }

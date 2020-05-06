@@ -1,3 +1,4 @@
+@list
 Feature: List of files is correctly retrieved from server.
 
   As an user, i want to see in my device the list of files

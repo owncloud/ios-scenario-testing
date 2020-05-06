@@ -1,3 +1,4 @@
+@privateshare
 Feature: Private Share
 
   As an user, i want to share my content with other users in the platform

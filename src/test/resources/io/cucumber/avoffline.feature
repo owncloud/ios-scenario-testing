@@ -1,3 +1,4 @@
+@avoffline
 Feature: Set items as available offline (downloaded and synced)
 
   As an user, i want to be able to set content as available offline
