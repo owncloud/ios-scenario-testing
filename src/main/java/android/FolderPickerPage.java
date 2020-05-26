@@ -16,6 +16,7 @@ public class FolderPickerPage extends CommonPage {
 
     public void selectFolder(String targetFolder){
         Log.log(Level.FINE, "Start: Select folder from picker: " + targetFolder);
+        waitByTextVisible(10, targetFolder);
         driver.findElement(MobileBy.AndroidUIAutomator(
                 "new UiSelector().text(\""+ targetFolder +"\");")).click();
     }

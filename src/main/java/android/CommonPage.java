@@ -39,7 +39,7 @@ public class CommonPage {
         WebDriverWait wait = new WebDriverWait(driver, timeToWait);
         MobileElement mobileElement = (MobileElement)
                 driver.findElementByAndroidUIAutomator
-                        ("new UiSelector().description(\""+ text +"\");");
+                        ("new UiSelector().text(\""+ text +"\");");
         wait.until(ExpectedConditions.textToBePresentInElement(mobileElement, text));
     }
 

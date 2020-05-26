@@ -129,7 +129,7 @@ public class PrivateShareSteps {
                     break;
                 }
                 case "user": {
-                    assertTrue(sharePage.isItemInList(itemName));
+                    assertTrue(sharePage.isItemInListPrivateShares(rows.get(1)));
                     break;
                 }
                 case "permissions": {
@@ -162,9 +162,9 @@ public class PrivateShareSteps {
     }
 
     @Then("^(.+) is not shared anymore with (.+)$")
-    public void share_is_deleted(String itemName, String username) {
+    public void share_is_deleted(String itemName, String sharee) {
         Log.log(Level.FINE, "----STEP----: " +
                 new Object(){}.getClass().getEnclosingMethod().getName());
-        assertFalse(sharePage.isItemInList(username));
+        assertFalse(sharePage.isItemInListPrivateShares(sharee));
     }
 }

@@ -161,7 +161,6 @@ public class FileListPage extends CommonPage {
         //Enforce this.. downloaded file must fit the itemName
         MobileElement element = getElementFromFileList(itemName);
         return (element.findElement(By.id(downloaded_id)).isDisplayed());
-        //return driver.findElement(By.id(downloaded_id)).isDisplayed();
     }
 
     public boolean fileIsMarkedAsAvOffline(String itemName){
@@ -199,20 +198,35 @@ public class FileListPage extends CommonPage {
     }
 
     public boolean displayedList(String path, ArrayList<OCFile> listServer){
+        boolean found = true;
         parsePath(path); //moving to the folder
         waitByIdInvisible(30, progress_id);
         Iterator iterator = listServer.iterator();
         while (iterator.hasNext()){
             OCFile ocfile = (OCFile) iterator.next();
             Log.log(Level.FINE, "Checking item in list: " + ocfile.getName());
-            if(ocfile.getName().equals(LocProperties.getProperties().getProperty("userName1"))) {
+            //Server returns the username as value. Here, we skip it
+            if (ocfile.getName().equals(LocProperties.getProperties().getProperty("userName1"))) {
                 continue;
-            } else if (!isItemInList(ocfile.getName())){
-                Log.log(Level.FINE, "Item " + ocfile.getName() + " not present in list");
-                return false;
             }
+            while (!isItemInList(ocfile.getName()) && !endList(listServer.size())) {
+                Log.log(Level.FINE, "Item " + ocfile.getName() + " not found yet. Swiping");
+                swipe(0.50, 0.90, 0.50, 0.20);
+            }
+            if (!isItemInList(ocfile.getName())) {
+                Log.log(Level.FINE, "Item " + ocfile.getName() + " is not in the list");
+                found = false;
+                break;
+            }
+            //TODO: swipe to the top to start a new loop
         }
-        return true;
+        return found;
+    }
+
+    private boolean endList (int numberItems) {
+        return !driver.findElements(MobileBy.AndroidUIAutomator(
+                "new UiSelector().text(\"" + Integer.toString(numberItems-1)
+                        + " files\");")).isEmpty();
     }
 
     private void parsePath(String path){

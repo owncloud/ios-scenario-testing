@@ -122,7 +122,7 @@ public class PublicShareSteps {
         for (List<String> rows : listItems) {
             switch (rows.get(0)) {
                 case "name": {
-                    assertTrue(sharePage.isItemInList(rows.get(1)));
+                    assertTrue(sharePage.isItemInListPublicShares(rows.get(1)));
                     break;
                 }
                 case "password": {
@@ -132,7 +132,7 @@ public class PublicShareSteps {
                     break;
                 }
                 case "user": {
-                    assertTrue(sharePage.isItemInList(itemName));
+                    assertTrue(sharePage.isItemInListPublicShares(itemName));
                     break;
                 }
                 case "permissions": {
@@ -156,7 +156,7 @@ public class PublicShareSteps {
             throws Throwable {
         Log.log(Level.FINE, "----STEP----: " +
                 new Object(){}.getClass().getEnclosingMethod().getName());
-        assertFalse(sharePage.isItemInList(itemName+ " link"));
+        assertFalse(sharePage.isItemInListPublicShares(itemName+ " link"));
         assertTrue(shareAPI.getShare(itemName) == null);
     }
 }

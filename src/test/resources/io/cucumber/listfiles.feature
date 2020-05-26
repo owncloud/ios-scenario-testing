@@ -14,3 +14,4 @@ Feature: List of files is correctly retrieved from server.
       | path    |
       | /       |
       | /Photos |
+      | /Many   |

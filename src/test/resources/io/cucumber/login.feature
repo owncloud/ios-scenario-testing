@@ -29,6 +29,7 @@ Feature: Login
       |  user2       |    as    |
 
   @NoEmulator
+  @NoDevice
   Scenario: A valid login with OAuth2
     When server with OAuth2 is available
     And user logins as user1 with password a as OAuth2 credentials

@@ -13,7 +13,6 @@ public class SharePage extends CommonPage {
 
     private final String addshareebutton_id = "com.owncloud.android:id/addUserButton";
     private final String addpubliclinkbutton_id = "com.owncloud.android:id/addPublicLinkButton";
-    private final String editpubliclinkbutton_id = "com.owncloud.android:id/editPublicLinkButton";
     private final String editprivateshare_id = "com.owncloud.android:id/editShareButton";
     private final String editpubliclink_id = "com.owncloud.android:id/editPublicLinkButton";
     private final String sharefilename_id = "com.owncloud.android:id/shareFileName";
@@ -53,9 +52,16 @@ public class SharePage extends CommonPage {
         driver.findElement(MobileBy.id(editpubliclink_id)).click();
     }
 
-    public boolean isItemInList(String item) {
+    public boolean isItemInListPrivateShares(String sharee) {
         waitById(5, privatesharesectiontitle_id);
-        return !driver.findElementsByAndroidUIAutomator("new UiSelector().text(\""+item+"\");").isEmpty();
+        return !driver.findElementsByAndroidUIAutomator("new UiSelector().text(\""+sharee+"\");")
+                .isEmpty();
+    }
+
+    public boolean isItemInListPublicShares(String itemName) {
+        waitById(5, privatesharesectiontitle_id);
+        return !driver.findElementsByAndroidUIAutomator("new UiSelector().text(\""+itemName+"\");")
+                .isEmpty();
     }
 
     public void deletePrivateShare(){

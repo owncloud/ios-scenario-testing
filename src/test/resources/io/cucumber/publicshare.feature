@@ -22,7 +22,6 @@ Feature: Public Share
       |  Documents         |  link1   |
       |  textExample.txt   |  link2   |
 
-  @share
   Scenario Outline: Create a public link with password
     When user selects the item <item> to share
     And user creates link on <item> with the following fields
