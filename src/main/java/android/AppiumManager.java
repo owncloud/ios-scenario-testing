@@ -48,6 +48,7 @@ public class AppiumManager {
         capabilities.setCapability ("resetKeyboard", true);
         capabilities.setCapability ("appWaitActivity",
                 "com.owncloud.android.ui.activity.WhatsNewActivity");
+        capabilities.setCapability ("uiautomator2ServerInstallTimeout", 180000);
 
         try {
             driver = new AndroidDriver (new URL(driverURL), capabilities);
@@ -55,7 +56,7 @@ public class AppiumManager {
             Log.log(Level.SEVERE, "Driver could not be created: " + e.getMessage());
             e.printStackTrace();
         }
-        driver.manage().timeouts().implicitlyWait(8, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(120, TimeUnit.SECONDS);
 
         Log.log(Level.FINE, "Device: " +
                 driver.getCapabilities().getCapability("deviceManufacturer") + " " +
