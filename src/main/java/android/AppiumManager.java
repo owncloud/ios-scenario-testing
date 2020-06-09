@@ -13,6 +13,8 @@ import java.util.concurrent.TimeUnit;
 import java.util.logging.Level;
 
 import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.remote.AutomationName;
+import io.appium.java_client.remote.MobileCapabilityType;
 import utils.LocProperties;
 import utils.log.Log;
 
@@ -48,7 +50,8 @@ public class AppiumManager {
         capabilities.setCapability ("resetKeyboard", true);
         capabilities.setCapability ("appWaitActivity",
                 "com.owncloud.android.ui.activity.WhatsNewActivity");
-        capabilities.setCapability ("automationName","Appium");
+        capabilities.setCapability (MobileCapabilityType.AUTOMATION_NAME, AutomationName.APPIUM);
+        //capabilities.setCapability ("uiautomator2ServerInstallTimeout", 180000);
 
         try {
             driver = new AndroidDriver (new URL(driverURL), capabilities);
