@@ -55,7 +55,7 @@ public class FileListPage extends CommonPage {
     }
 
     public void waitToload(){
-        waitByIdInvisible(30, progress_id);
+        //waitByIdInvisible(30, progress_id);
     }
 
     public void createFolder(){
@@ -200,7 +200,7 @@ public class FileListPage extends CommonPage {
     public boolean displayedList(String path, ArrayList<OCFile> listServer){
         boolean found = true;
         parsePath(path); //moving to the folder
-        waitByIdInvisible(30, progress_id);
+        //waitByIdInvisible(30, progress_id);
         Iterator iterator = listServer.iterator();
         while (iterator.hasNext()){
             OCFile ocfile = (OCFile) iterator.next();
@@ -234,7 +234,7 @@ public class FileListPage extends CommonPage {
         if (route.length > 0) { //we have to browse
             for (int i = 1; i < route.length; i++) {
                 browse(route[i]);
-                waitByIdInvisible(30, progress_id);
+                //waitByIdInvisible(30, progress_id);
             }
         }
     }
