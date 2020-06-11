@@ -18,6 +18,7 @@ public class InputNamePage extends CommonPage {
         Log.log(Level.FINE, "Start: Set name to item: " + itemName);
         driver.findElement(MobileBy.id(itemnametext_id)).clear();
         driver.findElement(MobileBy.id(itemnametext_id)).sendKeys(itemName);
+        takeScreenshot("SetItemName_"+itemName);
         driver.findElement(MobileBy.id(acceptbutton_id)).click();
     }
 }

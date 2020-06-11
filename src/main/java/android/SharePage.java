@@ -54,12 +54,14 @@ public class SharePage extends CommonPage {
 
     public boolean isItemInListPrivateShares(String sharee) {
         waitById(5, privatesharesectiontitle_id);
+        takeScreenshot("ItemInListPrivateShare_"+sharee);
         return !driver.findElementsByAndroidUIAutomator("new UiSelector().text(\""+sharee+"\");")
                 .isEmpty();
     }
 
     public boolean isItemInListPublicShares(String itemName) {
         waitById(5, privatesharesectiontitle_id);
+        takeScreenshot("ItemInListPubilcShare_"+itemName);
         return !driver.findElementsByAndroidUIAutomator("new UiSelector().text(\""+itemName+"\");")
                 .isEmpty();
     }

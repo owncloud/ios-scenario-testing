@@ -51,7 +51,7 @@ public class AppiumManager {
         capabilities.setCapability ("appWaitActivity",
                 "com.owncloud.android.ui.activity.WhatsNewActivity");
         capabilities.setCapability (MobileCapabilityType.AUTOMATION_NAME, AutomationName.APPIUM);
-        //capabilities.setCapability ("uiautomator2ServerInstallTimeout", 180000);
+        capabilities.setCapability ("uiautomator2ServerInstallTimeout", 60000);
 
         try {
             driver = new AndroidDriver (new URL(driverURL), capabilities);

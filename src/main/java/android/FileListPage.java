@@ -160,6 +160,7 @@ public class FileListPage extends CommonPage {
     public boolean fileIsMarkedAsDownloaded(String itemName){
         //Enforce this.. downloaded file must fit the itemName
         MobileElement element = getElementFromFileList(itemName);
+        takeScreenshot("File_"+itemName+"_Downloaded");
         return (element.findElement(By.id(downloaded_id)).isDisplayed());
     }
 
@@ -167,6 +168,7 @@ public class FileListPage extends CommonPage {
         //Wait the file to be downloaded
         waitById(15, syncfileption_id);
         MobileElement element = getElementFromFileList(itemName);
+        takeScreenshot("File_"+itemName+"_AvOffline");
         return (element.findElement(By.id(avoffline_id)).isDisplayed());
     }
 
@@ -176,6 +178,7 @@ public class FileListPage extends CommonPage {
                 "new UiSelector().description(\"More options\");")).click();
         driver.findElement(MobileBy.AndroidUIAutomator(
                 "new UiSelector().text(\""+ operationName +"\");")).click();
+        takeScreenshot("SelectOperation_"+operationName);
     }
 
     public void selectFileUpload(String itemName){
@@ -234,7 +237,6 @@ public class FileListPage extends CommonPage {
         if (route.length > 0) { //we have to browse
             for (int i = 1; i < route.length; i++) {
                 browse(route[i]);
-                //waitByIdInvisible(30, progress_id);
             }
         }
     }
@@ -243,6 +245,7 @@ public class FileListPage extends CommonPage {
         Log.log(Level.FINE, "Starts: searching item in list: " + itemName);
         List<MobileElement> elementsFileList = driver.findElement(MobileBy.id(listfiles_id))
                 .findElements(MobileBy.id(listcell_id));
+        takeScreenshot("SearchItem_"+itemName);
         for (MobileElement element : elementsFileList) {
             if (element.findElement(By.id(listitemname_id)).getText()
                     .equals(itemName)){

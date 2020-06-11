@@ -6,6 +6,7 @@
 /build/
 /.gradle/
 /bin
+/screenshots
 .classpath
 .project
 .settings
