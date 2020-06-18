@@ -2,6 +2,7 @@ package io.cucumber;
 
 import android.ChromeCustomTabPage;
 import android.FileListPage;
+import android.KopanoPage;
 import android.LoginPage;
 import android.WizardPage;
 
@@ -53,15 +54,21 @@ public class LoginSteps {
         Log.log(Level.FINE, "----STEP----: " +
                 new Object() {}.getClass().getEnclosingMethod().getName()
                 + ": " + username + " - " + password + " - " + authMethod);
-        ChromeCustomTabPage chromeCustomTabPage = new ChromeCustomTabPage();
         switch (authMethod) {
             case "basic auth":
                 loginPage.typeCredentials(username, password);
                 break;
             case "OAuth2":
                 loginPage.submitLogin();
+                ChromeCustomTabPage chromeCustomTabPage = new ChromeCustomTabPage();
                 chromeCustomTabPage.enterCredentials(username, password);
                 chromeCustomTabPage.authorize();
+                break;
+            case "OIDC":
+                loginPage.submitLogin();
+                KopanoPage kopanoPage = new KopanoPage();
+                kopanoPage.enterCredentials(username, password);
+                kopanoPage.authorize();
                 break;
             default:
                 break;

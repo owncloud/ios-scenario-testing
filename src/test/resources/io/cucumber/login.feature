@@ -1,7 +1,7 @@
 @login
 Feature: Login
 
-  As an user, i want to be able to login in my account basic or OAuth2
+  As an user, i want to be able to login in my account basic, OAuth2 or OIDC
   so that i can manage the content inside
 
   Background: Valid user, skipping welcome wizard
@@ -33,4 +33,10 @@ Feature: Login
   Scenario: A valid login with OAuth2
     When server with OAuth2 is available
     And user logins as user1 with password a as OAuth2 credentials
+    Then user can see the main page
+
+    @OIDC
+  Scenario: A valid login with OIDC
+    When server with OIDC is available
+    And user logins as einstein with password relativity as OIDC credentials
     Then user can see the main page

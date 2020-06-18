@@ -56,6 +56,9 @@ public class LoginPage extends CommonPage{
             case "OAuth2":
                 Log.log(Level.FINE, "URL: " + serverURL);
                 return oauth2URL;
+            case "OIDC":
+                Log.log(Level.FINE, "URL: " + serverURL);
+                return "https://ocis-latest.owncloud.com";
             default:
                 Log.log(Level.WARNING, "No URL");
                 return null;
