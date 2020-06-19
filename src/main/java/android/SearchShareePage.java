@@ -26,6 +26,7 @@ public class SearchShareePage extends CommonPage {
         Log.log(Level.WARNING, "Needed better implementation - failure possible");
         //REDO: find another way to click in recipients' list
         Thread.sleep(1000);
+        takeScreenshot("PrivateShare/SearchSharee_" + sharee);
         TouchAction selectSharee = new TouchAction(driver);
         selectSharee.tap(PointOption.point(500, 470)).perform();
         //Go back to Share Page

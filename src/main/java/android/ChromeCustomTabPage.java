@@ -51,6 +51,7 @@ public class ChromeCustomTabPage extends CommonPage {
 
     public void enterCredentials(String username, String password){
         Log.log(Level.FINE, "Starts: enter OAuth2 credentials");
+        takeScreenshot("LoginOAuth2/entercredentials");
         if (deviceVersion >= 29) {
             Log.log(Level.FINE, "Android 10");
             waitByXpath(5, username_xpath_10);
@@ -68,6 +69,7 @@ public class ChromeCustomTabPage extends CommonPage {
 
     public void authorize(){
         Log.log(Level.FINE, "Starts: Authorize OAuth2");
+        takeScreenshot("authorize");
         if (deviceVersion >= 29) {
             Log.log(Level.FINE, "Android 10");
             waitByXpath(5, authorizeButton_xpath_10);

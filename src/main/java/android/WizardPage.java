@@ -15,6 +15,8 @@ public class WizardPage extends CommonPage {
 
     public void skip(){
         Log.log(Level.FINE, "Starts: Skipping welcome wizard");
+        waitById(60, skip_id);
+        takeScreenshot("Wizard/Wizard");
         driver.findElement(MobileBy.id(skip_id)).click();
     }
 }

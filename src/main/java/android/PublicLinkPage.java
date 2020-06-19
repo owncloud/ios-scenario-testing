@@ -94,6 +94,7 @@ public class PublicLinkPage extends CommonPage {
 
     public void close(){
         Log.log(Level.FINE, "Starts: Cancel public link view");
+        takeScreenshot("PublicShare/ItemStatusBeforeClosing");
         driver.findElement(MobileBy.id(cancelbutton_id)).click();
     }
 

@@ -55,7 +55,8 @@ public class FileListPage extends CommonPage {
     }
 
     public void waitToload(){
-        //waitByIdInvisible(30, progress_id);
+        waitById(30, listfiles_id);
+        takeScreenshot("OpenList/fileListBeginning");
     }
 
     public void createFolder(){
@@ -99,6 +100,8 @@ public class FileListPage extends CommonPage {
     }
 
     public boolean isItemInList (String itemName) {
+        Log.log(Level.FINE, "Starts: Check if item is in list: " + itemName);
+        takeScreenshot("IsItemInList/Isiteminlist");
         return !driver.findElementsByAndroidUIAutomator(
                 "new UiSelector().text(\"" + itemName + "\");").isEmpty();
     }
@@ -160,7 +163,7 @@ public class FileListPage extends CommonPage {
     public boolean fileIsMarkedAsDownloaded(String itemName){
         //Enforce this.. downloaded file must fit the itemName
         MobileElement element = getElementFromFileList(itemName);
-        takeScreenshot("File_"+itemName+"_Downloaded");
+        takeScreenshot("FileDownloaded/File_"+itemName+"_Downloaded");
         return (element.findElement(By.id(downloaded_id)).isDisplayed());
     }
 
@@ -168,7 +171,7 @@ public class FileListPage extends CommonPage {
         //Wait the file to be downloaded
         waitById(15, syncfileption_id);
         MobileElement element = getElementFromFileList(itemName);
-        takeScreenshot("File_"+itemName+"_AvOffline");
+        takeScreenshot("FileAvOffline/File_"+itemName+"_AvOffline");
         return (element.findElement(By.id(avoffline_id)).isDisplayed());
     }
 
@@ -178,7 +181,7 @@ public class FileListPage extends CommonPage {
                 "new UiSelector().description(\"More options\");")).click();
         driver.findElement(MobileBy.AndroidUIAutomator(
                 "new UiSelector().text(\""+ operationName +"\");")).click();
-        takeScreenshot("SelectOperation_"+operationName);
+        takeScreenshot("SelectOperation/SelectOperation_"+operationName);
     }
 
     public void selectFileUpload(String itemName){
@@ -245,7 +248,7 @@ public class FileListPage extends CommonPage {
         Log.log(Level.FINE, "Starts: searching item in list: " + itemName);
         List<MobileElement> elementsFileList = driver.findElement(MobileBy.id(listfiles_id))
                 .findElements(MobileBy.id(listcell_id));
-        takeScreenshot("SearchItem_"+itemName);
+        takeScreenshot("ElementFileList/SearchItem_"+itemName);
         for (MobileElement element : elementsFileList) {
             if (element.findElement(By.id(listitemname_id)).getText()
                     .equals(itemName)){

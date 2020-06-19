@@ -67,6 +67,7 @@ public class PrivateSharePage extends CommonPage {
     }
 
     public void close(){
+        takeScreenshot("PrivateShare/ItemStatusBeforeClosing");
         driver.pressKey(new KeyEvent(AndroidKey.BACK));
     }
 }

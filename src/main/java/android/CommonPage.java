@@ -74,7 +74,7 @@ public class CommonPage {
         try {
             String sd = sdf.format(new Timestamp(System.currentTimeMillis()).getTime());
             File screenShotFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-            FileUtils.copyFile(screenShotFile, new File("screenshots/"+sd+"_"+name+".png"));
+            FileUtils.copyFile(screenShotFile, new File("screenshots/"+name+"_"+sd+".png"));
             Log.log(Level.FINE,"Take screenshot " + name + " at: " + sd);
         } catch (IOException e) {
             e.printStackTrace();

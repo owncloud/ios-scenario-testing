@@ -131,6 +131,7 @@ public class FileListSteps {
     public void i_see_the_item(String itemName) throws Throwable {
         Log.log(Level.FINE, "----STEP----: " +
                 new Object(){}.getClass().getEnclosingMethod().getName() + ": " + itemName);
+        fileListPage.waitToload();
         //Get the last token of the item path
         assertTrue(fileListPage.isItemInList(itemName.substring(itemName.lastIndexOf('/')+1)));
         assertTrue(filesAPI.itemExist(itemName));
@@ -141,6 +142,7 @@ public class FileListSteps {
     public void i_do_not_see_the_item(String itemName) throws Throwable {
         Log.log(Level.FINE, "----STEP----: " +
                 new Object(){}.getClass().getEnclosingMethod().getName() + ": " + itemName);
+        fileListPage.waitToload();
         assertFalse(fileListPage.isItemInList(itemName));
         assertFalse(filesAPI.itemExist(itemName));
     }
@@ -151,6 +153,7 @@ public class FileListSteps {
                 new Object(){}.getClass().getEnclosingMethod().getName()
                 + ":" + itemName + "-" + targetFolder);
         fileListPage.browse(targetFolder);
+        fileListPage.waitToload();
         i_see_the_item(targetFolder+"/"+itemName);
     }
 
@@ -160,6 +163,7 @@ public class FileListSteps {
                 new Object(){}.getClass().getEnclosingMethod().getName() + ": " + itemName);
         //Copy keeps the selection mode. To improve.
         fileListPage.closeSelectionMode();
+        fileListPage.waitToload();
         assertTrue(fileListPage.isItemInList(itemName.substring(itemName.lastIndexOf('/')+1)));
         assertTrue(filesAPI.itemExist(itemName));
         filesAPI.removeItem(itemName);
@@ -207,6 +211,7 @@ public class FileListSteps {
     public void list_matches_server(String path) throws Throwable {
         Log.log(Level.FINE, "----STEP----: " +
                 new Object(){}.getClass().getEnclosingMethod().getName() + ": " + path);
+        fileListPage.waitToload();
         ArrayList<OCFile> listServer = filesAPI.listItems(path);
         assertTrue(fileListPage.displayedList(path, listServer));
     }

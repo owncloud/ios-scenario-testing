@@ -63,7 +63,8 @@ public class FilesAPI extends CommonAPI {
                 return true;
             }
             case(4): {
-                Log.log(Level.FINE, "Response "+response.code()+". Item does not exist");
+                Log.log(Level.FINE, "Response "+response.code()+" "
+                        +response.message()+". Item does not exist");
                 return false;
             }
             default: {
