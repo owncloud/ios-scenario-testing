@@ -59,7 +59,7 @@ public class AppiumManager {
             Log.log(Level.SEVERE, "Driver could not be created: " + e.getMessage());
             e.printStackTrace();
         }
-        driver.manage().timeouts().implicitlyWait(100, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
         Log.log(Level.FINE, "Device: " +
                 driver.getCapabilities().getCapability("deviceManufacturer") + " " +

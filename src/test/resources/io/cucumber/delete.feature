@@ -9,7 +9,6 @@ Feature: Delete item
     And the following items exist in the account
       | deleteMe |
 
-    @test
   Scenario Outline: Delete an existent folder
     When user selects the item <item> to delete
     And user accepts the deletion

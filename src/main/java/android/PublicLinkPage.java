@@ -100,6 +100,7 @@ public class PublicLinkPage extends CommonPage {
 
     public void submitLink() {
         Log.log(Level.FINE, "Starts: Submit public link");
+        takeScreenshot("PublicShare/Submit");
         driver.findElement(MobileBy.id(savebutton_id)).click();
     }
 }

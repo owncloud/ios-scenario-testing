@@ -56,7 +56,7 @@ public class FileListPage extends CommonPage {
 
     public void waitToload(){
         waitById(30, listfiles_id);
-        takeScreenshot("OpenList/fileListBeginning");
+        takeScreenshot("OpenList/fileListLoaded");
     }
 
     public void createFolder(){
@@ -69,6 +69,7 @@ public class FileListPage extends CommonPage {
     public void upload(){
         Log.log(Level.FINE, "Starts: upload");
         waitById(5, fab_id);
+        
         driver.findElement(MobileBy.id(fab_id)).click();
         driver.findElement(MobileBy.id(uploadfab_id)).click();
         driver.findElement(MobileBy.id(uploadoption_id)).click();
@@ -89,12 +90,20 @@ public class FileListPage extends CommonPage {
 
     public void executeOperation(String operation, String itemName){
         Log.log(Level.FINE, "Starts: execute operation: " + operation + " " + itemName);
+        if (!isItemInList(itemName)){
+            Log.log(Level.FINE, "Searching item... swiping: " + itemName);
+            swipe(0.50, 0.90, 0.50, 0.20);
+        }
         selectItemList(itemName);
         selectOperation(operation);
     }
 
     public void downloadAction(String itemName) {
         Log.log(Level.FINE, "Starts: download action: " + itemName);
+        if (!isItemInList(itemName)){
+            Log.log(Level.FINE, "Searching item... swiping: " + itemName);
+            swipe(0.50, 0.90, 0.50, 0.20);
+        }
         driver.findElement(MobileBy.AndroidUIAutomator(
                 "new UiSelector().text(\""+ itemName +"\");")).click();
     }
@@ -206,7 +215,6 @@ public class FileListPage extends CommonPage {
     public boolean displayedList(String path, ArrayList<OCFile> listServer){
         boolean found = true;
         parsePath(path); //moving to the folder
-        //waitByIdInvisible(30, progress_id);
         Iterator iterator = listServer.iterator();
         while (iterator.hasNext()){
             OCFile ocfile = (OCFile) iterator.next();
