@@ -35,7 +35,7 @@ Feature: Login
     And user logins as user1 with password a as OAuth2 credentials
     Then user can see the main page
 
-    @OIDC
+  @OIDC
   Scenario: A valid login with OIDC
     When server with OIDC is available
     And user logins as einstein with password relativity as OIDC credentials
