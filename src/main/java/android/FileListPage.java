@@ -69,7 +69,6 @@ public class FileListPage extends CommonPage {
     public void upload(){
         Log.log(Level.FINE, "Starts: upload");
         waitById(5, fab_id);
-        
         driver.findElement(MobileBy.id(fab_id)).click();
         driver.findElement(MobileBy.id(uploadfab_id)).click();
         driver.findElement(MobileBy.id(uploadoption_id)).click();

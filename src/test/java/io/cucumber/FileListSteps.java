@@ -64,7 +64,7 @@ public class FileListSteps {
     }
 
     @When("^user selects the item (.+) to (.+)$")
-    public void i_select_folder_to_some_operation(String itemName, String operation) {
+    public void i_select_item_to_some_operation(String itemName, String operation) {
         Log.log(Level.FINE, "----STEP----: " +
                 new Object(){}.getClass().getEnclosingMethod().getName() + ": "
                 + operation + " " + itemName);
