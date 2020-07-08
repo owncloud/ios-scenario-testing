@@ -55,7 +55,8 @@ public class FileListPage extends CommonPage {
     }
 
     public void waitToload(){
-        waitById(30, listfiles_id);
+        //waitById(30, listfiles_id);
+        waitByTextVisible(30, "Documents");
         takeScreenshot("OpenList/fileListLoaded");
     }
 
@@ -109,7 +110,6 @@ public class FileListPage extends CommonPage {
 
     public boolean isItemInList (String itemName) {
         Log.log(Level.FINE, "Starts: Check if item is in list: " + itemName);
-        takeScreenshot("IsItemInList/Isiteminlist");
         return !driver.findElementsByAndroidUIAutomator(
                 "new UiSelector().text(\"" + itemName + "\");").isEmpty();
     }
@@ -120,6 +120,7 @@ public class FileListPage extends CommonPage {
 
     public void selectItemList(String itemName) {
         Log.log(Level.FINE, "Starts: select item from list: " + itemName);
+        waitByTextVisible(30, itemName);
         MobileElement element = getElementFromFileList(itemName);
         actions.clickAndHold(element).perform();
     }
