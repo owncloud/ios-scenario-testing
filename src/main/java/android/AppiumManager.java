@@ -36,9 +36,9 @@ public class AppiumManager {
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
 
-        capabilities.setCapability ("platformName", "Android");
-        capabilities.setCapability ("deviceName", "test");
-        capabilities.setCapability ("app", app.getAbsolutePath());
+        capabilities.setCapability (MobileCapabilityType.PLATFORM_NAME, "Android");
+        capabilities.setCapability (MobileCapabilityType.DEVICE_NAME, "test");
+        capabilities.setCapability (MobileCapabilityType.APP, app.getAbsolutePath());
         capabilities.setCapability ("appPackage",
                 LocProperties.getProperties().getProperty("appPackage"));
         capabilities.setCapability ("appActivity",

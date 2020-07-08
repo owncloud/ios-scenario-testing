@@ -14,9 +14,11 @@ public class LoginPage extends CommonPage{
     private String passwordtext_id = "account_password";
     private String loginbutton_id = "loginButton";
     private String errorcredentialstext_xpath = "//*[@text='Wrong username or password']";
+    private String acceptCert_id = "ok";
 
     private final String serverURL = LocProperties.getProperties().getProperty("serverURL");
     private final String oauth2URL = LocProperties.getProperties().getProperty("OAuth2URL");
+    private final String oidcURL = LocProperties.getProperties().getProperty("oidcURL");
 
     public LoginPage(){
         super();
@@ -27,6 +29,11 @@ public class LoginPage extends CommonPage{
         waitById(15, urltext_id);
         driver.findElement(MobileBy.id(urltext_id)).sendKeys(selectURL(authMethod));
         driver.findElement(MobileBy.id(embeddedbutton_id)).click();
+        //Check how to improve this. Very ugly
+        if (oidcURL.substring(0, 5).endsWith("s")) {
+            Log.log(Level.FINE, "https server");
+            driver.findElement(MobileBy.id(acceptCert_id)).click();
+        }
     }
 
     public void typeCredentials(String username, String password){
@@ -54,11 +61,11 @@ public class LoginPage extends CommonPage{
                 Log.log(Level.FINE, "URL: " + serverURL);
                 return serverURL;
             case "OAuth2":
-                Log.log(Level.FINE, "URL: " + serverURL);
+                Log.log(Level.FINE, "URL: " + oauth2URL);
                 return oauth2URL;
             case "OIDC":
-                Log.log(Level.FINE, "URL: " + serverURL);
-                return "https://ocis-latest.owncloud.com";
+                Log.log(Level.FINE, "URL: " + oidcURL);
+                return oidcURL;
             default:
                 Log.log(Level.WARNING, "No URL");
                 return null;
