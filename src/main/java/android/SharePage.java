@@ -109,7 +109,7 @@ public class SharePage extends CommonPage {
                 }
                 case "name":{
                     if (!remoteShare.getLinkName().equals(entry.getValue())){
-                        Log.log(Level.FINE, "Item name does not match - Remote: " + remoteShare.getItemName()
+                        Log.log(Level.FINE, "Item name does not match - Remote: " + remoteShare.getLinkName()
                                 + " - Expected: " + entry.getValue());
                         return false;
                     }
@@ -117,7 +117,7 @@ public class SharePage extends CommonPage {
                 }
                 case "path":{
                     if (!remoteShare.getItemName().equals(entry.getValue())){
-                        Log.log(Level.FINE, "Item name does not match - Remote: " + remoteShare.getItemName()
+                        Log.log(Level.FINE, "Item path does not match - Remote: " + remoteShare.getItemName()
                                 + " - Expected: " + entry.getValue());
                         return false;
                     }
@@ -133,7 +133,7 @@ public class SharePage extends CommonPage {
                 }
                 case "permissions":{
                     if (!remoteShare.getPermissions().equals(entry.getValue())){
-                        Log.log(Level.FINE, "Permissions do not match - Remote: " + remoteShare.getItemName()
+                        Log.log(Level.FINE, "Permissions do not match - Remote: " + remoteShare.getPermissions()
                                 + " - Expected: " + entry.getValue());
                         return false;
                     }
