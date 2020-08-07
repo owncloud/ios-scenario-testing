@@ -69,6 +69,7 @@ public class FileListSteps {
                 new Object(){}.getClass().getEnclosingMethod().getName() + ": "
                 + operation + " " + itemName);
         fileListPage.waitToload();
+        fileListPage.refreshList();
         switch (operation){
             case "rename":
                 fileListPage.executeOperation("Rename", itemName);

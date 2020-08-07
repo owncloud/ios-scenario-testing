@@ -27,8 +27,8 @@ public class Hooks {
     public void tearDown(Scenario scenario){
         Log.log(Level.FINE, "END SCENARIO EXECUTION: " + scenario.getName() + "\n\n");
         //remove the oC app
-        AppiumManager.getManager().getDriver().removeApp("com.owncloud.android");
+        //AppiumManager.getManager().getDriver().removeApp("com.owncloud.android");
         //remove Appium Settings
-        AppiumManager.getManager().getDriver().removeApp("io.appium.settings");
+        //AppiumManager.getManager().getDriver().removeApp("io.appium.settings");
     }
 }

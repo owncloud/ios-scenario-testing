@@ -28,9 +28,11 @@ public class LoginSteps {
         Log.log(Level.FINE, "----STEP----: " +
                 new Object(){}.getClass().getEnclosingMethod().getName());
         wizardPage.skip();
-        loginPage.typeURL("basic auth");
-        loginPage.typeCredentials(LocProperties.getProperties().getProperty("userName1"),
-                LocProperties.getProperties().getProperty("passw1"));
+        if (loginPage.notLoggedIn()) {
+            loginPage.typeURL("basic auth");
+            loginPage.typeCredentials(LocProperties.getProperties().getProperty("userName1"),
+                    LocProperties.getProperties().getProperty("passw1"));
+        }
     }
 
     @Given("^user is a valid user$")

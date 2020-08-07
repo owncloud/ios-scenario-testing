@@ -54,6 +54,10 @@ public class FileListPage extends CommonPage {
         operationsMap.put("Set as available offline", avofflineoption_id);
     }
 
+    public void refreshList(){
+        swipe(0.50, 0.20, 0.50, 0.90);
+    }
+
     public void waitToload(){
         try {
             //if list of files is not loaded, we should swipe to get the file list
