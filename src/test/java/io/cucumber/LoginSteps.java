@@ -12,6 +12,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import utils.LocProperties;
+import utils.api.CommonAPI;
 import utils.log.Log;
 
 import static org.junit.Assert.assertTrue;
@@ -22,21 +23,45 @@ public class LoginSteps {
     private WizardPage wizardPage = new WizardPage();
     private LoginPage loginPage = new LoginPage();
     private FileListPage fileListPage = new FileListPage();
+    private CommonAPI commonAPI = new CommonAPI();
 
     @Given("^user1 is logged$")
-    public void i_am_logged() {
+    public void i_am_logged()
+            throws Throwable {
         Log.log(Level.FINE, "----STEP----: " +
                 new Object(){}.getClass().getEnclosingMethod().getName());
         wizardPage.skip();
         if (loginPage.notLoggedIn()) {
-            loginPage.typeURL("basic auth");
-            loginPage.typeCredentials(LocProperties.getProperties().getProperty("userName1"),
-                    LocProperties.getProperties().getProperty("passw1"));
+            String authMethod = commonAPI.checkAuthMethod();
+            String username = LocProperties.getProperties().getProperty("userName1");
+            String password = LocProperties.getProperties().getProperty("passw1");
+            loginPage.typeURL();
+            switch (authMethod) {
+                case "Basic":
+                    loginPage.typeCredentials(username, password);
+                    loginPage.submitLogin();
+                    break;
+                case "Bearer":
+                    loginPage.submitLogin();
+                    ChromeCustomTabPage chromeCustomTabPage = new ChromeCustomTabPage();
+                    chromeCustomTabPage.enterCredentials(username,password);
+                    chromeCustomTabPage.authorize();
+                    break;
+                case "OIDC":
+                    loginPage.submitLogin();
+                    KopanoPage kopanoPage = new KopanoPage();
+                    kopanoPage.enterCredentials(username, password);
+                    kopanoPage.authorize();
+                    break;
+                default:
+                    break;
+            }
         }
     }
 
     @Given("^user is a valid user$")
-    public void i_am_a_valid_user() throws Throwable {
+    public void i_am_a_valid_user()
+            throws Throwable {
         Log.log(Level.FINE, "----STEP----: " +
                 new Object(){}.getClass().getEnclosingMethod().getName());
         wizardPage.skip();
@@ -47,7 +72,8 @@ public class LoginSteps {
     public void server_available(String authMethod) {
         Log.log(Level.FINE, "----STEP----: " +
                 new Object(){}.getClass().getEnclosingMethod().getName() + " with " + authMethod);
-        loginPage.typeURL(authMethod);
+        //loginPage.typeURL(authMethod);
+        loginPage.typeURL();
     }
 
     @When("^user logins as (.+) with password (.+) as (.+) credentials$")

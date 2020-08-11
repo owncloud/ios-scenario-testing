@@ -162,13 +162,14 @@ public class FileListPage extends CommonPage {
 
     public boolean fileIsDownloaded(String fileName) {
         Log.log(Level.FINE, "Starts: Checking file downloaded: " + fileName);
+        String urlServer = LocProperties.getProperties().getProperty("serverURL");
+        String host = urlServer.split("//")[1];
         //Checking file is downloaded inside the device
         try {
             byte[] downloadedFile = driver.pullFile("/sdcard/owncloud/" +
                     LocProperties.getProperties().getProperty("userName1") +
                     "@" +
-                    URLEncoder.encode(LocProperties.getProperties().getProperty("hostName"),
-                            "UTF-8") + "/" + fileName);
+                    URLEncoder.encode(host, "UTF-8") + "/" + fileName);
             Log.log(Level.FINE, "Checking file in " + downloadedFile.toString());
             return downloadedFile!=null && downloadedFile.length > 0;
         } catch (UnsupportedEncodingException e) {

@@ -1,11 +1,18 @@
 package utils.api;
 
+import java.io.IOException;
 import java.util.Base64;
+import java.util.List;
+import java.util.logging.Level;
 
+import okhttp3.Headers;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.RequestBody;
+import okhttp3.Response;
 import utils.LocProperties;
+import utils.log.Log;
+
 
 public class CommonAPI {
 
@@ -13,7 +20,8 @@ public class CommonAPI {
 
     protected String urlServer = LocProperties.getProperties().getProperty("serverURL");
     protected String userAgent = LocProperties.getProperties().getProperty("userAgent");
-    protected String host = LocProperties.getProperties().getProperty("hostName");
+    //protected String host = LocProperties.getProperties().getProperty("hostName");
+    protected String host = urlServer.split("//")[1];
 
     protected String user = LocProperties.getProperties().getProperty("userName1");
     protected String password = LocProperties.getProperties().getProperty("passw1");
@@ -22,6 +30,7 @@ public class CommonAPI {
     protected String credentialsB64 = Base64.getEncoder().encodeToString((user+":"+password).getBytes());
     protected String credentialsB64Sharee = Base64.getEncoder().encodeToString((shareeUser+":"+shareePassword).getBytes());
 
+    protected final String davEndpoint = "/remote.php/dav/files/";
 
     protected String basicPropfindBody = "<?xml version='1.0' encoding='UTF-8' ?>\n" +
             "<propfind xmlns=\"DAV:\" xmlns:CAL=\"urn:ietf:params:xml:ns:caldav\"" +
@@ -48,6 +57,42 @@ public class CommonAPI {
     public CommonAPI(){
     }
 
+    public String checkAuthMethod()
+            throws IOException {
+        Log.log(Level.FINE, "Checking available auth methods");
+        String url = urlServer + davEndpoint;
+        Log.log(Level.FINE, "Request to: " + url);
+        Request request = davRequestUnauth(url, "GET");
+        Response response = httpClient.newCall(request).execute();
+        Headers headers = response.headers();
+        List<String> allHeaders = headers.values("Www-Authenticate");
+        for (String header : allHeaders){
+            Log.log(Level.FINE, "Header to check: " + header);
+            if (header.contains("Bearer")) {
+                if (isOidc(urlServer)) {
+                    Log.log(Level.FINE, "Auth method: OIDC");
+                    return "OIDC";
+                }
+                Log.log(Level.FINE, "Auth method: Bearer");
+                return "Bearer";
+            }
+        }
+        Log.log(Level.FINE, "Auth method: Basic");
+        return "Basic";
+    }
+
+    protected boolean isOidc(String url)
+            throws IOException {
+        String urlCheck = url+"/.well-known/openid-configuration";
+        Request request = getRequest(url, true);
+        Response response = httpClient.newCall(request).execute();
+        Log.log(Level.FINE, "Body lenght: " + response.body().contentLength());
+        if (response.body().contentLength() > 0)
+            return true;
+        else
+            return false;
+    }
+
     protected Request davRequest(String url, String method, RequestBody body) {
         Request request = new Request.Builder()
                 .url(url)
@@ -56,6 +101,17 @@ public class CommonAPI {
                 .addHeader("Authorization", "Basic "+ credentialsB64)
                 .addHeader("Host", host)
                 .method(method, body)
+                .build();
+        return request;
+    }
+
+    protected Request davRequestUnauth(String url, String method) {
+        Request request = new Request.Builder()
+                .url(url)
+                .addHeader("OCS-APIREQUEST", "true")
+                .addHeader("User-Agent", userAgent)
+                .addHeader("Host", host)
+                .method(method, null)
                 .build();
         return request;
     }

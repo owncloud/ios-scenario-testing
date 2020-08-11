@@ -28,10 +28,11 @@ public class LoginPage extends CommonPage{
         return driver.findElements(MobileBy.id(urltext_id)).size() > 0;
     }
 
-    public void typeURL(String authMethod){
-        Log.log(Level.FINE, "Starts: Type URL. Auth method: " + authMethod);
+    public void typeURL(){
+        Log.log(Level.FINE, "Starts: Type URL.");
         waitById(15, urltext_id);
-        driver.findElement(MobileBy.id(urltext_id)).sendKeys(selectURL(authMethod));
+        //driver.findElement(MobileBy.id(urltext_id)).sendKeys(selectURL(authMethod));
+        driver.findElement(MobileBy.id(urltext_id)).sendKeys(serverURL);
         driver.findElement(MobileBy.id(embeddedbutton_id)).click();
         //Check how to improve this. Very ugly
         /*if (oidcURL.substring(0, 5).endsWith("s")) {

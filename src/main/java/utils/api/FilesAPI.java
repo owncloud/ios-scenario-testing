@@ -22,15 +22,13 @@ import utils.parser.FileSAXHandler;
 
 public class FilesAPI extends CommonAPI {
 
-    private final String davEndpoint = "/remote.php/dav/files/";
-
     public FilesAPI(){
         super();
     }
 
     public void removeItem(String itemName)
             throws IOException {
-        String url = urlServer+davEndpoint+user+"/"+itemName+"/";
+        String url = urlServer + davEndpoint + user + "/"+itemName+"/";
         Log.log(Level.FINE, "Starts: Request remove item from server");
         Log.log(Level.FINE, "URL: " + url);
         Request request = deleteRequest(url);
@@ -40,7 +38,7 @@ public class FilesAPI extends CommonAPI {
 
     public void createFolder(String folderName)
             throws IOException {
-        String url = urlServer+davEndpoint+user+"/"+folderName+"/";
+        String url = urlServer + davEndpoint + user + "/"+folderName+"/";
         Log.log(Level.FINE, "Starts: Request create folder");
         Log.log(Level.FINE, "URL: " + url);
         Request request = davRequest(url, "MKCOL", null);
