@@ -1,9 +1,17 @@
 package utils.api;
 
 import java.io.IOException;
+import java.security.cert.CertificateException;
 import java.util.Base64;
 import java.util.List;
 import java.util.logging.Level;
+
+import javax.net.ssl.HostnameVerifier;
+import javax.net.ssl.SSLContext;
+import javax.net.ssl.SSLSession;
+import javax.net.ssl.SSLSocketFactory;
+import javax.net.ssl.TrustManager;
+import javax.net.ssl.X509TrustManager;
 
 import okhttp3.Headers;
 import okhttp3.OkHttpClient;
@@ -16,7 +24,7 @@ import utils.log.Log;
 
 public class CommonAPI {
 
-    protected final OkHttpClient httpClient = new OkHttpClient();
+    protected final OkHttpClient httpClient = getUnsafeOkHttpClient();
 
     protected String urlServer = LocProperties.getProperties().getProperty("serverURL");
     protected String userAgent = LocProperties.getProperties().getProperty("userAgent");
@@ -153,7 +161,7 @@ public class CommonAPI {
         return request;
     }
 
-    /*overloaded, to use with specific credentials*/
+    //overloaded, to use with specific credentials
     protected Request getRequest(String url, String credentials) {
         Request request = new Request.Builder()
                 .url(url)
@@ -164,5 +172,51 @@ public class CommonAPI {
                 .get()
                 .build();
         return request;
+    }
+
+    // Returns an okHttpClient resistent to non-secured connections. It will be posible to check
+    // server APIs with no errors due to handshake problems.
+    private static OkHttpClient getUnsafeOkHttpClient() {
+        try {
+            // Create a trust manager that does not validate certificate chains
+            final TrustManager[] trustAllCerts = new TrustManager[] {
+                    new X509TrustManager() {
+                        @Override
+                        public void checkClientTrusted(java.security.cert.X509Certificate[] chain,
+                                                       String authType) throws CertificateException {
+                        }
+
+                        @Override
+                        public void checkServerTrusted(java.security.cert.X509Certificate[] chain,
+                                                       String authType) throws CertificateException {
+                        }
+
+                        @Override
+                        public java.security.cert.X509Certificate[] getAcceptedIssuers() {
+                            return new java.security.cert.X509Certificate[]{};
+                        }
+                    }
+            };
+
+            // Install the all-trusting trust manager
+            final SSLContext sslContext = SSLContext.getInstance("SSL");
+            sslContext.init(null, trustAllCerts, new java.security.SecureRandom());
+            // Create an ssl socket factory with our all-trusting manager
+            final SSLSocketFactory sslSocketFactory = sslContext.getSocketFactory();
+
+            OkHttpClient.Builder builder = new OkHttpClient.Builder();
+            builder.sslSocketFactory(sslSocketFactory, (X509TrustManager)trustAllCerts[0]);
+            builder.hostnameVerifier(new HostnameVerifier() {
+                @Override
+                public boolean verify(String hostname, SSLSession session) {
+                    return true;
+                }
+            });
+
+            OkHttpClient okHttpClient = builder.build();
+            return okHttpClient;
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
     }
 }
