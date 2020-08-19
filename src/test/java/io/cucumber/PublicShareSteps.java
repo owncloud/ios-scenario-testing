@@ -39,7 +39,6 @@ public class PublicShareSteps {
             throws Throwable {
         Log.log(Level.FINE, "----STEP----: " +
                 new Object(){}.getClass().getEnclosingMethod().getName() + ": " + itemName);
-        //fileListPage.executeOperation("Share", itemName);
         sharePage.addPublicLink();
         List<List<String>> listItems = table.asLists();
         for (List<String> rows : listItems) {
@@ -50,6 +49,10 @@ public class PublicShareSteps {
                 }
                 case "password": {
                     publicLinkPage.addPassword(rows.get(1));
+                    break;
+                }
+                case "permission": {
+                    publicLinkPage.setPermission(rows.get(1));
                     break;
                 }
                 default:
@@ -135,7 +138,8 @@ public class PublicShareSteps {
                     assertTrue(sharePage.isItemInListPublicShares(itemName));
                     break;
                 }
-                case "permissions": {
+                case "permission": {
+                    Log.log(Level.FINE, "checking permissions");
                     sharePage.openPublicLink(itemName);
                     assertTrue(publicLinkPage.checkPermissions(rows.get(1)));
                     publicLinkPage.close();

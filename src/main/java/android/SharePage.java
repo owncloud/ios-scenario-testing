@@ -48,7 +48,7 @@ public class SharePage extends CommonPage {
     }
 
     public void openPublicLink(String itemName){
-        Log.log(Level.FINE, "Starts: edit public link: " + itemName);
+        Log.log(Level.FINE, "Starts: open public link: " + itemName);
         driver.findElement(MobileBy.id(editpubliclink_id)).click();
     }
 

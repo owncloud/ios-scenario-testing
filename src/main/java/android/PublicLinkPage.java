@@ -35,6 +35,24 @@ public class PublicLinkPage extends CommonPage {
         swipe(0.50, 0.45, 0.50, 0.30);
     }
 
+    public void setPermission (String permission) {
+        Log.log(Level.FINE, "Starts: Set link permission: " + permission);
+        switch (permission){
+            case("1"):{
+                driver.findElement(MobileBy.id(downloadview_id)).click();
+                break;
+            }
+            case("15"):{
+                driver.findElement(MobileBy.id(downloadviewupload_id)).click();
+                break;
+            }
+            case("4"):{
+                driver.findElement(MobileBy.id(uploadonly_id)).click();
+                break;
+            }
+        }
+    }
+
     public boolean isPasswordEnabled () {
         boolean switchEnabled = driver.findElement(MobileBy.id(enablePassword_id)).isEnabled();
         boolean passVisible = driver.findElement(MobileBy.id(textpassword_id)).isDisplayed();

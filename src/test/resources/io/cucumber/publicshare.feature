@@ -35,6 +35,20 @@ Feature: Public Share
       |  item       |  name    | password |
       |  Documents  |  link1   |    a     |
 
+  Scenario Outline: Create a public link with permissions
+    When user selects the item <item> to share
+    And user creates link on <item> with the following fields
+      | name       | <name>        |
+      | permission | <permissions> |
+    Then link is created on <item> with the following fields
+      | name       | <name>        |
+      | permission | <permissions> |
+
+    Examples:
+      |  item       |  name    | permissions |
+      |  Documents  |  link1   |    15       |
+      |  Documents  |  link2   |    4        |
+
   Scenario Outline: Edit existing share, changing permissions
     Given the item <item> is already shared by link
     When user selects the item <item> to share
