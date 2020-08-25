@@ -55,6 +55,10 @@ public class PublicShareSteps {
                     publicLinkPage.setPermission(rows.get(1));
                     break;
                 }
+                case "expiration days": {
+                    publicLinkPage.setExpiration(rows.get(1));
+                    break;
+                }
                 default:
                     break;
             }
@@ -142,6 +146,12 @@ public class PublicShareSteps {
                     Log.log(Level.FINE, "checking permissions");
                     sharePage.openPublicLink(itemName);
                     assertTrue(publicLinkPage.checkPermissions(rows.get(1)));
+                    publicLinkPage.close();
+                    break;
+                }
+                case "expiration days": {
+                    sharePage.openPublicLink(itemName);
+                    assertTrue(publicLinkPage.checkExpiration(rows.get(1)));
                     publicLinkPage.close();
                     break;
                 }

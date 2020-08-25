@@ -49,6 +49,20 @@ Feature: Public Share
       |  Documents  |  link1   |    15       |
       |  Documents  |  link2   |    4        |
 
+    @exp
+  Scenario Outline: Create a public link with expiration date
+    When user selects the item <item> to share
+    And user creates link on <item> with the following fields
+      | name            | <name>  |
+      | expiration days | <expiration>  |
+    Then link is created on <item> with the following fields
+      | name            | <name>        |
+      | expiration days | <expiration>  |
+
+    Examples:
+      |  item       |  name    | expiration  |
+      |  Documents  |  link1   |    5        |
+
   Scenario Outline: Edit existing share, changing permissions
     Given the item <item> is already shared by link
     When user selects the item <item> to share

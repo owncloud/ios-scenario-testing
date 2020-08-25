@@ -1,8 +1,11 @@
 package android;
 
+import org.openqa.selenium.By;
+
 import java.util.logging.Level;
 
 import io.appium.java_client.MobileBy;
+import utils.date.DateUtils;
 import utils.log.Log;
 
 public class PublicLinkPage extends CommonPage {
@@ -10,12 +13,15 @@ public class PublicLinkPage extends CommonPage {
     private String namepubliclink_id = "com.owncloud.android:id/shareViaLinkNameValue";
     private String enablePassword_id = "com.owncloud.android:id/shareViaLinkPasswordSwitch";
     private String textpassword_id = "com.owncloud.android:id/shareViaLinkPasswordValue";
+    private String enableexpiration_id = "com.owncloud.android:id/shareViaLinkExpirationSwitch";
+    private String dateexpirationsection_id = "com.owncloud.android:id/shareViaLinkExpirationSection";
     private String downloadview_id = "com.owncloud.android:id/shareViaLinkEditPermissionReadOnly";
     private String downloadviewupload_id =
             "com.owncloud.android:id/shareViaLinkEditPermissionReadAndWrite";
     private String uploadonly_id = "com.owncloud.android:id/shareViaLinkEditPermissionUploadFiles";
     private String savebutton_id = "com.owncloud.android:id/saveButton";
     private String cancelbutton_id = "com.owncloud.android:id/cancelButton";
+    private String okbutton_id = "android:id/button1";
 
     public PublicLinkPage(){
         super();
@@ -51,6 +57,14 @@ public class PublicLinkPage extends CommonPage {
                 break;
             }
         }
+    }
+
+    public void setExpiration (String days){
+        Log.log(Level.FINE, "Starts: Set Expiration date in days: " + days);
+        driver.findElement(MobileBy.id(enableexpiration_id)).click();
+        String dateToSet = DateUtils.dateInDays(days);
+        driver.findElement(new MobileBy.ByAccessibilityId(dateToSet)).click();
+        driver.findElement(By.id(okbutton_id)).click();
     }
 
     public boolean isPasswordEnabled () {
@@ -97,6 +111,17 @@ public class PublicLinkPage extends CommonPage {
                 }
             }
             return false;
+    }
+
+    public boolean checkExpiration(String days){
+        Log.log(Level.FINE, "Starts: Check expiration in days: " + days);
+        String shortDate = DateUtils.shortDate(days);
+        Log.log(Level.FINE, "Date to check: " + shortDate);
+        boolean switchEnabled = driver.findElement(MobileBy.id(enableexpiration_id)).isEnabled();
+        boolean dateCorrect = driver.findElement(MobileBy.id(dateexpirationsection_id))
+                .findElement(MobileBy.AndroidUIAutomator
+                        ("new UiSelector().text(\""+ shortDate +"\");")).isDisplayed();
+        return switchEnabled && dateCorrect;
     }
 
     public void closeKeyboard(){
