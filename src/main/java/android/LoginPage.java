@@ -47,7 +47,6 @@ public class LoginPage extends CommonPage{
         waitById(15, usernametext_id);
         driver.findElement(MobileBy.id(usernametext_id)).sendKeys(username);
         driver.findElement(MobileBy.id(passwordtext_id)).sendKeys(password);
-        submitLogin();
     }
 
     public void submitLogin(){
