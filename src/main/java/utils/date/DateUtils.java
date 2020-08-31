@@ -9,24 +9,33 @@ import utils.log.Log;
 
 public class DateUtils {
 
-    public static String dateInDays(String days) {
+    public static String dateInDaysAndroidFormat(String days) {
+        Log.log(Level.FINE, "Starts: Turns days in date");
         GregorianCalendar gregorianCalendar = new GregorianCalendar();
         gregorianCalendar.add(Calendar.DAY_OF_YEAR, Integer.valueOf(days));
-        Log.log(Level.FINE, "Date: " + gregorianCalendar.getTime());
-        int dayNumber = gregorianCalendar.get(Calendar.DAY_OF_MONTH);
-        String day;
-        if (dayNumber < 10){
-            day = "0" + dayNumber;
-        } else {
-            day = String.valueOf(dayNumber);
-        }
-        String dateAfterDays = day + " " + getNameMonth(gregorianCalendar.get(Calendar.MONTH))
+        Log.log(Level.FINE, "Date to format: " + gregorianCalendar.getTime());
+        String dateAfterDays = formatInt(gregorianCalendar.get(Calendar.DAY_OF_MONTH))
+                + " " + getNameMonth(gregorianCalendar.get(Calendar.MONTH))
                 + " " + gregorianCalendar.get(Calendar.YEAR);
-        Log.log(Level.FINE, "Date to set: " + dateAfterDays);
+        Log.log(Level.FINE, "Date formatted: " + dateAfterDays);
+        return dateAfterDays;
+    }
+
+    public static String dateInDaysWithServerFormat(String days) {
+        Log.log(Level.FINE, "Starts: Turns days in date with server response format");
+        GregorianCalendar gregorianCalendar = new GregorianCalendar();
+        gregorianCalendar.add(Calendar.DAY_OF_YEAR, Integer.valueOf(days));
+        Log.log(Level.FINE, "Date to format: " + gregorianCalendar.getTime());
+        String dateAfterDays = gregorianCalendar.get(Calendar.YEAR)
+                +"-"+formatInt(gregorianCalendar.get(Calendar.MONTH) + 1)
+                +"-"+formatInt(gregorianCalendar.get(Calendar.DAY_OF_MONTH))
+                +" 00:00:00";
+        Log.log(Level.FINE, "Date formatted: " + dateAfterDays);
         return dateAfterDays;
     }
 
     public static String shortDate(String days) {
+        Log.log(Level.FINE, "Starts: Build shortDate string");
         GregorianCalendar gregorianCalendar = new GregorianCalendar();
         gregorianCalendar.add(Calendar.DAY_OF_YEAR, Integer.valueOf(days));
         Log.log(Level.FINE, "Date: " + gregorianCalendar.getTime());
@@ -44,5 +53,15 @@ public class DateUtils {
             return months[numMonth];
         } else
             return "";
+    }
+
+    private static String formatInt(int dateNumber){
+        String day;
+        if (dateNumber < 10){
+            day = "0" + dateNumber;
+        } else {
+            day = String.valueOf(dateNumber);
+        }
+        return day;
     }
 }

@@ -6,6 +6,7 @@ import java.util.Map;
 import java.util.logging.Level;
 
 import io.appium.java_client.MobileBy;
+import utils.date.DateUtils;
 import utils.entities.OCShare;
 import utils.log.Log;
 
@@ -138,6 +139,16 @@ public class SharePage extends CommonPage {
                         return false;
                     }
                     break;
+                }
+                case "expiration days":{
+                    String dateRemote = remoteShare.getExpiration();
+                    String expDate = DateUtils.dateInDaysWithServerFormat(entry.getValue());
+                    Log.log(Level.FINE, "Expiration dates: Remote: " + dateRemote
+                            + " - Expected: " + expDate);
+                    if (!dateRemote.equals(expDate)){
+                        Log.log(Level.FINE, "Expiration dates do not match");
+                        return false;
+                    }
                 }
             }
         }

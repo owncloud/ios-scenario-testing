@@ -53,6 +53,10 @@ public class ShareSAXHandler extends DefaultHandler {
                 share.setPermissions(text);
                 break;
             }
+            case ("expiration"):{
+                share.setExpiration(text);
+                break;
+            }
         }
     }
 

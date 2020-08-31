@@ -22,6 +22,7 @@ public class PublicLinkPage extends CommonPage {
     private String savebutton_id = "com.owncloud.android:id/saveButton";
     private String cancelbutton_id = "com.owncloud.android:id/cancelButton";
     private String okbutton_id = "android:id/button1";
+    private String nextbutton_id = "android:id/next";
 
     public PublicLinkPage(){
         super();
@@ -62,8 +63,13 @@ public class PublicLinkPage extends CommonPage {
     public void setExpiration (String days){
         Log.log(Level.FINE, "Starts: Set Expiration date in days: " + days);
         driver.findElement(MobileBy.id(enableexpiration_id)).click();
-        String dateToSet = DateUtils.dateInDays(days);
+        String dateToSet = DateUtils.dateInDaysAndroidFormat(days);
+        if (driver.findElements(new MobileBy.ByAccessibilityId(dateToSet)).isEmpty()){
+            Log.log(Level.FINE,"Date not found, next page");
+            driver.findElement(By.id(nextbutton_id)).click();
+        }
         driver.findElement(new MobileBy.ByAccessibilityId(dateToSet)).click();
+        takeScreenshot("PublicShare/ExpirationDateSelected");
         driver.findElement(By.id(okbutton_id)).click();
     }
 
@@ -117,6 +123,7 @@ public class PublicLinkPage extends CommonPage {
         Log.log(Level.FINE, "Starts: Check expiration in days: " + days);
         String shortDate = DateUtils.shortDate(days);
         Log.log(Level.FINE, "Date to check: " + shortDate);
+        takeScreenshot("PublicShare/ExpirationDateChecks");
         boolean switchEnabled = driver.findElement(MobileBy.id(enableexpiration_id)).isEnabled();
         boolean dateCorrect = driver.findElement(MobileBy.id(dateexpirationsection_id))
                 .findElement(MobileBy.AndroidUIAutomator

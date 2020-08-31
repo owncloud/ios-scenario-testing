@@ -10,6 +10,8 @@ public class OCShare {
     private String linkName;
     private String permissions;
 
+    private String expiration;
+
     public OCShare(){}
 
     public String getId() {
@@ -71,4 +73,13 @@ public class OCShare {
     public void setPermissions(String permissions) {
         this.permissions = permissions;
     }
+
+    public String getExpiration() {
+        return expiration;
+    }
+
+    public void setExpiration(String expiration) {
+        this.expiration = expiration;
+    }
+
 }
