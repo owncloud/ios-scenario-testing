@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: io.cucumber:cucumber-expressions:7.0.2">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.cucumber/cucumber-expressions/7.0.2/db0453bbd9f8db82df1521f80a64aac3d22141d/cucumber-expressions-7.0.2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.cucumber/cucumber-expressions/7.0.2/ea9303dd286f4947f0d63df407001ff146b92d61/cucumber-expressions-7.0.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

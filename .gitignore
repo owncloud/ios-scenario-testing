@@ -6,11 +6,15 @@
 /build/
 /.gradle/
 /bin
+/auth_tests/screenshots
 /screenshots
 .classpath
 .project
 .settings
+/auth_tests/local.properties
 local.properties
 .DS_Store
 *.log.*
 *.log
+/auth_tests/*.log.*
+/auth_tests/*.log

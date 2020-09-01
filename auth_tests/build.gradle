@@ -1,0 +1,26 @@
+apply plugin: 'java'
+
+project.ext {
+    cucumberVersion = '4.8.0'
+}
+
+dependencies {
+    testImplementation 'io.cucumber:cucumber-java:' + cucumberVersion
+    testImplementation 'io.cucumber:cucumber-junit:' + cucumberVersion
+    testImplementation 'org.apache.commons:commons-exec:1.3'
+    testImplementation 'org.apache.commons:commons-lang3:3.9'
+
+    implementation 'net.bytebuddy:byte-buddy:1.10.5'
+    implementation 'com.google.guava:guava:25.0-jre'
+    implementation 'io.appium:java-client:7.3.0'
+    implementation 'com.squareup.okhttp3:okhttp:3.12.0'
+    implementation 'com.squareup.okio:okio:1.14.0'
+}
+
+repositories {
+    mavenCentral()
+}
+
+test {
+    systemProperty "cucumber.options", System.getProperty("cucumber.options")
+}
