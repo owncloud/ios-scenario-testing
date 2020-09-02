@@ -18,3 +18,6 @@ local.properties
 *.log
 /auth_tests/*.log.*
 /auth_tests/*.log
+/auth_tests/build/
+/auth_tests/.gradle/
+/auth_tests/target/

@@ -123,6 +123,7 @@ public class PublicLinkPage extends CommonPage {
         Log.log(Level.FINE, "Starts: Check expiration in days: " + days);
         String shortDate = DateUtils.shortDate(days);
         Log.log(Level.FINE, "Date to check: " + shortDate);
+        waitById(3,dateexpirationsection_id );
         takeScreenshot("PublicShare/ExpirationDateChecks");
         boolean switchEnabled = driver.findElement(MobileBy.id(enableexpiration_id)).isEnabled();
         boolean dateCorrect = driver.findElement(MobileBy.id(dateexpirationsection_id))
