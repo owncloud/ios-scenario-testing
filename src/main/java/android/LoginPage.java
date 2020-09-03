@@ -13,12 +13,9 @@ public class LoginPage extends CommonPage{
     private String usernametext_id = "account_username";
     private String passwordtext_id = "account_password";
     private String loginbutton_id = "loginButton";
-    private String errorcredentialstext_xpath = "//*[@text='Wrong username or password']";
     private String acceptCert_id = "ok";
 
     private final String serverURL = LocProperties.getProperties().getProperty("serverURL");
-    private final String oauth2URL = LocProperties.getProperties().getProperty("OAuth2URL");
-    private final String oidcURL = LocProperties.getProperties().getProperty("oidcURL");
 
     public LoginPage(){
         super();
@@ -31,7 +28,6 @@ public class LoginPage extends CommonPage{
     public void typeURL(){
         Log.log(Level.FINE, "Starts: Type URL.");
         waitById(15, urltext_id);
-        //driver.findElement(MobileBy.id(urltext_id)).sendKeys(selectURL(authMethod));
         driver.findElement(MobileBy.id(urltext_id)).sendKeys(serverURL);
         driver.findElement(MobileBy.id(embeddedbutton_id)).click();
         //Check how to improve this. Very ugly
@@ -53,26 +49,5 @@ public class LoginPage extends CommonPage{
         Log.log(Level.FINE, "Starts: Submit login");
         waitById(15, loginbutton_id);
         driver.findElement(MobileBy.id(loginbutton_id)).click();
-    }
-
-    public boolean isCredentialsErrorMessage(){
-        return driver.findElements(MobileBy.xpath(errorcredentialstext_xpath)).size() > 0;
-    }
-
-    private String selectURL(String authMehod){
-        switch (authMehod){
-            case "basic auth":
-                Log.log(Level.FINE, "URL: " + serverURL);
-                return serverURL;
-            case "OAuth2":
-                Log.log(Level.FINE, "URL: " + oauth2URL);
-                return oauth2URL;
-            case "OIDC":
-                Log.log(Level.FINE, "URL: " + oidcURL);
-                return oidcURL;
-            default:
-                Log.log(Level.WARNING, "No URL");
-                return null;
-        }
     }
 }
