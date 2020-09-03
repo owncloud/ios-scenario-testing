@@ -5,6 +5,7 @@ import org.openqa.selenium.By;
 import java.util.logging.Level;
 
 import io.appium.java_client.MobileBy;
+import io.appium.java_client.MobileElement;
 import utils.date.DateUtils;
 import utils.log.Log;
 
@@ -14,7 +15,7 @@ public class PublicLinkPage extends CommonPage {
     private String enablePassword_id = "com.owncloud.android:id/shareViaLinkPasswordSwitch";
     private String textpassword_id = "com.owncloud.android:id/shareViaLinkPasswordValue";
     private String enableexpiration_id = "com.owncloud.android:id/shareViaLinkExpirationSwitch";
-    private String dateexpirationsection_id = "com.owncloud.android:id/shareViaLinkExpirationSection";
+    private String dateexpirationvalue_id = "com.owncloud.android:id/shareViaLinkExpirationValue";
     private String downloadview_id = "com.owncloud.android:id/shareViaLinkEditPermissionReadOnly";
     private String downloadviewupload_id =
             "com.owncloud.android:id/shareViaLinkEditPermissionReadAndWrite";
@@ -123,12 +124,10 @@ public class PublicLinkPage extends CommonPage {
         Log.log(Level.FINE, "Starts: Check expiration in days: " + days);
         String shortDate = DateUtils.shortDate(days);
         Log.log(Level.FINE, "Date to check: " + shortDate);
-        waitById(3,dateexpirationsection_id );
         takeScreenshot("PublicShare/ExpirationDateChecks");
         boolean switchEnabled = driver.findElement(MobileBy.id(enableexpiration_id)).isEnabled();
-        boolean dateCorrect = driver.findElement(MobileBy.id(dateexpirationsection_id))
-                .findElement(MobileBy.AndroidUIAutomator
-                        ("new UiSelector().text(\""+ shortDate +"\");")).isDisplayed();
+        MobileElement expirationDate = (MobileElement) driver.findElement(MobileBy.id(dateexpirationvalue_id));
+        boolean dateCorrect = expirationDate.getText().equals(shortDate);
         return switchEnabled && dateCorrect;
     }
 
