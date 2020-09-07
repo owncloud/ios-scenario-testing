@@ -181,6 +181,7 @@ public class FileListSteps {
     public void preview_in_screen(String itemName, String type, String size) {
         Log.log(Level.FINE, "----STEP----: " +
                 new Object(){}.getClass().getEnclosingMethod().getName()  + ": " + itemName);
+        detailsPage.removeShareSheet();
         assertEquals(detailsPage.getName(), itemName);
         assertEquals(detailsPage.getSize(), size);
         assertEquals(detailsPage.getType(), type);

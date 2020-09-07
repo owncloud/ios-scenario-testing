@@ -15,9 +15,9 @@ public class DetailsPage extends CommonPage {
     private String itemType_id = "com.owncloud.android:id/fdType";
     private String itemSize_id = "com.owncloud.android:id/fdSize";
     private String downloading_id = "com.owncloud.android:id/fdProgressText";
-    private String photoview_id = "com.owncloud.android:id/photo_view";
     private String textview_id = "com.owncloud.android:id/text_preview";
     private String navigateup_xpath = "//android.widget.ImageButton[@content-desc=\"Navigate up\"]";
+    private String toolbar_id = "toolbar";
 
     public DetailsPage(){
         super();
@@ -51,5 +51,11 @@ public class DetailsPage extends CommonPage {
 
     public void waitFinishedDownload(int seconds){
         waitByIdInvisible(seconds, downloading_id);
+    }
+
+    public void removeShareSheet(){
+        if (driver.findElements(MobileBy.id(toolbar_id)).isEmpty()){
+            driver.navigate().back();
+        }
     }
 }
