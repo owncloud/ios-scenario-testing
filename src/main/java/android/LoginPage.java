@@ -1,35 +1,52 @@
 package android;
 
+import org.openqa.selenium.support.PageFactory;
+
+import java.util.List;
 import java.util.logging.Level;
 
-import io.appium.java_client.MobileBy;
+import io.appium.java_client.MobileElement;
+import io.appium.java_client.pagefactory.AndroidFindBy;
+import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import utils.LocProperties;
 import utils.log.Log;
 
 public class LoginPage extends CommonPage{
 
-    private String urltext_id = "hostUrlInput";
-    private String embeddedbutton_id = "embeddedCheckServerButton";
-    private String usernametext_id = "account_username";
-    private String passwordtext_id = "account_password";
-    private String loginbutton_id = "loginButton";
-    private String acceptCert_id = "ok";
+    @AndroidFindBy(id="hostUrlInput")
+    private List<MobileElement> urlServer;
+
+    @AndroidFindBy(id="embeddedCheckServerButton")
+    private MobileElement checkServerButton;
+
+    @AndroidFindBy(id="account_username")
+    private MobileElement userNameText;
+
+    @AndroidFindBy(id="account_password")
+    private MobileElement passwordText;
+
+    @AndroidFindBy(id="loginButton")
+    private MobileElement loginButton;
+
+    @AndroidFindBy(id="ok")
+    private MobileElement acceptCertificate;
 
     private final String serverURL = LocProperties.getProperties().getProperty("serverURL");
 
     public LoginPage(){
         super();
+        PageFactory.initElements(new AppiumFieldDecorator(driver), this);
     }
 
     public boolean notLoggedIn(){
-        return driver.findElements(MobileBy.id(urltext_id)).size() > 0;
+        return !urlServer.isEmpty();
     }
 
     public void typeURL(){
         Log.log(Level.FINE, "Starts: Type URL.");
-        waitById(15, urltext_id);
-        driver.findElement(MobileBy.id(urltext_id)).sendKeys(serverURL);
-        driver.findElement(MobileBy.id(embeddedbutton_id)).click();
+        waitById(15, urlServer.get(0));
+        urlServer.get(0).sendKeys(serverURL);
+        checkServerButton.click();
         //Check how to improve this. Very ugly
         /*if (oidcURL.substring(0, 5).endsWith("s")) {
             Log.log(Level.FINE, "https server");
@@ -40,14 +57,14 @@ public class LoginPage extends CommonPage{
     public void typeCredentials(String username, String password){
         Log.log(Level.FINE, "Starts: Type credentials: username: "
                 + username + " - password: " + password);
-        waitById(15, usernametext_id);
-        driver.findElement(MobileBy.id(usernametext_id)).sendKeys(username);
-        driver.findElement(MobileBy.id(passwordtext_id)).sendKeys(password);
+        waitById(15, userNameText);
+        userNameText.sendKeys(username);
+        passwordText.sendKeys(password);
     }
 
     public void submitLogin(){
         Log.log(Level.FINE, "Starts: Submit login");
-        waitById(15, loginbutton_id);
-        driver.findElement(MobileBy.id(loginbutton_id)).click();
+        waitById(15, loginButton);
+        loginButton.click();
     }
 }

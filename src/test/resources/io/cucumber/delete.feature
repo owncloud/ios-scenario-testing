@@ -10,7 +10,7 @@ Feature: Delete item
       | deleteMe |
 
   Scenario Outline: Delete an existent folder
-    When user selects the item <item> to delete
+    When user selects to Remove the item <item>
     And user accepts the deletion
     Then user does not see <item> in the file list anymore
 

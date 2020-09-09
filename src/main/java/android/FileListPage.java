@@ -1,6 +1,7 @@
 package android;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.support.PageFactory;
 
 import java.io.File;
 import java.io.IOException;
@@ -14,39 +15,63 @@ import java.util.logging.Level;
 
 import io.appium.java_client.MobileBy;
 import io.appium.java_client.MobileElement;
+import io.appium.java_client.pagefactory.AndroidFindBy;
+import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import utils.LocProperties;
 import utils.entities.OCFile;
 import utils.log.Log;
 
 public class FileListPage extends CommonPage {
 
-    private String closeselection_id = "com.owncloud.android:id/action_mode_close_button";
-    private String fab_id = "fab_expand_menu_button";
-    private String createfolder_id = "fab_mkdir";
-    private String uploadfab_id = "fab_upload";
-    private String uploadoption_id = "files_linear_layout";
-    private String downloaded_id = "com.owncloud.android:id/localFileIndicator";
-    private String avoffline_id = "com.owncloud.android:id/localFileIndicator";
     private String shareoption_id = "com.owncloud.android:id/action_share_file";
     private String renameoption_id = "com.owncloud.android:id/action_rename_file";
     private String moveoption_id = "com.owncloud.android:id/action_move";
     private String copyoption_id = "com.owncloud.android:id/copy_file";
     private String removeoption_id = "com.owncloud.android:id/action_remove_file";
     private String avofflineoption_id = "com.owncloud.android:id/action_set_available_offline";
-    private String syncoption_text = "Refresh account";
-    private String syncfileption_id = "com.owncloud.android:id/action_sync_file";
-    private String toolbar_id = "toolbar";
-    private String progress_id = "com.owncloud.android:id/syncProgressBar";
-    private String listfiles_id = "com.owncloud.android:id/list_root";
     private String listcell_id = "com.owncloud.android:id/file_list_constraint_layout";
     private String listitemname_id = "com.owncloud.android:id/Filename";
+
+    @AndroidFindBy(uiAutomator="new UiSelector().resourceId(\"com.owncloud.android:id/action_mode_close_button\");")
+    private MobileElement closeSelectionMode;
+
+    @AndroidFindBy(id="fab_expand_menu_button")
+    private MobileElement fabButton;
+
+    @AndroidFindBy(id="fab_mkdir")
+    private MobileElement createFolder;
+
+    @AndroidFindBy(id="fab_upload")
+    private MobileElement uploadOption;
+
+    @AndroidFindBy(id="com.owncloud.android:id/localFileIndicator")
+    private MobileElement downloadIndicator;
+
+    @AndroidFindBy(id="com.owncloud.android:id/localFileIndicator")
+    private MobileElement avOfflineIndicator;
+
+    @AndroidFindBy(id="com.owncloud.android:id/action_sync_file")
+    private MobileElement syncFile;
+
+    @AndroidFindBy(id="toolbar")
+    private List<MobileElement> toolbar;
+
+    @AndroidFindBy(id="com.owncloud.android:id/list_root")
+    private MobileElement listFiles;
+
+    @AndroidFindBy(id="com.owncloud.android:id/file_list_constraint_layout")
+    private MobileElement fileCell;
+
+    @AndroidFindBy(id="com.owncloud.android:id/Filename")
+    private MobileElement fileName;
 
     private HashMap<String, String> operationsMap = new HashMap<String, String>();
 
     public FileListPage() {
         super();
+        PageFactory.initElements(new AppiumFieldDecorator(driver), this);
         //Filling up the operations to have the key-value with name and id
-        operationsMap.put("Share", shareoption_id);
+        operationsMap.put("share", shareoption_id);
         operationsMap.put("Rename", renameoption_id);
         operationsMap.put("Move", moveoption_id);
         operationsMap.put("Copy", copyoption_id);
@@ -61,7 +86,7 @@ public class FileListPage extends CommonPage {
     public void waitToload(){
         try {
             //if list of files is not loaded, we should swipe to get the file list
-            waitById(30, listfiles_id);
+            waitById(30, listFiles);
         } catch (Exception e) {
             swipe(0.50, 0.20, 0.50, 0.90);
             waitByTextVisible(30, "Documents");
@@ -71,17 +96,16 @@ public class FileListPage extends CommonPage {
 
     public void createFolder(){
         Log.log(Level.FINE, "Starts: create folder");
-        waitById(5, fab_id);
-        driver.findElement(MobileBy.id(fab_id)).click();
-        driver.findElement(MobileBy.id(createfolder_id)).click();
+        waitById(5, fabButton);
+        fabButton.click();
+        createFolder.click();
     }
 
     public void upload(){
         Log.log(Level.FINE, "Starts: upload");
-        waitById(5, fab_id);
-        driver.findElement(MobileBy.id(fab_id)).click();
-        driver.findElement(MobileBy.id(uploadfab_id)).click();
-        driver.findElement(MobileBy.id(uploadoption_id)).click();
+        waitById(5, fabButton);
+        fabButton.click();
+        uploadOption.click();
     }
 
     public void pushFile(String itemName){
@@ -124,7 +148,7 @@ public class FileListPage extends CommonPage {
     }
 
     public boolean isHeader(){
-        return !driver.findElements(By.id(toolbar_id)).isEmpty();
+        return !toolbar.isEmpty();
     }
 
     public void selectItemList(String itemName) {
@@ -156,8 +180,7 @@ public class FileListPage extends CommonPage {
 
     public void closeSelectionMode(){
         Log.log(Level.FINE, "Starts: close selection mode");
-        driver.findElement(MobileBy.AndroidUIAutomator(
-                "new UiSelector().resourceId(\""+ closeselection_id +"\");")).click();
+        closeSelectionMode.click();
     }
 
     public boolean fileIsDownloaded(String fileName) {
@@ -183,15 +206,15 @@ public class FileListPage extends CommonPage {
         //Enforce this.. downloaded file must fit the itemName
         MobileElement element = getElementFromFileList(itemName);
         takeScreenshot("FileDownloaded/File_"+itemName+"_Downloaded");
-        return (element.findElement(By.id(downloaded_id)).isDisplayed());
+        return downloadIndicator.isDisplayed();
     }
 
     public boolean fileIsMarkedAsAvOffline(String itemName){
         //Wait the file to be downloaded
-        waitById(15, syncfileption_id);
+        waitById(15, syncFile);
         MobileElement element = getElementFromFileList(itemName);
         takeScreenshot("FileAvOffline/File_"+itemName+"_AvOffline");
-        return (element.findElement(By.id(avoffline_id)).isDisplayed());
+        return avOfflineIndicator.isDisplayed();
     }
 
     private void selectOperationMenu(String operationName){
@@ -201,25 +224,6 @@ public class FileListPage extends CommonPage {
         driver.findElement(MobileBy.AndroidUIAutomator(
                 "new UiSelector().text(\""+ operationName +"\");")).click();
         takeScreenshot("SelectOperation/SelectOperation_"+operationName);
-    }
-
-    public void selectFileUpload(String itemName){
-        Log.log(Level.FINE, "Starts: Select file to upload: "+ itemName);
-        /*MobileElement hamburger = (MobileElement)
-                driver.findElementByAndroidUIAutomator("new UiSelector().description(\"Show roots\");");
-        actions.click(hamburger).perform();
-        driver.findElement(MobileBy.AndroidUIAutomator("new UiSelector().description(\"Show roots\");")).click();
-        //MobileElement downloadOption = (MobileElement)
-        //driver.findElement(MobileBy.AndroidUIAutomator("new UiSelector().text(\"Show roots\");")).click();
-        driver.findElement(MobileBy.AndroidUIAutomator("new UiSelector().text(\"Downloads\");")).click();
-                //driver.findElementByAndroidUIAutomator("new UiSelector().text(\"Downloads\");");
-        //actions.click(downloadOption).perform();
-        AndroidElement itemToUpload = (AndroidElement)
-                driver.findElementByAndroidUIAutomator("new UiSelector().text(\""+ itemName +"\");");
-        actions.click(itemToUpload).perform();
-        driver.findElement(MobileBy.AndroidUIAutomator("new UiSelector().text(\""+ itemName +"\");")).click();
-        //Give some seconds to perform the action to return to the file list
-        //waitByXpath(8, headertext_xpath);*/
     }
 
     public boolean displayedList(String path, ArrayList<OCFile> listServer){
@@ -264,8 +268,7 @@ public class FileListPage extends CommonPage {
 
     private MobileElement getElementFromFileList(String itemName){
         Log.log(Level.FINE, "Starts: searching item in list: " + itemName);
-        List<MobileElement> elementsFileList = driver.findElement(MobileBy.id(listfiles_id))
-                .findElements(MobileBy.id(listcell_id));
+        List<MobileElement> elementsFileList = listFiles.findElements(MobileBy.id(listcell_id));
         takeScreenshot("ElementFileList/SearchItem_"+itemName);
         for (MobileElement element : elementsFileList) {
             if (element.findElement(By.id(listitemname_id)).getText()

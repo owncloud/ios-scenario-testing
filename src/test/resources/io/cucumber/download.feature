@@ -13,7 +13,7 @@ Feature: Download a file in the account
   @NoDevice
   @NoEmulator
   Scenario Outline: Download a file that is not previewable
-    When user selects the item <itemName> to download
+    When user selects to Download the item <itemName>
     Then user sees the detailed information: <itemName>, <Type>, and <Size>
     And the item <itemName> is stored in the device
 
@@ -22,7 +22,7 @@ Feature: Download a file in the account
       | Archive.zip    | ZIP file | 12.1 MB |
 
   Scenario Outline: Download a file that is  previewable
-    When user selects the item <itemName> to download
+    When user selects to Download the item <itemName>
     Then the item <itemName> is opened and previewed
     And the item <itemName> is stored in the device
 

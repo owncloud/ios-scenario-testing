@@ -63,38 +63,23 @@ public class FileListSteps {
         fileListPage.createFolder();
     }
 
-    @When("^user selects the item (.+) to (.+)$")
-    public void i_select_item_to_some_operation(String itemName, String operation) {
+    @When("^user selects to (.+) the item (.+)$")
+    public void i_select_item_to_some_operation(String operation, String itemName) {
         Log.log(Level.FINE, "----STEP----: " +
                 new Object(){}.getClass().getEnclosingMethod().getName() + ": "
                 + operation + " " + itemName);
         fileListPage.waitToload();
         fileListPage.refreshList();
         switch (operation){
-            case "rename":
-                fileListPage.executeOperation("Rename", itemName);
-                break;
-            case "delete":
-                fileListPage.executeOperation("Remove", itemName);
-                break;
-            case "move":
-                fileListPage.executeOperation("Move", itemName);
-                break;
-            case "copy":
-                fileListPage.executeOperation("Copy" ,itemName);
-                break;
-            case "download":
+            case "Download":
                 fileListPage.downloadAction(itemName);
-                detailsPage.waitFinishedDownload(30);
+                //detailsPage.waitFinishedDownload(30);
                 break;
-            case "av.offline":
-                fileListPage.executeOperation("Set as available offline", itemName);
+            case "Upload":
+                //fileListPage.selectFileUpload(itemName);
                 break;
-            case "share":
-                fileListPage.executeOperation("Share", itemName);
-                break;
-            case "upload":
-                fileListPage.selectFileUpload(itemName);
+            default:
+                fileListPage.executeOperation(operation, itemName);
                 break;
         }
     }

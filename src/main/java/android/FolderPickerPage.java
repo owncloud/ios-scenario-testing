@@ -1,17 +1,26 @@
 package android;
 
+import org.openqa.selenium.support.PageFactory;
+
 import java.util.logging.Level;
 
 import io.appium.java_client.MobileBy;
+import io.appium.java_client.MobileElement;
+import io.appium.java_client.pagefactory.AndroidFindBy;
+import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import utils.log.Log;
 
 public class FolderPickerPage extends CommonPage {
 
-    private String chooseButton_id = "com.owncloud.android:id/folder_picker_btn_choose";
-    private String cancelButton_id = "com.owncloud.android:id/folder_picker_btn_cancel";
+    @AndroidFindBy(id="com.owncloud.android:id/folder_picker_btn_choose")
+    private MobileElement chooseButton;
+
+    @AndroidFindBy(id="com.owncloud.android:id/folder_picker_btn_cancel")
+    private MobileElement cancelButton;
 
     public FolderPickerPage() {
         super();
+        PageFactory.initElements(new AppiumFieldDecorator(driver), this);
     }
 
     public void selectFolder(String targetFolder){
@@ -23,11 +32,11 @@ public class FolderPickerPage extends CommonPage {
 
     public void accept(){
         Log.log(Level.FINE, "Start: Accept selection picker");
-        driver.findElement(MobileBy.id(chooseButton_id)).click();
+        chooseButton.click();
     }
 
     public void cancel(){
         Log.log(Level.FINE, "Start: Cancel selection picker");
-        driver.findElement(MobileBy.id(cancelButton_id)).click();
+        cancelButton.click();
     }
 }

@@ -11,7 +11,7 @@ Feature: Public Share
       | textExample.txt  |
 
   Scenario Outline: Create a public link with name
-    When user selects the item <item> to share
+    When user selects to share the item <item>
     And user creates link on <item> with the following fields
         | name | <name> |
     Then link is created on <item> with the following fields
@@ -23,7 +23,7 @@ Feature: Public Share
       |  textExample.txt   |  link2   |
 
   Scenario Outline: Create a public link with password
-    When user selects the item <item> to share
+    When user selects to share the item <item>
     And user creates link on <item> with the following fields
       | name     | <name>     |
       | password | <password> |
@@ -36,7 +36,7 @@ Feature: Public Share
       |  Documents  |  link1   |    a     |
 
   Scenario Outline: Create a public link with permissions
-    When user selects the item <item> to share
+    When user selects to share the item <item>
     And user creates link on <item> with the following fields
       | name       | <name>        |
       | permission | <permissions> |
@@ -51,7 +51,7 @@ Feature: Public Share
 
     @expiration
   Scenario Outline: Create a public link with expiration date
-    When user selects the item <item> to share
+    When user selects to share the item <item>
     And user creates link on <item> with the following fields
       | name            | <name>  |
       | expiration days | <expiration>  |
@@ -65,7 +65,7 @@ Feature: Public Share
 
   Scenario Outline: Edit existing share, changing permissions
     Given the item <item> is already shared by link
-    When user selects the item <item> to share
+    When user selects to share the item <item>
     And user edits the link on <item> with the following fields
       | permissions | <permissions> |
       | name        | <name>        |
@@ -81,7 +81,7 @@ Feature: Public Share
 
   Scenario Outline: Delete existing link
     Given the item <item> is already shared by link
-    When user selects the item <item> to share
+    When user selects to share the item <item>
     And user deletes the link
     Then link on <item> does not exist anymore
 

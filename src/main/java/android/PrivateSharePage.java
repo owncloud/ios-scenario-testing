@@ -1,65 +1,77 @@
 package android;
 
+import org.openqa.selenium.support.PageFactory;
+
 import java.util.logging.Level;
 
-import io.appium.java_client.MobileBy;
+import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.nativekey.AndroidKey;
 import io.appium.java_client.android.nativekey.KeyEvent;
+import io.appium.java_client.pagefactory.AndroidFindBy;
+import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import utils.log.Log;
 
 public class PrivateSharePage extends CommonPage {
 
-    private String createbox_id = "canEditCreateCheckBox";
-    private String changebox_id = "canEditChangeCheckBox";
-    private String deletebox_id = "canEditDeleteCheckBox";
-    private String sharebox_id = "canShareSwitch";
+    @AndroidFindBy(id="canEditCreateCheckBox")
+    private MobileElement createPermission;
+
+    @AndroidFindBy(id="canEditChangeCheckBox")
+    private MobileElement editPermission;
+
+    @AndroidFindBy(id="canEditDeleteCheckBox")
+    private MobileElement deletePermission;
+
+    @AndroidFindBy(id="canShareSwitch")
+    private MobileElement sharePermission;
 
     public PrivateSharePage(){
         super();
+        PageFactory.initElements(new AppiumFieldDecorator(driver), this);
     }
 
     public void switchCreate() {
         boolean status = isCreateSelected();
         Log.log(Level.FINE, "Starts: Click create checkbox");
-        driver.findElement(MobileBy.id(createbox_id)).click();
-        waitTillStatus(5, createbox_id, !status);
+        createPermission.click();
+        waitTillStatus(5, createPermission, !status);
     }
 
     public void switchChange() {
         boolean status = isChangeSelected();
         Log.log(Level.FINE, "Starts: Click change checkbox");
-        driver.findElement(MobileBy.id(changebox_id)).click();
-        waitTillStatus(5, changebox_id, !status);
+        editPermission.click();
+        waitTillStatus(5, editPermission, !status);
     }
 
     public void switchDelete() {
         boolean status = isDeleteSelected();
         Log.log(Level.FINE, "Starts: Click delete checkbox:");
-        driver.findElement(MobileBy.id(deletebox_id)).click();
-        waitTillStatus(5, deletebox_id, !status);
+        deletePermission.click();
+        waitTillStatus(5, deletePermission, !status);
     }
 
     public void switchShare() {
         boolean status = isShareEnabled();
         Log.log(Level.FINE, "Starts: Switch share button");
-        driver.findElement(MobileBy.id(sharebox_id)).click();
-        waitTillStatus(5, sharebox_id, !status);
+        sharePermission.click();
+        waitTillStatus(5, sharePermission, !status);
     }
 
     public boolean isCreateSelected(){
-        return driver.findElement(MobileBy.id(createbox_id)).isEnabled();
+        return createPermission.isEnabled();
     }
 
     public boolean isChangeSelected(){
-        return driver.findElement(MobileBy.id(changebox_id)).isEnabled();
+        return editPermission.isEnabled();
     }
 
     public boolean isDeleteSelected(){
-        return driver.findElement(MobileBy.id(deletebox_id)).isEnabled();
+        return deletePermission.isEnabled();
     }
 
     public boolean isShareEnabled(){
-        return driver.findElement(MobileBy.id(sharebox_id)).isEnabled();
+        return sharePermission.isEnabled();
     }
 
     public boolean isPasswordEnabled () {

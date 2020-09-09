@@ -44,7 +44,7 @@ public class PrivateShareSteps {
             throws Throwable {
         Log.log(Level.FINE, "----STEP----: " +
                 new Object(){}.getClass().getEnclosingMethod().getName());
-        fileListPage.executeOperation("Share", itemName);
+        fileListPage.executeOperation("share", itemName);
         sharePage.addPrivateShare();
         searchShareePage.shareWithUser(sharee);
     }

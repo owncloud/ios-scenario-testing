@@ -10,7 +10,7 @@ Feature: Rename an item
       | RenameMe  |
 
   Scenario Outline: Rename an item
-    When user selects the item <item> to rename
+    When user selects to Rename the item <item>
     And user sets <itemRenamed> as name
     Then user sees <itemRenamed> in the file list
     And user does not see <item> in the file list anymore

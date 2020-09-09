@@ -10,7 +10,7 @@ Feature: Copy item
       | copyMe |
 
   Scenario Outline: Copy an existent folder to another location
-    When user selects the item <itemName> to copy
+    When user selects to Copy the item <itemName>
     And user selects <destination> as target folder
     Then user sees <itemName> in the file list as original
     And user sees <itemName> inside the folder <destination>

@@ -10,7 +10,7 @@ Feature: Move item
       | folderMove |
 
   Scenario Outline: Move an existent folder to another location
-    When user selects the item <itemName> to move
+    When user selects to Move the item <itemName>
     And user selects <destination> as target folder
     Then user does not see <itemName> in the file list anymore
     And user sees <itemName> inside the folder Documents

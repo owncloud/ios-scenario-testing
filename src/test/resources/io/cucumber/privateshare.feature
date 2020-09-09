@@ -22,7 +22,7 @@ Feature: Private Share
 
   Scenario Outline: Edit existing share, removing permissions
     Given the item <item> is already shared with <user>
-    When user selects the item <item> to share
+    When user selects to share the item <item>
     And user edits the share on <item> with permissions <permissions>
     Then <user> has access to <item>
     Then share is created on <item> with the following fields
@@ -36,7 +36,7 @@ Feature: Private Share
 
   Scenario Outline: Delete existing share
     Given the item <item> is already shared with <user>
-    When user selects the item <item> to share
+    When user selects to share the item <item>
     And user deletes the share
     Then <user> does not have access to <item>
     And <item> is not shared anymore with <user>

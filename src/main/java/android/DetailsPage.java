@@ -1,43 +1,60 @@
 package android;
 
-import org.openqa.selenium.By;
+import org.openqa.selenium.support.PageFactory;
 
+import java.util.List;
 import java.util.logging.Level;
 
-import io.appium.java_client.MobileBy;
+import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.nativekey.AndroidKey;
 import io.appium.java_client.android.nativekey.KeyEvent;
+import io.appium.java_client.pagefactory.AndroidFindBy;
+import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import utils.log.Log;
 
 public class DetailsPage extends CommonPage {
 
-    private String itemName_id = "com.owncloud.android:id/fdFilename";
-    private String itemType_id = "com.owncloud.android:id/fdType";
-    private String itemSize_id = "com.owncloud.android:id/fdSize";
-    private String downloading_id = "com.owncloud.android:id/fdProgressText";
-    private String textview_id = "com.owncloud.android:id/text_preview";
-    private String navigateup_xpath = "//android.widget.ImageButton[@content-desc=\"Navigate up\"]";
-    private String toolbar_id = "toolbar";
+    @AndroidFindBy(id="com.owncloud.android:id/fdFilename")
+    private MobileElement itemName;
+
+    @AndroidFindBy(id="com.owncloud.android:id/fdType")
+    private MobileElement itemType;
+
+    @AndroidFindBy(id="com.owncloud.android:id/fdSize")
+    private MobileElement itemSize;
+
+    @AndroidFindBy(id="com.owncloud.android:id/fdProgressText")
+    private MobileElement downloading;
+
+    @AndroidFindBy(id="com.owncloud.android:id/text_preview")
+    private MobileElement textPreview;
+
+    @AndroidFindBy(id="toolbar")
+    private List<MobileElement> toolbar;
+
+    @AndroidFindBy(xpath="//android.widget.ImageButton[@content-desc=\"Navigate up\"]")
+    private MobileElement navigateUp;
 
     public DetailsPage(){
         super();
+        PageFactory.initElements(new AppiumFieldDecorator(driver), this);
     }
 
     public String getName(){
-        return driver.findElement(By.id(itemName_id)).getText();
+        return itemName.getText();
     }
 
     public String getType(){
-        return driver.findElement(By.id(itemType_id)).getText();
+        return itemType.getText();
     }
 
     public String getSize(){
-        return driver.findElement(By.id(itemSize_id)).getText();
+        return itemSize.getText();
     }
 
     public void backListFiles() {
         Log.log(Level.FINE, "Start: Back to the list of files");
-        driver.findElement(MobileBy.xpath(navigateup_xpath)).click();
+        navigateUp.click();
     }
 
     public void closeOpenIn(){
@@ -46,15 +63,15 @@ public class DetailsPage extends CommonPage {
     }
 
     public boolean itemPreviewed(){
-        return driver.findElement(By.id(textview_id)).isDisplayed();
+        return textPreview.isDisplayed();
     }
 
     public void waitFinishedDownload(int seconds){
-        waitByIdInvisible(seconds, downloading_id);
+        waitByIdInvisible(seconds, downloading);
     }
 
     public void removeShareSheet(){
-        if (driver.findElements(MobileBy.id(toolbar_id)).isEmpty()){
+        if (toolbar.isEmpty()){
             driver.navigate().back();
         }
     }
