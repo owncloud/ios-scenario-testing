@@ -70,7 +70,6 @@ public class AppiumManager {
         Log.log(Level.FINE, "API Level: " +
                 driver.getCapabilities().getCapability("deviceApiLevel") + "\n");
 
-
     }
 
     public static AppiumManager getManager() {

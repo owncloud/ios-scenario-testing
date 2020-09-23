@@ -9,6 +9,8 @@ public class OCFile {
     private String privateLink;
     private String lastModified;
 
+    private String type;
+
     public OCFile(){
 
     }
@@ -59,6 +61,14 @@ public class OCFile {
 
     public void setLastModified(String lastModified) {
         this.lastModified = lastModified;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
     }
 
 }

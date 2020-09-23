@@ -60,8 +60,8 @@ Feature: Public Share
       | expiration days | <expiration>  |
 
     Examples:
-      |  item       |  name    | expiration   |
-      |  Documents  |  link1   |    4         |
+      |  item       |  name    | expiration    |
+      |  Documents  |  link1   |    4          |
 
   Scenario Outline: Edit existing share, changing permissions
     Given the item <item> is already shared by link

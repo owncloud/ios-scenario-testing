@@ -18,7 +18,6 @@ public class ShareSAXHandler extends DefaultHandler {
         if (node.equals("element")){
             share = new OCShare();
         }
-
     }
 
     @Override

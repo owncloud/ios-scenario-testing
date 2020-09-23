@@ -11,6 +11,7 @@ import io.cucumber.java.en.Given;
 import utils.LocProperties;
 import utils.api.CommonAPI;
 import utils.log.Log;
+import utils.parser.CapabilityJSONHandler;
 
 public class LoginSteps {
 
@@ -51,5 +52,9 @@ public class LoginSteps {
                     break;
             }
         }
+        //Fill capabilities object
+        String capabilityJSON = commonAPI.getCapabilities("ocs/v2.php/cloud/capabilities?format=json");
+        CapabilityJSONHandler JSONparser = new CapabilityJSONHandler(capabilityJSON);
+        JSONparser.parsePublicLink();
     }
 }

@@ -54,6 +54,10 @@ public class FileSAXHandler extends DefaultHandler {
                 listFiles.add(file);
                 break;
             }
+            case "d:getcontenttype": {
+                file.setType(text);
+                break;
+            }
             default:
                 break;
         }

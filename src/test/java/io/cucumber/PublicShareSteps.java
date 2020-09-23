@@ -48,7 +48,7 @@ public class PublicShareSteps {
                     break;
                 }
                 case "password": {
-                    publicLinkPage.addPassword(rows.get(1));
+                    publicLinkPage.addPassword(itemName, rows.get(1));
                     break;
                 }
                 case "permission": {
@@ -63,11 +63,17 @@ public class PublicShareSteps {
                     break;
             }
         }
+        //if password is enforced, we must force to input
+        if (publicLinkPage.isPasswordEnforced(itemName)){
+            //Enter a fake password to fit the scenario
+            publicLinkPage.addPassword(itemName,"a");
+        }
         publicLinkPage.submitLink();
     }
 
     @When("^user edits the link on (.+) with the following fields$")
-    public void user_edits_public_link(String itemName, DataTable table) {
+    public void user_edits_public_link(String itemName, DataTable table)
+            throws Throwable {
         Log.log(Level.FINE, "----STEP----: " +
                 new Object(){}.getClass().getEnclosingMethod().getName() + ": " + itemName);
         List<List<String>> listItems = table.asLists();
@@ -101,7 +107,7 @@ public class PublicShareSteps {
                     break;
                 }
                 case "password": {
-                    publicLinkPage.addPassword(rows.get(1));
+                    publicLinkPage.addPassword(itemName, rows.get(1));
                     break;
                 }
                 default:
@@ -134,7 +140,7 @@ public class PublicShareSteps {
                 }
                 case "password": {
                     sharePage.openPublicLink(itemName);
-                    assertTrue(publicLinkPage.isPasswordEnabled());
+                    assertTrue(publicLinkPage.isPasswordEnabled(itemName));
                     publicLinkPage.close();
                     break;
                 }

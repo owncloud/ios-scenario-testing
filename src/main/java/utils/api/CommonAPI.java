@@ -101,6 +101,15 @@ public class CommonAPI {
             return false;
     }
 
+    public String getCapabilities(String url)
+            throws IOException {
+        String urlCheck = urlServer+"/ocs/v2.php/cloud/capabilities?format=json";
+        Request request = getRequest(urlCheck, false);
+        Response response = httpClient.newCall(request).execute();
+        Log.log(Level.FINE, "Capabilities: " + response.body());
+        return response.body().string();
+    }
+
     protected Request davRequest(String url, String method, RequestBody body) {
         Request request = new Request.Builder()
                 .url(url)
@@ -183,12 +192,12 @@ public class CommonAPI {
                     new X509TrustManager() {
                         @Override
                         public void checkClientTrusted(java.security.cert.X509Certificate[] chain,
-                                                       String authType) throws CertificateException {
+                               String authType) throws CertificateException {
                         }
 
                         @Override
                         public void checkServerTrusted(java.security.cert.X509Certificate[] chain,
-                                                       String authType) throws CertificateException {
+                               String authType) throws CertificateException {
                         }
 
                         @Override

@@ -73,6 +73,17 @@ public class FilesAPI extends CommonAPI {
         }
     }
 
+    public boolean isFolder(String itemName)
+            throws IOException, SAXException, ParserConfigurationException {
+        String url = urlServer + davEndpoint + user + "/" + itemName;
+        Log.log(Level.FINE, "Starts: Request check if item is file or folder");
+        Log.log(Level.FINE, "URL: " + url);
+        Response response;
+        Request request = davRequest(url, "PROPFIND", null);
+        response = httpClient.newCall(request).execute();
+        return getList(response).get(0).getType() == null;
+    }
+
     public ArrayList<OCFile> listItems(String path)
             throws IOException, SAXException, ParserConfigurationException {
         Response response;
