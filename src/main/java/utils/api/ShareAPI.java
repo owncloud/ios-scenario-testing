@@ -15,6 +15,8 @@ import okhttp3.FormBody;
 import okhttp3.Request;
 import okhttp3.RequestBody;
 import okhttp3.Response;
+import utils.date.DateUtils;
+import utils.entities.OCCapability;
 import utils.entities.OCShare;
 import utils.log.Log;
 import utils.parser.ShareSAXHandler;
@@ -34,7 +36,7 @@ public class ShareAPI extends CommonAPI {
         Log.log(Level.FINE, "Starts: Create Share - " + sharee + " "
                 + itemPath + " " + type);
         Log.log(Level.FINE, "URL: " + url);
-        Request request = postRequest(url, createBody(itemPath, sharee, type, permissions, name));
+        Request request = postRequest(url, createBodyShare(itemPath, sharee, type, permissions, name));
         httpClient.newCall(request).execute();
     }
 
@@ -77,16 +79,25 @@ public class ShareAPI extends CommonAPI {
         httpClient.newCall(request).execute();
     }
 
-    private RequestBody createBody(String itemPath, String sharee, String type,
+    private RequestBody createBodyShare(String itemPath, String sharee, String type,
                                    String permissions, String name) {
-        RequestBody body = new FormBody.Builder()
-                .add("path", "\\" + itemPath + "\\")
-                .add("shareType", type)
-                .add("shareWith", sharee)
-                .add("permissions", permissions)
-                .add("name", name)
-            .build();
-        return body;
+        Boolean passwordEnforced = OCCapability.getInstance().isPasswordEnforced();
+        Boolean expirationEnforced = OCCapability.getInstance().isExpirationDateEnforced();
+        FormBody.Builder body = new FormBody.Builder();
+        body.add("path", "\\" + itemPath + "\\");
+        body.add("shareType", type);
+        body.add("shareWith", sharee);
+        body.add("permissions", permissions);
+        body.add("name", name);
+        //Password and expiration in body in case of enforcement
+        if (passwordEnforced){
+            body.add("password", "a");
+        }
+        if (expirationEnforced){
+            //Add 7 days in the future as default...
+            body.add("expirationDate", DateUtils.dateInDaysShareRequestFormat("7"));
+        }
+        return body.build();
     }
 
     private OCShare getId(Response httpResponse)

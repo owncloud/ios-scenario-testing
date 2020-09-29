@@ -21,6 +21,18 @@ public class DateUtils {
         return dateAfterDays;
     }
 
+    public static String dateInDaysShareRequestFormat(String days) {
+        Log.log(Level.FINE, "Starts: Turns days in date fot Share request");
+        GregorianCalendar gregorianCalendar = new GregorianCalendar();
+        gregorianCalendar.add(Calendar.DAY_OF_YEAR, Integer.valueOf(days));
+        Log.log(Level.FINE, "Date to format: " + gregorianCalendar.getTime());
+        String dateAfterDays = gregorianCalendar.get(Calendar.YEAR) + "-"
+                + "-" + gregorianCalendar.get(Calendar.MONTH) +1
+                + "-" + formatInt(gregorianCalendar.get(Calendar.DAY_OF_MONTH));
+        Log.log(Level.FINE, "Date formatted: " + dateAfterDays);
+        return dateAfterDays;
+    }
+
     public static String dateInDaysWithServerFormat(String days) {
         Log.log(Level.FINE, "Starts: Turns days in date with server response format");
         GregorianCalendar gregorianCalendar = new GregorianCalendar();

@@ -27,10 +27,6 @@ public class PublicLinkPage extends CommonPage {
     @AndroidFindBy(id="com.owncloud.android:id/shareViaLinkNameValue")
     private MobileElement namePublicLink;
 
-    /*@AndroidFindBy(id="com.owncloud.android:id/shareViaLinkPasswordSwitch")
-    private MobileElement switchPassword;*/
-    //private MobileElement switchPassword = (MobileElement) driver.findElement(By.id("com.owncloud.android:id/shareViaLinkPasswordSwitch"));
-
     @AndroidFindBy(id="com.owncloud.android:id/shareViaLinkPasswordValue")
     private MobileElement textPassword;
 
@@ -42,10 +38,6 @@ public class PublicLinkPage extends CommonPage {
 
     @AndroidFindBy(id="com.owncloud.android:id/shareViaLinkEditPermissionUploadFiles")
     private MobileElement uploadOnlyOption;
-
-    //private MobileElement switchExpiration = (MobileElement) driver.findElement(By.id("com.owncloud.android:id/shareViaLinkExpirationSwitch"));
-    /*@AndroidFindBy(id="com.owncloud.android:id/shareViaLinkExpirationSwitch")
-    private MobileElement switchExpiration;*/
 
     @AndroidFindBy(id="com.owncloud.android:id/cancelButton")
     private MobileElement cancelButton;
@@ -61,6 +53,11 @@ public class PublicLinkPage extends CommonPage {
 
     private OCCapability ocCapability;
 
+    //Non-static UI components. Must be matched in specific scenarios
+    private MobileElement switchPassword;
+    private String switchPasswordId = "com.owncloud.android:id/shareViaLinkPasswordSwitch";
+    private String switchExpirationId = "com.owncloud.android:id/shareViaLinkExpirationSwitch";
+
     public PublicLinkPage(){
         super();
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
@@ -75,11 +72,8 @@ public class PublicLinkPage extends CommonPage {
 
     public void addPassword (String itemName, String password) throws IOException, SAXException, ParserConfigurationException {
         Log.log(Level.FINE, "Starts: Add link password: " + password);
-        //List<MobileElement> switchPassword = (List<MobileElement>) driver.findElements(By.id("com.owncloud.android:id/shareViaLinkPasswordSwitch"));
-        //if (!driver.findElements(By.id("com.owncloud.android:id/shareViaLinkPasswordSwitch")).isEmpty()) {
-        //if (ocCapability.isPasswordEnforced)
         if (!isPasswordEnforced(itemName)){
-            MobileElement switchPassword = (MobileElement) driver.findElement(By.id("com.owncloud.android:id/shareViaLinkPasswordSwitch"));
+            switchPassword = (MobileElement) driver.findElement(By.id(switchPasswordId));
             switchPassword.click();
         }
         waitById(5, textPassword);
@@ -108,28 +102,25 @@ public class PublicLinkPage extends CommonPage {
     public void setExpiration (String days){
         Log.log(Level.FINE, "Starts: Set Expiration date in days: " + days);
         List<MobileElement> switchExpiration =
-                (List<MobileElement>) driver.findElements(By.id("com.owncloud.android:id/shareViaLinkExpirationSwitch"));
-        if (!driver.findElements(By.id("com.owncloud.android:id/shareViaLinkExpirationSwitch")).isEmpty()) {
-            Log.log(Level.FINE, "111");
-            if (parseIntBool(switchExpiration.get(0).getAttribute("checked"))) { //if it's enforced, only default
-                Log.log(Level.FINE, "333");
+                (List<MobileElement>) driver.findElements(By.id(switchExpirationId));
+        if (!switchExpiration.isEmpty()) {
+            if (parseIntBool(switchExpiration.get(0).getAttribute("checked"))) {
+                //if it's enforced, only default
                 expirationDate.click();
             } else {
-                Log.log(Level.FINE, "222");
+                // Neither enforced nor default
                 switchExpiration.get(0).click();
             }
         } else { //if it is enforced
-            Log.log(Level.FINE, "444");
             expirationDate.click();
         }
         int defaultExpiration = DateUtils.minExpirationDate(
                 OCCapability.getInstance().expirationDateDays(),
                 Integer.valueOf(days)
         );
-        Log.log(Level.FINE, "default: " + OCCapability.getInstance().expirationDateDays()
-                + ". Days: " + days + ". Days to set: " + defaultExpiration);
         String dateToSet = DateUtils.dateInDaysAndroidFormat(Integer.toString(defaultExpiration));
-        Log.log(Level.FINE, "Date to set: " + dateToSet);
+        Log.log(Level.FINE, "default: " + OCCapability.getInstance().expirationDateDays()
+                + ". Days: " + days + ". Days to set: " + defaultExpiration + " Date to set: " + dateToSet);
         if (driver.findElements(new MobileBy.ByAccessibilityId(dateToSet)).isEmpty()){
             Log.log(Level.FINE,"Date not found, next page");
             nextButton.click();
@@ -144,9 +135,9 @@ public class PublicLinkPage extends CommonPage {
         boolean switchEnabled = true;
         boolean passVisible;
         if (!isPasswordEnforced(itemName)) {
-            MobileElement switchPassword = (MobileElement) driver.findElement(By.id("com.owncloud.android:id/shareViaLinkPasswordSwitch"));
+            switchPassword = (MobileElement) driver.findElement(By.id(switchPasswordId));
             waitById(5, switchPassword);
-            switchEnabled = switchPassword.isEnabled();
+            switchEnabled = parseIntBool(switchPassword.getAttribute("checked"));
         }
         passVisible = textPassword.isDisplayed();
         return switchEnabled && passVisible;
@@ -171,19 +162,19 @@ public class PublicLinkPage extends CommonPage {
             Log.log(Level.FINE, "Starts: Check permissions: " + permissions);
             switch (permissions){
                 case("1"):{
-                    if (downloadViewOption.isEnabled()){
+                    if (parseIntBool(downloadViewOption.getAttribute("checked")) == true ){
                         Log.log(Level.FINE, "Download / View is selected");
                         return true;
                     }
                 }
                 case("15"):{
-                    if(downloadViewUploadOption.isEnabled()){
+                    if (parseIntBool(downloadViewUploadOption.getAttribute("checked")) == true ){
                         Log.log(Level.FINE, "Download / View / Upload is selected");
                         return true;
                     }
                 }
                 case("4"):{
-                    if (uploadOnlyOption.isEnabled()){
+                    if (parseIntBool(uploadOnlyOption.getAttribute("checked")) == true ){
                         Log.log(Level.FINE, "Upload only is selected");
                         return true;
                     }
@@ -194,29 +185,27 @@ public class PublicLinkPage extends CommonPage {
 
     public boolean checkExpiration(String days){
         Log.log(Level.FINE, "Starts: Check expiration in days: " + days);
-        List<MobileElement> switchExpiration = (List<MobileElement>) driver.findElements(By.id("com.owncloud.android:id/shareViaLinkExpirationSwitch"));
-        boolean switchEnabled;
+        List<MobileElement> switchExpiration =
+                (List<MobileElement>) driver.findElements(By.id(switchExpirationId));
+        boolean switchEnabled = false;
         boolean dateCorrect = false;
         int expiration = DateUtils.minExpirationDate(
                 OCCapability.getInstance().expirationDateDays(),
                 Integer.valueOf(days)
         );
-        Log.log(Level.FINE, "Expiration: " + expiration);
         String shortDate = DateUtils.shortDate(Integer.toString(expiration));
-        Log.log(Level.FINE, "Date to check: " + shortDate);
+        Log.log(Level.FINE, "Date to check: " + shortDate + " Expiration: " + expiration);
         takeScreenshot("PublicShare/ExpirationDateChecks");
         if (switchExpiration.isEmpty()) {
-            Log.log(Level.FINE, "Switch hidden");
             switchEnabled = true;
         } else {
-            Log.log(Level.FINE, "Switch not hidden");
             switchEnabled = parseIntBool(switchExpiration.get(0).getAttribute("checked"));
         }
         Log.log(Level.FINE, "SwitchEnabled -> " + switchEnabled);
         if (switchEnabled) {
             dateCorrect = expirationDate.getText().equals(shortDate);
         }
-        Log.log(Level.FINE, "Datecorrect -> " + dateCorrect);
+        Log.log(Level.FINE, "Date Correct -> " + dateCorrect);
         return switchEnabled && dateCorrect;
     }
 
