@@ -11,7 +11,6 @@ Feature: Download a file in the account
       | textExample.txt     |
 
   @NoDevice
-  @NoEmulator
   Scenario Outline: Download a file that is not previewable
     When user selects to Download the item <itemName>
     Then user sees the detailed information: <itemName>, <Type>, and <Size>

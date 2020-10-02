@@ -49,7 +49,7 @@ Feature: Public Share
       |  Documents  |  link1   |    15       |
       |  Documents  |  link2   |    4        |
 
-    @expiration
+  @expiration
   Scenario Outline: Create a public link with expiration date
     When user selects to share the item <item>
     And user creates link on <item> with the following fields

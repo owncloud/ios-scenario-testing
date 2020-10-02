@@ -142,6 +142,7 @@ public class CommonAPI {
                 .addHeader("Host", host)
                 .post(body)
                 .build();
+        Log.log(Level.FINE, "RE: " + request.toString());
         return request;
     }
 

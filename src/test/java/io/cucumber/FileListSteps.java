@@ -73,7 +73,7 @@ public class FileListSteps {
         switch (operation){
             case "Download":
                 fileListPage.downloadAction(itemName);
-                //detailsPage.waitFinishedDownload(30);
+                detailsPage.waitFinishedDownload(30);
                 break;
             case "Upload":
                 //fileListPage.selectFileUpload(itemName);

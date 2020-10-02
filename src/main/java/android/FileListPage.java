@@ -233,8 +233,11 @@ public class FileListPage extends CommonPage {
         while (iterator.hasNext()){
             OCFile ocfile = (OCFile) iterator.next();
             Log.log(Level.FINE, "Checking item in list: " + ocfile.getName());
-            //Server returns the username as value. Here, we skip it
-            if (ocfile.getName().equals(LocProperties.getProperties().getProperty("userName1"))) {
+            //Server returns the username as value. Here, we skip it.
+            //in oCIS, id is returned instead of name in reference.
+            //Shortcut: username > 15 = id (check a best method)
+            if (ocfile.getName().equals(LocProperties.getProperties().getProperty("userName1")) ||
+                    ocfile.getName().length() > 15) {
                 continue;
             }
             while (!isItemInList(ocfile.getName()) && !endList(listServer.size())) {

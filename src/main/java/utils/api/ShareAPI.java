@@ -23,7 +23,7 @@ import utils.parser.ShareSAXHandler;
 
 public class ShareAPI extends CommonAPI {
 
-    private String sharingEndpoint = "/ocs/v2.php/apps/files_sharing/api/v1/shares";
+    private String sharingEndpoint = "/ocs/v1.php/apps/files_sharing/api/v1/shares";
 
     public ShareAPI(){
         super();
@@ -37,7 +37,9 @@ public class ShareAPI extends CommonAPI {
                 + itemPath + " " + type);
         Log.log(Level.FINE, "URL: " + url);
         Request request = postRequest(url, createBodyShare(itemPath, sharee, type, permissions, name));
-        httpClient.newCall(request).execute();
+        Response respose = httpClient.newCall(request).execute();
+        Log.log(Level.FINE, String.valueOf(respose.code()));
+        Log.log(Level.FINE, respose.body().string());
     }
 
     public OCShare getShare(String itemPath)
