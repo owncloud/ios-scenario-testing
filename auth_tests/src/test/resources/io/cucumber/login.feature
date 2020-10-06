@@ -16,6 +16,7 @@ Feature: Login
       | username     | password |
       |  user1       |    a     |
       |  e@solid     |    $%    |
+      |  hola hola   |    a     |
       |  a+a         |    a     |
 
   Scenario: An invalid login

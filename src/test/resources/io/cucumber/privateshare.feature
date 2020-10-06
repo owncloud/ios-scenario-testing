@@ -33,6 +33,7 @@ Feature: Private Share
       |  item   |   user    | permissions |
       #|  Files  |   user2   |   1         |
       |  Files  |   user2   |   9         |
+      |  Files  |   user2   |   17        |
 
   Scenario Outline: Delete existing share
     Given the item <item> is already shared with <user>
