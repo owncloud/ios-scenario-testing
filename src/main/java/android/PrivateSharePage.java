@@ -31,31 +31,23 @@ public class PrivateSharePage extends CommonPage {
     }
 
     public void switchCreate() {
-        boolean status = isCreateSelected();
         Log.log(Level.FINE, "Starts: Click create checkbox");
         createPermission.click();
-        waitTillStatus(5, createPermission, !status);
     }
 
     public void switchChange() {
-        boolean status = isChangeSelected();
         Log.log(Level.FINE, "Starts: Click change checkbox");
         editPermission.click();
-        waitTillStatus(5, editPermission, !status);
     }
 
     public void switchDelete() {
-        boolean status = isDeleteSelected();
         Log.log(Level.FINE, "Starts: Click delete checkbox:");
         deletePermission.click();
-        waitTillStatus(5, deletePermission, !status);
     }
 
     public void switchShare() {
-        boolean status = isShareEnabled();
         Log.log(Level.FINE, "Starts: Switch share button");
         sharePermission.click();
-        waitTillStatus(5, sharePermission, !status);
     }
 
     public boolean isCreateSelected(){

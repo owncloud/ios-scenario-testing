@@ -31,8 +31,9 @@ Feature: Private Share
 
     Examples:
       |  item   |   user    | permissions |
-      #|  Files  |   user2   |   1         |
+      |  Files  |   user2   |   1         |
       |  Files  |   user2   |   9         |
+      |  Files  |   user2   |   13        |
       |  Files  |   user2   |   17        |
 
   Scenario Outline: Delete existing share

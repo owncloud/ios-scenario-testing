@@ -20,6 +20,7 @@ Feature: Download a file in the account
       | itemName       | Type     | Size    |
       | Archive.zip    | ZIP file | 12.1 MB |
 
+
   Scenario Outline: Download a file that is  previewable
     When user selects to Download the item <itemName>
     Then the item <itemName> is opened and previewed

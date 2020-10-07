@@ -133,6 +133,8 @@ public class PrivateShareSteps {
                     break;
                 }
                 case "permissions": {
+                    sharePage.openPrivateShare(itemName);
+
                     break;
                 }
                 default:

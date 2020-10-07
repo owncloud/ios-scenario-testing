@@ -67,7 +67,7 @@ public class DetailsPage extends CommonPage {
     }
 
     public void waitFinishedDownload(int seconds){
-        waitByIdInvisible(seconds, downloading);
+        //waitByIdInvisible(seconds, downloading);
     }
 
     public void removeShareSheet(){
