@@ -83,7 +83,7 @@ public class PrivateShareSteps {
                 case(2):{
                     Log.log(Level.FINE, "Check Create");
                     char status = permissionsToString.charAt(i);
-                    boolean enabled = privateSharePage.isChangeSelected();
+                    boolean enabled = privateSharePage.isCreateSelected();
                     Log.log(Level.FINE, "Status: " + status +". Enabled: "+ enabled);
                     if (enabled != (status=='1'))
                         privateSharePage.switchCreate();
@@ -92,7 +92,7 @@ public class PrivateShareSteps {
                 case(3):{
                     Log.log(Level.FINE, "Check Change");
                     char status = permissionsToString.charAt(i);
-                    boolean enabled = privateSharePage.isCreateSelected();
+                    boolean enabled = privateSharePage.isChangeSelected();
                     Log.log(Level.FINE, "Status: " + status +". Enabled: "+ enabled);
                     if (enabled != (status=='1'))
                         privateSharePage.switchChange();
@@ -103,6 +103,8 @@ public class PrivateShareSteps {
             }
         }
         privateSharePage.close();
+        //An implicit wait to be used till a close button is available. To improve.
+        Thread.sleep(2000);
     }
 
     @When("^user deletes the share$")
@@ -133,8 +135,7 @@ public class PrivateShareSteps {
                     break;
                 }
                 case "permissions": {
-                    sharePage.openPrivateShare(itemName);
-
+                    //Not implemented yet
                     break;
                 }
                 default:

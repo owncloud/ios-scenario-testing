@@ -72,6 +72,8 @@ public class PublicLinkPage extends CommonPage {
 
     public void addPassword (String itemName, String password) throws IOException, SAXException, ParserConfigurationException {
         Log.log(Level.FINE, "Starts: Add link password: " + password);
+        //To avoid password keyboard to appear
+        driver.hideKeyboard();
         if (!isPasswordEnforced(itemName)){
             switchPassword = (MobileElement) driver.findElement(By.id(switchPasswordId));
             switchPassword.click();

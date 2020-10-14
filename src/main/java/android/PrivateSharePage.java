@@ -13,11 +13,14 @@ import utils.log.Log;
 
 public class PrivateSharePage extends CommonPage {
 
+    @AndroidFindBy(id="canEditSwitch")
+    private MobileElement editPermission;
+
     @AndroidFindBy(id="canEditCreateCheckBox")
     private MobileElement createPermission;
 
     @AndroidFindBy(id="canEditChangeCheckBox")
-    private MobileElement editPermission;
+    private MobileElement changePermission;
 
     @AndroidFindBy(id="canEditDeleteCheckBox")
     private MobileElement deletePermission;
@@ -32,16 +35,19 @@ public class PrivateSharePage extends CommonPage {
 
     public void switchCreate() {
         Log.log(Level.FINE, "Starts: Click create checkbox");
+        boolean status = isCreateSelected();
         createPermission.click();
     }
 
     public void switchChange() {
         Log.log(Level.FINE, "Starts: Click change checkbox");
-        editPermission.click();
+        boolean status = isChangeSelected();
+        changePermission.click();
     }
 
     public void switchDelete() {
         Log.log(Level.FINE, "Starts: Click delete checkbox:");
+        boolean status = isDeleteSelected();
         deletePermission.click();
     }
 
@@ -55,15 +61,23 @@ public class PrivateSharePage extends CommonPage {
     }
 
     public boolean isChangeSelected(){
-        return editPermission.isEnabled();
+        return changePermission.isEnabled();
     }
 
     public boolean isDeleteSelected(){
         return deletePermission.isEnabled();
     }
 
+    public boolean isEditPermission(){
+        return isCreateSelected() || isChangeSelected() || isDeleteSelected();
+    }
+
     public boolean isShareEnabled(){
         return sharePermission.isEnabled();
+    }
+
+    public boolean isEditEnabled(){
+        return editPermission.isEnabled();
     }
 
     public boolean isPasswordEnabled () {
