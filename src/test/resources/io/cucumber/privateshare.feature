@@ -28,8 +28,16 @@ Feature: Private Share
       | user        |  <user>        |
       | permissions |  <permissions> |
 
+#Permissions
+    # READ -> 1
+    # UPDATE -> 2
+    # CREATE -> 4
+    # DELETE -> 8
+    # SHARE -> 16
+
     Examples:
       |  item   |   user    | permissions |
+      |  Files  |   user2   |   1         |
       |  Files  |   user2   |   9         |
       |  Files  |   user2   |   13        |
       |  Files  |   user2   |   17        |
