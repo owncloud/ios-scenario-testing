@@ -138,9 +138,8 @@ public class FileListSteps {
         Log.log(Level.FINE, "----STEP----: " +
                 new Object(){}.getClass().getEnclosingMethod().getName()
                 + ":" + itemName + "-" + targetFolder);
-        fileListPage.browse(targetFolder);
-        fileListPage.waitToload();
-        i_see_the_item(targetFolder+"/"+itemName);
+        assertTrue(filesAPI.itemExist(targetFolder+"/"+itemName));
+        filesAPI.removeItem(targetFolder+"/"+itemName);
     }
 
     @Then("^user sees (.+) in the file list as original$")
