@@ -5,8 +5,6 @@ import org.openqa.selenium.support.PageFactory;
 import java.util.logging.Level;
 
 import io.appium.java_client.MobileElement;
-import io.appium.java_client.android.nativekey.AndroidKey;
-import io.appium.java_client.android.nativekey.KeyEvent;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import utils.log.Log;
@@ -27,6 +25,9 @@ public class PrivateSharePage extends CommonPage {
 
     @AndroidFindBy(id="canShareSwitch")
     private MobileElement sharePermission;
+
+    @AndroidFindBy(id="closeButton")
+    private MobileElement closeButton;
 
     public PrivateSharePage(){
         super();
@@ -86,6 +87,7 @@ public class PrivateSharePage extends CommonPage {
 
     public void close(){
         takeScreenshot("PrivateShare/ItemStatusBeforeClosing");
-        driver.pressKey(new KeyEvent(AndroidKey.BACK));
+        closeButton.click();
+        //driver.pressKey(new KeyEvent(AndroidKey.BACK));
     }
 }
