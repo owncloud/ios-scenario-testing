@@ -48,6 +48,7 @@ public class SharePage extends CommonPage {
 
     public void openPrivateShare(String itemName){
         Log.log(Level.FINE, "Starts: edit private share: " + itemName);
+        waitById(5, editprivateshare_id);
         driver.findElement(MobileBy.id(editprivateshare_id)).click();
     }
 

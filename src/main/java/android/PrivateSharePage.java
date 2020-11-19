@@ -4,14 +4,12 @@ import org.openqa.selenium.support.PageFactory;
 
 import java.util.logging.Level;
 
-import io.appium.java_client.MobileElement;
-import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import utils.log.Log;
 
 public class PrivateSharePage extends CommonPage {
 
-    @AndroidFindBy(id="canEditSwitch")
+    /*@AndroidFindBy(id="canEditSwitch")
     private MobileElement editPermission;
 
     @AndroidFindBy(id="canEditCreateCheckBox")
@@ -27,7 +25,13 @@ public class PrivateSharePage extends CommonPage {
     private MobileElement sharePermission;
 
     @AndroidFindBy(id="closeButton")
-    private MobileElement closeButton;
+    private MobileElement closeButton;*/
+
+    private String createbox_id = "canEditCreateCheckBox";
+    private String changebox_id = "canEditChangeCheckBox";
+    private String deletebox_id = "canEditDeleteCheckBox";
+    private String sharebox_id = "canShareSwitch";
+    private String closeButtonid = "closeButton";
 
     public PrivateSharePage(){
         super();
@@ -36,37 +40,59 @@ public class PrivateSharePage extends CommonPage {
 
     public void switchCreate() {
         Log.log(Level.FINE, "Starts: Click create checkbox");
+        waitById(5, createbox_id);
         boolean status = isCreateSelected();
-        createPermission.click();
+        driver.findElementById(createbox_id).click();
+        //createPermission.click();
     }
 
     public void switchChange() {
         Log.log(Level.FINE, "Starts: Click change checkbox");
+        waitById(5, changebox_id);
         boolean status = isChangeSelected();
-        changePermission.click();
+        driver.findElementById(changebox_id).click();
+        //changePermission.click();
     }
 
     public void switchDelete() {
         Log.log(Level.FINE, "Starts: Click delete checkbox:");
+        waitById(5, deletebox_id);
         boolean status = isDeleteSelected();
-        deletePermission.click();
+        driver.findElementById(deletebox_id).click();
+        //deletePermission.click();
     }
 
     public void switchShare() {
         Log.log(Level.FINE, "Starts: Switch share button");
-        sharePermission.click();
+        driver.findElementById(sharebox_id).click();
+        //sharePermission.click();
     }
 
     public boolean isCreateSelected(){
-        return createPermission.isEnabled();
+        if (!driver.findElementsById(createbox_id).isEmpty()) {
+            return driver.findElementById(createbox_id).isEnabled();
+        } else {
+            return false;
+        }
+        //return createPermission.isEnabled();
     }
 
     public boolean isChangeSelected(){
-        return changePermission.isEnabled();
+        if (!driver.findElementsById(changebox_id).isEmpty()) {
+            return driver.findElementById(changebox_id).isEnabled();
+        } else {
+            return false;
+        }
+        //return changePermission.isEnabled();
     }
 
     public boolean isDeleteSelected(){
-        return deletePermission.isEnabled();
+        if (!driver.findElementsById(deletebox_id).isEmpty()) {
+            return driver.findElementById(deletebox_id).isEnabled();
+        } else {
+            return false;
+        }
+        //return deletePermission.isEnabled();
     }
 
     public boolean isEditPermission(){
@@ -74,11 +100,13 @@ public class PrivateSharePage extends CommonPage {
     }
 
     public boolean isShareEnabled(){
-        return sharePermission.isEnabled();
+        return driver.findElementById(sharebox_id).isEnabled();
+        //return sharePermission.isEnabled();
     }
 
     public boolean isEditEnabled(){
-        return editPermission.isEnabled();
+        return driver.findElementById(changebox_id).isEnabled();
+        //return editPermission.isEnabled();
     }
 
     public boolean isPasswordEnabled () {
@@ -87,7 +115,8 @@ public class PrivateSharePage extends CommonPage {
 
     public void close(){
         takeScreenshot("PrivateShare/ItemStatusBeforeClosing");
-        closeButton.click();
+        driver.findElementById(closeButtonid).click();
+        //closeButton.click();
         //driver.pressKey(new KeyEvent(AndroidKey.BACK));
     }
 }
