@@ -78,7 +78,7 @@ public class FileListPage extends CommonPage {
     }
 
     public void refreshList(){
-        swipe(0.50, 0.20, 0.50, 0.90);
+        swipe(0.50, 0.35, 0.50, 0.90);
     }
 
     public void waitToload(){

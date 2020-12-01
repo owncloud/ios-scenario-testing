@@ -15,6 +15,7 @@ import okhttp3.FormBody;
 import okhttp3.Request;
 import okhttp3.RequestBody;
 import okhttp3.Response;
+import utils.LocProperties;
 import utils.date.DateUtils;
 import utils.entities.OCCapability;
 import utils.entities.OCShare;
@@ -24,6 +25,8 @@ import utils.parser.ShareSAXHandler;
 public class ShareAPI extends CommonAPI {
 
     private String sharingEndpoint = "/ocs/v1.php/apps/files_sharing/api/v1/shares";
+    private final String owner = LocProperties.getProperties().getProperty("userName1");
+    private final String sharee = LocProperties.getProperties().getProperty("userToShare");
 
     public ShareAPI(){
         super();
@@ -69,7 +72,7 @@ public class ShareAPI extends CommonAPI {
         }
         Log.log(Level.FINE, "Item returned: Sharee: " +
                 share.getShareeName() + " - Owner: " + share.getOwner());
-        return share.getShareeName().equals("user2") && share.getOwner().equals("user1");
+        return share.getShareeName().equals(sharee) && share.getOwner().equals(owner);
     }
 
     public void removeShare(String id)
