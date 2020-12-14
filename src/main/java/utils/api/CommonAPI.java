@@ -26,9 +26,8 @@ public class CommonAPI {
 
     protected final OkHttpClient httpClient = getUnsafeOkHttpClient();
 
-    protected String urlServer = LocProperties.getProperties().getProperty("serverURL");
+    protected String urlServer = System.getProperty("server");
     protected String userAgent = LocProperties.getProperties().getProperty("userAgent");
-    //protected String host = LocProperties.getProperties().getProperty("hostName");
     protected String host = urlServer.split("//")[1];
 
     protected String user = LocProperties.getProperties().getProperty("userName1");

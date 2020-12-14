@@ -31,7 +31,7 @@ public class LoginPage extends CommonPage{
     @AndroidFindBy(id="ok")
     private MobileElement acceptCertificate;
 
-    private final String serverURL = LocProperties.getProperties().getProperty("serverURL");
+    private final String serverURL = System.getProperty("server");;
 
     public LoginPage(){
         super();

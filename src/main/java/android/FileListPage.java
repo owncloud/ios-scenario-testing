@@ -183,7 +183,7 @@ public class FileListPage extends CommonPage {
 
     public boolean fileIsDownloaded(String fileName) {
         Log.log(Level.FINE, "Starts: Checking file downloaded: " + fileName);
-        String urlServer = LocProperties.getProperties().getProperty("serverURL");
+        String urlServer = System.getProperty("server");
         String host = urlServer.split("//")[1];
 
         //Code below is pretty hacky and will be removed in Scope Storage. Skipping ftm

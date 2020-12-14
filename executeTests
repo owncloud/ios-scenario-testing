@@ -1,0 +1,67 @@
+#!/bin/bash
+
+/**
+ * ownCloud Android scenario tests
+ *
+ * @author Jesus Recio (@jesmrec)
+ * Copyright (C) 2020 ownCloud GmbH.
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License version 2,
+ * as published by the Free Software Foundation.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
+help()
+{
+   echo ""
+   echo "Usage: $0 -t <tags> -a <Appium Server URL> -d <device UID> -s <ownCloud Server URL>"
+   echo ""
+   echo "if Appium Server is not specified, will be used \"localhost:4723/wd/hub\""
+   echo ""
+   echo "if device is not specified, adb will take one of the list"
+   echo ""
+   exit 1 
+}
+
+while getopts ":t:a:s:d:" opt; do
+  case $opt in
+    t) tags="$OPTARG"
+    ;;
+    a) appium="$OPTARG"
+    ;;
+    s) oc="$OPTARG"
+    ;;
+    d) device="$OPTARG"
+    ;;
+    \?) echo "Invalid option -$OPTARG" >&2
+    ;;
+  esac
+done
+
+if [ -z "$oc" ] 
+then
+   echo ""
+   echo "ownCloud Server URL is missing";
+   help
+fi
+
+echo "Appium server: $appium"
+echo "oC server: $oc"
+echo "tags: $tags"
+echo "device: $device"
+
+
+./gradlew test \
+--info \
+-Dcucumber.options="--tags $tags" \
+-Dappium=$appium \
+-Ddevice=$device \
+-Dserver=$oc

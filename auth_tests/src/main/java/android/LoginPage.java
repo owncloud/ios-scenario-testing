@@ -16,7 +16,7 @@ public class LoginPage extends CommonPage{
     private String errorcredentialstext_xpath = "//*[@text='Wrong username or password']";
     private String acceptCert_id = "ok";
 
-    private final String serverURL = LocProperties.getProperties().getProperty("serverURL");
+    private final String serverURL = System.getProperty("server");;
     private final String oauth2URL = LocProperties.getProperties().getProperty("OAuth2URL");
     private final String oidcURL = LocProperties.getProperties().getProperty("oidcURL");
 
