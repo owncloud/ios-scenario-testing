@@ -58,7 +58,7 @@ public class AppiumManager {
         }
 
         try {
-            if (!driverURL.equals(null)) {
+            if (driverURL.equals(null)) {
                 driver = new AndroidDriver(new URL(driverURL), capabilities);
             } else {
                 driver = new AndroidDriver(new URL(driverDefect), capabilities);
