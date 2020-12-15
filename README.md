@@ -1,5 +1,8 @@
 # Scenario testing
 
+[![Testing Powered By SauceLabs](https://opensource.saucelabs.com/images/opensauce/powered-by-saucelabs-badge-red.png?sanitize=true "Testing Powered By SauceLabs")](https://saucelabs.com)
+
+
 Scenarios contained in feature files written in Gherkin language. Available scenarios can be found [here](android-scenario-testing/src/test/resources/io/cucumber). 
 
 Defined for the [ownCloud Android app](https://github.com/owncloud/android)
