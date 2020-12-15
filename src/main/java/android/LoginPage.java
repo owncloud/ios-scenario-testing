@@ -8,7 +8,6 @@ import java.util.logging.Level;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
-import utils.LocProperties;
 import utils.log.Log;
 
 public class LoginPage extends CommonPage{
@@ -31,7 +30,7 @@ public class LoginPage extends CommonPage{
     @AndroidFindBy(id="ok")
     private MobileElement acceptCertificate;
 
-    private final String serverURL = System.getProperty("server");;
+    private final String serverURL = System.getProperty("server");
 
     public LoginPage(){
         super();

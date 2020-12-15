@@ -1,37 +1,38 @@
 #!/bin/bash
 
-/**
- * ownCloud Android scenario tests
- *
- * @author Jesus Recio (@jesmrec)
- * Copyright (C) 2020 ownCloud GmbH.
- *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License version 2,
- * as published by the Free Software Foundation.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
- */
+#
+# ownCloud Android scenario tests
+#
+# @author Jesus Recio (@jesmrec)
+# Copyright (C) 2020 ownCloud GmbH.
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License version 2,
+# as published by the Free Software Foundation.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#
 
 help()
 {
    echo ""
-   echo "Usage: $0 -t <tags> -a <Appium Server URL> -d <device UID> -s <ownCloud Server URL>"
+   echo "Usage: $0 -s <ownCloud Server URL> -t <tags> -a <Appium Server URL> -d <device UID> "
    echo ""
-   echo "if Appium Server is not specified, will be used \"localhost:4723/wd/hub\""
-   echo ""
-   echo "if device is not specified, adb will take one of the list"
+   echo -e "\t-s (mandatory) URL of ownCloud server to test against"
+   echo -e "\t-a (optional) Appium server URL. if Appium Server is not specified, will be used \"localhost:4723/wd/hub\""
+   echo -e "\t-t (optional) Tag filter. F. ex: @createfolder will send only tests tagged with such label. Tags are allowed to concatenate, sepparated by \",\""
+   echo -e "\t-d (optional) In case of several devices attached, tests will be sent against the UID set in this option"
    echo ""
    exit 1 
 }
 
-while getopts ":t:a:s:d:" opt; do
+while getopts ":t:a:s:d:h" opt; do
   case $opt in
     t) tags="$OPTARG"
     ;;
@@ -41,14 +42,18 @@ while getopts ":t:a:s:d:" opt; do
     ;;
     d) device="$OPTARG"
     ;;
+    h) help
+    ;;
     \?) echo "Invalid option -$OPTARG" >&2
     ;;
   esac
 done
 
-if [ -z "$oc" ] 
+if [ $# -eq 0 ]
 then
-   echo ""
+  help
+elif [ -z "$oc" ]
+then
    echo "ownCloud Server URL is missing";
    help
 fi
@@ -58,10 +63,20 @@ echo "oC server: $oc"
 echo "tags: $tags"
 echo "device: $device"
 
+if [ -z "$tags" ]
+then
+   ./gradlew test \
+    --info \
+    -Dappium=$appium \
+    -Ddevice=$device \
+    -Dserver=$oc
 
-./gradlew test \
---info \
--Dcucumber.options="--tags $tags" \
--Dappium=$appium \
--Ddevice=$device \
--Dserver=$oc
+else
+  ./gradlew test \
+  --info \
+  -Dcucumber.options="--tags $tags" \
+  -Dappium=$appium \
+  -Ddevice=$device \
+  -Dserver=$oc
+
+fi
