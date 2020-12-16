@@ -1,7 +1,4 @@
-# Scenario testing
-
-[![Testing Powered By SauceLabs](https://opensource.saucelabs.com/images/opensauce/powered-by-saucelabs-badge-red.png?sanitize=true "Testing Powered By SauceLabs")](https://saucelabs.com)
-
+# System Tests
 
 Scenarios contained in feature files written in Gherkin language. Available scenarios can be found [here](android-scenario-testing/src/test/resources/io/cucumber). 
 
@@ -34,20 +31,18 @@ Different requirements:
 
 * `Appium` instance running and reachable
 
-* Device attached. Check command `adb devices` to ensure `Appium` will get the device reference to interact with it
+* At least, one device attached and reachable via adb. Check command `adb devices` to ensure `Appium` will get the device reference to interact with it
+
 
 * A `local.properties` file should be included in the project with the following parameters:
 
   * Remote set up:
 
-      * `serverURL`: Server URL with basic auth
-      * `OAuth2URL`: Server URL with OAuth2
-      * `userName1`: Username of existing user in all servers to test (to simplify)
-      * `passw1`: Password for the users defined in `userName1`
-      * `userToShare`: Existing user to search and share with
-      * `userToSharePwd`: Password of `userToShare`
-      * `hostName`: Name of the server host
-      * `appiumURL`: URL of running Appium server
+      * `userName1`: Username of existing user in all servers to test (to simplify). By default `user1`
+      * `passw1`: Password for the users defined in `userName1`. By default `a`
+      * `userToShare`: Existing user to search and share with. By default `user2`
+      * `userToSharePwd`: Password of `userToShare`. By default `a`
+      * `appiumURL`: URL of default running Appium server. By default `http\://127.0.0.1\:4723/wd/hub`
 
   * App parameters:
 
@@ -59,44 +54,23 @@ The environment variable `$ANDROID_HOME` needs to be correctly set up, pointing 
 
 ## How to test
 
-The simplest way:
+The script `executeTests` will launch the tests. The script needs some parameters.
 
-```
-./gradlew test
-```
 
-executed in the root folder the project. This order runs Cucumber features using the proper runner `Cucumber`. The `@RunWith(Cucumber.class)` annotation on the `RunCucumberTest` class tells JUnit to kick off Cucumber.
+	-s (mandatory) URL of ownCloud server to test against
+	-a (optional) Appium server URL. if Appium Server is not specified, will be used "localhost:4723/wd/hub"
+	-t (optional) Filter. F. ex: @createfolder will send only tests tagged with such label. Tags are allowed to concatenate, sepparated by \",\". It is also allowed to use a classpath to execute all the test in such class"
+	-d (optional) In case of several devices attached, tests will be sent against the UID set in this option. This is the id returned by `adb devices` command.
 
-But it is posible to add interesting options:
+Executing the script with the option `-h` or without parameters, will display the help.
 
-`--rerun-tasks` : avoid gradle's optimization
-
-`--info` : suggested logging level. Other options: `--debug`, `--warn` , `--quiet`. In case no option is selected, default is `--warn`
-
-So, recommended command to run all the tests:
-
-```
-./gradlew test --rerun-tasks --info 
-```
-
-the command will display step by step how the scenario is being executed.
+The execution will display step by step how the scenario is being executed.
 
 ## Test filtering
 
-There are two ways to select specific features to test.
+The way to filter which tests are executed is by tag. Tests can be tagged as well as feature files
 
-The main class `RunCucumberTest` contains the annotation `@CucumberOptions` in which different options are set. This is an static way to set up.
-
-The `cucumber.options` annotation will allow to set options in the command line execution.
-
-### By feature file
-
-Let the option know where the feature file is stored and only the defined scenarios inside will be triggered. Any other will be ignored. For example:
-
-```
-./gradlew test --rerun-tasks --info -Dcucumber.options=\src⁩/test⁩/⁨resources⁩/⁨io⁩/⁨cucumber/login.feature⁩"
-```
-### By tag
+Using the `-t` option with the `executeTests` script is the way to do:
 
 With a tag just above the scenario definition, it is posible to select which scenarios will be tested:
 
@@ -111,17 +85,40 @@ With a tag just above the scenario definition, it is posible to select which sce
 Then...
 
 ````
-./gradlew test --rerun-tasks --info -Dcucumber.options="--tags @oauth2"
+./executeTests -s ... -t @oauth2
 ````
 
-will trigger only that tests and others with the same tag
+will trigger only the tests inside that scenario.
+
+The tag set on the top of the feature file will involve all the tests inside
+
+```
+@delete
+Feature: Delete item
+
+  As an user, i want to be able to delete content from my list
+  so that i can get rid of the content i do not need anymore
+
+   Background: User is logged in
+  ...
+```
+
+Then...
+
+````
+./executeTests -s ... -t @delete
+````
+
+will trigger all the tests inside the mentioned feature file
 
 More than one tag is allowed (separated with `,`)
 
 ````
-./gradlew test --rerun-tasks --info -Dcucumber.options="--tags @oauth2,@basic,@sharing"
+./executeTests -s ... -t @oauth2,@delete
 ````
+
+The meaning is OR. All tests that are tagged with, at least, one of the tags will be executed
 
 More info in [Cucumber reference](https://cucumber.io/docs/cucumber/api/)
 
-**Note**: This repository was forked from [Cucumber-java skeleton](https://github.com/cucumber/cucumber-java-skeleton) repository, which contaions the base skeleton to start working.
+**Note**: This repository was forked from [Cucumber-java skeleton](https://github.com/cucumber/cucumber-java-skeleton) repository, which contains the base skeleton to start working.
