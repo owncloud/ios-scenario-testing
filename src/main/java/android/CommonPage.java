@@ -19,6 +19,7 @@ import io.appium.java_client.MobileElement;
 import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.touch.offset.PointOption;
+import utils.LocProperties;
 import utils.log.Log;
 
 public class CommonPage {
@@ -26,6 +27,7 @@ public class CommonPage {
     protected static AndroidDriver driver = AppiumManager.getManager().getDriver();
     protected Actions actions;
     private static final SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMdd_HHmmss");
+    private final String packag = LocProperties.getProperties().getProperty("appPackage");
 
     public CommonPage()  {
         actions = new Actions(driver);
@@ -94,6 +96,17 @@ public class CommonPage {
             Log.log(Level.FINE,"Take screenshot " + name + " at: " + sd);
         } catch (IOException e) {
             e.printStackTrace();
+        }
+    }
+
+    public void removeApp(){
+        driver.removeApp(packag);
+    }
+
+    public void reinstallApp(){
+        if (driver.isAppInstalled(packag)) {
+            driver.removeApp(LocProperties.getProperties().getProperty("appPackage"));
+            driver.launchApp();
         }
     }
 }

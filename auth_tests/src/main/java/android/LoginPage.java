@@ -32,13 +32,7 @@ public class LoginPage extends CommonPage{
         Log.log(Level.FINE, "Starts: Type URL.");
         waitById(15, urltext_id);
         driver.findElement(MobileBy.id(urltext_id)).sendKeys(selectURL(authMethod));
-        //driver.findElement(MobileBy.id(urltext_id)).sendKeys(serverURL);
         driver.findElement(MobileBy.id(embeddedbutton_id)).click();
-        //Check how to improve this. Very ugly
-        /*if (oidcURL.substring(0, 5).endsWith("s")) {
-            Log.log(Level.FINE, "https server");
-            driver.findElement(MobileBy.id(acceptCert_id)).click();
-        }*/
     }
 
     public void typeCredentials(String username, String password){

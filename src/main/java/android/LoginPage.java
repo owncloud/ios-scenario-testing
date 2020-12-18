@@ -5,9 +5,11 @@ import org.openqa.selenium.support.PageFactory;
 import java.util.List;
 import java.util.logging.Level;
 
+import io.appium.java_client.MobileBy;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
+import utils.LocProperties;
 import utils.log.Log;
 
 public class LoginPage extends CommonPage{
@@ -30,7 +32,13 @@ public class LoginPage extends CommonPage{
     @AndroidFindBy(id="ok")
     private MobileElement acceptCertificate;
 
-    private final String serverURL = System.getProperty("server");
+    private final String serverURL = LocProperties.getProperties().getProperty("serverBasicTest");
+    private final String oauth2URL = LocProperties.getProperties().getProperty("serverOAuth2Test");
+    private final String oidcURL = LocProperties.getProperties().getProperty("serverOIDCTest");
+
+    private final String server = System.getProperty("server");
+
+    private String errorcredentialstext_xpath = "//*[@text='Wrong username or password']";
 
     public LoginPage(){
         super();
@@ -44,13 +52,15 @@ public class LoginPage extends CommonPage{
     public void typeURL(){
         Log.log(Level.FINE, "Starts: Type URL.");
         waitById(15, urlServer.get(0));
-        urlServer.get(0).sendKeys(serverURL);
+        urlServer.get(0).sendKeys(server);
         checkServerButton.click();
-        //Check how to improve this. Very ugly
-        /*if (oidcURL.substring(0, 5).endsWith("s")) {
-            Log.log(Level.FINE, "https server");
-            driver.findElement(MobileBy.id(acceptCert_id)).click();
-        }*/
+    }
+
+    public void typeURL(String authMethod){
+        Log.log(Level.FINE, "Starts: Type URL.");
+        waitById(15, urlServer.get(0));
+        urlServer.get(0).sendKeys(selectURL(authMethod));
+        checkServerButton.click();
     }
 
     public void typeCredentials(String username, String password){
@@ -66,4 +76,26 @@ public class LoginPage extends CommonPage{
         waitById(15, loginButton);
         loginButton.click();
     }
+
+    public boolean isCredentialsErrorMessage(){
+        return driver.findElements(MobileBy.xpath(errorcredentialstext_xpath)).size() > 0;
+    }
+
+    private String selectURL(String authMehod){
+        switch (authMehod){
+            case "basic auth":
+                Log.log(Level.FINE, "URL: " + serverURL);
+                return serverURL;
+            case "OAuth2":
+                Log.log(Level.FINE, "URL: " + oauth2URL);
+                return oauth2URL;
+            case "OIDC":
+                Log.log(Level.FINE, "URL: " + oidcURL);
+                return oidcURL;
+            default:
+                Log.log(Level.WARNING, "No URL");
+                return null;
+        }
+    }
+
 }

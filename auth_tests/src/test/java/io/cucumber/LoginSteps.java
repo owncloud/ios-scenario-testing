@@ -15,7 +15,6 @@ import utils.api.CommonAPI;
 import utils.log.Log;
 
 import static org.junit.Assert.assertTrue;
-import static org.junit.Assert.assertFalse;
 
 public class LoginSteps {
 
