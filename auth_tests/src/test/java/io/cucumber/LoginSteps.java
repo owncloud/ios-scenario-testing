@@ -15,6 +15,7 @@ import utils.api.CommonAPI;
 import utils.log.Log;
 
 import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.assertFalse;
 
 public class LoginSteps {
 
@@ -71,13 +72,31 @@ public class LoginSteps {
     public void i_can_see_the_main_page() {
         Log.log(Level.FINE, "----STEP----: " +
                 new Object(){}.getClass().getEnclosingMethod().getName());
-        assertTrue(fileListPage.isHeader());
+        try {
+            assertTrue(fileListPage.isHeader());
+        // In case the assertion fails, we have to remove the app to keep executing other tests
+        // After catching the error, it must be thrown again to return the correct test result.
+        // Otherwise, the test will never fail
+        } catch (AssertionError e) {
+            loginPage.removeApp();
+            throw e;
+        }
+        loginPage.removeApp();
     }
 
     @Then("^user sees an error message$")
     public void i_see_an_error_message() {
         Log.log(Level.FINE, "----STEP----: " +
                 new Object(){}.getClass().getEnclosingMethod().getName());
-        assertTrue(loginPage.isCredentialsErrorMessage());
+        try {
+            assertTrue(loginPage.isCredentialsErrorMessage());
+        // In case the assertion fails, we have to remove the app to keep executing other tests
+        // After catching the error, it must be thrown again to return the correct test result.
+        // Otherwise, the test will never fail
+        } catch (AssertionError e) {
+            loginPage.removeApp();
+            throw e;
+        }
+        loginPage.removeApp();
     }
 }

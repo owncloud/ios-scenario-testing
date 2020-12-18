@@ -23,4 +23,6 @@ repositories {
 
 test {
     systemProperty "cucumber.options", System.getProperty("cucumber.options")
+    systemProperty "appium", System.getProperty("appium")
+    systemProperty "device", System.getProperty("device")
 }

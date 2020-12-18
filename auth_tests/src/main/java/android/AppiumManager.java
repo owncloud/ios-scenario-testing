@@ -22,7 +22,8 @@ public class AppiumManager {
 
     private static AppiumManager appiumManager;
     private static AndroidDriver driver;
-    private static final String driverURL = LocProperties.getProperties().getProperty("appiumURL");
+    private static final String driverDefect = LocProperties.getProperties().getProperty("appiumURL");
+    private static final String driverURL = System.getProperty("appium");
 
     private AppiumManager() {
         init();
@@ -54,7 +55,11 @@ public class AppiumManager {
         capabilities.setCapability ("uiautomator2ServerInstallTimeout", 60000);
 
         try {
-            driver = new AndroidDriver (new URL(driverURL), capabilities);
+            if (driverURL.equals(null)) {
+                driver = new AndroidDriver(new URL(driverURL), capabilities);
+            } else {
+                driver = new AndroidDriver(new URL(driverDefect), capabilities);
+            }
         } catch (MalformedURLException e) {
             Log.log(Level.SEVERE, "Driver could not be created: " + e.getMessage());
             e.printStackTrace();
