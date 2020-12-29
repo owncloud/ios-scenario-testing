@@ -72,6 +72,7 @@ public class CommonAPI {
         Request request = davRequestUnauth(url, "GET");
         Response response = httpClient.newCall(request).execute();
         Headers headers = response.headers();
+        response.close();
         List<String> allHeaders = headers.values("Www-Authenticate");
         for (String header : allHeaders){
             Log.log(Level.FINE, "Header to check: " + header);
@@ -94,7 +95,9 @@ public class CommonAPI {
         Request request = getRequest(url, true);
         Response response = httpClient.newCall(request).execute();
         Log.log(Level.FINE, "Body lenght: " + response.body().contentLength());
-        if (response.body().contentLength() > 0)
+        boolean withBody = response.body().contentLength() > 0;
+        response.close();
+        if (withBody)
             return true;
         else
             return false;
@@ -106,7 +109,9 @@ public class CommonAPI {
         Request request = getRequest(urlCheck, false);
         Response response = httpClient.newCall(request).execute();
         Log.log(Level.FINE, "Capabilities: " + response.body());
-        return response.body().string();
+        String capabilities =  response.body().string();
+        response.close();
+        return capabilities;
     }
 
     protected Request davRequest(String url, String method, RequestBody body) {

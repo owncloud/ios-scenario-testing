@@ -40,9 +40,10 @@ public class ShareAPI extends CommonAPI {
                 + itemPath + " " + type);
         Log.log(Level.FINE, "URL: " + url);
         Request request = postRequest(url, createBodyShare(itemPath, sharee, type, permissions, name));
-        Response respose = httpClient.newCall(request).execute();
-        Log.log(Level.FINE, String.valueOf(respose.code()));
-        Log.log(Level.FINE, respose.body().string());
+        Response response = httpClient.newCall(request).execute();
+        Log.log(Level.FINE, String.valueOf(response.code()));
+        Log.log(Level.FINE, response.body().string());
+        response.close();
     }
 
     public OCShare getShare(String itemPath)
@@ -53,7 +54,7 @@ public class ShareAPI extends CommonAPI {
         Request request = getRequest(url, false);
         Response response = httpClient.newCall(request).execute();
         OCShare share = getId(response);
-        response.body().close();
+        response.close();
         return share;
     }
 
@@ -65,7 +66,7 @@ public class ShareAPI extends CommonAPI {
         Request request = getRequest(url, true);
         Response response = httpClient.newCall(request).execute();
         OCShare share = getId(response);
-        response.body().close();
+        response.close();
         if (share == null) {
             Log.log(Level.FINE, itemName + " not shared with me");
             return false;

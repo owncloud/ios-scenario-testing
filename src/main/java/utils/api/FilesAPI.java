@@ -33,7 +33,7 @@ public class FilesAPI extends CommonAPI {
         Log.log(Level.FINE, "URL: " + url);
         Request request = deleteRequest(url);
         Response response = httpClient.newCall(request).execute();
-        response.body().close();
+        response.close();
     }
 
     public void createFolder(String folderName)
@@ -43,7 +43,7 @@ public class FilesAPI extends CommonAPI {
         Log.log(Level.FINE, "URL: " + url);
         Request request = davRequest(url, "MKCOL", null);
         Response response = httpClient.newCall(request).execute();
-        response.body().close();
+        response.close();
     }
 
     public boolean itemExist(String itemName)
@@ -54,7 +54,7 @@ public class FilesAPI extends CommonAPI {
         Response response;
         Request request = davRequest(url, "PROPFIND", null);
         response = httpClient.newCall(request).execute();
-        response.body().close();
+        response.close();
         switch (response.code()/100){
             case(2): {
                 Log.log(Level.FINE, "Response "+response.code()+". Item exists");
@@ -81,7 +81,9 @@ public class FilesAPI extends CommonAPI {
         Response response;
         Request request = davRequest(url, "PROPFIND", null);
         response = httpClient.newCall(request).execute();
-        return getList(response).get(0).getType() == null;
+        boolean isFolder = getList(response).get(0).getType() == null;
+        response.close();
+        return isFolder;
     }
 
     public ArrayList<OCFile> listItems(String path)
@@ -94,7 +96,9 @@ public class FilesAPI extends CommonAPI {
                 basicPropfindBody);
         Request request = davRequest(url, "PROPFIND", body);
         response = httpClient.newCall(request).execute();
-        return getList(response);
+        ArrayList<OCFile> listItems = getList(response);
+        response.close();
+        return listItems;
     }
 
     private ArrayList<OCFile> getList(Response httpResponse)
