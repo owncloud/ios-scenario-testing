@@ -10,6 +10,7 @@ Feature: Public Share
       | Documents        |
       | textExample.txt  |
 
+  @smoke
   Scenario Outline: Create a public link with name
     When user selects to share the item <item>
     And user creates link on <item> with the following fields

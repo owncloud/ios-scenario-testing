@@ -9,6 +9,7 @@ Feature: Set items as available offline (downloaded and synced)
     And the following items exist in the account
       | ownCloud Manual.pdf |
 
+  @smoke
   Scenario Outline: Set a file as available offline
     When user selects to Set as available offline the item <itemName>
     Then user sees the item <itemName> as av.offline

@@ -7,6 +7,7 @@ Feature: Login
   Background: Skipping wizard
     Given wizard is skipped
 
+  @smoke
   Scenario Outline: A valid login
     When server with basic auth is available
     And user logins as <username> with password <password> as basic auth credentials

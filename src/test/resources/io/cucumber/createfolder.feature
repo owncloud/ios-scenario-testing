@@ -7,6 +7,7 @@ Feature: Create a new folder
   Background: User is logged in
     Given user1 is logged
 
+  @smoke
   Scenario Outline: Create a new folder
     When user selects the option Create Folder
     And user sets <newFolder> as name
