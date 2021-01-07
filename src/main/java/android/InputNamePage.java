@@ -11,7 +11,7 @@ import utils.log.Log;
 
 public class InputNamePage extends CommonPage {
 
-    @AndroidFindBy(id="user_input")
+    @AndroidFindBy(id="com.owncloud.android:id/user_input")
     private MobileElement newName;
 
     @AndroidFindBy(id="android:id/button1")

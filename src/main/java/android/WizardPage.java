@@ -11,7 +11,7 @@ import utils.log.Log;
 
 public class WizardPage extends CommonPage {
 
-    @AndroidFindBy(id="skip")
+    @AndroidFindBy(id="com.owncloud.android:id/skip")
     private MobileElement skip;
 
     public WizardPage(){

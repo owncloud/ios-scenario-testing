@@ -27,7 +27,7 @@ public class CommonPage {
     protected static AndroidDriver driver = AppiumManager.getManager().getDriver();
     protected Actions actions;
     private static final SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMdd_HHmmss");
-    private final String packag = LocProperties.getProperties().getProperty("appPackage");
+    protected final String packag = LocProperties.getProperties().getProperty("appPackage");
 
     public CommonPage()  {
         actions = new Actions(driver);

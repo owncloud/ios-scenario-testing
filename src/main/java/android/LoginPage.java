@@ -14,19 +14,19 @@ import utils.log.Log;
 
 public class LoginPage extends CommonPage{
 
-    @AndroidFindBy(id="hostUrlInput")
+    @AndroidFindBy(id="com.owncloud.android:id/hostUrlInput")
     private List<MobileElement> urlServer;
 
-    @AndroidFindBy(id="embeddedCheckServerButton")
+    @AndroidFindBy(id="com.owncloud.android:id/embeddedCheckServerButton")
     private MobileElement checkServerButton;
 
-    @AndroidFindBy(id="account_username")
+    @AndroidFindBy(id="com.owncloud.android:id/account_username")
     private MobileElement userNameText;
 
-    @AndroidFindBy(id="account_password")
+    @AndroidFindBy(id="com.owncloud.android:id/account_password")
     private MobileElement passwordText;
 
-    @AndroidFindBy(id="loginButton")
+    @AndroidFindBy(id="com.owncloud.android:id/loginButton")
     private MobileElement loginButton;
 
     @AndroidFindBy(id="ok")

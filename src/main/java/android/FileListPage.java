@@ -33,13 +33,13 @@ public class FileListPage extends CommonPage {
     @AndroidFindBy(uiAutomator="new UiSelector().resourceId(\"com.owncloud.android:id/action_mode_close_button\");")
     private MobileElement closeSelectionMode;
 
-    @AndroidFindBy(id="fab_expand_menu_button")
+    @AndroidFindBy(id="com.owncloud.android:id/fab_expand_menu_button")
     private MobileElement fabButton;
 
-    @AndroidFindBy(id="fab_mkdir")
+    @AndroidFindBy(id="com.owncloud.android:id/fab_mkdir")
     private MobileElement createFolder;
 
-    @AndroidFindBy(id="fab_upload")
+    @AndroidFindBy(id="com.owncloud.android:id/fab_upload")
     private MobileElement uploadOption;
 
     @AndroidFindBy(id="com.owncloud.android:id/localFileIndicator")
@@ -51,7 +51,7 @@ public class FileListPage extends CommonPage {
     @AndroidFindBy(id="com.owncloud.android:id/action_sync_file")
     private MobileElement syncFile;
 
-    @AndroidFindBy(id="toolbar")
+    @AndroidFindBy(id="com.owncloud.android:id/toolbar")
     private List<MobileElement> toolbar;
 
     @AndroidFindBy(id="com.owncloud.android:id/list_root")
@@ -63,6 +63,7 @@ public class FileListPage extends CommonPage {
     @AndroidFindBy(id="com.owncloud.android:id/Filename")
     private MobileElement fileName;
 
+    private final String listFiles_id = "com.owncloud.android:id/list_root";
     private HashMap<String, String> operationsMap = new HashMap<String, String>();
 
     public FileListPage() {
@@ -82,9 +83,10 @@ public class FileListPage extends CommonPage {
     }
 
     public void waitToload(){
+
         try {
             //if list of files is not loaded, we should swipe to get the file list
-            waitById(30, listFiles);
+            waitById(30, listFiles_id);
         } catch (Exception e) {
             swipe(0.50, 0.20, 0.50, 0.90);
             waitByTextVisible(30, "Documents");

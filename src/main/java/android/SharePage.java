@@ -22,7 +22,7 @@ public class SharePage extends CommonPage {
     private final String sharefilename_id = "com.owncloud.android:id/shareFileName";
     private final String unshareprivate_id = "com.owncloud.android:id/unshareButton";
     private final String deleteprivatelink_id = "com.owncloud.android:id/deletePublicLinkButton";
-    private final String privatesharesectiontitle_id = "shareWithUsersSectionTitle";
+    private final String privatesharesectiontitle_id = "com.owncloud.android:id/shareWithUsersSectionTitle";
     private String acceptdeletion_id = "android:id/button1";
     private String canceldeletion_id = "android:id/button3";
 
