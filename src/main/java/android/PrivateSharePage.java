@@ -27,11 +27,11 @@ public class PrivateSharePage extends CommonPage {
     @AndroidFindBy(id="closeButton")
     private MobileElement closeButton;*/
 
-    private String createbox_id = "canEditCreateCheckBox";
-    private String changebox_id = "canEditChangeCheckBox";
-    private String deletebox_id = "canEditDeleteCheckBox";
-    private String sharebox_id = "canShareSwitch";
-    private String closeButtonid = "closeButton";
+    private String createbox_id = "com.owncloud.android:id/canEditCreateCheckBox";
+    private String changebox_id = "com.owncloud.android:id/canEditChangeCheckBox";
+    private String deletebox_id = "com.owncloud.android:id/canEditDeleteCheckBox";
+    private String sharebox_id = "com.owncloud.android:id/canShareSwitch";
+    private String closeButtonid = "com.owncloud.android:id/closeButton";
 
     public PrivateSharePage(){
         super();

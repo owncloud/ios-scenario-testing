@@ -216,7 +216,7 @@ public class FileListPage extends CommonPage {
 
     public boolean fileIsMarkedAsAvOffline(String itemName){
         //Wait the file to be downloaded
-        waitById(15, syncFile);
+        waitById(30, syncFile);
         MobileElement element = getElementFromFileList(itemName);
         takeScreenshot("FileAvOffline/File_"+itemName+"_AvOffline");
         return avOfflineIndicator.isDisplayed();
