@@ -26,7 +26,8 @@ public class ShareAPI extends CommonAPI {
 
     private String sharingEndpoint = "/ocs/v1.php/apps/files_sharing/api/v1/shares";
     private final String owner = LocProperties.getProperties().getProperty("userName1");
-    private final String sharee = LocProperties.getProperties().getProperty("userToShare");
+    private final String shareeU = LocProperties.getProperties().getProperty("userToShare");
+    private final String shareeG = LocProperties.getProperties().getProperty("groupToShare");
 
     public ShareAPI(){
         super();
@@ -58,7 +59,7 @@ public class ShareAPI extends CommonAPI {
         return share;
     }
 
-    public boolean isSharedWithMe(String itemName)
+    public boolean isSharedWithMe(String itemName, boolean isGroup)
             throws IOException, ParserConfigurationException, SAXException {
         String url = urlServer + sharingEndpoint + "?shared_with_me=true";
         Log.log(Level.FINE, "Starts: Request items shared with me - " + itemName);
@@ -71,6 +72,7 @@ public class ShareAPI extends CommonAPI {
             Log.log(Level.FINE, itemName + " not shared with me");
             return false;
         }
+        String sharee = isGroup ? shareeG : shareeU;
         Log.log(Level.FINE, "Item returned: Sharee: " +
                 share.getShareeName() + " - Owner: " + share.getOwner());
         return share.getShareeName().equals(sharee) && share.getOwner().equals(owner);

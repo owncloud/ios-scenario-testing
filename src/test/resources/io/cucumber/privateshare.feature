@@ -10,9 +10,9 @@ Feature: Private Share
       | Documents |
 
   @smoke
-  Scenario Outline: Correct share
+  Scenario Outline: Correct share with user
     When user selects <item> to share with <user>
-    Then <user> has access to <item>
+    Then user <user> has access to <item>
     And share is created on <item> with the following fields
       | user | <user> |
 
@@ -20,11 +20,22 @@ Feature: Private Share
       |  item   |   user    |
       |  Files  |   user2   |
 
+  @smoke
+  Scenario Outline: Correct share with group
+    When user selects <item> to share with <group>
+    Then group including <user_in_group> has access to <item>
+    And share is created on <item> with the following fields
+      | group | <group> |
+
+    Examples:
+      |  item   |   group    |  user_in_group |
+      |  Files  |   test     |     user2      |
+
   Scenario Outline: Edit existing share, removing permissions
     Given the item <item> is already shared with <user>
     When user selects to share the item <item>
     And user edits the share on <item> with permissions <permissions>
-    Then <user> has access to <item>
+    Then user <user> has access to <item>
     Then share is created on <item> with the following fields
       | user        |  <user>        |
       | permissions |  <permissions> |
@@ -47,7 +58,7 @@ Feature: Private Share
     Given the item <item> is already shared with <user>
     When user selects to share the item <item>
     And user deletes the share
-    Then <user> does not have access to <item>
+    Then user <user> does not have access to <item>
     And <item> is not shared anymore with <user>
 
     Examples:

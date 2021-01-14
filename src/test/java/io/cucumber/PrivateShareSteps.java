@@ -121,6 +121,7 @@ public class PrivateShareSteps {
         Log.log(Level.FINE, "----STEP----: " +
                 new Object(){}.getClass().getEnclosingMethod().getName() + ": " + itemName);
         //Asserts in UI
+        String groupName = null;
         List<List<String>> listItems = table.asLists();
         for (List<String> rows : listItems) {
             switch (rows.get(0)) {
@@ -132,6 +133,11 @@ public class PrivateShareSteps {
                 }
                 case "user": {
                     assertTrue(sharePage.isItemInListPrivateShares(rows.get(1)));
+                    break;
+                }
+                case "group": {
+                    assertTrue(sharePage.isItemInListPrivateShares(rows.get(1)+ " (group)"));
+                    groupName = rows.get(1);
                     break;
                 }
                 case "permissions": {
@@ -148,20 +154,28 @@ public class PrivateShareSteps {
         shareAPI.removeShare(share.getId());
     }
 
-    @Then("^(.+) has access to (.+)$")
-    public void sharee_has_the_file (String userName, String itemName)
+    @Then("^group including (.+) has access to (.+)$")
+    public void group_has_the_file (String userName, String itemName)
             throws Throwable {
         Log.log(Level.FINE, "----STEP----: " +
                 new Object(){}.getClass().getEnclosingMethod().getName() + ": " + itemName);
-        assertTrue(shareAPI.isSharedWithMe(itemName));
+        assertTrue(shareAPI.isSharedWithMe(itemName, true));
     }
 
-    @Then("^(.+) does not have access to (.+)$")
+    @Then("^user (.+) does not have access to (.+)$")
     public void sharee_does_not_have_the_file (String userName, String itemName)
             throws Throwable {
         Log.log(Level.FINE, "----STEP----: " +
                 new Object(){}.getClass().getEnclosingMethod().getName() + ": " + itemName);
-        assertFalse(shareAPI.isSharedWithMe(itemName));
+        assertFalse(shareAPI.isSharedWithMe(itemName, false));
+    }
+
+    @Then("^user (.+) has access to (.+)$")
+    public void sharee_has_the_file (String userName, String itemName)
+            throws Throwable {
+        Log.log(Level.FINE, "----STEP----: " +
+                new Object(){}.getClass().getEnclosingMethod().getName() + ": " + itemName);
+        assertTrue(shareAPI.isSharedWithMe(itemName, false));
     }
 
     @Then("^(.+) is not shared anymore with (.+)$")
