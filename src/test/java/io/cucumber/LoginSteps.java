@@ -4,7 +4,6 @@ import android.ChromeCustomTabPage;
 import android.FileListPage;
 import android.KopanoPage;
 import android.LoginPage;
-import android.WizardPage;
 
 import java.util.logging.Level;
 
@@ -21,7 +20,7 @@ import static org.junit.Assert.assertTrue;
 public class LoginSteps {
 
     //Involved pages
-    private WizardPage wizardPage = new WizardPage();
+    //private WizardPage wizardPage = new WizardPage();
     private LoginPage loginPage = new LoginPage();
     private CommonAPI commonAPI = new CommonAPI();
     private FileListPage fileListPage = new FileListPage();
@@ -33,7 +32,7 @@ public class LoginSteps {
                 new Object(){}.getClass().getEnclosingMethod().getName());
         //In case it is installed, we remove to execute logon tests
         loginPage.reinstallApp();
-        wizardPage.skip();
+        //wizardPage.skip();
     }
 
     @Given("^user1 is logged$")
@@ -41,7 +40,7 @@ public class LoginSteps {
             throws Throwable {
         Log.log(Level.FINE, "----STEP----: " +
                 new Object(){}.getClass().getEnclosingMethod().getName());
-        wizardPage.skip();
+        //wizardPage.skip();
         if (loginPage.notLoggedIn()) {
             String authMethod = commonAPI.checkAuthMethod();
             String username = LocProperties.getProperties().getProperty("userName1");

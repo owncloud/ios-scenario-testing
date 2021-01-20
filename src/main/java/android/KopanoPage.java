@@ -1,123 +1,96 @@
 package android;
 
 import org.openqa.selenium.By;
+
 import java.util.logging.Level;
+
 import utils.log.Log;
 
 public class KopanoPage extends CommonPage {
 
     private long deviceVersion;
+    private boolean realDevice;
+    private String device = System.getProperty("device");
 
+    //Real device & emulator, Android >= 10
     private String username_xpath_10 = "/hierarchy/android.widget.FrameLayout/android.widget." +
             "LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget." +
             "FrameLayout/android.view.ViewGroup/android.widget.FrameLayout[1]/android.widget." +
             "FrameLayout[2]/android.webkit.WebView/android.view.View/android.view.View[1]/android.view." +
             "View/android.widget.EditText[1]";
 
-    private String username_xpath = "/hierarchy/android.widget.FrameLayout/android.widget." +
+    //Real device Android <= 10
+    private String username_xpath_real = "/hierarchy/android.widget.FrameLayout/android.widget." +
             "LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget." +
             "FrameLayout/android.view.ViewGroup/android.widget.FrameLayout[1]/android.widget." +
             "FrameLayout[1]/android.webkit.WebView/android.view.View/android.view.View[1]/android.view." +
             "View/android.widget.EditText[1]";
 
+    // Emulator Android < 10
+    private String username_xpath_emu = "android.webkit.WebView[@content-desc=\"Sign in — ownCloud\"]/android." +
+            "view.View/android.view.View[1]/android.view.View/android.view.View[1]/android.widget.EditText[1]";
+
+    // Real device & emulator Android >= 10
     private String password_xpath_10 = "/hierarchy/android.widget.FrameLayout/android.widget." +
             "LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget." +
             "FrameLayout/android.view.ViewGroup/android.widget.FrameLayout[1]/android.widget." +
             "FrameLayout[2]/android.webkit.WebView/android.view.View/android.view.View[1]/android.view." +
             "View/android.widget.EditText[2]";
 
-    private String password_xpath = "/hierarchy/android.widget.FrameLayout/android.widget." +
+    // Real device Android < 10
+    private String password_xpath_real = "/hierarchy/android.widget.FrameLayout/android.widget." +
             "LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget." +
             "FrameLayout/android.view.ViewGroup/android.widget.FrameLayout[1]/android.widget." +
             "FrameLayout[1]/android.webkit.WebView/android.view.View/android.view.View[1]/android.view." +
             "View/android.widget.EditText[2]";
 
+    // Emulator Android < 10
+    private String password_xpath_emu = "//android.webkit.WebView[@content-desc=\"Sign in — ownCloud\"]/android" +
+            ".view.View/android.view.View[1]/android.view.View/android.widget.EditText[2]";
+
+    // Real device & emulator Android >= 10
     private String acceptButton_xpath_10 = "/hierarchy/android.widget.FrameLayout/android.widget." +
             "LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget." +
             "FrameLayout/android.view.ViewGroup/android.widget.FrameLayout[1]/android.widget." +
             "FrameLayout[2]/android.webkit.WebView/android.view.View/android.view.View[1]/android.view." +
             "View/android.view.View/android.widget.Button";
 
-    private String acceptButton_xpath = "/hierarchy/android.widget.FrameLayout/android.widget." +
+    // Real device Android < 10
+    private String acceptButton_xpath_real = "/hierarchy/android.widget.FrameLayout/android.widget." +
             "LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget." +
             "FrameLayout/android.view.ViewGroup/android.widget.FrameLayout[1]/android.widget." +
             "FrameLayout[1]/android.webkit.WebView/android.view.View/android.view.View[1]/android.view." +
             "View/android.view.View/android.widget.Button";
 
+    // Emulator Android < 10
+    private String acceptButton_xpath_emu = "//android.widget.Button[@content-desc=\"Log in \"]";
+
+    // Real device & emulator Android >= 10
     private String authorize_xpath_10 = "/hierarchy/android.widget.FrameLayout/android.widget." +
             "LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget." +
             "FrameLayout/android.view.ViewGroup/android.widget.FrameLayout[1]/android.widget." +
             "FrameLayout[2]/android.webkit.WebView/android.view.View/android.view.View[1]/android.view." +
             "View[5]/android.view.View[2]/android.widget.Button";
 
-    private String authorize_xpath = "/hierarchy/android.widget.FrameLayout/android.widget." +
+    // Real device Android < 10
+    private String authorize_xpath_real = "/hierarchy/android.widget.FrameLayout/android.widget." +
             "LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget." +
             "FrameLayout/android.view.ViewGroup/android.widget.FrameLayout[1]/android.widget." +
             "FrameLayout[1]/android.webkit.WebView/android.view.View/android.view.View[1]/android.view." +
             "View[5]/android.view.View[2]/android.widget.Button";
 
+    // Emulator Android < 10
+    private String authorize_xpath_emu = "//android.widget.Button[@content-desc=\"Allow \"]";
 
-    //old stuff for Android older than 10
-    /*private String username_xpath_old = "/hierarchy/android.widget.FrameLayout/android.widget." +
-            "LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget." +
-            "FrameLayout/android.view.ViewGroup/android.widget.FrameLayout[1]/android.widget." +
-            "FrameLayout[1]/android.webkit.WebView/android.view.View/android.app.Dialog/android.view." +
-            "View/android.view.View/android.view.View[1]/android.view.View[2]/android.view." +
-            "View[3]/android.view.View[1]/android.view.View[2]/android.widget.EditText";
-
-    private String password_xpath_old = "/hierarchy/android.widget.FrameLayout/android.widget." +
-            "LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget." +
-            "FrameLayout/android.view.ViewGroup/android.widget.FrameLayout[1]/android.widget." +
-            "FrameLayout[1]/android.webkit.WebView/android.view.View/android.app.Dialog/android.view." +
-            "View/android.view.View/android.view.View[1]/android.view.View[2]/android.view." +
-            "View[3]/android.view.View[2]/android.view.View[2]/android.widget.EditText";
-
-    private String acceptButton_xpath_old = "/hierarchy/android.widget.FrameLayout/android.widget." +
-            "LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget." +
-            "FrameLayout/android.view.ViewGroup/android.widget.FrameLayout[1]/android.widget." +
-            "FrameLayout[1]/android.webkit.WebView/android.view.View/android.app.Dialog/android.view." +
-            "View/android.view.View/android.view.View[1]/android.view.View[2]/android.view." +
-            "View[3]/android.view.View[3]/android.widget.Button";
-
-    private String authorize_xpath_old = "/hierarchy/android.widget.FrameLayout/android.widget." +
-            "LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget." +
-            "FrameLayout/android.view.ViewGroup/android.widget.FrameLayout[1]/android.widget." +
-            "FrameLayout[1]/android.webkit.WebView/android.view.View/android.app.Dialog/android." +
-            "view.View/android.view.View/android.view.View[1]/android.view.View[2]/android.view." +
-            "View[6]/android.view.View[2]/android.widget.Button";*/
-
-    //old stuff for Android 10
-    /*private String username_xpath_10 = "/hierarchy/android.widget.FrameLayout/android.widget." +
-            "LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget." +
-            "FrameLayout/android.view.ViewGroup/android.widget.FrameLayout[1]/android.widget." +
-            "FrameLayout[2]/android.webkit.WebView/android.view.View/android.app.Dialog/android.view." +
-            "View/android.view.View/android.view.View[1]/android.view.View[2]/android.view." +
-            "View[3]/android.view.View[1]/android.view.View[2]/android.widget.EditText";
-
-    private String password_xpath_10 = "/hierarchy/android.widget.FrameLayout/android.widget." +
-            "LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget." +
-            "FrameLayout/android.view.ViewGroup/android.widget.FrameLayout[1]/android.widget." +
-            "FrameLayout[2]/android.webkit.WebView/android.view.View/android.app.Dialog/android.view." +
-            "View/android.view.View/android.view.View[1]/android.view.View[2]/android.view." +
-            "View[3]/android.view.View[2]/android.view.View[2]/android.widget.EditText";
-
-    private String acceptButton_xpath_10 = "/hierarchy/android.widget.FrameLayout/android.widget." +
-            "LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget." +
-            "FrameLayout/android.view.ViewGroup/android.widget.FrameLayout[1]/android.widget." +
-            "FrameLayout[2]/android.webkit.WebView/android.view.View/android.app.Dialog/android.view." +
-            "View/android.view.View/android.view.View[1]/android.view.View[2]/android.view." +
-            "View[3]/android.view.View[3]/android.widget.Button";
-
-    private String authorize_xpath_10 = "/hierarchy/android.widget.FrameLayout/android.widget." +
-            "LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget." +
-            "FrameLayout/android.view.ViewGroup/android.widget.FrameLayout[1]/android.widget." +
-            "FrameLayout[2]/android.webkit.WebView/android.view.View/android.app.Dialog/android." +
-            "view.View/android.view.View/android.view.View[1]/android.view.View[2]/android.view." +
-            "View[6]/android.view.View[2]/android.widget.Button";*/
 
 
     public KopanoPage(){
         deviceVersion = (long) driver.getCapabilities().getCapability("deviceApiLevel");
+        if (device == null){
+            device = "emulator";
+        }
+        realDevice = device.contains("emulator") ? false : true;
+        Log.log(Level.FINE, "Real device?: " + realDevice);
     }
 
     public void enterCredentials(String username, String password){
@@ -132,11 +105,20 @@ public class KopanoPage extends CommonPage {
             }
         } else {
             Log.log(Level.FINE, "Android < 10");
-            if (!driver.findElementsByXPath(username_xpath).isEmpty()) {
-                Log.log(Level.FINE, "Entering credentials");
-                driver.findElement(By.xpath(username_xpath)).sendKeys(username);
-                driver.findElement(By.xpath(password_xpath)).sendKeys(password);
-                driver.findElement(By.xpath(acceptButton_xpath)).click();
+            if (realDevice){
+                if (!driver.findElementsByXPath(username_xpath_real).isEmpty()) {
+                    Log.log(Level.FINE, "Entering credentials in real device");
+                    driver.findElement(By.xpath(username_xpath_real)).sendKeys(username);
+                    driver.findElement(By.xpath(password_xpath_real)).sendKeys(password);
+                    driver.findElement(By.xpath(acceptButton_xpath_real)).click();
+                }
+            } else {  //running emulator
+                if (!driver.findElementsByXPath(username_xpath_emu).isEmpty()) {
+                    Log.log(Level.FINE, "Entering credentials emulator");
+                    driver.findElement(By.xpath(username_xpath_emu)).sendKeys(username);
+                    driver.findElement(By.xpath(password_xpath_emu)).sendKeys(password);
+                    driver.findElement(By.xpath(acceptButton_xpath_emu)).click();
+                }
             }
         }
     }
@@ -148,7 +130,11 @@ public class KopanoPage extends CommonPage {
             driver.findElement(By.xpath(authorize_xpath_10)).click();
         } else {
             Log.log(Level.FINE, "Android < 10");
-            driver.findElement(By.xpath(authorize_xpath)).click();
+            if (realDevice) {
+                driver.findElement(By.xpath(authorize_xpath_real)).click();
+            } else { //running emulator
+                driver.findElement(By.xpath(authorize_xpath_emu)).click();
+            }
         }
     }
 }

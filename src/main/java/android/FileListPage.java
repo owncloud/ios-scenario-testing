@@ -83,13 +83,12 @@ public class FileListPage extends CommonPage {
     }
 
     public void waitToload(){
-
         try {
             //if list of files is not loaded, we should swipe to get the file list
-            waitById(30, listFiles_id);
+            waitById(15, listFiles_id);
         } catch (Exception e) {
             swipe(0.50, 0.20, 0.50, 0.90);
-            waitByTextVisible(30, "Documents");
+            waitByTextVisible(10, "Documents");
         }
         takeScreenshot("OpenList/fileListLoaded");
     }

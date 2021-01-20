@@ -49,8 +49,8 @@ public class AppiumManager {
         capabilities.setCapability ("autoGrantPermissions", true);
         capabilities.setCapability ("unicodeKeyboard", true);
         capabilities.setCapability ("resetKeyboard", true);
-        capabilities.setCapability ("appWaitActivity",
-                "com.owncloud.android.ui.activity.WhatsNewActivity");
+        //capabilities.setCapability ("appWaitActivity",
+                //"com.owncloud.android.ui.activity.WhatsNewActivity");
         capabilities.setCapability (MobileCapabilityType.AUTOMATION_NAME, AutomationName.APPIUM);
         capabilities.setCapability ("uiautomator2ServerInstallTimeout", 60000);
         if (System.getProperty("device") != null) {
