@@ -8,7 +8,7 @@ Feature: Login
     Given wizard is skipped
 
   @smoke
-  Scenario Outline: A valid login
+  Scenario Outline: A valid login in basic auth
     When server with basic auth is available
     And user logins as <username> with password <password> as basic auth credentials
     Then user can see the main page
@@ -19,6 +19,36 @@ Feature: Login
       |  e@solid     |    $%    |
       |  hola hola   |    a     |
       |  a+a         |    a     |
+
+  @LDAP
+  Scenario Outline: A valid login in LDAP
+    When server with LDAP is available
+    And user logins as <username> with password <password> as LDAP credentials
+    Then user can see the main page
+
+    Examples:
+      | username        |   password   |
+      |  aaliyah_adams  |    secret    |
+
+  @redirect301
+  Scenario Outline: A valid login with 301 redirection
+    When server with redirection 301 is available
+    And user logins as <username> with password <password> as basic auth credentials
+    Then user can see the main page
+
+    Examples:
+      | username |   password   |
+      |  admin   |    admin     |
+
+  @redirect302
+  Scenario Outline: A valid login with 302 redirection
+    When server with redirection 302 is available
+    And user logins as <username> with password <password> as basic auth credentials
+    Then user can see the main page
+
+    Examples:
+      | username |   password   |
+      |  admin   |    admin     |
 
   Scenario: An invalid login
     When server with basic auth is available

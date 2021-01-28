@@ -35,6 +35,9 @@ public class LoginPage extends CommonPage{
     private final String serverURL = LocProperties.getProperties().getProperty("serverBasicTest");
     private final String oauth2URL = LocProperties.getProperties().getProperty("serverOAuth2Test");
     private final String oidcURL = LocProperties.getProperties().getProperty("serverOIDCTest");
+    private final String LDAPURL = LocProperties.getProperties().getProperty("serverLDAPTest");
+    private final String red301URL = LocProperties.getProperties().getProperty("server301Test");
+    private final String red302URL = LocProperties.getProperties().getProperty("server302Test");
 
     private final String server = System.getProperty("server");
 
@@ -89,6 +92,15 @@ public class LoginPage extends CommonPage{
             case "OAuth2":
                 Log.log(Level.FINE, "URL: " + oauth2URL);
                 return oauth2URL;
+            case "LDAP":
+                Log.log(Level.FINE, "URL: " + LDAPURL);
+                return LDAPURL;
+            case "redirection 301":
+                Log.log(Level.FINE, "URL: " + red301URL);
+                return red301URL;
+            case "redirection 302":
+                Log.log(Level.FINE, "URL: " + red302URL);
+                return red302URL;
             case "OIDC":
                 Log.log(Level.FINE, "URL: " + oidcURL);
                 return oidcURL;

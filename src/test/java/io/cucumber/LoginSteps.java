@@ -88,6 +88,7 @@ public class LoginSteps {
                 + ": " + username + " - " + password + " - " + authMethod);
         switch (authMethod) {
             case "basic auth":
+            case "LDAP":
                 loginPage.typeCredentials(username, password);
                 loginPage.submitLogin();
                 break;
