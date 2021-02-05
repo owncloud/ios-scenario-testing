@@ -20,7 +20,7 @@ Feature: Login
       |  hola hola   |    a     |
       |  a+a         |    a     |
 
-  @LDAP
+  @LDAP @smoke
   Scenario Outline: A valid login in LDAP
     When server with LDAP is available
     And user logins as <username> with password <password> as LDAP credentials
@@ -30,7 +30,7 @@ Feature: Login
       | username        |   password   |
       |  aaliyah_adams  |    secret    |
 
-  @redirect301
+  @redirect301 @smoke
   Scenario Outline: A valid login with 301 redirection
     When server with redirection 301 is available
     And user logins as <username> with password <password> as basic auth credentials
@@ -40,7 +40,7 @@ Feature: Login
       | username |   password   |
       |  admin   |    admin     |
 
-  @redirect302
+  @redirect302 @smoke
   Scenario Outline: A valid login with 302 redirection
     When server with redirection 302 is available
     And user logins as <username> with password <password> as basic auth credentials
@@ -50,7 +50,7 @@ Feature: Login
       | username |   password   |
       |  admin   |    admin     |
 
-  Scenario: An invalid login
+  Scenario: An invalid login @smoke
     When server with basic auth is available
     And user logins as user1 with password as as basic auth credentials
     Then user sees an error message
