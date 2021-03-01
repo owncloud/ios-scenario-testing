@@ -97,9 +97,22 @@ public class FileListPage extends CommonPage {
 
     public void createFolder(){
         Log.log(Level.FINE, "Starts: create folder");
-        waitById(5, fabButton);
-        fabButton.click();
-        createFolder.click();
+        //waitById(5, fabButton);
+        //fabButton.click();
+        //createFolder.click();
+        driver.switchTo().alert().accept();
+        driver.findElement(By.id("addServer")).click();
+        driver.findElement(By.id("row-url-url")).sendKeys("http://192.168.1.20:33000");
+        driver.findElement(By.id("continue-bar-button")).click();
+        driver.findElement(By.id("approve-button")).click();
+        driver.findElement(By.id("continue-bar-button")).click();
+        driver.findElement(By.id("row-credentials-username")).sendKeys("user1");
+        driver.findElement(By.id("row-credentials-password")).sendKeys("a");
+        driver.findElement(By.id("continue-bar-button")).click();
+    }
+
+    public boolean isBookmarkCreated(){
+        return driver.findElements(By.id("server-bookmark-cell")).size() > 0;
     }
 
     public void upload(){
@@ -109,18 +122,6 @@ public class FileListPage extends CommonPage {
         uploadOption.click();
     }
 
-    public void pushFile(String itemName){
-        Log.log(Level.FINE, "Starts: push file: " + itemName);
-        File rootPath = new File(System.getProperty("user.dir"));
-        File appDir = new File(rootPath, LocProperties.getProperties().getProperty("testResourcesPath"));
-        File app = new File(appDir, "io/cucumber/example-files/AAA.txt");
-        try {
-            driver.pushFile("/mnt/sdcard/Download/aaa.txt", app);
-        } catch (IOException e){
-            Log.log(Level.SEVERE, "IO Exception: " + e.getMessage());
-            e.printStackTrace();
-        }
-    }
 
     public void executeOperation(String operation, String itemName){
         Log.log(Level.FINE, "Starts: execute operation: " + operation + " " + itemName);
@@ -145,8 +146,9 @@ public class FileListPage extends CommonPage {
 
     public boolean isItemInList (String itemName) {
         Log.log(Level.FINE, "Starts: Check if item is in list: " + itemName);
-        return !driver.findElementsByAndroidUIAutomator(
-                "new UiSelector().text(\"" + itemName + "\");").isEmpty();
+        return true;
+        //return !driver.findElementsByAndroidUIAutomator(
+        //        "new UiSelector().text(\"" + itemName + "\");").isEmpty();
     }
 
     public boolean isHeader(){
@@ -156,12 +158,15 @@ public class FileListPage extends CommonPage {
     public void selectItemList(String itemName) {
         Log.log(Level.FINE, "Starts: select item from list: " + itemName);
         waitByTextVisible(30, itemName);
-        MobileElement element = getElementFromFileList(itemName);
-        actions.clickAndHold(element).perform();
+        driver.findElement(By.name(itemName + " Actions")).click();
+        //MobileElement element = getElementFromFileList(itemName);
+        //actions.clickAndHold(element).perform();
     }
 
     public void selectOperation(String operationName) {
-        if (driver.findElementsByAndroidUIAutomator(
+        driver.findElement(By.id("share-add-group")).click();
+        driver.findElement(By.linkText("Create Public Link")).click();
+        /*if (driver.findElementsByAndroidUIAutomator(
                 "new UiSelector().resourceId(\"" + operationsMap.get(operationName) + "\");").isEmpty()){
             //Operation inside menu, matching by name
             Log.log(Level.FINE, "Operation: " + operationName + " placed in menu");
@@ -171,7 +176,7 @@ public class FileListPage extends CommonPage {
             Log.log(Level.FINE, "Operation: " + operationName + " placed in toolbar");
             driver.findElement(MobileBy.AndroidUIAutomator(
                     "new UiSelector().resourceId(\""+ operationsMap.get(operationName) +"\");")).click();
-        }
+        }*/
     }
 
     public void browse(String folderName){

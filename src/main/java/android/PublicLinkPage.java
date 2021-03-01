@@ -66,8 +66,10 @@ public class PublicLinkPage extends CommonPage {
 
     public void addLinkName (String linkName) {
         Log.log(Level.FINE, "Starts: Add link name: " + linkName);
-        namePublicLink.clear();
-        namePublicLink.sendKeys(linkName);
+        driver.findElement(By.id("name-text-row")).clear();
+        driver.findElement(By.id("name-text-row")).sendKeys("name1");
+        //namePublicLink.clear();
+        //namePublicLink.sendKeys(linkName);
     }
 
     public void addPassword (String itemName, String password) throws IOException, SAXException, ParserConfigurationException {
@@ -220,7 +222,8 @@ public class PublicLinkPage extends CommonPage {
     public void submitLink() {
         Log.log(Level.FINE, "Starts: Submit public link");
         takeScreenshot("PublicShare/Submit");
-        saveButton.click();
+        //saveButton.click();
+        driver.findElement(By.linkText("Create")).click();
     }
 
     //To check if password is enforced in capabilities

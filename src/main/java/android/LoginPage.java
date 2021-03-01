@@ -1,5 +1,6 @@
 package android;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.support.PageFactory;
 
 import java.util.List;
@@ -7,30 +8,31 @@ import java.util.logging.Level;
 
 import io.appium.java_client.MobileBy;
 import io.appium.java_client.MobileElement;
-import io.appium.java_client.pagefactory.AndroidFindBy;
+import io.appium.java_client.pagefactory.iOSXCUITFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import utils.LocProperties;
 import utils.log.Log;
 
 public class LoginPage extends CommonPage{
 
-    @AndroidFindBy(id="com.owncloud.android:id/hostUrlInput")
+    @iOSXCUITFindBy(accessibility = "addServer")
+    private MobileElement addServer;
+
+    @iOSXCUITFindBy(accessibility = "row-url-url")
     private List<MobileElement> urlServer;
 
-    @AndroidFindBy(id="com.owncloud.android:id/embeddedCheckServerButton")
-    private MobileElement checkServerButton;
+    @iOSXCUITFindBy(accessibility = "continue-bar-button")
+    private MobileElement continueOption;
 
-    @AndroidFindBy(id="com.owncloud.android:id/account_username")
-    private MobileElement userNameText;
+    @iOSXCUITFindBy(accessibility = "approve-button")
+    private MobileElement approveButton;
 
-    @AndroidFindBy(id="com.owncloud.android:id/account_password")
-    private MobileElement passwordText;
+    @iOSXCUITFindBy(accessibility = "row-credentials-username")
+    private MobileElement usernameInput;
 
-    @AndroidFindBy(id="com.owncloud.android:id/loginButton")
-    private MobileElement loginButton;
+    @iOSXCUITFindBy(accessibility = "row-credentials-password")
+    private MobileElement passwordInput;
 
-    @AndroidFindBy(id="ok")
-    private MobileElement acceptCertificate;
 
     private final String serverURL = LocProperties.getProperties().getProperty("serverBasicTest");
     private final String oauth2URL = LocProperties.getProperties().getProperty("serverOAuth2Test");
@@ -41,7 +43,7 @@ public class LoginPage extends CommonPage{
 
     private final String server = System.getProperty("server");
 
-    private String errorcredentialstext_xpath = "//*[@text='Wrong username or password']";
+    //private String errorcredentialstext_xpath = "//*[@text='Wrong username or password']";
 
     public LoginPage(){
         super();
@@ -56,33 +58,39 @@ public class LoginPage extends CommonPage{
         Log.log(Level.FINE, "Starts: Type URL.");
         waitById(15, urlServer.get(0));
         urlServer.get(0).sendKeys(server);
-        checkServerButton.click();
+        continueOption.click();
+        approveButton.click();
+        continueOption.click();
     }
 
     public void typeURL(String authMethod){
         Log.log(Level.FINE, "Starts: Type URL.");
+        //Autoaccept notifications
+        driver.switchTo().alert().accept();
+        addServer.click();
         waitById(15, urlServer.get(0));
         urlServer.get(0).sendKeys(selectURL(authMethod));
-        checkServerButton.click();
+        continueOption.click();
+        approveButton.click();
+        continueOption.click();
     }
 
     public void typeCredentials(String username, String password){
         Log.log(Level.FINE, "Starts: Type credentials: username: "
                 + username + " - password: " + password);
-        waitById(15, userNameText);
-        userNameText.sendKeys(username);
-        passwordText.sendKeys(password);
+        waitById(15, usernameInput);
+        usernameInput.sendKeys(username);
+        passwordInput.sendKeys(password);
     }
 
     public void submitLogin(){
         Log.log(Level.FINE, "Starts: Submit login");
-        waitById(15, loginButton);
-        loginButton.click();
+        continueOption.click();
     }
 
-    public boolean isCredentialsErrorMessage(){
-        return driver.findElements(MobileBy.xpath(errorcredentialstext_xpath)).size() > 0;
-    }
+    /*public boolean isCredentialsErrorMessage(){
+        //return driver.findElements(MobileBy.xpath(errorcredentialstext_xpath)).size() > 0;
+    }*/
 
     private String selectURL(String authMehod){
         switch (authMehod){

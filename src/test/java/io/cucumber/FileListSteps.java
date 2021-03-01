@@ -27,20 +27,20 @@ public class FileListSteps {
 
     //Involved pages
     protected FileListPage fileListPage = new FileListPage();
-    protected InputNamePage inputNamePage = new InputNamePage();
-    protected FolderPickerPage folderPickerPage = new FolderPickerPage();
-    protected RemoveDialogPage removeDialogPage = new RemoveDialogPage();
-    protected DetailsPage detailsPage = new DetailsPage();
+    //protected InputNamePage inputNamePage = new InputNamePage();
+    //protected FolderPickerPage folderPickerPage = new FolderPickerPage();
+    //protected RemoveDialogPage removeDialogPage = new RemoveDialogPage();
+    //protected DetailsPage detailsPage = new DetailsPage();
 
     //APIs to call
     protected FilesAPI filesAPI = new FilesAPI();
 
-    @Given("^there is an item called (.+) in the folder Downloads of the device$")
+    /*@Given("^there is an item called (.+) in the folder Downloads of the device$")
     public void push_file_to_device(String itemName){
         Log.log(Level.FINE, "----STEP----: " +
                 new Object(){}.getClass().getEnclosingMethod().getName() + ": " + itemName);
         fileListPage.pushFile(itemName);
-    }
+    }*/
 
     @Given("the following items exist in the account")
     public void item_exists(DataTable table) throws Throwable {
@@ -56,24 +56,24 @@ public class FileListSteps {
         }
     }
 
-    @When("^user selects the option Create Folder$")
+    /*@When("^user selects the option Create Folder$")
     public void i_select_create_folder() {
         Log.log(Level.FINE, "----STEP----: " +
                 new Object(){}.getClass().getEnclosingMethod().getName());
         fileListPage.createFolder();
-    }
+    }*/
 
     @When("^user selects to (.+) the item (.+)$")
     public void i_select_item_to_some_operation(String operation, String itemName) {
         Log.log(Level.FINE, "----STEP----: " +
                 new Object(){}.getClass().getEnclosingMethod().getName() + ": "
                 + operation + " " + itemName);
-        fileListPage.waitToload();
-        fileListPage.refreshList();
+        //fileListPage.waitToload();
+        //fileListPage.refreshList();
         switch (operation){
             case "Download":
                 fileListPage.downloadAction(itemName);
-                detailsPage.waitFinishedDownload(30);
+                //detailsPage.waitFinishedDownload(30);
                 break;
             case "Upload":
                 //fileListPage.selectFileUpload(itemName);
@@ -84,7 +84,7 @@ public class FileListSteps {
         }
     }
 
-    @When ("^user selects (.+) as target folder$")
+    /*@When ("^user selects (.+) as target folder$")
     public void i_select_target_folder(String targetFolder) {
         Log.log(Level.FINE, "----STEP----: " +
                 new Object(){}.getClass().getEnclosingMethod().getName() + ": " + targetFolder);
@@ -111,20 +111,21 @@ public class FileListSteps {
         Log.log(Level.FINE, "----STEP----: " +
                 new Object(){}.getClass().getEnclosingMethod().getName()  + ": " + itemName);
         inputNamePage.setItemName(itemName);
-    }
+    }*/
 
     @Then("^user sees (.+) in the file list$")
     public void i_see_the_item(String itemName) throws Throwable {
         Log.log(Level.FINE, "----STEP----: " +
                 new Object(){}.getClass().getEnclosingMethod().getName() + ": " + itemName);
-        fileListPage.waitToload();
+        //fileListPage.waitToload();
         //Get the last token of the item path
-        assertTrue(fileListPage.isItemInList(itemName.substring(itemName.lastIndexOf('/')+1)));
-        assertTrue(filesAPI.itemExist(itemName));
-        filesAPI.removeItem(itemName);
+        //assertTrue(fileListPage.isItemInList(itemName.substring(itemName.lastIndexOf('/')+1)));
+        //assertTrue(filesAPI.itemExist(itemName));
+        //filesAPI.removeItem(itemName);
+        assertTrue(fileListPage.isBookmarkCreated());
     }
 
-    @Then("^user does not see (.+) in the file list anymore$")
+    /*@Then("^user does not see (.+) in the file list anymore$")
     public void i_do_not_see_the_item(String itemName) throws Throwable {
         Log.log(Level.FINE, "----STEP----: " +
                 new Object(){}.getClass().getEnclosingMethod().getName() + ": " + itemName);
@@ -200,5 +201,5 @@ public class FileListSteps {
         fileListPage.waitToload();
         ArrayList<OCFile> listServer = filesAPI.listItems(path);
         assertTrue(fileListPage.displayedList(path, listServer));
-    }
+    }*/
 }

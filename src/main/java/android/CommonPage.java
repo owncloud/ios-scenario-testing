@@ -17,14 +17,14 @@ import java.util.logging.Level;
 import io.appium.java_client.MobileBy;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.TouchAction;
-import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.touch.offset.PointOption;
 import utils.LocProperties;
 import utils.log.Log;
 
 public class CommonPage {
 
-    protected static AndroidDriver driver = AppiumManager.getManager().getDriver();
+    protected static IOSDriver driver = AppiumManager.getManager().getDriver();
     protected Actions actions;
     private static final SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMdd_HHmmss");
     protected final String packag = LocProperties.getProperties().getProperty("appPackage");
@@ -59,11 +59,11 @@ public class CommonPage {
     }
 
     public static void waitByTextVisible(int timeToWait, String text) {
-        WebDriverWait wait = new WebDriverWait(driver, timeToWait);
-        MobileElement mobileElement = (MobileElement)
-                driver.findElementByAndroidUIAutomator
-                        ("new UiSelector().text(\""+ text +"\");");
-        wait.until(ExpectedConditions.textToBePresentInElement(mobileElement, text));
+        //WebDriverWait wait = new WebDriverWait(driver, timeToWait);
+        //MobileElement mobileElement = (MobileElement)
+                //driver.findElementByAndroidUIAutomator
+                //        ("new UiSelector().text(\""+ text +"\");");
+        //wait.until(ExpectedConditions.textToBePresentInElement(mobileElement, text));
     }
 
     public static void waitTillStatus(int timeToWait, String resourceId, boolean status){

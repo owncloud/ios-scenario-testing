@@ -1,0 +1,687 @@
+/*
+  Localizable.strings
+  ownCloud
+
+  Created by Pablo Carrascal on 13/03/2018.
+  Copyright © 2018 ownCloud GmbH. All rights reserved.
+*/
+
+/*
+ * Copyright (C) 2018, ownCloud GmbH.
+ *
+ * This code is covered by the GNU Public License Version 3.
+ *
+ * For distribution utilizing Apple mechanisms please see https://owncloud.org/contribute/iOS-license-exception/
+ * You should have received a copy of this license along with this program. If not, see <http://www.gnu.org/licenses/gpl-3.0.en.html>.
+ *
+ */
+
+/* Add / Edit Bookmark */
+"Edit account" = "Edit account";
+"Add account" = "계정 추가";
+"Server URL" = "서버 URL";
+"https://example.com" = "https://example.com";
+"Continue" = "계속";
+"Name" = "이름";
+"Example Server" = "예제 서버";
+"Show Certificate Details" = "인증서 정보 보기";
+"Connect" = "연결";
+"Delete Authentication Data" = "인증 정보 삭제";
+"Authentication" = "인증";
+"Username" = "사용자 이름";
+"Password" = "암호";
+"Certificate Details" = "인증서 정보";
+"Cancel" = "취소";
+"Approve" = "승인";
+"Error" = "오류";
+"Review Connection" = "Review Connection";
+"Authenticated via" = "다음을 통해 인증됨";
+"Authenticated as %@ via %@" = "%@을 통해 %@로 인증 됨";
+"Edit" = "편집";
+"Credentials" = "인증 정보";
+"Rejected" = "거부됨";
+"Passed" = "Passed";
+"Accepted" = "허가됨";
+"Validation Error" = "확인 중 오류";
+"Certificate was rejected by user." = "Certificate was rejected by user.";
+"Certificate has issues.\nOpen 'Certificate Details' for more informations." = "Certificate has issues.\nOpen 'Certificate Details' for more informations.";
+"No issues found. Certificate passed validation." = "No issues found. Certificate passed validation.";
+"Certificate may have issues, but was accepted by user.\nOpen 'Certificate Details' for more informations." = "Certificate may have issues, but was accepted by user.\nOpen 'Certificate Details' for more informations.";
+"If you 'Continue', you will be prompted to allow the '%@' App to open OAuth2 login where you can enter your credentials." = "If you 'Continue', you will be prompted to allow the '%@' App to open OAuth2 login where you can enter your credentials.";
+
+"Contacting server…" = "Contacting server…";
+"Authenticating…" = "인증 중...";
+
+"Fetching user information…" = "사용자 정보 가져오는 중...";
+"Updating connection…" = "Updating connection…";
+
+"Missing hostname" = "호스트 이름 없음";
+"The entered URL does not include a hostname." = "입력한 URL이 hostname과 일치하지 않습니다.";
+"Add account" = "계정 추가";
+"Server name" = "Server name";
+"Server Password" = "Server Password";
+"Server Username" = "Server Username";
+"Show accounts" = "Show accounts";
+"Setup complete" = "Setup complete";
+
+/* Client */
+"Browse" = "찾아보기";
+"Disconnect" = "연결 해제";
+"Connecting…" = "연결 중...";
+"Connected." = "연결됨.";
+"Select" = "선택";
+"Done" = "완료";
+
+"Folder" = "폴더";
+
+"Stopped" = "정지됨";
+"Started…" = "시작됨...";
+"Contents from cache." = "Contents from cache.";
+"Waiting for server response…" = "서버 응답 대기중...";
+"This folder no longer exists." = "이 폴더는 더 이상 존재하지 않습니다.";
+"Everything up-to-date." = "모든것이 최신입니다.";
+"Please wait…" = "기다려 주십시오...";
+"Sort by %@" = "Sort by %@";
+"Sort by" = "정렬 순서";
+
+"name" = "name";
+"kind" = "kind";
+"size" = "크기";
+"date" = "날짜";
+"Search this folder" = "이 폴더에서 검색";
+"Pending" = "대기 중";
+"Show parent paths" = "Show parent paths";
+
+"%@ of %@ used" = "%@ of %@ used";
+"Total: %@" = "Total: %@";
+"%@ item | " = "%@ item | ";
+"%@ items | " = "%@ items | ";
+
+/* Static Login Setup */
+"Server error" = "서버 오류";
+"The server doesn't support any allowed authentication method." = "The server doesn't support any allowed authentication method.";
+"The server doesn't support any known and allowed authentication method found." = "The server doesn't support any known and allowed authentication method found.";
+"Retry detection" = "Retry detection";
+
+/* Client Messages */
+"Empty folder" = "빈 폴더";
+"This folder contains no files or folders." = "이 폴더는 파일이나 폴더를 포함하지 않습니다.";
+
+"Folder removed" = "폴더 삭제됨";
+"This folder no longer exists on the server." = "이 폴더는 더 이상 서버에 존재하지 않습니다.";
+"Are you sure you want to delete this item from the server?" = "서버에서 이 항목을 삭제하시겠습니까?";
+"Are you sure you want to delete these items from the server?" = "서버에서 이 항목들을 삭제하시겠습니까?";
+"Multiple items" = "여러 항목들";
+"Deleting '%@'" = "'%@' 삭제중";
+"Renaming to %@" = "%@ 으로 이름 바꾸는 중";
+"Upload from your photo library" = "사진 보관함에서 업로드 하기";
+"Missing permissions" = "권한 없음";
+"This permission is needed to upload photos and videos from your photo library." = "사진 보관함에서 사진 및 비디오를 업로드 하기 위해선 이 권한이 필요합니다.";
+"Not now" = "나중에";
+"Upload file" = "파일 업로드";
+"Upload files" = "파일 업로드";
+
+"No matches" = "No matches";
+"There are no results for this search term" = "There are no results for this search term";
+"Status" = "상태";
+
+"Authorization failed" = "인증 실패";
+"The account has been disabled." = "The account has been disabled.";
+"The server declined access with the credentials stored for this connection." = "The server declined access with the credentials stored for this connection.";
+"Access denied" = "접근 거부됨";
+"The connection's access token has expired or become invalid. Sign in again to re-gain access." = "The connection's access token has expired or become invalid. Sign in again to re-gain access.";
+"No authentication data has been found for this connection." = "No authentication data has been found for this connection.";
+"Sign in" = "로그인";
+"Continue offline" = "Continue offline";
+"Media upload in the previous session was incomplete since the application was terminated" = "Media upload in the previous session was incomplete since the application was terminated";
+
+"All done" = "All done";
+"No pending messages or ongoing actions." = "No pending messages or ongoing actions.";
+
+"Show all" = "모두 보기";
+"+ %ld more" = "+ %ld more";
+"Apply choice to all similar issues" = "Apply choice to all similar issues";
+"Apply to all" = "Apply to all";
+
+/* Server List*/
+"Cancel" = "취소";
+"OK" = "확인";
+
+"'%@' is currently locked" = "'%@' 항목이 잠겨있음";
+"An operation is currently performed that prevents connecting to '%@'. Please try again later." = "An operation is currently performed that prevents connecting to '%@'. Please try again later.";
+"Do you really want to disconnect from your '%@' account?" = "Do you really want to disconnect from your '%@' account?";
+"This will remove all locally stored file copies from your device." = "This will remove all locally stored file copies from your device.";
+"Really delete '%@'?" = "'%@' 항목을 삭제하시겠습니까?";
+"This will also delete all locally stored file copies." = "이것은 또한 내부에 저장된 파일의 사본을 삭제할 것입니다.";
+"Delete" = "삭제";
+"Remove" = "삭제";
+"Removing of '%@' failed" = "Removing of '%@' failed";
+"Accounts" = "계정";
+
+"Help" = "도움말";
+"Feedback" = "피드백";
+"Welcome" = "환영합니다";
+"Thanks for choosing %@! \n Start by adding your account." = "Thanks for choosing %@! \n Start by adding your account.";
+
+/* Settings Messages */
+
+"Security" = "보안";
+"Passcode Lock" = "암호 잠금";
+"Face ID" = "Face ID";
+"Touch ID" = "Touch ID";
+"Videos" = "비디오";
+"Photos" = "사진";
+"Background uploads" = "백그라운드 업로드";
+"Wifi only" = "Wifi 전용";
+"Settings" = "설정";
+"Lock application" = "애플리케이션 잠그기";
+"Upload videos via WiFi only" = "Wi-Fi 사용 중일때만 동영상 업로드";
+"Upload pictures via WiFi only" = "Wi-Fi 사용 중일때만 사진 업로드";
+"More" = "더 보기";
+"Send feedback" = "Send feedback";
+"Recommend to a friend" = "친구에게 추천하기";
+"Privacy Policy" = "개인 정보 정책";
+"Terms Of Use" = "Terms Of Use";
+"Acknowledgements" = "승인";
+"Video upload path" = "동영상 업로드 경로";
+"Photo upload path" = "Photo upload path";
+"Immediately" = "Immediately";
+"After 1 minute" = "After 1 minute";
+"After 5 minutes" = "After 5 minutes";
+"After 30 minutes" = "After 30 minutes";
+"If you choose \"Immediately\" the App will be locked, when it is no longer in foreground.\n\nAccess in Files.app is not possible, if you choose lock interval \"Immediately\".\nPlease choose an other delay, if you want to access your files in the Files.app or via a document picker." = "If you choose \"Immediately\" the App will be locked, when it is no longer in foreground.\n\nAccess in Files.app is not possible, if you choose lock interval \"Immediately\".\nPlease choose an other delay, if you want to access your files in the Files.app or via a document picker.";
+"Please configure an email account" = "Please configure an email account";
+"You need to configure an email account first to be able to send emails." = "You need to configure an email account first to be able to send emails.";
+"Do you want to open the following URL?" = "Do you want to open the following URL?";
+
+"%@%@ %@ version %@ build %@\n(app: %@, sdk: %@)" = "%@%@ %@ version %@ build %@\n(app: %@, sdk: %@)";
+"beta" = "beta";
+"release" = "release";
+"App Version" = "App Version";
+"Version information were copied to the clipboard" = "Version information were copied to the clipboard";
+
+
+/* User Interface Settings */
+"Theme" = "테마";
+"User Interface" = "사용자 인터페이스";
+"Dark" = "어두움";
+"Light" = "밝음";
+"Classic" = "Classic";
+"System" = "시스템";
+"System Appeareance" = "System Appeareance";
+
+/* Log settings */
+"Log Files" = "Log Files";
+"Browse log files" = "Browse log files";
+"Share" = "공유";
+"Delete all log files?" = "Delete all log files?";
+"Delete all" = "모두 삭제";
+
+"Log Level" = "Log Level";
+"Log Destinations" = "로그 대상";
+"Privacy" = "Privacy";
+
+"Logging" = "Logging";
+"Enable logging" = "로그 활성화";
+"Options" = "옵션";
+
+"Off" = "Off";
+"Info" = "정보";
+"Default" = "기본값";
+"Warning" = "경고";
+"Error" = "오류";
+
+"Share log file" = "로그 파일 공유";
+"Reset log file" = "로그 파일 초기화";
+
+"When activated, logs may impact performance and include sensitive information. However the logs are not subject to automatic submission to %@ servers. Sharing logs with others is sole user responsibility." = "When activated, logs may impact performance and include sensitive information. However the logs are not subject to automatic submission to %@ servers. Sharing logs with others is sole user responsibility.";
+
+"The last 10 archived logs are kept on the device - with each log covering up to 24 hours of usage. When sharing please bear in mind that logs may contain sensitive information such as server URLs and user-specific information." = "The last 10 archived logs are kept on the device - with each log covering up to 24 hours of usage. When sharing please bear in mind that logs may contain sensitive information such as server URLs and user-specific information.";
+
+"Mask private data" = "Mask private data";
+"Enabling this option will attempt to mask private data, so it does not become part of any log. Since logging is a development and debugging feature, though, we can't guarantee that the log file will be free of any private data even with this option enabled. Therefore, please look through any log file and verify its free of any data you're not comfortable sharing before sharing it with anybody." = "Enabling this option will attempt to mask private data, so it does not become part of any log. Since logging is a development and debugging feature, though, we can't guarantee that the log file will be free of any private data even with this option enabled. Therefore, please look through any log file and verify its free of any data you're not comfortable sharing before sharing it with anybody.";
+
+"No log file found" = "로그 파일을 찾을수 없음";
+"The log file can't be shared because no log file could be found or the log file is empty." = "The log file can't be shared because no log file could be found or the log file is empty.";
+"Enable log file" = "로그 파일 사용";
+
+"Really reset log file?" = "Really reset log file?";
+"This action can't be undone." = "This action can't be undone.";
+
+/* Data usage settings */
+"Data usage" = "Data usage";
+"Delete unused local copies" = "Delete unused local copies";
+"Time measured since uploading, editing, downloading or viewing the respective file through this device. Does not apply to files downloaded via the Available Offline feature. Local copies may be deleted before the given period of time has passed, f.ex. because there's a newer version of a file on the server - or through the manual deletion of offline copies. Also, local copies may not be deleted after the given period of time has passed, f.ex. if an action is performed on it, the file is still in use - or the account holding the file hasn't been used in the app." = "Time measured since uploading, editing, downloading or viewing the respective file through this device. Does not apply to files downloaded via the Available Offline feature. Local copies may be deleted before the given period of time has passed, f.ex. because there's a newer version of a file on the server - or through the manual deletion of offline copies. Also, local copies may not be deleted after the given period of time has passed, f.ex. if an action is performed on it, the file is still in use - or the account holding the file hasn't been used in the app.";
+"never" = "없음";
+"after %@" = "after %@";
+"Decrease Slider Value" = "Decrease Slider Value";
+"Increase Slider Value" = "Increase Slider Value";
+
+"Cellular transfers" = "Cellular transfers";
+"Some cellular data may still be used. To completely avoid the usage of cellular data, please turn off access to cellular for the entire app in the Settings app." = "Some cellular data may still be used. To completely avoid the usage of cellular data, please turn off access to cellular for the entire app in the Settings app.";
+"Cellular transfers have been disabled via MDM configuration. Please contact your administrator for more information." = "Cellular transfers have been disabled via MDM configuration. Please contact your administrator for more information.";
+"General" = "일반";
+"By feature" = "By feature";
+
+"off" = "off";
+"enabled" = "활성화됨";
+
+/* Display settings */
+"Advanced settings" = "고급 설정";
+"Show hidden files and folders" = "Show hidden files and folders";
+"Show folders at the top" = "Show folders at the top";
+"Prevent gestures" = "Prevent gestures";
+"Prevent dragging of files and folders and multiselection using system defined gestures" = "Prevent dragging of files and folders and multiselection using system defined gestures";
+
+/* Advanced settings */
+"Enable diagnostics" = "Enable diagnostics";
+
+/* Passcode Messages */
+
+"Enter code" = "코드 등록";
+"Repeat code" = "Repeat code";
+"Delete code" = "코드 삭제";
+"The entered codes are different" = "The entered codes are different";
+"Incorrect code" = "Incorrect code";
+"Please try again in %@" = "Please try again in %@";
+"Unlock %@" = "Unlock %@";
+"Biometric authentication failed" = "Biometric authentication failed";
+
+/* Certificate management */
+
+"Certificates" = "증명서";
+"User-approved certificates" = "사용자 승인 증명서";
+
+"Approved" = "승인됨";
+"Auto-approved" = "Auto-approved";
+"Revoke approval" =  "승인 취소";
+
+/* Actions */
+
+"Forbidden Characters" = "금지 된 문자";
+"File name cannot contain / or \\" = "File name cannot contain / or \\";
+"Item with same name already exists" = "Item with same name already exists";
+"An item with the same name already exists in this location." = "An item with the same name already exists in this location.";
+"New Folder" = "새 폴더";
+"Folder name" = "폴더 이름";
+"Rename" ="이름 바꾸기";
+"Create folder" ="폴더 만들기";
+"Duplicate" = "복제";
+"Move" = "이동";
+"Open in" = "Open in";
+"Copy" = "복사";
+"Copy here" = "Copy here";
+"Cannot connect to " = "Cannot connect to ";
+" couldn't download file(s)" = " couldn't download file(s)";
+"Actions" = "작업";
+"copy" = "copy";
+"Close Window" = "Close Window";
+"Open in a new Window" = "Open in a new Window";
+"Open in Window" = "Open in Window";
+"Take photo or video" = "Take photo or video";
+
+"Preparing…" = "준비중...";
+
+"No actions available" = "No actions available";
+"No actions are available for this folder, possibly because of missing permissions." = "No actions are available for this folder, possibly because of missing permissions.";
+
+"Close actions menu" = "Close actions menu";
+"Favorited" = "즐겨찾기에 추가됨";
+"Favorite item" = "Favorite item";
+"Unfavorite item" = "Unfavorite item";
+
+/* Directory Picker Messages */
+"Move here" = "Move here";
+
+/* Preview */
+"Open file" = "파일 열기";
+"Network unavailable" = "Network unavailable";
+"Error" = "오류";
+"Could not get the picture" = "Could not get the picture";
+"Downloading" = "Downloading";
+"File couldn't be opened" = "File couldn't be opened";
+"Connecting..." = "Connecting...";
+
+/* PDF Viewer */
+"Resume" = "다시 시작";
+"Go to page" = "페이지로 이동";
+"Page" = "페이지";
+"This document has %@ pages" = "This document has %@ pages";
+"%@ of %@" = "%@ of %@";
+"Invalid Page" = "잘못된 페이지";
+"The entered page number doesn't exist" = "The entered page number doesn't exist";
+"Search PDF" = "PDF 찾기";
+"Outline" = "Outline";
+
+/* Photo Upload */
+"Upload" = "업로드";
+"Select All" = "전체 선택";
+"Deselect All" = "전체 삭제";
+"All Photos" = "모든 사진";
+"Albums" = "앨범";
+"Importing from photo library" = "Importing from photo library";
+"Media import" = "Media import";
+"%@ of %@" = "%@ of %@";
+"Selected folder lacks file creation permission" = "Selected folder lacks file creation permission";
+"%d Item" = "%d Item";
+"%d Items" = "%d Items";
+
+/* Scan */
+"Scan" = "Scan";
+"Scans" = "Scans";
+"Scan document" = "Scan document";
+"Saving" = "저장 중";
+"File format" = "File format";
+"Name" = "이름";
+"Save as" = "다른 이름으로 저ᅟᅡᆼ";
+"Options" = "옵션";
+"Scan additional" = "Scan additional";
+"Create one file per page" = "Create one file per page";
+
+/* Scan */
+"Scan" = "Scan";
+"Scans" = "Scans";
+"Scan document" = "Scan document";
+"Saving" = "저장 중";
+"File format" = "File format";
+"Name" = "이름";
+"Save as" = "다른 이름으로 저ᅟᅡᆼ";
+"Options" = "옵션";
+"Scan additional" = "Scan additional";
+"Create one file per page" = "Create one file per page";
+
+/* Sharing */
+"Searching Shares…" = "Searching Shares…";
+"Recipient" = "Recipient";
+"Recipients" = "Recipients";
+"Public Link" = "Public Link";
+"Public Links" = "공개 링크";
+"Shared by %@" = "Shared by %@";
+"Invite Recipient" = "Invite Recipient";
+"Recipients" = "Recipients";
+"Add email or name" = "이메일 또는 이름 추가";
+"Users" = "사용자";
+"Groups" = "그룹";
+"Start typing to search users, groups and remote users." = "Start typing to search users, groups and remote users.";
+"(Group)" = "(Group)";
+"Adding User to Share failed" = "Adding User to Share failed";
+"Permissions" = "Permissions";
+"Invited: %@" = "Invited: %@";
+"Created: %@" = "Created: %@";
+"Allows the users you share with to re-share" = "Allows the users you share with to re-share";
+"Allows the users you share with to edit your shared files, and to collaborate" = "Allows the users you share with to edit your shared files, and to collaborate";
+"Allows the users you share with to create new files and add them to the share" = "Allows the users you share with to create new files and add them to the share";
+"Allows uploading a new version of a shared file and replacing it" = "Allows uploading a new version of a shared file and replacing it";
+"Allows the users you share with to delete shared files" = "Allows the users you share with to delete shared files";
+"Setting permission failed" = "Setting permission failed";
+"Shared with" = "다음과 공유됨:";
+"Remove Recipient failed" = "Remove Recipient failed";
+"Remove Recipient" = "Remove Recipient";
+"Create" = "만들기";
+"Change" = "변경";
+"Recipients can view or download contents." = "Recipients can view or download contents.";
+"Recipients can view, download, edit, delete and upload contents." = "Recipients can view, download, edit, delete and upload contents.";
+"Receive files from multiple recipients without revealing the contents of the folder." = "Receive files from multiple recipients without revealing the contents of the folder.";
+"Download / View" = "Download / View";
+"Download / View / Upload" = "Download / View / Upload";
+"Upload only (File Drop)" = "업로드만(파일 끌어다 놓기)";
+"Creating public link failed" = "Creating public link failed";
+"Create Public Link" = "공개 링크 생성";
+"Links" = "링크";
+"Link" = "링크";
+"Setting expiration date failed" = "Setting expiration date failed";
+"Expiration date" = "만료 날짜";
+"Copy Public Link" = "Copy Public Link";
+"Delete Public Link" = "Delete Public Link";
+"Deleting Public Link failed" = "Deleting Public Link failed";
+"Deleting password failed" = "암호 삭제 실패";
+"Setting password failed" = "Setting password failed";
+"Type to update password" = "Type to update password";
+"Cannot change permission" = "Cannot change permission";
+"Before you can set the permission\n%@,\n you must enter a password." = "Before you can set the permission\n%@,\n you must enter a password.";
+"Password Protected" = "암호로 보호됨";
+"Pending Federated Invites" = "Pending Federated Invites";
+"Pending Invites" = "Pending Invites";
+"Shared with you" = "나와 공유됨";
+"Shared with others" = "다른 사람과 공유됨";
+"Shares" = "공유";
+"Copy Private Link" = "Copy Private Link";
+"Only recipients can use this link. Use it as a permanent link to point to this resource" = "Only recipients can use this link. Use it as a permanent link to point to this resource";
+"Accept Share failed" = "Accept Share failed";
+"Decline Share failed" = "Decline Share failed";
+"Accept" = "수락";
+"Decline" = "거절";
+"Declined" = "거절됨";
+"Decline Share" = "공유 거부";
+"Unshare" = "공유 해제";
+"Unshare failed" = "Unshare failed";
+"Are you sure you want to unshare these items?" = "Are you sure you want to unshare these items?";
+"Are you sure you want to unshare this item?" = "Are you sure you want to unshare this item?";
+"Share" = "공유";
+"Read" = "읽기";
+"Can Share" = "공유 가능";
+"Can Edit" = "Can Edit";
+"Can Edit and Change" = "편집 및 변경 가능";
+"Can Create" = "생성 가능";
+"Can Change" = "Can Change";
+"Can Delete" = "삭제 가능";
+"Accept Invite %@" = "Accept Invite %@";
+"Decline Invite %@" = "Decline Invite %@";
+"Decline cannot be undone." = "Decline cannot be undone.";
+"Sharing" = "공유";
+"You" = "You";
+"Share this file" = "이 파일 공유";
+"Share this folder" = "이 폴더 공유";
+"shared" = "공유됨";
+"Owner" = "소유자";
+"Private Link" = "Private Link";
+"Created Public Link" = "Created Public Link";
+"URL was copied to the clipboard" = "URL was copied to the clipboard";
+
+/* Quick Access view */
+"Quick Access" = "빠른 접근";
+"Collection" = "Collection";
+"Recents" = "Recents";
+"Favorites"= "즐겨찾기";
+"Images" = "그림";
+"PDF Documents" = "PDF Documents";
+"Text" = "텍스트";
+"Documents" = "문서";
+"Audio" = "오디오";
+
+/* Media files settings */
+"Media Files" = "Media Files";
+"Download instead of streaming" = "Download instead of streaming";
+
+/* Photo upload settings */
+"Media Upload" = "Media Upload";
+"Media Export" = "Media Export";
+"Auto Upload" = "Auto Upload";
+"Convert HEIC to JPEG" = "Convert HEIC to JPEG";
+"Convert videos to MP4" = "Convert videos to MP4";
+"Preserve original media file names" = "Preserve original media file names";
+"Auto Upload Photos" = "Auto Upload Photos";
+"Auto Upload Videos" = "Auto Upload Videos";
+"Account" = "계정";
+"Accounts" = "계정";
+"Select account" = "Select account";
+"Photo upload path" = "Photo upload path";
+"Video upload path" = "동영상 업로드 경로";
+"Select Upload Path" = "Select Upload Path";
+"Auto upload of media was disabled since configured account / folder was not found" = "Auto upload of media was disabled since configured account / folder was not found";
+"Importing %@ media files for upload" = "Importing %@ media files for upload";
+"Photo upload" = "Photo upload";
+"Video upload" = "Video upload";
+
+/* Background media uploads */
+"Background uploads" = "백그라운드 업로드";
+"Use background refresh" = "Use background refresh";
+"Enable background uploads" = "Enable background uploads";
+"Use background location updates" = "Use background location updates";
+"Background upload notifications" = "Background upload notifications";
+"if you would like background media uploads to be more reliable, you should enable background location updates." = "if you would like background media uploads to be more reliable, you should enable background location updates.";
+"Background media uploads rely on location updates and will stop working if location acquisition permissions are revoked." = "Background media uploads rely on location updates and will stop working if location acquisition permissions are revoked.";
+"Otherwise background media uploads using background refresh technology would depend on how frequently you use the app." = "Otherwise background media uploads using background refresh technology would depend on how frequently you use the app.";
+"Location permission denied" = "Location permission denied";
+"Please re-enable location acquisition in system settings" = "Please re-enable location acquisition in system settings";
+"Scheduled upload of %ld media assets" = "Scheduled upload of %ld media assets";
+
+/* Progress summarizer */
+"Creating %ld folders…" = "Creating %ld folders…";
+"Moving %ld items…" = "Moving %ld items…";
+"Copying %ld items…" = "Copying %ld items…";
+"Deleting %ld items…" = "Deleting %ld items…";
+"Uploading %ld files…" = "Uploading %ld files…";
+"Downloading %ld files…" = "Downloading %ld files…";
+"Updating %ld items…" = "Updating %ld items…";
+
+/* Offline storage management */
+"Free on %@" = "Free on %@";
+"unknown" = "알 수 없음";
+"Offline files use" = "Offline files use";
+"Compacting of '%@' failed" = "Compacting of '%@' failed";
+"Include available offline files" = "Include available offline files";
+"Delete Local Copies" = "Delete Local Copies";
+"Manage" = "Manage";
+"Storage" = "저장소";
+"Compacting" = "Compacting";
+
+"Really include available offline files?" = "Really include available offline files?";
+"Files and folders marked as Available Offline will become unavailable. They will be re-downloaded next time you log into your account (connectivity required)." = "Files and folders marked as Available Offline will become unavailable. They will be re-downloaded next time you log into your account (connectivity required).";
+
+/* Diagnostic */
+"Diagnostic Overview" = "Diagnostic Overview";
+"Diagnostics" = "진단";
+"Share Diagnostics" = "Share Diagnostics";
+"Action executed" = "Action executed";
+
+"Update Status" = "Update Status";
+"Completed update scans" = "Completed update scans";
+"Total update scans" = "Total update scans";
+
+/* Available offline */
+"Root folder" = "Root folder";
+"at" = "에서";
+"(no match)" = "(no match)";
+
+"Make available offline" = "Make available offline";
+"Make unavailable offline" = "Make unavailable offline";
+
+"Available Offline" = "Available Offline";
+"No items have been selected for offline availability." = "No items have been selected for offline availability.";
+
+"Overview" = "Overview";
+"All Files" = "All Files";
+
+/* Single Account */
+"You are connected as\n%@" = "You are connected as\n%@";
+
+/* Release Notes */
+"Proceed" = "진행";
+"New in %@" = "New in %@";
+"Thank you for using %@.\nIf you like our App, please leave an AppStore review.\n❤️" = "Thank you for using %@.\nIf you like our App, please leave an AppStore review.\n❤️";
+"Thank you for using %@.\n" = "Thank you for using %@.\n";
+
+/* Key Commands */
+"Select Next" = "Select Next";
+"Select Previous" = "Select Previous";
+"Open Selected" = "Open Selected";
+"Change Sort Order" = "Change Sort Order";
+"Search" = "검색";
+"Back" = "뒤로";
+"Save" = "저장";
+"Sort by %@" = "Sort by %@";
+"Tab %@" = "Tab %@";
+"Select Last Item on Page" = "Select Last Item on Page";
+"Scroll to Top" = "Scroll to Top";
+"Scroll to Bottom" = "Scroll to Bottom";
+"Copy to Pasteboard" = "Copy to Pasteboard";
+"Import from Pasteboard" = "Import from Pasteboard";
+"Next" = "다음";
+"Previous" = "이전";
+"Favorite" = "즐겨찾기";
+"Cut" = "Cut";
+
+/* Markup */
+"How should this file be saved?" = "How should this file be saved?";
+"Overwrite original" = "Overwrite original";
+"Save as copy" = "Save as copy";
+"Discard changes" = "Discard changes";
+"Markup" = "Markup";
+"Crop or Rotate" = "Crop or Rotate";
+"Saving edited file failed" = "Saving edited file failed";
+"File no longer exists" = "File no longer exists";
+
+/* Licensing */
+"Unlocked" = "Unlocked";
+"Unlock" = "Unlock";
+
+"Subscribe Now" = "Subscribe Now";
+"Free" = "Free";
+
+"%@ / %@" = "%@ / %@";
+"after free %@ trial" = "after free %@ trial";
+
+/* Example usage: "Try [14 days] for free." */
+"Try %@ for free." = "Try %@ for free.";
+
+/* Example usage: "Then [1,99 €] / [year]." */
+"Then %@ / %@." = "Then %@ / %@.";
+
+/* Example usage: "[1,99 €] / [year] - starting immediately." */
+"%@ / %@ – starting immediately" = "%@ / %@ – starting immediately";
+
+/* Licensing: Pro Features */
+"Pro Features" = "Pro Features";
+
+/* Licensing: App Store */
+"Restore purchases" = "Restore purchases";
+"Restoring purchases…" = "Restoring purchases…";
+"Error restoring purchases" = "Error restoring purchases";
+"Error loading product info from App Store"= "Error loading product info from App Store";
+"Purchase failed" = "Purchase failed";
+
+/* Licensing: Enterprise */
+"Enterprise" = "Enterprise";
+
+/* Licensing: Settings */
+"In-App Purchases" = "In-App Purchases";
+"Purchases" = "Purchases";
+"Error fetching transactions" = "Error fetching transactions";
+"Document Scanner" = "Document Scanner";
+"Scan documents and photos with your camera." = "Scan documents and photos with your camera.";
+"Shortcuts Actions" = "Shortcuts Actions";
+"Use ownCloud actions in Shortcuts." = "Use ownCloud actions in Shortcuts.";
+"Markup Documents" = "Markup Documents";
+"Markup photos and PDF files." = "Markup photos and PDF files.";
+"Unlock all Pro Features." = "Unlock all Pro Features.";
+
+/* Share Sheet */
+"Save File" = "파일 저장";
+"Choose an account and folder to import into." = "Choose an account and folder to import into.";
+"No account configured.\nSetup an new account in the app to save to." = "No account configured.\nSetup an new account in the app to save to.";
+"Importing item %ld of %ld" = "Importing item %ld of %ld";
+"Error importing %@" = "Error importing %@";
+"Error loading item" = "Error loading item";
+"Preparing…" = "준비중...";
+"Save here" = "Save here";
+
+/* Data migration from legacy app */
+"Account Migration" = "Account Migration";
+"App Passcode" = "App Passcode";
+"Instant Upload Settings" = "Instant Upload Settings";
+"Migrating" = "Migrating";
+"Migrated" = "Migrated";
+"Failed to migrate" = "Failed to migrate";
+"Failed to access legacy user data" = "Failed to access legacy user data";
+
+
+/* Misc. accessibility */
+"Enter multiple selection" = "Enter multiple selection";
+
+/* Universal Links */
+"Resolving link…" = "Resolving link…";
+"Link resolution failed" = "Link resolution failed";
+"Couldn't resolve a private link since you are offline and corresponding item is not cached locally." = "Couldn't resolve a private link since you are offline and corresponding item is not cached locally.";
+"Couldn't resolve a private link since the item is not known to the server." = "Couldn't resolve a private link since the item is not known to the server.";
+"Link points to an account bookmark which is not configured in the app." = "Link points to an account bookmark which is not configured in the app.";

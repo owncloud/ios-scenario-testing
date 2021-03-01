@@ -20,27 +20,24 @@ import static org.junit.Assert.assertTrue;
 public class LoginSteps {
 
     //Involved pages
-    //private WizardPage wizardPage = new WizardPage();
     private LoginPage loginPage = new LoginPage();
     private CommonAPI commonAPI = new CommonAPI();
     private FileListPage fileListPage = new FileListPage();
 
-    @Given("^wizard is skipped$")
-    public void wizard_skipped()
+    /*@Given("^app is launched for the first time$")
+    public void first_launch()
             throws Throwable {
         Log.log(Level.FINE, "----STEP----: " +
                 new Object(){}.getClass().getEnclosingMethod().getName());
-        //In case it is installed, we remove to execute logon tests
+        //In case it is installed, we remove to execute login tests
         loginPage.reinstallApp();
-        //wizardPage.skip();
-    }
+    }*/
 
-    @Given("^user1 is logged$")
+    @Given("^user is logged$")
     public void i_am_logged()
             throws Throwable {
         Log.log(Level.FINE, "----STEP----: " +
                 new Object(){}.getClass().getEnclosingMethod().getName());
-        //wizardPage.skip();
         if (loginPage.notLoggedIn()) {
             String authMethod = commonAPI.checkAuthMethod();
             String username = LocProperties.getProperties().getProperty("userName1");
@@ -109,12 +106,12 @@ public class LoginSteps {
         }
     }
 
-    @Then("^user can see the main page$")
+    @Then("^user is correctly logged$")
     public void i_can_see_the_main_page() {
         Log.log(Level.FINE, "----STEP----: " +
                 new Object(){}.getClass().getEnclosingMethod().getName());
         try {
-            assertTrue(fileListPage.isHeader());
+            assertTrue(fileListPage.isBookmarkCreated());
             // In case the assertion fails, we have to remove the app to keep executing other tests
             // After catching the error, it must be thrown again to return the correct test result.
             // Otherwise, the test will never fail
@@ -125,7 +122,7 @@ public class LoginSteps {
         loginPage.removeApp();
     }
 
-    @Then("^user sees an error message$")
+    /*@Then("^user sees an error message$")
     public void i_see_an_error_message() {
         Log.log(Level.FINE, "----STEP----: " +
                 new Object(){}.getClass().getEnclosingMethod().getName());
@@ -139,5 +136,5 @@ public class LoginSteps {
             throw e;
         }
         loginPage.removeApp();
-    }
+    }*/
 }
