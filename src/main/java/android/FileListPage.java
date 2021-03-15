@@ -111,9 +111,7 @@ public class FileListPage extends CommonPage {
         driver.findElement(By.id("continue-bar-button")).click();
     }
 
-    public boolean isBookmarkCreated(){
-        return driver.findElements(By.id("server-bookmark-cell")).size() > 0;
-    }
+
 
     public void upload(){
         Log.log(Level.FINE, "Starts: upload");
@@ -131,7 +129,7 @@ public class FileListPage extends CommonPage {
             swipe(0.50, 0.90, 0.50, 0.20);
         }
         selectItemList(itemName);
-        selectOperation(operation);
+        selectOperation(itemName, operation);
     }
 
     public void downloadAction(String itemName) {
@@ -163,9 +161,10 @@ public class FileListPage extends CommonPage {
         //actions.clickAndHold(element).perform();
     }
 
-    public void selectOperation(String operationName) {
-        driver.findElement(By.id("share-add-group")).click();
-        driver.findElement(By.linkText("Create Public Link")).click();
+    public void selectOperation(String itemName, String operationName) {
+        MobileElement operation = (MobileElement) (driver.findElement(By.xpath("(//XCUIElementTypeCell[@name=\"share-add-group\"])[2]")));
+        waitByXpath(3, "(//XCUIElementTypeCell[@name=\"share-add-group\"])[2]");
+        operation.click();
         /*if (driver.findElementsByAndroidUIAutomator(
                 "new UiSelector().resourceId(\"" + operationsMap.get(operationName) + "\");").isEmpty()){
             //Operation inside menu, matching by name

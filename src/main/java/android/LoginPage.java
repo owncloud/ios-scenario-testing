@@ -16,7 +16,7 @@ import utils.log.Log;
 public class LoginPage extends CommonPage{
 
     @iOSXCUITFindBy(accessibility = "addServer")
-    private MobileElement addServer;
+    private List<MobileElement> addServer;
 
     @iOSXCUITFindBy(accessibility = "row-url-url")
     private List<MobileElement> urlServer;
@@ -27,11 +27,17 @@ public class LoginPage extends CommonPage{
     @iOSXCUITFindBy(accessibility = "approve-button")
     private MobileElement approveButton;
 
+    @iOSXCUITFindBy(accessibility = "cancel-button")
+    private MobileElement cancelButton;
+
     @iOSXCUITFindBy(accessibility = "row-credentials-username")
     private MobileElement usernameInput;
 
     @iOSXCUITFindBy(accessibility = "row-credentials-password")
     private MobileElement passwordInput;
+
+    @iOSXCUITFindBy(accessibility = "server-bookmark-cell;")
+    private List<MobileElement> bookmarkCell;
 
 
     private final String serverURL = LocProperties.getProperties().getProperty("serverBasicTest");
@@ -51,28 +57,42 @@ public class LoginPage extends CommonPage{
     }
 
     public boolean notLoggedIn(){
-        return !urlServer.isEmpty();
+        Log.log(Level.FINE, "Logged: " + addServer.size());
+        return addServer.size() > 0;
     }
 
     public void typeURL(){
         Log.log(Level.FINE, "Starts: Type URL.");
-        waitById(15, urlServer.get(0));
         urlServer.get(0).sendKeys(server);
         continueOption.click();
-        approveButton.click();
+        approveIssue();
         continueOption.click();
     }
 
     public void typeURL(String authMethod){
         Log.log(Level.FINE, "Starts: Type URL.");
-        //Autoaccept notifications
-        driver.switchTo().alert().accept();
-        addServer.click();
         waitById(15, urlServer.get(0));
         urlServer.get(0).sendKeys(selectURL(authMethod));
         continueOption.click();
-        approveButton.click();
+        approveIssue();
         continueOption.click();
+    }
+
+    public void approveIssue(){
+        waitById(5, approveButton);
+        approveButton.click();
+    }
+
+    public void cancelIssue(){
+        cancelButton.click();
+    }
+
+    public void acceptPermissions(){
+        driver.switchTo().alert().accept();
+    }
+
+    public void skipAddServer(){
+        addServer.get(0).click();
     }
 
     public void typeCredentials(String username, String password){
@@ -88,9 +108,18 @@ public class LoginPage extends CommonPage{
         continueOption.click();
     }
 
-    /*public boolean isCredentialsErrorMessage(){
-        //return driver.findElements(MobileBy.xpath(errorcredentialstext_xpath)).size() > 0;
-    }*/
+    public boolean isCredentialsError(){
+        return driver.findElements(By.id("server-bookmark-cell")).size() == 0;
+    }
+
+    public boolean isBookmarkCreated(){
+        return driver.findElements(By.id("server-bookmark-cell")).size() > 0;
+    }
+
+    public void selectBookmarkIndex(int index) {
+        MobileElement firstServer =  (MobileElement) driver.findElements(By.id("server-bookmark-cell")).get(index);
+        firstServer.click();
+    }
 
     private String selectURL(String authMehod){
         switch (authMehod){

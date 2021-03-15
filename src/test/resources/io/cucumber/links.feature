@@ -5,11 +5,11 @@ Feature: Links
   so that the content is accessible and others can contribute
 
   Background: User is logged in
-    Given user1 is logged
+    Given user user1 is logged
     And the following items exist in the account
       | Documents |
 
-  @smoke
+  @link
   Scenario Outline: Create a public link with name
     When user selects to share the item <item>
     And user creates link on <item> with the following fields
@@ -20,4 +20,4 @@ Feature: Links
     Examples:
       |  item              |  name    |
       |  Documents         |  link1   |
-      |  textExample.txt   |  link2   |
+      #|  textExample.txt   |  link2   |

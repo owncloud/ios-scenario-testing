@@ -113,7 +113,7 @@ public class FileListSteps {
         inputNamePage.setItemName(itemName);
     }*/
 
-    @Then("^user sees (.+) in the file list$")
+    /*@Then("^user sees (.+) in the file list$")
     public void i_see_the_item(String itemName) throws Throwable {
         Log.log(Level.FINE, "----STEP----: " +
                 new Object(){}.getClass().getEnclosingMethod().getName() + ": " + itemName);
@@ -123,7 +123,7 @@ public class FileListSteps {
         //assertTrue(filesAPI.itemExist(itemName));
         //filesAPI.removeItem(itemName);
         assertTrue(fileListPage.isBookmarkCreated());
-    }
+    }*/
 
     /*@Then("^user does not see (.+) in the file list anymore$")
     public void i_do_not_see_the_item(String itemName) throws Throwable {

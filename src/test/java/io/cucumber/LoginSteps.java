@@ -33,20 +33,23 @@ public class LoginSteps {
         loginPage.reinstallApp();
     }*/
 
-    @Given("^user is logged$")
-    public void i_am_logged()
+    @Given("^user (.+) is logged$")
+    public void i_am_logged(String user)
             throws Throwable {
         Log.log(Level.FINE, "----STEP----: " +
                 new Object(){}.getClass().getEnclosingMethod().getName());
+        loginPage.acceptPermissions();
         if (loginPage.notLoggedIn()) {
             String authMethod = commonAPI.checkAuthMethod();
             String username = LocProperties.getProperties().getProperty("userName1");
             String password = LocProperties.getProperties().getProperty("passw1");
+            loginPage.skipAddServer();
             loginPage.typeURL();
             switch (authMethod) {
                 case "Basic":
                     loginPage.typeCredentials(username, password);
                     loginPage.submitLogin();
+                    loginPage.selectBookmarkIndex(0);
                     break;
                 case "Bearer":
                     loginPage.submitLogin();
@@ -70,10 +73,12 @@ public class LoginSteps {
         JSONparser.parsePublicLink();
     }
 
-    @When("^server with (.+) is available$")
+    @Given("^server with (.+) is available$")
     public void server_available(String authMethod) {
         Log.log(Level.FINE, "----STEP----: " +
                 new Object(){}.getClass().getEnclosingMethod().getName() + " with " + authMethod);
+        loginPage.acceptPermissions();
+        loginPage.skipAddServer();
         loginPage.typeURL(authMethod);
     }
 
@@ -106,12 +111,19 @@ public class LoginSteps {
         }
     }
 
-    @Then("^user is correctly logged$")
+    @Then("^user accepts the redirection$")
+    public void accepted_redirection() {
+        Log.log(Level.FINE, "----STEP----: " +
+                new Object(){}.getClass().getEnclosingMethod().getName());
+        loginPage.approveIssue();
+    }
+
+    @Then("^user should be correctly logged$")
     public void i_can_see_the_main_page() {
         Log.log(Level.FINE, "----STEP----: " +
                 new Object(){}.getClass().getEnclosingMethod().getName());
         try {
-            assertTrue(fileListPage.isBookmarkCreated());
+            assertTrue(loginPage.isBookmarkCreated());
             // In case the assertion fails, we have to remove the app to keep executing other tests
             // After catching the error, it must be thrown again to return the correct test result.
             // Otherwise, the test will never fail
@@ -122,12 +134,12 @@ public class LoginSteps {
         loginPage.removeApp();
     }
 
-    /*@Then("^user sees an error message$")
+    @Then("^user should see an error$")
     public void i_see_an_error_message() {
         Log.log(Level.FINE, "----STEP----: " +
                 new Object(){}.getClass().getEnclosingMethod().getName());
         try {
-            assertTrue(loginPage.isCredentialsErrorMessage());
+            assertTrue(loginPage.isCredentialsError());
             // In case the assertion fails, we have to remove the app to keep executing other tests
             // After catching the error, it must be thrown again to return the correct test result.
             // Otherwise, the test will never fail
@@ -136,5 +148,5 @@ public class LoginSteps {
             throw e;
         }
         loginPage.removeApp();
-    }*/
+    }
 }
