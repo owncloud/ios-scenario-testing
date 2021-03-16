@@ -42,7 +42,7 @@ public class FileListSteps {
         fileListPage.pushFile(itemName);
     }*/
 
-    @Given("the following items exist in the account")
+    @Given("the following items have been created in the account")
     public void item_exists(DataTable table) throws Throwable {
         Log.log(Level.FINE, "----STEP----: " +
                 new Object(){}.getClass().getEnclosingMethod().getName());

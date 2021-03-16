@@ -43,7 +43,7 @@ public class SharePage extends CommonPage {
 
     public void addPublicLink(){
         Log.log(Level.FINE, "Starts: add public link");
-        waitById(5, sharefilename_id);
+        //waitById(5, sharefilename_id);
         driver.findElement(MobileBy.id(addpubliclinkbutton_id)).click();
     }
 

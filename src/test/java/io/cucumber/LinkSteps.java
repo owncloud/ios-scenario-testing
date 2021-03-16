@@ -39,7 +39,8 @@ public class LinkSteps {
             throws Throwable {
         Log.log(Level.FINE, "----STEP----: " +
                 new Object(){}.getClass().getEnclosingMethod().getName() + ": " + itemName);
-        sharePage.addPublicLink();
+        //sharePage.addPublicLink();
+        publicLinkPage.createLink(itemName);
         List<List<String>> listItems = table.asLists();
         for (List<String> rows : listItems) {
             switch (rows.get(0)){
@@ -64,10 +65,10 @@ public class LinkSteps {
             }
         }
         //if password is enforced, we must force to input
-        if (publicLinkPage.isPasswordEnforced(itemName)){
+        /*if (publicLinkPage.isPasswordEnforced(itemName)){
             //Enter a fake password to fit the scenario
             publicLinkPage.addPassword(itemName,"a");
-        }
+        }*/
         publicLinkPage.submitLink();
     }
 
@@ -125,23 +126,25 @@ public class LinkSteps {
         sharePage.acceptDeletion();
     }
 
-    @Then("^link is created on (.+) with the following fields$")
+    @Then("^link should be created on (.+) with the following fields$")
     public void link(String itemName, DataTable table)
             throws Throwable {
         Log.log(Level.FINE, "----STEP----: " +
                 new Object(){}.getClass().getEnclosingMethod().getName() + ": " + itemName);
         //Asserts in UI
+        String name = "";
         List<List<String>> listItems = table.asLists();
         for (List<String> rows : listItems) {
             switch (rows.get(0)) {
                 case "name": {
-                    assertTrue(sharePage.isItemInListPublicShares(rows.get(1)));
+                    name = rows.get(1);
+                    assertTrue(publicLinkPage.isItemInListPublicShares(rows.get(1)));
                     break;
                 }
                 case "password": {
-                    sharePage.openPublicLink(itemName);
+                    publicLinkPage.openPublicLink(name);
                     assertTrue(publicLinkPage.isPasswordEnabled(itemName));
-                    publicLinkPage.close();
+                    //publicLinkPage.close();
                     break;
                 }
                 case "user": {
@@ -156,9 +159,9 @@ public class LinkSteps {
                     break;
                 }
                 case "expiration days": {
-                    sharePage.openPublicLink(itemName);
+                    publicLinkPage.openPublicLink(name);
                     assertTrue(publicLinkPage.checkExpiration(rows.get(1)));
-                    publicLinkPage.close();
+                    //publicLinkPage.close();
                     break;
                 }
                 default:

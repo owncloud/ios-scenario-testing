@@ -14,6 +14,7 @@ import io.appium.java_client.MobileBy;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
+import io.appium.java_client.pagefactory.iOSXCUITFindBy;
 import utils.api.FilesAPI;
 import utils.date.DateUtils;
 import utils.entities.OCCapability;
@@ -21,8 +22,35 @@ import utils.log.Log;
 
 public class PublicLinkPage extends CommonPage {
 
-    @AndroidFindBy(id="com.owncloud.android:id/shareViaLinkExpirationValue")
+    /*@iOSXCUITFindBy(xpath = "//XCUIElementTypeApplication[@name=\"ownCloud\"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeTable/XCUIElementTypeCell[2]")
+    private MobileElement selectCreateLink;*/
+
+    @iOSXCUITFindBy(xpath = "//XCUIElementTypeStaticText[@name=\"Create Public Link\"]")
+    private MobileElement selectCreateLink;
+
+    @iOSXCUITFindBy(accessibility = "name-text-row")
+    private MobileElement nameLink;
+
+    @iOSXCUITFindBy(accessibility = "password-switch-row")
+    private MobileElement passwordSwitch;
+
+    @iOSXCUITFindBy(accessibility = "password-field-row")
+    private MobileElement passwordText;
+
+    @iOSXCUITFindBy(accessibility = "expire-row")
+    private List<MobileElement> expirationSwitch;
+
+    @iOSXCUITFindBy(accessibility = "expire-date-row")
     private MobileElement expirationDate;
+
+    @iOSXCUITFindBy(accessibility="Create")
+    private MobileElement createButton;
+
+    @iOSXCUITFindBy(accessibility="Cancel")
+    private MobileElement cancelButton;
+
+    @iOSXCUITFindBy(xpath = "//XCUIElementTypeStaticText[@name=\"Links\"]")
+    private MobileElement header;
 
     @AndroidFindBy(id="com.owncloud.android:id/shareViaLinkNameValue")
     private MobileElement namePublicLink;
@@ -38,9 +66,6 @@ public class PublicLinkPage extends CommonPage {
 
     @AndroidFindBy(id="com.owncloud.android:id/shareViaLinkEditPermissionUploadFiles")
     private MobileElement uploadOnlyOption;
-
-    @AndroidFindBy(id="com.owncloud.android:id/cancelButton")
-    private MobileElement cancelButton;
 
     @AndroidFindBy(id="com.owncloud.android:id/saveButton")
     private MobileElement saveButton;
@@ -64,25 +89,35 @@ public class PublicLinkPage extends CommonPage {
         ocCapability = OCCapability.getInstance();
     }
 
+    public void createLink (String linkName) {
+        selectCreateLink.click();
+    }
+
     public void addLinkName (String linkName) {
         Log.log(Level.FINE, "Starts: Add link name: " + linkName);
-        driver.findElement(By.id("name-text-row")).clear();
-        driver.findElement(By.id("name-text-row")).sendKeys("name1");
-        //namePublicLink.clear();
-        //namePublicLink.sendKeys(linkName);
+        nameLink.clear();
+        nameLink.sendKeys(linkName);
     }
+
+    public void openPublicLink(String linkName){
+        Log.log(Level.FINE, "Starts: open public link: " + linkName);
+        waitByXpath(10, "//XCUIElementTypeStaticText[@name=\"Links\"]");
+        driver.findElement(By.xpath("//XCUIElementTypeStaticText[@name=\"" + linkName + "\"]")).click();
+    }
+
 
     public void addPassword (String itemName, String password) throws IOException, SAXException, ParserConfigurationException {
         Log.log(Level.FINE, "Starts: Add link password: " + password);
         //To avoid password keyboard to appear
-        driver.hideKeyboard();
-        if (!isPasswordEnforced(itemName)){
-            switchPassword = (MobileElement) driver.findElement(By.id(switchPasswordId));
-            switchPassword.click();
-        }
-        waitById(5, textPassword);
-        textPassword.sendKeys(password);
-        swipe(0.50, 0.45, 0.50, 0.30);
+        //driver.hideKeyboard();
+        //if (!isPasswordEnforced(itemName)){
+            //switchPassword = (MobileElement) driver.findElement(By.id(switchPasswordId));
+        //    passwordSwitch.click();
+        //}
+        //waitById(5, textPassword);
+        passwordSwitch.click();
+        passwordText.sendKeys(password);
+        //swipe(0.50, 0.45, 0.50, 0.30);
     }
 
     public void setPermission (String permission) {
@@ -105,7 +140,8 @@ public class PublicLinkPage extends CommonPage {
 
     public void setExpiration (String days){
         Log.log(Level.FINE, "Starts: Set Expiration date in days: " + days);
-        List<MobileElement> switchExpiration =
+        expirationSwitch.get(0).click();
+        /*List<MobileElement> switchExpiration =
                 (List<MobileElement>) driver.findElements(By.id(switchExpirationId));
         if (!switchExpiration.isEmpty()) {
             if (parseIntBool(switchExpiration.get(0).getAttribute("checked"))) {
@@ -131,19 +167,21 @@ public class PublicLinkPage extends CommonPage {
         }
         driver.findElement(new MobileBy.ByAccessibilityId(dateToSet)).click();
         takeScreenshot("PublicShare/ExpirationDateSelected");
-        okButton.click();
+        okButton.click();*/
     }
 
     public boolean isPasswordEnabled(String itemName)
             throws IOException, SAXException, ParserConfigurationException {
-        boolean switchEnabled = true;
-        boolean passVisible;
-        if (!isPasswordEnforced(itemName)) {
-            switchPassword = (MobileElement) driver.findElement(By.id(switchPasswordId));
-            waitById(5, switchPassword);
-            switchEnabled = parseIntBool(switchPassword.getAttribute("checked"));
-        }
-        passVisible = textPassword.isDisplayed();
+        //boolean switchEnabled = true;
+        //boolean passVisible;
+        //if (!isPasswordEnforced(itemName)) {
+        boolean switchEnabled = passwordSwitch.isEnabled();
+        boolean passVisible = passwordText.isDisplayed();
+            //switchPassword = (MobileElement) driver.findElement(By.id(switchPasswordId));
+            //waitById(5, switchPassword);
+            //switchEnabled = parseIntBool(switchPassword.getAttribute("checked"));
+        //}
+        //passVisible = textPassword.isDisplayed();
         return switchEnabled && passVisible;
     }
 
@@ -160,6 +198,12 @@ public class PublicLinkPage extends CommonPage {
     public void selectUploadOnly(){
         Log.log(Level.FINE, "Starts: Select Upload Only (File drop)");
         uploadOnlyOption.click();
+    }
+
+    public boolean isItemInListPublicShares(String itemName) {
+        waitByXpath(10, "//XCUIElementTypeStaticText[@name=\"Links\"]");
+        takeScreenshot("PublicShare/ItemInListPubilcShare_"+itemName);
+        return !driver.findElements(By.id(itemName)).isEmpty();
     }
 
     public boolean checkPermissions(String permissions){
@@ -189,7 +233,7 @@ public class PublicLinkPage extends CommonPage {
 
     public boolean checkExpiration(String days){
         Log.log(Level.FINE, "Starts: Check expiration in days: " + days);
-        List<MobileElement> switchExpiration =
+        /*List<MobileElement> switchExpiration =
                 (List<MobileElement>) driver.findElements(By.id(switchExpirationId));
         boolean switchEnabled = false;
         boolean dateCorrect = false;
@@ -210,7 +254,8 @@ public class PublicLinkPage extends CommonPage {
             dateCorrect = expirationDate.getText().equals(shortDate);
         }
         Log.log(Level.FINE, "Date Correct -> " + dateCorrect);
-        return switchEnabled && dateCorrect;
+        return switchEnabled && dateCorrect;*/
+        return parseIntBool(expirationSwitch.get(0).getAttribute("enabled"));
     }
 
     public void close(){
@@ -223,7 +268,8 @@ public class PublicLinkPage extends CommonPage {
         Log.log(Level.FINE, "Starts: Submit public link");
         takeScreenshot("PublicShare/Submit");
         //saveButton.click();
-        driver.findElement(By.linkText("Create")).click();
+        //driver.findElement(By.linkText("Create")).click();
+        createButton.click();
     }
 
     //To check if password is enforced in capabilities
