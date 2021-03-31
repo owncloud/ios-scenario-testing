@@ -52,20 +52,29 @@ public class PublicLinkPage extends CommonPage {
     @iOSXCUITFindBy(xpath = "//XCUIElementTypeStaticText[@name=\"Links\"]")
     private MobileElement header;
 
+    @iOSXCUITFindBy(id="Download / View")
+    private MobileElement downloadViewOption;
+
+    @iOSXCUITFindBy(id="Download / View / Upload")
+    private MobileElement downloadViewUploadOption;
+
+    @iOSXCUITFindBy(id="Upload only (File Drop)")
+    private MobileElement uploadOnlyOption;
+
     @AndroidFindBy(id="com.owncloud.android:id/shareViaLinkNameValue")
     private MobileElement namePublicLink;
 
     @AndroidFindBy(id="com.owncloud.android:id/shareViaLinkPasswordValue")
     private MobileElement textPassword;
 
-    @AndroidFindBy(id="com.owncloud.android:id/shareViaLinkEditPermissionReadOnly")
+    /*@AndroidFindBy(id="com.owncloud.android:id/shareViaLinkEditPermissionReadOnly")
     private MobileElement downloadViewOption;
 
     @AndroidFindBy(id="com.owncloud.android:id/shareViaLinkEditPermissionReadAndWrite")
     private MobileElement downloadViewUploadOption;
 
     @AndroidFindBy(id="com.owncloud.android:id/shareViaLinkEditPermissionUploadFiles")
-    private MobileElement uploadOnlyOption;
+    private MobileElement uploadOnlyOption;*/
 
     @AndroidFindBy(id="com.owncloud.android:id/saveButton")
     private MobileElement saveButton;
@@ -102,22 +111,19 @@ public class PublicLinkPage extends CommonPage {
     public void openPublicLink(String linkName){
         Log.log(Level.FINE, "Starts: open public link: " + linkName);
         waitByXpath(10, "//XCUIElementTypeStaticText[@name=\"Links\"]");
-        driver.findElement(By.xpath("//XCUIElementTypeStaticText[@name=\"" + linkName + "\"]")).click();
+        driver.findElement(By.id(linkName)).click();
+        //driver.findElement(By.xpath("//XCUIElementTypeStaticText[@name=\"" + linkName + "\"]")).click();
     }
 
 
     public void addPassword (String itemName, String password) throws IOException, SAXException, ParserConfigurationException {
         Log.log(Level.FINE, "Starts: Add link password: " + password);
-        //To avoid password keyboard to appear
-        //driver.hideKeyboard();
-        //if (!isPasswordEnforced(itemName)){
-            //switchPassword = (MobileElement) driver.findElement(By.id(switchPasswordId));
-        //    passwordSwitch.click();
-        //}
-        //waitById(5, textPassword);
+        /*if (!isPasswordEnforced(itemName)){
+            switchPassword = (MobileElement) driver.findElement(By.id(switchPasswordId));
+            passwordSwitch.click();
+        }*/
         passwordSwitch.click();
         passwordText.sendKeys(password);
-        //swipe(0.50, 0.45, 0.50, 0.30);
     }
 
     public void setPermission (String permission) {
@@ -210,19 +216,19 @@ public class PublicLinkPage extends CommonPage {
             Log.log(Level.FINE, "Starts: Check permissions: " + permissions);
             switch (permissions){
                 case("1"):{
-                    if (parseIntBool(downloadViewOption.getAttribute("checked")) == true ){
+                    if (parseIntBool(downloadViewOption.getAttribute("selected")) == true ){
                         Log.log(Level.FINE, "Download / View is selected");
                         return true;
                     }
                 }
                 case("15"):{
-                    if (parseIntBool(downloadViewUploadOption.getAttribute("checked")) == true ){
+                    if (parseIntBool(downloadViewUploadOption.getAttribute("selected")) == true ){
                         Log.log(Level.FINE, "Download / View / Upload is selected");
                         return true;
                     }
                 }
                 case("4"):{
-                    if (parseIntBool(uploadOnlyOption.getAttribute("checked")) == true ){
+                    if (parseIntBool(uploadOnlyOption.getAttribute("selected")) == true ){
                         Log.log(Level.FINE, "Upload only is selected");
                         return true;
                     }
@@ -267,8 +273,6 @@ public class PublicLinkPage extends CommonPage {
     public void submitLink() {
         Log.log(Level.FINE, "Starts: Submit public link");
         takeScreenshot("PublicShare/Submit");
-        //saveButton.click();
-        //driver.findElement(By.linkText("Create")).click();
         createButton.click();
     }
 

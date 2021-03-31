@@ -6,6 +6,8 @@ import android.FolderPickerPage;
 import android.InputNamePage;
 import android.RemoveDialogPage;
 
+import org.openqa.selenium.By;
+
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -27,7 +29,7 @@ public class FileListSteps {
 
     //Involved pages
     protected FileListPage fileListPage = new FileListPage();
-    //protected InputNamePage inputNamePage = new InputNamePage();
+    protected InputNamePage inputNamePage = new InputNamePage();
     //protected FolderPickerPage folderPickerPage = new FolderPickerPage();
     //protected RemoveDialogPage removeDialogPage = new RemoveDialogPage();
     //protected DetailsPage detailsPage = new DetailsPage();
@@ -56,12 +58,12 @@ public class FileListSteps {
         }
     }
 
-    /*@When("^user selects the option Create Folder$")
+    @When("^user selects the option Create Folder$")
     public void i_select_create_folder() {
         Log.log(Level.FINE, "----STEP----: " +
                 new Object(){}.getClass().getEnclosingMethod().getName());
         fileListPage.createFolder();
-    }*/
+    }
 
     @When("^user selects to (.+) the item (.+)$")
     public void i_select_item_to_some_operation(String operation, String itemName) {
@@ -104,16 +106,16 @@ public class FileListSteps {
         Log.log(Level.FINE, "----STEP----: " +
                 new Object(){}.getClass().getEnclosingMethod().getName());
         removeDialogPage.removeAll();
-    }
+    }*/
 
-    @When("^user sets (.+) as name$")
+    @When("^user sets (.+) as new name$")
     public void i_set_new_name(String itemName) {
         Log.log(Level.FINE, "----STEP----: " +
                 new Object(){}.getClass().getEnclosingMethod().getName()  + ": " + itemName);
         inputNamePage.setItemName(itemName);
-    }*/
+    }
 
-    /*@Then("^user sees (.+) in the file list$")
+    @Then("^user should see (.+) in the filelist$")
     public void i_see_the_item(String itemName) throws Throwable {
         Log.log(Level.FINE, "----STEP----: " +
                 new Object(){}.getClass().getEnclosingMethod().getName() + ": " + itemName);
@@ -122,8 +124,9 @@ public class FileListSteps {
         //assertTrue(fileListPage.isItemInList(itemName.substring(itemName.lastIndexOf('/')+1)));
         //assertTrue(filesAPI.itemExist(itemName));
         //filesAPI.removeItem(itemName);
-        assertTrue(fileListPage.isBookmarkCreated());
-    }*/
+        assertTrue(fileListPage.isItemInList(itemName));
+        filesAPI.removeItem(itemName);
+    }
 
     /*@Then("^user does not see (.+) in the file list anymore$")
     public void i_do_not_see_the_item(String itemName) throws Throwable {

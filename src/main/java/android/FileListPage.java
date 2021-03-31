@@ -3,8 +3,6 @@ package android;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.PageFactory;
 
-import java.io.File;
-import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 import java.util.ArrayList;
@@ -17,6 +15,7 @@ import io.appium.java_client.MobileBy;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
+import io.appium.java_client.pagefactory.iOSXCUITFindBy;
 import utils.LocProperties;
 import utils.entities.OCFile;
 import utils.log.Log;
@@ -35,10 +34,10 @@ public class FileListPage extends CommonPage {
     @AndroidFindBy(uiAutomator="new UiSelector().resourceId(\"com.owncloud.android:id/action_mode_close_button\");")
     private MobileElement closeSelectionMode;
 
-    @AndroidFindBy(id="com.owncloud.android:id/fab_expand_menu_button")
-    private MobileElement fabButton;
+    @iOSXCUITFindBy(id="client.file-add")
+    private MobileElement plusButton;
 
-    @AndroidFindBy(id="com.owncloud.android:id/fab_mkdir")
+    @iOSXCUITFindBy(xpath="//XCUIElementTypeButton[@name=\"Create folder\"]")
     private MobileElement createFolder;
 
     @AndroidFindBy(id="com.owncloud.android:id/fab_upload")
@@ -95,28 +94,23 @@ public class FileListPage extends CommonPage {
         takeScreenshot("OpenList/fileListLoaded");
     }
 
-    public void createFolder(){
+    public void createFolder() {
         Log.log(Level.FINE, "Starts: create folder");
-        //waitById(5, fabButton);
-        //fabButton.click();
-        //createFolder.click();
-        driver.switchTo().alert().accept();
-        driver.findElement(By.id("addServer")).click();
-        driver.findElement(By.id("row-url-url")).sendKeys("http://192.168.1.20:33000");
-        driver.findElement(By.id("continue-bar-button")).click();
-        driver.findElement(By.id("approve-button")).click();
-        driver.findElement(By.id("continue-bar-button")).click();
-        driver.findElement(By.id("row-credentials-username")).sendKeys("user1");
-        driver.findElement(By.id("row-credentials-password")).sendKeys("a");
-        driver.findElement(By.id("continue-bar-button")).click();
+        try {
+            Thread.sleep(4000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        plusButton.click();
+        Log.log(Level.FINE, "ylp");
+        createFolder.click();
     }
-
 
 
     public void upload(){
         Log.log(Level.FINE, "Starts: upload");
-        waitById(5, fabButton);
-        fabButton.click();
+        waitById(5, plusButton);
+        plusButton.click();
         uploadOption.click();
     }
 
@@ -144,9 +138,8 @@ public class FileListPage extends CommonPage {
 
     public boolean isItemInList (String itemName) {
         Log.log(Level.FINE, "Starts: Check if item is in list: " + itemName);
-        return true;
-        //return !driver.findElementsByAndroidUIAutomator(
-        //        "new UiSelector().text(\"" + itemName + "\");").isEmpty();
+        waitById(10, plusButton);
+        return !driver.findElements(By.id(itemName)).isEmpty();
     }
 
     public boolean isHeader(){

@@ -7,7 +7,8 @@ Feature: Links
   Background: User is logged in
     Given user user1 is logged
     And the following items have been created in the account
-      | Documents |
+      |  Documents         |
+      |  textExample.txt   |
 
 
   Scenario Outline: Create a public link with name
@@ -20,7 +21,7 @@ Feature: Links
     Examples:
       |  item              |  name    |
       |  Documents         |  link1   |
-      |  textExample.txt   |  link2   |
+      #|  textExample.txt   |  link2   |
 
 
   Scenario Outline: Create a public link with password
@@ -50,3 +51,18 @@ Feature: Links
     Examples:
       |  item       |  name    | expiration    |
       |  Documents  |  link1   |    7          |
+
+    @ggg
+  Scenario Outline: Create a public link with permissions
+    When user selects to share the item <item>
+    And user creates link on <item> with the following fields
+      | name       | <name>        |
+      | permission | <permissions> |
+    Then link should be created on <item> with the following fields
+      | name       | <name>        |
+      | permission | <permissions> |
+
+    Examples:
+      |  item       |  name    | permissions |
+      |  Documents  |  link1   |    15       |
+      |  Documents  |  link2   |    4        |

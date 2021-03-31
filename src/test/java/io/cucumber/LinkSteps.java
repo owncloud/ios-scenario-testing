@@ -132,17 +132,17 @@ public class LinkSteps {
         Log.log(Level.FINE, "----STEP----: " +
                 new Object(){}.getClass().getEnclosingMethod().getName() + ": " + itemName);
         //Asserts in UI
-        String name = "";
+        String linkName = "";
         List<List<String>> listItems = table.asLists();
         for (List<String> rows : listItems) {
             switch (rows.get(0)) {
                 case "name": {
-                    name = rows.get(1);
+                    linkName = rows.get(1);
                     assertTrue(publicLinkPage.isItemInListPublicShares(rows.get(1)));
                     break;
                 }
                 case "password": {
-                    publicLinkPage.openPublicLink(name);
+                    publicLinkPage.openPublicLink(linkName);
                     assertTrue(publicLinkPage.isPasswordEnabled(itemName));
                     //publicLinkPage.close();
                     break;
@@ -153,13 +153,13 @@ public class LinkSteps {
                 }
                 case "permission": {
                     Log.log(Level.FINE, "checking permissions");
-                    sharePage.openPublicLink(itemName);
+                    publicLinkPage.openPublicLink(linkName);
                     assertTrue(publicLinkPage.checkPermissions(rows.get(1)));
                     publicLinkPage.close();
                     break;
                 }
                 case "expiration days": {
-                    publicLinkPage.openPublicLink(name);
+                    publicLinkPage.openPublicLink(linkName);
                     assertTrue(publicLinkPage.checkExpiration(rows.get(1)));
                     //publicLinkPage.close();
                     break;

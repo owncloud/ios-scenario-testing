@@ -7,14 +7,15 @@ import java.util.logging.Level;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
+import io.appium.java_client.pagefactory.iOSXCUITFindBy;
 import utils.log.Log;
 
 public class InputNamePage extends CommonPage {
 
-    @AndroidFindBy(id="com.owncloud.android:id/user_input")
+    @iOSXCUITFindBy(id="name-text-field")
     private MobileElement newName;
 
-    @AndroidFindBy(id="android:id/button1")
+    @iOSXCUITFindBy(id="done-button")
     private MobileElement acceptButton;
 
     public InputNamePage(){

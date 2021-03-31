@@ -25,7 +25,7 @@ import utils.log.Log;
 public class CommonPage {
 
     protected static IOSDriver driver = AppiumManager.getManager().getDriver();
-    protected Actions actions;
+    protected static Actions actions;
     private static final SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMdd_HHmmss");
     protected final String packag = LocProperties.getProperties().getProperty("appPackage");
 
@@ -76,6 +76,10 @@ public class CommonPage {
         wait.until(ExpectedConditions.elementSelectionStateToBe(mobileElement, status));
     }
 
+    public static void longPress(MobileElement element){
+        actions.clickAndHold(element).perform();
+        takeScreenshot("ElementFileList/AfterSelecting");
+    }
 
     public static void swipe (double startx, double starty, double endx, double endy) {
         Dimension size = driver.manage().window().getSize();
