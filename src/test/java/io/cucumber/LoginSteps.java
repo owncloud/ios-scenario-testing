@@ -5,6 +5,8 @@ import android.FileListPage;
 import android.KopanoPage;
 import android.LoginPage;
 
+import net.thucydides.core.steps.StepEventBus;
+
 import java.util.logging.Level;
 
 import io.cucumber.java.en.Given;
@@ -36,8 +38,8 @@ public class LoginSteps {
     @Given("^user (.+) is logged$")
     public void i_am_logged(String user)
             throws Throwable {
-        Log.log(Level.FINE, "----STEP----: " +
-                new Object(){}.getClass().getEnclosingMethod().getName());
+        String currentStep = StepEventBus.getEventBus().getCurrentStep().get().toString();
+        Log.log(Level.FINE, "----STEP----: " + currentStep);
         loginPage.acceptPermissions();
         if (loginPage.notLoggedIn()) {
             String authMethod = commonAPI.checkAuthMethod();
@@ -75,8 +77,8 @@ public class LoginSteps {
 
     @Given("^server with (.+) is available$")
     public void server_available(String authMethod) {
-        Log.log(Level.FINE, "----STEP----: " +
-                new Object(){}.getClass().getEnclosingMethod().getName() + " with " + authMethod);
+        String currentStep = StepEventBus.getEventBus().getCurrentStep().get().toString();
+        Log.log(Level.FINE, "----STEP----: " + currentStep);
         loginPage.acceptPermissions();
         loginPage.skipAddServer();
         loginPage.typeURL(authMethod);
@@ -85,9 +87,8 @@ public class LoginSteps {
     @When("^user logins as (.+) with password (.+) as (.+) credentials$")
     public void login_with_password_auth_method(String username, String password,
                                                 String authMethod) {
-        Log.log(Level.FINE, "----STEP----: " +
-                new Object() {}.getClass().getEnclosingMethod().getName()
-                + ": " + username + " - " + password + " - " + authMethod);
+        String currentStep = StepEventBus.getEventBus().getCurrentStep().get().toString();
+        Log.log(Level.FINE, "----STEP----: " + currentStep);
         switch (authMethod) {
             case "basic auth":
             case "LDAP":
@@ -113,15 +114,15 @@ public class LoginSteps {
 
     @Then("^user accepts the redirection$")
     public void accepted_redirection() {
-        Log.log(Level.FINE, "----STEP----: " +
-                new Object(){}.getClass().getEnclosingMethod().getName());
+        String currentStep = StepEventBus.getEventBus().getCurrentStep().get().toString();
+        Log.log(Level.FINE, "----STEP----: " + currentStep);
         loginPage.approveIssue();
     }
 
     @Then("^user should be correctly logged$")
     public void i_can_see_the_main_page() {
-        Log.log(Level.FINE, "----STEP----: " +
-                new Object(){}.getClass().getEnclosingMethod().getName());
+        String currentStep = StepEventBus.getEventBus().getCurrentStep().get().toString();
+        Log.log(Level.FINE, "----STEP----: " + currentStep);
         try {
             assertTrue(loginPage.isBookmarkCreated());
             // In case the assertion fails, we have to remove the app to keep executing other tests
@@ -136,8 +137,8 @@ public class LoginSteps {
 
     @Then("^user should see an error$")
     public void i_see_an_error_message() {
-        Log.log(Level.FINE, "----STEP----: " +
-                new Object(){}.getClass().getEnclosingMethod().getName());
+        String currentStep = StepEventBus.getEventBus().getCurrentStep().get().toString();
+        Log.log(Level.FINE, "----STEP----: " + currentStep);
         try {
             assertTrue(loginPage.isCredentialsError());
             // In case the assertion fails, we have to remove the app to keep executing other tests

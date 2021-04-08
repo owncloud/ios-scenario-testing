@@ -155,20 +155,21 @@ public class FileListPage extends CommonPage {
     }
 
     public void selectOperation(String itemName, String operationName) {
-        MobileElement operation = (MobileElement) (driver.findElement(By.xpath("(//XCUIElementTypeCell[@name=\"share-add-group\"])[2]")));
-        waitByXpath(3, "(//XCUIElementTypeCell[@name=\"share-add-group\"])[2]");
+        MobileElement operation = null;
+        switch (operationName){
+            case "share by link":
+                String xpath_sharelink = "//XCUIElementTypeCell[@name=\"share-add-group\"])[2]";
+                operation = (MobileElement) (driver.findElement(By.xpath(xpath_sharelink)));
+                waitByXpath(3, "(//XCUIElementTypeCell[@name=\"share-add-group\"])[2]");
+                break;
+            case "edit link":
+                String xpath_editlink = "//XCUIElementTypeApplication[@name=\"ownCloud\"]/XCUIElementTypeWindow[1]/" +
+                        "XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeTable/XCUIElementTypeCell[2]";
+                operation = (MobileElement) (driver.findElement(By.xpath(xpath_editlink)));
+                waitByXpath(3, xpath_editlink);
+                break;
+        }
         operation.click();
-        /*if (driver.findElementsByAndroidUIAutomator(
-                "new UiSelector().resourceId(\"" + operationsMap.get(operationName) + "\");").isEmpty()){
-            //Operation inside menu, matching by name
-            Log.log(Level.FINE, "Operation: " + operationName + " placed in menu");
-            selectOperationMenu(operationName);
-        } else {
-            //Operation in toolbar, matching by id
-            Log.log(Level.FINE, "Operation: " + operationName + " placed in toolbar");
-            driver.findElement(MobileBy.AndroidUIAutomator(
-                    "new UiSelector().resourceId(\""+ operationsMap.get(operationName) +"\");")).click();
-        }*/
     }
 
     public void browse(String folderName){

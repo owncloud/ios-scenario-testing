@@ -3,6 +3,8 @@ package io.cucumber;
 import android.PublicLinkPage;
 import android.SharePage;
 
+import net.thucydides.core.steps.StepEventBus;
+
 import java.util.List;
 import java.util.logging.Level;
 
@@ -26,20 +28,19 @@ public class LinkSteps {
     //APIs to call
     protected ShareAPI shareAPI = new ShareAPI();
 
-    @Given("the item (.+) is already shared by link")
+    @Given("the item (.+) has been already shared by link")
     public void item_already_shared_by_link(String itemName)
             throws Throwable {
-        Log.log(Level.FINE, "----STEP----: " +
-                new Object(){}.getClass().getEnclosingMethod().getName() + " - " + itemName);
+        String currentStep = StepEventBus.getEventBus().getCurrentStep().get().toString();
+        Log.log(Level.FINE, "----STEP----: " + currentStep);
         shareAPI.createShare(itemName, "", "3", "1", itemName + " link");
     }
 
     @When("^user creates link on (.+) with the following fields$")
     public void i_select_to_link_with_fields(String itemName, DataTable table)
             throws Throwable {
-        Log.log(Level.FINE, "----STEP----: " +
-                new Object(){}.getClass().getEnclosingMethod().getName() + ": " + itemName);
-        //sharePage.addPublicLink();
+        String currentStep = StepEventBus.getEventBus().getCurrentStep().get().toString();
+        Log.log(Level.FINE, "----STEP----: " + currentStep);
         publicLinkPage.createLink(itemName);
         List<List<String>> listItems = table.asLists();
         for (List<String> rows : listItems) {
@@ -75,8 +76,8 @@ public class LinkSteps {
     @When("^user edits the link on (.+) with the following fields$")
     public void user_edits_public_link(String itemName, DataTable table)
             throws Throwable {
-        Log.log(Level.FINE, "----STEP----: " +
-                new Object(){}.getClass().getEnclosingMethod().getName() + ": " + itemName);
+        String currentStep = StepEventBus.getEventBus().getCurrentStep().get().toString();
+        Log.log(Level.FINE, "----STEP----: " + currentStep);
         List<List<String>> listItems = table.asLists();
         sharePage.openPublicLink(itemName);
         for (List<String> rows : listItems) {
@@ -118,19 +119,19 @@ public class LinkSteps {
         publicLinkPage.submitLink();
     }
 
-    @When("^user deletes the link$")
-    public void user_deletes_link() {
-        Log.log(Level.FINE, "----STEP----: " +
-                new Object(){}.getClass().getEnclosingMethod().getName());
-        sharePage.deletePublicShare();
-        sharePage.acceptDeletion();
+    @When("^user deletes the link on (.+)$")
+    public void user_deletes_link(String item) {
+        String currentStep = StepEventBus.getEventBus().getCurrentStep().get().toString();
+        Log.log(Level.FINE, "----STEP----: " + currentStep);
+        publicLinkPage.openPublicLink(item + " link");
+        publicLinkPage.deleteLink();
     }
 
     @Then("^link should be created on (.+) with the following fields$")
     public void link(String itemName, DataTable table)
             throws Throwable {
-        Log.log(Level.FINE, "----STEP----: " +
-                new Object(){}.getClass().getEnclosingMethod().getName() + ": " + itemName);
+        String currentStep = StepEventBus.getEventBus().getCurrentStep().get().toString();
+        Log.log(Level.FINE, "----STEP----: " + currentStep);
         //Asserts in UI
         String linkName = "";
         List<List<String>> listItems = table.asLists();
@@ -138,7 +139,7 @@ public class LinkSteps {
             switch (rows.get(0)) {
                 case "name": {
                     linkName = rows.get(1);
-                    assertTrue(publicLinkPage.isItemInListPublicShares(rows.get(1)));
+                    assertTrue(publicLinkPage.isItemInListLinks(rows.get(1)));
                     break;
                 }
                 case "password": {
@@ -155,7 +156,7 @@ public class LinkSteps {
                     Log.log(Level.FINE, "checking permissions");
                     publicLinkPage.openPublicLink(linkName);
                     assertTrue(publicLinkPage.checkPermissions(rows.get(1)));
-                    publicLinkPage.close();
+                    //publicLinkPage.close();
                     break;
                 }
                 case "expiration days": {
@@ -174,12 +175,12 @@ public class LinkSteps {
         shareAPI.removeShare(share.getId());
     }
 
-    @Then("^link on (.+) does not exist anymore$")
+    @Then("^link on (.+) should not exist anymore$")
     public void link_not_existing(String itemName)
             throws Throwable {
-        Log.log(Level.FINE, "----STEP----: " +
-                new Object(){}.getClass().getEnclosingMethod().getName());
-        assertFalse(sharePage.isItemInListPublicShares(itemName+ " link"));
+        String currentStep = StepEventBus.getEventBus().getCurrentStep().get().toString();
+        Log.log(Level.FINE, "----STEP----: " + currentStep);
+        assertFalse(publicLinkPage.isItemInListLinks(itemName+ " link"));
         assertTrue(shareAPI.getShare(itemName) == null);
     }
 }

@@ -6,6 +6,8 @@ import android.FolderPickerPage;
 import android.InputNamePage;
 import android.RemoveDialogPage;
 
+import net.thucydides.core.steps.StepEventBus;
+
 import org.openqa.selenium.By;
 
 import java.util.ArrayList;
@@ -46,8 +48,8 @@ public class FileListSteps {
 
     @Given("the following items have been created in the account")
     public void item_exists(DataTable table) throws Throwable {
-        Log.log(Level.FINE, "----STEP----: " +
-                new Object(){}.getClass().getEnclosingMethod().getName());
+        String currentStep = StepEventBus.getEventBus().getCurrentStep().get().toString();
+        Log.log(Level.FINE, "----STEP----: " + currentStep);
         List<String> listItems = (List<String>) table.asList();
         Iterator iterator = listItems.iterator();
         while(iterator.hasNext()) {
@@ -60,30 +62,16 @@ public class FileListSteps {
 
     @When("^user selects the option Create Folder$")
     public void i_select_create_folder() {
-        Log.log(Level.FINE, "----STEP----: " +
-                new Object(){}.getClass().getEnclosingMethod().getName());
+        String currentStep = StepEventBus.getEventBus().getCurrentStep().get().toString();
+        Log.log(Level.FINE, "----STEP----: " + currentStep);
         fileListPage.createFolder();
     }
 
     @When("^user selects to (.+) the item (.+)$")
     public void i_select_item_to_some_operation(String operation, String itemName) {
-        Log.log(Level.FINE, "----STEP----: " +
-                new Object(){}.getClass().getEnclosingMethod().getName() + ": "
-                + operation + " " + itemName);
-        //fileListPage.waitToload();
-        //fileListPage.refreshList();
-        switch (operation){
-            case "Download":
-                fileListPage.downloadAction(itemName);
-                //detailsPage.waitFinishedDownload(30);
-                break;
-            case "Upload":
-                //fileListPage.selectFileUpload(itemName);
-                break;
-            default:
-                fileListPage.executeOperation(operation, itemName);
-                break;
-        }
+        String currentStep = StepEventBus.getEventBus().getCurrentStep().get().toString();
+        Log.log(Level.FINE, "----STEP----: " + currentStep);
+        fileListPage.executeOperation(operation, itemName);
     }
 
     /*@When ("^user selects (.+) as target folder$")
@@ -110,15 +98,15 @@ public class FileListSteps {
 
     @When("^user sets (.+) as new name$")
     public void i_set_new_name(String itemName) {
-        Log.log(Level.FINE, "----STEP----: " +
-                new Object(){}.getClass().getEnclosingMethod().getName()  + ": " + itemName);
+        String currentStep = StepEventBus.getEventBus().getCurrentStep().get().toString();
+        Log.log(Level.FINE, "----STEP----: " + currentStep);
         inputNamePage.setItemName(itemName);
     }
 
     @Then("^user should see (.+) in the filelist$")
     public void i_see_the_item(String itemName) throws Throwable {
-        Log.log(Level.FINE, "----STEP----: " +
-                new Object(){}.getClass().getEnclosingMethod().getName() + ": " + itemName);
+        String currentStep = StepEventBus.getEventBus().getCurrentStep().get().toString();
+        Log.log(Level.FINE, "----STEP----: " + currentStep);
         //fileListPage.waitToload();
         //Get the last token of the item path
         //assertTrue(fileListPage.isItemInList(itemName.substring(itemName.lastIndexOf('/')+1)));

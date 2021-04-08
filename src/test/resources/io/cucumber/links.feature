@@ -12,7 +12,7 @@ Feature: Links
 
 
   Scenario Outline: Create a public link with name
-    When user selects to share the item <item>
+    When user selects to share by link the item <item>
     And user creates link on <item> with the following fields
       | name | <name> |
     Then link should be created on <item> with the following fields
@@ -21,11 +21,10 @@ Feature: Links
     Examples:
       |  item              |  name    |
       |  Documents         |  link1   |
-      #|  textExample.txt   |  link2   |
-
+      |  textExample.txt   |  link2   |
 
   Scenario Outline: Create a public link with password
-    When user selects to share the item <item>
+    When user selects to share by link the item <item>
     And user creates link on <item> with the following fields
       | name     | <name>     |
       | password | <password> |
@@ -37,10 +36,9 @@ Feature: Links
       |  item       |  name    | password |
       |  Documents  |  link1   |    a     |
 
-
   @expiration
   Scenario Outline: Create a public link with expiration date
-    When user selects to share the item <item>
+    When user selects to share by link the item <item>
     And user creates link on <item> with the following fields
       | name            | <name>  |
       | expiration days | <expiration>  |
@@ -52,9 +50,8 @@ Feature: Links
       |  item       |  name    | expiration    |
       |  Documents  |  link1   |    7          |
 
-    @ggg
   Scenario Outline: Create a public link with permissions
-    When user selects to share the item <item>
+    When user selects to share by link the item <item>
     And user creates link on <item> with the following fields
       | name       | <name>        |
       | permission | <permissions> |
@@ -66,3 +63,10 @@ Feature: Links
       |  item       |  name    | permissions |
       |  Documents  |  link1   |    15       |
       |  Documents  |  link2   |    4        |
+
+  @deletelink
+  Scenario: Delete existing link
+    Given the item Files has been already shared by link
+    When user selects to edit link the item Files
+    And user deletes the link on Files
+    Then link on Files should not exist anymore

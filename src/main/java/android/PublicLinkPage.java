@@ -52,38 +52,32 @@ public class PublicLinkPage extends CommonPage {
     @iOSXCUITFindBy(xpath = "//XCUIElementTypeStaticText[@name=\"Links\"]")
     private MobileElement header;
 
-    @iOSXCUITFindBy(id="Download / View")
+    //*@iOSXCUITFindBy(id="Download / View")
+    //private MobileElement downloadViewOption;
+
+    @iOSXCUITFindBy(xpath="//XCUIElementTypeApplication[@name=\"ownCloud\"]/XCUIElementTypeWindow[1]/" +
+            "XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeOther/XCUIElementTypeOther/" +
+            "XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeTable/XCUIElementTypeCell[3]")
     private MobileElement downloadViewOption;
 
-    @iOSXCUITFindBy(id="Download / View / Upload")
+    //@iOSXCUITFindBy(id="Download / View / Upload")
+    //private MobileElement downloadViewUploadOption;
+
+    @iOSXCUITFindBy(xpath="//XCUIElementTypeApplication[@name=\"ownCloud\"]/XCUIElementTypeWindow[1]/" +
+            "XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeOther/XCUIElementTypeOther/" +
+            "XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeTable/XCUIElementTypeCell[3]")
     private MobileElement downloadViewUploadOption;
 
-    @iOSXCUITFindBy(id="Upload only (File Drop)")
+    //@iOSXCUITFindBy(id="Upload only (File Drop)")
+    //private MobileElement uploadOnlyOption;
+
+    @iOSXCUITFindBy(xpath="//XCUIElementTypeApplication[@name=\"ownCloud\"]/XCUIElementTypeWindow[1]/" +
+            "XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeOther/XCUIElementTypeOther/" +
+            "XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeTable/XCUIElementTypeCell[4]")
     private MobileElement uploadOnlyOption;
 
-    @AndroidFindBy(id="com.owncloud.android:id/shareViaLinkNameValue")
-    private MobileElement namePublicLink;
-
-    @AndroidFindBy(id="com.owncloud.android:id/shareViaLinkPasswordValue")
-    private MobileElement textPassword;
-
-    /*@AndroidFindBy(id="com.owncloud.android:id/shareViaLinkEditPermissionReadOnly")
-    private MobileElement downloadViewOption;
-
-    @AndroidFindBy(id="com.owncloud.android:id/shareViaLinkEditPermissionReadAndWrite")
-    private MobileElement downloadViewUploadOption;
-
-    @AndroidFindBy(id="com.owncloud.android:id/shareViaLinkEditPermissionUploadFiles")
-    private MobileElement uploadOnlyOption;*/
-
-    @AndroidFindBy(id="com.owncloud.android:id/saveButton")
-    private MobileElement saveButton;
-
-    @AndroidFindBy(id="android:id/button1")
-    private MobileElement okButton;
-
-    @AndroidFindBy(id="android:id/next")
-    private MobileElement nextButton;
+    @iOSXCUITFindBy(accessibility = "Delete")
+    private MobileElement deleteLink;
 
     private OCCapability ocCapability;
 
@@ -206,7 +200,7 @@ public class PublicLinkPage extends CommonPage {
         uploadOnlyOption.click();
     }
 
-    public boolean isItemInListPublicShares(String itemName) {
+    public boolean isItemInListLinks(String itemName) {
         waitByXpath(10, "//XCUIElementTypeStaticText[@name=\"Links\"]");
         takeScreenshot("PublicShare/ItemInListPubilcShare_"+itemName);
         return !driver.findElements(By.id(itemName)).isEmpty();
@@ -303,6 +297,11 @@ public class PublicLinkPage extends CommonPage {
         } else { //in case of file, only the capability is checked
             return ocCapability.isPasswordEnforced();
         }
+    }
+
+    public void deleteLink(){
+        deleteLink.click();
+        takeScreenshot("PublicShare/Deletion");
     }
 
     private boolean parseIntBool(String s){
