@@ -9,12 +9,12 @@ import utils.log.Log;
 
 public class DateUtils {
 
-    public static String dateInDaysAndroidFormat(String days) {
+    public static String dateInDaysiOSFormat(String days) {
         Log.log(Level.FINE, "Starts: Turns days in date");
         GregorianCalendar gregorianCalendar = new GregorianCalendar();
         gregorianCalendar.add(Calendar.DAY_OF_YEAR, Integer.valueOf(days));
         Log.log(Level.FINE, "Date to format: " + gregorianCalendar.getTime());
-        String dateAfterDays = formatInt(gregorianCalendar.get(Calendar.DAY_OF_MONTH))
+        String dateAfterDays = gregorianCalendar.get(Calendar.DAY_OF_MONTH)
                 + " " + getNameMonth(gregorianCalendar.get(Calendar.MONTH))
                 + " " + gregorianCalendar.get(Calendar.YEAR);
         Log.log(Level.FINE, "Date formatted: " + dateAfterDays);

@@ -150,23 +150,22 @@ public class FileListPage extends CommonPage {
         Log.log(Level.FINE, "Starts: select item from list: " + itemName);
         waitByTextVisible(30, itemName);
         driver.findElement(By.name(itemName + " Actions")).click();
-        //MobileElement element = getElementFromFileList(itemName);
-        //actions.clickAndHold(element).perform();
     }
 
     public void selectOperation(String itemName, String operationName) {
         MobileElement operation = null;
+        Log.log(Level.FINE, "Starts: " + operationName);
         switch (operationName){
             case "share by link":
-                String xpath_sharelink = "//XCUIElementTypeCell[@name=\"share-add-group\"])[2]";
-                operation = (MobileElement) (driver.findElement(By.xpath(xpath_sharelink)));
-                waitByXpath(3, "(//XCUIElementTypeCell[@name=\"share-add-group\"])[2]");
+                String xpath_sharelink = "//XCUIElementTypeStaticText[@name=\"Links\"]";
+                operation = (MobileElement) driver.findElement(By.xpath(xpath_sharelink));
                 break;
             case "edit link":
                 String xpath_editlink = "//XCUIElementTypeApplication[@name=\"ownCloud\"]/XCUIElementTypeWindow[1]/" +
                         "XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeTable/XCUIElementTypeCell[2]";
-                operation = (MobileElement) (driver.findElement(By.xpath(xpath_editlink)));
-                waitByXpath(3, xpath_editlink);
+                operation = (MobileElement) driver.findElement(By.xpath(xpath_editlink));
+                break;
+            default:
                 break;
         }
         operation.click();
