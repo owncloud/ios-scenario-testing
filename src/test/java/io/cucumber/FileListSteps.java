@@ -67,11 +67,11 @@ public class FileListSteps {
         fileListPage.createFolder();
     }
 
-    @When("^user selects to (.+) the item (.+)$")
-    public void i_select_item_to_some_operation(String operation, String itemName) {
+    @When("^user selects to (.+) the (file|folder) (.+)$")
+    public void i_select_item_to_some_operation(String operation, String typeItem, String itemName) {
         String currentStep = StepEventBus.getEventBus().getCurrentStep().get().toString();
         Log.log(Level.FINE, "----STEP----: " + currentStep);
-        fileListPage.executeOperation(operation, itemName);
+        fileListPage.executeOperation(operation, itemName, typeItem);
     }
 
     /*@When ("^user selects (.+) as target folder$")

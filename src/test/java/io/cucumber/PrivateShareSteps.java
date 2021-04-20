@@ -2,8 +2,8 @@ package io.cucumber;
 
 import android.FileListPage;
 import android.PrivateSharePage;
-import android.SearchShareePage;
 import android.SharePage;
+import android.SharePermissionsPage;
 
 import net.thucydides.core.steps.StepEventBus;
 
@@ -14,6 +14,7 @@ import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import utils.LocProperties;
 import utils.api.ShareAPI;
 import utils.entities.OCShare;
 import utils.log.Log;
@@ -25,14 +26,13 @@ public class PrivateShareSteps {
 
     //Involved pages
     protected SharePage sharePage = new SharePage();
-    protected FileListPage fileListPage = new FileListPage();
-    protected SearchShareePage searchShareePage = new SearchShareePage();
+    protected SharePermissionsPage sharePermissionsPage = new SharePermissionsPage();
     protected PrivateSharePage privateSharePage = new PrivateSharePage();
 
     //APIs to call
     protected ShareAPI shareAPI = new ShareAPI();
 
-    @Given("^the item (.+) is already shared with (.+)$")
+    @Given("^the item (.+) has been already shared with (.+)$")
     public void item_already_shared(String itemName, String sharee)
             throws Throwable {
         String currentStep = StepEventBus.getEventBus().getCurrentStep().get().toString();
@@ -40,15 +40,24 @@ public class PrivateShareSteps {
         shareAPI.createShare(itemName, sharee, "0", "31", "");
     }
 
-    @When("^user selects (.+) to share with (.+)$")
+    @When("^user selects (user|group) (.+) as sharee$")
+    public void i_select_sharee(String type, String sharee)
+            throws Throwable {
+        String currentStep = StepEventBus.getEventBus().getCurrentStep().get().toString();
+        Log.log(Level.FINE, "----STEP----: " + currentStep);
+        privateSharePage.searchSharee(sharee, type);
+        sharePermissionsPage.savePermissions();
+    }
+
+    /*@When("^user selects (.+) to share with (.+)$")
     public void i_select_to_share_with(String itemName, String sharee)
             throws Throwable {
         String currentStep = StepEventBus.getEventBus().getCurrentStep().get().toString();
         Log.log(Level.FINE, "----STEP----: " + currentStep);
         fileListPage.executeOperation("share", itemName);
         sharePage.addPrivateShare();
-        searchShareePage.shareWithUser(sharee);
-    }
+        //searchShareePage.shareWithUser(sharee);
+    }*/
 
     @When("^user edits the share on (.+) with permissions (.+)$")
     public void user_edits_share(String itemName, String permissions)
@@ -111,11 +120,10 @@ public class PrivateShareSteps {
     public void user_deletes_share() {
         String currentStep = StepEventBus.getEventBus().getCurrentStep().get().toString();
         Log.log(Level.FINE, "----STEP----: " + currentStep);
-        sharePage.deletePrivateShare();
-        sharePage.acceptDeletion();
+        privateSharePage.deletePrivateShare(LocProperties.getProperties().getProperty("userToShare"));
     }
 
-    @Then("^share is created on (.+) with the following fields$")
+    @Then("^share should be created on (.+) with the following fields$")
     public void share_created_with_fields(String itemName, DataTable table)
             throws Throwable {
         String currentStep = StepEventBus.getEventBus().getCurrentStep().get().toString();
@@ -131,12 +139,12 @@ public class PrivateShareSteps {
                     privateSharePage.close();
                     break;
                 }
-                case "user": {
-                    assertTrue(sharePage.isItemInListPrivateShares(rows.get(1)));
+                case "sharee": {
+                    assertTrue(privateSharePage.isItemInListPrivateShares(rows.get(1)));
                     break;
                 }
                 case "group": {
-                    assertTrue(sharePage.isItemInListPrivateShares(rows.get(1)+ " (group)"));
+                    assertTrue(privateSharePage.isItemInListPrivateShares(rows.get(1)));
                     groupName = rows.get(1);
                     break;
                 }
@@ -154,7 +162,7 @@ public class PrivateShareSteps {
         shareAPI.removeShare(share.getId());
     }
 
-    @Then("^group including (.+) has access to (.+)$")
+    @Then("^group including (.+) should have access to (.+)$")
     public void group_has_the_file (String userName, String itemName)
             throws Throwable {
         String currentStep = StepEventBus.getEventBus().getCurrentStep().get().toString();
@@ -162,7 +170,7 @@ public class PrivateShareSteps {
         assertTrue(shareAPI.isSharedWithMe(itemName, true));
     }
 
-    @Then("^user (.+) does not have access to (.+)$")
+    @Then("^user (.+) should not have access to (.+)$")
     public void sharee_does_not_have_the_file (String userName, String itemName)
             throws Throwable {
         String currentStep = StepEventBus.getEventBus().getCurrentStep().get().toString();
@@ -170,7 +178,7 @@ public class PrivateShareSteps {
         assertFalse(shareAPI.isSharedWithMe(itemName, false));
     }
 
-    @Then("^user (.+) has access to (.+)$")
+    @Then("^user (.+) should have access to (.+)$")
     public void sharee_has_the_file (String userName, String itemName)
             throws Throwable {
         String currentStep = StepEventBus.getEventBus().getCurrentStep().get().toString();
@@ -178,10 +186,10 @@ public class PrivateShareSteps {
         assertTrue(shareAPI.isSharedWithMe(itemName, false));
     }
 
-    @Then("^(.+) is not shared anymore with (.+)$")
+    @Then("^(.+) should not be shared anymore with (.+)$")
     public void share_is_deleted(String itemName, String sharee) {
         String currentStep = StepEventBus.getEventBus().getCurrentStep().get().toString();
         Log.log(Level.FINE, "----STEP----: " + currentStep);
-        assertFalse(sharePage.isItemInListPrivateShares(sharee));
+        assertFalse(privateSharePage.isItemInListPrivateShares(sharee));
     }
 }

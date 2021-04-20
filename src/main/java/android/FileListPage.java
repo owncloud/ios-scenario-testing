@@ -40,6 +40,9 @@ public class FileListPage extends CommonPage {
     @iOSXCUITFindBy(xpath="//XCUIElementTypeButton[@name=\"Create folder\"]")
     private MobileElement createFolder;
 
+    @iOSXCUITFindBy(id="share-add-group")
+    private MobileElement share;
+
     @AndroidFindBy(id="com.owncloud.android:id/fab_upload")
     private MobileElement uploadOption;
 
@@ -84,14 +87,14 @@ public class FileListPage extends CommonPage {
     }
 
     public void waitToload(){
-        try {
+        /*try {
             //if list of files is not loaded, we should swipe to get the file list
             waitById(15, listFiles_id);
         } catch (Exception e) {
             swipe(0.50, 0.20, 0.50, 0.90);
             waitByTextVisible(10, "Documents");
         }
-        takeScreenshot("OpenList/fileListLoaded");
+        takeScreenshot("OpenList/fileListLoaded");*/
     }
 
     public void createFolder() {
@@ -115,7 +118,7 @@ public class FileListPage extends CommonPage {
     }
 
 
-    public void executeOperation(String operation, String itemName){
+    public void executeOperation(String operation, String itemName, String typeitem){
         Log.log(Level.FINE, "Starts: execute operation: " + operation + " " + itemName);
         waitToload();
         if (!isItemInList(itemName)){
@@ -123,7 +126,7 @@ public class FileListPage extends CommonPage {
             swipe(0.50, 0.90, 0.50, 0.20);
         }
         selectItemList(itemName);
-        selectOperation(itemName, operation);
+        selectOperation(itemName, operation, typeitem);
     }
 
     public void downloadAction(String itemName) {
@@ -152,10 +155,24 @@ public class FileListPage extends CommonPage {
         driver.findElement(By.name(itemName + " Actions")).click();
     }
 
-    public void selectOperation(String itemName, String operationName) {
+    public void selectOperation(String itemName, String operationName, String typeItem) {
         MobileElement operation = null;
         Log.log(Level.FINE, "Starts: " + operationName);
         switch (operationName){
+            case "share":
+                String xpath_shareusersgroups;
+                if (typeItem.equals("folder")) {
+                    xpath_shareusersgroups = "//XCUIElementTypeStaticText[@name=\"Share this folder\"]";
+                } else {
+                    xpath_shareusersgroups = "//XCUIElementTypeStaticText[@name=\"Share this file\"]";
+                }
+                operation = (MobileElement) driver.findElement(By.xpath(xpath_shareusersgroups));
+                break;
+            case "edit share":
+                String xpath_editshare = "//XCUIElementTypeApplication[@name=\"ownCloud\"]/XCUIElementTypeWindow[1]/" +
+                        "XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeTable/XCUIElementTypeCell[1]";
+                operation = (MobileElement) driver.findElement(By.xpath(xpath_editshare));
+                break;
             case "share by link":
                 String xpath_sharelink = "//XCUIElementTypeStaticText[@name=\"Links\"]";
                 operation = (MobileElement) driver.findElement(By.xpath(xpath_sharelink));

@@ -8,23 +8,38 @@ import io.appium.java_client.MobileElement;
 import io.appium.java_client.TouchAction;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
+import io.appium.java_client.pagefactory.iOSXCUITFindBy;
 import io.appium.java_client.touch.offset.PointOption;
 import utils.log.Log;
 
-public class SearchShareePage extends CommonPage {
+public class SharePermissionsPage extends CommonPage {
 
-    @AndroidFindBy(id="com.owncloud.android:id/search_src_text")
-    private MobileElement shareeUsername;
+    @iOSXCUITFindBy(id="Save")
+    private MobileElement savePermissions;
 
-    @AndroidFindBy(xpath="//android.widget.ImageButton[@content-desc=\"Navigate up\"]")
-    private MobileElement navigateUp;
+    @iOSXCUITFindBy(id="Cancel")
+    private MobileElement cancelPermissions;
 
-    public SearchShareePage()  {
+    @iOSXCUITFindBy(id="Can Share")
+    private MobileElement sharePermission;
+
+    @iOSXCUITFindBy(id="Can Edit and Change")
+    private MobileElement editPermission;
+
+    public SharePermissionsPage()  {
         super();
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
     }
 
-    public void shareWithUser (String sharee)
+    public void setSharePermission(){
+        sharePermission.click();
+    }
+
+    public void setEditPermission(){
+        editPermission.click();
+    }
+
+    /*public void shareWithUser (String sharee)
             throws InterruptedException {
         Log.log(Level.FINE, "Starts: Share with user: " + sharee);
         waitById(10, shareeUsername);
@@ -42,10 +57,15 @@ public class SearchShareePage extends CommonPage {
         takeScreenshot("PrivateShare/SearchSharee_" + sharee);
         TouchAction selectSharee = new TouchAction(driver);
         selectSharee.tap(PointOption.point(500, 470)).perform();
+    }*/
+
+    public void savePermissions() {
+        Log.log(Level.FINE, "Starts: Save permissions");
+        savePermissions.click();
     }
 
-    private void backListShares() {
+    public void backListShares() {
         Log.log(Level.FINE, "Starts: Back to the list of shares");
-        navigateUp.click();
+        cancelPermissions.click();
     }
 }

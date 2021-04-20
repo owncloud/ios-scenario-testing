@@ -13,8 +13,7 @@ public class ShareSAXHandler extends DefaultHandler {
 
 
     @Override
-    public void startElement(String uri, String localName, String node, Attributes attributes)
-            throws SAXException {
+    public void startElement(String uri, String localName, String node, Attributes attributes){
         if (node.equals("element")){
             share = new OCShare();
         }
