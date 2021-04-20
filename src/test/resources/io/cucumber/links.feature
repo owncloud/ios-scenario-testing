@@ -50,6 +50,23 @@ Feature: Links
       |  item       |  name    | expiration    |
       |  Documents  |  link1   |    7          |
 
+  @editshare
+  Scenario Outline: Edit existing share, changing permissions
+    Given the item <item> has been already shared by link
+    When user selects to edit link the item <item>
+    And user edits the link on <item> with the following fields
+      | permissions | <permissions> |
+      | name        | <name>        |
+    Then link should be created on <item> with the following fields
+      | permissions | <permissions> |
+      | name        | <name>        |
+
+    Examples:
+      |  item   |  name    | permissions |
+      |  Files  |  downupl |     15      |
+      |  Files  |  upload  |     4       |
+      |  Files  |  view    |     1       |
+
   Scenario Outline: Create a public link with permissions
     When user selects to share by link the item <item>
     And user creates link on <item> with the following fields

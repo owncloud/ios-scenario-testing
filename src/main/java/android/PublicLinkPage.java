@@ -47,20 +47,32 @@ public class PublicLinkPage extends CommonPage {
     @iOSXCUITFindBy(xpath = "//XCUIElementTypeStaticText[@name=\"Links\"]")
     private MobileElement header;
 
-    @iOSXCUITFindBy(xpath="//XCUIElementTypeApplication[@name=\"ownCloud\"]/XCUIElementTypeWindow[1]/" +
-            "XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeOther/XCUIElementTypeOther/" +
-            "XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeTable/XCUIElementTypeCell[3]")
+    @iOSXCUITFindBy(id="Links")
+    private MobileElement backToLinks;
+
+    @iOSXCUITFindBy(id="Download / View")
     private MobileElement downloadViewOption;
+
+    @iOSXCUITFindBy(id = "Download / View / Upload")
+    private MobileElement downloadViewUploadOption;
+
+    @iOSXCUITFindBy(id = "Upload only (File Drop)")
+    private MobileElement uploadOnlyOption;
 
     @iOSXCUITFindBy(xpath="//XCUIElementTypeApplication[@name=\"ownCloud\"]/XCUIElementTypeWindow[1]/" +
             "XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeOther/XCUIElementTypeOther/" +
             "XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeTable/XCUIElementTypeCell[3]")
-    private MobileElement downloadViewUploadOption;
+    private MobileElement downloadViewOptionCell;
+
+    @iOSXCUITFindBy(xpath="//XCUIElementTypeApplication[@name=\"ownCloud\"]/XCUIElementTypeWindow[1]/" +
+            "XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeOther/XCUIElementTypeOther/" +
+            "XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeTable/XCUIElementTypeCell[3]")
+    private MobileElement downloadViewUploadOptionCell;
 
     @iOSXCUITFindBy(xpath="//XCUIElementTypeApplication[@name=\"ownCloud\"]/XCUIElementTypeWindow[1]/" +
             "XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeOther/XCUIElementTypeOther/" +
             "XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeTable/XCUIElementTypeCell[4]")
-    private MobileElement uploadOnlyOption;
+    private MobileElement uploadOnlyOptionCell;
 
     @iOSXCUITFindBy(accessibility = "Delete")
     private MobileElement deleteLink;
@@ -149,21 +161,6 @@ public class PublicLinkPage extends CommonPage {
         return switchEnabled && passVisible;
     }
 
-    public void selectDownloadView(){
-        Log.log(Level.FINE, "Starts: Select Download / View");
-        downloadViewOption.click();
-    }
-
-    public void selectDownloadViewUpload(){
-        Log.log(Level.FINE, "Starts: Select Download / View / Upload");
-        downloadViewUploadOption.click();
-    }
-
-    public void selectUploadOnly(){
-        Log.log(Level.FINE, "Starts: Select Upload Only (File drop)");
-        uploadOnlyOption.click();
-    }
-
     public boolean isItemInListLinks(String itemName) {
         waitByXpath(10, "//XCUIElementTypeStaticText[@name=\"Links\"]");
         takeScreenshot("PublicShare/ItemInListPubilcShare_"+itemName);
@@ -174,19 +171,19 @@ public class PublicLinkPage extends CommonPage {
             Log.log(Level.FINE, "Starts: Check permissions: " + permissions);
             switch (permissions){
                 case("1"):{
-                    if (parseIntBool(downloadViewOption.getAttribute("selected")) == true ){
+                    if (parseIntBool(downloadViewOptionCell.getAttribute("selected")) == true ){
                         Log.log(Level.FINE, "Download / View is selected");
                         return true;
                     }
                 }
                 case("15"):{
-                    if (parseIntBool(downloadViewUploadOption.getAttribute("selected")) == true ){
+                    if (parseIntBool(downloadViewUploadOptionCell.getAttribute("selected")) == true ){
                         Log.log(Level.FINE, "Download / View / Upload is selected");
                         return true;
                     }
                 }
                 case("4"):{
-                    if (parseIntBool(uploadOnlyOption.getAttribute("selected")) == true ){
+                    if (parseIntBool(uploadOnlyOptionCell.getAttribute("selected")) == true ){
                         Log.log(Level.FINE, "Upload only is selected");
                         return true;
                     }
@@ -221,33 +218,9 @@ public class PublicLinkPage extends CommonPage {
         createButton.click();
     }
 
-    //To check if password is enforced in capabilities
-    public boolean isPasswordEnforced(String itemName)
-            throws ParserConfigurationException, SAXException, IOException {
-        Log.log(Level.FINE, "Starts: Check if password is enforced");
-        FilesAPI filesAPI = new FilesAPI();
-        boolean isFolder = filesAPI.isFolder(itemName);
-        Log.log(Level.FINE, "isFolder: " + isFolder);
-        if (isFolder) { //in case of folder, we have to check every permission individually
-            if (parseIntBool(downloadViewOption.getAttribute("checked")) &&
-                    ocCapability.isPasswordEnforcedReadOnly()) {
-                Log.log(Level.FINE, "Download/View selected and pass enforced");
-                return true;
-            }
-            if (parseIntBool(downloadViewUploadOption.getAttribute("checked")) &&
-                    ocCapability.isPasswordEnforcedReadWriteDelete()) {
-                Log.log(Level.FINE, "Download/View/Upload selected and pass enforced");
-                return true;
-            }
-            if (parseIntBool(uploadOnlyOption.getAttribute("checked")) &&
-                    ocCapability.isPasswordEnforcedUploadOnly()) {
-                Log.log(Level.FINE, "Upload only selected and pass enforced");
-                return true;
-            }
-            return false;
-        } else { //in case of file, only the capability is checked
-            return ocCapability.isPasswordEnforced();
-        }
+    public void backToLinksList() {
+        Log.log(Level.FINE, "Starts: Back to links list");
+        backToLinks.click();
     }
 
     public void deleteLink(){

@@ -65,11 +65,6 @@ public class LinkSteps {
                     break;
             }
         }
-        //if password is enforced, we must force to input
-        /*if (publicLinkPage.isPasswordEnforced(itemName)){
-            //Enter a fake password to fit the scenario
-            publicLinkPage.addPassword(itemName,"a");
-        }*/
         publicLinkPage.submitLink();
     }
 
@@ -79,7 +74,7 @@ public class LinkSteps {
         String currentStep = StepEventBus.getEventBus().getCurrentStep().get().toString();
         Log.log(Level.FINE, "----STEP----: " + currentStep);
         List<List<String>> listItems = table.asLists();
-        sharePage.openPublicLink(itemName);
+        publicLinkPage.openPublicLink(itemName + " link");
         for (List<String> rows : listItems) {
             switch (rows.get(0)){
                 case "name": {
@@ -87,25 +82,8 @@ public class LinkSteps {
                     break;
                 }
                 case "permissions": {
-                    switch (rows.get(1)) {
-                        case ("1"): { //Download / View
-                            Log.log(Level.FINE, "Select Download / View");
-                            publicLinkPage.selectDownloadView();
-                            break;
-                        }
-                        case ("15"): { //Download / View / Upload
-                            Log.log(Level.FINE, "Select Download / View / Upload");
-                            publicLinkPage.selectDownloadViewUpload();
-                            break;
-                        }
-                        case ("4"): { //Upload Only (File Drop)
-                            Log.log(Level.FINE, "Select Upload Only (File Drop)");
-                            publicLinkPage.selectUploadOnly();
-                            break;
-                        }
-                        default:
-                            break;
-                    }
+                    Log.log(Level.FINE, "Set permission: " + rows.get(1));
+                    publicLinkPage.setPermission(rows.get(1));
                     break;
                 }
                 case "password": {
@@ -116,7 +94,7 @@ public class LinkSteps {
                     break;
             }
         }
-        publicLinkPage.submitLink();
+        publicLinkPage.backToLinksList();
     }
 
     @When("^user deletes the link on (.+)$")
@@ -145,7 +123,6 @@ public class LinkSteps {
                 case "password": {
                     publicLinkPage.openPublicLink(linkName);
                     assertTrue(publicLinkPage.isPasswordEnabled(itemName));
-                    //publicLinkPage.close();
                     break;
                 }
                 case "user": {
@@ -156,13 +133,11 @@ public class LinkSteps {
                     Log.log(Level.FINE, "checking permissions");
                     publicLinkPage.openPublicLink(linkName);
                     assertTrue(publicLinkPage.checkPermissions(rows.get(1)));
-                    //publicLinkPage.close();
                     break;
                 }
                 case "expiration days": {
                     publicLinkPage.openPublicLink(linkName);
                     assertTrue(publicLinkPage.checkExpiration(rows.get(1)));
-                    //publicLinkPage.close();
                     break;
                 }
                 default:
