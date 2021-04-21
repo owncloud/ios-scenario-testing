@@ -12,7 +12,6 @@ Feature: Private Share
       | Files            |
       | textExample.txt  |
 
-  @share1
   Scenario: Correct share with user
     When user selects to share the folder Files
     And user selects user user2 as sharee
@@ -20,7 +19,6 @@ Feature: Private Share
     And share should be created on Files with the following fields
       | sharee | user2 |
 
-  @group
   Scenario: Correct share with group
     When user selects to share the folder Files
     And user selects group test as sharee
@@ -35,7 +33,29 @@ Feature: Private Share
     Then share should be created on textExample.txt with the following fields
       | sharee | demo@demo.owncloud.com |
 
-    @deletes
+  Scenario Outline: Edit existing share, removing permissions
+    Given the item <item> has been already shared with <user>
+    When user selects to edit share the folder <item>
+    And user edits the share on <item> with permissions <permissions>
+    Then user <user> should have access to <item>
+    And share should be created on <item> with the following fields
+      | sharee        |  <user>        |
+      | permissions   |  <permissions> |
+
+#Permissions
+    # READ -> 1
+    # UPDATE -> 2
+    # CREATE -> 4
+    # DELETE -> 8
+    # SHARE -> 16
+
+    Examples:
+      |  item   |   user    | permissions |
+      |  Files  |   user2   |   1         |
+      |  Files  |   user2   |   9         |
+      |  Files  |   user2   |   13        |
+      |  Files  |   user2   |   17        |
+
   Scenario: Delete existing share
     Given the item Files has been already shared with user2
     When user selects to edit share the folder Files

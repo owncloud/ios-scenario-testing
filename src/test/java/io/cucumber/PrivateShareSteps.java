@@ -1,6 +1,5 @@
 package io.cucumber;
 
-import android.FileListPage;
 import android.PrivateSharePage;
 import android.SharePage;
 import android.SharePermissionsPage;
@@ -49,22 +48,12 @@ public class PrivateShareSteps {
         sharePermissionsPage.savePermissions();
     }
 
-    /*@When("^user selects (.+) to share with (.+)$")
-    public void i_select_to_share_with(String itemName, String sharee)
-            throws Throwable {
-        String currentStep = StepEventBus.getEventBus().getCurrentStep().get().toString();
-        Log.log(Level.FINE, "----STEP----: " + currentStep);
-        fileListPage.executeOperation("share", itemName);
-        sharePage.addPrivateShare();
-        //searchShareePage.shareWithUser(sharee);
-    }*/
-
     @When("^user edits the share on (.+) with permissions (.+)$")
     public void user_edits_share(String itemName, String permissions)
             throws Throwable{
         String currentStep = StepEventBus.getEventBus().getCurrentStep().get().toString();
         Log.log(Level.FINE, "----STEP----: " + currentStep);
-        sharePage.openPrivateShare(itemName);
+        privateSharePage.openPrivateShare(LocProperties.getProperties().getProperty("userToShare"));
         int permissionsToInt = Integer.parseInt(permissions);
         String permissionsToString =String.format("%5s", Integer.toBinaryString(permissionsToInt))
                 .replace(" ", "0");
@@ -112,8 +101,6 @@ public class PrivateShareSteps {
             }
         }
         privateSharePage.close();
-        //An implicit wait to be used till a close button is available. To improve.
-        Thread.sleep(2000);
     }
 
     @When("^user deletes the share$")
@@ -130,16 +117,19 @@ public class PrivateShareSteps {
         Log.log(Level.FINE, "----STEP----: " + currentStep);
         //Asserts in UI
         String groupName = null;
+        String permissionString = "Read, Share, Create, Change, Delete";
         List<List<String>> listItems = table.asLists();
         for (List<String> rows : listItems) {
+            Log.log(Level.FINE, rows.get(0));
             switch (rows.get(0)) {
                 case "password": {
-                    sharePage.openPrivateShare(itemName);
+                    privateSharePage.openPrivateShare(itemName);
                     assertTrue(privateSharePage.isPasswordEnabled());
                     privateSharePage.close();
                     break;
                 }
                 case "sharee": {
+                    Log.log(Level.FINE, "Checking sharee");
                     assertTrue(privateSharePage.isItemInListPrivateShares(rows.get(1)));
                     break;
                 }
@@ -149,8 +139,44 @@ public class PrivateShareSteps {
                     break;
                 }
                 case "permissions": {
-                    //Not implemented yet
-                    break;
+                    int permissionsToInt = Integer.parseInt(rows.get(1));
+                    String permissionsToString =String.format("%5s", Integer.toBinaryString(permissionsToInt))
+                            .replace(" ", "0");
+                    Log.log(Level.FINE, "Permissions converted: " + permissionsToString);
+                    for (int i=0 ; i<=permissionsToString.length()-1 ; i++){
+                        switch(i) {
+                            case (0): {
+                                Log.log(Level.FINE, "Check Share");
+                                if (permissionsToString.charAt(i) == '0'){
+                                    permissionString = permissionString.replace(", Share", "");
+                                }
+                                break;
+                            }
+                            case (1): {
+                                Log.log(Level.FINE, "Check Delete");
+                                if (permissionsToString.charAt(i) == '0'){
+                                    permissionString = permissionString.replaceAll(", Delete", "");
+                                }
+                                break;
+                            }
+                            case(2):{
+                                Log.log(Level.FINE, "Check Create");
+                                if (permissionsToString.charAt(i) == '0'){
+                                    permissionString = permissionString.replaceAll(", Create", "");
+                                }
+                                break;
+                            }
+                            case(3):{
+                                Log.log(Level.FINE, "Check Change");
+                                if (permissionsToString.charAt(i) == '0') {
+                                    permissionString = permissionString.replaceAll(", Change", "");
+                                }
+                                break;
+                            }
+                        }
+                    }
+                    Log.log(Level.FINE, "String permissions: " + permissionString);
+                    assertTrue(privateSharePage.displayedPermission(permissionString));
                 }
                 default:
                     break;

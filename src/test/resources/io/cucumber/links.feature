@@ -50,7 +50,6 @@ Feature: Links
       |  item       |  name    | expiration    |
       |  Documents  |  link1   |    7          |
 
-  @editshare
   Scenario Outline: Edit existing share, changing permissions
     Given the item <item> has been already shared by link
     When user selects to edit link the item <item>

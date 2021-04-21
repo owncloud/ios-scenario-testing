@@ -5,14 +5,12 @@ import org.openqa.selenium.support.PageFactory;
 
 import java.util.logging.Level;
 
-import io.appium.java_client.MobileBy;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import io.appium.java_client.pagefactory.iOSXCUITFindBy;
 import utils.log.Log;
 
 public class PrivateSharePage extends CommonPage {
-
 
     @iOSXCUITFindBy(xpath="//XCUIElementTypeStaticText[@name=\"Sharing\"]")
     private MobileElement sharingTitle;
@@ -23,29 +21,23 @@ public class PrivateSharePage extends CommonPage {
     @iOSXCUITFindBy(id="Remove Recipient")
     private MobileElement removeShare;
 
-    /*@AndroidFindBy(id="canEditSwitch")
+    @iOSXCUITFindBy(id="permission-section-edit")
     private MobileElement editPermission;
 
-    @AndroidFindBy(id="canEditCreateCheckBox")
+    @iOSXCUITFindBy(id="permission-section-edit-create")
     private MobileElement createPermission;
 
-    @AndroidFindBy(id="canEditChangeCheckBox")
+    @iOSXCUITFindBy(id="permission-section-edit-change")
     private MobileElement changePermission;
 
-    @AndroidFindBy(id="canEditDeleteCheckBox")
+    @iOSXCUITFindBy(id="permission-section-edit-delete")
     private MobileElement deletePermission;
 
-    @AndroidFindBy(id="canShareSwitch")
+    @iOSXCUITFindBy(id="permission-section-share")
     private MobileElement sharePermission;
 
-    @AndroidFindBy(id="closeButton")
-    private MobileElement closeButton;*/
-
-    private String createbox_id = "com.owncloud.android:id/canEditCreateCheckBox";
-    private String changebox_id = "com.owncloud.android:id/canEditChangeCheckBox";
-    private String deletebox_id = "com.owncloud.android:id/canEditDeleteCheckBox";
-    private String sharebox_id = "com.owncloud.android:id/canShareSwitch";
-    private String closeButtonid = "com.owncloud.android:id/closeButton";
+    @iOSXCUITFindBy(xpath="//XCUIElementTypeButton[@name=\"Sharing\"]")
+    private MobileElement backButton;
 
     public PrivateSharePage(){
         super();
@@ -62,7 +54,6 @@ public class PrivateSharePage extends CommonPage {
     }
 
     public boolean isItemInListPrivateShares(String sharee) {
-        waitById(5, sharingTitle);
         return !driver.findElements(By.id(sharee)).isEmpty();
     }
 
@@ -71,61 +62,48 @@ public class PrivateSharePage extends CommonPage {
         removeShare.click();
     }
 
+    public void openPrivateShare(String sharee){
+        driver.findElement(By.id(sharee)).click();
+    }
+
+    public boolean displayedPermission(String permissionName){
+        return !driver.findElements(By.id(permissionName)).isEmpty();
+    }
+
     public void switchCreate() {
         Log.log(Level.FINE, "Starts: Click create checkbox");
-        waitById(5, createbox_id);
-        boolean status = isCreateSelected();
-        driver.findElementById(createbox_id).click();
-        //createPermission.click();
+        createPermission.click();
     }
 
     public void switchChange() {
         Log.log(Level.FINE, "Starts: Click change checkbox");
-        waitById(5, changebox_id);
-        boolean status = isChangeSelected();
-        driver.findElementById(changebox_id).click();
-        //changePermission.click();
+        changePermission.click();
     }
 
     public void switchDelete() {
         Log.log(Level.FINE, "Starts: Click delete checkbox:");
-        waitById(5, deletebox_id);
-        boolean status = isDeleteSelected();
-        driver.findElementById(deletebox_id).click();
-        //deletePermission.click();
+        deletePermission.click();
     }
 
     public void switchShare() {
         Log.log(Level.FINE, "Starts: Switch share button");
-        driver.findElementById(sharebox_id).click();
-        //sharePermission.click();
+        sharePermission.click();
+    }
+
+    private boolean parseIntBool(String s){
+        return Boolean.parseBoolean(s);
     }
 
     public boolean isCreateSelected(){
-        if (!driver.findElementsById(createbox_id).isEmpty()) {
-            return driver.findElementById(createbox_id).isEnabled();
-        } else {
-            return false;
-        }
-        //return createPermission.isEnabled();
+        return  parseIntBool(createPermission.getAttribute("selected"));
     }
 
     public boolean isChangeSelected(){
-        if (!driver.findElementsById(changebox_id).isEmpty()) {
-            return driver.findElementById(changebox_id).isEnabled();
-        } else {
-            return false;
-        }
-        //return changePermission.isEnabled();
+        return parseIntBool(changePermission.getAttribute("selected"));
     }
 
     public boolean isDeleteSelected(){
-        if (!driver.findElementsById(deletebox_id).isEmpty()) {
-            return driver.findElementById(deletebox_id).isEnabled();
-        } else {
-            return false;
-        }
-        //return deletePermission.isEnabled();
+        return parseIntBool(deletePermission.getAttribute("selected"));
     }
 
     public boolean isEditPermission(){
@@ -133,23 +111,19 @@ public class PrivateSharePage extends CommonPage {
     }
 
     public boolean isShareEnabled(){
-        return driver.findElementById(sharebox_id).isEnabled();
-        //return sharePermission.isEnabled();
+        return parseIntBool(sharePermission.getAttribute("selected"));
     }
 
     public boolean isEditEnabled(){
-        return driver.findElementById(changebox_id).isEnabled();
-        //return editPermission.isEnabled();
+        return parseIntBool(editPermission.getAttribute("selected"));
     }
 
     public boolean isPasswordEnabled () {
+        //TODO
         return true;
     }
 
     public void close(){
-        takeScreenshot("PrivateShare/ItemStatusBeforeClosing");
-        driver.findElementById(closeButtonid).click();
-        //closeButton.click();
-        //driver.pressKey(new KeyEvent(AndroidKey.BACK));
+        backButton.click();
     }
 }
