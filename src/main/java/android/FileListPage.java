@@ -40,6 +40,9 @@ public class FileListPage extends CommonPage {
     @iOSXCUITFindBy(xpath="//XCUIElementTypeButton[@name=\"Create folder\"]")
     private MobileElement createFolder;
 
+    @iOSXCUITFindBy(xpath="//XCUIElementTypeTabBar[@name=\"Tab Bar\"]")
+    private MobileElement bottomBar;
+
     @iOSXCUITFindBy(id="share-add-group")
     private MobileElement share;
 
@@ -117,7 +120,6 @@ public class FileListPage extends CommonPage {
         uploadOption.click();
     }
 
-
     public void executeOperation(String operation, String itemName, String typeitem){
         Log.log(Level.FINE, "Starts: execute operation: " + operation + " " + itemName);
         waitToload();
@@ -141,7 +143,8 @@ public class FileListPage extends CommonPage {
 
     public boolean isItemInList (String itemName) {
         Log.log(Level.FINE, "Starts: Check if item is in list: " + itemName);
-        waitById(10, plusButton);
+        //Bottom bar to assure we are in the filelist
+        waitByXpath(10, "//XCUIElementTypeTabBar[@name=\"Tab Bar\"]");
         return !driver.findElements(By.id(itemName)).isEmpty();
     }
 
@@ -159,6 +162,30 @@ public class FileListPage extends CommonPage {
         MobileElement operation = null;
         Log.log(Level.FINE, "Starts: " + operationName);
         switch (operationName){
+            case "delete":
+                String xpath_delete = "//XCUIElementTypeCell[@name=\"com.owncloud.action.delete\"]";
+                operation = (MobileElement) driver.findElement(By.xpath(xpath_delete));
+                break;
+            case "rename":
+                String xpath_rename = "//XCUIElementTypeCell[@name=\"com.owncloud.action.rename\"]";
+                operation = (MobileElement) driver.findElement(By.xpath(xpath_rename));
+                break;
+            case "move":
+                String xpath_move = "//XCUIElementTypeCell[@name=\"com.owncloud.action.move\"]";
+                operation = (MobileElement) driver.findElement(By.xpath(xpath_move));
+                break;
+            case "copy":
+                String xpath_copy = "//XCUIElementTypeCell[@name=\"com.owncloud.action.copy\"]";
+                operation = (MobileElement) driver.findElement(By.xpath(xpath_copy));
+                break;
+            case "duplicate":
+                String xpath_duplicate = "//XCUIElementTypeCell[@name=\"com.owncloud.action.copy\"]";
+                operation = (MobileElement) driver.findElement(By.xpath(xpath_duplicate));
+                break;
+            case "make available offline":
+                String xpath_avoffline = "//XCUIElementTypeCell[@name=\"com.owncloud.action.makeAvailableOffline\"]";
+                operation = (MobileElement) driver.findElement(By.xpath(xpath_avoffline));
+                break;
             case "share":
                 String xpath_shareusersgroups;
                 if (typeItem.equals("folder")) {
@@ -190,8 +217,14 @@ public class FileListPage extends CommonPage {
 
     public void browse(String folderName){
         Log.log(Level.FINE, "Starts: browse to " + folderName);
-        driver.findElement(MobileBy.AndroidUIAutomator(
-                "new UiSelector().text(\""+ folderName +"\");")).click();
+        /*driver.findElement(MobileBy.AndroidUIAutomator(
+                "new UiSelector().text(\""+ folderName +"\");")).click();*/
+        driver.findElement(By.xpath("//XCUIElementTypeStaticText[@name=\""+folderName+"\"]")).click();
+    }
+
+    public void acceptDeletion(){
+        Log.log(Level.FINE, "Starts: accept deletion");
+        driver.findElement(By.xpath("//XCUIElementTypeButton[@name=\"Delete\"]")).click();
     }
 
     public void closeSelectionMode(){

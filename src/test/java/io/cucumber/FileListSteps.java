@@ -32,7 +32,7 @@ public class FileListSteps {
     //Involved pages
     protected FileListPage fileListPage = new FileListPage();
     protected InputNamePage inputNamePage = new InputNamePage();
-    //protected FolderPickerPage folderPickerPage = new FolderPickerPage();
+    protected FolderPickerPage folderPickerPage = new FolderPickerPage();
     //protected RemoveDialogPage removeDialogPage = new RemoveDialogPage();
     //protected DetailsPage detailsPage = new DetailsPage();
 
@@ -74,27 +74,20 @@ public class FileListSteps {
         fileListPage.executeOperation(operation, itemName, typeItem);
     }
 
-    /*@When ("^user selects (.+) as target folder$")
-    public void i_select_target_folder(String targetFolder) {
-        Log.log(Level.FINE, "----STEP----: " +
-                new Object(){}.getClass().getEnclosingMethod().getName() + ": " + targetFolder);
+    @When ("^user selects (.+) as target folder of the (.+)$")
+    public void i_select_target_folder(String targetFolder, String operation) {
+        String currentStep = StepEventBus.getEventBus().getCurrentStep().get().toString();
+        Log.log(Level.FINE, "----STEP----: " + currentStep);
         folderPickerPage.selectFolder(targetFolder);
-        folderPickerPage.accept();
+        folderPickerPage.accept(operation);
     }
 
-    @When("^user selects the option upload$")
-    public void i_select_upload() {
-        Log.log(Level.FINE, "----STEP----: " +
-                new Object(){}.getClass().getEnclosingMethod().getName());
-        fileListPage.upload();
-    }
-
-    @When("^user accepts the deletion$")
+    @When("^user confirms the deletion$")
     public void i_accept_the_deletion(){
         Log.log(Level.FINE, "----STEP----: " +
                 new Object(){}.getClass().getEnclosingMethod().getName());
-        removeDialogPage.removeAll();
-    }*/
+        fileListPage.acceptDeletion();
+    }
 
     @When("^user sets (.+) as new name$")
     public void i_set_new_name(String itemName) {
@@ -116,34 +109,33 @@ public class FileListSteps {
         filesAPI.removeItem(itemName);
     }
 
-    /*@Then("^user does not see (.+) in the file list anymore$")
-    public void i_do_not_see_the_item(String itemName) throws Throwable {
-        Log.log(Level.FINE, "----STEP----: " +
-                new Object(){}.getClass().getEnclosingMethod().getName() + ": " + itemName);
+    @Then("^user should see (.+) in the filelist as original$")
+    public void i_see_original_the_item(String itemName) throws Throwable {
+        String currentStep = StepEventBus.getEventBus().getCurrentStep().get().toString();
+        Log.log(Level.FINE, "----STEP----: " + currentStep);
         fileListPage.waitToload();
-        assertFalse(fileListPage.isItemInList(itemName));
-        assertFalse(filesAPI.itemExist(itemName));
+        //assertTrue(fileListPage.isItemInList(itemName.substring(itemName.lastIndexOf('/')+1)));
+        assertTrue(fileListPage.isItemInList(itemName));
+        assertTrue(filesAPI.itemExist(itemName));
+        filesAPI.removeItem(itemName);
     }
 
-    @Then("^user sees (.+) inside the folder (.+)$")
+    @Then("^user should see (.+) inside the folder (.+)$")
     public void i_see_item_in_folder(String itemName, String targetFolder) throws Throwable {
-        Log.log(Level.FINE, "----STEP----: " +
-                new Object(){}.getClass().getEnclosingMethod().getName()
-                + ":" + itemName + "-" + targetFolder);
+        String currentStep = StepEventBus.getEventBus().getCurrentStep().get().toString();
+        Log.log(Level.FINE, "----STEP----: " + currentStep);
+        fileListPage.browse(targetFolder);
+        fileListPage.isItemInList(itemName);
         assertTrue(filesAPI.itemExist(targetFolder+"/"+itemName));
         filesAPI.removeItem(targetFolder+"/"+itemName);
     }
 
-    @Then("^user sees (.+) in the file list as original$")
-    public void i_see_original_the_item(String itemName) throws Throwable {
-        Log.log(Level.FINE, "----STEP----: " +
-                new Object(){}.getClass().getEnclosingMethod().getName() + ": " + itemName);
-        //Copy keeps the selection mode. To improve.
-        fileListPage.closeSelectionMode();
-        fileListPage.waitToload();
-        assertTrue(fileListPage.isItemInList(itemName.substring(itemName.lastIndexOf('/')+1)));
-        assertTrue(filesAPI.itemExist(itemName));
-        filesAPI.removeItem(itemName);
+    @Then("^user should not see (.+) in the filelist anymore$")
+    public void i_do_not_see_the_item(String itemName) throws Throwable {
+        String currentStep = StepEventBus.getEventBus().getCurrentStep().get().toString();
+        Log.log(Level.FINE, "----STEP----: " + currentStep);
+        assertFalse(fileListPage.isItemInList(itemName));
+        assertFalse(filesAPI.itemExist(itemName));
     }
 
     @Then("^the item (.+) is stored in the device$")
@@ -153,7 +145,7 @@ public class FileListSteps {
         assertTrue(fileListPage.fileIsDownloaded(itemName));
     }
 
-    @Then("^user sees the detailed information: (.+), (.+), and (.+)$")
+    /*@Then("^user sees the detailed information: (.+), (.+), and (.+)$")
     public void preview_in_screen(String itemName, String type, String size) {
         Log.log(Level.FINE, "----STEP----: " +
                 new Object(){}.getClass().getEnclosingMethod().getName()  + ": " + itemName);
