@@ -1,8 +1,8 @@
 package io.cucumber;
 
-import android.PrivateSharePage;
-import android.SharePage;
-import android.SharePermissionsPage;
+import ios.PrivateSharePage;
+import ios.SharePage;
+import ios.SharePermissionsPage;
 
 import net.thucydides.core.annotations.Steps;
 import net.thucydides.core.steps.StepEventBus;

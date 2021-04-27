@@ -1,6 +1,6 @@
 package io.cucumber;
 
-import android.AppiumManager;
+import ios.AppiumManager;
 
 import net.serenitybdd.cucumber.CucumberWithSerenity;
 
@@ -10,7 +10,6 @@ import org.junit.runner.RunWith;
 
 import java.util.logging.Level;
 
-import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 import utils.log.Log;
 

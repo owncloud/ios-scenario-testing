@@ -1,4 +1,4 @@
-package android;
+package ios;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.Dimension;

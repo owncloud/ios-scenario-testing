@@ -1,7 +1,7 @@
 package io.cucumber;
 
-import android.PublicLinkPage;
-import android.SharePage;
+import ios.PublicLinkPage;
+import ios.SharePage;
 
 import net.thucydides.core.annotations.Steps;
 import net.thucydides.core.steps.StepEventBus;

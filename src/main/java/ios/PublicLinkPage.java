@@ -1,4 +1,4 @@
-package android;
+package ios;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.PageFactory;
@@ -13,7 +13,6 @@ import javax.xml.parsers.ParserConfigurationException;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import io.appium.java_client.pagefactory.iOSXCUITFindBy;
-import utils.api.FilesAPI;
 import utils.date.DateUtils;
 import utils.entities.OCCapability;
 import utils.log.Log;

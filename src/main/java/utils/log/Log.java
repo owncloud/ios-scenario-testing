@@ -1,6 +1,6 @@
 package utils.log;
 
-import android.SharePage;
+import ios.SharePage;
 
 import java.io.IOException;
 import java.util.Date;

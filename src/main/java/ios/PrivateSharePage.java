@@ -1,4 +1,4 @@
-package android;
+package ios;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.PageFactory;

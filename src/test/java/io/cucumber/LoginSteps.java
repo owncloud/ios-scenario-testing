@@ -1,8 +1,8 @@
 package io.cucumber;
 
-import android.ChromeCustomTabPage;
-import android.KopanoPage;
-import android.LoginPage;
+import ios.ChromeCustomTabPage;
+import ios.KopanoPage;
+import ios.LoginPage;
 
 import net.thucydides.core.annotations.Steps;
 import net.thucydides.core.steps.StepEventBus;
@@ -15,7 +15,6 @@ import io.cucumber.java.en.When;
 import utils.LocProperties;
 import utils.api.CommonAPI;
 import utils.log.Log;
-import utils.parser.CapabilityJSONHandler;
 
 import static org.junit.Assert.assertTrue;
 

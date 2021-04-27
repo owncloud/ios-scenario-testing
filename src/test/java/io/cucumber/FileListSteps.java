@@ -1,8 +1,8 @@
 package io.cucumber;
 
-import android.FileListPage;
-import android.FolderPickerPage;
-import android.InputNamePage;
+import ios.FileListPage;
+import ios.FolderPickerPage;
+import ios.InputNamePage;
 
 import net.thucydides.core.annotations.Steps;
 import net.thucydides.core.steps.StepEventBus;

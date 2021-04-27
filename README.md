@@ -3,9 +3,9 @@ https://app.bitrise.io/app/d9ceab91286794be/status.svg?token=zSpveXrg9JoguUP0-dQ
 
 Scenarios contained in feature files written in Gherkin language.
 Available scenarios can be found
-[here](android-scenario-testing/src/test/resources/io/cucumber).
+[here](ios-scenario-testing/src/test/resources/io/cucumber).
 
-Defined for the [ownCloud Android app](https://github.com/owncloud/android)
+Defined for the [ownCloud Android app](https://github.com/owncloud/ios)
 
 
 ## Global architecture
@@ -26,10 +26,10 @@ Syntax](https://cucumber.io/docs/gherkin/).
 
 - With git:
 
-`git clone https://github.com/owncloud/android-scenario-testing.git`
+`git clone https://github.com/owncloud/ios-scenario-testing.git`
 
 - Download a [zip
-file](https://github.com/owncloud/android-scenario-testing/archive/master.zip)
+file](https://github.com/owncloud/ios-scenario-testing/archive/master.zip)
 
 ## Requirements
 

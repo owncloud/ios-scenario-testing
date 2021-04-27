@@ -6,7 +6,7 @@
 
 package io.cucumber;
 
-import android.AppiumManager;
+import ios.AppiumManager;
 
 import java.util.logging.Level;
 

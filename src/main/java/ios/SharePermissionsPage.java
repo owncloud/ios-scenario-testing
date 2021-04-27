@@ -1,15 +1,12 @@
-package android;
+package ios;
 
 import org.openqa.selenium.support.PageFactory;
 
 import java.util.logging.Level;
 
 import io.appium.java_client.MobileElement;
-import io.appium.java_client.TouchAction;
-import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import io.appium.java_client.pagefactory.iOSXCUITFindBy;
-import io.appium.java_client.touch.offset.PointOption;
 import utils.log.Log;
 
 public class SharePermissionsPage extends CommonPage {
