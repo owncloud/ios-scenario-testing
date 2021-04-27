@@ -73,6 +73,7 @@
 
 /* Client */
 "Browse" = "Durchsuchen";
+"Files" = "Dateien";
 "Disconnect" = "Trennen";
 "Connecting…" = "Verbinde...";
 "Connected." = "Verbunden.";
@@ -109,6 +110,10 @@
 "The server doesn't support any allowed authentication method." = "Der Server unterstützt keine erlaubte Authentifizierungsmethode.";
 "The server doesn't support any known and allowed authentication method found." = "Der Server unterstützt keine bekannte und erlaubte Authentifizierungsmethode, die gefunden wurde.";
 "Retry detection" = "Erkennung wiederholen";
+"Enter your username and password" = "Geben Sie Ihren Benutzernamen und Ihr Passwort ein";
+"Please log in to authorize the app." = "Bitte melden Sie sich an, um die App zu autorisieren.";
+"Welcome to %@" = "Willkommen bei %@";
+"Please enter a server URL" = "Bitte geben Sie eine Server-URL ein";
 
 /* Single Account */
 "You are connected as\n%@" = "Sie sind verbunden als\n%@";
@@ -208,7 +213,7 @@
 "After 1 minute" = "Nach 1 Minute";
 "After 5 minutes" = "Nach 5 Minuten";
 "After 30 minutes" = "Nach 30 Minuten";
-"If you choose \"Immediately\" the App will be locked, when it is no longer in foreground.\n\nAccess in Files.app is not possible, if you choose lock interval \"Immediately\".\nPlease choose an other delay, if you want to access your files in the Files.app or via a document picker." = "Wenn Sie \"Sofort\" wählen, wird die App gesperrt, wenn sie nicht mehr im Vordergrund ist.\n\nDer Zugriff in Files.app ist nicht möglich, wenn Sie das Sperrintervall \"Sofort\" wählen.\nBitte wählen Sie eine andere Verzögerung, wenn Sie auf ihre Dateien in der Files.app oder über eine Dokumentauswahl, zugreifen möchten.";
+"If you choose \"Immediately\" the App will be locked, when it is no longer in foreground." = "Wenn Sie \"Sofort\" wählen, wird die App gesperrt, wenn sie nicht mehr im Vordergrund ist.";
 "Please configure an email account" = "Bitte richten Sie ein E-Mail-Konto ein";
 "You need to configure an email account first to be able to send emails." = "Sie müssen zuerst ein E-Mail-Konto einrichten, um E-Mails senden zu können.";
 "Do you want to open the following URL?" = "Möchten Sie die folgende URL öffnen?";
@@ -846,3 +851,6 @@
 "Limited Photo Access" = "Eingeschränkter Fotozugriff";
 "Access for the media selected for upload is limited" = "Der Zugriff für die zum Hochladen ausgewählten Medien ist eingeschränkt";
 "No Access to the media selected for upload" = "Kein Zugriff auf die zum Hochladen ausgewählten Medien";
+
+/* macOS support */
+"Passcode protection is not supported on this device.\nPlease disable passcode lock in the app settings." = "Passcode protection is not supported on this device.\nPlease disable passcode lock in the app settings.";

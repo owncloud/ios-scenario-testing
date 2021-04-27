@@ -208,7 +208,6 @@
 "After 1 minute" = "Через 1 минуту";
 "After 5 minutes" = "Через 5 минут";
 "After 30 minutes" = "Через 30 минут";
-"If you choose \"Immediately\" the App will be locked, when it is no longer in foreground.\n\nAccess in Files.app is not possible, if you choose lock interval \"Immediately\".\nPlease choose an other delay, if you want to access your files in the Files.app or via a document picker." = "Если выбрать «Немедленно», то приложение будет заблокировано сразу же, как уйдёт с экрана.\n\nПри выбранном «Немедленно» невозможен доступ к Files.app.\nПожалуйста выберите другую задержку, если хотите иметь доступ к вашим файлам в Files.app или выборе документов.";
 "Please configure an email account" = "Пожалуйста, настройте учётную запись почты";
 "You need to configure an email account first to be able to send emails." = "Чтобы иметь возможность отправлять сообщения, вам нужно сначала настроить учётную запись почты.";
 "Do you want to open the following URL?" = "Вы хотите открыть следующую ссылку?";

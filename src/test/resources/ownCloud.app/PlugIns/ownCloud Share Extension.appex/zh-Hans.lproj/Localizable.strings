@@ -189,7 +189,7 @@
 "After 1 minute" = "1 分钟后";
 "After 5 minutes" = "5 分钟后";
 "After 30 minutes" = "30 分钟后";
-"If you choose \"Immediately\" the App will be locked, when it is no longer in foreground.\n\nAccess in Files.app is not possible, if you choose lock interval \"Immediately\".\nPlease choose an other delay, if you want to access your files in the Files.app or via a document picker." = "如果你选择“立即”，应用在它不处在前台时被锁定。\n\n如果你选择“立即”作为锁定间隔，对Files.app的访问将不再可能。\n如果你想要在Files.app中或者通过一个文档查看器访问你的文件，请选择另一个延迟。";
+
 "Please configure an email account" = "请配置一个电子邮件帐户";
 "You need to configure an email account first to be able to send emails." = "要发送电子邮件，你需要配置一个电子邮件帐户。";
 "Do you want to open the following URL?" = "你确定要打开下面的 URL？";

@@ -6,15 +6,15 @@
 	<dict>
 		<key>Base.lproj/Intents.intentdefinition</key>
 		<data>
-		Sk/6adj0dv2d9AmzYkj6L4YXZYU=
+		q4uqlo9yCH0VF2YxKRn74FAiduI=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		XxMNlaTKgifTXDIwudN34kN1zLo=
+		c7qEeaSEgkKY0YxqV12PjNBBA1o=
 		</data>
 		<key>PocketSVG_PocketSVG.bundle/Info.plist</key>
 		<data>
-		trnBmYVuW073pxPT06Y1oMEY3XU=
+		KxJSIE1VzwYAboX3LmuRGOjYB2k=
 		</data>
 		<key>PocketSVG_PocketSVG.bundle/SVGColors.plist</key>
 		<data>
@@ -22,7 +22,7 @@
 		</data>
 		<key>PocketSVG_PocketSVG.bundle/_CodeSignature/CodeDirectory</key>
 		<data>
-		5aJ0V8PY/D5oYKhtUJ1vD66oZlk=
+		vRVb5iz3mkSI46It8mHmZYF4e9M=
 		</data>
 		<key>PocketSVG_PocketSVG.bundle/_CodeSignature/CodeRequirements</key>
 		<data>
@@ -30,7 +30,7 @@
 		</data>
 		<key>PocketSVG_PocketSVG.bundle/_CodeSignature/CodeRequirements-1</key>
 		<data>
-		RL/SDyCu06E/Xfrq51BpA6vGa9c=
+		4yzGpicBqAijMuiHdGx+4jJN+14=
 		</data>
 		<key>PocketSVG_PocketSVG.bundle/_CodeSignature/CodeResources</key>
 		<data>
@@ -44,7 +44,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			nX0YT0NuTZmFsrAukJOu0JLFXtQ=
+			C7WMQ9RBpN4UMgVwRFbsQe7BjZw=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -53,7 +53,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			nX0YT0NuTZmFsrAukJOu0JLFXtQ=
+			C7WMQ9RBpN4UMgVwRFbsQe7BjZw=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -62,7 +62,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			nX0YT0NuTZmFsrAukJOu0JLFXtQ=
+			C7WMQ9RBpN4UMgVwRFbsQe7BjZw=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -71,7 +71,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			nX0YT0NuTZmFsrAukJOu0JLFXtQ=
+			C7WMQ9RBpN4UMgVwRFbsQe7BjZw=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -80,7 +80,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			FTCB0eE3l8o0q9WPotmlUPSgES4=
+			wyFnrdt8i9SnovWHvOfVkfG+FAo=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -89,12 +89,21 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			nX0YT0NuTZmFsrAukJOu0JLFXtQ=
+			C7WMQ9RBpN4UMgVwRFbsQe7BjZw=
 			</data>
 			<key>optional</key>
 			<true/>
 		</dict>
 		<key>eu.lproj/Intents.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			C7WMQ9RBpN4UMgVwRFbsQe7BjZw=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>fr.lproj/Intents.strings</key>
 		<dict>
 			<key>hash</key>
 			<data>
@@ -107,7 +116,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			nX0YT0NuTZmFsrAukJOu0JLFXtQ=
+			C7WMQ9RBpN4UMgVwRFbsQe7BjZw=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -116,7 +125,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			nX0YT0NuTZmFsrAukJOu0JLFXtQ=
+			C7WMQ9RBpN4UMgVwRFbsQe7BjZw=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -125,7 +134,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			nX0YT0NuTZmFsrAukJOu0JLFXtQ=
+			C7WMQ9RBpN4UMgVwRFbsQe7BjZw=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -134,7 +143,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			nX0YT0NuTZmFsrAukJOu0JLFXtQ=
+			C7WMQ9RBpN4UMgVwRFbsQe7BjZw=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -143,7 +152,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			nX0YT0NuTZmFsrAukJOu0JLFXtQ=
+			C7WMQ9RBpN4UMgVwRFbsQe7BjZw=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -152,7 +161,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			nX0YT0NuTZmFsrAukJOu0JLFXtQ=
+			C7WMQ9RBpN4UMgVwRFbsQe7BjZw=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -161,7 +170,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			nX0YT0NuTZmFsrAukJOu0JLFXtQ=
+			C7WMQ9RBpN4UMgVwRFbsQe7BjZw=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -170,7 +179,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			nX0YT0NuTZmFsrAukJOu0JLFXtQ=
+			C7WMQ9RBpN4UMgVwRFbsQe7BjZw=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -179,7 +188,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			nX0YT0NuTZmFsrAukJOu0JLFXtQ=
+			C7WMQ9RBpN4UMgVwRFbsQe7BjZw=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -188,7 +197,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			nX0YT0NuTZmFsrAukJOu0JLFXtQ=
+			C7WMQ9RBpN4UMgVwRFbsQe7BjZw=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -200,14 +209,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			E3UVieVzeprJlegm9xxYSh1WqLEcG9XHSfnMv+1VQSw=
+			O/M1EIEtu2CmHsMkHGlTQrRuhCgRMTcEcL8C0gaO+p8=
 			</data>
 		</dict>
 		<key>PocketSVG_PocketSVG.bundle/Info.plist</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			F+W6G64bf2GkMRlMq6sJuF/ozI2JAUhDvCxANCiEi9Y=
+			40KPMN5N1keRp5OaJbSnW2gfGjdkl4FKx5xYbcPu2ZI=
 			</data>
 		</dict>
 		<key>PocketSVG_PocketSVG.bundle/SVGColors.plist</key>
@@ -221,7 +230,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Uo2FDFEe2F9+TsqB7SFIBM37VzrEdMgaSIjGcy5eGac=
+			AC/6jncOhg3CW3i1M+4Yepq9rcXiD7XJdhDfgjP2lzo=
 			</data>
 		</dict>
 		<key>PocketSVG_PocketSVG.bundle/_CodeSignature/CodeRequirements</key>
@@ -235,7 +244,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			U+nph7Ic8PAxqBOvzvAs7VJOeS8FLgNpNtosCpkU3pw=
+			1k5StYNuYvDN8DZZLUZeCcBB5eCVNlAF/InErsbjHMo=
 			</data>
 		</dict>
 		<key>PocketSVG_PocketSVG.bundle/_CodeSignature/CodeResources</key>
@@ -256,7 +265,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			zNLig6KN1bi+4RzamYkRTqtFn1HIQ5K4Q8E1gFmzrJc=
+			/DsAN15RVoESc7w5tPq1w/NQTf8Td4cXxMp5mOdPUfE=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -265,7 +274,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			zNLig6KN1bi+4RzamYkRTqtFn1HIQ5K4Q8E1gFmzrJc=
+			/DsAN15RVoESc7w5tPq1w/NQTf8Td4cXxMp5mOdPUfE=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -274,7 +283,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			zNLig6KN1bi+4RzamYkRTqtFn1HIQ5K4Q8E1gFmzrJc=
+			/DsAN15RVoESc7w5tPq1w/NQTf8Td4cXxMp5mOdPUfE=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -283,7 +292,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			zNLig6KN1bi+4RzamYkRTqtFn1HIQ5K4Q8E1gFmzrJc=
+			/DsAN15RVoESc7w5tPq1w/NQTf8Td4cXxMp5mOdPUfE=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -292,7 +301,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			71BDVbqmAd4TIwbiL+5qZsZRP+ne1WuOoiy7ZH9ckp4=
+			OjG6JSNNaftXwgYPuz67KOH9XkbtvdX8kYG39y2ASlg=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -301,12 +310,21 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			zNLig6KN1bi+4RzamYkRTqtFn1HIQ5K4Q8E1gFmzrJc=
+			/DsAN15RVoESc7w5tPq1w/NQTf8Td4cXxMp5mOdPUfE=
 			</data>
 			<key>optional</key>
 			<true/>
 		</dict>
 		<key>eu.lproj/Intents.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			/DsAN15RVoESc7w5tPq1w/NQTf8Td4cXxMp5mOdPUfE=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>fr.lproj/Intents.strings</key>
 		<dict>
 			<key>hash2</key>
 			<data>
@@ -319,7 +337,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			zNLig6KN1bi+4RzamYkRTqtFn1HIQ5K4Q8E1gFmzrJc=
+			/DsAN15RVoESc7w5tPq1w/NQTf8Td4cXxMp5mOdPUfE=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -328,7 +346,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			zNLig6KN1bi+4RzamYkRTqtFn1HIQ5K4Q8E1gFmzrJc=
+			/DsAN15RVoESc7w5tPq1w/NQTf8Td4cXxMp5mOdPUfE=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -337,7 +355,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			zNLig6KN1bi+4RzamYkRTqtFn1HIQ5K4Q8E1gFmzrJc=
+			/DsAN15RVoESc7w5tPq1w/NQTf8Td4cXxMp5mOdPUfE=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -346,7 +364,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			zNLig6KN1bi+4RzamYkRTqtFn1HIQ5K4Q8E1gFmzrJc=
+			/DsAN15RVoESc7w5tPq1w/NQTf8Td4cXxMp5mOdPUfE=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -355,7 +373,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			zNLig6KN1bi+4RzamYkRTqtFn1HIQ5K4Q8E1gFmzrJc=
+			/DsAN15RVoESc7w5tPq1w/NQTf8Td4cXxMp5mOdPUfE=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -364,7 +382,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			zNLig6KN1bi+4RzamYkRTqtFn1HIQ5K4Q8E1gFmzrJc=
+			/DsAN15RVoESc7w5tPq1w/NQTf8Td4cXxMp5mOdPUfE=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -373,7 +391,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			zNLig6KN1bi+4RzamYkRTqtFn1HIQ5K4Q8E1gFmzrJc=
+			/DsAN15RVoESc7w5tPq1w/NQTf8Td4cXxMp5mOdPUfE=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -382,7 +400,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			zNLig6KN1bi+4RzamYkRTqtFn1HIQ5K4Q8E1gFmzrJc=
+			/DsAN15RVoESc7w5tPq1w/NQTf8Td4cXxMp5mOdPUfE=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -391,7 +409,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			zNLig6KN1bi+4RzamYkRTqtFn1HIQ5K4Q8E1gFmzrJc=
+			/DsAN15RVoESc7w5tPq1w/NQTf8Td4cXxMp5mOdPUfE=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -400,7 +418,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			zNLig6KN1bi+4RzamYkRTqtFn1HIQ5K4Q8E1gFmzrJc=
+			/DsAN15RVoESc7w5tPq1w/NQTf8Td4cXxMp5mOdPUfE=
 			</data>
 			<key>optional</key>
 			<true/>

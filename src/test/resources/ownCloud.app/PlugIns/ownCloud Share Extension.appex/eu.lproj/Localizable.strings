@@ -168,7 +168,6 @@
 "After 1 minute" = "Minutu 1 ondoren";
 "After 5 minutes" = "5 minutu ondoren";
 "After 30 minutes" = "30 minutu ondoren";
-"If you choose \"Immediately\" the App will be locked, when it is no longer in foreground.\n\nAccess in Files.app is not possible, if you choose lock interval \"Immediately\".\nPlease choose an other delay, if you want to access your files in the Files.app or via a document picker." = "\"Berehala\" aukeratzen baduzu App-a blokeatu egingo da atzeko planoan ez dagoenean.\n\nFiles.app-en atzipena ez da posible blokeatze tartea \"Berehalakoa\" aukeratzen baduzu.\nAukeratu mesedez beste geroratze bat zure fitxategiak Files.ap-en edo dokumentu hautatzailean atzitu nahi badituzu.";
 "Please configure an email account" = "Konfiguratu mesedez email kontu bat";
 "You need to configure an email account first to be able to send emails." = "Email kontu bat konfiguratu behar duzu lehenik email mezuak bidali ahal izateko.";
 "Do you want to open the following URL?" = "Ondorengo URLa ireki nahi duzu?";

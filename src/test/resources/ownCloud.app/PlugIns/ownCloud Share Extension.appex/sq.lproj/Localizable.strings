@@ -208,7 +208,7 @@
 "After 1 minute" = "Pas 1 minute";
 "After 5 minutes" = "Pas 5 minutash";
 "After 30 minutes" = "Pas 30 minutash";
-"If you choose \"Immediately\" the App will be locked, when it is no longer in foreground.\n\nAccess in Files.app is not possible, if you choose lock interval \"Immediately\".\nPlease choose an other delay, if you want to access your files in the Files.app or via a document picker." = "Nëse zgjidhni \"Menjëherë\", Aplikacioni do të kyçet, kur të mos jetë më i dukshëm te pjesa e përparme.\n\nHyrja te Files.app s’është e mundur, nëse zgjidhni \"Menjëherë\" si interval kyçjeje.\nNëse doni të hyni te kartelat tuaja në Files.app ose përmes një zgjedhësi dokumentesh, ju lutemi, zgjidhni një tjetër vonesë.";
+
 "Please configure an email account" = "Ju lutemi, formësoni një llogari email";
 "You need to configure an email account first to be able to send emails." = "Së pari lypset të formësoni një llogari email, që të jeni në gjendje të dërgoni email-e.";
 "Do you want to open the following URL?" = "Doni të hapet URL-ja vijuese?";

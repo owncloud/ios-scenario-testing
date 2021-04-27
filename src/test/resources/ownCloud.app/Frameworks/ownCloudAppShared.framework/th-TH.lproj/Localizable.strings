@@ -208,7 +208,6 @@
 "After 1 minute" = "หลังจากผ่านไป 1 นาที";
 "After 5 minutes" = "หลังจากผ่านไป 5 นาที";
 "After 30 minutes" = "หลังจากผ่านไป 30 นาที";
-"If you choose \"Immediately\" the App will be locked, when it is no longer in foreground.\n\nAccess in Files.app is not possible, if you choose lock interval \"Immediately\".\nPlease choose an other delay, if you want to access your files in the Files.app or via a document picker." = "หากคุณเลือก \"ทันที\" แอปจะถูกล็อคเมื่อไม่ถูกใช้งาน\n\nการเข้าถึงใน Files.app นั้นเป็นไปไม่ได้หากคุณเลือกช่วงเวลาล็อค \"ทันที\"\nโปรดเลือกความล่าช้าอื่นๆ หากคุณต้องการเข้าถึงไฟล์ของคุณใน Files.app หรือผ่านตัวเลือกเอกสาร";
 "Please configure an email account" = "โปรดกำหนดค่าบัญชีอีเมล";
 "You need to configure an email account first to be able to send emails." = "คุณต้องกำหนดค่าบัญชีอีเมลก่อนจึงจะสามารถส่งอีเมลได้";
 "Do you want to open the following URL?" = "คุณต้องการเปิด URL ต่อไปนี้?";

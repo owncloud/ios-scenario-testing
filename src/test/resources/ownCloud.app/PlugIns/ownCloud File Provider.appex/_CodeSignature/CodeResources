@@ -6,9 +6,18 @@
 	<dict>
 		<key>Info.plist</key>
 		<data>
-		LQFdVgJRgTUkNW9Dt6vE0NbxYm8=
+		TenfJQgguDSw5FVB18KF014rf+E=
 		</data>
 		<key>en.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			8ERpYrFAk2PaWIHqnkvn1ZQRzgA=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>fr.lproj/Localizable.strings</key>
 		<dict>
 			<key>hash</key>
 			<data>
@@ -21,6 +30,15 @@
 	<key>files2</key>
 	<dict>
 		<key>en.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			g+BMHHmkDTU7Gj11I6c6w2WKe6lsq9ELyHk0KwXMXjQ=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>fr.lproj/Localizable.strings</key>
 		<dict>
 			<key>hash2</key>
 			<data>
