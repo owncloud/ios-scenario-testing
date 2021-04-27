@@ -1,6 +1,7 @@
 package ios;
 
 import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -50,7 +51,7 @@ public class CommonPage {
 
     public static void waitByIdInvisible(int timeToWait, String resourceId){
         WebDriverWait wait = new WebDriverWait(driver, timeToWait);
-        wait.until(ExpectedConditions.invisibilityOfElementLocated(MobileBy.id(resourceId)));
+        wait.until(ExpectedConditions.invisibilityOfElementLocated(By.id(resourceId)));
     }
 
     public static void waitByIdInvisible(int timeToWait, MobileElement mobileElement){
@@ -58,17 +59,9 @@ public class CommonPage {
         wait.until(ExpectedConditions.invisibilityOf(mobileElement));
     }
 
-    public static void waitByTextVisible(int timeToWait, String text) {
-        //WebDriverWait wait = new WebDriverWait(driver, timeToWait);
-        //MobileElement mobileElement = (MobileElement)
-                //driver.findElementByAndroidUIAutomator
-                //        ("new UiSelector().text(\""+ text +"\");");
-        //wait.until(ExpectedConditions.textToBePresentInElement(mobileElement, text));
-    }
-
     public static void waitTillStatus(int timeToWait, String resourceId, boolean status){
         WebDriverWait wait = new WebDriverWait(driver, timeToWait);
-        wait.until(ExpectedConditions.elementSelectionStateToBe(MobileBy.id(resourceId), status));
+        wait.until(ExpectedConditions.elementSelectionStateToBe(By.id(resourceId), status));
     }
 
     public static void waitTillStatus(int timeToWait, MobileElement mobileElement, boolean status){

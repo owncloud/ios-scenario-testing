@@ -5,7 +5,7 @@ Scenarios contained in feature files written in Gherkin language.
 Available scenarios can be found
 [here](ios-scenario-testing/src/test/resources/io/cucumber).
 
-Defined for the [ownCloud Android app](https://github.com/owncloud/ios)
+Defined for the [ownCloud iOS app](https://github.com/owncloud/ios)
 
 
 ## Global architecture
@@ -40,9 +40,6 @@ Different requirements:
 * At least, one device attached and reachable via adb. Check command
 `adb devices` to ensure `Appium` will get the device reference to
 interact with it
-
-The environment variable `$ANDROID_HOME` needs to be correctly set up,
-pointing to the Android SDK folder
 
 ## How to test
 

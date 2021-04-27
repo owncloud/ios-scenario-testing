@@ -20,8 +20,20 @@ public class SharePermissionsPage extends CommonPage {
     @iOSXCUITFindBy(id="Can Share")
     private MobileElement sharePermission;
 
-    @iOSXCUITFindBy(id="Can Edit and Change")
+    /*@iOSXCUITFindBy(id="Can Edit and Change")
+    private MobileElement editPermission;*/
+
+    @iOSXCUITFindBy(id="permission-section-edit")
     private MobileElement editPermission;
+
+    @iOSXCUITFindBy(id="permission-section-edit-create")
+    private MobileElement createPermission;
+
+    @iOSXCUITFindBy(id="permission-section-edit-change")
+    private MobileElement changePermission;
+
+    @iOSXCUITFindBy(id="permission-section-edit-delete")
+    private MobileElement deletePermission;
 
     public SharePermissionsPage()  {
         super();
@@ -36,25 +48,49 @@ public class SharePermissionsPage extends CommonPage {
         editPermission.click();
     }
 
-    /*public void shareWithUser (String sharee)
-            throws InterruptedException {
-        Log.log(Level.FINE, "Starts: Share with user: " + sharee);
-        waitById(10, shareeUsername);
-        shareeUsername.sendKeys(sharee);
-        Log.log(Level.WARNING, "Needed better implementation - failure possible");
-        selectShareeFromList(sharee);
-        //Go back to Share Page
-        backListShares();
+    public void switchCreate() {
+        Log.log(Level.FINE, "Starts: Click create checkbox");
+        createPermission.click();
     }
 
-    private void selectShareeFromList(String sharee)
-            throws InterruptedException {
-        //REDO: find another way to click in recipients' list
-        Thread.sleep(1000);
-        takeScreenshot("PrivateShare/SearchSharee_" + sharee);
-        TouchAction selectSharee = new TouchAction(driver);
-        selectSharee.tap(PointOption.point(500, 470)).perform();
-    }*/
+    public void switchChange() {
+        Log.log(Level.FINE, "Starts: Click change checkbox");
+        changePermission.click();
+    }
+
+    public void switchDelete() {
+        Log.log(Level.FINE, "Starts: Click delete checkbox:");
+        deletePermission.click();
+    }
+
+    public void switchShare() {
+        Log.log(Level.FINE, "Starts: Switch share button");
+        sharePermission.click();
+    }
+
+    public boolean isCreateSelected(){
+        return  parseIntBool(createPermission.getAttribute("selected"));
+    }
+
+    public boolean isChangeSelected(){
+        return parseIntBool(changePermission.getAttribute("selected"));
+    }
+
+    public boolean isDeleteSelected(){
+        return parseIntBool(deletePermission.getAttribute("selected"));
+    }
+
+    public boolean isEditPermission(){
+        return isCreateSelected() || isChangeSelected() || isDeleteSelected();
+    }
+
+    public boolean isShareEnabled(){
+        return parseIntBool(sharePermission.getAttribute("selected"));
+    }
+
+    public boolean isEditEnabled(){
+        return parseIntBool(editPermission.getAttribute("selected"));
+    }
 
     public void savePermissions() {
         Log.log(Level.FINE, "Starts: Save permissions");
@@ -64,5 +100,9 @@ public class SharePermissionsPage extends CommonPage {
     public void backListShares() {
         Log.log(Level.FINE, "Starts: Back to the list of shares");
         cancelPermissions.click();
+    }
+
+    private boolean parseIntBool(String s){
+        return Boolean.parseBoolean(s);
     }
 }

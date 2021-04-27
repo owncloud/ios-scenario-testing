@@ -30,7 +30,7 @@ public class AppiumManager {
 
         File rootPath = new File(System.getProperty("user.dir"));
         File appDir = new File(rootPath, "src/test/resources");
-        File app = new File(appDir, LocProperties.getProperties().getProperty("apkName"));
+        File app = new File(appDir, LocProperties.getProperties().getProperty("appName"));
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
 

@@ -1,5 +1,5 @@
 /**
- * ownCloud Android Scenario Tests
+ * ownCloud iOS Scenario Tests
  *
  * @author Jesús Recio Rincón (@jesmrec)
  */

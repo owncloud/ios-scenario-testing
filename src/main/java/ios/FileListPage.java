@@ -107,8 +107,7 @@ public class FileListPage extends CommonPage {
             Log.log(Level.FINE, "Searching item... swiping: " + itemName);
             swipe(0.50, 0.90, 0.50, 0.20);
         }
-        driver.findElement(MobileBy.AndroidUIAutomator(
-                "new UiSelector().text(\""+ itemName +"\");")).click();
+        driver.findElement(By.id(itemName)).click();
     }
 
     public boolean isItemInList (String itemName) {
@@ -120,13 +119,11 @@ public class FileListPage extends CommonPage {
 
     private void selectItemListActions(String itemName) {
         Log.log(Level.FINE, "Starts: select actions item from list: " + itemName);
-        waitByTextVisible(30, itemName);
         driver.findElement(By.id(itemName + " Actions")).click();
     }
 
     private void selectItemListContextual(String itemName) {
         Log.log(Level.FINE, "Starts: select contextual item from list: " + itemName);
-        waitByTextVisible(30, itemName);
         MobileElement listCell = (MobileElement) driver.findElement
                 (By.xpath("//XCUIElementTypeCell[@name=\"" + itemName + "\"]"));
         new TouchAction(driver).longPress(LongPressOptions.longPressOptions()

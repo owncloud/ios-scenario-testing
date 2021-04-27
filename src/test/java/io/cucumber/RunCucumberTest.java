@@ -29,10 +29,6 @@ public class RunCucumberTest {
     @AfterClass
     public static void afterclass(){
         //remove the oC app
-        //AppiumManager.getManager().getDriver().removeApp("com.owncloud.android");
-        //remove Appium Settings
-        //AppiumManager.getManager().getDriver().removeApp("io.appium.settings");
-        //AppiumManager.getManager().cleanFolder(); //remove the oC folder from device
         AppiumManager.getManager().getDriver().quit();
         Log.log(Level.FINE, "END EXECUTION\n");
     }

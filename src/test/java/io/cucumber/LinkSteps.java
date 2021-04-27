@@ -1,5 +1,6 @@
 package io.cucumber;
 
+import ios.LinkPermissionsPage;
 import ios.PublicLinkPage;
 import ios.SharePage;
 
@@ -29,6 +30,9 @@ public class LinkSteps {
     @Steps
     protected PublicLinkPage publicLinkPage;
 
+    @Steps
+    protected LinkPermissionsPage linkPermissionsPage;
+
     //APIs to call
     protected ShareAPI shareAPI = new ShareAPI();
 
@@ -50,26 +54,26 @@ public class LinkSteps {
         for (List<String> rows : listItems) {
             switch (rows.get(0)){
                 case "name": {
-                    publicLinkPage.addLinkName(rows.get(1));
+                    linkPermissionsPage.addLinkName(rows.get(1));
                     break;
                 }
                 case "password": {
-                    publicLinkPage.addPassword(itemName, rows.get(1));
+                    linkPermissionsPage.addPassword(itemName, rows.get(1));
                     break;
                 }
                 case "permission": {
-                    publicLinkPage.setPermission(rows.get(1));
+                    linkPermissionsPage.setPermission(rows.get(1));
                     break;
                 }
                 case "expiration days": {
-                    publicLinkPage.setExpiration(rows.get(1));
+                    linkPermissionsPage.setExpiration(rows.get(1));
                     break;
                 }
                 default:
                     break;
             }
         }
-        publicLinkPage.submitLink();
+        linkPermissionsPage.submitLink();
     }
 
     @When("^user edits the link on (.+) with the following fields$")
@@ -82,23 +86,23 @@ public class LinkSteps {
         for (List<String> rows : listItems) {
             switch (rows.get(0)){
                 case "name": {
-                    publicLinkPage.addLinkName(rows.get(1));
+                    linkPermissionsPage.addLinkName(rows.get(1));
                     break;
                 }
                 case "permissions": {
                     Log.log(Level.FINE, "Set permission: " + rows.get(1));
-                    publicLinkPage.setPermission(rows.get(1));
+                    linkPermissionsPage.setPermission(rows.get(1));
                     break;
                 }
                 case "password": {
-                    publicLinkPage.addPassword(itemName, rows.get(1));
+                    linkPermissionsPage.addPassword(itemName, rows.get(1));
                     break;
                 }
                 default:
                     break;
             }
         }
-        publicLinkPage.backToLinksList();
+        linkPermissionsPage.backToLinksList();
     }
 
     @When("^user deletes the link on (.+)$")
@@ -106,7 +110,7 @@ public class LinkSteps {
         String currentStep = StepEventBus.getEventBus().getCurrentStep().get().toString();
         Log.log(Level.FINE, "----STEP----: " + currentStep);
         publicLinkPage.openPublicLink(item + " link");
-        publicLinkPage.deleteLink();
+        linkPermissionsPage.deleteLink();
     }
 
     @Then("^link should be created on (.+) with the following fields$")
@@ -126,18 +130,18 @@ public class LinkSteps {
                 }
                 case "password": {
                     publicLinkPage.openPublicLink(linkName);
-                    assertTrue(publicLinkPage.isPasswordEnabled(itemName));
+                    assertTrue(linkPermissionsPage.isPasswordEnabled(itemName));
                     break;
                 }
                 case "permission": {
                     Log.log(Level.FINE, "checking permissions");
                     publicLinkPage.openPublicLink(linkName);
-                    assertTrue(publicLinkPage.checkPermissions(rows.get(1)));
+                    assertTrue(linkPermissionsPage.checkPermissions(rows.get(1)));
                     break;
                 }
                 case "expiration days": {
                     publicLinkPage.openPublicLink(linkName);
-                    assertTrue(publicLinkPage.checkExpiration(rows.get(1)));
+                    assertTrue(linkPermissionsPage.checkExpiration(rows.get(1)));
                     break;
                 }
                 default:

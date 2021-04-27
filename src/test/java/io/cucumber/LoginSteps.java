@@ -1,9 +1,5 @@
 package io.cucumber;
 
-import ios.ChromeCustomTabPage;
-import ios.KopanoPage;
-import ios.LoginPage;
-
 import net.thucydides.core.annotations.Steps;
 import net.thucydides.core.steps.StepEventBus;
 
@@ -12,6 +8,9 @@ import java.util.logging.Level;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import ios.KopanoPage;
+import ios.LoginPage;
+import ios.OAuth2Page;
 import utils.LocProperties;
 import utils.api.CommonAPI;
 import utils.log.Log;
@@ -46,9 +45,9 @@ public class LoginSteps {
                     break;
                 case "Bearer":
                     loginPage.submitLogin();
-                    ChromeCustomTabPage chromeCustomTabPage = new ChromeCustomTabPage();
-                    chromeCustomTabPage.enterCredentials(username,password);
-                    chromeCustomTabPage.authorize();
+                    OAuth2Page oauth2Page = new OAuth2Page();
+                    oauth2Page.enterCredentials(username,password);
+                    oauth2Page.authorize();
                     break;
                 case "OIDC":
                     loginPage.submitLogin();
@@ -60,10 +59,6 @@ public class LoginSteps {
                     break;
             }
         }
-        //Fill capabilities object
-        //String capabilityJSON = commonAPI.getCapabilities("ocs/v2.php/cloud/capabilities?format=json");
-        //CapabilityJSONHandler JSONparser = new CapabilityJSONHandler(capabilityJSON);
-        //JSONparser.parsePublicLink();
     }
 
     @Given("^server with (.+) is available$")
@@ -88,9 +83,9 @@ public class LoginSteps {
                 break;
             case "OAuth2":
                 loginPage.submitLogin();
-                ChromeCustomTabPage chromeCustomTabPage = new ChromeCustomTabPage();
-                chromeCustomTabPage.enterCredentials(username, password);
-                chromeCustomTabPage.authorize();
+                OAuth2Page oauth2page = new OAuth2Page();
+                oauth2page.enterCredentials(username, password);
+                oauth2page.authorize();
                 break;
             case "OIDC":
                 loginPage.submitLogin();

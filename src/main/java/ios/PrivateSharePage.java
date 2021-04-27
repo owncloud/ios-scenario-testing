@@ -21,18 +21,6 @@ public class PrivateSharePage extends SharePage {
     @iOSXCUITFindBy(id="Remove Recipient")
     private MobileElement removeShare;
 
-    @iOSXCUITFindBy(id="permission-section-edit")
-    private MobileElement editPermission;
-
-    @iOSXCUITFindBy(id="permission-section-edit-create")
-    private MobileElement createPermission;
-
-    @iOSXCUITFindBy(id="permission-section-edit-change")
-    private MobileElement changePermission;
-
-    @iOSXCUITFindBy(id="permission-section-edit-delete")
-    private MobileElement deletePermission;
-
     @iOSXCUITFindBy(id="permission-section-share")
     private MobileElement sharePermission;
 
@@ -68,54 +56,6 @@ public class PrivateSharePage extends SharePage {
 
     public boolean displayedPermission(String permissionName){
         return !driver.findElements(By.id(permissionName)).isEmpty();
-    }
-
-    public void switchCreate() {
-        Log.log(Level.FINE, "Starts: Click create checkbox");
-        createPermission.click();
-    }
-
-    public void switchChange() {
-        Log.log(Level.FINE, "Starts: Click change checkbox");
-        changePermission.click();
-    }
-
-    public void switchDelete() {
-        Log.log(Level.FINE, "Starts: Click delete checkbox:");
-        deletePermission.click();
-    }
-
-    public void switchShare() {
-        Log.log(Level.FINE, "Starts: Switch share button");
-        sharePermission.click();
-    }
-
-    private boolean parseIntBool(String s){
-        return Boolean.parseBoolean(s);
-    }
-
-    public boolean isCreateSelected(){
-        return  parseIntBool(createPermission.getAttribute("selected"));
-    }
-
-    public boolean isChangeSelected(){
-        return parseIntBool(changePermission.getAttribute("selected"));
-    }
-
-    public boolean isDeleteSelected(){
-        return parseIntBool(deletePermission.getAttribute("selected"));
-    }
-
-    public boolean isEditPermission(){
-        return isCreateSelected() || isChangeSelected() || isDeleteSelected();
-    }
-
-    public boolean isShareEnabled(){
-        return parseIntBool(sharePermission.getAttribute("selected"));
-    }
-
-    public boolean isEditEnabled(){
-        return parseIntBool(editPermission.getAttribute("selected"));
     }
 
     public boolean isPasswordEnabled () {

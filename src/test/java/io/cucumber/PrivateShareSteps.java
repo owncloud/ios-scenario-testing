@@ -69,37 +69,37 @@ public class PrivateShareSteps {
                 case(0):{
                     Log.log(Level.FINE, "Check Share");
                     char status = permissionsToString.charAt(i);
-                    boolean enabled = privateSharePage.isShareEnabled();
+                    boolean enabled = sharePermissionsPage.isShareEnabled();
                     Log.log(Level.FINE, "Status: " + status +". Enabled: "+ enabled);
                     if (enabled != (status=='1'))
-                        privateSharePage.switchShare();
+                        sharePermissionsPage.switchShare();
                     break;
                 }
                 case(1):{
                     Log.log(Level.FINE, "Check Delete");
                     char status = permissionsToString.charAt(i);
-                    boolean enabled = privateSharePage.isDeleteSelected();
+                    boolean enabled = sharePermissionsPage.isDeleteSelected();
                     Log.log(Level.FINE, "Status: " + status +". Enabled: "+ enabled);
                     if (enabled != (status=='1'))
-                        privateSharePage.switchDelete();
+                        sharePermissionsPage.switchDelete();
                     break;
                 }
                 case(2):{
                     Log.log(Level.FINE, "Check Create");
                     char status = permissionsToString.charAt(i);
-                    boolean enabled = privateSharePage.isCreateSelected();
+                    boolean enabled = sharePermissionsPage.isCreateSelected();
                     Log.log(Level.FINE, "Status: " + status +". Enabled: "+ enabled);
                     if (enabled != (status=='1'))
-                        privateSharePage.switchCreate();
+                        sharePermissionsPage.switchCreate();
                     break;
                 }
                 case(3):{
                     Log.log(Level.FINE, "Check Change");
                     char status = permissionsToString.charAt(i);
-                    boolean enabled = privateSharePage.isChangeSelected();
+                    boolean enabled = sharePermissionsPage.isChangeSelected();
                     Log.log(Level.FINE, "Status: " + status +". Enabled: "+ enabled);
                     if (enabled != (status=='1'))
-                        privateSharePage.switchChange();
+                        sharePermissionsPage.switchChange();
                     break;
                 }
                 default:
