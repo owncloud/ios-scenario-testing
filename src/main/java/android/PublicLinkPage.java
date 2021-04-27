@@ -18,7 +18,7 @@ import utils.date.DateUtils;
 import utils.entities.OCCapability;
 import utils.log.Log;
 
-public class PublicLinkPage extends CommonPage {
+public class PublicLinkPage extends SharePage {
 
     @iOSXCUITFindBy(xpath = "//XCUIElementTypeStaticText[@name=\"Create Public Link\"]")
     private MobileElement selectCreateLink;

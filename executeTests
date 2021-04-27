@@ -27,7 +27,7 @@ help()
    echo -e "\t-s (mandatory) URL of ownCloud server to test against"
    echo -e "\t-a (optional) Appium server URL. if Appium Server is not specified, will be used \"localhost:4723/wd/hub\""
    echo -e "\t-t (optional) Filter. F. ex: @createfolder will send only tests tagged with such label. Tags are allowed to concatenate, sepparated by \",\". It is also allowed to use a classpath to execute all the test in such class"
-   echo -e "\t-d (optional) In case of several devices attached, tests will be sent against the UID set in this option"
+   echo -e "\t-d (optional) In case of several devices attached, tests will be sent against the device name set in this option"
    echo ""
    exit 1 
 }

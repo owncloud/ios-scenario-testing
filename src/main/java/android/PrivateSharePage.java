@@ -10,7 +10,7 @@ import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import io.appium.java_client.pagefactory.iOSXCUITFindBy;
 import utils.log.Log;
 
-public class PrivateSharePage extends CommonPage {
+public class PrivateSharePage extends SharePage {
 
     @iOSXCUITFindBy(xpath="//XCUIElementTypeStaticText[@name=\"Sharing\"]")
     private MobileElement sharingTitle;

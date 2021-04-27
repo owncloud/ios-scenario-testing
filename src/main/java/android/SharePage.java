@@ -5,83 +5,15 @@ import java.util.List;
 import java.util.Map;
 import java.util.logging.Level;
 
-import io.appium.java_client.MobileBy;
 import utils.date.DateUtils;
 import utils.entities.OCCapability;
 import utils.entities.OCShare;
 import utils.log.Log;
 
-/* Pending: move to Page Factory when view is refactored.*/
-
 public class SharePage extends CommonPage {
-
-    private final String addshareebutton_id = "com.owncloud.android:id/addUserButton";
-    private final String addpubliclinkbutton_id = "com.owncloud.android:id/addPublicLinkButton";
-    private final String editprivateshare_id = "com.owncloud.android:id/editShareButton";
-    private final String editpubliclink_id = "com.owncloud.android:id/editPublicLinkButton";
-    private final String sharefilename_id = "com.owncloud.android:id/shareFileName";
-    private final String unshareprivate_id = "com.owncloud.android:id/unshareButton";
-    private final String deleteprivatelink_id = "com.owncloud.android:id/deletePublicLinkButton";
-    private final String privatesharesectiontitle_id = "com.owncloud.android:id/shareWithUsersSectionTitle";
-    private String acceptdeletion_id = "android:id/button1";
-    private String canceldeletion_id = "android:id/button3";
 
     public SharePage(){
         super();
-    }
-
-    public boolean isHeader() {
-        return true;
-        //return !driver.findElementsByAndroidUIAutomator("new UiSelector().text(\"Share\");").isEmpty();
-    }
-
-    public void addPrivateShare(){
-        Log.log(Level.FINE, "Starts: add private share");
-        waitById(5, sharefilename_id);
-        driver.findElement(MobileBy.id(addshareebutton_id)).click();
-    }
-
-    public void addPublicLink(){
-        Log.log(Level.FINE, "Starts: add public link");
-        //waitById(5, sharefilename_id);
-        driver.findElement(MobileBy.id(addpubliclinkbutton_id)).click();
-    }
-
-    public void openPrivateShare(String itemName){
-        Log.log(Level.FINE, "Starts: edit private share: " + itemName);
-        waitById(5, editprivateshare_id);
-        driver.findElement(MobileBy.id(editprivateshare_id)).click();
-    }
-
-    public void openPublicLink(String itemName){
-        Log.log(Level.FINE, "Starts: open public link: " + itemName);
-        driver.findElement(MobileBy.id(editpubliclink_id)).click();
-    }
-
-    public boolean isItemInListPrivateShares(String sharee) {
-        waitById(5, privatesharesectiontitle_id);
-        takeScreenshot("PrivateShare/ItemInListPrivateShare_"+sharee);
-        return true;
-        //return !driver.findElementsByAndroidUIAutomator("new UiSelector().text(\""+sharee+"\");")
-        //        .isEmpty();
-    }
-
-    public boolean isItemInListPublicShares(String itemName) {
-        waitById(5, privatesharesectiontitle_id);
-        takeScreenshot("PublicShare/ItemInListPubilcShare_"+itemName);
-        return true;
-        //return !driver.findElementsByAndroidUIAutomator("new UiSelector().text(\""+itemName+"\");")
-        //        .isEmpty();
-    }
-
-    public void deletePrivateShare(){
-        driver.findElement(MobileBy.id(unshareprivate_id)).click();
-        takeScreenshot("PrivateShare/Deletion");
-    }
-
-    public void deletePublicShare(){
-        driver.findElement(MobileBy.id(deleteprivatelink_id)).click();
-        takeScreenshot("PublicShare/Deletion");
     }
 
     public boolean checkCorrectShare(OCShare remoteShare, List<List<String>> dataList ){
@@ -167,16 +99,7 @@ public class SharePage extends CommonPage {
         return true;
     }
 
-    public void acceptDeletion(){
-        takeScreenshot("PrivateShare/AcceptDeletion");
-        driver.findElement(MobileBy.id(acceptdeletion_id)).click();
-    }
-
-    public void cancelDeletion(){
-        driver.findElement(MobileBy.id(canceldeletion_id)).click();
-    }
-
-    private HashMap turnListToHashmap(List<List<String>> dataList){
+    private HashMap<String, String> turnListToHashmap(List<List<String>> dataList){
         HashMap<String, String> mapFields = new HashMap<String, String>();
         for (List<String> rows : dataList) {
             mapFields.put(rows.get(0),rows.get(1));

@@ -14,11 +14,11 @@ Feature: Copy item
   Scenario: Copy an existent folder to another location using the Actions menu
     When user selects to copy the item copyMe using the Actions menu
     And user selects Documents as target folder of the copy
-    Then user should see copyMe in the filelist as original
+    Then user should see copyMe in the filelist
     And user should see copyMe inside the folder Documents
 
   Scenario: Copy an existent folder to another location using the Contextual menu
     When user selects to copy the item copyMe using the Contextual menu
     And user selects Documents as target folder of the copy
-    Then user should see copyMe in the filelist as original
+    Then user should see copyMe in the filelist
     And user should see copyMe inside the folder Documents

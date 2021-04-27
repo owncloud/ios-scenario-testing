@@ -26,7 +26,6 @@ Feature: Private Share
     And share should be created on Files with the following fields
       | group | test |
 
-    @conti
   Scenario: Correct share with user using the Contextual menu
     When user selects to share the folder Files using the Contextual menu
     And user selects user user2 as sharee

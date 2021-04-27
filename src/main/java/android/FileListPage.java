@@ -69,10 +69,6 @@ public class FileListPage extends CommonPage {
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
     }
 
-    public void refreshList(){
-        swipe(0.50, 0.35, 0.50, 0.90);
-    }
-
     public void waitToload(){
     }
 
@@ -84,7 +80,6 @@ public class FileListPage extends CommonPage {
             e.printStackTrace();
         }
         plusButton.click();
-        Log.log(Level.FINE, "ylp");
         createFolder.click();
     }
 
@@ -247,15 +242,6 @@ public class FileListPage extends CommonPage {
         return avofflineBadge && menuUnavoffline;
     }
 
-    private void selectOperationMenu(String operationName){
-        Log.log(Level.FINE, "Starts: Select operation from the menu: " + operationName);
-        driver.findElement(MobileBy.AndroidUIAutomator(
-                "new UiSelector().description(\"More options\");")).click();
-        driver.findElement(MobileBy.AndroidUIAutomator(
-                "new UiSelector().text(\""+ operationName +"\");")).click();
-        takeScreenshot("SelectOperation/SelectOperation_"+operationName);
-    }
-
     public boolean displayedList(String path, ArrayList<OCFile> listServer){
         boolean found = true;
         parsePath(path); //moving to the folder
@@ -270,24 +256,13 @@ public class FileListPage extends CommonPage {
                     ocfile.getName().length() > 15) {
                 continue;
             }
-            while (!isItemInList(ocfile.getName()) && !endList(listServer.size())) {
-                Log.log(Level.FINE, "Item " + ocfile.getName() + " not found yet. Swiping");
-                swipe(0.50, 0.90, 0.50, 0.20);
-            }
             if (!isItemInList(ocfile.getName())) {
                 Log.log(Level.FINE, "Item " + ocfile.getName() + " is not in the list");
                 found = false;
                 break;
             }
-            //TODO: swipe to the top to start a new loop
         }
         return found;
-    }
-
-    private boolean endList (int numberItems) {
-        return !driver.findElements(MobileBy.AndroidUIAutomator(
-                "new UiSelector().text(\"" + Integer.toString(numberItems-1)
-                        + " files\");")).isEmpty();
     }
 
     private void parsePath(String path){

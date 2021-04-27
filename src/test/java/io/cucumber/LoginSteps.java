@@ -1,10 +1,10 @@
 package io.cucumber;
 
 import android.ChromeCustomTabPage;
-import android.FileListPage;
 import android.KopanoPage;
 import android.LoginPage;
 
+import net.thucydides.core.annotations.Steps;
 import net.thucydides.core.steps.StepEventBus;
 
 import java.util.logging.Level;
@@ -22,18 +22,10 @@ import static org.junit.Assert.assertTrue;
 public class LoginSteps {
 
     //Involved pages
-    private LoginPage loginPage = new LoginPage();
-    private CommonAPI commonAPI = new CommonAPI();
-    private FileListPage fileListPage = new FileListPage();
+    @Steps
+    private LoginPage loginPage;
 
-    /*@Given("^app is launched for the first time$")
-    public void first_launch()
-            throws Throwable {
-        Log.log(Level.FINE, "----STEP----: " +
-                new Object(){}.getClass().getEnclosingMethod().getName());
-        //In case it is installed, we remove to execute login tests
-        loginPage.reinstallApp();
-    }*/
+    private CommonAPI commonAPI = new CommonAPI();
 
     @Given("^user (.+) is logged$")
     public void i_am_logged(String user)
@@ -70,9 +62,9 @@ public class LoginSteps {
             }
         }
         //Fill capabilities object
-        String capabilityJSON = commonAPI.getCapabilities("ocs/v2.php/cloud/capabilities?format=json");
-        CapabilityJSONHandler JSONparser = new CapabilityJSONHandler(capabilityJSON);
-        JSONparser.parsePublicLink();
+        //String capabilityJSON = commonAPI.getCapabilities("ocs/v2.php/cloud/capabilities?format=json");
+        //CapabilityJSONHandler JSONparser = new CapabilityJSONHandler(capabilityJSON);
+        //JSONparser.parsePublicLink();
     }
 
     @Given("^server with (.+) is available$")

@@ -35,7 +35,12 @@ public class AppiumManager {
         DesiredCapabilities capabilities = new DesiredCapabilities();
 
         capabilities.setCapability (MobileCapabilityType.PLATFORM_NAME, "iOS");
-        capabilities.setCapability (MobileCapabilityType.DEVICE_NAME, "iPhone XR");
+        if (System.getProperty("device") != null) {
+            capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, System.getProperty("device"));
+        } else { //Will use iPhone XR as default simulator
+            capabilities.setCapability (MobileCapabilityType.DEVICE_NAME, "iPhone XR");
+        }
+
         capabilities.setCapability (MobileCapabilityType.APP, app.getAbsolutePath());
         capabilities.setCapability (MobileCapabilityType.AUTOMATION_NAME, AutomationName.IOS_XCUI_TEST);
         capabilities.setCapability ("uiautomator2ServerInstallTimeout", 180000);

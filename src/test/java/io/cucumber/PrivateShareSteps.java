@@ -4,6 +4,7 @@ import android.PrivateSharePage;
 import android.SharePage;
 import android.SharePermissionsPage;
 
+import net.thucydides.core.annotations.Steps;
 import net.thucydides.core.steps.StepEventBus;
 
 import java.util.List;
@@ -24,9 +25,14 @@ import static org.junit.Assert.assertTrue;
 public class PrivateShareSteps {
 
     //Involved pages
-    protected SharePage sharePage = new SharePage();
-    protected SharePermissionsPage sharePermissionsPage = new SharePermissionsPage();
-    protected PrivateSharePage privateSharePage = new PrivateSharePage();
+    @Steps
+    protected SharePage sharePage;
+
+    @Steps
+    protected SharePermissionsPage sharePermissionsPage;
+
+    @Steps
+    protected PrivateSharePage privateSharePage;
 
     //APIs to call
     protected ShareAPI shareAPI = new ShareAPI();

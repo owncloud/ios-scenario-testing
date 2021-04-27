@@ -3,6 +3,7 @@ package io.cucumber;
 import android.PublicLinkPage;
 import android.SharePage;
 
+import net.thucydides.core.annotations.Steps;
 import net.thucydides.core.steps.StepEventBus;
 
 import java.util.List;
@@ -22,8 +23,11 @@ import static org.junit.Assert.assertTrue;
 public class LinkSteps {
 
     //Involved pages
-    protected SharePage sharePage = new SharePage();
-    protected PublicLinkPage publicLinkPage = new PublicLinkPage();
+    @Steps
+    protected SharePage sharePage;
+
+    @Steps
+    protected PublicLinkPage publicLinkPage;
 
     //APIs to call
     protected ShareAPI shareAPI = new ShareAPI();
@@ -123,10 +127,6 @@ public class LinkSteps {
                 case "password": {
                     publicLinkPage.openPublicLink(linkName);
                     assertTrue(publicLinkPage.isPasswordEnabled(itemName));
-                    break;
-                }
-                case "user": {
-                    assertTrue(sharePage.isItemInListPublicShares(itemName));
                     break;
                 }
                 case "permission": {

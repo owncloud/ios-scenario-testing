@@ -1,14 +1,11 @@
 package io.cucumber;
 
-import android.DetailsPage;
 import android.FileListPage;
 import android.FolderPickerPage;
 import android.InputNamePage;
-import android.RemoveDialogPage;
 
+import net.thucydides.core.annotations.Steps;
 import net.thucydides.core.steps.StepEventBus;
-
-import org.openqa.selenium.By;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -23,18 +20,20 @@ import utils.api.FilesAPI;
 import utils.entities.OCFile;
 import utils.log.Log;
 
-import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
 public class FileListSteps {
 
     //Involved pages
-    protected FileListPage fileListPage = new FileListPage();
-    protected InputNamePage inputNamePage = new InputNamePage();
-    protected FolderPickerPage folderPickerPage = new FolderPickerPage();
-    //protected RemoveDialogPage removeDialogPage = new RemoveDialogPage();
-    //protected DetailsPage detailsPage = new DetailsPage();
+    @Steps
+    protected FileListPage fileListPage;
+
+    @Steps
+    protected InputNamePage inputNamePage;
+
+    @Steps
+    protected FolderPickerPage folderPickerPage;
 
     //APIs to call
     protected FilesAPI filesAPI = new FilesAPI();
@@ -89,14 +88,6 @@ public class FileListSteps {
         inputNamePage.setItemName(itemName);
     }
 
-    /*@Then("^user should see (.+) in the filelist$")
-    public void i_see_the_item(String itemName) throws Throwable {
-        String currentStep = StepEventBus.getEventBus().getCurrentStep().get().toString();
-        Log.log(Level.FINE, "----STEP----: " + currentStep);
-        assertTrue(fileListPage.isItemInList(itemName));
-        filesAPI.removeItem(itemName);
-    }*/
-
     @Then("^user should see (.+) in the filelist$")
     public void i_see_original_the_item(String itemName) throws Throwable {
         String currentStep = StepEventBus.getEventBus().getCurrentStep().get().toString();
@@ -132,37 +123,11 @@ public class FileListSteps {
         assertTrue(fileListPage.fileIsMarkedAsAvOffline(itemName));
     }
 
-    /*@Then("^user sees the detailed information: (.+), (.+), and (.+)$")
-    public void preview_in_screen(String itemName, String type, String size) {
-        Log.log(Level.FINE, "----STEP----: " +
-                new Object(){}.getClass().getEnclosingMethod().getName()  + ": " + itemName);
-        detailsPage.removeShareSheet();
-        assertEquals(detailsPage.getName(), itemName);
-        assertEquals(detailsPage.getSize(), size);
-        assertEquals(detailsPage.getType(), type);
-        detailsPage.backListFiles();
-    }
-
-    @Then("^the item (.+) is marked as downloaded$")
-    public void item_marked_as_downloaded(String itemName) {
-        Log.log(Level.FINE, "----STEP----: " +
-                new Object(){}.getClass().getEnclosingMethod().getName() + ": " + itemName);
-        assertTrue(fileListPage.fileIsMarkedAsDownloaded(itemName));
-    }
-
-    @Then("^the item (.+) is opened and previewed$")
-    public void item_opened_previewed(String itemName) {
-        Log.log(Level.FINE, "----STEP----: " +
-                new Object(){}.getClass().getEnclosingMethod().getName() + ": " + itemName);
-        assertTrue(detailsPage.itemPreviewed());
-    }
-
-    @Then("^the list of files in (.+) folder matches with the server$")
+    @Then("^the list of files in (.+) folder should match with the server$")
     public void list_matches_server(String path) throws Throwable {
         Log.log(Level.FINE, "----STEP----: " +
                 new Object(){}.getClass().getEnclosingMethod().getName() + ": " + path);
-        fileListPage.waitToload();
         ArrayList<OCFile> listServer = filesAPI.listItems(path);
         assertTrue(fileListPage.displayedList(path, listServer));
-    }*/
+    }
 }
