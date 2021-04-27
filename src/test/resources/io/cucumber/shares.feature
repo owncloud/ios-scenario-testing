@@ -13,31 +13,39 @@ Feature: Private Share
       | textExample.txt  |
 
   Scenario: Correct share with user
-    When user selects to share the folder Files
+    When user selects to share the folder Files using the Actions menu
     And user selects user user2 as sharee
-    Then user user2 should have access to Files
+    Then user  user2 should have access to Files
     And share should be created on Files with the following fields
       | sharee | user2 |
 
   Scenario: Correct share with group
-    When user selects to share the folder Files
+    When user selects to share the folder Files using the Actions menu
     And user selects group test as sharee
     Then group including user2 should have access to Files
     And share should be created on Files with the following fields
       | group | test |
 
+    @conti
+  Scenario: Correct share with user using the Contextual menu
+    When user selects to share the folder Files using the Contextual menu
+    And user selects user user2 as sharee
+    Then user  user2 should have access to Files
+    And share should be created on Files with the following fields
+      | sharee | user2 |
+
   @federated
   Scenario: Correct federated share
-    When user selects to share the file textExample.txt
+    When user selects to share the file textExample.txt using the Actions menu
     And user selects user demo@demo.owncloud.com as sharee
     Then share should be created on textExample.txt with the following fields
       | sharee | demo@demo.owncloud.com |
 
   Scenario Outline: Edit existing share, removing permissions
     Given the item <item> has been already shared with <user>
-    When user selects to edit share the folder <item>
+    When user selects to edit share the folder <item> using the Actions menu
     And user edits the share on <item> with permissions <permissions>
-    Then user <user> should have access to <item>
+    Then user  <user> should have access to <item>
     And share should be created on <item> with the following fields
       | sharee        |  <user>        |
       | permissions   |  <permissions> |
@@ -58,7 +66,7 @@ Feature: Private Share
 
   Scenario: Delete existing share
     Given the item Files has been already shared with user2
-    When user selects to edit share the folder Files
+    When user selects to edit share the folder Files using the Actions menu
     And user deletes the share
     Then user user2 should not have access to Files
     And Files should not be shared anymore with user2

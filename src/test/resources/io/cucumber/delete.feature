@@ -10,7 +10,12 @@ Feature: Delete item
     And the following items have been created in the account
       | deleteMe |
 
-  Scenario: Delete an existent folder
-    When user selects to delete the file deleteMe
+  Scenario: Delete an existent folder using the Actions menu
+    When user selects to delete the file deleteMe using the Actions menu
+    And user confirms the deletion
+    Then user should not see deleteMe in the filelist anymore
+
+  Scenario: Delete an existent folder using the Contextual menu
+    When user selects to delete the file deleteMe using the Contextual menu
     And user confirms the deletion
     Then user should not see deleteMe in the filelist anymore

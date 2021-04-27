@@ -188,12 +188,12 @@ public class PrivateShareSteps {
         shareAPI.removeShare(share.getId());
     }
 
-    @Then("^group including (.+) should have access to (.+)$")
-    public void group_has_the_file (String userName, String itemName)
+    @Then("^(user|group) (?:.*?) (.+) should have access to (.+)$")
+    public void group_has_the_file (String type, String userName, String itemName)
             throws Throwable {
         String currentStep = StepEventBus.getEventBus().getCurrentStep().get().toString();
         Log.log(Level.FINE, "----STEP----: " + currentStep);
-        assertTrue(shareAPI.isSharedWithMe(itemName, true));
+        assertTrue(shareAPI.isSharedWithMe(itemName, type.equals("group")));
     }
 
     @Then("^user (.+) should not have access to (.+)$")
@@ -202,14 +202,6 @@ public class PrivateShareSteps {
         String currentStep = StepEventBus.getEventBus().getCurrentStep().get().toString();
         Log.log(Level.FINE, "----STEP----: " + currentStep);
         assertFalse(shareAPI.isSharedWithMe(itemName, false));
-    }
-
-    @Then("^user (.+) should have access to (.+)$")
-    public void sharee_has_the_file (String userName, String itemName)
-            throws Throwable {
-        String currentStep = StepEventBus.getEventBus().getCurrentStep().get().toString();
-        Log.log(Level.FINE, "----STEP----: " + currentStep);
-        assertTrue(shareAPI.isSharedWithMe(itemName, false));
     }
 
     @Then("^(.+) should not be shared anymore with (.+)$")

@@ -5,7 +5,6 @@ import org.openqa.selenium.support.PageFactory;
 import java.util.logging.Level;
 
 import io.appium.java_client.MobileElement;
-import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import io.appium.java_client.pagefactory.iOSXCUITFindBy;
 import utils.log.Log;

@@ -39,14 +39,7 @@ public class FileListSteps {
     //APIs to call
     protected FilesAPI filesAPI = new FilesAPI();
 
-    /*@Given("^there is an item called (.+) in the folder Downloads of the device$")
-    public void push_file_to_device(String itemName){
-        Log.log(Level.FINE, "----STEP----: " +
-                new Object(){}.getClass().getEnclosingMethod().getName() + ": " + itemName);
-        fileListPage.pushFile(itemName);
-    }*/
-
-    @Given("the following items have been created in the account")
+    @Given("^the following items have been created in the account$")
     public void item_exists(DataTable table) throws Throwable {
         String currentStep = StepEventBus.getEventBus().getCurrentStep().get().toString();
         Log.log(Level.FINE, "----STEP----: " + currentStep);
@@ -67,11 +60,11 @@ public class FileListSteps {
         fileListPage.createFolder();
     }
 
-    @When("^user selects to (.+) the (file|folder|item) (.+)$")
-    public void i_select_item_to_some_operation(String operation, String typeItem, String itemName) {
+    @When("^user selects to (.+) the (file|folder|item) (.+) using the (.+) menu$")
+    public void i_select_item_to_some_operation(String operation, String typeItem, String itemName, String menu) {
         String currentStep = StepEventBus.getEventBus().getCurrentStep().get().toString();
         Log.log(Level.FINE, "----STEP----: " + currentStep);
-        fileListPage.executeOperation(operation, itemName, typeItem);
+        fileListPage.executeOperation(operation, itemName, typeItem, menu);
     }
 
     @When ("^user selects (.+) as target folder of the (.+)$")
@@ -96,25 +89,19 @@ public class FileListSteps {
         inputNamePage.setItemName(itemName);
     }
 
-    @Then("^user should see (.+) in the filelist$")
+    /*@Then("^user should see (.+) in the filelist$")
     public void i_see_the_item(String itemName) throws Throwable {
         String currentStep = StepEventBus.getEventBus().getCurrentStep().get().toString();
         Log.log(Level.FINE, "----STEP----: " + currentStep);
-        //fileListPage.waitToload();
-        //Get the last token of the item path
-        //assertTrue(fileListPage.isItemInList(itemName.substring(itemName.lastIndexOf('/')+1)));
-        //assertTrue(filesAPI.itemExist(itemName));
-        //filesAPI.removeItem(itemName);
         assertTrue(fileListPage.isItemInList(itemName));
         filesAPI.removeItem(itemName);
-    }
+    }*/
 
-    @Then("^user should see (.+) in the filelist as original$")
+    @Then("^user should see (.+) in the filelist$")
     public void i_see_original_the_item(String itemName) throws Throwable {
         String currentStep = StepEventBus.getEventBus().getCurrentStep().get().toString();
         Log.log(Level.FINE, "----STEP----: " + currentStep);
         fileListPage.waitToload();
-        //assertTrue(fileListPage.isItemInList(itemName.substring(itemName.lastIndexOf('/')+1)));
         assertTrue(fileListPage.isItemInList(itemName));
         assertTrue(filesAPI.itemExist(itemName));
         filesAPI.removeItem(itemName);
@@ -138,11 +125,11 @@ public class FileListSteps {
         assertFalse(filesAPI.itemExist(itemName));
     }
 
-    @Then("^the item (.+) is stored in the device$")
-    public void item_downloaded(String itemName) {
-        Log.log(Level.FINE, "----STEP----: " +
-                new Object(){}.getClass().getEnclosingMethod().getName() + ": " + itemName);
-        assertTrue(fileListPage.fileIsDownloaded(itemName));
+    @Then("^user should see the item (.+) as av.offline$")
+    public void item_marked_as_avOffline(String itemName) {
+        String currentStep = StepEventBus.getEventBus().getCurrentStep().get().toString();
+        Log.log(Level.FINE, "----STEP----: " + currentStep);
+        assertTrue(fileListPage.fileIsMarkedAsAvOffline(itemName));
     }
 
     /*@Then("^user sees the detailed information: (.+), (.+), and (.+)$")
@@ -161,13 +148,6 @@ public class FileListSteps {
         Log.log(Level.FINE, "----STEP----: " +
                 new Object(){}.getClass().getEnclosingMethod().getName() + ": " + itemName);
         assertTrue(fileListPage.fileIsMarkedAsDownloaded(itemName));
-    }
-
-    @Then("^user sees the item (.+) as av.offline$")
-    public void item_marked_as_avOffline(String itemName) {
-        Log.log(Level.FINE, "----STEP----: " +
-                new Object(){}.getClass().getEnclosingMethod().getName() + ": " + itemName);
-        assertTrue(fileListPage.fileIsMarkedAsAvOffline(itemName));
     }
 
     @Then("^the item (.+) is opened and previewed$")

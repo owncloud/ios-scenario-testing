@@ -1,6 +1,7 @@
 package android;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.interactions.touch.TouchActions;
 import org.openqa.selenium.support.PageFactory;
 
 import java.io.UnsupportedEncodingException;
@@ -13,26 +14,17 @@ import java.util.logging.Level;
 
 import io.appium.java_client.MobileBy;
 import io.appium.java_client.MobileElement;
+import io.appium.java_client.TouchAction;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import io.appium.java_client.pagefactory.iOSXCUITFindBy;
+import io.appium.java_client.touch.LongPressOptions;
+import io.appium.java_client.touch.offset.ElementOption;
 import utils.LocProperties;
 import utils.entities.OCFile;
 import utils.log.Log;
 
 public class FileListPage extends CommonPage {
-
-    private String shareoption_id = "com.owncloud.android:id/action_share_file";
-    private String renameoption_id = "com.owncloud.android:id/action_rename_file";
-    private String moveoption_id = "com.owncloud.android:id/action_move";
-    private String copyoption_id = "com.owncloud.android:id/copy_file";
-    private String removeoption_id = "com.owncloud.android:id/action_remove_file";
-    private String avofflineoption_id = "com.owncloud.android:id/action_set_available_offline";
-    private String listcell_id = "com.owncloud.android:id/file_list_constraint_layout";
-    private String listitemname_id = "com.owncloud.android:id/Filename";
-
-    @AndroidFindBy(uiAutomator="new UiSelector().resourceId(\"com.owncloud.android:id/action_mode_close_button\");")
-    private MobileElement closeSelectionMode;
 
     @iOSXCUITFindBy(id="client.file-add")
     private MobileElement plusButton;
@@ -46,43 +38,35 @@ public class FileListPage extends CommonPage {
     @iOSXCUITFindBy(id="share-add-group")
     private MobileElement share;
 
-    @AndroidFindBy(id="com.owncloud.android:id/fab_upload")
-    private MobileElement uploadOption;
+    //Actions in action menu
+    private String xpath_delete = "//XCUIElementTypeCell[@name=\"com.owncloud.action.delete\"]";
+    private String xpath_rename = "//XCUIElementTypeCell[@name=\"com.owncloud.action.rename\"]";
+    private String xpath_move = "//XCUIElementTypeCell[@name=\"com.owncloud.action.move\"]";
+    private String xpath_copy = "//XCUIElementTypeCell[@name=\"com.owncloud.action.copy\"]";
+    private String xpath_duplicate = "//XCUIElementTypeCell[@name=\"com.owncloud.action.duplicate\"]";
+    private String xpath_avoffline = "//XCUIElementTypeCell[@name=\"com.owncloud.action.makeAvailableOffline\"]";
+    private String xpath_sharefolder = "//XCUIElementTypeStaticText[@name=\"Share this folder\"]";
+    private String xpath_sharefile = "//XCUIElementTypeStaticText[@name=\"Share this file\"]";
+    private String xpath_editshare = "//XCUIElementTypeApplication[@name=\"ownCloud\"]/XCUIElementTypeWindow[1]/" +
+            "XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeTable/XCUIElementTypeCell[1]";
+    private String xpath_sharelink = "//XCUIElementTypeStaticText[@name=\"Links\"]";
+    private String xpath_editlink = "//XCUIElementTypeApplication[@name=\"ownCloud\"]/XCUIElementTypeWindow[1]/" +
+            "XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeTable/XCUIElementTypeCell[2]";
 
-    @AndroidFindBy(id="com.owncloud.android:id/localFileIndicator")
-    private MobileElement downloadIndicator;
+    //Actions in contextual menu menu
+    private String id_delete = "Delete";
+    private String id_rename = "Rename";
+    private String id_move = "Move";
+    private String id_copy = "Copy";
+    private String id_duplicate = "Duplicate";
+    private String id_avoffline = "Make available offline";
+    private String id_share = "Sharing";
+    private String id_link = "Links";
 
-    @AndroidFindBy(id="com.owncloud.android:id/localFileIndicator")
-    private MobileElement avOfflineIndicator;
-
-    @AndroidFindBy(id="com.owncloud.android:id/action_sync_file")
-    private MobileElement syncFile;
-
-    @AndroidFindBy(id="com.owncloud.android:id/toolbar")
-    private List<MobileElement> toolbar;
-
-    @AndroidFindBy(id="com.owncloud.android:id/list_root")
-    private MobileElement listFiles;
-
-    @AndroidFindBy(id="com.owncloud.android:id/file_list_constraint_layout")
-    private MobileElement fileCell;
-
-    @AndroidFindBy(id="com.owncloud.android:id/Filename")
-    private MobileElement fileName;
-
-    private final String listFiles_id = "com.owncloud.android:id/list_root";
-    private HashMap<String, String> operationsMap = new HashMap<String, String>();
 
     public FileListPage() {
         super();
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
-        //Filling up the operations to have the key-value with name and id
-        operationsMap.put("share", shareoption_id);
-        operationsMap.put("Rename", renameoption_id);
-        operationsMap.put("Move", moveoption_id);
-        operationsMap.put("Copy", copyoption_id);
-        operationsMap.put("Remove", removeoption_id);
-        operationsMap.put("Set as available offline", avofflineoption_id);
     }
 
     public void refreshList(){
@@ -90,14 +74,6 @@ public class FileListPage extends CommonPage {
     }
 
     public void waitToload(){
-        /*try {
-            //if list of files is not loaded, we should swipe to get the file list
-            waitById(15, listFiles_id);
-        } catch (Exception e) {
-            swipe(0.50, 0.20, 0.50, 0.90);
-            waitByTextVisible(10, "Documents");
-        }
-        takeScreenshot("OpenList/fileListLoaded");*/
     }
 
     public void createFolder() {
@@ -116,19 +92,24 @@ public class FileListPage extends CommonPage {
     public void upload(){
         Log.log(Level.FINE, "Starts: upload");
         waitById(5, plusButton);
-        plusButton.click();
-        uploadOption.click();
+        //TODO
     }
 
-    public void executeOperation(String operation, String itemName, String typeitem){
-        Log.log(Level.FINE, "Starts: execute operation: " + operation + " " + itemName);
+    public void executeOperation(String operation, String itemName, String typeitem, String menu){
+        Log.log(Level.FINE, "Starts: execute operation: " + operation + " " +
+                itemName + " "+ menu);
         waitToload();
         if (!isItemInList(itemName)){
             Log.log(Level.FINE, "Searching item... swiping: " + itemName);
             swipe(0.50, 0.90, 0.50, 0.20);
         }
-        selectItemList(itemName);
-        selectOperation(itemName, operation, typeitem);
+        if (menu.equals("Actions")) {
+            selectItemListActions(itemName);
+            selectOperationFromActions(itemName, operation, typeitem);
+        } else if (menu.equals("Contextual")) {
+            selectItemListContextual(itemName);
+            selectOperationFromContextual(itemName, operation, typeitem);
+        }
     }
 
     public void downloadAction(String itemName) {
@@ -143,71 +124,101 @@ public class FileListPage extends CommonPage {
 
     public boolean isItemInList (String itemName) {
         Log.log(Level.FINE, "Starts: Check if item is in list: " + itemName);
-        //Bottom bar to assure we are in the filelist
-        waitByXpath(10, "//XCUIElementTypeTabBar[@name=\"Tab Bar\"]");
+        //Plus button to assure we are in the filelist
+        waitByXpath(10, "//XCUIElementTypeButton[@name=\"client.file-add\"]");
         return !driver.findElements(By.id(itemName)).isEmpty();
     }
 
-    public boolean isHeader(){
-        return !toolbar.isEmpty();
-    }
-
-    public void selectItemList(String itemName) {
-        Log.log(Level.FINE, "Starts: select item from list: " + itemName);
+    private void selectItemListActions(String itemName) {
+        Log.log(Level.FINE, "Starts: select actions item from list: " + itemName);
         waitByTextVisible(30, itemName);
-        driver.findElement(By.name(itemName + " Actions")).click();
+        driver.findElement(By.id(itemName + " Actions")).click();
     }
 
-    public void selectOperation(String itemName, String operationName, String typeItem) {
+    private void selectItemListContextual(String itemName) {
+        Log.log(Level.FINE, "Starts: select contextual item from list: " + itemName);
+        waitByTextVisible(30, itemName);
+        MobileElement listCell = (MobileElement) driver.findElement
+                (By.xpath("//XCUIElementTypeCell[@name=\"" + itemName + "\"]"));
+        new TouchAction(driver).longPress(LongPressOptions.longPressOptions()
+                .withElement(ElementOption.element(listCell))).release().perform();
+    }
+
+    public void selectOperationFromActions(String itemName, String operationName, String typeItem) {
         MobileElement operation = null;
-        Log.log(Level.FINE, "Starts: " + operationName);
+        Log.log(Level.FINE, "Starts actions: " + operationName);
         switch (operationName){
             case "delete":
-                String xpath_delete = "//XCUIElementTypeCell[@name=\"com.owncloud.action.delete\"]";
                 operation = (MobileElement) driver.findElement(By.xpath(xpath_delete));
                 break;
             case "rename":
-                String xpath_rename = "//XCUIElementTypeCell[@name=\"com.owncloud.action.rename\"]";
                 operation = (MobileElement) driver.findElement(By.xpath(xpath_rename));
                 break;
             case "move":
-                String xpath_move = "//XCUIElementTypeCell[@name=\"com.owncloud.action.move\"]";
                 operation = (MobileElement) driver.findElement(By.xpath(xpath_move));
                 break;
             case "copy":
-                String xpath_copy = "//XCUIElementTypeCell[@name=\"com.owncloud.action.copy\"]";
                 operation = (MobileElement) driver.findElement(By.xpath(xpath_copy));
                 break;
             case "duplicate":
-                String xpath_duplicate = "//XCUIElementTypeCell[@name=\"com.owncloud.action.copy\"]";
                 operation = (MobileElement) driver.findElement(By.xpath(xpath_duplicate));
                 break;
             case "make available offline":
-                String xpath_avoffline = "//XCUIElementTypeCell[@name=\"com.owncloud.action.makeAvailableOffline\"]";
                 operation = (MobileElement) driver.findElement(By.xpath(xpath_avoffline));
                 break;
             case "share":
-                String xpath_shareusersgroups;
+                String xpath_sharetype;
                 if (typeItem.equals("folder")) {
-                    xpath_shareusersgroups = "//XCUIElementTypeStaticText[@name=\"Share this folder\"]";
+                    xpath_sharetype = xpath_sharefolder;
                 } else {
-                    xpath_shareusersgroups = "//XCUIElementTypeStaticText[@name=\"Share this file\"]";
+                    xpath_sharetype = xpath_sharefile;
                 }
-                operation = (MobileElement) driver.findElement(By.xpath(xpath_shareusersgroups));
+                operation = (MobileElement) driver.findElement(By.xpath(xpath_sharetype));
                 break;
             case "edit share":
-                String xpath_editshare = "//XCUIElementTypeApplication[@name=\"ownCloud\"]/XCUIElementTypeWindow[1]/" +
-                        "XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeTable/XCUIElementTypeCell[1]";
                 operation = (MobileElement) driver.findElement(By.xpath(xpath_editshare));
                 break;
             case "share by link":
-                String xpath_sharelink = "//XCUIElementTypeStaticText[@name=\"Links\"]";
                 operation = (MobileElement) driver.findElement(By.xpath(xpath_sharelink));
                 break;
             case "edit link":
-                String xpath_editlink = "//XCUIElementTypeApplication[@name=\"ownCloud\"]/XCUIElementTypeWindow[1]/" +
-                        "XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeTable/XCUIElementTypeCell[2]";
                 operation = (MobileElement) driver.findElement(By.xpath(xpath_editlink));
+                break;
+            default:
+                break;
+        }
+        operation.click();
+    }
+
+    public void selectOperationFromContextual(String itemName, String operationName, String typeItem) {
+        MobileElement operation = null;
+        Log.log(Level.FINE, "Starts contextual: " + operationName);
+        switch (operationName){
+            case "delete":
+                operation = (MobileElement) driver.findElement(By.id(id_delete));
+                break;
+            case "rename":
+                operation = (MobileElement) driver.findElement(By.id(id_rename));
+                break;
+            case "move":
+                operation = (MobileElement) driver.findElement(By.id(id_move));
+                break;
+            case "copy":
+                operation = (MobileElement) driver.findElement(By.id(id_copy));
+                break;
+            case "duplicate":
+                operation = (MobileElement) driver.findElement(By.id(id_duplicate));
+                break;
+            case "make available offline":
+                operation = (MobileElement) driver.findElement(By.id(id_avoffline));
+                break;
+            case "share":
+            case "edit share":
+                operation = (MobileElement) driver.findElement(By.id(id_share));
+                break;
+            case "share by link":
+            case "edit link":
+                operation = (MobileElement) driver.findElement(By.id(id_link));
                 break;
             default:
                 break;
@@ -217,8 +228,6 @@ public class FileListPage extends CommonPage {
 
     public void browse(String folderName){
         Log.log(Level.FINE, "Starts: browse to " + folderName);
-        /*driver.findElement(MobileBy.AndroidUIAutomator(
-                "new UiSelector().text(\""+ folderName +"\");")).click();*/
         driver.findElement(By.xpath("//XCUIElementTypeStaticText[@name=\""+folderName+"\"]")).click();
     }
 
@@ -227,48 +236,15 @@ public class FileListPage extends CommonPage {
         driver.findElement(By.xpath("//XCUIElementTypeButton[@name=\"Delete\"]")).click();
     }
 
-    public void closeSelectionMode(){
-        Log.log(Level.FINE, "Starts: close selection mode");
-        closeSelectionMode.click();
-    }
-
-    public boolean fileIsDownloaded(String fileName) {
-        Log.log(Level.FINE, "Starts: Checking file downloaded: " + fileName);
-        String urlServer = System.getProperty("server");
-        String host = urlServer.split("//")[1];
-
-        //Code below is pretty hacky and will be removed in Scope Storage. Skipping ftm
-
-        //Checking file is downloaded inside the device
-        try {
-            byte[] downloadedFile = driver.pullFile("/sdcard/owncloud/" +
-                    LocProperties.getProperties().getProperty("userName1") +
-                    "@" +
-                    URLEncoder.encode(host, "UTF-8") + "/" + fileName);
-            Log.log(Level.FINE, "Checking file in " + downloadedFile.toString());
-            return downloadedFile!=null && downloadedFile.length > 0;
-
-        //return true;
-        } catch (UnsupportedEncodingException e) {
-            Log.log(Level.SEVERE, "Unsupported Encoding Exception: " + e.getMessage());
-            e.printStackTrace();
-            return false;
-        }
-    }
-
-    public boolean fileIsMarkedAsDownloaded(String itemName){
-        //Enforce this.. downloaded file must fit the itemName
-        MobileElement element = getElementFromFileList(itemName);
-        takeScreenshot("FileDownloaded/File_"+itemName+"_Downloaded");
-        return downloadIndicator.isDisplayed();
-    }
-
     public boolean fileIsMarkedAsAvOffline(String itemName){
-        //Wait the file to be downloaded
-        waitById(30, syncFile);
-        MobileElement element = getElementFromFileList(itemName);
-        takeScreenshot("FileAvOffline/File_"+itemName+"_AvOffline");
-        return avOfflineIndicator.isDisplayed();
+        //Marked in the file list
+        boolean avofflineBadge = !driver.findElements(By.xpath(
+                "//XCUIElementTypeCell[@name=\""+itemName+"\"]/XCUIElementTypeImage[2]")).isEmpty();
+        selectItemListActions(itemName);
+        //Action turns to unavailable offline
+        boolean menuUnavoffline = !driver.findElements(By.xpath("//XCUIElementTypeCell" +
+                "[@name=\"com.owncloud.action.makeUnavailableOffline\"]")).isEmpty();
+        return avofflineBadge && menuUnavoffline;
     }
 
     private void selectOperationMenu(String operationName){
@@ -323,7 +299,7 @@ public class FileListPage extends CommonPage {
         }
     }
 
-    private MobileElement getElementFromFileList(String itemName){
+    /*private MobileElement getElementFromFileList(String itemName){
         Log.log(Level.FINE, "Starts: searching item in list: " + itemName);
         List<MobileElement> elementsFileList = listFiles.findElements(MobileBy.id(listcell_id));
         takeScreenshot("ElementFileList/SearchItem_"+itemName);
@@ -336,5 +312,5 @@ public class FileListPage extends CommonPage {
         }
         Log.log(Level.FINE, itemName + " not found");
         return null;
-    }
+    }*/
 }
