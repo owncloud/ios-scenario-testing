@@ -119,6 +119,7 @@ public class FileListPage extends CommonPage {
 
     private void selectItemListActions(String itemName) {
         Log.log(Level.FINE, "Starts: select actions item from list: " + itemName);
+        waitById(5, itemName + " Actions");
         driver.findElement(By.id(itemName + " Actions")).click();
     }
 

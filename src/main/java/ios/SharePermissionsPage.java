@@ -17,11 +17,8 @@ public class SharePermissionsPage extends CommonPage {
     @iOSXCUITFindBy(id="Cancel")
     private MobileElement cancelPermissions;
 
-    @iOSXCUITFindBy(id="Can Share")
+    @iOSXCUITFindBy(id="permission-section-share")
     private MobileElement sharePermission;
-
-    /*@iOSXCUITFindBy(id="Can Edit and Change")
-    private MobileElement editPermission;*/
 
     @iOSXCUITFindBy(id="permission-section-edit")
     private MobileElement editPermission;
@@ -85,6 +82,7 @@ public class SharePermissionsPage extends CommonPage {
     }
 
     public boolean isShareEnabled(){
+        Log.log(Level.FINE, "AAAAAAAA" + sharePermission.getAttribute("selected"));
         return parseIntBool(sharePermission.getAttribute("selected"));
     }
 

@@ -40,6 +40,7 @@ Feature: Private Share
     Then share should be created on textExample.txt with the following fields
       | sharee | demo@demo.owncloud.com |
 
+  @editss
   Scenario Outline: Edit existing share, removing permissions
     Given the item <item> has been already shared with <user>
     When user selects to edit share the folder <item> using the Actions menu

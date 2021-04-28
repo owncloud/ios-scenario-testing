@@ -1,6 +1,7 @@
 package ios;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.support.PageFactory;
 import org.xml.sax.SAXException;
 
 import java.io.IOException;
@@ -10,6 +11,7 @@ import java.util.logging.Level;
 import javax.xml.parsers.ParserConfigurationException;
 
 import io.appium.java_client.MobileElement;
+import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import io.appium.java_client.pagefactory.iOSXCUITFindBy;
 import utils.date.DateUtils;
 import utils.log.Log;
@@ -81,6 +83,7 @@ public class LinkPermissionsPage extends CommonPage {
 
     public LinkPermissionsPage(){
         super();
+        PageFactory.initElements(new AppiumFieldDecorator(driver), this);
     }
 
     public void addLinkName (String linkName) {

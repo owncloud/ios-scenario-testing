@@ -59,21 +59,6 @@ public class CommonPage {
         wait.until(ExpectedConditions.invisibilityOf(mobileElement));
     }
 
-    public static void waitTillStatus(int timeToWait, String resourceId, boolean status){
-        WebDriverWait wait = new WebDriverWait(driver, timeToWait);
-        wait.until(ExpectedConditions.elementSelectionStateToBe(By.id(resourceId), status));
-    }
-
-    public static void waitTillStatus(int timeToWait, MobileElement mobileElement, boolean status){
-        WebDriverWait wait = new WebDriverWait(driver, timeToWait);
-        wait.until(ExpectedConditions.elementSelectionStateToBe(mobileElement, status));
-    }
-
-    public static void longPress(MobileElement element){
-        actions.clickAndHold(element).perform();
-        takeScreenshot("ElementFileList/AfterSelecting");
-    }
-
     public static void swipe (double startx, double starty, double endx, double endy) {
         Dimension size = driver.manage().window().getSize();
         int startY=(int)(size.height * starty);
@@ -102,7 +87,7 @@ public class CommonPage {
 
     public void reinstallApp(){
         if (driver.isAppInstalled(packag)) {
-            driver.removeApp(LocProperties.getProperties().getProperty("appPackage"));
+            driver.removeApp(packag);
             driver.launchApp();
         }
     }

@@ -20,12 +20,14 @@ import utils.log.Log;
 
 public class RunCucumberTest {
 
+    // Before the whole execution
     @BeforeClass
     public static void beforeclass(){
         Log.init();
         Log.log(Level.FINE, "START EXECUTION\n");
     }
 
+    // After the whole execution
     @AfterClass
     public static void afterclass(){
         //remove the oC app

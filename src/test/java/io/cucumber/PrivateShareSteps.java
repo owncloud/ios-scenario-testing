@@ -152,29 +152,29 @@ public class PrivateShareSteps {
                     for (int i=0 ; i<=permissionsToString.length()-1 ; i++){
                         switch(i) {
                             case (0): {
-                                Log.log(Level.FINE, "Check Share");
                                 if (permissionsToString.charAt(i) == '0'){
+                                    Log.log(Level.FINE, "Share removed");
                                     permissionString = permissionString.replace(", Share", "");
                                 }
                                 break;
                             }
                             case (1): {
-                                Log.log(Level.FINE, "Check Delete");
                                 if (permissionsToString.charAt(i) == '0'){
+                                    Log.log(Level.FINE, "Delete removed");
                                     permissionString = permissionString.replaceAll(", Delete", "");
                                 }
                                 break;
                             }
                             case(2):{
-                                Log.log(Level.FINE, "Check Create");
                                 if (permissionsToString.charAt(i) == '0'){
+                                    Log.log(Level.FINE, "Create removed");
                                     permissionString = permissionString.replaceAll(", Create", "");
                                 }
                                 break;
                             }
                             case(3):{
-                                Log.log(Level.FINE, "Check Change");
                                 if (permissionsToString.charAt(i) == '0') {
+                                    Log.log(Level.FINE, "Change removed");
                                     permissionString = permissionString.replaceAll(", Change", "");
                                 }
                                 break;
