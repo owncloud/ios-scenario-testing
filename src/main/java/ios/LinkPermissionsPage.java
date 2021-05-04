@@ -81,6 +81,18 @@ public class LinkPermissionsPage extends CommonPage {
             "/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/" +
             "XCUIElementTypeOther/XCUIElementTypeTable/XCUIElementTypeCell[8]/XCUIElementTypePicker/XCUIElementTypePickerWheel[3]";
 
+
+    private String MonthPicker_xpath_file = "//XCUIElementTypeApplication[@name=\"ownCloud\"]/XCUIElementTypeWindow[1]" +
+            "/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther" +
+            "/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeTable/XCUIElementTypeCell[5]/" +
+            "XCUIElementTypePicker/XCUIElementTypePickerWheel[1]";
+    private String DayPicker_xpath_file = "//XCUIElementTypeApplication[@name=\"ownCloud\"]/XCUIElementTypeWindow[1]" +
+            "/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther" +
+            "/XCUIElementTypeOther/XCUIElementTypeTable/XCUIElementTypeCell[5]/XCUIElementTypePicker/XCUIElementTypePickerWheel[2]";
+    private String YearPicker_xpath_file = "//XCUIElementTypeApplication[@name=\"ownCloud\"]/XCUIElementTypeWindow[1]" +
+            "/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/" +
+            "XCUIElementTypeOther/XCUIElementTypeTable/XCUIElementTypeCell[5]/XCUIElementTypePicker/XCUIElementTypePickerWheel[3]";
+
     public LinkPermissionsPage(){
         super();
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
@@ -116,7 +128,7 @@ public class LinkPermissionsPage extends CommonPage {
         }
     }
 
-    public void setExpiration (String days){
+    public void setExpiration (String type, String days){
         Log.log(Level.FINE, "Starts: Set Expiration date in days: " + days);
         String dateToExpire = DateUtils.dateInDaysiOSFormat(days);
         String dateFragments[] = dateToExpire.split(" ");
@@ -126,9 +138,19 @@ public class LinkPermissionsPage extends CommonPage {
         Log.log(Level.FINE, "Month: " + month + " Day : " + day + " Year: " + year);
         expirationSwitch.get(0).click();
         expirationDate.click();
-        driver.findElement(By.xpath(MonthPicker_xpath)).sendKeys(month);
-        driver.findElement(By.xpath(DayPicker_xpath)).sendKeys(day);
-        driver.findElement(By.xpath(YearPicker_xpath)).sendKeys(year);
+        switch (type) {
+            default:
+            case "folder":
+                driver.findElement(By.xpath(MonthPicker_xpath)).sendKeys(month);
+                driver.findElement(By.xpath(DayPicker_xpath)).sendKeys(day);
+                driver.findElement(By.xpath(YearPicker_xpath)).sendKeys(year);
+            break;
+            case "file":
+                driver.findElement(By.xpath(MonthPicker_xpath_file)).sendKeys(month);
+                driver.findElement(By.xpath(DayPicker_xpath_file)).sendKeys(day);
+                driver.findElement(By.xpath(YearPicker_xpath_file)).sendKeys(year);
+            break;
+        }
     }
 
     public boolean isPasswordEnabled(String itemName) {

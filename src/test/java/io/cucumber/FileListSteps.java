@@ -7,6 +7,7 @@ import ios.InputNamePage;
 import net.thucydides.core.annotations.Steps;
 import net.thucydides.core.steps.StepEventBus;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -52,10 +53,23 @@ public class FileListSteps {
         }
     }
 
-    @When("^user selects the option Create Folder$")
-    public void i_select_create_folder() {
+    @Given("^the (item|folder|file) (.+) has been created in the account$")
+    public void item_exists_2(String type, String itemName) throws Throwable {
         String currentStep = StepEventBus.getEventBus().getCurrentStep().get().toString();
         Log.log(Level.FINE, "----STEP----: " + currentStep);
+        if (!filesAPI.itemExist(itemName)) {
+            if (type.equals("folder")) {
+                filesAPI.createFolder(itemName);
+            } else if (type.equals("file"))
+                filesAPI.pushFile(itemName);
+        }
+    }
+
+    @When("^user selects the option Create Folder$")
+    public void i_select_create_folder() throws IOException {
+        String currentStep = StepEventBus.getEventBus().getCurrentStep().get().toString();
+        Log.log(Level.FINE, "----STEP----: " + currentStep);
+        filesAPI.pushFile("nuevo.txt");
         fileListPage.createFolder();
     }
 

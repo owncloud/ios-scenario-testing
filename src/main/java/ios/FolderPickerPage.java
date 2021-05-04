@@ -15,6 +15,12 @@ public class FolderPickerPage extends CommonPage {
     @iOSXCUITFindBy(id="Cancel")
     private MobileElement cancelButton;
 
+    @iOSXCUITFindBy(id="client.folder-create")
+    private MobileElement createFolder;
+
+    private String xpath_move = "//XCUIElementTypeButton[@name=\"Move here\"]";
+    private String xpath_copy = "//XCUIElementTypeButton[@name=\"Copy here\"]";
+
     public FolderPickerPage() {
         super();
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
@@ -22,15 +28,17 @@ public class FolderPickerPage extends CommonPage {
 
     public void selectFolder(String targetFolder){
         Log.log(Level.FINE, "Start: Select folder from picker: " + targetFolder);
-        driver.findElement(By.xpath("//XCUIElementTypeButton[@name=\""+ targetFolder + " Actions" +"\"]")).click();
+        waitById(5, createFolder);
+        //driver.findElement(By.id(targetFolder + " Actions")).click();
+        driver.findElement(By.xpath("//XCUIElementTypeButton[@name=\"Documents Actions\"]")).click();
     }
 
     public void accept(String operation){
         Log.log(Level.FINE, "Start: Accept selection picker");
         if(operation.equals("move")){
-            driver.findElement(By.xpath("//XCUIElementTypeButton[@name=\"Move here\"]")).click();
+            driver.findElement(By.xpath(xpath_move)).click();
         } else if(operation.equals("copy")) {
-            driver.findElement(By.xpath("//XCUIElementTypeButton[@name=\"Copy here\"]")).click();
+            driver.findElement(By.xpath(xpath_copy)).click();
         }
     }
 

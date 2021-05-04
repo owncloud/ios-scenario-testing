@@ -7,42 +7,57 @@ Feature: Private Share
 
   Background: User is logged in
     Given user user1 is logged
-    And the following items have been created in the account
-      | Documents        |
-      | Files            |
-      | textExample.txt  |
+    #And user user2 exists in the platform
 
-  Scenario: Correct share with user
-    When user selects to share the folder Files using the Actions menu
+  Scenario Outline: Correct share a folder with user
+    Given the <type> <item> has been created in the account
+    When user selects to share the <type> <item> using the Actions menu
     And user selects user user2 as sharee
-    Then user  user2 should have access to Files
-    And share should be created on Files with the following fields
+    Then user  user2 should have access to <item>
+    And share should be created on <item> with the following fields
       | sharee | user2 |
 
-  Scenario: Correct share with group
-    When user selects to share the folder Files using the Actions menu
+    Examples:
+      |  type   |  item        |
+      |  file   |  Share1.txt  |
+      |  folder |  Share2      |
+
+  Scenario Outline: Correct share with group
+    Given the <type> <item> has been created in the account
+    When user selects to share the <type> <item> using the Actions menu
     And user selects group test as sharee
-    Then group including user2 should have access to Files
-    And share should be created on Files with the following fields
+    Then group including user2 should have access to <item>
+    And share should be created on <item> with the following fields
       | group | test |
 
-  Scenario: Correct share with user using the Contextual menu
-    When user selects to share the folder Files using the Contextual menu
+    Examples:
+      |  type   |  item        |
+      |  file   |  Share3.txt  |
+      |  folder |  Share4      |
+
+  Scenario Outline: Correct share with user using the Contextual menu
+    Given the <type> <item> has been created in the account
+    When user selects to share the <type> <item> using the Contextual menu
     And user selects user user2 as sharee
-    Then user  user2 should have access to Files
-    And share should be created on Files with the following fields
+    Then user  user2 should have access to <item>
+    And share should be created on <item> with the following fields
       | sharee | user2 |
 
+    Examples:
+      |  type   |  item        |
+      |  file   |  Share5.txt  |
+      |  folder |  Share6      |
+
   @federated
-  Scenario: Correct federated share
-    When user selects to share the file textExample.txt using the Actions menu
+  Scenario: Correct federated share on file
+    When user selects to share the file Federated.txt using the Actions menu
     And user selects user demo@demo.owncloud.com as sharee
-    Then share should be created on textExample.txt with the following fields
+    Then share should be created on Federated.txt with the following fields
       | sharee | demo@demo.owncloud.com |
 
-  @editss
-  Scenario Outline: Edit existing share, removing permissions
-    Given the item <item> has been already shared with <user>
+  Scenario Outline: Edit existing share on a folder, removing permissions
+    Given the folder <item> has been created in the account
+    And the folder <item> has been already shared with <user>
     When user selects to edit share the folder <item> using the Actions menu
     And user edits the share on <item> with permissions <permissions>
     Then user  <user> should have access to <item>
@@ -58,15 +73,18 @@ Feature: Private Share
     # SHARE -> 16
 
     Examples:
-      |  item   |   user    | permissions |
-      |  Files  |   user2   |   1         |
-      |  Files  |   user2   |   9         |
-      |  Files  |   user2   |   13        |
-      |  Files  |   user2   |   17        |
+      |  item    |   user    | permissions |
+      |  Share4  |   user2   |   1         |
+      |  Share5  |   user2   |   9         |
+      |  Share6  |   user2   |   13        |
+      |  Share7  |   user2   |   17        |
 
-  Scenario: Delete existing share
-    Given the item Files has been already shared with user2
-    When user selects to edit share the folder Files using the Actions menu
+  #Scenario Outline: Edit existing share on a file, removing permissions
+
+  Scenario: Delete existing share on folder
+    Given the folder Share8 has been created in the account
+    And the folder Share8 has been already shared with user2
+    When user selects to edit share the folder Share8 using the Actions menu
     And user deletes the share
-    Then user user2 should not have access to Files
-    And Files should not be shared anymore with user2
+    Then user user2 should not have access to Share8
+    And Share8 should not be shared anymore with user2

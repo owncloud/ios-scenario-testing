@@ -14,6 +14,7 @@ import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import utils.api.FilesAPI;
 import utils.api.ShareAPI;
 import utils.entities.OCShare;
 import utils.log.Log;
@@ -35,17 +36,18 @@ public class LinkSteps {
 
     //APIs to call
     protected ShareAPI shareAPI = new ShareAPI();
+    protected FilesAPI filesAPI = new FilesAPI();
 
-    @Given("the item (.+) has been already shared by link")
-    public void item_already_shared_by_link(String itemName)
+    @Given("^the (item|file|folder) (.+) has been already shared by link$")
+    public void item_already_shared_by_link(String type, String itemName)
             throws Throwable {
         String currentStep = StepEventBus.getEventBus().getCurrentStep().get().toString();
         Log.log(Level.FINE, "----STEP----: " + currentStep);
         shareAPI.createShare(itemName, "", "3", "1", itemName + " link");
     }
 
-    @When("^user creates link on (.+) with the following fields$")
-    public void i_select_to_link_with_fields(String itemName, DataTable table)
+    @When("^user creates link on (item|file|folder) (.+) with the following fields$")
+    public void i_select_to_link_with_fields(String type, String itemName, DataTable table)
             throws Throwable {
         String currentStep = StepEventBus.getEventBus().getCurrentStep().get().toString();
         Log.log(Level.FINE, "----STEP----: " + currentStep);
@@ -66,7 +68,7 @@ public class LinkSteps {
                     break;
                 }
                 case "expiration days": {
-                    linkPermissionsPage.setExpiration(rows.get(1));
+                    linkPermissionsPage.setExpiration(type, rows.get(1));
                     break;
                 }
                 default:
@@ -151,7 +153,7 @@ public class LinkSteps {
         //Asserts in server via API
         OCShare share = shareAPI.getShare(itemName);
         assertTrue(sharePage.checkCorrectShare(share, listItems));
-        shareAPI.removeShare(share.getId());
+        filesAPI.removeItem(itemName);
     }
 
     @Then("^link on (.+) should not exist anymore$")
@@ -161,5 +163,6 @@ public class LinkSteps {
         Log.log(Level.FINE, "----STEP----: " + currentStep);
         assertFalse(publicLinkPage.isItemInListLinks(itemName+ " link"));
         assertTrue(shareAPI.getShare(itemName) == null);
+        filesAPI.removeItem(itemName);
     }
 }

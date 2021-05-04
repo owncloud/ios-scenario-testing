@@ -15,6 +15,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import utils.LocProperties;
+import utils.api.FilesAPI;
 import utils.api.ShareAPI;
 import utils.entities.OCShare;
 import utils.log.Log;
@@ -36,9 +37,10 @@ public class PrivateShareSteps {
 
     //APIs to call
     protected ShareAPI shareAPI = new ShareAPI();
+    protected FilesAPI filesAPI = new FilesAPI();
 
-    @Given("^the item (.+) has been already shared with (.+)$")
-    public void item_already_shared(String itemName, String sharee)
+    @Given("^the (item|file|folder) (.+) has been already shared with (.+)$")
+    public void item_already_shared(String type, String itemName, String sharee)
             throws Throwable {
         String currentStep = StepEventBus.getEventBus().getCurrentStep().get().toString();
         Log.log(Level.FINE, "----STEP----: " + currentStep);
@@ -146,33 +148,33 @@ public class PrivateShareSteps {
                 }
                 case "permissions": {
                     int permissionsToInt = Integer.parseInt(rows.get(1));
-                    String permissionsToString =String.format("%5s", Integer.toBinaryString(permissionsToInt))
+                    String permissionsToString = String.format("%5s", Integer.toBinaryString(permissionsToInt))
                             .replace(" ", "0");
                     Log.log(Level.FINE, "Permissions converted: " + permissionsToString);
-                    for (int i=0 ; i<=permissionsToString.length()-1 ; i++){
-                        switch(i) {
+                    for (int i = 0; i <= permissionsToString.length() - 1; i++) {
+                        switch (i) {
                             case (0): {
-                                if (permissionsToString.charAt(i) == '0'){
+                                if (permissionsToString.charAt(i) == '0') {
                                     Log.log(Level.FINE, "Share removed");
                                     permissionString = permissionString.replace(", Share", "");
                                 }
                                 break;
                             }
                             case (1): {
-                                if (permissionsToString.charAt(i) == '0'){
+                                if (permissionsToString.charAt(i) == '0') {
                                     Log.log(Level.FINE, "Delete removed");
                                     permissionString = permissionString.replaceAll(", Delete", "");
                                 }
                                 break;
                             }
-                            case(2):{
-                                if (permissionsToString.charAt(i) == '0'){
+                            case (2): {
+                                if (permissionsToString.charAt(i) == '0') {
                                     Log.log(Level.FINE, "Create removed");
                                     permissionString = permissionString.replaceAll(", Create", "");
                                 }
                                 break;
                             }
-                            case(3):{
+                            case (3): {
                                 if (permissionsToString.charAt(i) == '0') {
                                     Log.log(Level.FINE, "Change removed");
                                     permissionString = permissionString.replaceAll(", Change", "");
@@ -191,7 +193,12 @@ public class PrivateShareSteps {
         //Asserts in server via API
         OCShare share = shareAPI.getShare(itemName);
         assertTrue(sharePage.checkCorrectShare(share, listItems));
-        shareAPI.removeShare(share.getId());
+        //Folders are recreated, they could be deleted. Files don't ftm
+        //if (filesAPI.isFolder(itemName)) {
+            filesAPI.removeItem(itemName);
+        //} else {
+        //    shareAPI.removeShare(share.getId());
+        //}
     }
 
     @Then("^(user|group) (?:.*?) (.+) should have access to (.+)$")
