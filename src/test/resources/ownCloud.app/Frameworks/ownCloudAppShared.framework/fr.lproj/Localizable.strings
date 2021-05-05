@@ -31,7 +31,7 @@
 "Username" = "Nom d'utilisateur";
 "Password" = "Mot de passe";
 "Certificate Details" = "Détails du certificat";
-"Cancel" = "Anuler";
+"Cancel" = "Annuler";
 "Approve" = "Approuver";
 "Error" = "Erreur";
 "Issues" = "problèmes";
@@ -71,8 +71,12 @@
 "Access Files" = "Accéder aux fichiers";
 "Logout" = "Se déconnecter";
 
+/* Bookmark Info */
+"Bookmark Metadata" = "Bookmark Metadata";
+
 /* Client */
 "Browse" = "Parcourir";
+"Files" = "Fichiers";
 "Disconnect" = "Déconnexion";
 "Connecting…" = "Connexion en cours...";
 "Connected." = "connecté";
@@ -95,20 +99,33 @@
 "kind" = "type";
 "size" = "taille";
 "date" = "date";
-"Search this folder" = "Rechercher dans ce dossier";
+"Search folder" = "Search folder";
+"Search account" = "Search account";
 "Pending" = "En attente";
 "Show parent paths" = "Montrer les chemins parents";
+"Reveal in folder" = "Reveal in folder";
 
 "%@ of %@ used" = "%@ sur %@ utilisé";
 "Total: %@" = "Total :%@";
 "%@ item | " = "%@élément |";
 "%@ items | " = "%@ éléments |";
 
+"Show more results" = "Show more results";
+
+/* Search scope */
+"Search scope" = "Search scope";
+"Toggle Search Scope" = "Toggle Search Scope";
+
 /* Static Login Setup */
 "Server error" = "Erreur du serveur";
 "The server doesn't support any allowed authentication method." = "Le serveur ne supporte aucune méthode d'authentification autorisée.";
 "The server doesn't support any known and allowed authentication method found." = "Le serveur ne supporte aucune méthode d'authentification connue et autorisée trouvée.";
 "Retry detection" = "Réessayer la détection";
+"Enter your username and password" = "Enter your username and password";
+"Please log in to authorize the app." = "Please log in to authorize the app.";
+"Welcome to %@" = "Welcome to %@";
+"Please enter a server URL" = "Please enter a server URL";
+"Please pick a profile to begin setup" = "Please pick a profile to begin setup";
 
 /* Single Account */
 "You are connected as\n%@" = "Vous êtes connecté en tant que\n%@";
@@ -137,7 +154,7 @@
 "Upload files" = "Mettre en ligne des fichiers";
 
 "No matches" = "Pas de couplage";
-"There are no results for this search term" = "Aucun résultat pour ce terme de recherche. ";
+"There are no results for this search term" = "Pas de résultats pour ce terme de recherche.";
 "Status" = "Status";
 
 "Authorization failed" = "L'autorisation a échouée";
@@ -160,7 +177,7 @@
 "Apply to all" = "S'applique à tous";
 
 /* Server List*/
-"Cancel" = "Anuler";
+"Cancel" = "Annuler";
 "OK" = "OK";
 
 "'%@' is currently locked" = "%@est actuellement verrouillé";
@@ -208,7 +225,7 @@
 "After 1 minute" = "Après 1 minute";
 "After 5 minutes" = "Après 5 minutes";
 "After 30 minutes" = "Après 30 minutes";
-"If you choose \"Immediately\" the App will be locked, when it is no longer in foreground.\n\nAccess in Files.app is not possible, if you choose lock interval \"Immediately\".\nPlease choose an other delay, if you want to access your files in the Files.app or via a document picker." = "Si vous choisissez \"immédiatement\", l'application sera verrouillée, lorsqu'elle ne sera plus au premier plan.\n\nL'accès à Files.app n'est pas possible, si vous choisissez l'intervalle de verrouillage \"Immédiatement\".\nVeuillez choisir un autre délai, si vous souhaitez accéder à vos fichiers dans Files.app ou via un sélecteur de documents.";
+"If you choose \"Immediately\" the App will be locked, when it is no longer in foreground." = "If you choose \"Immediately\" the App will be locked, when it is no longer in foreground.";
 "Please configure an email account" = "Veuillez configurer un compte de messagerie";
 "You need to configure an email account first to be able to send emails." = "Vous devez d'abord configurer un compte de messagerie pour pouvoir envoyer des e-mails.";
 "Do you want to open the following URL?" = "Voulez-vous ouvrir l'URL suivante?";
@@ -324,10 +341,10 @@
 "An item with the same name already exists in this location." = "Un élément du même nom existe déjà à cet emplacement.";
 "New Folder" = "Nouveau dossier";
 "Folder name" = "Nom du dossier";
-"Rename" ="Renomer";
+"Rename" ="Renommer";
 "Create folder" ="Créer un dossier";
 "Duplicate" = "Dupliquer";
-"Move" = "Bouger";
+"Move" = "Déplacer";
 "Open in" = "Ouvrir dans";
 "Copy" = "Copier";
 "Copy here" = "Copier ici";
@@ -349,18 +366,29 @@
 "Favorited" = "Marqué comme favori";
 "Favorite item" = "Élément préféré";
 "Unfavorite item" = "Élément défavorable";
+"Presentation Mode" = "Presentation Mode";
+"Enabling presentation mode will prevent the display from sleep mode until the view is closed." = "Enabling presentation mode will prevent the display from sleep mode until the view is closed.";
+"Enable" = "Activer";
+"Exit Full Screen" = "Exit Full Screen";
 
 /* Directory Picker Messages */
 "Move here" = "Déplacer ici";
 
 /* Preview */
 "Open file" = "Ouvrir le fichier";
-"Network unavailable" = "Réseau indisponible ";
+"Network unavailable" = "Réseau indisponible";
 "Error" = "Erreur";
 "Could not get the picture" = "Impossible d'obtenir l'image";
 "Downloading" = "Téléchargement";
 "File couldn't be opened" = "Le fichier n'a pas pu être ouvert";
 "Connecting..." = "connexion en cours...";
+
+"File" = "Fichier";
+"%@ was updated" = "%@ was updated";
+"Would you like to view the updated version?" = "Would you like to view the updated version?";
+"Show new version" = "Show new version";
+"Refresh without asking" = "Refresh without asking";
+"Ignore updates" = "Ignore updates";
 
 /* PDF Viewer */
 "Resume" = "Reprendre";
@@ -372,6 +400,9 @@
 "The entered page number doesn't exist" = "Le numéro de page saisi n'existe pas";
 "Search PDF" = "Chercher PDF";
 "Outline" = "Aperçu";
+"Find Next" = "Find Next";
+"Find Previous" = "Find Previous";
+"Close Search" = "Close Search";
 
 /* Photo Upload */
 "Upload" = "Téléverser";
@@ -493,11 +524,15 @@
 "You" = "Vous";
 "Share this file" = "Partagez ce fichier";
 "Share this folder" = "Partager ce dossier";
-"shared" = "a partagé";
+"shared" = "partagé";
 "Owner" = "Propriétaire";
 "Private Link" = "Lien privé";
 "Created Public Link" = "Lien public créé";
 "URL was copied to the clipboard" = "L'URL a été copiée dans le presse-papiers";
+"%@ is not available, when this account is offline. Please open the app and log into your account before you can do this action." = "%@ is not available, when this account is offline. Please open the app and log into your account before you can do this action.";
+"%@ is not available for this item." = "%@ is not available for this item.";
+"Share with user/group" = "Share with user/group";
+"Share link" = "Partager par lien public";
 
 /* Quick Access view */
 "Quick Access" = "Accès rapide";
@@ -622,6 +657,13 @@
 "Previous" = "Précédent";
 "Favorite" = "Ajouter aux favoris";
 "Cut" = "Couper";
+"Play/Pause" = "Play/Pause";
+"Skip Back" = "Skip Back";
+"Skip Ahead" = "Skip Ahead";
+"Go to Beginning" = "Go to Beginning";
+"Mute/Unmute" = "Mute/Unmute";
+"Full Screen" = "Full Screen";
+"Switch Theme Style" = "Switch Theme Style";
 
 /* Markup */
 "How should this file be saved?" = "Comment enregistrer ce fichier?";
@@ -806,8 +848,8 @@
 
 /* EXIF: aux info */
 "Lens ID" = "ID de l'objectif";
-"Lens serial" = "Le numéro de série de l'objectif ";
-"Serial number" = "Numéro de série ";
+"Lens serial" = "Le numéro de série de l'objectif";
+"Serial number" = "Numéro de série";
 "Flash compensation" = "Compensation du flash";
 "Owner" = "Propriétaire";
 "Firmware" = "Firmware";
@@ -846,3 +888,11 @@
 "Limited Photo Access" = "Accès limité aux photos";
 "Access for the media selected for upload is limited" = "L'accès aux médias sélectionnés pour le téléchargement est limité";
 "No Access to the media selected for upload" = "Aucun accès au média sélectionné pour le téléchargement";
+
+/* macOS support */
+"Passcode protection is not supported on this device.\nPlease disable passcode lock in the app settings." = "Passcode protection is not supported on this device.\nPlease disable passcode lock in the app settings.";
+
+/* MDM settings push */
+"New settings received from MDM" = "New settings received from MDM";
+"Tap to quit the app." = "Tap to quit the app.";
+"Tap to launch the app." = "Tap to launch the app.";

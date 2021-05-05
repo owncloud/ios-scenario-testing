@@ -71,8 +71,12 @@
 "Access Files" = "Përdorni Kartela";
 "Logout" = "Dalje";
 
+/* Bookmark Info */
+"Bookmark Metadata" = "Bookmark Metadata";
+
 /* Client */
 "Browse" = "Shfletoni";
+"Files" = "Kartela";
 "Disconnect" = "Shkëputu";
 "Connecting…" = "Po lidhet…";
 "Connected." = "U lidh.";
@@ -95,20 +99,33 @@
 "kind" = "lloj";
 "size" = "madhësi";
 "date" = "datë";
-"Search this folder" = "Kërko në këtë dosje";
+"Search folder" = "Kërko në dosje";
+"Search account" = "Kërko llogari";
 "Pending" = "Në pritje";
 "Show parent paths" = "Shfaq shtigjet mëmë";
+"Reveal in folder" = "Shfaqe në dosje";
 
 "%@ of %@ used" = "%@ nga %@ të përdorur";
 "Total: %@" = "Gjithsej: %@";
 "%@ item | " = "%@ objekt | ";
 "%@ items | " = "%@ objekte | ";
 
+"Show more results" = "Shfaq më tepër përfundime";
+
+/* Search scope */
+"Search scope" = "Shtrirje kërkimi";
+"Toggle Search Scope" = "Toggle Search Scope";
+
 /* Static Login Setup */
 "Server error" = "Gabim shërbyesi";
 "The server doesn't support any allowed authentication method." = "Shërbyesi nuk mbulon ndonjë nga metodat e mirëfilltësimeve.";
 "The server doesn't support any known and allowed authentication method found." = "Shërbyesi nuk mbulon ndonjë nga metodat e njohura dhe të lejuara që u gjetën.";
 "Retry detection" = "Riprovo pikasjen";
+"Enter your username and password" = "Jepni emrin e përdoruesit dhe fjalëkalimin tuaj";
+"Please log in to authorize the app." = "Që të autorizoni aplikacionin, ju lutemi, bëni hyrjen.";
+"Welcome to %@" = "Mirë se vini te %@";
+"Please enter a server URL" = "Ju lutemi, jepni një URL shërbyesi";
+"Please pick a profile to begin setup" = "Ju lutemi, zgjidhni një profil për të filluar ujdisja";
 
 /* Single Account */
 "You are connected as\n%@" = "Jeni i lidhur si\n%@";
@@ -208,7 +225,7 @@
 "After 1 minute" = "Pas 1 minute";
 "After 5 minutes" = "Pas 5 minutash";
 "After 30 minutes" = "Pas 30 minutash";
-
+"If you choose \"Immediately\" the App will be locked, when it is no longer in foreground." = "Nëse zgjidhni “Menjëherë”, Aplikacioni do të kyçet, kur s’është më përpara në ekran.";
 "Please configure an email account" = "Ju lutemi, formësoni një llogari email";
 "You need to configure an email account first to be able to send emails." = "Së pari lypset të formësoni një llogari email, që të jeni në gjendje të dërgoni email-e.";
 "Do you want to open the following URL?" = "Doni të hapet URL-ja vijuese?";
@@ -349,6 +366,10 @@
 "Favorited" = "U kalua e parapëlqyer";
 "Favorite item" = "Vëri shenjë objektit si i parapëlqyer";
 "Unfavorite item" = "Hiqja shenjën objektit si i parapëlqyer";
+"Presentation Mode" = "Mënyrë Paraqitje";
+"Enabling presentation mode will prevent the display from sleep mode until the view is closed." = "Aktivizimi i mënyrës paraqitje do ta pengojë ekranin të kalojë në mënyrën dremitje, deri kur të mbyllet pamja.";
+"Enable" = "Aktivizoje";
+"Exit Full Screen" = "Dil nga Sa Krejt Ekrani";
 
 /* Directory Picker Messages */
 "Move here" = "Shpjere këtu";
@@ -362,6 +383,13 @@
 "File couldn't be opened" = "Kartela s’u hap dot";
 "Connecting..." = "Po lidhet…";
 
+"File" = "Kartelë";
+"%@ was updated" = "%@ u përditësua";
+"Would you like to view the updated version?" = "Do të donit të shihni versionin e përditësuar?";
+"Show new version" = "Shfaq versionin e ri";
+"Refresh without asking" = "Rifreskoje pa pyetur";
+"Ignore updates" = "Shpërfill përditësimet";
+
 /* PDF Viewer */
 "Resume" = "Rimerre";
 "Go to page" = "Shko tek faqja";
@@ -372,6 +400,9 @@
 "The entered page number doesn't exist" = "Numri i dhënë për faqen nuk ekziston";
 "Search PDF" = "Kërko në PDF";
 "Outline" = "Përvijoje";
+"Find Next" = "Gjej Pasuesen";
+"Find Previous" = "Gjej të Mëparshmen";
+"Close Search" = "Mbylle Kërkimin";
 
 /* Photo Upload */
 "Upload" = "Ngarkoje";
@@ -498,6 +529,10 @@
 "Private Link" = "Lidhje Private";
 "Created Public Link" = "Lidhja Publike u Krijua";
 "URL was copied to the clipboard" = "URL-ja u kopjua në të papastër";
+"%@ is not available, when this account is offline. Please open the app and log into your account before you can do this action." = "Kur kjo llogari s’është në linjë,  %@ s’mund të përdoret. Ju lutemi, hapni aplikacionin dhe hyni në llogarinë tuaj, përpara se të provoni këtë veprim.";
+"%@ is not available for this item." = "%@ s’mund të kryhet për këtë objekt.";
+"Share with user/group" = "Ndajeni me përdorues/grup";
+"Share link" = "Lidhje ndarjesh me të tjerë";
 
 /* Quick Access view */
 "Quick Access" = "Hyrje e Shpejtë";
@@ -622,6 +657,13 @@
 "Previous" = "E mëparshmja";
 "Favorite" = "Vëre Si të Parapëlqyer";
 "Cut" = "Prije";
+"Play/Pause" = "Luaje/Pushoje";
+"Skip Back" = "Kërcim Prapa";
+"Skip Ahead" = "Kërcim Përpara";
+"Go to Beginning" = "Kalo te Fillimi";
+"Mute/Unmute" = "Hiqi/Ktheji Zërin";
+"Full Screen" = "Sa Krejt Ekrani";
+"Switch Theme Style" = "Ndërroni Stil Teme";
 
 /* Markup */
 "How should this file be saved?" = "Si duhet ruajtur kjo?";
@@ -743,7 +785,7 @@
 "Camera details" = "Hollësi kamere";
 "Capture settings" = "Rregullime fotografimi";
 "Time" = "Kohë";
-"EXIF aux info" = "EXIF aux info";
+"EXIF aux info" = "Të dhëna EXIF aux";
 "Authoring" =  "Authoring";
 "TIFF" = "TIFF";
 
@@ -786,9 +828,9 @@
 "No strobe return detection" = "No strobe return detection";
 "Strobe return light not detected" = "Strobe return light not detected";
 "Strobe return light detected" = "Strobe return light detected";
-"Compulsory flash firing" = "Compulsory flash firing";
-"Compulsory flash supression" = "Compulsory flash supression";
-"Auto mode" = "Auto mode";
+"Compulsory flash firing" = "Shkrepje e detyrueshme flashi";
+"Compulsory flash supression" = "Çaktivizim i detyrueshëm flashi";
+"Auto mode" = "Mënyra e automatizuar";
 "Red eye detection supported" = "Mbulohet pikasje syri të kuq";
 "not present" = "jo e pranishme";
 
@@ -811,7 +853,7 @@
 "Flash compensation" = "Kompensim flashi";
 "Owner" = "I zoti";
 "Firmware" = "Firmware";
-"Keywords" = "Keywords";
+"Keywords" = "Fjalëkyçe";
 "Copyright" = "Të drejta kopjimi";
 
 /* IPTC meta data */
@@ -843,6 +885,14 @@
 "Prefer original videos" = "Parapëlqe video origjinale";
 
 /* Limited photo library access */
-"Limited Photo Access" = "Limited Photo Access";
+"Limited Photo Access" = "Hyrje e Kufizuar te Fotot";
 "Access for the media selected for upload is limited" = "Hyrja te media e përzgjedhur për ngarkim është e kufizuar";
 "No Access to the media selected for upload" = "Pa Hyrje te media e përzgjedhur për ngarkim";
+
+/* macOS support */
+"Passcode protection is not supported on this device.\nPlease disable passcode lock in the app settings." = "Mbrojtja me frazëkalim nuk mbulohet në këtë pajisje.\nJu lutemi, çaktivizoni kyçjen me frazëkalim, që nga rregullimet e aplikacionit.";
+
+/* MDM settings push */
+"New settings received from MDM" = "U morën rregullime të reja nga MDM";
+"Tap to quit the app." = "Prekeni që të mbyllet aplikacioni.";
+"Tap to launch the app." = "Prekeni që të hapet aplikacioni.";

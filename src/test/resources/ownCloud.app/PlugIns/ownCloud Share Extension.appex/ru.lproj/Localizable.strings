@@ -34,7 +34,7 @@
 "Cancel" = "Отмена";
 "Approve" = "Подтвердить";
 "Error" = "Ошибка";
-"Issues" = "Issues";
+"Issues" = "Проблемы";
 "Review Connection" = "Обзор соединения";
 "Authenticated via" = "Аутентифицрован через";
 "Authenticated as %@ via %@" = "Аутентификация как %@ через %@";
@@ -50,7 +50,7 @@
 "Certificate may have issues, but was accepted by user.\nOpen 'Certificate Details' for more informations." = "С сертификатом возможно есть проблемы, но он был принят пользователем\nДля получения подробностей откройте 'Детали сертификата'.";
 "If you 'Continue', you will be prompted to allow the '%@' App to open OAuth2 login where you can enter your credentials." = "Если вы нажмёте 'Продолжить', то у вас попросят разрешить приложению '%@' войти через OAuth2, и при входе вам понадобится ввести свои учётные данные.";
 
-"Error opening %@" = "Error opening %@";
+"Error opening %@" = "Ошибка при открытии %@";
 
 "Contacting server…" = "Соединение с сервером…";
 "Authenticating…" = "Авторизация…";
@@ -66,13 +66,17 @@
 "Server Username" = "Имя пользователя на сервере";
 "Show accounts" = "Показать учётные записи";
 "Setup complete" = "Настройка завершена";
-"Edit Login" = "Edit Login";
-"Manage Storage" = "Manage Storage";
-"Access Files" = "Access Files";
-"Logout" = "Logout";
+"Edit Login" = "Править логин";
+"Manage Storage" = "Управлять хранилищем";
+"Access Files" = "Доступ к файлам";
+"Logout" = "Выход";
+
+/* Bookmark Info */
+"Bookmark Metadata" = "Bookmark Metadata";
 
 /* Client */
 "Browse" = "Просмотр";
+"Files" = "Файлы";
 "Disconnect" = "Отключить";
 "Connecting…" = "Соединение…\n";
 "Connected." = "Соединено.";
@@ -95,28 +99,41 @@
 "kind" = "добрый";
 "size" = "размеру";
 "date" = "дате";
-"Search this folder" = "Поиск в этой папке";
+"Search folder" = "Search folder";
+"Search account" = "Search account";
 "Pending" = "Ожидается";
 "Show parent paths" = "Показать вышестоящие пути";
+"Reveal in folder" = "Reveal in folder";
 
 "%@ of %@ used" = "Использовано %@ из %@";
 "Total: %@" = "Всего: %@";
 "%@ item | " = "%@ элемент | ";
 "%@ items | " = "%@ элементов | ";
 
+"Show more results" = "Show more results";
+
+/* Search scope */
+"Search scope" = "Search scope";
+"Toggle Search Scope" = "Toggle Search Scope";
+
 /* Static Login Setup */
 "Server error" = "Ошибка сервера";
 "The server doesn't support any allowed authentication method." = "Сервер не поддерживает ни один из допустимых методов аутентификации.";
 "The server doesn't support any known and allowed authentication method found." = "Сервер не поддерживает ни один из известных и разрешённых методов аутентификации.";
 "Retry detection" = "Обнаружение повторных попыток";
+"Enter your username and password" = "Enter your username and password";
+"Please log in to authorize the app." = "Please log in to authorize the app.";
+"Welcome to %@" = "Welcome to %@";
+"Please enter a server URL" = "Please enter a server URL";
+"Please pick a profile to begin setup" = "Please pick a profile to begin setup";
 
 /* Single Account */
-"You are connected as\n%@" = "You are connected as\n%@";
+"You are connected as\n%@" = "Вы подключены, как\n%@";
 "Login" = "Логин";
-"Wrong URL" = "Wrong URL";
-"Please enter a valid URL" = "Please enter a valid URL";
-"Missing Profile URL" = "Missing Profile URL";
-"The Profile '%@' does not have a URL configured.\nPlease provide a URL via configuration or MDM." = "The Profile '%@' does not have a URL configured.\nPlease provide a URL via configuration or MDM.";
+"Wrong URL" = "Неверная ссылка";
+"Please enter a valid URL" = "Пожалуйста, введите правильную ссылку";
+"Missing Profile URL" = "Не хватает ссылки профиля";
+"The Profile '%@' does not have a URL configured.\nPlease provide a URL via configuration or MDM." = "Для профиля '%@' не настроена ссылка.\nПожалуйста, задайте URL через конфигурацию или MDM.";
 
 /* Client Messages */
 "Empty folder" = "Пустая папка";
@@ -146,7 +163,7 @@
 "Access denied" = "Доступ запрещен";
 "The connection's access token has expired or become invalid. Sign in again to re-gain access." = "Токен доступа данного соединения устарел или стал недействительным. Перевойдите, чтобы восстановить доступ.";
 "No authentication data has been found for this connection." = "Для данного соединения не найдены данные аутентификации.";
-"Authentication with %@ is no longer allowed. Re-authentication needed." = "Authentication with %@ is no longer allowed. Re-authentication needed.";
+"Authentication with %@ is no longer allowed. Re-authentication needed." = "Аутентификация через %@ больше не допустима. Нужно перевойти.";
 "Sign in" = "Войти";
 "Continue offline" = "Продолжить без сети";
 "Media upload in the previous session was incomplete since the application was terminated" = "Загрузка данных в прошлом сеансе не была завершена, так как приложение было завершено";
@@ -168,7 +185,7 @@
 "Do you really want to disconnect from your '%@' account?" = "Вы действительно хотите отключиться от вашей учётной записи '%@'?";
 "This will remove all locally stored file copies from your device." = "Это удалит все локально сохранённые копии файлов с вашего устройства.";
 "Really delete '%@'?" = "Действительно удалить '%@'?";
-"Really logout from '%@'?" = "Really logout from '%@'?";
+"Really logout from '%@'?" = "Действительно выйти из '%@'?";
 "This will also delete all locally stored file copies." = "Это так же удалит все локально сохранённые копии файла.";
 "Delete" = "Удалить";
 "Remove" = "Удалить";
@@ -201,13 +218,14 @@
 "Privacy Policy" = "Политика конфиденциальности";
 "Terms Of Use" = "Условия использования";
 "Acknowledgements" = "Благодарности";
-"Portions of this app may utilize the following copyrighted material, the use of which is hereby acknowledged." = "Portions of this app may utilize the following copyrighted material, the use of which is hereby acknowledged.";
+"Portions of this app may utilize the following copyrighted material, the use of which is hereby acknowledged." = "Части этого приложения могут использовать нижеперечисленный материал, защищённый авторским правом, и здесь подтверждается его использование.";
 "Video upload path" = "Путь загрузки видео";
 "Photo upload path" = "Путь загрузки фото";
 "Immediately" = "Немедленно";
 "After 1 minute" = "Через 1 минуту";
 "After 5 minutes" = "Через 5 минут";
 "After 30 minutes" = "Через 30 минут";
+"If you choose \"Immediately\" the App will be locked, when it is no longer in foreground." = "If you choose \"Immediately\" the App will be locked, when it is no longer in foreground.";
 "Please configure an email account" = "Пожалуйста, настройте учётную запись почты";
 "You need to configure an email account first to be able to send emails." = "Чтобы иметь возможность отправлять сообщения, вам нужно сначала настроить учётную запись почты.";
 "Do you want to open the following URL?" = "Вы хотите открыть следующую ссылку?";
@@ -287,7 +305,7 @@
 /* Display settings */
 "Advanced settings" = "Расширенные настройки";
 "Show hidden files and folders" = "Показывать скрытые файлы и папки";
-"Show folders on top" = "Show folders on top";
+"Show folders on top" = "Показывать папки в начале";
 "Prevent gestures" = "Предотвратить жесты";
 "Prevent dragging of files and folders and multiselection using system defined gestures" = "Предотвратить перетаскивание файлов и папок, а так же множественный выбор, с помощью заданных в системе жестов";
 
@@ -304,7 +322,7 @@
 "Please try again in %@" = "Пожалуйста, попробуйте ещё раз через %@";
 "Unlock %@" = "Разблокировать %@";
 "Biometric authentication failed" = "Биометрическая аутентификация не удалась";
-"You are required to set the passcode" = "You are required to set the passcode";
+"You are required to set the passcode" = "Вам следует ввести код доступа";
 
 /* Certificate management */
 
@@ -348,6 +366,10 @@
 "Favorited" = "Избранное";
 "Favorite item" = "Добавить элемент в избранное";
 "Unfavorite item" = "Убрать элемент из избранного";
+"Presentation Mode" = "Presentation Mode";
+"Enabling presentation mode will prevent the display from sleep mode until the view is closed." = "Enabling presentation mode will prevent the display from sleep mode until the view is closed.";
+"Enable" = "Включить";
+"Exit Full Screen" = "Exit Full Screen";
 
 /* Directory Picker Messages */
 "Move here" = "Поместить сюда";
@@ -361,6 +383,13 @@
 "File couldn't be opened" = "Не удалось открыть файл";
 "Connecting..." = "Соединение…";
 
+"File" = "Файл";
+"%@ was updated" = "%@ was updated";
+"Would you like to view the updated version?" = "Would you like to view the updated version?";
+"Show new version" = "Show new version";
+"Refresh without asking" = "Refresh without asking";
+"Ignore updates" = "Ignore updates";
+
 /* PDF Viewer */
 "Resume" = "Возобновить";
 "Go to page" = "Переход к странице";
@@ -371,6 +400,9 @@
 "The entered page number doesn't exist" = "Введённый номер страницы не существует";
 "Search PDF" = "Поиск PDF";
 "Outline" = "Оглавление";
+"Find Next" = "Find Next";
+"Find Previous" = "Find Previous";
+"Close Search" = "Close Search";
 
 /* Photo Upload */
 "Upload" = "Загрузить";
@@ -384,7 +416,7 @@
 "Selected folder lacks file creation permission" = "У выбранной папки нет разрешения на создание файлов.";
 "%d Item" = "%d элемент";
 "%d Items" = "%d элементов";
-"Select Items" = "Select Items";
+"Select Items" = "Выбор элементов";
 
 /* Scan */
 "Scan" = "Cканировать";
@@ -497,6 +529,10 @@
 "Private Link" = "Личная ссылка";
 "Created Public Link" = "Созданная публичная ссылка";
 "URL was copied to the clipboard" = "URL была скопирована в буфер обмена";
+"%@ is not available, when this account is offline. Please open the app and log into your account before you can do this action." = "%@ is not available, when this account is offline. Please open the app and log into your account before you can do this action.";
+"%@ is not available for this item." = "%@ is not available for this item.";
+"Share with user/group" = "Share with user/group";
+"Share link" = "Поделиться ссылкой";
 
 /* Quick Access view */
 "Quick Access" = "Быстрый доступ";
@@ -594,13 +630,13 @@
 "All Files" = "Все файлы";
 
 /* Single Account */
-"You are connected as\n%@" = "You are connected as\n%@";
+"You are connected as\n%@" = "Вы подключены, как\n%@";
 
 /* Release Notes */
 "Proceed" = "Продолжить";
-"New in %@" = "New in %@";
+"New in %@" = "Новое в %@";
 "Thank you for using %@.\nIf you like our App, please leave an AppStore review.\n❤️" = "Спасибо, что используете %@.\nЕсли вам нравится наше приложение, оставьте отзыв в AppStore.\n❤️";
-"Thank you for using %@.\n" = "Thank you for using %@.\n";
+"Thank you for using %@.\n" = "Спасибо за использование %@.\n";
 
 /* Key Commands */
 "Select Next" = "Выбрать следующее";
@@ -621,6 +657,13 @@
 "Previous" = "Предыдущий";
 "Favorite" = "В избранное";
 "Cut" = "Вырезать";
+"Play/Pause" = "Play/Pause";
+"Skip Back" = "Skip Back";
+"Skip Ahead" = "Skip Ahead";
+"Go to Beginning" = "Go to Beginning";
+"Mute/Unmute" = "Mute/Unmute";
+"Full Screen" = "Full Screen";
+"Switch Theme Style" = "Switch Theme Style";
 
 /* Markup */
 "How should this file be saved?" = "Как следует сохранять этот файл?";
@@ -660,7 +703,7 @@
 "Error restoring purchases" = "Ошибка восстановления покупок";
 "Error loading product info from App Store"= "Ошибка загрузки информации о продукте из App Store";
 "Purchase failed" = "Покупка не удалась";
-"More information" = "More information";
+"More information" = "Больше информации";
 
 /* Licensing: Enterprise */
 "Enterprise" = "Предприятие";
@@ -691,13 +734,13 @@
 "trial" = "пробный период";
 "purchase" = "покупка";
 "subscription" = "подписка";
-"Photo Pro Features" = "Photo Pro Features";
-"Image metadata, extended upload options" = "Image metadata, extended upload options";
-"Purchase" = "Purchase";
+"Photo Pro Features" = "Возможности Photo Pro";
+"Image metadata, extended upload options" = "Метаданные изображения. расширенные возможности загрузки";
+"Purchase" = "Приобретение";
 "Subscribe" = "Подписаться";
 
-"No accounts found" = "No accounts found";
-"In order to accurately determine your current licensing status, please add one or more accounts first." = "In order to accurately determine your current licensing status, please add one or more accounts first.";
+"No accounts found" = "Учётные записи не найдены";
+"In order to accurately determine your current licensing status, please add one or more accounts first." = "Чтобы точно определить состояние ваших лицензий, пожалуйста добавьте сначала одну или несколько учётных записей.";
 
 /* Share Sheet */
 "Save File" = "Сохранить файл";
@@ -717,7 +760,7 @@
 "Migrated" = "Миграция завершена";
 "Failed to migrate" = "Миграция не удалась";
 "Failed to access legacy user data" = "Не удалось получить доступ к унаследованным пользовательским данным";
-"The app was upgraded to a new version. Below there is an overview of all migrated accounts." = "The app was upgraded to a new version. Below there is an overview of all migrated accounts.";
+"The app was upgraded to a new version. Below there is an overview of all migrated accounts." = "Приложение было обновлено до новой версии. Ниже перечислены перенесённые учётные записи.";
 
 /* Misc. accessibility */
 "Enter multiple selection" = "Введите множественный выбор";
@@ -730,118 +773,126 @@
 "Link points to an account bookmark which is not configured in the app." = "Ссылка указывает на закладку учётной записи, которые не настроена в приложении.";
 
 /* Photo meta-data */
-"Image metadata" = "Image metadata";
-"Image details" = "Image details";
-"Profile" = "Profile";
+"Image metadata" = "Метаданные изображения";
+"Image details" = "Подробности изображения";
+"Profile" = "Профиль";
 "Size" = "Размер";
-"Density" = "Density";
-"Color model" = "Color model";
-"%@ (%d bits/channel)" = "%@ (%d bits/channel)";
-"Histogram" = "Histogram";
+"Density" = "Плотность";
+"Color model" = "Цветовая модель";
+"%@ (%d bits/channel)" = "%@ (%d бит на канал)";
+"Histogram" = "Гистограмма";
 
-"Camera details" = "Camera details";
-"Capture settings" = "Capture settings";
+"Camera details" = "Подробности камеры";
+"Capture settings" = "Настройки съёмки";
 "Time" = "Время";
-"EXIF aux info" = "EXIF aux info";
-"Authoring" =  "Authoring";
+"EXIF aux info" = "Дополнительная информация EXIF";
+"Authoring" =  "Авторство";
 "TIFF" = "TIFF";
 
-"Lens make" = "Lens make";
-"Lens model" = "Lens model";
-"Lens info" = "Lens info";
-"Focal length" = "Focal length";
-"Focal length @ 35 mm" = "Focal length @ 35 mm";
+"Lens make" = "Производитель объектива";
+"Lens model" = "Модель объектива";
+"Lens info" = "Информация об объективе";
+"Focal length" = "Фокусное расстояние";
+"Focal length @ 35 mm" = "Фокусное расстояние в пересчёте на 35 мм";
 
-"Shutter speed" = "Shutter speed";
-"Aperture" = "Aperture";
-"ISO" = "ISO";
+"Shutter speed" = "Выдержка";
+"Aperture" = "Диафрагма";
+"ISO" = "Чувствительность";
 
 /* EXIF: exposure program */
-"Program" = "Program";
-"Not defined" = "Not defined";
-"Manual" = "Manual";
+"Program" = "Программа";
+"Not defined" = "Не задано";
+"Manual" = "Вручную";
 "Normal" = "Нормальный";
-"Aperture priority" = "Aperture priority";
-"Shutter priority" = "Shutter priority";
-"Creative" = "Creative";
+"Aperture priority" = "Приоритет диафрагмы";
+"Shutter priority" = "Приоритет выдержки";
+"Creative" = "Творческий";
 "Action" = "Действие";
-"Portrait" = "Portrait";
-"Landscape" = "Landscape";
+"Portrait" = "Портрет";
+"Landscape" = "Пейзаж";
 
 /* EXIF: exposure metering mode */
-"Metering" = "Metering";
+"Metering" = "Измерение";
 "unknown" = "неизвестно";
-"Average" = "Average";
-"CenterWeightedAverage" = "CenterWeightedAverage";
-"Spot" = "Spot";
-"MultiSpot" = "MultiSpot";
+"Average" = "Среднее";
+"CenterWeightedAverage" = "Центрально-взвешенное среднее";
+"Spot" = "Пятно";
+"MultiSpot" = "Несколько пятен";
 "Pattern" = "Шаблон";
-"Partial" = "Partial";
+"Partial" = "Частично";
 
 /* EXIF: flash mode */
-"Flash" = "Flash";
-"Fired" = "Fired";
-"Didn't fire" = "Didn't fire";
-"No strobe return detection" = "No strobe return detection";
-"Strobe return light not detected" = "Strobe return light not detected";
-"Strobe return light detected" = "Strobe return light detected";
-"Compulsory flash firing" = "Compulsory flash firing";
-"Compulsory flash supression" = "Compulsory flash supression";
-"Auto mode" = "Auto mode";
-"Red eye detection supported" = "Red eye detection supported";
-"not present" = "not present";
+"Flash" = "Вспышка";
+"Fired" = "Сработала";
+"Didn't fire" = "Не сработала";
+"No strobe return detection" = "Встречный строб не определяется";
+"Strobe return light not detected" = "Встречный строб-свет не обнаружен";
+"Strobe return light detected" = "Встречный строб-свет обнаружен";
+"Compulsory flash firing" = "Принудительная вспышка сработала";
+"Compulsory flash supression" = "Принудительная вспышка подавлена";
+"Auto mode" = "Автоматический режим";
+"Red eye detection supported" = "Подавление красных глаз поддерживается";
+"not present" = "не присутствует";
 
 /* EXIF: white balance */
-"White balance" = "White balance";
-"Auto" = "Auto";
-"Manual" = "Manual";
+"White balance" = "Баланс белого";
+"Auto" = "Авто";
+"Manual" = "Вручную";
 
-"Exposure bias" = "Exposure bias";
-"Uncalibrated" = "Uncalibrated";
-"Original date" = "Original date";
-"Digitized date" = "Digitized date";
+"Exposure bias" = "Сдвиг экспозиции";
+"Uncalibrated" = "Неоткалибровано";
+"Original date" = "Исходная дата";
+"Digitized date" = "Дата оцифровки";
 
-"Color space" = "Color space";
+"Color space" = "Цветовое пространство";
 
 /* EXIF: aux info */
-"Lens ID" = "Lens ID";
-"Lens serial" = "Lens serial";
-"Serial number" = "Serial number";
-"Flash compensation" = "Flash compensation";
+"Lens ID" = "Идентификатор объектива";
+"Lens serial" = "Серийный номер объектива";
+"Serial number" = "Серийный номер";
+"Flash compensation" = "компенсация вспышки";
 "Owner" = "Владелец";
-"Firmware" = "Firmware";
-"Keywords" = "Keywords";
+"Firmware" = "Прошивка";
+"Keywords" = "Ключевые слова";
 "Copyright" = "Авторские права защищены";
 
 /* IPTC meta data */
-"Contact info" = "Contact info";
-"Usage terms" = "Usage terms";
-"Scene" = "Scene";
+"Contact info" = "Контактная информация";
+"Usage terms" = "Условия использования";
+"Scene" = "Сцена";
 "Description" = "Описание";
 
 /* IPTC photometric interpretation */
-"Photometric interpretation" = "Photometric interpretation";
+"Photometric interpretation" = "Фотометрическая интерпретация";
 "none" = "пусто";
 "RGB" = "RGB";
 "YCbCr" = "YCbCr";
 
 /* EXIF: gps position data */
-"GPS Location" = "GPS Location";
-"Coordinates" = "Coordinates";
-"Altitude" = "Altitude";
-"Place" = "Place";
-"E" = "E";
-"W" = "W";
-"N" = "N";
-"S" = "S";
+"GPS Location" = "Местоположение GPS";
+"Coordinates" = "Координаты";
+"Altitude" = "Высота";
+"Place" = "Место";
+"E" = "в.д.";
+"W" = "з.д.";
+"N" = "с.ш.";
+"S" = "ю.ш.";
 
 /* Pro photo upload settings */
-"Extended upload settings" = "Extended upload settings";
-"Prefer unedited photos" = "Prefer unedited photos";
-"Prefer RAW photos" = "Prefer RAW photos";
-"Prefer original videos" = "Prefer original videos";
+"Extended upload settings" = "Расширенные настройки закачки";
+"Prefer unedited photos" = "Предпочитать неотредактированные фото";
+"Prefer RAW photos" = "Предпочитать формат RAW";
+"Prefer original videos" = "Предпочитать исходные видео";
 
 /* Limited photo library access */
-"Limited Photo Access" = "Limited Photo Access";
-"Access for the media selected for upload is limited" = "Access for the media selected for upload is limited";
-"No Access to the media selected for upload" = "No Access to the media selected for upload";
+"Limited Photo Access" = "Ограниченный доступ к фото";
+"Access for the media selected for upload is limited" = "Доступ к материалам, выбранным для закачки, ограничен";
+"No Access to the media selected for upload" = "Нет доступа к материалам, выбранным для закачки";
+
+/* macOS support */
+"Passcode protection is not supported on this device.\nPlease disable passcode lock in the app settings." = "Passcode protection is not supported on this device.\nPlease disable passcode lock in the app settings.";
+
+/* MDM settings push */
+"New settings received from MDM" = "New settings received from MDM";
+"Tap to quit the app." = "Tap to quit the app.";
+"Tap to launch the app." = "Tap to launch the app.";

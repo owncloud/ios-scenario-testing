@@ -14,7 +14,7 @@
 		</data>
 		<key>Assets.car</key>
 		<data>
-		wH+dr2AwQbDHNEZXk713smKO1RM=
+		XpBNWBd9Qdp0/Z5+h417qUh6rjs=
 		</data>
 		<key>Base.lproj/Intents.intentdefinition</key>
 		<data>
@@ -130,7 +130,7 @@
 		</data>
 		<key>Frameworks/libzip.framework/libzip</key>
 		<data>
-		6haWBjrqDy2eOT9SL8QOa/gSMkY=
+		uf9lU8pikTwXuKxt2jdykZiszTw=
 		</data>
 		<key>Frameworks/openssl.framework/Info.plist</key>
 		<data>
@@ -146,7 +146,7 @@
 		</data>
 		<key>Frameworks/openssl.framework/openssl</key>
 		<data>
-		FuC0DMDTmoPhcSSdNZdhhi8S1ik=
+		4g/Ls0YAIEnBkYtEklA0MqiplVw=
 		</data>
 		<key>Frameworks/ownCloudApp.framework/AppleIncRootCertificate.cer</key>
 		<data>
@@ -154,11 +154,11 @@
 		</data>
 		<key>Frameworks/ownCloudApp.framework/Info.plist</key>
 		<data>
-		Q+qJNxhGLlA19NChcRDUaIb0S68=
+		/+1qw8X13GH73eJqbPfkfiLisio=
 		</data>
 		<key>Frameworks/ownCloudApp.framework/_CodeSignature/CodeResources</key>
 		<data>
-		n1S76WMjfeEKb6c7T7cbPKO2jdw=
+		O41Njfpjkt2+0QJBdw/hkewlhXw=
 		</data>
 		<key>Frameworks/ownCloudApp.framework/ar.lproj/Localizable.strings</key>
 		<dict>
@@ -270,7 +270,7 @@
 		</dict>
 		<key>Frameworks/ownCloudApp.framework/ownCloudApp</key>
 		<data>
-		/V2m5UTWVL8ETNJ9/npInyuG/fQ=
+		rFS5xBCD/eIWkstliO3iOvejuqc=
 		</data>
 		<key>Frameworks/ownCloudApp.framework/pt-BR.lproj/Localizable.strings</key>
 		<dict>
@@ -332,7 +332,7 @@
 		</data>
 		<key>Frameworks/ownCloudAppShared.framework/PasscodeViewController.nib</key>
 		<data>
-		mZsn3WeqWLYgMInl/jCPRMfbc3A=
+		yq7pk12cjhTr5Bm0rtiEkhOjhjg=
 		</data>
 		<key>Frameworks/ownCloudAppShared.framework/PocketSVG.LICENSE</key>
 		<data>
@@ -340,7 +340,7 @@
 		</data>
 		<key>Frameworks/ownCloudAppShared.framework/_CodeSignature/CodeResources</key>
 		<data>
-		m7DXL8D1golqObMTHGJAJKELRYY=
+		fG/qZ3bVKRFUw+aUeMqUXxtMggg=
 		</data>
 		<key>Frameworks/ownCloudAppShared.framework/application-pdf.tvg</key>
 		<data>
@@ -354,7 +354,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			aYJzTtUgOD5VIHGXjGLWL3NXRIg=
+			eGMTi7Cvh831w0yLxsaod0TFXwc=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -376,7 +376,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			7adFJUw/MuuOunh+kWB5aoMy5UU=
+			vaihMcmCv+KxOGxPtjzs6snRECg=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -394,7 +394,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			mYSOaTW1I/uPm5mp/TSamILD8Og=
+			SifhoVrEx/F8+mhMUB2BksH6Ox0=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -453,7 +453,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			ZYqGtrrWhLp+JvWpPbZU+pylXcE=
+			9oXqZw9W6rsB2bhyIHZTpn6rnL8=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -516,7 +516,7 @@
 		</dict>
 		<key>Frameworks/ownCloudAppShared.framework/ownCloudAppShared</key>
 		<data>
-		yt7UQVuMY68igzoGYGwTPsctVVU=
+		ITRgINMxaqej60CuYFGNLDsMHaM=
 		</data>
 		<key>Frameworks/ownCloudAppShared.framework/owncloud-logo.tvg</key>
 		<data>
@@ -530,7 +530,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			fQjVSt8engOzruYqXooPaXtp1mk=
+			pOec7iFlr8z3z8Onr59M1WFnF4M=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -548,7 +548,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			csMkmymXG/7ke4GYGVM6Dm39yLA=
+			zMyCQmipgNkbZH93hEqabrFl67I=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -557,7 +557,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			2bBOspQ8w8uZQGHu8X/2/e2vcKE=
+			F3zxa4ideAHQvWKkq0Jf1MgLHUA=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -586,7 +586,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			oa5+YHRUjpVO0fDYNqtOIoMCkd0=
+			GHnYc3SAZikdadCOov/vD3pwZPM=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -622,7 +622,7 @@
 		</data>
 		<key>Frameworks/ownCloudSDK.framework/Info.plist</key>
 		<data>
-		pXKvox7D2+mZz5xuKW9u1YOyCOA=
+		ITsKNfair30lBfIwynA9bl+Thtg=
 		</data>
 		<key>Frameworks/ownCloudSDK.framework/LICENSE</key>
 		<data>
@@ -630,7 +630,7 @@
 		</data>
 		<key>Frameworks/ownCloudSDK.framework/_CodeSignature/CodeResources</key>
 		<data>
-		FuDnIfb+0pX4W5Bh9rJ7OYybkU0=
+		CRV/UXJL0eQLCo57+BYlVncCMi4=
 		</data>
 		<key>Frameworks/ownCloudSDK.framework/cs.lproj/Localizable.strings</key>
 		<dict>
@@ -641,20 +641,11 @@
 			<key>optional</key>
 			<true/>
 		</dict>
-		<key>Frameworks/ownCloudSDK.framework/de-DE.lproj/Localizable.strings</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			1yM34G/Cx9Cr0D22eBpJtehuIms=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
 		<key>Frameworks/ownCloudSDK.framework/de.lproj/Localizable.strings</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			Iasevip33sKxdWGxEu+UErP4p/s=
+			pGXkcZ09X8dI+ILr3hj0Lj2awKk=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -672,7 +663,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			AVLs5X01KGASABA+B4QcNEGQluU=
+			TEdKtbvz/k75VBWNAVh4paYFBjo=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -681,7 +672,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			aMLKNMOHTH7rrSDvvVoYLfr2p6g=
+			gUPR80dBKgcZogcYgXs+AS5gn+c=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -690,7 +681,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			x8pXqfplrU7z5qUQFfaO0+O5ZGU=
+			kNnBlaYTXfb46gJ5dm89BuyiDD0=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -733,13 +724,13 @@
 		</dict>
 		<key>Frameworks/ownCloudSDK.framework/ownCloudSDK</key>
 		<data>
-		MLYOOFgXh0Lf+01oymwnGAViLuI=
+		Tz954UWBrP9YZFF+BRMTh5Q1304=
 		</data>
 		<key>Frameworks/ownCloudSDK.framework/pt-BR.lproj/Localizable.strings</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			xmByTM8a7RzfaSUMpmFyxVFZQ5k=
+			IaZ7NgqQLK/AhLNTWwmRKLgM+os=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -766,7 +757,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			S2IDKKNNuIVP3gXmfROyKxPIbHM=
+			e7LqvNVIrCmJYp22RJpSCo01UhI=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -775,7 +766,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			f4SpKXiHONfXnUPhZcPCL9bcQ4o=
+			Acq+hoVeeQ+ExoteAEFdM79WWQ0=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -784,7 +775,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			P3wjzzCBMg/FkJQl86titJUlums=
+			a53WLlSPofIDPqc+/s1geqR5aUk=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -795,7 +786,7 @@
 		</data>
 		<key>Frameworks/ownCloudUI.framework/_CodeSignature/CodeResources</key>
 		<data>
-		HXFVSDYnRZCkpRKX3xIxESLL6jM=
+		8gYy69sShHK2K5oDl6QX07fpusA=
 		</data>
 		<key>Frameworks/ownCloudUI.framework/cs.lproj/Localizable.strings</key>
 		<dict>
@@ -806,20 +797,11 @@
 			<key>optional</key>
 			<true/>
 		</dict>
-		<key>Frameworks/ownCloudUI.framework/de-DE.lproj/Localizable.strings</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			ovqzTXe3dLkcRH4ZryeQvVDn8Hk=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
 		<key>Frameworks/ownCloudUI.framework/de.lproj/Localizable.strings</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			ggjzjMFw0QDJAhmekY9ipnAf6IQ=
+			KYsZqP8Kzu0IxuDp+tus3Mj15uo=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -828,7 +810,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			uaG1tlWwY9fgoDLkeT0XxIrE76g=
+			fBnZEw5016WPw6EW9DpSbtbRO1U=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -846,7 +828,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			23yGIz6rkdkaj4ik6G93LeVt+ug=
+			KyQ4yH1u7q+nPiZW05xnaqZcYOc=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -898,13 +880,13 @@
 		</dict>
 		<key>Frameworks/ownCloudUI.framework/ownCloudUI</key>
 		<data>
-		Br5J2k9QP2Agn24pGZ5Xzumni0g=
+		YwiSpsDQtAa+KcckZ3JPLBKNz9s=
 		</data>
 		<key>Frameworks/ownCloudUI.framework/pt-BR.lproj/Localizable.strings</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			xqbKHQv9e+W6QYUrAW3ltejUSFo=
+			FZE5SlLKJW6cOavODAskk1P8lk8=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -913,7 +895,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			znLIb/M+Q7cF/z/OnU7552YBc5c=
+			+mrn7DbMzwr/0fxeUzL8oRsClFM=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -922,7 +904,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			uRj9o6eftjoi7riRbBu0hBbH6bI=
+			YVzqtIcLLawWmoMZvPoI83SHG8Q=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -931,7 +913,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			AG1khj9h/cxytS5c67yC33I3hXE=
+			Qbu93S2mRXk8PHF6wWpn1KnAwoE=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -949,18 +931,18 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			23yGIz6rkdkaj4ik6G93LeVt+ug=
+			OYZK+kvf5ePh5JQH/rxK+kBU6aA=
 			</data>
 			<key>optional</key>
 			<true/>
 		</dict>
 		<key>Info.plist</key>
 		<data>
-		41tJ3InDRmwgAr+qvarOx+mONL0=
+		maMRTvReUhnU6Wuk5i0KYqtGnOU=
 		</data>
 		<key>LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib</key>
 		<data>
-		eoC4jIRbL3U9E5ehLoPpJYsvODw=
+		ZYCndAeABjPO4QqW1KzKx7yzT/U=
 		</data>
 		<key>LaunchScreen.storyboardc/Info.plist</key>
 		<data>
@@ -968,7 +950,7 @@
 		</data>
 		<key>LaunchScreen.storyboardc/UIViewController-01J-lp-oVM.nib</key>
 		<data>
-		nXJYi41LiX6Ou+LgjxkZqimKQTk=
+		jNASOOR3V9qzs473nJlp24zXfvM=
 		</data>
 		<key>PLCrashReporter.LICENSE</key>
 		<data>
@@ -982,7 +964,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			Vro/Y/B428G5q1DY67hVdpYx7W4=
+			Q80WB0TcfqSAFvmfC/TkQEq985s=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -1000,7 +982,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			RRKDiTr+Nidx3YaSjpXvvnFjGxA=
+			K8SLzgKNlMMyKjdEUp6ZVwuQTUA=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -1009,7 +991,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			1OngPhfCmZqWDQjb9svEKlFAhYY=
+			O8fHYKkaXABGzyKU88Ei6yWlHNU=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -1018,14 +1000,14 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			BvmKyOzbRH126QQ5m0XUL9xXHOE=
+			pagGRqeOPV01q2o1XCghHgD2DlA=
 			</data>
 			<key>optional</key>
 			<true/>
 		</dict>
 		<key>PlugIns/ownCloud File Provider UI.appex/Info.plist</key>
 		<data>
-		JnEFIAXcEkrIdU2H5tJdKRcndTg=
+		Vxb9lS/xJRCSow4hSPYCRaVYXTw=
 		</data>
 		<key>PlugIns/ownCloud File Provider UI.appex/PocketSVG_PocketSVG.bundle/Info.plist</key>
 		<data>
@@ -1057,19 +1039,19 @@
 		</data>
 		<key>PlugIns/ownCloud File Provider UI.appex/_CodeSignature/CodeResources</key>
 		<data>
-		Ekx/gMEFi0FRbaUk9VfLPC49YBg=
+		SVuMREAJO1bu9++cQrFcNEjQ6bg=
 		</data>
 		<key>PlugIns/ownCloud File Provider UI.appex/ownCloud File Provider UI</key>
 		<data>
-		qG4sfqx/VBvT4NrOvB6Jj6NT0gg=
+		YBlRLBF2TCjkdTt4XczIHLeFEC8=
 		</data>
 		<key>PlugIns/ownCloud File Provider.appex/Info.plist</key>
 		<data>
-		TenfJQgguDSw5FVB18KF014rf+E=
+		k+6SsV7IsclaIRoXh9D26Nl3BBk=
 		</data>
 		<key>PlugIns/ownCloud File Provider.appex/_CodeSignature/CodeResources</key>
 		<data>
-		GOpH2u2P06BX9GL9rTAyw+IIaYM=
+		Bd/8EpAyX4zCSETMgXx5bD8XFCQ=
 		</data>
 		<key>PlugIns/ownCloud File Provider.appex/en.lproj/Localizable.strings</key>
 		<dict>
@@ -1091,7 +1073,7 @@
 		</dict>
 		<key>PlugIns/ownCloud File Provider.appex/ownCloud File Provider</key>
 		<data>
-		p4TR7inhw2cXt4ndEp7eYyJ01kg=
+		zpOFPlQt3qJYb+AFRUn3kr7IPFU=
 		</data>
 		<key>PlugIns/ownCloud Intents.appex/Base.lproj/Intents.intentdefinition</key>
 		<dict>
@@ -1104,7 +1086,7 @@
 		</dict>
 		<key>PlugIns/ownCloud Intents.appex/Info.plist</key>
 		<data>
-		c7qEeaSEgkKY0YxqV12PjNBBA1o=
+		Rr1dB28AGSj6ETUwG3eIGdAT5pE=
 		</data>
 		<key>PlugIns/ownCloud Intents.appex/PocketSVG_PocketSVG.bundle/Info.plist</key>
 		<data>
@@ -1136,7 +1118,7 @@
 		</data>
 		<key>PlugIns/ownCloud Intents.appex/_CodeSignature/CodeResources</key>
 		<data>
-		WQD53mnFnhfnMvKLvTvqFDSjdjc=
+		hldGXC/Mp4MWkNZpHKwW7flpITI=
 		</data>
 		<key>PlugIns/ownCloud Intents.appex/ar.lproj/Intents.strings</key>
 		<dict>
@@ -1248,7 +1230,7 @@
 		</dict>
 		<key>PlugIns/ownCloud Intents.appex/ownCloud Intents</key>
 		<data>
-		Rau+y7mtWR1T5/ffUbl/hJkgBYE=
+		nlkMsh+ncZFb8ffTXUzI2a8m7mk=
 		</data>
 		<key>PlugIns/ownCloud Intents.appex/pt-BR.lproj/Intents.strings</key>
 		<dict>
@@ -1306,11 +1288,11 @@
 		</dict>
 		<key>PlugIns/ownCloud Share Extension.appex/Assets.car</key>
 		<data>
-		oIFZ9yv3Z5/iTeoc6PkMb8NMXRE=
+		xVDqIR6gYqEmgzqTtZMZaGVQCnE=
 		</data>
 		<key>PlugIns/ownCloud Share Extension.appex/Info.plist</key>
 		<data>
-		AmpHFYujGfqfwVAzX2uKuUaSpQc=
+		kvt8fdNaqaeA6RE8/xAritdTWqw=
 		</data>
 		<key>PlugIns/ownCloud Share Extension.appex/PocketSVG_PocketSVG.bundle/Info.plist</key>
 		<data>
@@ -1342,7 +1324,7 @@
 		</data>
 		<key>PlugIns/ownCloud Share Extension.appex/_CodeSignature/CodeResources</key>
 		<data>
-		Y8xMiGaw2NnWYDAX485Ko8v5Jjk=
+		U9phldyzlfrH4e8VE5+Zks7w3nU=
 		</data>
 		<key>PlugIns/ownCloud Share Extension.appex/ar.lproj/InfoPlist.strings</key>
 		<dict>
@@ -1357,7 +1339,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			aYJzTtUgOD5VIHGXjGLWL3NXRIg=
+			eGMTi7Cvh831w0yLxsaod0TFXwc=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -1393,7 +1375,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			7adFJUw/MuuOunh+kWB5aoMy5UU=
+			vaihMcmCv+KxOGxPtjzs6snRECg=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -1429,7 +1411,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			mYSOaTW1I/uPm5mp/TSamILD8Og=
+			SifhoVrEx/F8+mhMUB2BksH6Ox0=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -1483,7 +1465,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			ZYqGtrrWhLp+JvWpPbZU+pylXcE=
+			9oXqZw9W6rsB2bhyIHZTpn6rnL8=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -1562,7 +1544,7 @@
 		</dict>
 		<key>PlugIns/ownCloud Share Extension.appex/ownCloud Share Extension</key>
 		<data>
-		0olHC6T1whiggeQOJckTkxY+6n8=
+		0l2lekhN/JOcei20++WXOqAs3KE=
 		</data>
 		<key>PlugIns/ownCloud Share Extension.appex/pt-BR.lproj/InfoPlist.strings</key>
 		<dict>
@@ -1577,7 +1559,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			fQjVSt8engOzruYqXooPaXtp1mk=
+			pOec7iFlr8z3z8Onr59M1WFnF4M=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -1613,7 +1595,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			csMkmymXG/7ke4GYGVM6Dm39yLA=
+			zMyCQmipgNkbZH93hEqabrFl67I=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -1631,7 +1613,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			2bBOspQ8w8uZQGHu8X/2/e2vcKE=
+			F3zxa4ideAHQvWKkq0Jf1MgLHUA=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -1649,7 +1631,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			oa5+YHRUjpVO0fDYNqtOIoMCkd0=
+			GHnYc3SAZikdadCOov/vD3pwZPM=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -1710,11 +1692,11 @@
 		</data>
 		<key>ReleaseNotes.plist</key>
 		<data>
-		NDDsMvv/pfUSb07oQJJwIKzjVl4=
+		2iO3m8taRi9x7D38laXCYmVGjy0=
 		</data>
 		<key>ServerListTableViewController.nib</key>
 		<data>
-		tp7344oiEDkeahYUcKm8mRZheP0=
+		UnzrLWQUlBAXidru4qpCbGcDqu8=
 		</data>
 		<key>ar.lproj/InfoPlist.strings</key>
 		<dict>
@@ -1738,7 +1720,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			MBKa3hSODvqh/jxNNBQ0hvlNADo=
+			P9Y8zwNhexnEOSlS1HSwLRU5Mok=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -1812,14 +1794,14 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			BTUiISERnxS0dI8EhCeVtdSGUCU=
+			+/34chYihIyRdXYxWJCHsx3DcYk=
 			</data>
 			<key>optional</key>
 			<true/>
 		</dict>
 		<key>doc/CONFIGURATION.json</key>
 		<data>
-		Af+rZHVS/mpUujHXBDUIMDgGEPo=
+		sNYi/lW5GFyh7Njz8At77fWfwOY=
 		</data>
 		<key>doc/CONFIGURATION.md</key>
 		<data>
@@ -1898,7 +1880,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			CRvZVuDkx9fpfRLmHiPKh7bv7K0=
+			wCAL7R3dvdiCQosKZii9kKwAjkA=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -1979,7 +1961,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			qIKPCUKaFMt2mBfhzn+LrFZBc1U=
+			QBk8L70FVcTRWivk3dBkbWjYqcA=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -2118,7 +2100,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			8FQCHdmeHjCva4SDCho1U0Y6ERU=
+			TKQKzvSojY11pgG2iVixQM+Bgvw=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -2172,7 +2154,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			vBzrkB8GzBoH/jI508yexOqd5kY=
+			trCiTxYsGemRG7uXM/qUXv9p3Ds=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -2199,7 +2181,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			VY+aftXK1NJ6nQKBMHjoqknhbfI=
+			iPSU3l3dd6Cgh3Xz+HcpbBzNSqY=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -2230,7 +2212,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			Yejf//P63QWU9JI7oM+uxvQWlLc=
+			Rvxcidwf42m/SAW8Tj8MD91noYw=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -2283,7 +2265,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			4KlPDeyOay5zC6LCg0bs0vLaO7AVonN0xUQQDXfDmWs=
+			jfnB4wzTFxBzGXzNdClws+D9LotF7m2QBGYFZBnmmow=
 			</data>
 		</dict>
 		<key>Base.lproj/Intents.intentdefinition</key>
@@ -2486,7 +2468,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			1scbnlITiFclohnBW/eus8+a0Ygygchvev8tYqhNnSc=
+			l7X8J/HftUbSERN99xP5wCTTIKd7BBshIjkV9m0rsRo=
 			</data>
 		</dict>
 		<key>Frameworks/openssl.framework/Info.plist</key>
@@ -2514,7 +2496,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			ilotL0KDnQbk1XpzX1yd7CnNlJu5+SbaudVGen0wGtA=
+			8KQBn/2bA4CCtlZmGpKmtIYAAbp9n4FTH9DmtwnabSg=
 			</data>
 		</dict>
 		<key>Frameworks/ownCloudApp.framework/AppleIncRootCertificate.cer</key>
@@ -2528,14 +2510,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			iq5KllZ+PSzTXC+z8HZ3v27G5Ranh5dGxlV7N7CDzIQ=
+			Cc8Q/qh0GNLcwTnbwxhIB9VBHoCGWS6CREQ1hwREC8U=
 			</data>
 		</dict>
 		<key>Frameworks/ownCloudApp.framework/_CodeSignature/CodeResources</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			dufCJoCCfxuLVqyN3hjAWurD4KV+2nFCXTRvCzZeFVk=
+			MJHSwVnwTZPyXO0AMx55ybhpKHRAA5GrhQZUgBdrKLw=
 			</data>
 		</dict>
 		<key>Frameworks/ownCloudApp.framework/ar.lproj/Localizable.strings</key>
@@ -2650,7 +2632,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			tMt/gdFKxUdQajHZO3J1WM7xz+EXHnlv0yernzWZhF4=
+			gQ9EYclJXl1HlfHLcKzjCRK70Om9F0LNfNC3wGummE0=
 			</data>
 		</dict>
 		<key>Frameworks/ownCloudApp.framework/pt-BR.lproj/Localizable.strings</key>
@@ -2718,7 +2700,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			gVFD+dHY2UNoIqgF5oTBZjB07phuWQWltPk2+7U48Hs=
+			WUVCDUq+7osJFLEn0PPEt62/001BJRW3PBVPqa0pDts=
 			</data>
 		</dict>
 		<key>Frameworks/ownCloudAppShared.framework/PocketSVG.LICENSE</key>
@@ -2732,7 +2714,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			A8Ps7E3OZTKN1ALLPqO0sKwWtBZ18sKjPwLUdWEFGD4=
+			oVYkZpda3+Tc1xNYomoDcpVezqN5aLGedh8OKqcnn+M=
 			</data>
 		</dict>
 		<key>Frameworks/ownCloudAppShared.framework/application-pdf.tvg</key>
@@ -2753,7 +2735,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Fn341vZpbRDHWAws+6zBs+Bkyt5Z4TiEUe/8et5R1Ts=
+			F43aQrBluZXQBRY8tlBr8YyJT2FZCCH8/uok42Re9Dk=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -2778,7 +2760,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			9ThAuismfA9ycCjTP4KfBAyGgKM7XOWXUmIMoUNcA5o=
+			m9TjfJEOcKXyYjqToDq+IuuyWxKw3PScCLsILwrCYRY=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -2796,7 +2778,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			X70yqbbi0+QFfZL0azKewBy7ezEDLmw+OZ7R2tuRkyE=
+			NkzmYgdush5xJukbAfIiN26trnZS91PLGyYvT2om+pI=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -2879,7 +2861,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			HcUikYA8pS8NhUxl0UEOkyJg8AcvmSwmYo9u0k3Cvw4=
+			gy3zSbcUROKEL/6V2AlDRCfcdKDZt4LPP3aq0TnTjzw=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -2959,7 +2941,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			s3tgThdMMW8X11bX9F+NTyhkrOJKO8+svHBaU+VQjhI=
+			0q3r1UEzKdn1TMVtrwrGqAqedZn4aMqvV88qR2AMn6Y=
 			</data>
 		</dict>
 		<key>Frameworks/ownCloudAppShared.framework/owncloud-logo.tvg</key>
@@ -2980,7 +2962,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			I7ZlzwP6sqyFu7GygdxWXMmPYn8jisUl5jFgOoE8Mso=
+			a/md3CqOKG/vtZy0ALIt9HUbatyoy+fsU1MeSqurhRU=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -2998,7 +2980,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			5DJOPiLbpQr2WkHk3orjm+1jMY9TGXFcnpfrhBzV/nM=
+			ibD7mYYCDbB7CwSzKyvgGt6kSY5ML0h1B/qLcwRyxcI=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -3007,7 +2989,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			XQm/pMJCr8ZJZrzslWIJXEwJKcGgv0rEl1d02nr2bVw=
+			EVJ5+yubFStlCOKg44TUXptb0oLuzlo//TPqgNNnOfA=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -3051,7 +3033,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Yn1LlzCe1iyQtAkw50wi+ns1GDN35NWb5R3/+x93Lh4=
+			PusLzRl2HsldtQVGQ9GdS/VMIPhCm0WiLWirg8hzX3o=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -3104,7 +3086,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			1MwmyzscT6WeePQ4BAKBvNAtXqsBxB7C0HZAHc8/dMY=
+			67c9CTgOzQjCbM+sjka5BgMU8SZI4qVxmQO1kQNU7o8=
 			</data>
 		</dict>
 		<key>Frameworks/ownCloudSDK.framework/LICENSE</key>
@@ -3118,7 +3100,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			0THdKF1AEDc2I2bIZKQTaP/Rle4aDXtBqMYFxfqEFE8=
+			Rkay91wzCBLY0xrom53ttJ1ddACYm0o34TZrykTHpXI=
 			</data>
 		</dict>
 		<key>Frameworks/ownCloudSDK.framework/cs.lproj/Localizable.strings</key>
@@ -3130,20 +3112,11 @@
 			<key>optional</key>
 			<true/>
 		</dict>
-		<key>Frameworks/ownCloudSDK.framework/de-DE.lproj/Localizable.strings</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			xS0m4rB0tUlA8pd1WD7/MsKjh7QMhQdrzSvqWTgyEEk=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
 		<key>Frameworks/ownCloudSDK.framework/de.lproj/Localizable.strings</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			KCmbdzUKexQmbOJwMq2lDgbPrfdSb6VdBGHwwGjVZ6E=
+			xquexlm4fvXTbGUnpeViywYlsmO9MDr7FF9XSvicQMo=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -3161,7 +3134,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			H3AvGkUGIKzjb1W92zMqmvfsJ7zOfDd3YUI+WUqYrI4=
+			NEdjlyitegjIFo0MA+QmUN41HbZJj+TIYTpgyk5Qvoc=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -3170,7 +3143,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			yU8FdVN9XXo8oVLuGWaVgDUTp1AHBy279B4WN1qIdmQ=
+			qwyTVfjeTMnHMW02BpEYaAZgJL2rnmGwcpqsQjJRnFw=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -3179,7 +3152,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			uLsSG1Aeh6Dy6HqR3C6WoupOngScaw3IXhzGRaWEzc4=
+			MwCmtuJJA1vYILloESCGNYgTTt/BF8PZgoTQTSK7QL0=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -3224,14 +3197,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			82dc5CdWwukwbD5x05xCSqJAmkzFwoKbeSKghR2bA60=
+			PLSpdb2YEade4aPl+XyGuPYgU+B3UTL6NYcIuWKr1/Y=
 			</data>
 		</dict>
 		<key>Frameworks/ownCloudSDK.framework/pt-BR.lproj/Localizable.strings</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			5kRdt95Cv755NJDuLqR6E55QJdHOydjOo/f2INg7mDk=
+			ZNaHOQzzFMDPZ7VfRSUUna3icgPKAAyr+PUClGsjxGI=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -3258,7 +3231,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Eo0+l2SvHgwVhnure5L9/7e0v4UeRTmPdrkbJ6RV6vI=
+			sC9jNZBY0zUrwFpZXanYVoQB85Ojiz+ayOODD9op3Ro=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -3267,7 +3240,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			fVnfrTTQrXsOXtSsoZadxLm88sLvQ0E0PvAaMIGK9JI=
+			+Yzw/scTRpqZs4643uso7gIYTkF4oftjwA2Exn/Au+E=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -3276,7 +3249,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Pm1/jQ8Rgm7x+iKWOnCHCHDHTrtB/fFdCsCj/Bbr//0=
+			wjSXYGxxRHZY3ODN24SvVAntz+WSXJ93QWbHXl7AmDA=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -3292,7 +3265,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			cij5MSms8SFT4p2SM3dRSkYxgMWkNXqd7tiWIfMQZ1I=
+			e3qab1LqYp0sQcbWC5Ql4k9v0vSeCUJf/S1sTHVpESQ=
 			</data>
 		</dict>
 		<key>Frameworks/ownCloudUI.framework/cs.lproj/Localizable.strings</key>
@@ -3304,20 +3277,11 @@
 			<key>optional</key>
 			<true/>
 		</dict>
-		<key>Frameworks/ownCloudUI.framework/de-DE.lproj/Localizable.strings</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			ULi1MgCLPvBjOVhUERssTWvqv64kP6eslmL4CtlWprY=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
 		<key>Frameworks/ownCloudUI.framework/de.lproj/Localizable.strings</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			CnLuzRNmuZ1A4X5NosHqRUEUMYHIDAn/Y2dwIqECtHM=
+			/WRJDvyAO24sdwwGPAkK+leEvkXuiNN8z0LVupFoMZk=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -3326,7 +3290,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			RIz9jORh/DiwOoMTcohkOQEwXrJz6xewKEJGvkuboz0=
+			PC74+ljOEojHxT4jaDRoHgY2v7ZX9nf8f3MVDnF4qt8=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -3344,7 +3308,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Ra+EmXMMByCvKa+LZNZUy+Hlq7F0U9CtJyFh7IAZqwI=
+			SV0kAYwrTVEP5wbvas9gtD4nhQiNhOQXz99ffHo+I7w=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -3398,14 +3362,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			FNNyoloef+cN2Q8dck5sTCtIGtpx2J8+EZiGw+IgwjI=
+			NxsC4BaDY9UF//TgEr4OHpGbIbTWyLsFT/2F7g9XwJs=
 			</data>
 		</dict>
 		<key>Frameworks/ownCloudUI.framework/pt-BR.lproj/Localizable.strings</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			LAT/cun4IuoTd6XRcvaGdeUemQjgezYQT6vWAvGWBuI=
+			dSB1W8O06lFzkNhNZfFDg4VG6GFcCoRzv6x+2mM+h2k=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -3414,7 +3378,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			bS4CG7wZd51DnFO2TxHvHjc+rziM9lvbJro6VNTOwb0=
+			AwTWd1UdHmIe5bqiWsZ3K57LmgP/Se/1N2mmNbnbjjg=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -3423,7 +3387,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			0qkPdJpTNCOdYA3EBDjGYQO5QOUv34/OFzfoyDY1dIU=
+			ZSq608XxJyRPhrra8UDctC0eJdaGroTStvo3kRoVtNY=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -3432,7 +3396,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			F7rexXFj3XndFwol3VTNsWg49HjQea9E6nmfiWW2bqk=
+			vz4GcBfBMBCle9FS+aLccEsyF6GJIBtXp7kw4l2+dyE=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -3450,7 +3414,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Ra+EmXMMByCvKa+LZNZUy+Hlq7F0U9CtJyFh7IAZqwI=
+			tVJ++pbT+fVx8UJOOFHWJSoEFUXbpOlXDv0XIl1wjRg=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -3459,7 +3423,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			QMp1+nPYGc82mLDjzP+dnXjwo1Px8R3he/AVVcwGyG8=
+			F4CTt4Ddys3VI39qcC8q2HkwMUtxtSVUxdbd0psB5yM=
 			</data>
 		</dict>
 		<key>LaunchScreen.storyboardc/Info.plist</key>
@@ -3473,7 +3437,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			yvzX/gYjC2n62Z+8RUbBCjyStgPiPXUMD5F2OwPCH28=
+			gunNKm/8WZAz/eNX2XqC9vy1ANSR/I9xtLtAzyhMdqc=
 			</data>
 		</dict>
 		<key>PLCrashReporter.LICENSE</key>
@@ -3487,7 +3451,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			vN8EqgoXAGTmraHt8yh7YglPL7FbLl1gQR7QCVRBm5M=
+			v9fBDOrbn8hdRwJTyxcw66CA+2xGMtVOzEqh78JHeWI=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -3505,7 +3469,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			bWmb7h/I2+4M9mTy8OwExvPSbV+6s4Sfr5kWT7i57xQ=
+			XZGV0I1O3pio8Ny1F+Vym55A6+Q8jl4rfVHJsD+IIvM=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -3514,7 +3478,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			cgWeXptr35mB48JwIn6ked8mb+VrT5BDu6FNk/K3NrI=
+			t+3ESNUYE0DG3c8klOybagMpqhAqukkCqnHl3ZUSQCg=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -3523,7 +3487,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			ugmQZ4F1sONcTFcNolP7ThXnUzAvc4KJp1cYkSSzYf8=
+			4nG9Qr0pqpTps0CMZNAJ27ZtWp6g6S1wAf0ozQm0atI=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -3532,7 +3496,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			bd39pCGF3J1qRRE5qEh6QU0GOcr1oC5MWtDZMHorsps=
+			TiutMD/A8l/MLOW9UH+uqXix+npa5ZqDNT/hYb8dOdo=
 			</data>
 		</dict>
 		<key>PlugIns/ownCloud File Provider UI.appex/PocketSVG_PocketSVG.bundle/Info.plist</key>
@@ -3588,28 +3552,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			HC2PTMHpLheTuEgcdnsUGJWdfif4WLXbR+hy9h6mLsA=
+			ThG5op4eGSncaVMonr0eED4hQI5indIfmTLJr9rWeac=
 			</data>
 		</dict>
 		<key>PlugIns/ownCloud File Provider UI.appex/ownCloud File Provider UI</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			SlTn2HABiknAjMSwIR8sdf9jrWzhlHY+IkGNCNryOiU=
+			z/fSwSZylr0ylm1sq+otX9jz2Wpx4C4nAsOBlA3qP20=
 			</data>
 		</dict>
 		<key>PlugIns/ownCloud File Provider.appex/Info.plist</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			vSKoneNFNjROeI4VscrFrdBTRWc7PF9JgoZ8Lvh+Yyc=
+			jX1ucaDaVr29VC3kwkZ+pXzJxleijWif1Lubwcp96Co=
 			</data>
 		</dict>
 		<key>PlugIns/ownCloud File Provider.appex/_CodeSignature/CodeResources</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			oOvlLdWjJbOa4NSCs/TYXfsfNbXT64uqWFMceYs6P0o=
+			ZyxOh+cobZCDszCOZx2Jl5MPuREYciI35M+XOGxlowU=
 			</data>
 		</dict>
 		<key>PlugIns/ownCloud File Provider.appex/en.lproj/Localizable.strings</key>
@@ -3634,7 +3598,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			t8mo4DkwsMMpJfPH2AZ4+SepfPOe3ZDPcZTpcz2V6t4=
+			ZfMBlK9jj70S2E3U32aDc/efQ7cS7089k7/yUdgfG0s=
 			</data>
 		</dict>
 		<key>PlugIns/ownCloud Intents.appex/Base.lproj/Intents.intentdefinition</key>
@@ -3650,7 +3614,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			hHtI9NpuS4m+NIgNzfz/nj21usg3L6vNvIx3ZwugAXg=
+			jOPqG9atjiRRwGIGyDRH+2hNZPStDMDIB3PSXQyVa58=
 			</data>
 		</dict>
 		<key>PlugIns/ownCloud Intents.appex/PocketSVG_PocketSVG.bundle/Info.plist</key>
@@ -3706,7 +3670,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			TQJu4jznChxNIcskUsC09ywyNE21SzHxG70TdTkxbXQ=
+			nZ5Bs4vvezqCCYYaXSS709SQMyNat+4QZ0b1jDJcJN8=
 			</data>
 		</dict>
 		<key>PlugIns/ownCloud Intents.appex/ar.lproj/Intents.strings</key>
@@ -3821,7 +3785,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			/Rtaqs2GRQWbn+posvq1JnWoH8AbdTl9yKQyg2Pz8OE=
+			TeiEgkVllgJX+euEBax5a4lz9BpQB3qrHxYc6dk8iQs=
 			</data>
 		</dict>
 		<key>PlugIns/ownCloud Intents.appex/pt-BR.lproj/Intents.strings</key>
@@ -3882,14 +3846,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			r8zhNBl2EBbtw+P8ogIPH7Dzl0cXwmaHBPn/8Lt6UKg=
+			rOhjal87MCenl3lt0HSMXCQAnfp59f7vf/6sRDoyogo=
 			</data>
 		</dict>
 		<key>PlugIns/ownCloud Share Extension.appex/Info.plist</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			n4WauZy4Y8RQDmaIkif1hyOE98qu9BSOCtFlc/4YmoY=
+			U2monruN2tso7ZaQC/q8jC0L2DTvaBsWKr1kGffgOJQ=
 			</data>
 		</dict>
 		<key>PlugIns/ownCloud Share Extension.appex/PocketSVG_PocketSVG.bundle/Info.plist</key>
@@ -3945,7 +3909,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			IQYP6j2UPMmbsFamFWrbom37njIAiVLNEa4aCQlkQms=
+			TuVMwlhTOUM5Gkogz3uqMd3fWYgGz1qFweawaTWcRFo=
 			</data>
 		</dict>
 		<key>PlugIns/ownCloud Share Extension.appex/ar.lproj/InfoPlist.strings</key>
@@ -3961,7 +3925,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Fn341vZpbRDHWAws+6zBs+Bkyt5Z4TiEUe/8et5R1Ts=
+			F43aQrBluZXQBRY8tlBr8YyJT2FZCCH8/uok42Re9Dk=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -3997,7 +3961,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			9ThAuismfA9ycCjTP4KfBAyGgKM7XOWXUmIMoUNcA5o=
+			m9TjfJEOcKXyYjqToDq+IuuyWxKw3PScCLsILwrCYRY=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -4033,7 +3997,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			X70yqbbi0+QFfZL0azKewBy7ezEDLmw+OZ7R2tuRkyE=
+			NkzmYgdush5xJukbAfIiN26trnZS91PLGyYvT2om+pI=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -4087,7 +4051,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			HcUikYA8pS8NhUxl0UEOkyJg8AcvmSwmYo9u0k3Cvw4=
+			gy3zSbcUROKEL/6V2AlDRCfcdKDZt4LPP3aq0TnTjzw=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -4168,7 +4132,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			ysUINzZTQfJUFu5Ig2sNjhmxjJ1tvaQEXsjGIFzEafs=
+			V+HDABpdJxuSV/OzrV6xSmyTqpJPCl4HSsbOlBog8/I=
 			</data>
 		</dict>
 		<key>PlugIns/ownCloud Share Extension.appex/pt-BR.lproj/InfoPlist.strings</key>
@@ -4184,7 +4148,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			I7ZlzwP6sqyFu7GygdxWXMmPYn8jisUl5jFgOoE8Mso=
+			a/md3CqOKG/vtZy0ALIt9HUbatyoy+fsU1MeSqurhRU=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -4220,7 +4184,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			5DJOPiLbpQr2WkHk3orjm+1jMY9TGXFcnpfrhBzV/nM=
+			ibD7mYYCDbB7CwSzKyvgGt6kSY5ML0h1B/qLcwRyxcI=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -4238,7 +4202,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			XQm/pMJCr8ZJZrzslWIJXEwJKcGgv0rEl1d02nr2bVw=
+			EVJ5+yubFStlCOKg44TUXptb0oLuzlo//TPqgNNnOfA=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -4256,7 +4220,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Yn1LlzCe1iyQtAkw50wi+ns1GDN35NWb5R3/+x93Lh4=
+			PusLzRl2HsldtQVGQ9GdS/VMIPhCm0WiLWirg8hzX3o=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -4346,14 +4310,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			l3s+PrAz1TkJukCPkM9xBeI31aV4wiSERCbvlR45ioQ=
+			hHc8UnYgpp4Rv5MRM99MI3uXiYgQd/IzXZuZudk0M1g=
 			</data>
 		</dict>
 		<key>ServerListTableViewController.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			r1sz1skOKkBOGLb/G/7KZaLfq+EofEjjY3yoGs+Gp/E=
+			gAZZzGeMFDWA2FG2k7yXe8N99RfoyopxrPU4CcLVI04=
 			</data>
 		</dict>
 		<key>ar.lproj/InfoPlist.strings</key>
@@ -4378,7 +4342,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Z03XYD/ZtZ/EC2DqKR0l8C5K3NLEoa8MnydB4JxSRTQ=
+			hKaY0l92aJ4QXylTN3oGYQUHNpCm8AtLy3j1lwzYqQQ=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -4467,7 +4431,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			7feVd5CNatCZgMVr/RGRFa4+retTFqe6jR76bXPpubo=
+			V5xWcN9Yuzbyv12s4u0d6PGp/xfNVSF2DI4+UlyXlQE=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -4476,7 +4440,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			MSh4BSI/gsQ1sef0rfOby4gRnQjSDWmqnIvJoKea9NE=
+			KXFsBc1UsP720hocYNWurCIqw28TmdNsFMb8d0sZFrM=
 			</data>
 		</dict>
 		<key>doc/CONFIGURATION.md</key>
@@ -4577,7 +4541,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			F5bWJC5a6FPPzJ2XqqUdX3/DmIhu2y3X1PqhMFb5JNM=
+			/6ZKp3SBuSAUNeDXkj7LrjdSoIKM5oxnS1jV8ygNa+M=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -4658,7 +4622,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			ZyZDXl6wk9uE2+OhkwwNJeLlPIQI63a463Kce0MVjfk=
+			ET0QDHEO9Sd952TnzDQbRBZn3bhbiAjHNxP25A//QT8=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -4800,7 +4764,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			rNfzzr8M1TpK1ydbQy2YpGNB9mH4zSHfmkcoJOsYIws=
+			hHR6IrvYV16PLVkmhGx0JAGbNT9omi+tzXCjE8ZWH3k=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -4854,7 +4818,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			uSiFwPsVQ2dpOi//GMHbTUCNCXtm24s6Q1prQ+OhrvA=
+			qh55E1FNTubgWCj0OAUDaQ9/9lyVR1RAdy9QMRtYe4Q=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -4881,7 +4845,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			eTmret/yD4I8iuheMQUgQe5wd8u47x1kxVPpgOFVchc=
+			D+UBvpGaP6+GC60apVlajiKyYd9i8QKDpwZ3sXmSkmI=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -4915,7 +4879,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			2qWC0BlLLpPKcJVINlCY/R8gBG9t7w0ev3000H+QbaU=
+			soMPx72D8Hcy1KZXF2Z/g5JEAl7nEHeJg6TtaLd0Asc=
 			</data>
 			<key>optional</key>
 			<true/>

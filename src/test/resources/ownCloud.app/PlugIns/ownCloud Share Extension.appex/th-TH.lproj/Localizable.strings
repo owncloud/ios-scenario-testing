@@ -71,8 +71,12 @@
 "Access Files" = "เข้าถึงไฟล์";
 "Logout" = "ออกจากระบบ";
 
+/* Bookmark Info */
+"Bookmark Metadata" = "Bookmark Metadata";
+
 /* Client */
 "Browse" = "เรียกดู";
+"Files" = "ไฟล์";
 "Disconnect" = "ตัดการเชื่อมต่อ";
 "Connecting…" = "กำลังเชื่อมต่อ...";
 "Connected." = "เชื่อมต่อแล้ว";
@@ -95,20 +99,33 @@
 "kind" = "ประเภท";
 "size" = "ขนาด";
 "date" = "วันที่";
-"Search this folder" = "ค้นหาโฟลเดอร์นี้";
+"Search folder" = "Search folder";
+"Search account" = "Search account";
 "Pending" = "อยู่ระหว่างดำเนินการ";
 "Show parent paths" = "แสดงพาธ";
+"Reveal in folder" = "Reveal in folder";
 
 "%@ of %@ used" = "มีทั้งหมด %@ ใช้ไปแล้ว%@";
 "Total: %@" = "ทั้งหมด: %@";
 "%@ item | " = "%@ รายการ | ";
 "%@ items | " = "%@ รายการ";
 
+"Show more results" = "Show more results";
+
+/* Search scope */
+"Search scope" = "Search scope";
+"Toggle Search Scope" = "Toggle Search Scope";
+
 /* Static Login Setup */
 "Server error" = "ข้อผิดพลาดของเซิร์ฟเวอร์";
 "The server doesn't support any allowed authentication method." = "เซิร์ฟเวอร์ไม่รองรับวิธีการตรวจสอบการอนุญาตสิทธิ์ใดๆ";
 "The server doesn't support any known and allowed authentication method found." = "เซิร์ฟเวอร์ไม่รองรับวิธีการตรวจสอบสิทธิ์ในปัจจุบัน";
 "Retry detection" = "ลองค้นหาอีกครั้ง";
+"Enter your username and password" = "Enter your username and password";
+"Please log in to authorize the app." = "Please log in to authorize the app.";
+"Welcome to %@" = "Welcome to %@";
+"Please enter a server URL" = "Please enter a server URL";
+"Please pick a profile to begin setup" = "Please pick a profile to begin setup";
 
 /* Single Account */
 "You are connected as\n%@" = "คุณเชื่อมต่อด้วยบัญชี %@";
@@ -208,6 +225,7 @@
 "After 1 minute" = "หลังจากผ่านไป 1 นาที";
 "After 5 minutes" = "หลังจากผ่านไป 5 นาที";
 "After 30 minutes" = "หลังจากผ่านไป 30 นาที";
+"If you choose \"Immediately\" the App will be locked, when it is no longer in foreground." = "หากคุณเลือก \"ทันที\" แอปจะถูกล็อกเมื่อไม่ได้อยู่เบื้องหน้าอีกต่อไป";
 "Please configure an email account" = "โปรดกำหนดค่าบัญชีอีเมล";
 "You need to configure an email account first to be able to send emails." = "คุณต้องกำหนดค่าบัญชีอีเมลก่อนจึงจะสามารถส่งอีเมลได้";
 "Do you want to open the following URL?" = "คุณต้องการเปิด URL ต่อไปนี้?";
@@ -348,6 +366,10 @@
 "Favorited" = "รายการโปรด";
 "Favorite item" = "รายการโปรด";
 "Unfavorite item" = "รายการที่ไม่ชอบ";
+"Presentation Mode" = "โหมดการนำเสนอ";
+"Enabling presentation mode will prevent the display from sleep mode until the view is closed." = "เปิดใช้งานโหมดการนำเสนอ เพื่อป้องกันไม่ให้จอเข้าสู่โหมดสลีปจนกว่าจะปิดมุมมอง";
+"Enable" = "เปิดใช้งาน";
+"Exit Full Screen" = "ออกจากโหมดเต็มหน้าจอ";
 
 /* Directory Picker Messages */
 "Move here" = "ย้ายมาที่นี่";
@@ -361,6 +383,13 @@
 "File couldn't be opened" = "ไม่สามารถเปิดไฟล์ได้";
 "Connecting..." = "กำลังเชื่อมต่อ ...";
 
+"File" = "ไฟล์";
+"%@ was updated" = "%@ was updated";
+"Would you like to view the updated version?" = "Would you like to view the updated version?";
+"Show new version" = "Show new version";
+"Refresh without asking" = "Refresh without asking";
+"Ignore updates" = "Ignore updates";
+
 /* PDF Viewer */
 "Resume" = "ดำเนินการต่อ";
 "Go to page" = "ไปยังหน้า";
@@ -371,6 +400,9 @@
 "The entered page number doesn't exist" = "ไม่มีหมายเลขหน้าที่ป้อน";
 "Search PDF" = "ค้นหา PDF";
 "Outline" = "เค้าโครง";
+"Find Next" = "ค้นหาถัดไป";
+"Find Previous" = "ค้นหาก่อนหน้า";
+"Close Search" = "ปิดการค้นหา";
 
 /* Photo Upload */
 "Upload" = "อัปโหลดไฟล์";
@@ -497,6 +529,10 @@
 "Private Link" = "ลิงก์ส่วนบุคคล";
 "Created Public Link" = "สร้างลิงก์สาธารณะ";
 "URL was copied to the clipboard" = "คัดลอก URL ไปยังคลิปบอร์ดแล้ว";
+"%@ is not available, when this account is offline. Please open the app and log into your account before you can do this action." = "%@ ไม่สามารถใช้งานได้เมื่อบัญชีนี้ออฟไลน์ โปรดเปิดแอปและลงชื่อเข้าใช้บัญชีของคุณก่อนจึงจะสามารถดำเนินการนี้ได้";
+"%@ is not available for this item." = "%@ ไม่สามารถใช้ได้กับรายการนี้";
+"Share with user/group" = "แชร์กับผู้ใช้หรือกลุ่ม";
+"Share link" = "แชร์ลิงก์";
 
 /* Quick Access view */
 "Quick Access" = "เข้าถึงด่วน";
@@ -621,6 +657,13 @@
 "Previous" = "ก่อนหน้า";
 "Favorite" = "รายการโปรด";
 "Cut" = "ตัด";
+"Play/Pause" = "เล่น / หยุดชั่วคราว";
+"Skip Back" = "ข้ามกลับ";
+"Skip Ahead" = "ข้ามไปข้างหน้า";
+"Go to Beginning" = "ไปที่จุดเริ่มต้น";
+"Mute/Unmute" = "ปิดเสียง / เปิดเสียง";
+"Full Screen" = "เต็มจอ";
+"Switch Theme Style" = "Switch Theme Style";
 
 /* Markup */
 "How should this file be saved?" = "ไฟล์นี้ควรถูกบันทึก?";
@@ -845,3 +888,11 @@
 "Limited Photo Access" = "จำกัดการเข้าถึงภาพถ่าย";
 "Access for the media selected for upload is limited" = "เข้าถึงสื่อที่เลือกสำหรับการอัปโหลดมีจำกัด";
 "No Access to the media selected for upload" = "ไม่มีการเข้าถึงสื่อที่เลือกสำหรับการอัปโหลด";
+
+/* macOS support */
+"Passcode protection is not supported on this device.\nPlease disable passcode lock in the app settings." = "อุปกรณ์นี้ไม่รองรับการป้องกันรหัสผ่าน\nโปรดปิดการใช้งานการล็อกรหัสผ่านในการตั้งค่าแอป";
+
+/* MDM settings push */
+"New settings received from MDM" = "การตั้งค่าใหม่ที่ได้รับจาก MDM";
+"Tap to quit the app." = "แตะเพื่อออกจากแอป";
+"Tap to launch the app." = "แตะเพื่อเปิดแอป";

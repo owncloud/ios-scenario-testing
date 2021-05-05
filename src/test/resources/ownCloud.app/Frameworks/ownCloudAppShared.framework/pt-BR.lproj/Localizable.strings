@@ -34,7 +34,7 @@
 "Cancel" = "Cancelar";
 "Approve" = "Aprovar";
 "Error" = "Erro";
-"Issues" = "Issues";
+"Issues" = "Problemas";
 "Review Connection" = "Rever conexão";
 "Authenticated via" = "Autenticado via";
 "Authenticated as %@ via %@" = "Autenticado como %@ via %@";
@@ -50,7 +50,7 @@
 "Certificate may have issues, but was accepted by user.\nOpen 'Certificate Details' for more informations." = "O certificado pode ter problemas, mas foi aceito pelo usuário.\nAbra \"Detalhes do certificado\" para mais informações.";
 "If you 'Continue', you will be prompted to allow the '%@' App to open OAuth2 login where you can enter your credentials." = "Se você 'Continuar', você será solicitado a permitir que o '%@' App para abrir o login do OAuth2, onde você pode inserir suas credenciais.";
 
-"Error opening %@" = "Error opening %@";
+"Error opening %@" = "Erro abrindo %@";
 
 "Contacting server…" = "Conectando ao servidor...";
 "Authenticating…" = "Autenticando...";
@@ -66,13 +66,17 @@
 "Server Username" = "Usuário do Servidor";
 "Show accounts" = "Exibir contas";
 "Setup complete" = "Configuração completa";
-"Edit Login" = "Edit Login";
+"Edit Login" = "Editar Login";
 "Manage Storage" = "Gerenciar Armazenamento ";
-"Access Files" = "Access Files";
-"Logout" = "Logout";
+"Access Files" = "Arquivos de Acesso";
+"Logout" = "Sair";
+
+/* Bookmark Info */
+"Bookmark Metadata" = "Metadados de Favoritos ";
 
 /* Client */
 "Browse" = "Procurar";
+"Files" = "Arquivos";
 "Disconnect" = "Desconectar";
 "Connecting…" = "Conectando...";
 "Connected." = "Conectado.";
@@ -95,28 +99,41 @@
 "kind" = "tipo";
 "size" = "tamanho";
 "date" = "data";
-"Search this folder" = "Procurar no diretório atual";
+"Search folder" = "Pesquisar pasta";
+"Search account" = "Pesquisar conta ";
 "Pending" = "Pendente";
 "Show parent paths" = "Mostrar caminhos pai";
+"Reveal in folder" = "Revelar na pasta";
 
 "%@ of %@ used" = "%@ de %@ usados";
 "Total: %@" = "Total: %@";
 "%@ item | " = "%@ item | ";
 "%@ items | " = "%@ itens | ";
 
+"Show more results" = "Mostrar mais resultados ";
+
+/* Search scope */
+"Search scope" = "Escopo de pesquisa ";
+"Toggle Search Scope" = "Alternar Escopo de Pesquisa ";
+
 /* Static Login Setup */
 "Server error" = "Erro no servidor";
 "The server doesn't support any allowed authentication method." = "O servidor não suporta nenhum método de autenticação permitido.";
 "The server doesn't support any known and allowed authentication method found." = "O servidor não suporta e não foi encontrado nenhum método de autenticação conhecido e permitido.";
 "Retry detection" = "Tentar detecção novamente";
+"Enter your username and password" = "Digite seu nome de usuário e senha ";
+"Please log in to authorize the app." = "Faça login para autorizar o aplicativo.";
+"Welcome to %@" = "Bem-vindo ao %@";
+"Please enter a server URL" = "Insira um URL de servidor";
+"Please pick a profile to begin setup" = "Escolha um perfil para iniciar a configuração";
 
 /* Single Account */
 "You are connected as\n%@" = "Você está conectado como\n%@";
 "Login" = "Login";
-"Wrong URL" = "Wrong URL";
+"Wrong URL" = "URL errada";
 "Please enter a valid URL" = "Por favor, insira um URL válido";
-"Missing Profile URL" = "Missing Profile URL";
-"The Profile '%@' does not have a URL configured.\nPlease provide a URL via configuration or MDM." = "The Profile '%@' does not have a URL configured.\nPlease provide a URL via configuration or MDM.";
+"Missing Profile URL" = "URL de perfil ausente";
+"The Profile '%@' does not have a URL configured.\nPlease provide a URL via configuration or MDM." = "O Perfil '%@' não tem URL configurado.\nForneça um URL por meio da configuração ou MDM.";
 
 /* Client Messages */
 "Empty folder" = "Pasta vazia";
@@ -168,7 +185,7 @@
 "Do you really want to disconnect from your '%@' account?" = "Você realmente quer conectar '%@' da sua conta?";
 "This will remove all locally stored file copies from your device." = "Isso removerá todas as cópias de arquivos armazenados localmente do seu dispositivo.";
 "Really delete '%@'?" = "Realmente excluir '%@'?";
-"Really logout from '%@'?" = "Really logout from '%@'?";
+"Really logout from '%@'?" = "Deseja realmente sair de '%@'?";
 "This will also delete all locally stored file copies." = "Isto também irá excluir todas as cópias locais dos arquivo salvos.";
 "Delete" = "Excluir";
 "Remove" = "Remover";
@@ -201,13 +218,14 @@
 "Privacy Policy" = "Política de Privacidade";
 "Terms Of Use" = "Termos de Uso";
 "Acknowledgements" = "Agradecimentos";
-"Portions of this app may utilize the following copyrighted material, the use of which is hereby acknowledged." = "Portions of this app may utilize the following copyrighted material, the use of which is hereby acknowledged.";
+"Portions of this app may utilize the following copyrighted material, the use of which is hereby acknowledged." = "Partes deste aplicativo podem utilizar o seguinte material protegido por direitos autorais, cujo uso é aqui reconhecido.";
 "Video upload path" = "Caminho para vídeos enviados";
 "Photo upload path" = "Caminho para envio de imagens";
 "Immediately" = "Imediatamente";
 "After 1 minute" = "Após 1 minuto";
 "After 5 minutes" = "Após 5 minutos";
 "After 30 minutes" = "Após 30 minutos";
+"If you choose \"Immediately\" the App will be locked, when it is no longer in foreground." = "Se você escolher \"Imediatamente\", o aplicativo será bloqueado, quando não estiver mais em primeiro plano. ";
 "Please configure an email account" = "Por favor, configure uma conta de email";
 "You need to configure an email account first to be able to send emails." = "Você precisa configurar uma conta de e-mail primeiro para poder enviar e-mails.";
 "Do you want to open the following URL?" = "Você deseja abrir o seguinte endereço URL?";
@@ -304,7 +322,7 @@
 "Please try again in %@" = "Por favor, tente novamente em %@";
 "Unlock %@" = "Desbloquear %@";
 "Biometric authentication failed" = "Autenticação biométrica falhou";
-"You are required to set the passcode" = "You are required to set the passcode";
+"You are required to set the passcode" = "Você deve definir a senha";
 
 /* Certificate management */
 
@@ -348,6 +366,10 @@
 "Favorited" = "Favorito";
 "Favorite item" = "Item favorito";
 "Unfavorite item" = "Item não favorito";
+"Presentation Mode" = "Modo de Apresentação ";
+"Enabling presentation mode will prevent the display from sleep mode until the view is closed." = "Habilitar o modo de apresentação impedirá que o monitor entre no modo de hibernação até que a visualização seja fechada. ";
+"Enable" = "Habilitar";
+"Exit Full Screen" = "Sair da Tela cheia";
 
 /* Directory Picker Messages */
 "Move here" = "Mova aqui";
@@ -361,6 +383,13 @@
 "File couldn't be opened" = "O arquivo não pode ser aberto";
 "Connecting..." = "Conectando...";
 
+"File" = "Arquivo";
+"%@ was updated" = "%@ foi atualizado";
+"Would you like to view the updated version?" = "Deseja ver a versão atualizada?";
+"Show new version" = "Mostrar nova versão";
+"Refresh without asking" = "Atualizar sem pedir";
+"Ignore updates" = "Ignore as atualizações";
+
 /* PDF Viewer */
 "Resume" = "Resumir";
 "Go to page" = "Ir para página";
@@ -371,6 +400,9 @@
 "The entered page number doesn't exist" = "A página inserida não existe";
 "Search PDF" = "Pesquisar PDF";
 "Outline" = "Esboço";
+"Find Next" = "Encontre o próximo ";
+"Find Previous" = "Encontre o Anterior ";
+"Close Search" = "Fechar Pesquisa ";
 
 /* Photo Upload */
 "Upload" = "Enviar";
@@ -497,6 +529,10 @@
 "Private Link" = "Linque Privado";
 "Created Public Link" = "Criar um Linque Público";
 "URL was copied to the clipboard" = "A URL foi copiada para a área de transferência";
+"%@ is not available, when this account is offline. Please open the app and log into your account before you can do this action." = "%@ não está disponível, quando esta conta está offline. Abra o aplicativo e faça login em sua conta antes de realizar esta ação. ";
+"%@ is not available for this item." = "%@ não está disponível para este item.";
+"Share with user/group" = "Compartilhar com usuário/grupo ";
+"Share link" = "Compartilhar link";
 
 /* Quick Access view */
 "Quick Access" = "Acesso Rápido";
@@ -600,7 +636,7 @@
 "Proceed" = "Prosseguir";
 "New in %@" = "Novo em %@";
 "Thank you for using %@.\nIf you like our App, please leave an AppStore review.\n❤️" = "Obrigado por usar %@.\nSe você gosta do nosso aplicativo, deixe um comentário na AppStore.\n❤️";
-"Thank you for using %@.\n" = "Thank you for using %@.\n";
+"Thank you for using %@.\n" = "Obrigado por usar %@.\n";
 
 /* Key Commands */
 "Select Next" = "Selecionar Próximo";
@@ -621,6 +657,13 @@
 "Previous" = "Anterior";
 "Favorite" = "Favorito";
 "Cut" = "Cortar";
+"Play/Pause" = "Rodar/Pausar";
+"Skip Back" = "Não Retornar";
+"Skip Ahead" = "Pular À frente ";
+"Go to Beginning" = "Vá para o começo ";
+"Mute/Unmute" = "Sem som/Com som ";
+"Full Screen" = "Tela cheia ";
+"Switch Theme Style" = "Mudar o Estilo do Tema";
 
 /* Markup */
 "How should this file be saved?" = "Como esse arquivo deve ser salvo?";
@@ -660,7 +703,7 @@
 "Error restoring purchases" = "Erro ao restaurar compras";
 "Error loading product info from App Store"= "Erro ao carregar as informações do produto na App Store";
 "Purchase failed" = "A compra falhou";
-"More information" = "More information";
+"More information" = "Mais Informações";
 
 /* Licensing: Enterprise */
 "Enterprise" = "Empreendimento";
@@ -691,8 +734,8 @@
 "trial" = "teste";
 "purchase" = "compra";
 "subscription" = "inscrição";
-"Photo Pro Features" = "Photo Pro Features";
-"Image metadata, extended upload options" = "Image metadata, extended upload options";
+"Photo Pro Features" = "Recursos do Foto Pro";
+"Image metadata, extended upload options" = "Metadados de imagem, opções estendidas de envio";
 "Purchase" = "Compra ";
 "Subscribe" = "Assinar";
 
@@ -717,7 +760,7 @@
 "Migrated" = "Migrado";
 "Failed to migrate" = "Falha ao migrar";
 "Failed to access legacy user data" = "Falha ao acessar dados antigos do usuário";
-"The app was upgraded to a new version. Below there is an overview of all migrated accounts." = "The app was upgraded to a new version. Below there is an overview of all migrated accounts.";
+"The app was upgraded to a new version. Below there is an overview of all migrated accounts." = "O aplicativo foi atualizado para uma nova versão. Abaixo, há uma visão geral de todas as contas migradas.";
 
 /* Misc. accessibility */
 "Enter multiple selection" = "Entrar com seleção múltipla";
@@ -732,14 +775,14 @@
 /* Photo meta-data */
 "Image metadata" = "Image metadados";
 "Image details" = "Detalhes da Imagem ";
-"Profile" = "Profile";
+"Profile" = "Perfil";
 "Size" = "Tamanho";
-"Density" = "Density";
-"Color model" = "Color model";
-"%@ (%d bits/channel)" = "%@ (%d bits/channel)";
+"Density" = "Densidade";
+"Color model" = "Modelo de cores";
+"%@ (%d bits/channel)" = "%@ (%d bits/canal)";
 "Histogram" = "Histograma ";
 
-"Camera details" = "Camera details";
+"Camera details" = "Detalhes da câmera";
 "Capture settings" = "Configurações de captura ";
 "Time" = "Horário";
 "EXIF aux info" = "EXIF aux info";
@@ -747,25 +790,25 @@
 "TIFF" = "TIFF";
 
 "Lens make" = "Marca da lente";
-"Lens model" = "Lens model";
-"Lens info" = "Lens info";
+"Lens model" = "Modelo da lente";
+"Lens info" = "Informação da lente";
 "Focal length" = "Comprimento focal";
-"Focal length @ 35 mm" = "Focal length @ 35 mm";
+"Focal length @ 35 mm" = "Distância focal @ 35 mm";
 
-"Shutter speed" = "Shutter speed";
-"Aperture" = "Aperture";
+"Shutter speed" = "Velocidade do obturador";
+"Aperture" = "Abertura";
 "ISO" = "ISO";
 
 /* EXIF: exposure program */
 "Program" = "Programa";
-"Not defined" = "Not defined";
+"Not defined" = "Não definido";
 "Manual" = "Manual";
 "Normal" = "Normal";
-"Aperture priority" = "Aperture priority";
+"Aperture priority" = "Prioridade de abertura";
 "Shutter priority" = "Prioridade do obturador ";
-"Creative" = "Creative";
+"Creative" = "Criativa";
 "Action" = "Ação";
-"Portrait" = "Portrait";
+"Portrait" = "Retrato";
 "Landscape" = "Panorama ";
 
 /* EXIF: exposure metering mode */
@@ -773,44 +816,44 @@
 "unknown" = "desconhecido";
 "Average" = "Média ";
 "CenterWeightedAverage" = "Média Ponderada Central ";
-"Spot" = "Spot";
-"MultiSpot" = "MultiSpot";
+"Spot" = "Local";
+"MultiSpot" = "MultiLocais";
 "Pattern" = "Padrão";
-"Partial" = "Partial";
+"Partial" = "Parcial";
 
 /* EXIF: flash mode */
 "Flash" = "Instantânea";
-"Fired" = "Fired";
+"Fired" = "Disparado";
 "Didn't fire" = "Não disparou ";
-"No strobe return detection" = "No strobe return detection";
-"Strobe return light not detected" = "Strobe return light not detected";
+"No strobe return detection" = "Sem detecção de retorno estroboscópio";
+"Strobe return light not detected" = "Luz de retorno estroboscópica não detectada";
 "Strobe return light detected" = "Luz estroboscópica de retorno detectada ";
 "Compulsory flash firing" = "Disparo de flash obrigatório ";
 "Compulsory flash supression" = "Supressão de flash obrigatória ";
 "Auto mode" = "Modo automático";
-"Red eye detection supported" = "Red eye detection supported";
+"Red eye detection supported" = "Compatível com detecção de olhos vermelhos";
 "not present" = "não presente ";
 
 /* EXIF: white balance */
-"White balance" = "White balance";
+"White balance" = "Balanço do branco";
 "Auto" = "Auto";
 "Manual" = "Manual";
 
 "Exposure bias" = "Viés de exposição ";
 "Uncalibrated" = "Descalibrado ";
 "Original date" = "Data original ";
-"Digitized date" = "Digitized date";
+"Digitized date" = "Data digitalizada";
 
 "Color space" = "Espaço colorido ";
 
 /* EXIF: aux info */
 "Lens ID" = "ID da lente ";
 "Lens serial" = "Série da lente";
-"Serial number" = "Serial number";
-"Flash compensation" = "Flash compensation";
+"Serial number" = "Número de série";
+"Flash compensation" = "Compensação instantânea";
 "Owner" = "Proprietário";
 "Firmware" = "Firmware";
-"Keywords" = "Keywords";
+"Keywords" = "PalavrasChave";
 "Copyright" = "Direitos Autorais";
 
 /* IPTC meta data */
@@ -820,14 +863,14 @@
 "Description" = "Descrição";
 
 /* IPTC photometric interpretation */
-"Photometric interpretation" = "Photometric interpretation";
+"Photometric interpretation" = "Interpretação fotométrica";
 "none" = "nenhum";
 "RGB" = "RGB";
 "YCbCr" = "YCbCr";
 
 /* EXIF: gps position data */
 "GPS Location" = "Localização GPS ";
-"Coordinates" = "Coordinates";
+"Coordinates" = "Coordenadas";
 "Altitude" = "Altitude";
 "Place" = "Local";
 "E" = "E";
@@ -836,12 +879,20 @@
 "S" = "S";
 
 /* Pro photo upload settings */
-"Extended upload settings" = "Extended upload settings";
-"Prefer unedited photos" = "Prefer unedited photos";
+"Extended upload settings" = "Configurações de envio estendidas";
+"Prefer unedited photos" = "Prefira fotos não editadas";
 "Prefer RAW photos" = "Prefira fotos RAW ";
-"Prefer original videos" = "Prefer original videos";
+"Prefer original videos" = "Prefira vídeos originais";
 
 /* Limited photo library access */
-"Limited Photo Access" = "Limited Photo Access";
-"Access for the media selected for upload is limited" = "Access for the media selected for upload is limited";
-"No Access to the media selected for upload" = "No Access to the media selected for upload";
+"Limited Photo Access" = "Acesso Limitado a Fotos";
+"Access for the media selected for upload is limited" = "O acesso para a mídia selecionada para envio é limitado";
+"No Access to the media selected for upload" = "Sem acesso à mídia selecionada para envio";
+
+/* macOS support */
+"Passcode protection is not supported on this device.\nPlease disable passcode lock in the app settings." = "A proteção por senha não é compatível com este dispositivo. \nDesative o bloqueio por senha nas configurações do aplicativo. ";
+
+/* MDM settings push */
+"New settings received from MDM" = "Novas configurações recebidas do MDM ";
+"Tap to quit the app." = "Toque para sair do aplicativo. ";
+"Tap to launch the app." = "Toque para iniciar o aplicativo. ";

@@ -34,7 +34,7 @@
 "Cancel" = "إلغاء";
 "Approve" = "موافقة";
 "Error" = "خطأ";
-"Issues" = "Issues";
+"Issues" = "مسائل";
 "Review Connection" = "مراجعة الاتصال";
 "Authenticated via" = "تمت المصادقة عبر";
 "Authenticated as %@ via %@" = "تمت مصادقة %@ عبر %@";
@@ -50,7 +50,7 @@
 "Certificate may have issues, but was accepted by user.\nOpen 'Certificate Details' for more informations." = "قد تكون هناك مشكلة بالشهادة، ولكن المستخدم وافق عليها.\nافتح 'تفاصيل الشهادة' لمزيد من المعلومات.";
 "If you 'Continue', you will be prompted to allow the '%@' App to open OAuth2 login where you can enter your credentials." = "إذا قررت 'الاستمرار'، فسيُطلب منك السماح لتطبيق '%@' بفتح ملف تسجيل الدخول إلى OAuth2 حيث يُمكنك إدخال بيانات اعتمادك.";
 
-"Error opening %@" = "Error opening %@";
+"Error opening %@" = "خطأ فتح %@";
 
 "Contacting server…" = "جارٍ الاتصال بالخادم…";
 "Authenticating…" = "جارٍ المصادقة…";
@@ -66,13 +66,17 @@
 "Server Username" = "اسم مستخدم الخادم";
 "Show accounts" = "إظهار الحسابات";
 "Setup complete" = "إعداد كامل";
-"Edit Login" = "Edit Login";
-"Manage Storage" = "Manage Storage";
-"Access Files" = "Access Files";
-"Logout" = "Logout";
+"Edit Login" = "تحرير تسجيل الدخول";
+"Manage Storage" = "ادارة المساحة";
+"Access Files" = "ملفات الوصول";
+"Logout" = " تسجيل الخروج";
+
+/* Bookmark Info */
+"Bookmark Metadata" = "Bookmark Metadata";
 
 /* Client */
 "Browse" = "تصفح";
+"Files" = "ملفات";
 "Disconnect" = "قطع الاتصال";
 "Connecting…" = "جارٍ الاتصال...";
 "Connected." = "متصل.";
@@ -85,7 +89,7 @@
 "Started…" = "تم البدء…";
 "Contents from cache." = "محتويات من ذاكرة التخزين المؤقتة.";
 "Waiting for server response…" = "جارٍ انتظار استجابة الخادم…";
-"This folder no longer exists." = "لم يعد هذا المجلد مفقودًا.";
+"This folder no longer exists." = "لم يعد هذا المجلد موجودًا.";
 "Everything up-to-date." = "كل الأشياء محدثة.";
 "Please wait…" = "يُرجى الانتظار…";
 "Sort by %@" = "فرز حسب %@";
@@ -95,28 +99,41 @@
 "kind" = "النوع";
 "size" = "الحجم";
 "date" = "التاريخ";
-"Search this folder" = "بحث في هذا المجلد";
+"Search folder" = "Search folder";
+"Search account" = "Search account";
 "Pending" = "تعليق";
 "Show parent paths" = "عرض المسارات الأصلية";
+"Reveal in folder" = "Reveal in folder";
 
 "%@ of %@ used" = "%@ من %@ مستخدم";
 "Total: %@" = "إجمالي: %@";
 "%@ item | " = "%@ عنصر |";
 "%@ items | " = "%@عناصر |";
 
+"Show more results" = "Show more results";
+
+/* Search scope */
+"Search scope" = "Search scope";
+"Toggle Search Scope" = "Toggle Search Scope";
+
 /* Static Login Setup */
 "Server error" = "خطا في الخادم";
 "The server doesn't support any allowed authentication method." = "الخادم لا يدعم أي طريقة مصادقة مسموح بها.";
 "The server doesn't support any known and allowed authentication method found." = "الخادم لا يدعم أي طريقة مصادقة موجودة معروفة ومسموح بها.";
 "Retry detection" = " أعد محاولة الكشف";
+"Enter your username and password" = "Enter your username and password";
+"Please log in to authorize the app." = "Please log in to authorize the app.";
+"Welcome to %@" = "Welcome to %@";
+"Please enter a server URL" = "Please enter a server URL";
+"Please pick a profile to begin setup" = "Please pick a profile to begin setup";
 
 /* Single Account */
-"You are connected as\n%@" = "You are connected as\n%@";
+"You are connected as\n%@" = "أنت متصل كما%@";
 "Login" = "تسجيل الدخول";
-"Wrong URL" = "Wrong URL";
-"Please enter a valid URL" = "Please enter a valid URL";
-"Missing Profile URL" = "Missing Profile URL";
-"The Profile '%@' does not have a URL configured.\nPlease provide a URL via configuration or MDM." = "The Profile '%@' does not have a URL configured.\nPlease provide a URL via configuration or MDM.";
+"Wrong URL" = "رابط خاطئ";
+"Please enter a valid URL" = "أدخل رابط صحيح من فضلك";
+"Missing Profile URL" = "عنوان URL للملف الشخصي مفقود";
+"The Profile '%@' does not have a URL configured.\nPlease provide a URL via configuration or MDM." = "لم يتم تكوين عنوان URL للملف الشخصي  '%@' .يرجى تقديم عنوان URL عبر الإعدادات أو MDM.";
 
 /* Client Messages */
 "Empty folder" = "مجلد فارغ";
@@ -146,7 +163,7 @@
 "Access denied" = "تم رفض الوصول";
 "The connection's access token has expired or become invalid. Sign in again to re-gain access." = "انتهت صلاحية رمز الوصول للاتصال أو أصبح غير صالح. أعد تسجيل الدخول مرة أخرى للحصول على تصريح بوصول.";
 "No authentication data has been found for this connection." = "لم يتم العثور على بيانات مصادقة لهذا الاتصال.";
-"Authentication with %@ is no longer allowed. Re-authentication needed." = "Authentication with %@ is no longer allowed. Re-authentication needed.";
+"Authentication with %@ is no longer allowed. Re-authentication needed." = "المصادقة مع%@ لم يعد مسموحا بها. يلزم إعادة المصادقة.";
 "Sign in" = "تسجيل الدخول";
 "Continue offline" = "الاستمرار دون اتصال بالإنترنت";
 "Media upload in the previous session was incomplete since the application was terminated" = "لم يكتمل تحميل الوسائط في الجلسة السابقة بسبب إنهاء التطبيق";
@@ -168,7 +185,7 @@
 "Do you really want to disconnect from your '%@' account?" = "هل تريد حقًا تسجيل الخروج من حسابك '%@'؟";
 "This will remove all locally stored file copies from your device." = "هذا سيؤدي إلى إزالة جميع نسخ الملفات المخزنة محليًا من جهازك.";
 "Really delete '%@'?" = "هل تريد بالتأكيد حذف '%@'؟";
-"Really logout from '%@'?" = "Really logout from '%@'?";
+"Really logout from '%@'?" = "حقًا تسجيل الخروج من  '%@'؟";
 "This will also delete all locally stored file copies." = "سيحذف هذا جميع نسخ الملف المخزنة محليًا.";
 "Delete" = "حذف";
 "Remove" = "إزالة";
@@ -201,13 +218,14 @@
 "Privacy Policy" = "سياسة الخصوصية";
 "Terms Of Use" = "شروط الاستخدام";
 "Acknowledgements" = "رسائل الإقرار";
-"Portions of this app may utilize the following copyrighted material, the use of which is hereby acknowledged." = "Portions of this app may utilize the following copyrighted material, the use of which is hereby acknowledged.";
+"Portions of this app may utilize the following copyrighted material, the use of which is hereby acknowledged." = "قد تستخدم أجزاء من هذا التطبيق المواد التالية المحمية بحقوق الطبع والنشر ، والتي يُعترف باستخدامها بموجب هذا.";
 "Video upload path" = "مسار تحميل الفيديو";
 "Photo upload path" = "مسار تحميل الصورة";
 "Immediately" = "على الفور";
 "After 1 minute" = "بعد دقيقة واحدة (1)";
 "After 5 minutes" = "بعد 5 دقائق";
 "After 30 minutes" = "بعد 30 دقيقة";
+"If you choose \"Immediately\" the App will be locked, when it is no longer in foreground." = "إذا اخترت \"فورًا\" فسيتم قفل التطبيق ، عندما لم يعد في المقدمة.";
 "Please configure an email account" = "يُرجى تكوين حساب بريد إلكتروني";
 "You need to configure an email account first to be able to send emails." = "تحتاج إلى تكوين حساب بريد إلكتروني أولًا حتى تتمكن من إرسال رسائل البريد الإلكتروني.";
 "Do you want to open the following URL?" = "هل ترغب في فتح عنوان URL التالي؟";
@@ -287,7 +305,7 @@
 /* Display settings */
 "Advanced settings" = "الإعدادات المتقدمة";
 "Show hidden files and folders" = "اعرض الملفات والمجلدات المخفية";
-"Show folders on top" = "Show folders on top";
+"Show folders on top" = "إظهار المجلدات في الأعلى";
 "Prevent gestures" = "منع الإيماءات";
 "Prevent dragging of files and folders and multiselection using system defined gestures" = "منع سحب الملفات والمجلدات والاختيار المتعدد باستخدام إيماءات محددة من قبل النظام";
 
@@ -304,7 +322,7 @@
 "Please try again in %@" = "يُرجى المحاولة مجددًا في %@";
 "Unlock %@" = "فتح %@";
 "Biometric authentication failed" = "فشل إجراء المصادقة البيولوجية";
-"You are required to set the passcode" = "You are required to set the passcode";
+"You are required to set the passcode" = "أنت مطالب بتعيين رمز المرور";
 
 /* Certificate management */
 
@@ -348,6 +366,10 @@
 "Favorited" = "تمت الإضافة إلى المفضلة";
 "Favorite item" = "العنصر المفضل";
 "Unfavorite item" = "عنصر غير موات";
+"Presentation Mode" = "العرض التقديمي";
+"Enabling presentation mode will prevent the display from sleep mode until the view is closed." = " تمكين وضع العرض التقديمي يؤدي إلى منع الشاشة من وضع السكون إلى أن يتم إغلاق العرض.";
+"Enable" = "تفعيل";
+"Exit Full Screen" = "الخروج من وضع ملئ الشاشة";
 
 /* Directory Picker Messages */
 "Move here" = "نقل هنا";
@@ -361,6 +383,13 @@
 "File couldn't be opened" = "تعذّر فتح الملف";
 "Connecting..." = "جارٍ الاتصال...";
 
+"File" = "ملف";
+"%@ was updated" = "%@ was updated";
+"Would you like to view the updated version?" = "Would you like to view the updated version?";
+"Show new version" = "Show new version";
+"Refresh without asking" = "Refresh without asking";
+"Ignore updates" = "Ignore updates";
+
 /* PDF Viewer */
 "Resume" = "استئناف";
 "Go to page" = "اذهب إلى الصفحة";
@@ -371,6 +400,9 @@
 "The entered page number doesn't exist" = "رقم الصفحة المكتوب غير موجود";
 "Search PDF" = "بحث في ملف PDF";
 "Outline" = "شرح موجز";
+"Find Next" = "بحث عن التالي";
+"Find Previous" = "البحث عن السابق";
+"Close Search" = "اغلاق البحث";
 
 /* Photo Upload */
 "Upload" = "تحميل";
@@ -384,7 +416,7 @@
 "Selected folder lacks file creation permission" = "لا يحتوي المجلد المحدد على إذن إنشاء الملف";
 "%d Item" = "%d عنصر";
 "%d Items" = "%dعناصر";
-"Select Items" = "Select Items";
+"Select Items" = "اختيار العناصر";
 
 /* Scan */
 "Scan" = "مسح";
@@ -497,6 +529,10 @@
 "Private Link" = "رابط خاص";
 "Created Public Link" = "رابط عام تم إنشاؤه";
 "URL was copied to the clipboard" = "تم نسخ URL الحافظة";
+"%@ is not available, when this account is offline. Please open the app and log into your account before you can do this action." = "%@ غير متوفر ، عندما يكون هذا الحساب غير متصل. يرجى فتح التطبيق وتسجيل الدخول إلى حسابك قبل أن تتمكن من القيام بهذا الإجراء.";
+"%@ is not available for this item." = "%@ غير متوفر لهذا العنصر.";
+"Share with user/group" = "شارك مع مستخدم / مجموعة";
+"Share link" = "مشاركة الرابط";
 
 /* Quick Access view */
 "Quick Access" = "وصول سريع";
@@ -594,13 +630,13 @@
 "All Files" = "كل الملفات";
 
 /* Single Account */
-"You are connected as\n%@" = "You are connected as\n%@";
+"You are connected as\n%@" = "أنت متصل كما%@";
 
 /* Release Notes */
 "Proceed" = "متابعة";
-"New in %@" = "New in %@";
+"New in %@" = "جديد في %@";
 "Thank you for using %@.\nIf you like our App, please leave an AppStore review.\n❤️" = "نشكرك على استخدام %@.\nإذا أعجبك تطبيقنا، فيُرجى ترك مراجعة AppStore.\n❤";
-"Thank you for using %@.\n" = "Thank you for using %@.\n";
+"Thank you for using %@.\n" = "شكرا لأستخدامك%@.\n";
 
 /* Key Commands */
 "Select Next" = "حدد التالي";
@@ -621,6 +657,13 @@
 "Previous" = "السابق";
 "Favorite" = "المفضلة";
 "Cut" = "قص";
+"Play/Pause" = "تشغيل/توقف";
+"Skip Back" = "التخطي للخلف";
+"Skip Ahead" = "التخطي إلى الأمام";
+"Go to Beginning" = "العودة إلى البداية";
+"Mute/Unmute" = "كتم / إلغاء كتم الصوت";
+"Full Screen" = "شاشة كاملة";
+"Switch Theme Style" = "Switch Theme Style";
 
 /* Markup */
 "How should this file be saved?" = "كيف يمكن حفظ هذا الملف؟";
@@ -660,7 +703,7 @@
 "Error restoring purchases" = "خطا في استعادة عمليات الشراء";
 "Error loading product info from App Store"= "خطأ في تحميل معلومات المنتج من متجر التطبيقات";
 "Purchase failed" = "فشلت عملية الشراء";
-"More information" = "More information";
+"More information" = "مزيد من المعلومات ";
 
 /* Licensing: Enterprise */
 "Enterprise" = "مؤسسة";
@@ -691,13 +734,13 @@
 "trial" = "إصدار تجريبي";
 "purchase" = "عمليات الشراء";
 "subscription" = "الاشتراك";
-"Photo Pro Features" = "Photo Pro Features";
-"Image metadata, extended upload options" = "Image metadata, extended upload options";
-"Purchase" = "Purchase";
+"Photo Pro Features" = "ميزات Photo Pro";
+"Image metadata, extended upload options" = "بيانات وصفية للصورة ، خيارات تحميل موسعة";
+"Purchase" = "شراء";
 "Subscribe" = "اشتراك";
 
-"No accounts found" = "No accounts found";
-"In order to accurately determine your current licensing status, please add one or more accounts first." = "In order to accurately determine your current licensing status, please add one or more accounts first.";
+"No accounts found" = "لم يتم العثور على حسابات";
+"In order to accurately determine your current licensing status, please add one or more accounts first." = "من أجل تحديد حالة الترخيص الحالية بدقة ، يرجى إضافة حساب واحد أو أكثر أولاً.";
 
 /* Share Sheet */
 "Save File" = "حفظ الملفات";
@@ -717,7 +760,7 @@
 "Migrated" = "تم ترحيله";
 "Failed to migrate" = "فشل في الترحيل";
 "Failed to access legacy user data" = "فشل في الوصول إلى بيانات المستخدم القديمة";
-"The app was upgraded to a new version. Below there is an overview of all migrated accounts." = "The app was upgraded to a new version. Below there is an overview of all migrated accounts.";
+"The app was upgraded to a new version. Below there is an overview of all migrated accounts." = "تمت ترقية التطبيق إلى إصدار جديد. يوجد أدناه نظرة عامة على جميع الحسابات التي تم ترحيلها.";
 
 /* Misc. accessibility */
 "Enter multiple selection" = "أدخل تحديدات متعددة";
@@ -730,118 +773,126 @@
 "Link points to an account bookmark which is not configured in the app." = "يشير الرابط إلى إشارة مرجعية للحساب لم يتم تكوينها في التطبيق.";
 
 /* Photo meta-data */
-"Image metadata" = "Image metadata";
-"Image details" = "Image details";
-"Profile" = "Profile";
+"Image metadata" = "البيانات الوصفية للصورة ";
+"Image details" = "تفاصيل الصورة";
+"Profile" = "ملف التعريف ";
 "Size" = "الحجم";
-"Density" = "Density";
-"Color model" = "Color model";
+"Density" = "كثافة";
+"Color model" = "نموذج اللون";
 "%@ (%d bits/channel)" = "%@ (%d bits/channel)";
-"Histogram" = "Histogram";
+"Histogram" = "المدرج التكراري";
 
-"Camera details" = "Camera details";
-"Capture settings" = "Capture settings";
+"Camera details" = "تفاصيل الكاميرا";
+"Capture settings" = "إعدادات الالتقاط";
 "Time" = "وقت";
 "EXIF aux info" = "EXIF aux info";
-"Authoring" =  "Authoring";
+"Authoring" =  "التأليف";
 "TIFF" = "TIFF";
 
-"Lens make" = "Lens make";
-"Lens model" = "Lens model";
-"Lens info" = "Lens info";
-"Focal length" = "Focal length";
-"Focal length @ 35 mm" = "Focal length @ 35 mm";
+"Lens make" = "صنع العدسة";
+"Lens model" = "نموذج العدسة";
+"Lens info" = "معلومات العدسة";
+"Focal length" = "البعد البؤري";
+"Focal length @ 35 mm" = "البعد البؤري @ ٣٥ مم";
 
-"Shutter speed" = "Shutter speed";
+"Shutter speed" = "سرعة التقاط";
 "Aperture" = "Aperture";
 "ISO" = "ISO";
 
 /* EXIF: exposure program */
-"Program" = "Program";
-"Not defined" = "Not defined";
-"Manual" = "Manual";
-"Normal" = "Normal";
-"Aperture priority" = "Aperture priority";
-"Shutter priority" = "Shutter priority";
-"Creative" = "Creative";
+"Program" = "برنامج";
+"Not defined" = "غير معرف";
+"Manual" = "يدوي";
+"Normal" = "عادي";
+"Aperture priority" = "أولوية فتحة العدسة";
+"Shutter priority" = "سرعة التقاط";
+"Creative" = "مبدع";
 "Action" = "الإجراء";
-"Portrait" = "Portrait";
-"Landscape" = "Landscape";
+"Portrait" = "لوحة";
+"Landscape" = "مشهد";
 
 /* EXIF: exposure metering mode */
-"Metering" = "Metering";
+"Metering" = "القياس";
 "unknown" = "غير معروف";
-"Average" = "Average";
-"CenterWeightedAverage" = "CenterWeightedAverage";
-"Spot" = "Spot";
-"MultiSpot" = "MultiSpot";
+"Average" = "متوسط";
+"CenterWeightedAverage" = "وزن المركز: متوسط";
+"Spot" = "نقطة";
+"MultiSpot" = "متعدد النقاط";
 "Pattern" = "نمط";
-"Partial" = "Partial";
+"Partial" = "جزئي";
 
 /* EXIF: flash mode */
-"Flash" = "Flash";
-"Fired" = "Fired";
-"Didn't fire" = "Didn't fire";
-"No strobe return detection" = "No strobe return detection";
-"Strobe return light not detected" = "Strobe return light not detected";
-"Strobe return light detected" = "Strobe return light detected";
-"Compulsory flash firing" = "Compulsory flash firing";
-"Compulsory flash supression" = "Compulsory flash supression";
-"Auto mode" = "Auto mode";
-"Red eye detection supported" = "Red eye detection supported";
-"not present" = "not present";
+"Flash" = "وميض";
+"Fired" = "تم فصله ";
+"Didn't fire" = "لم يفصل";
+"No strobe return detection" = "لم يتعرف على ارتداد الاستروب";
+"Strobe return light not detected" = "ضوء ارتداد الاستروب غير مكتشف";
+"Strobe return light detected" = "تم التعرف على ضوء ارتداد الاستروب";
+"Compulsory flash firing" = "إطلاق فلاش إلزامي";
+"Compulsory flash supression" = "قمع فلاش إجباري";
+"Auto mode" = " النظام الآلي";
+"Red eye detection supported" = "تم دعم كشف العين الحمراء";
+"not present" = "غير موجود";
 
 /* EXIF: white balance */
-"White balance" = "White balance";
-"Auto" = "Auto";
-"Manual" = "Manual";
+"White balance" = "توازن اللون الأبيض";
+"Auto" = "ٱلي";
+"Manual" = "يدوي";
 
-"Exposure bias" = "Exposure bias";
-"Uncalibrated" = "Uncalibrated";
-"Original date" = "Original date";
-"Digitized date" = "Digitized date";
+"Exposure bias" = "إنحياز التعرض";
+"Uncalibrated" = "غير متدرج";
+"Original date" = "التاريخ الأصلي";
+"Digitized date" = "تاريخ رقمي";
 
-"Color space" = "Color space";
+"Color space" = "الفضاء اللوني";
 
 /* EXIF: aux info */
-"Lens ID" = "Lens ID";
-"Lens serial" = "Lens serial";
-"Serial number" = "Serial number";
-"Flash compensation" = "Flash compensation";
+"Lens ID" = "معرف العدسة";
+"Lens serial" = "تسلسل العدسة";
+"Serial number" = "الرقم التسلسلي";
+"Flash compensation" = "تعويض الفلاش";
 "Owner" = "مالك";
-"Firmware" = "Firmware";
-"Keywords" = "Keywords";
+"Firmware" = "برنامج ثابت";
+"Keywords" = "الكلمات المحورية";
 "Copyright" = "حقوق النشر";
 
 /* IPTC meta data */
-"Contact info" = "Contact info";
-"Usage terms" = "Usage terms";
-"Scene" = "Scene";
+"Contact info" = "معلومات إتصال";
+"Usage terms" = "مصطلحات الاستخدام";
+"Scene" = "مشهد";
 "Description" = "الوصف";
 
 /* IPTC photometric interpretation */
-"Photometric interpretation" = "Photometric interpretation";
+"Photometric interpretation" = "القياس الضوئي";
 "none" = "لا يوجد";
 "RGB" = "RGB";
 "YCbCr" = "YCbCr";
 
 /* EXIF: gps position data */
-"GPS Location" = "GPS Location";
-"Coordinates" = "Coordinates";
-"Altitude" = "Altitude";
-"Place" = "Place";
+"GPS Location" = "موقع GPS";
+"Coordinates" = "إحداثيات";
+"Altitude" = "ارتفاع";
+"Place" = "مكان";
 "E" = "E";
 "W" = "W";
 "N" = "N";
 "S" = "S";
 
 /* Pro photo upload settings */
-"Extended upload settings" = "Extended upload settings";
-"Prefer unedited photos" = "Prefer unedited photos";
-"Prefer RAW photos" = "Prefer RAW photos";
-"Prefer original videos" = "Prefer original videos";
+"Extended upload settings" = " إعدادات تحميل موسعة";
+"Prefer unedited photos" = "تفضيل الصور غير المحررة";
+"Prefer RAW photos" = "تفضيل  صور RAW";
+"Prefer original videos" = "تفضيل مقاطع الفيديو الأصلية";
 
 /* Limited photo library access */
-"Limited Photo Access" = "Limited Photo Access";
-"Access for the media selected for upload is limited" = "Access for the media selected for upload is limited";
-"No Access to the media selected for upload" = "No Access to the media selected for upload";
+"Limited Photo Access" = "وصول محدود للصور";
+"Access for the media selected for upload is limited" = "الوصول إلى الوسائط المحددة للتحميل محدود";
+"No Access to the media selected for upload" = "لا يوجد وصول إلى اوسائط الإعلام المختارة للتحميل";
+
+/* macOS support */
+"Passcode protection is not supported on this device.\nPlease disable passcode lock in the app settings." = "حماية رمز المرور غير مدعومة على هذا الجهاز.\nيرجى تعطيل قفل رمز المرور في إعدادات التطبيق.";
+
+/* MDM settings push */
+"New settings received from MDM" = "تم استلام الإعدادات الجديدة من MDM";
+"Tap to quit the app." = "انقر لإنهاء التطبيق.";
+"Tap to launch the app." = "انقر لتشغيل التطبيق.";
