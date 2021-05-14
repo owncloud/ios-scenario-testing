@@ -218,9 +218,11 @@ public class PrivateShareSteps {
     }
 
     @Then("^(.+) should not be shared anymore with (.+)$")
-    public void share_is_deleted(String itemName, String sharee) {
+    public void share_is_deleted(String itemName, String sharee)
+            throws Throwable {
         String currentStep = StepEventBus.getEventBus().getCurrentStep().get().toString();
         Log.log(Level.FINE, "----STEP----: " + currentStep);
         assertFalse(privateSharePage.isItemInListPrivateShares(sharee));
+        filesAPI.removeItem(itemName);
     }
 }

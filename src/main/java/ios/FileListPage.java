@@ -48,7 +48,7 @@ public class FileListPage extends CommonPage {
             "XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeTable/XCUIElementTypeCell[2]";
 
     //Actions in contextual menu menu
-    private String id_delete = "Delete";
+    private String id_delete = "Delete, Delete";
     private String id_rename = "Rename";
     private String id_move = "Move";
     private String id_copy = "Copy";
@@ -125,8 +125,9 @@ public class FileListPage extends CommonPage {
 
     private void selectItemListContextual(String itemName) {
         Log.log(Level.FINE, "Starts: select contextual item from list: " + itemName);
-        MobileElement listCell = (MobileElement) driver.findElement
-                (By.xpath("//XCUIElementTypeCell[@name=\"" + itemName + "\"]"));
+        String itemXpath = "//XCUIElementTypeCell[@name=\"" + itemName + "\"]";
+        waitByXpath(5, itemXpath);
+        MobileElement listCell = (MobileElement) driver.findElement(By.xpath(itemXpath));
         new TouchAction(driver).longPress(LongPressOptions.longPressOptions()
                 .withElement(ElementOption.element(listCell))).release().perform();
     }

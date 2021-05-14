@@ -69,7 +69,6 @@ public class FileListSteps {
     public void i_select_create_folder() throws IOException {
         String currentStep = StepEventBus.getEventBus().getCurrentStep().get().toString();
         Log.log(Level.FINE, "----STEP----: " + currentStep);
-        filesAPI.pushFile("nuevo.txt");
         fileListPage.createFolder();
     }
 

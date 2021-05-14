@@ -50,7 +50,7 @@ Feature: Private Share
 
   @federated
   Scenario: Correct federated share on file
-    When user selects to share the file Federated.txt using the Actions menu
+    When user selects to share the file textExample.txt using the Actions menu
     And user selects user demo@demo.owncloud.com as sharee
     Then share should be created on Federated.txt with the following fields
       | sharee | demo@demo.owncloud.com |
