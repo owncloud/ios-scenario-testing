@@ -7,9 +7,8 @@ Feature: Private Share
 
   Background: User is logged in
     Given user user1 is logged
-    #And user user2 exists in the platform
 
-  Scenario Outline: Correct share a folder with user
+  Scenario Outline: Correct share with user
     Given the <type> <item> has been created in the account
     When user selects to share the <type> <item> using the Actions menu
     And user selects user user2 as sharee
@@ -48,12 +47,17 @@ Feature: Private Share
       |  file   |  Share5.txt  |
       |  folder |  Share6      |
 
-  @federated
-  Scenario: Correct federated share on file
-    When user selects to share the file textExample.txt using the Actions menu
+  Scenario Outline: Correct federated share
+    Given the <type> <item> has been created in the account
+    When user selects to share the <type> <item> using the Actions menu
     And user selects user demo@demo.owncloud.com as sharee
-    Then share should be created on Federated.txt with the following fields
+    Then share should be created on <item> with the following fields
       | sharee | demo@demo.owncloud.com |
+
+    Examples:
+      |  type   |  item        |
+      |  file   |  Share7.txt  |
+      |  folder |  Share8      |
 
   Scenario Outline: Edit existing share on a folder, removing permissions
     Given the folder <item> has been created in the account
@@ -73,18 +77,17 @@ Feature: Private Share
     # SHARE -> 16
 
     Examples:
-      |  item    |   user    | permissions |
-      |  Share4  |   user2   |   1         |
-      |  Share5  |   user2   |   9         |
-      |  Share6  |   user2   |   13        |
-      |  Share7  |   user2   |   17        |
+      |  item     |   user    | permissions |
+      |  Share9   |   user2   |   1         |
+      |  Share10  |   user2   |   9         |
+      |  Share11  |   user2   |   13        |
+      |  Share12  |   user2   |   17        |
 
-  #Scenario Outline: Edit existing share on a file, removing permissions
 
   Scenario: Delete existing share on folder
-    Given the folder Share8 has been created in the account
-    And the folder Share8 has been already shared with user2
-    When user selects to edit share the folder Share8 using the Actions menu
+    Given the folder Share13 has been created in the account
+    And the folder Share13 has been already shared with user2
+    When user selects to edit share the folder Share13 using the Actions menu
     And user deletes the share
-    Then user user2 should not have access to Share8
-    And Share8 should not be shared anymore with user2
+    Then user user2 should not have access to Share13
+    And Share13 should not be shared anymore with user2

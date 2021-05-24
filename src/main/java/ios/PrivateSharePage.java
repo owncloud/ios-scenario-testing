@@ -38,7 +38,7 @@ public class PrivateSharePage extends SharePage {
         if (type.equals("group")){
             shareeName += " (Group)";
         }
-        driver.findElement(By.id(shareeName)).click();
+        driver.findElement(By.xpath("//XCUIElementTypeStaticText[@name=\""+ shareeName + "\"]")).click();
     }
 
     public boolean isItemInListPrivateShares(String sharee) {

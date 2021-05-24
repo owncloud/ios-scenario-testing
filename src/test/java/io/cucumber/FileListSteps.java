@@ -65,6 +65,18 @@ public class FileListSteps {
         }
     }
 
+    @Given("^the folder (.+) contains (.+) files$")
+    public void item_exists(String folderName, int files) throws Throwable {
+        String currentStep = StepEventBus.getEventBus().getCurrentStep().get().toString();
+        Log.log(Level.FINE, "----STEP----: " + currentStep);
+        if (!filesAPI.itemExist(folderName)) {
+            filesAPI.createFolder(folderName);
+        }
+        for (int i=0; i<files; i++){
+            filesAPI.pushFile(folderName+"/file_"+i+".txt");
+        }
+    }
+
     @When("^user selects the option Create Folder$")
     public void i_select_create_folder() throws IOException {
         String currentStep = StepEventBus.getEventBus().getCurrentStep().get().toString();

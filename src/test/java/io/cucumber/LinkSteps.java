@@ -136,7 +136,7 @@ public class LinkSteps {
                     break;
                 }
                 case "permission": {
-                    Log.log(Level.FINE, "checking permissions");
+                    Log.log(Level.FINE, "checking permissions: " + rows.get(1));
                     publicLinkPage.openPublicLink(linkName);
                     assertTrue(linkPermissionsPage.checkPermissions(rows.get(1)));
                     break;

@@ -46,6 +46,8 @@ public class FileListPage extends CommonPage {
     private String xpath_sharelink = "//XCUIElementTypeStaticText[@name=\"Links\"]";
     private String xpath_editlink = "//XCUIElementTypeApplication[@name=\"ownCloud\"]/XCUIElementTypeWindow[1]/" +
             "XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeTable/XCUIElementTypeCell[2]";
+    private String xpath_card = "//XCUIElementTypeApplication[@name=\"ownCloud\"]/XCUIElementTypeWindow[1]" +
+            "/XCUIElementTypeOther/XCUIElementTypeOther[2]";
 
     //Actions in contextual menu menu
     private String id_delete = "Delete, Delete";
@@ -119,14 +121,14 @@ public class FileListPage extends CommonPage {
 
     private void selectItemListActions(String itemName) {
         Log.log(Level.FINE, "Starts: select actions item from list: " + itemName);
-        waitById(5, itemName + " Actions");
+        waitByXpath(10, "//XCUIElementTypeCell[@name=\"" + itemName + "\"]");
         driver.findElement(By.id(itemName + " Actions")).click();
     }
 
     private void selectItemListContextual(String itemName) {
         Log.log(Level.FINE, "Starts: select contextual item from list: " + itemName);
         String itemXpath = "//XCUIElementTypeCell[@name=\"" + itemName + "\"]";
-        waitByXpath(5, itemXpath);
+        waitByXpath(10, itemXpath);
         MobileElement listCell = (MobileElement) driver.findElement(By.xpath(itemXpath));
         new TouchAction(driver).longPress(LongPressOptions.longPressOptions()
                 .withElement(ElementOption.element(listCell))).release().perform();
@@ -135,6 +137,7 @@ public class FileListPage extends CommonPage {
     public void selectOperationFromActions(String itemName, String operationName, String typeItem) {
         MobileElement operation = null;
         Log.log(Level.FINE, "Starts actions: " + operationName);
+        waitByXpath(5, xpath_card);
         switch (operationName){
             case "delete":
                 operation = (MobileElement) driver.findElement(By.xpath(xpath_delete));
@@ -266,19 +269,4 @@ public class FileListPage extends CommonPage {
             }
         }
     }
-
-    /*private MobileElement getElementFromFileList(String itemName){
-        Log.log(Level.FINE, "Starts: searching item in list: " + itemName);
-        List<MobileElement> elementsFileList = listFiles.findElements(MobileBy.id(listcell_id));
-        takeScreenshot("ElementFileList/SearchItem_"+itemName);
-        for (MobileElement element : elementsFileList) {
-            if (element.findElement(By.id(listitemname_id)).getText()
-                    .equals(itemName)){
-                Log.log(Level.FINE, itemName + " found!!");
-                return element;
-            }
-        }
-        Log.log(Level.FINE, itemName + " not found");
-        return null;
-    }*/
 }

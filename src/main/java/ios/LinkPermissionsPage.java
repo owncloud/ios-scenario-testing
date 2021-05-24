@@ -56,7 +56,7 @@ public class LinkPermissionsPage extends CommonPage {
 
     @iOSXCUITFindBy(xpath="//XCUIElementTypeApplication[@name=\"ownCloud\"]/XCUIElementTypeWindow[1]/" +
             "XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeOther/XCUIElementTypeOther/" +
-            "XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeTable/XCUIElementTypeCell[3]")
+            "XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeTable/XCUIElementTypeCell[2]")
     private MobileElement downloadViewOptionCell;
 
     @iOSXCUITFindBy(xpath="//XCUIElementTypeApplication[@name=\"ownCloud\"]/XCUIElementTypeWindow[1]/" +
@@ -167,19 +167,24 @@ public class LinkPermissionsPage extends CommonPage {
                     Log.log(Level.FINE, "Download / View is selected");
                     return true;
                 }
+                break;
             }
             case("15"):{
                 if (parseIntBool(downloadViewUploadOptionCell.getAttribute("selected")) == true ){
                     Log.log(Level.FINE, "Download / View / Upload is selected");
                     return true;
                 }
+                break;
             }
             case("4"):{
                 if (parseIntBool(uploadOnlyOptionCell.getAttribute("selected")) == true ){
                     Log.log(Level.FINE, "Upload only is selected");
                     return true;
                 }
+                break;
             }
+            default:
+                break;
         }
         return false;
     }
