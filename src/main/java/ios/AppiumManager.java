@@ -37,8 +37,8 @@ public class AppiumManager {
         capabilities.setCapability (MobileCapabilityType.PLATFORM_NAME, "iOS");
         if (System.getProperty("device") != null && !System.getProperty("device").isEmpty()) {
             capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, System.getProperty("device"));
-        } else { //Will use iPhone XR as default simulator
-            capabilities.setCapability (MobileCapabilityType.DEVICE_NAME, "iPhone XR");
+        } else { //Will use iPhone X as default simulator
+            capabilities.setCapability (MobileCapabilityType.DEVICE_NAME, "iPhone X");
         }
 
         capabilities.setCapability (MobileCapabilityType.APP, app.getAbsolutePath());
