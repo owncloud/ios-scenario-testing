@@ -117,7 +117,6 @@ public class FileListSteps {
     public void i_see_original_the_item(String itemName) throws Throwable {
         String currentStep = StepEventBus.getEventBus().getCurrentStep().get().toString();
         Log.log(Level.FINE, "----STEP----: " + currentStep);
-        fileListPage.waitToload();
         assertTrue(fileListPage.isItemInList(itemName));
         assertTrue(filesAPI.itemExist(itemName));
         filesAPI.removeItem(itemName);

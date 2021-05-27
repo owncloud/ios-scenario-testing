@@ -28,9 +28,9 @@ public class FolderPickerPage extends CommonPage {
 
     public void selectFolder(String targetFolder){
         Log.log(Level.FINE, "Start: Select folder from picker: " + targetFolder);
-        waitById(5, createFolder);
-        //driver.findElement(By.id(targetFolder + " Actions")).click();
-        driver.findElement(By.xpath("//XCUIElementTypeButton[@name=\"Documents Actions\"]")).click();
+        waitById(10, createFolder);
+        driver.findElement(By.id(targetFolder + " Actions")).click();
+        //driver.findElement(By.xpath("//XCUIElementTypeButton[@name=\"Documents Actions\"]")).click();
     }
 
     public void accept(String operation){

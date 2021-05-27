@@ -34,15 +34,17 @@ public class AppiumManager {
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
 
-        capabilities.setCapability (MobileCapabilityType.PLATFORM_NAME, "iOS");
+        capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, "iOS");
         if (System.getProperty("device") != null && !System.getProperty("device").isEmpty()) {
             capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, System.getProperty("device"));
-        } else { //Will use iPhone 8 as default simulator
-            capabilities.setCapability (MobileCapabilityType.DEVICE_NAME, "iPhone 8");
+            capabilities.setCapability("udid", System.getProperty("udid"));
+        } else { //Will use iPhone X as default simulator
+            capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "iPhone X");
+            //capabilities.setCapability("udid", "B45CA880-0278-4AF2-8EA9-86AAD23AECEA");
         }
 
-        capabilities.setCapability (MobileCapabilityType.APP, app.getAbsolutePath());
-        capabilities.setCapability (MobileCapabilityType.AUTOMATION_NAME, AutomationName.IOS_XCUI_TEST);
+        capabilities.setCapability(MobileCapabilityType.APP, app.getAbsolutePath());
+        capabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, AutomationName.IOS_XCUI_TEST);
         capabilities.setCapability("showXcodeLog", true);
 
         try {
