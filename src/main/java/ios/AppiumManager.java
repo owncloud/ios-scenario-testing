@@ -37,14 +37,12 @@ public class AppiumManager {
         capabilities.setCapability (MobileCapabilityType.PLATFORM_NAME, "iOS");
         if (System.getProperty("device") != null && !System.getProperty("device").isEmpty()) {
             capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, System.getProperty("device"));
-        } else { //Will use iPhone X as default simulator
-            capabilities.setCapability (MobileCapabilityType.DEVICE_NAME, "iPhone X");
+        } else { //Will use iPhone 8 as default simulator
+            capabilities.setCapability (MobileCapabilityType.DEVICE_NAME, "iPhone 8");
         }
 
         capabilities.setCapability (MobileCapabilityType.APP, app.getAbsolutePath());
         capabilities.setCapability (MobileCapabilityType.AUTOMATION_NAME, AutomationName.IOS_XCUI_TEST);
-        capabilities.setCapability ("uiautomator2ServerInstallTimeout", 180000);
-        capabilities.setCapability("autoGrantPermissions", true);
         capabilities.setCapability("showXcodeLog", true);
 
         try {
