@@ -28,6 +28,7 @@ help()
    echo -e "\t-a (optional) Appium server URL. if Appium Server is not specified, will be used \"localhost:4723/wd/hub\""
    echo -e "\t-t (optional) Filter. F. ex: @createfolder will send only tests tagged with such label. Tags are allowed to concatenate, sepparated by \",\". It is also allowed to use a classpath to execute all the test in such class"
    echo -e "\t-d (optional) In case of several devices attached, tests will be sent against the device name set in this option"
+   echo -e "\t-u (optional) UDID of the device to execute the tests against"
    echo ""
    exit 1 
 }
@@ -41,6 +42,8 @@ while getopts ":t:a:s:d:h" opt; do
     s) oc="$OPTARG"
     ;;
     d) device="$OPTARG"
+    ;;
+    u) udid="$OPTARG"
     ;;
     h) help
     ;;
@@ -62,6 +65,7 @@ echo "Appium server: $appium"
 echo "oC server: $oc"
 echo "tags: $tags"
 echo "device: $device"
+echo "udid: $udid"
 
 if [ -z "$tags" ]
 then
@@ -69,6 +73,7 @@ then
   --info \
   -Dappium=$appium \
   -Ddevice=$device \
+  -Dudid=$udid \
   -Dserver=$oc
 else
   ./gradlew clean test aggregate \
@@ -76,5 +81,6 @@ else
   -Dcucumber.options="--tags $tags" \
   -Dappium=$appium \
   -Ddevice=$device \
+  -Dudid=$udid \
   -Dserver=$oc
 fi
