@@ -1,9 +1,5 @@
 package io.cucumber;
 
-import ios.PrivateSharePage;
-import ios.SharePage;
-import ios.SharePermissionsPage;
-
 import net.thucydides.core.annotations.Steps;
 import net.thucydides.core.steps.StepEventBus;
 
@@ -14,6 +10,9 @@ import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import ios.PrivateSharePage;
+import ios.SharePage;
+import ios.SharePermissionsPage;
 import utils.LocProperties;
 import utils.api.FilesAPI;
 import utils.api.ShareAPI;
@@ -193,20 +192,19 @@ public class SharesSteps {
         //Asserts in server via API
         OCShare share = shareAPI.getShare(itemName);
         assertTrue(sharePage.checkCorrectShare(share, listItems));
-        //Folders are recreated, they could be deleted. Files don't ftm
-        //if (filesAPI.isFolder(itemName)) {
-            filesAPI.removeItem(itemName);
-        //} else {
-        //    shareAPI.removeShare(share.getId());
-        //}
+        filesAPI.removeItem(itemName);
     }
 
-    @Then("^(user|group) (?:.*?) (.+) should have access to (.+)$")
-    public void group_has_the_file (String type, String userName, String itemName)
+    @Then("^(user|group) (.+) should have access to (.+)$")
+    public void group_has_the_file (String type, String shareeName, String itemName)
             throws Throwable {
         String currentStep = StepEventBus.getEventBus().getCurrentStep().get().toString();
         Log.log(Level.FINE, "----STEP----: " + currentStep);
-        assertTrue(shareAPI.isSharedWithMe(itemName, type.equals("group")));
+        if (type.equals("user")){
+            assertTrue(shareAPI.isSharedWithMe(itemName, shareeName, false));
+        } else if (type.equals("group")){
+            assertTrue(shareAPI.isSharedWithMe(itemName, shareeName, true));
+        }
     }
 
     @Then("^user (.+) should not have access to (.+)$")
@@ -214,7 +212,7 @@ public class SharesSteps {
             throws Throwable {
         String currentStep = StepEventBus.getEventBus().getCurrentStep().get().toString();
         Log.log(Level.FINE, "----STEP----: " + currentStep);
-        assertFalse(shareAPI.isSharedWithMe(itemName, false));
+        assertFalse(shareAPI.isSharedWithMe(itemName, userName,false));
     }
 
     @Then("^(.+) should not be shared anymore with (.+)$")

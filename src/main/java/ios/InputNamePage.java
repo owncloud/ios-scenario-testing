@@ -26,7 +26,6 @@ public class InputNamePage extends CommonPage {
         Log.log(Level.FINE, "Start: Set name to item: " + itemName);
         newName.clear();
         newName.sendKeys(itemName);
-        takeScreenshot("SetName/SetItemName_"+itemName);
         acceptButton.click();
     }
 }

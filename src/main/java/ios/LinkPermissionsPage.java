@@ -205,19 +205,16 @@ public class LinkPermissionsPage extends CommonPage {
 
     public void close(){
         Log.log(Level.FINE, "Starts: Cancel public link view");
-        takeScreenshot("PublicShare/ItemStatusBeforeClosing");
         cancelButton.click();
     }
 
     public void submitLink() {
         Log.log(Level.FINE, "Starts: Submit public link");
-        takeScreenshot("PublicShare/Submit");
         createButton.click();
     }
 
     public void deleteLink(){
         deleteLink.click();
-        takeScreenshot("PublicShare/Deletion");
     }
 
     public void backToLinksList() {

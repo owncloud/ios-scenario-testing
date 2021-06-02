@@ -27,6 +27,8 @@ public class PrivateSharePage extends SharePage {
     @iOSXCUITFindBy(xpath="//XCUIElementTypeButton[@name=\"Sharing\"]")
     private MobileElement backButton;
 
+    private String xpath_invite = "(//XCUIElementTypeOther[@name=\"INVITE RECIPIENT\"])[2]";
+
     public PrivateSharePage(){
         super();
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
@@ -38,7 +40,8 @@ public class PrivateSharePage extends SharePage {
         if (type.equals("group")){
             shareeName += " (Group)";
         }
-        driver.findElement(By.xpath("//XCUIElementTypeStaticText[@name=\""+ shareeName + "\"]")).click();
+        waitByXpath(5, xpath_invite);
+        driver.findElement(By.xpath("//XCUIElementTypeStaticText[@name=\"" + shareeName + "\"]")).click();
     }
 
     public boolean isItemInListPrivateShares(String sharee) {
