@@ -20,6 +20,9 @@ public class FolderPickerPage extends CommonPage {
 
     private String xpath_move = "//XCUIElementTypeButton[@name=\"Move here\"]";
     private String xpath_copy = "//XCUIElementTypeButton[@name=\"Copy here\"]";
+    private String xpath_picker = "//XCUIElementTypeApplication[@name=\"ownCloud\"]/XCUIElementTypeWindow[1]/" +
+            "XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeOther/" +
+            "XCUIElementTypeOther/XCUIElementTypeOther";
 
     public FolderPickerPage() {
         super();
@@ -29,8 +32,13 @@ public class FolderPickerPage extends CommonPage {
     public void selectFolder(String targetFolder){
         Log.log(Level.FINE, "Start: Select folder from picker: " + targetFolder);
         waitById(10, createFolder);
-        driver.findElement(By.id(targetFolder + " Actions")).click();
-        //driver.findElement(By.xpath("//XCUIElementTypeButton[@name=\"Documents Actions\"]")).click();
+        driver.findElement(By.xpath(xpath_picker))
+                .findElement(By.xpath("//XCUIElementTypeCell[@name=\""+targetFolder+"\"]")).click();
+    }
+
+    public void createFolder(){
+        Log.log(Level.FINE, "Start: Create folder");
+        createFolder.click();
     }
 
     public void accept(String operation){

@@ -41,7 +41,7 @@ public class CommonPage {
 
     public static void waitById(int timeToWait, String resourceId){
         WebDriverWait wait = new WebDriverWait(driver, timeToWait);
-        wait.until(ExpectedConditions.visibilityOfElementLocated(MobileBy.id(resourceId)));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id(resourceId)));
     }
 
     public static void waitById(int timeToWait, MobileElement mobileElement){

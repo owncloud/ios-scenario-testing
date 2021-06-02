@@ -35,13 +35,12 @@ public class AppiumManager {
         DesiredCapabilities capabilities = new DesiredCapabilities();
 
         capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, "iOS");
-        capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, "14.4");
         if (System.getProperty("device") != null && !System.getProperty("device").isEmpty()) {
             capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, System.getProperty("device"));
-            capabilities.setCapability("udid", System.getProperty("udid"));
         } else { //Will use iPhone X as default simulator
-            capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "iPhone 8");
+            capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "iPhone X");
         }
+        capabilities.setCapability("udid", System.getProperty("udid"));
 
         capabilities.setCapability(MobileCapabilityType.APP, app.getAbsolutePath());
         capabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, AutomationName.IOS_XCUI_TEST);

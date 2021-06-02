@@ -15,10 +15,10 @@ Feature: Move item
     When user selects to move the item folderMove using the Actions menu
     And user selects Documents as target folder of the move
     Then user should not see folderMove in the filelist anymore
-    But user should see folderMove inside the folder Documents
+    And user should see folderMove inside the folder Documents
 
   Scenario: Move an existent folder to another location using the Contextual menu
     When user selects to move the item folderMove using the Contextual menu
     And user selects Documents as target folder of the move
     Then user should not see folderMove in the filelist anymore
-    But user should see folderMove inside the folder Documents
+    And user should see folderMove inside the folder Documents

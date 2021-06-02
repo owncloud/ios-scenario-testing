@@ -86,7 +86,7 @@ public class FileListPage extends CommonPage {
         //TODO
     }
 
-    public void executeOperation(String operation, String itemName, String typeitem, String menu){
+    public void executeOperation(String operation, String itemName, String typeItem, String menu){
         Log.log(Level.FINE, "Starts: execute operation: " + operation + " " +
                 itemName + " "+ menu);
         waitToload();
@@ -96,10 +96,10 @@ public class FileListPage extends CommonPage {
         }
         if (menu.equals("Actions")) {
             selectItemListActions(itemName);
-            selectOperationFromActions(itemName, operation, typeitem);
+            selectOperationFromActions(itemName, operation, typeItem);
         } else if (menu.equals("Contextual")) {
             selectItemListContextual(itemName);
-            selectOperationFromContextual(itemName, operation, typeitem);
+            selectOperationFromContextual(itemName, operation, typeItem);
         }
     }
 

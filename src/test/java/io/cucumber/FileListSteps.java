@@ -141,10 +141,12 @@ public class FileListSteps {
     }
 
     @Then("^user should see the item (.+) as av.offline$")
-    public void item_marked_as_avOffline(String itemName) {
+    public void item_marked_as_avOffline(String itemName)
+            throws IOException {
         String currentStep = StepEventBus.getEventBus().getCurrentStep().get().toString();
         Log.log(Level.FINE, "----STEP----: " + currentStep);
         assertTrue(fileListPage.fileIsMarkedAsAvOffline(itemName));
+        filesAPI.removeItem(itemName);
     }
 
     @Then("^the list of files in (.+) folder should match with the server$")
