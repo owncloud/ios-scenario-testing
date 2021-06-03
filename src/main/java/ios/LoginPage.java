@@ -35,8 +35,11 @@ public class LoginPage extends CommonPage{
     @iOSXCUITFindBy(accessibility = "row-credentials-password")
     private MobileElement passwordInput;
 
-    @iOSXCUITFindBy(accessibility = "server-bookmark-cell;")
-    private List<MobileElement> bookmarkCell;
+    @iOSXCUITFindBy(accessibility = "server-bookmark-cell")
+    private List<MobileElement> bookmarkCells;
+
+    @iOSXCUITFindBy(accessibility = "server-bookmark-cell")
+    private MobileElement bookmarkCell;
 
 
     private final String serverURL = LocProperties.getProperties().getProperty("serverBasicTest");
@@ -47,8 +50,6 @@ public class LoginPage extends CommonPage{
     private final String red302URL = LocProperties.getProperties().getProperty("server302Test");
 
     private final String server = System.getProperty("server");
-
-    //private String errorcredentialstext_xpath = "//*[@text='Wrong username or password']";
 
     public LoginPage(){
         super();
@@ -118,6 +119,10 @@ public class LoginPage extends CommonPage{
     public void selectBookmarkIndex(int index) {
         MobileElement firstServer =  (MobileElement) driver.findElements(By.id("server-bookmark-cell")).get(index);
         firstServer.click();
+    }
+
+    public void selectFirstBookmark() {
+        bookmarkCell.click();
     }
 
     private String selectURL(String authMehod){

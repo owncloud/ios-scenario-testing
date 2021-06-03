@@ -25,6 +25,15 @@ public class LoginSteps {
 
     private CommonAPI commonAPI = new CommonAPI();
 
+    @Given("^app has been launched for the first time$")
+    public void app_from_scratch(){
+        String currentStep = StepEventBus.getEventBus().getCurrentStep().get().toString();
+        Log.log(Level.FINE, "----STEP----: " + currentStep);
+        //In case it is installed, we remove to execute login tests
+        loginPage.reinstallApp();
+        loginPage.acceptPermissions();
+    }
+
     @Given("^user (.+) is logged$")
     public void i_am_logged(String user)
             throws Throwable {
@@ -32,6 +41,7 @@ public class LoginSteps {
         Log.log(Level.FINE, "----STEP----: " + currentStep);
         loginPage.acceptPermissions();
         if (loginPage.notLoggedIn()) {
+            Log.log(Level.FINE, "Not logged. Starting login process");
             String authMethod = commonAPI.checkAuthMethod();
             String username = LocProperties.getProperties().getProperty("userName1");
             String password = LocProperties.getProperties().getProperty("passw1");

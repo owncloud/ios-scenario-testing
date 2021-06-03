@@ -130,6 +130,7 @@ public class FileListSteps {
         fileListPage.isItemInList(itemName);
         assertTrue(filesAPI.itemExist(targetFolder+"/"+itemName));
         filesAPI.removeItem(targetFolder+"/"+itemName);
+        fileListPage.browseRoot();
     }
 
     @Then("^user should not see (.+) in the filelist anymore$")

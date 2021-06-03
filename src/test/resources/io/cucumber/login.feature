@@ -33,7 +33,6 @@ Feature: Login
     And user logins as admin with password admin as basic auth credentials
     Then user should be correctly logged
 
-
   @smoke
   Scenario: An invalid login, with wrong credentials
     Given server with basic auth is available

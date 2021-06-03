@@ -32,6 +32,9 @@ public class FileListPage extends CommonPage {
     @iOSXCUITFindBy(id="share-add-group")
     private MobileElement share;
 
+    @iOSXCUITFindBy(id="Files")
+    private MobileElement browseRoot;
+
     //Actions in action menu
     private String xpath_delete = "//XCUIElementTypeCell[@name=\"com.owncloud.action.delete\"]";
     private String xpath_rename = "//XCUIElementTypeCell[@name=\"com.owncloud.action.rename\"]";
@@ -220,6 +223,11 @@ public class FileListPage extends CommonPage {
     public void browse(String folderName){
         Log.log(Level.FINE, "Starts: browse to " + folderName);
         driver.findElement(By.xpath("//XCUIElementTypeStaticText[@name=\""+folderName+"\"]")).click();
+    }
+
+    public void browseRoot(){
+        Log.log(Level.FINE, "Starts: browse to root");
+        browseRoot.click();
     }
 
     public void acceptDeletion(){
