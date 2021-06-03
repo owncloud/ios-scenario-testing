@@ -40,7 +40,7 @@ public class FileListSteps {
     protected FilesAPI filesAPI = new FilesAPI();
 
     @Given("^the following items have been created in the account$")
-    public void item_exists(DataTable table) throws Throwable {
+    public void items_created(DataTable table) throws Throwable {
         String currentStep = StepEventBus.getEventBus().getCurrentStep().get().toString();
         Log.log(Level.FINE, "----STEP----: " + currentStep);
         List<String> listItems = (List<String>) table.asList();
@@ -54,7 +54,7 @@ public class FileListSteps {
     }
 
     @Given("^the (item|folder|file) (.+) has been created in the account$")
-    public void item_exists_2(String type, String itemName) throws Throwable {
+    public void items_created_2(String type, String itemName) throws Throwable {
         String currentStep = StepEventBus.getEventBus().getCurrentStep().get().toString();
         Log.log(Level.FINE, "----STEP----: " + currentStep);
         if (!filesAPI.itemExist(itemName)) {
@@ -66,7 +66,7 @@ public class FileListSteps {
     }
 
     @Given("^the folder (.+) contains (.+) files$")
-    public void item_exists(String folderName, int files) throws Throwable {
+    public void folder_contains(String folderName, int files) throws Throwable {
         String currentStep = StepEventBus.getEventBus().getCurrentStep().get().toString();
         Log.log(Level.FINE, "----STEP----: " + currentStep);
         if (!filesAPI.itemExist(folderName)) {
@@ -78,21 +78,21 @@ public class FileListSteps {
     }
 
     @When("^user selects the option Create Folder$")
-    public void i_select_create_folder() throws IOException {
+    public void create_folder() throws IOException {
         String currentStep = StepEventBus.getEventBus().getCurrentStep().get().toString();
         Log.log(Level.FINE, "----STEP----: " + currentStep);
         fileListPage.createFolder();
     }
 
     @When("^user selects to (.+) the (file|folder|item) (.+) using the (.+) menu$")
-    public void i_select_item_to_some_operation(String operation, String typeItem, String itemName, String menu) {
+    public void select_item_to_some_operation(String operation, String typeItem, String itemName, String menu) {
         String currentStep = StepEventBus.getEventBus().getCurrentStep().get().toString();
         Log.log(Level.FINE, "----STEP----: " + currentStep);
         fileListPage.executeOperation(operation, itemName, typeItem, menu);
     }
 
     @When ("^user selects (.+) as target folder of the (.+)$")
-    public void i_select_target_folder(String targetFolder, String operation) {
+    public void select_target_folder(String targetFolder, String operation) {
         String currentStep = StepEventBus.getEventBus().getCurrentStep().get().toString();
         Log.log(Level.FINE, "----STEP----: " + currentStep);
         folderPickerPage.selectFolder(targetFolder);
@@ -100,21 +100,21 @@ public class FileListSteps {
     }
 
     @When("^user confirms the deletion$")
-    public void i_accept_the_deletion(){
+    public void accept_deletion(){
         Log.log(Level.FINE, "----STEP----: " +
                 new Object(){}.getClass().getEnclosingMethod().getName());
         fileListPage.acceptDeletion();
     }
 
     @When("^user sets (.+) as new name$")
-    public void i_set_new_name(String itemName) {
+    public void set_new_name(String itemName) {
         String currentStep = StepEventBus.getEventBus().getCurrentStep().get().toString();
         Log.log(Level.FINE, "----STEP----: " + currentStep);
         inputNamePage.setItemName(itemName);
     }
 
     @Then("^user should see (.+) in the filelist$")
-    public void i_see_original_the_item(String itemName) throws Throwable {
+    public void original_item_filelist(String itemName) throws Throwable {
         String currentStep = StepEventBus.getEventBus().getCurrentStep().get().toString();
         Log.log(Level.FINE, "----STEP----: " + currentStep);
         assertTrue(fileListPage.isItemInList(itemName));
@@ -123,7 +123,7 @@ public class FileListSteps {
     }
 
     @Then("^user should see (.+) inside the folder (.+)$")
-    public void i_see_item_in_folder(String itemName, String targetFolder) throws Throwable {
+    public void item_inside_folder(String itemName, String targetFolder) throws Throwable {
         String currentStep = StepEventBus.getEventBus().getCurrentStep().get().toString();
         Log.log(Level.FINE, "----STEP----: " + currentStep);
         fileListPage.browse(targetFolder);
@@ -134,7 +134,7 @@ public class FileListSteps {
     }
 
     @Then("^user should not see (.+) in the filelist anymore$")
-    public void i_do_not_see_the_item(String itemName) throws Throwable {
+    public void item_not_in_list(String itemName) throws Throwable {
         String currentStep = StepEventBus.getEventBus().getCurrentStep().get().toString();
         Log.log(Level.FINE, "----STEP----: " + currentStep);
         assertFalse(fileListPage.isItemInList(itemName));
@@ -142,7 +142,7 @@ public class FileListSteps {
     }
 
     @Then("^user should see the item (.+) as av.offline$")
-    public void item_marked_as_avOffline(String itemName)
+    public void item_as_avoffline(String itemName)
             throws IOException {
         String currentStep = StepEventBus.getEventBus().getCurrentStep().get().toString();
         Log.log(Level.FINE, "----STEP----: " + currentStep);

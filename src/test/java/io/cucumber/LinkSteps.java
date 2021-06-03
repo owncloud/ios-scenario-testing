@@ -47,7 +47,7 @@ public class LinkSteps {
     }
 
     @When("^user creates link on (item|file|folder) (.+) with the following fields$")
-    public void i_select_to_link_with_fields(String type, String itemName, DataTable table)
+    public void create_link_with_fields(String type, String itemName, DataTable table)
             throws Throwable {
         String currentStep = StepEventBus.getEventBus().getCurrentStep().get().toString();
         Log.log(Level.FINE, "----STEP----: " + currentStep);
@@ -79,7 +79,7 @@ public class LinkSteps {
     }
 
     @When("^user edits the link on (.+) with the following fields$")
-    public void user_edits_public_link(String itemName, DataTable table)
+    public void edit_public_link(String itemName, DataTable table)
             throws Throwable {
         String currentStep = StepEventBus.getEventBus().getCurrentStep().get().toString();
         Log.log(Level.FINE, "----STEP----: " + currentStep);
@@ -108,7 +108,7 @@ public class LinkSteps {
     }
 
     @When("^user deletes the link on (.+)$")
-    public void user_deletes_link(String item) {
+    public void delete_link(String item) {
         String currentStep = StepEventBus.getEventBus().getCurrentStep().get().toString();
         Log.log(Level.FINE, "----STEP----: " + currentStep);
         publicLinkPage.openPublicLink(item + " link");
@@ -116,7 +116,7 @@ public class LinkSteps {
     }
 
     @Then("^link should be created on (.+) with the following fields$")
-    public void link(String itemName, DataTable table)
+    public void link_created_with_fields(String itemName, DataTable table)
             throws Throwable {
         String currentStep = StepEventBus.getEventBus().getCurrentStep().get().toString();
         Log.log(Level.FINE, "----STEP----: " + currentStep);

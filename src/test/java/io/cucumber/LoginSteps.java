@@ -35,7 +35,7 @@ public class LoginSteps {
     }
 
     @Given("^user (.+) is logged$")
-    public void i_am_logged(String user)
+    public void logged(String user)
             throws Throwable {
         String currentStep = StepEventBus.getEventBus().getCurrentStep().get().toString();
         Log.log(Level.FINE, "----STEP----: " + currentStep);
@@ -109,14 +109,14 @@ public class LoginSteps {
     }
 
     @Then("^user accepts the redirection$")
-    public void accepted_redirection() {
+    public void accept_redirection() {
         String currentStep = StepEventBus.getEventBus().getCurrentStep().get().toString();
         Log.log(Level.FINE, "----STEP----: " + currentStep);
         loginPage.approveIssue();
     }
 
     @Then("^user should be correctly logged$")
-    public void i_can_see_the_main_page() {
+    public void correctly_logged() {
         String currentStep = StepEventBus.getEventBus().getCurrentStep().get().toString();
         Log.log(Level.FINE, "----STEP----: " + currentStep);
         try {
@@ -132,7 +132,7 @@ public class LoginSteps {
     }
 
     @Then("^user should see an error$")
-    public void i_see_an_error_message() {
+    public void credential_error() {
         String currentStep = StepEventBus.getEventBus().getCurrentStep().get().toString();
         Log.log(Level.FINE, "----STEP----: " + currentStep);
         try {

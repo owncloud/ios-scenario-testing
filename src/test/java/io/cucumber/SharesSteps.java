@@ -47,7 +47,7 @@ public class SharesSteps {
     }
 
     @When("^user selects (user|group) (.+) as sharee$")
-    public void i_select_sharee(String type, String sharee)
+    public void select_sharee(String type, String sharee)
             throws Throwable {
         String currentStep = StepEventBus.getEventBus().getCurrentStep().get().toString();
         Log.log(Level.FINE, "----STEP----: " + currentStep);
@@ -196,7 +196,7 @@ public class SharesSteps {
     }
 
     @Then("^(user|group) (.+) should have access to (.+)$")
-    public void group_has_the_file (String type, String shareeName, String itemName)
+    public void group_has_the_file(String type, String shareeName, String itemName)
             throws Throwable {
         String currentStep = StepEventBus.getEventBus().getCurrentStep().get().toString();
         Log.log(Level.FINE, "----STEP----: " + currentStep);
@@ -208,7 +208,7 @@ public class SharesSteps {
     }
 
     @Then("^user (.+) should not have access to (.+)$")
-    public void sharee_does_not_have_the_file (String userName, String itemName)
+    public void sharee_does_not_have_access(String userName, String itemName)
             throws Throwable {
         String currentStep = StepEventBus.getEventBus().getCurrentStep().get().toString();
         Log.log(Level.FINE, "----STEP----: " + currentStep);
