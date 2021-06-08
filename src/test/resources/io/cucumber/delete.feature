@@ -7,15 +7,15 @@ Feature: Delete item
 
   Background: User is logged in
     Given user user1 is logged
-    And the following items have been created in the account
-      | deleteMe |
 
   Scenario: Delete an existent folder using the Actions menu
-    When user selects to delete the file deleteMe using the Actions menu
+    Given the folder delete1 has been created in the account
+    When user selects to delete the folder delete1 using the Actions menu
     And user confirms the deletion
-    Then user should not see deleteMe in the filelist anymore
+    Then user should not see delete1 in the filelist anymore
 
   Scenario: Delete an existent folder using the Contextual menu
-    When user selects to delete the file deleteMe using the Contextual menu
+    Given the folder delete2 has been created in the account
+    When user selects to delete the folder delete2 using the Contextual menu
     And user confirms the deletion
-    Then user should not see deleteMe in the filelist anymore
+    Then user should not see delete2 in the filelist anymore

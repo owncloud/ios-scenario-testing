@@ -7,15 +7,15 @@ Feature: Duplicate item
 
   Background: User is logged in
     Given user user1 is logged
-    And the following items have been created in the account
-      | DuplicateFolder |
 
   Scenario: Duplicate an existent folder using the Actions menu
-    When user selects to duplicate the item DuplicateFolder using the Actions menu
-    Then user should see DuplicateFolder in the filelist
-    And user should see DuplicateFolder 2 in the filelist
+    Given the folder dupl has been created in the account
+    When user selects to duplicate the folder dupl using the Actions menu
+    Then user should see dupl in the filelist
+    And user should see dupl 2 in the filelist
 
   Scenario: Duplicate an existent folder using the Contextual menu
-    When user selects to duplicate the item DuplicateFolder using the Contextual menu
-    Then user should see DuplicateFolder in the filelist
-    And user should see DuplicateFolder 2 in the filelist
+    Given the folder duplbis has been created in the account
+    When user selects to duplicate the folder duplbis using the Contextual menu
+    Then user should see duplbis in the filelist
+    And user should see duplbis 2 in the filelist

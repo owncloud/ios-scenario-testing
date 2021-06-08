@@ -58,11 +58,11 @@ public class FileListSteps {
         String currentStep = StepEventBus.getEventBus().getCurrentStep().get().toString();
         Log.log(Level.FINE, "----STEP----: " + currentStep);
         if (!filesAPI.itemExist(itemName)) {
-            if (type.equals("folder")) {
+            if (type.equals("folder") || type.equals("item")) {
                 filesAPI.createFolder(itemName);
             } else if (type.equals("file"))
                 filesAPI.pushFile(itemName);
-        }
+            }
     }
 
     @Given("^the folder (.+) contains (.+) files$")
@@ -91,7 +91,7 @@ public class FileListSteps {
         fileListPage.executeOperation(operation, itemName, typeItem, menu);
     }
 
-    @When ("^user selects (.+) as target folder of the (.+)$")
+    @When ("^user selects (.+) as target folder of the (.+) operation$")
     public void select_target_folder(String targetFolder, String operation) {
         String currentStep = StepEventBus.getEventBus().getCurrentStep().get().toString();
         Log.log(Level.FINE, "----STEP----: " + currentStep);

@@ -6,18 +6,18 @@ Feature: Rename an item
 
   Background: User is logged in
     Given user user1 is logged
-    And the following items have been created in the account
-      | RenameMe  |
 
   @smoke
   Scenario: Rename an item using the Actions menu
-    When user selects to rename the item RenameMe using the Actions menu
-    And user sets Renamed as new name
-    Then user should see Renamed in the filelist
-    But user should not see Rename in the filelist anymore
+    Given the item rename1 has been created in the account
+    When user selects to rename the item rename1 using the Actions menu
+    And user sets renamed1 as new name
+    Then user should see renamed1 in the filelist
+    But user should not see rename1 in the filelist anymore
 
   Scenario: Rename an item using the Contextual menu
-    When user selects to rename the item RenameMe using the Contextual menu
-    And user sets Renamed as new name
-    Then user should see Renamed in the filelist
-    But user should not see Rename in the filelist anymore
+    Given the item rename2 has been created in the account
+    When user selects to rename the item rename2 using the Contextual menu
+    And user sets renamed2 as new name
+    Then user should see renamed2 in the filelist
+    But user should not see rename2 in the filelist anymore

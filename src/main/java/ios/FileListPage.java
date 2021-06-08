@@ -243,6 +243,7 @@ public class FileListPage extends CommonPage {
         //Action turns to unavailable offline
         boolean menuUnavoffline = !driver.findElements(By.xpath("//XCUIElementTypeCell" +
                 "[@name=\"com.owncloud.action.makeUnavailableOffline\"]")).isEmpty();
+        Log.log(Level.FINE, "Av. Offline conditions:" + avofflineBadge + " " + menuUnavoffline);
         return avofflineBadge && menuUnavoffline;
     }
 
