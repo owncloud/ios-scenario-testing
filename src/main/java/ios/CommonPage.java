@@ -22,8 +22,9 @@ import java.util.logging.Level;
 import io.appium.java_client.MobileBy;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.TouchAction;
-import io.appium.java_client.android.AndroidStartScreenRecordingOptions;
 import io.appium.java_client.ios.IOSDriver;
+import io.appium.java_client.ios.IOSStartScreenRecordingOptions;
+import io.appium.java_client.ios.IOSStartScreenRecordingOptions.VideoQuality;
 import io.appium.java_client.touch.offset.PointOption;
 import utils.LocProperties;
 import utils.log.Log;
@@ -87,11 +88,10 @@ public class CommonPage {
     }
 
     public static void startRecording (){
-        AndroidStartScreenRecordingOptions androidStartScreenRecordingOptions =
-                new AndroidStartScreenRecordingOptions();
-        androidStartScreenRecordingOptions.withBitRate(2000000);
-        androidStartScreenRecordingOptions.withVideoSize("360x640");
-        driver.startRecordingScreen(androidStartScreenRecordingOptions);
+        IOSStartScreenRecordingOptions iOSStartScreenRecordingOptions =
+                new IOSStartScreenRecordingOptions()
+                        .withVideoQuality(VideoQuality.MEDIUM);
+        driver.startRecordingScreen(iOSStartScreenRecordingOptions);
     }
 
     public static void stopRecording (String filename){

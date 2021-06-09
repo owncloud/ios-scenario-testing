@@ -84,18 +84,10 @@ public class FileListPage extends CommonPage {
         createFolder.click();
     }
 
-
-    public void upload(){
-        Log.log(Level.FINE, "Starts: upload");
-        waitById(5, plusButton);
-        //TODO
-    }
-
     public void executeOperation(String operation, String itemName, String typeItem, String menu){
         Log.log(Level.FINE, "Starts: execute operation: " + operation + " " +
                 itemName + " "+ menu);
         waitToload();
-        startRecording();
         if (!isItemInList(itemName)){
             Log.log(Level.FINE, "Searching item... swiping: " + itemName);
             swipe(0.50, 0.90, 0.50, 0.20);
@@ -239,15 +231,11 @@ public class FileListPage extends CommonPage {
     }
 
     public boolean fileIsMarkedAsAvOffline(String itemName){
-        //Marked in the file list
-        boolean avofflineBadge = !driver.findElements(By.xpath(
-                "//XCUIElementTypeCell[@name=\""+itemName+"\"]/XCUIElementTypeImage[2]")).isEmpty();
         selectItemListActions(itemName);
         //Action turns to unavailable offline
         boolean menuUnavoffline = driver.findElement(By.id(id_unavoffline)).isDisplayed();
-        Log.log(Level.FINE, "Av. Offline conditions:" + avofflineBadge + " " + menuUnavoffline);
-        stopRecording("test");
-        return avofflineBadge && menuUnavoffline;
+        Log.log(Level.FINE, "Av. Offline conditions: " + menuUnavoffline);
+        return menuUnavoffline;
     }
 
     public void waitItemDownloaded(String itemName){
