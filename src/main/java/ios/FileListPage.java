@@ -42,6 +42,7 @@ public class FileListPage extends CommonPage {
     private String xpath_copy = "//XCUIElementTypeCell[@name=\"com.owncloud.action.copy\"]";
     private String xpath_duplicate = "//XCUIElementTypeCell[@name=\"com.owncloud.action.duplicate\"]";
     private String xpath_avoffline = "//XCUIElementTypeCell[@name=\"com.owncloud.action.makeAvailableOffline\"]";
+    private String xpath_unavoffline = "//XCUIElementTypeCell[@name=\"com.owncloud.action.makeUnavailableOffline\"]";
     private String xpath_sharefolder = "//XCUIElementTypeStaticText[@name=\"Share this folder\"]";
     private String xpath_sharefile = "//XCUIElementTypeStaticText[@name=\"Share this file\"]";
     private String xpath_editshare = "//XCUIElementTypeApplication[@name=\"ownCloud\"]/XCUIElementTypeWindow[1]/" +
@@ -59,6 +60,7 @@ public class FileListPage extends CommonPage {
     private String id_copy = "Copy";
     private String id_duplicate = "Duplicate";
     private String id_avoffline = "Make available offline";
+    private String id_unavoffline = "com.owncloud.action.makeUnavailableOffline";
     private String id_share = "Sharing";
     private String id_link = "Links";
 
@@ -93,6 +95,7 @@ public class FileListPage extends CommonPage {
         Log.log(Level.FINE, "Starts: execute operation: " + operation + " " +
                 itemName + " "+ menu);
         waitToload();
+        startRecording();
         if (!isItemInList(itemName)){
             Log.log(Level.FINE, "Searching item... swiping: " + itemName);
             swipe(0.50, 0.90, 0.50, 0.20);
@@ -241,10 +244,16 @@ public class FileListPage extends CommonPage {
                 "//XCUIElementTypeCell[@name=\""+itemName+"\"]/XCUIElementTypeImage[2]")).isEmpty();
         selectItemListActions(itemName);
         //Action turns to unavailable offline
-        boolean menuUnavoffline = !driver.findElements(By.xpath("//XCUIElementTypeCell" +
-                "[@name=\"com.owncloud.action.makeUnavailableOffline\"]")).isEmpty();
+        boolean menuUnavoffline = driver.findElement(By.id(id_unavoffline)).isDisplayed();
         Log.log(Level.FINE, "Av. Offline conditions:" + avofflineBadge + " " + menuUnavoffline);
+        stopRecording("test");
         return avofflineBadge && menuUnavoffline;
+    }
+
+    public void waitItemDownloaded(String itemName){
+        MobileElement element = (MobileElement) driver.findElement(By.xpath(
+                "//XCUIElementTypeCell[@name=\""+ itemName +"\"]/XCUIElementTypeOther[2]"));
+        waitByIdInvisible(10, element);
     }
 
     public boolean displayedList(String path, ArrayList<OCFile> listServer){
