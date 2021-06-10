@@ -1,5 +1,3 @@
-Build status:
-https://app.bitrise.io/app/d9ceab91286794be/status.svg?token=zSpveXrg9JoguUP0-dQDug&branch=master
 
 Scenarios contained in feature files written in Gherkin language.
 Available scenarios can be found
@@ -20,6 +18,8 @@ Syntax](https://cucumber.io/docs/gherkin/).
 
 - Device interaction with [Appium](http://appium.io/)
 
+- Reports generated with [Serenity](https://github.com/serenity-bdd/)
+
 ![](architecture.png)
 
 ## Get the code
@@ -37,9 +37,15 @@ Different requirements:
 
 * `Appium` instance running and reachable
 
-* At least, one device attached and reachable via adb. Check command
-`adb devices` to ensure `Appium` will get the device reference to
-interact with it
+* At least, one iOS simulator attached and reachable.
+
+* The following libraries and dependencies to be installed:
+
+	* `authorize-ios`: A little utility that pre-authorizes Instruments to run UIAutomation scripts against iOS devices
+	* `ios-deploy` : Allows install and debug iOS apps from the command line
+	* `ideviceinstaller`: A command-line application to manage apps on iOS devices
+	* `ios-webkit-debug-proxy`: Allows to send commands to MobileSafari and UIWebViews
+	* `ios-sim` : Simulator manager (start, launch...)
 
 ## How to test
 
@@ -47,15 +53,10 @@ The script `executeTests` will launch the tests. The script needs some
 parameters:
 
      -s (mandatory): URL of ownCloud server to test against
-     -a (optional): Appium server URL. if Appium Server is not
-specified, will be used "localhost:4723/wd/hub"
-     -t (optional): Filter based in tags. F. ex: @createfolder will send
-only tests tagged with such label. Tags are allowed to concatenate,
-sepparated by ",". It is also allowed to use a classpath to execute all
-the test in any class
-     -d (optional): In case of several devices attached, tests will be
-sent against the UID set in this option. This is the id returned by `adb
-devices` command.
+     -a (optional): Appium server URL. if Appium Server is not specified, will be used "localhost:4723/wd/hub"
+     -t (optional): Filter based in tags. F. ex: @createfolder will send only tests tagged with such label. Tags are allowed to concatenate, sepparated by ",". It is also allowed to use a classpath to execute all the test in any class
+     -d (optional): In case of several devices attached, tests will be sent against the device name set in this option.
+     -u (optional): UDID of the simulator to test against.
      -h: display this help
 
 The execution will display step by step how the scenario is being executed.
