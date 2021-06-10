@@ -78,7 +78,7 @@ public class FileListSteps {
     }
 
     @When("^user selects the option Create Folder$")
-    public void create_folder() throws IOException {
+    public void create_folder() {
         String currentStep = StepEventBus.getEventBus().getCurrentStep().get().toString();
         Log.log(Level.FINE, "----STEP----: " + currentStep);
         fileListPage.createFolder();
