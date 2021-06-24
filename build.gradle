@@ -10,8 +10,8 @@ project.ext {
     serenityJunitVersion = '2.1.2'
     byteBuddyVersion = '1.10.5'
     guavaVersion = '25.0-jre'
-    javaClientVersion = '7.3.0'
-    okhttpVersion= '3.12.0'
+    javaClientVersion = '7.5.1'
+    okhttpVersion= '3.12.13'
     okioVersion = '1.14.0'
     jsonVersion = '20200518'
     slf4japiVersion = '1.7.5'
@@ -49,6 +49,8 @@ dependencies {
     implementation 'com.squareup.okio:okio:' + okioVersion
     implementation 'org.json:json:' + jsonVersion
     implementation 'org.apache.commons:commons-text:' + apacheCommonsTextVersion
+    implementation 'commons-codec:commons-codec:1.15'
+    implementation 'commons-io:commons-io:2.6'
 
     // Other dependencies
     testImplementation "org.slf4j:slf4j-api:" + slf4japiVersion,

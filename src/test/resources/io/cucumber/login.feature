@@ -9,7 +9,7 @@ Feature: Login
   @smoke
   Scenario Outline: A valid login in basic auth
     Given server with basic auth is available
-    And user logins as user1 with password a as basic auth credentials
+    And user logins as <username> with password <password> as basic auth credentials
     Then user should be correctly logged
 
     Examples:
