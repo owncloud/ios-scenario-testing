@@ -14,9 +14,7 @@ import io.cucumber.junit.CucumberOptions;
 import utils.log.Log;
 
 @RunWith(CucumberWithSerenity.class)
-@CucumberOptions(plugin = {"pretty",
-        "json:target/cucumber-reports/Cucumber.json",
-        "html:target/cucumber-reports"})
+@CucumberOptions(plugin = {"pretty"})
 
 public class RunCucumberTest {
 

@@ -1,8 +1,11 @@
 package ios;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Dimension;
+import org.openqa.selenium.Rectangle;
 import org.openqa.selenium.support.PageFactory;
 
+import java.time.Duration;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.logging.Level;
@@ -13,7 +16,9 @@ import io.appium.java_client.TouchAction;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import io.appium.java_client.pagefactory.iOSXCUITFindBy;
 import io.appium.java_client.touch.LongPressOptions;
+import io.appium.java_client.touch.WaitOptions;
 import io.appium.java_client.touch.offset.ElementOption;
+import io.appium.java_client.touch.offset.PointOption;
 import utils.LocProperties;
 import utils.entities.OCFile;
 import utils.log.Log;
@@ -92,12 +97,18 @@ public class FileListPage extends CommonPage {
             Log.log(Level.FINE, "Searching item... swiping: " + itemName);
             swipe(0.50, 0.90, 0.50, 0.20);
         }
-        if (menu.equals("Actions")) {
-            selectItemListActions(itemName);
-            selectOperationFromActions(itemName, operation, typeItem);
-        } else if (menu.equals("Contextual")) {
-            selectItemListContextual(itemName);
-            selectOperationFromContextual(itemName, operation, typeItem);
+        switch (menu) {
+            case "Actions":
+                selectItemListActions(itemName);
+                selectOperationFromActions(itemName, operation, typeItem);
+                break;
+            case "Contextual":
+                selectItemListContextual(itemName);
+                selectOperationFromContextual(itemName, operation, typeItem);
+                break;
+            case "Swipe":
+                selectItemListSwipe(itemName);
+                break;
         }
     }
 
@@ -130,6 +141,14 @@ public class FileListPage extends CommonPage {
         MobileElement listCell = (MobileElement) driver.findElement(By.xpath(itemXpath));
         new TouchAction(driver).longPress(LongPressOptions.longPressOptions()
                 .withElement(ElementOption.element(listCell))).release().perform();
+    }
+
+    private void selectItemListSwipe(String itemName) {
+        Log.log(Level.FINE, "Starts: select item from list by swiping: " + itemName);
+        String itemXpath = "//XCUIElementTypeCell[@name=\"" + itemName + "\"]";
+        waitByXpath(10, itemXpath);
+        MobileElement listCell = (MobileElement) driver.findElement(By.xpath(itemXpath));
+        swipeElementIOS(listCell, "LEFT");
     }
 
     public void selectOperationFromActions(String itemName, String operationName, String typeItem) {

@@ -7,6 +7,7 @@ Feature: Links
   Background: User is logged in
     Given user user1 is logged
 
+  @smoke
   Scenario Outline: Create a public link with name
     Given the <type> <item> has been created in the account
     When user selects to share by link the <type> <item> using the Actions menu

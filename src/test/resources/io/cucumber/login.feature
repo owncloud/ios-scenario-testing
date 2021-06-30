@@ -19,14 +19,14 @@ Feature: Login
       |  hola hola   |    a     |
       |  a+a         |    a     |
 
-  @LDAP @smoke
+  @LDAP
   Scenario: A valid login in LDAP
     Given server with LDAP is available
     When user logins as aaliyah_adams with password secret as LDAP credentials
     Then user should be correctly logged
 
 
-  @redirect301 @smoke
+  @redirect301
   Scenario: A valid login with 301 redirection
     Given server with redirection 301 is available
     When user accepts the redirection

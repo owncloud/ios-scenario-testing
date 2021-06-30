@@ -8,6 +8,7 @@ Feature: Private Share
   Background: User is logged in
     Given user user1 is logged
 
+    @smoke
   Scenario Outline: Correct share with user
     Given the <type> <item> has been created in the account
     When user selects to share the <type> <item> using the Actions menu
@@ -21,6 +22,7 @@ Feature: Private Share
       |  file   |  Share1.txt  |
       |  folder |  Share2      |
 
+  @smoke
   Scenario Outline: Correct share with group
     Given the <type> <item> has been created in the account
     When user selects to share the <type> <item> using the Actions menu

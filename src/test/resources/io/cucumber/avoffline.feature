@@ -8,6 +8,7 @@ Feature: Set items as available offline (downloaded and synced)
   Background: User is logged in
     Given user user1 is logged
 
+  @smoke
   Scenario: Set a file as available offline using the Actions menu
     Given the file file.pdf has been created in the account
     When user selects to make available offline the file file.pdf using the Actions menu

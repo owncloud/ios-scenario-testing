@@ -8,6 +8,7 @@ Feature: List of files is correctly retrieved from server.
   Background: User is logged in
     Given user user1 is logged
 
+  @smoke
   Scenario Outline: Check items in the list of files of an specific folder
     Then the list of files in <path> folder should match with the server
 

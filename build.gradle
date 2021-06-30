@@ -1,22 +1,24 @@
 defaultTasks 'clean','test','aggregate'
 
 project.ext {
-    cucumberVersion = '4.8.0'
+    cucumberVersion = '5.5.0'
     apacheCommonsExecVersion = '1.3'
     apacheCommonsLangVersion = '3.9'
     apacheCommonsTextVersion = '1.9'
-    serenityCoreVersion = '2.1.5'
-    serenityCucumberVersion = '2.1.2'
-    serenityJunitVersion = '2.1.2'
+    apacheCommonsCodec = '1.10'
+    apacheCommonsIo = '2.6'
+    serenityCoreVersion = '2.2.0'
+    serenityCucumberVersion = '2.2.0'
+    serenityJunitVersion = '2.2.0'
     byteBuddyVersion = '1.10.5'
-    guavaVersion = '25.0-jre'
-    javaClientVersion = '7.5.1'
+    guavaVersion = '30.1-jre'
+    javaClientVersion = '7.5.0'
     okhttpVersion= '3.12.13'
     okioVersion = '1.14.0'
     jsonVersion = '20200518'
-    slf4japiVersion = '1.7.5'
-    junitVersion = '4.12'
-    assertjcoreVersion = '1.7.0'
+    slf4japiVersion = '1.7.7'
+    junitVersion = '4.13.1'
+    assertjcoreVersion = '3.8.0'
 }
 
 buildscript {
@@ -25,7 +27,7 @@ buildscript {
         mavenLocal()
     }
     dependencies {
-        classpath("net.serenity-bdd:serenity-gradle-plugin:2.1.13")
+        classpath("net.serenity-bdd:serenity-gradle-plugin:2.2.13")
     }
 }
 
@@ -39,7 +41,7 @@ dependencies {
     testImplementation 'org.apache.commons:commons-lang3:' + apacheCommonsLangVersion
     testImplementation 'io.cucumber:cucumber-core:' + cucumberVersion
     testImplementation 'net.serenity-bdd:serenity-core:' + serenityCoreVersion
-    testImplementation 'net.serenity-bdd:serenity-cucumber4:' + serenityCucumberVersion
+    testImplementation 'net.serenity-bdd:serenity-cucumber5:' + serenityCucumberVersion
     testImplementation 'net.serenity-bdd:serenity-junit:' + serenityJunitVersion
 
     implementation 'net.bytebuddy:byte-buddy:' + byteBuddyVersion
@@ -49,8 +51,9 @@ dependencies {
     implementation 'com.squareup.okio:okio:' + okioVersion
     implementation 'org.json:json:' + jsonVersion
     implementation 'org.apache.commons:commons-text:' + apacheCommonsTextVersion
-    implementation 'commons-codec:commons-codec:1.15'
-    implementation 'commons-io:commons-io:2.6'
+    implementation 'commons-codec:commons-codec:' + apacheCommonsCodec
+    implementation 'commons-io:commons-io:' + apacheCommonsIo
+    implementation group: 'io.cucumber', name: 'datatable', version: '4.0.0'
 
     // Other dependencies
     testImplementation "org.slf4j:slf4j-api:" + slf4japiVersion,

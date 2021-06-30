@@ -19,3 +19,9 @@ Feature: Delete item
     When user selects to delete the folder delete2 using the Contextual menu
     And user confirms the deletion
     Then user should not see delete2 in the filelist anymore
+
+  Scenario: Delete an existent folder using the Swipe menu
+    Given the folder delete3 has been created in the account
+    When user selects to delete the folder delete3 using the Swipe menu
+    And user confirms the deletion
+    Then user should not see delete3 in the filelist anymore
