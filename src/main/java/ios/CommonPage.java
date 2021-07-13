@@ -79,7 +79,7 @@ public class CommonPage {
                 .moveTo(PointOption.point(startX, endY)).release().perform();
     }
 
-    // This code comes from the appium official docu
+    // This code comes from the Appium official docu
     // http://appium.io/docs/en/writing-running-appium/tutorial/swipe/simple-element/
     public void swipeElementIOS(MobileElement el, String dir) {
         System.out.println("swipeElementIOS(): dir: '" + dir + "'"); // always log your actions

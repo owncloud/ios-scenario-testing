@@ -38,16 +38,16 @@ public class SharesSteps {
     protected ShareAPI shareAPI = new ShareAPI();
     protected FilesAPI filesAPI = new FilesAPI();
 
-    @Given("^the (item|file|folder) (.+) has been already shared with (.+)$")
-    public void item_already_shared(String type, String itemName, String sharee)
-            throws Throwable {
+    @Given("^(.+) (has shared|shares) (item|file|folder) (.+) with (.+) with permissions (\\d+)$")
+    public void item_already_shared(String sharingUser, String tense, String type, String itemName,
+                                    String recipientUser, String permissions) throws Throwable {
         String currentStep = StepEventBus.getEventBus().getCurrentStep().get().toString();
         Log.log(Level.FINE, "----STEP----: " + currentStep);
-        shareAPI.createShare(itemName, sharee, "0", "31", "");
+        shareAPI.createShare(sharingUser, itemName, recipientUser, "0", permissions, "");
     }
 
-    @When("^user selects (user|group) (.+) as sharee$")
-    public void select_sharee(String type, String sharee)
+    @When("^(?:.*?) selects (user|group) (.+) as sharee with default permissions$")
+    public void select_sharee_default(String type, String sharee)
             throws Throwable {
         String currentStep = StepEventBus.getEventBus().getCurrentStep().get().toString();
         Log.log(Level.FINE, "----STEP----: " + currentStep);
@@ -55,7 +55,36 @@ public class SharesSteps {
         sharePermissionsPage.savePermissions();
     }
 
-    @When("^user edits the share on (.+) with permissions (.+)$")
+    @When("^(?:.*?) selects (user|group) (.+) as sharee without (.+) permission$")
+    public void select_sharee_permissions(String type, String sharee, String permission) {
+        String currentStep = StepEventBus.getEventBus().getCurrentStep().get().toString();
+        Log.log(Level.FINE, "----STEP----: " + currentStep);
+        privateSharePage.searchSharee(sharee, type);
+        switch (permission){
+            case "share": {
+                sharePermissionsPage.switchShare();
+                break;
+            }
+            case "change": {
+                sharePermissionsPage.switchChange();
+                break;
+            }
+            case "create": {
+                sharePermissionsPage.switchCreate();
+                break;
+            }
+            case "delete": {
+                sharePermissionsPage.switchDelete();
+                break;
+            }
+            default:
+                break;
+        }
+
+        sharePermissionsPage.savePermissions();
+    }
+
+    @When("^(?:.*?) edits the share on (.+) with permissions (.+)$")
     public void user_edits_share(String itemName, String permissions)
             throws Throwable{
         String currentStep = StepEventBus.getEventBus().getCurrentStep().get().toString();
@@ -110,7 +139,7 @@ public class SharesSteps {
         privateSharePage.close();
     }
 
-    @When("^user deletes the share$")
+    @When("^(?:.*?) deletes the share$")
     public void user_deletes_share() {
         String currentStep = StepEventBus.getEventBus().getCurrentStep().get().toString();
         Log.log(Level.FINE, "----STEP----: " + currentStep);
@@ -207,12 +236,13 @@ public class SharesSteps {
         }
     }
 
-    @Then("^user (.+) should not have access to (.+)$")
+    @Then("^(?:.*?) (.+) should not have access to (.+)$")
     public void sharee_does_not_have_access(String userName, String itemName)
             throws Throwable {
         String currentStep = StepEventBus.getEventBus().getCurrentStep().get().toString();
         Log.log(Level.FINE, "----STEP----: " + currentStep);
         assertFalse(shareAPI.isSharedWithMe(itemName, userName,false));
+        filesAPI.removeItem(itemName);
     }
 
     @Then("^(.+) should not be shared anymore with (.+)$")

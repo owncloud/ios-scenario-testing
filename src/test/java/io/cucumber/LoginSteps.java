@@ -8,7 +8,7 @@ import java.util.logging.Level;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import ios.KopanoPage;
+import ios.OidcPage;
 import ios.LoginPage;
 import ios.OAuth2Page;
 import utils.LocProperties;
@@ -34,8 +34,8 @@ public class LoginSteps {
         loginPage.acceptPermissions();
     }
 
-    @Given("^user (.+) is logged$")
-    public void logged(String user)
+    @Given("^user (.+) is logged in$")
+    public void logged(String userName)
             throws Throwable {
         String currentStep = StepEventBus.getEventBus().getCurrentStep().get().toString();
         Log.log(Level.FINE, "----STEP----: " + currentStep);
@@ -43,27 +43,26 @@ public class LoginSteps {
         if (loginPage.notLoggedIn()) {
             Log.log(Level.FINE, "Not logged. Starting login process");
             String authMethod = commonAPI.checkAuthMethod();
-            String username = LocProperties.getProperties().getProperty("userName1");
             String password = LocProperties.getProperties().getProperty("passw1");
             loginPage.skipAddServer();
             loginPage.typeURL();
             switch (authMethod) {
                 case "Basic":
-                    loginPage.typeCredentials(username, password);
+                    loginPage.typeCredentials(userName, password);
                     loginPage.submitLogin();
                     loginPage.selectBookmarkIndex(0);
                     break;
                 case "Bearer":
                     loginPage.submitLogin();
                     OAuth2Page oauth2Page = new OAuth2Page();
-                    oauth2Page.enterCredentials(username,password);
+                    oauth2Page.enterCredentials(userName,password);
                     oauth2Page.authorize();
                     break;
                 case "OIDC":
                     loginPage.submitLogin();
-                    KopanoPage kopanoPage = new KopanoPage();
-                    kopanoPage.enterCredentials(username, password);
-                    kopanoPage.authorize();
+                    OidcPage oidcPage = new OidcPage();
+                    oidcPage.enterCredentials(userName, password);
+                    oidcPage.authorize();
                     break;
                 default:
                     break;
@@ -99,9 +98,9 @@ public class LoginSteps {
                 break;
             case "OIDC":
                 loginPage.submitLogin();
-                KopanoPage kopanoPage = new KopanoPage();
-                kopanoPage.enterCredentials(username, password);
-                kopanoPage.authorize();
+                OidcPage oidcPage = new OidcPage();
+                oidcPage.enterCredentials(username, password);
+                oidcPage.authorize();
                 break;
             default:
                 break;

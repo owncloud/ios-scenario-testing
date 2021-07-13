@@ -6,16 +6,16 @@ Feature: Private Share
   So that the content is accessible and others can contribute
 
   Background: User is logged in
-    Given user user1 is logged
+    Given user Alice is logged in
 
-    @smoke
+  @smoke
   Scenario Outline: Correct share with user
     Given the <type> <item> has been created in the account
-    When user selects to share the <type> <item> using the Actions menu
-    And user selects user user2 as sharee
-    Then user user2 should have access to <item>
+    When Alice selects to share the <type> <item> using the Actions menu
+    And Alice selects user Bob as sharee with default permissions
+    Then user Bob should have access to <item>
     And share should be created on <item> with the following fields
-      | sharee | user2 |
+      | sharee | Bob |
 
     Examples:
       |  type   |  item        |
@@ -25,8 +25,8 @@ Feature: Private Share
   @smoke
   Scenario Outline: Correct share with group
     Given the <type> <item> has been created in the account
-    When user selects to share the <type> <item> using the Actions menu
-    And user selects group test as sharee
+    When Alice selects to share the <type> <item> using the Actions menu
+    And Alice selects group test as sharee with default permissions
     Then group test should have access to <item>
     And share should be created on <item> with the following fields
       | group | test |
@@ -38,11 +38,11 @@ Feature: Private Share
 
   Scenario Outline: Correct share with user using the Contextual menu
     Given the <type> <item> has been created in the account
-    When user selects to share the <type> <item> using the Contextual menu
-    And user selects user user2 as sharee
-    Then user user2 should have access to <item>
+    When Alice selects to share the <type> <item> using the Contextual menu
+    And Alice selects user Bob as sharee with default permissions
+    Then user Bob should have access to <item>
     And share should be created on <item> with the following fields
-      | sharee | user2 |
+      | sharee | Bob |
 
     Examples:
       |  type   |  item        |
@@ -51,8 +51,8 @@ Feature: Private Share
 
   Scenario Outline: Correct federated share
     Given the <type> <item> has been created in the account
-    When user selects to share the <type> <item> using the Actions menu
-    And user selects user demo@demo.owncloud.com as sharee
+    When Alice selects to share the <type> <item> using the Actions menu
+    And Alice selects user demo@demo.owncloud.com as sharee with default permissions
     Then share should be created on <item> with the following fields
       | sharee | demo@demo.owncloud.com |
 
@@ -63,9 +63,9 @@ Feature: Private Share
 
   Scenario Outline: Edit existing share on a folder, removing permissions
     Given the folder <item> has been created in the account
-    And the folder <item> has been already shared with <user>
-    When user selects to edit share the folder <item> using the Actions menu
-    And user edits the share on <item> with permissions <permissions>
+    And Alice has shared folder <item> with <user> with permissions 31
+    When Alice selects to edit share the folder <item> using the Actions menu
+    And Alice edits the share on <item> with permissions <permissions>
     Then user <user> should have access to <item>
     And share should be created on <item> with the following fields
       | sharee        |  <user>        |
@@ -79,17 +79,35 @@ Feature: Private Share
     # SHARE -> 16
 
     Examples:
-      |  item     |   user    | permissions |
-      |  Share9   |   user2   |   1         |
-      |  Share10  |   user2   |   9         |
-      |  Share11  |   user2   |   13        |
-      |  Share12  |   user2   |   17        |
+      |  item     |   user  | permissions |
+      |  Share9   |   Bob   |   1         |
+      |  Share10  |   Bob   |   9         |
+      |  Share11  |   Bob   |   13        |
+      |  Share12  |   Bob   |   17        |
 
+  Scenario: Reshare allowed
+    Given the file Share13.txt has been created in the account
+    When Alice selects to share the file Share13.txt using the Actions menu
+    And Alice selects user Bob as sharee with default permissions
+    And Bob shares file Share13.txt with Charles with permissions 31
+    Then user Bob should have access to Share13.txt
+    And user Charles should have access to Share13.txt
+    And share should be created on Share13.txt with the following fields
+      | sharee  | Bob       |
+      | sharee  | Charles   |
+
+  Scenario: Reshare not allowed
+    Given the file Share14.txt has been created in the account
+    When Alice selects to share the file Share14.txt using the Actions menu
+    And Alice selects user Bob as sharee without share permission
+    And Bob shares file Share14.txt with Charles with permissions 31
+    Then user Bob should have access to Share14.txt
+    But user Charles should not have access to Share14.txt
 
   Scenario: Delete existing share on folder
-    Given the folder Share13 has been created in the account
-    And the folder Share13 has been already shared with user2
-    When user selects to edit share the folder Share13 using the Actions menu
-    And user deletes the share
-    Then user user2 should not have access to Share13
-    And Share13 should not be shared anymore with user2
+    Given the folder Share15 has been created in the account
+    And Alice has shared folder Share15 with Bob with permissions 31
+    When Alice selects to edit share the folder Share15 using the Actions menu
+    And Alice deletes the share
+    Then user Bob should not have access to Share15
+    And Share15 should not be shared anymore with Bob

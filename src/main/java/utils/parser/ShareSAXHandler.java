@@ -27,7 +27,7 @@ public class ShareSAXHandler extends DefaultHandler {
                 share.setId(text);
                 break;
             }
-            case ("uid_owner"):{
+            case ("uid_file_owner"):{
                 share.setOwner(text);
                 break;
             }
@@ -43,7 +43,7 @@ public class ShareSAXHandler extends DefaultHandler {
                 share.setLinkName(text);
                 break;
             }
-            case ("itemName"):{
+            case ("path"):{
                 share.setItemName(text.substring(1, text.length()));
                 break;
             }

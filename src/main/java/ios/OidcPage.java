@@ -4,13 +4,13 @@ import java.util.logging.Level;
 
 import utils.log.Log;
 
-public class KopanoPage extends CommonPage {
+public class OidcPage extends CommonPage {
 
-    public KopanoPage(){
+    public OidcPage(){
         super();
     }
 
-    public void enterCredentials(String username, String password){
+    public void enterCredentials(String userName, String password){
         Log.log(Level.FINE, "Starts: enter OIDC credentials");
     }
 

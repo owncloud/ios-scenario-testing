@@ -92,7 +92,7 @@ public class CommonAPI {
     protected boolean isOidc(String url)
             throws IOException {
         String urlCheck = url+"/.well-known/openid-configuration";
-        Request request = getRequest(url, true);
+        Request request = getRequest(urlCheck);
         Response response = httpClient.newCall(request).execute();
         Log.log(Level.FINE, "Body lenght: " + response.body().contentLength());
         boolean withBody = response.body().contentLength() > 0;
@@ -103,10 +103,10 @@ public class CommonAPI {
             return false;
     }
 
-    public String getCapabilities(String url)
+    public String getCapabilities()
             throws IOException {
         String urlCheck = urlServer+"/ocs/v2.php/cloud/capabilities?format=json";
-        Request request = getRequest(urlCheck, false);
+        Request request = getRequest(urlCheck);
         Response response = httpClient.newCall(request).execute();
         Log.log(Level.FINE, "Capabilities: " + response.body());
         String capabilities =  response.body().string();
@@ -150,6 +150,20 @@ public class CommonAPI {
         return request;
     }
 
+    protected Request postRequest(String url, RequestBody body, String userName) {
+        Request request = new Request.Builder()
+                .url(url)
+                .addHeader("OCS-APIREQUEST", "true")
+                .addHeader("User-Agent", userAgent)
+                .addHeader("Authorization", "Basic " +
+                        Base64.getEncoder().encodeToString((userName+":a").getBytes()))
+                .addHeader("Host", host)
+                .post(body)
+                .build();
+        Log.log(Level.FINE, "RE: " + request.toString());
+        return request;
+    }
+
     protected Request deleteRequest(String url){
         Request request = new Request.Builder()
                 .url(url)
@@ -162,13 +176,12 @@ public class CommonAPI {
         return request;
     }
 
-    protected Request getRequest(String url, boolean isSharee) {
-        String credentials = (isSharee) ? credentialsB64Sharee : credentialsB64;
+    protected Request getRequest(String url) {
         Request request = new Request.Builder()
                 .url(url)
                 .addHeader("OCS-APIREQUEST", "true")
                 .addHeader("User-Agent", userAgent)
-                .addHeader("Authorization", "Basic " + credentials)
+                .addHeader("Authorization", "Basic " + credentialsB64)
                 .addHeader("Host", host)
                 .get()
                 .build();
@@ -176,12 +189,13 @@ public class CommonAPI {
     }
 
     //overloaded, to use with specific credentials
-    protected Request getRequest(String url, String credentials) {
+    protected Request getRequest(String url, String userName) {
         Request request = new Request.Builder()
                 .url(url)
                 .addHeader("OCS-APIREQUEST", "true")
                 .addHeader("User-Agent", userAgent)
-                .addHeader("Authorization", "Basic " + credentials)
+                .addHeader("Authorization", "Basic " +
+                        Base64.getEncoder().encodeToString((userName+":a").getBytes()))
                 .addHeader("Host", host)
                 .get()
                 .build();

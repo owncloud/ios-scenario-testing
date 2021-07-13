@@ -7,7 +7,7 @@ Feature: Create a new folder
 
   @smoke
   Scenario: Create a new folder with a correct name
-    Given user user1 is logged
-    When user selects the option Create Folder
-    And user sets FolderTest as new name
-    Then user should see FolderTest in the filelist
+    Given user Alice is logged in
+    When Alice selects the option Create Folder
+    And Alice sets FolderTest as new name
+    Then Alice should see FolderTest in the filelist
