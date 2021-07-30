@@ -651,8 +651,8 @@
 "Select Last Item on Page" = "حدد آخر عنصر في الصفحة";
 "Scroll to Top" = "مرِّر إلى الأعلى";
 "Scroll to Bottom" = "مرِّر إلى الأسفل";
-"Copy to Pasteboard" = "نسخ إلى اللوحة المؤقتة";
-"Import from Pasteboard" = "استيراد من اللوحة المؤقتة";
+"Copy to Clipboard" = "نسخ إلى اللوحة المؤقتة";
+"Import from Clipboard" = "استيراد من اللوحة المؤقتة";
 "Next" = "التالي";
 "Previous" = "السابق";
 "Favorite" = "المفضلة";

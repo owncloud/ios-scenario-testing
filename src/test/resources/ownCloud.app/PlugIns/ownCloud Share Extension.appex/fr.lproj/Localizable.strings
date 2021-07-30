@@ -651,8 +651,8 @@
 "Select Last Item on Page" = "Sélectionnez le dernier élément sur la page";
 "Scroll to Top" = "Faire défiler vers le haut";
 "Scroll to Bottom" = "Faire défiler vers le bas";
-"Copy to Pasteboard" = "Copier dans le Pasteboard";
-"Import from Pasteboard" = "Importer depuis le Pasteboard";
+"Copy to Clipboard" = "Copier dans le Pasteboard";
+"Import from Clipboard" = "Importer depuis le Pasteboard";
 "Next" = "Suivant";
 "Previous" = "Précédent";
 "Favorite" = "Ajouter aux favoris";

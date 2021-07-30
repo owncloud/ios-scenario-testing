@@ -651,8 +651,8 @@
 "Select Last Item on Page" = "Выбрать последний элемент на странице";
 "Scroll to Top" = "Прокрутить в начало";
 "Scroll to Bottom" = "Прокрутить в конец";
-"Copy to Pasteboard" = "Копировать в буфер обмена";
-"Import from Pasteboard" = "Импорт из буфера обмена";
+"Copy to Clipboard" = "Копировать в буфер обмена";
+"Import from Clipboard" = "Импорт из буфера обмена";
 "Next" = "Следующий";
 "Previous" = "Предыдущий";
 "Favorite" = "В избранное";

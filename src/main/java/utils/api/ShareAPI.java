@@ -76,14 +76,14 @@ public class ShareAPI extends CommonAPI {
         OCShare share = getId(response);
         response.close();
         //Is not shared if the list of shares is empty (null) or any other share exists (different itemName)
-        if (share == null || !share.getItemName().equals(itemName)) {
+        if (share == null || !share.getItemName().equalsIgnoreCase(itemName)) {
             Log.log(Level.FINE, itemName + " not shared with me");
             return false;
         }
         Log.log(Level.FINE, "Item returned: Sharee:" + share.getShareeName() +". Expected sharee:" + userName);
         Log.log(Level.FINE, "Owner returned:" + share.getOwner() +". Expected owner:" + owner);
         Log.log(Level.FINE, String.valueOf(share.getShareeName().equals(userName) && share.getOwner().equals(owner)));
-        return share.getShareeName().equals(userName) && share.getOwner().equals(owner);
+        return share.getShareeName().equalsIgnoreCase(userName) && share.getOwner().equalsIgnoreCase(owner);
     }
 
     public void removeShare(String id)

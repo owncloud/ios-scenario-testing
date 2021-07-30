@@ -595,8 +595,8 @@
 "Select Last Item on Page" = "选择页面上的最后一个对象";
 "Scroll to Top" = "滚动到顶部";
 "Scroll to Bottom" = "滚动到底部";
-"Copy to Pasteboard" = "复制到剪贴板";
-"Import from Pasteboard" = "从剪贴板导入";
+"Copy to Clipboard" = "复制到剪贴板";
+"Import from Clipboard" = "从剪贴板导入";
 "Next" = "下一曲";
 "Previous" = "上一个";
 "Favorite" = "收藏";

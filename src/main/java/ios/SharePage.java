@@ -23,7 +23,7 @@ public class SharePage extends CommonPage {
             Log.log(Level.FINE, "Entry KEY: " + entry.getKey() + " - VALUE: " + entry.getValue());
             switch (entry.getKey()){
                 case "id":{
-                    if (!remoteShare.getId().equals(entry.getValue())){
+                    if (!remoteShare.getId().equalsIgnoreCase(entry.getValue())){
                         Log.log(Level.FINE, "ID does not match - Remote: " + remoteShare.getId()
                                 + " - Expected: " + entry.getValue());
                         return false;
@@ -32,7 +32,7 @@ public class SharePage extends CommonPage {
                 }
                 case "user":{
                     if (remoteShare.getType().equals("0")) { // private share
-                        if (!remoteShare.getShareeName().equals(entry.getValue())) {
+                        if (!remoteShare.getShareeName().equalsIgnoreCase(entry.getValue())) {
                             Log.log(Level.FINE, "Sharee does not match - Remote: " + remoteShare.getShareeName()
                                     + " - Expected: " + entry.getValue());
                             return false;
@@ -64,7 +64,7 @@ public class SharePage extends CommonPage {
                     break;
                 }
                 case "uid_owner":{
-                    if (!remoteShare.getOwner().equals(entry.getValue())){
+                    if (!remoteShare.getOwner().equalsIgnoreCase(entry.getValue())){
                         Log.log(Level.FINE, "Owner name does not match - Remote: " + remoteShare.getOwner()
                                 + " - Expected: " + entry.getValue());
                         return false;

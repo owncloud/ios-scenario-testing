@@ -615,8 +615,8 @@
 "Select Last Item on Page" = "Seleccionar el último elemento de la página";
 "Scroll to Top" = "Ir al inicio";
 "Scroll to Bottom" = "Ir al final";
-"Copy to Pasteboard" = "Copiar al portapapeles";
-"Import from Pasteboard" = "Importar del portapapeles";
+"Copy to Clipboard" = "Copiar al portapapeles";
+"Import from Clipboard" = "Importar del portapapeles";
 "Next" = "Siguiente";
 "Previous" = "Anterior";
 "Favorite" = "Favorito";

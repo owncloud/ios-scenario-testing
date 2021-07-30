@@ -651,8 +651,8 @@
 "Select Last Item on Page" = "Selecione Último item na Página";
 "Scroll to Top" = "Rolar para o Topo";
 "Scroll to Bottom" = "Rolar para Baixo";
-"Copy to Pasteboard" = "Copiar para o Segundo Plano";
-"Import from Pasteboard" = "Importar do Segundo Plano";
+"Copy to Clipboard" = "Copiar para o Segundo Plano";
+"Import from Clipboard" = "Importar do Segundo Plano";
 "Next" = "Próxima";
 "Previous" = "Anterior";
 "Favorite" = "Favorito";

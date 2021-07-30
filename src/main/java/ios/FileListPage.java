@@ -57,6 +57,8 @@ public class FileListPage extends CommonPage {
             "XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeTable/XCUIElementTypeCell[2]";
     private String xpath_card = "//XCUIElementTypeApplication[@name=\"ownCloud\"]/XCUIElementTypeWindow[1]" +
             "/XCUIElementTypeOther/XCUIElementTypeOther[2]";
+    private String xpath_copydirectory = "//XCUIElementTypeButton[@name=\"Choose destination directory…\"]";
+    private String xpath_copyclipboard = "//XCUIElementTypeButton[@name=\"Copy to Clipboard\"]";
 
     //Actions in contextual menu menu
     private String id_delete = "Delete, Delete";
@@ -176,7 +178,7 @@ public class FileListPage extends CommonPage {
                 break;
             case "share":
                 String xpath_sharetype;
-                if (typeItem.equals("folder")) {
+                if (typeItem.equalsIgnoreCase("folder")) {
                     xpath_sharetype = xpath_sharefolder;
                 } else {
                     xpath_sharetype = xpath_sharefile;
@@ -196,6 +198,10 @@ public class FileListPage extends CommonPage {
                 break;
         }
         operation.click();
+        if (operationName.equals("copy")){
+            Log.log(Level.FINE, "Selecting copy to directory");
+            driver.findElement(By.xpath(xpath_copydirectory)).click();
+        }
     }
 
     public void selectOperationFromContextual(String itemName, String operationName, String typeItem) {
@@ -232,6 +238,10 @@ public class FileListPage extends CommonPage {
                 break;
         }
         operation.click();
+        if (operationName.equals("copy")){
+            Log.log(Level.FINE, "Selecting copy to directory");
+            driver.findElement(By.xpath(xpath_copydirectory)).click();
+        }
     }
 
     public void browse(String folderName){
@@ -273,7 +283,7 @@ public class FileListPage extends CommonPage {
             //Server returns the username as value. Here, we skip it.
             //in oCIS, id is returned instead of name in reference.
             //Shortcut: username > 15 = id (check a best method)
-            if (ocfile.getName().equals(LocProperties.getProperties().getProperty("userName1")) ||
+            if (ocfile.getName().equalsIgnoreCase(LocProperties.getProperties().getProperty("userName1")) ||
                     ocfile.getName().length() > 15) {
                 continue;
             }

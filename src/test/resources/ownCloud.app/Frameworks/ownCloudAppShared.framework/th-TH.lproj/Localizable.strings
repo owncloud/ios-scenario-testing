@@ -651,8 +651,8 @@
 "Select Last Item on Page" = "เลือกรายการสุดท้ายในหน้า";
 "Scroll to Top" = "เลื่อนขึ้นด้านบน";
 "Scroll to Bottom" = "เลื่อนลงด้านล่าง";
-"Copy to Pasteboard" = "คัดลอกไปยังนามบัตร";
-"Import from Pasteboard" = "นำเข้าจาก Pasteboard";
+"Copy to Clipboard" = "คัดลอกไปยังนามบัตร";
+"Import from Clipboard" = "นำเข้าจาก Pasteboard";
 "Next" = "ถัดไป";
 "Previous" = "ก่อนหน้า";
 "Favorite" = "รายการโปรด";

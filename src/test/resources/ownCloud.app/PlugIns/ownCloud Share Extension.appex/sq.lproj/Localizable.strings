@@ -651,8 +651,8 @@
 "Select Last Item on Page" = "Përzgjidhni Elementin e Fundit në Faqe";
 "Scroll to Top" = "Rrëshqitni drejt Kreut";
 "Scroll to Bottom" = "Rrëshqitni drejt Fundit";
-"Copy to Pasteboard" = "Kopjoje në të Papastër";
-"Import from Pasteboard" = "Importo prej të Papastre";
+"Copy to Clipboard" = "Kopjoje në të Papastër";
+"Import from Clipboard" = "Importo prej të Papastre";
 "Next" = "Pasuesja";
 "Previous" = "E mëparshmja";
 "Favorite" = "Vëre Si të Parapëlqyer";
