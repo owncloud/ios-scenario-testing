@@ -22,28 +22,37 @@
 help()
 {
    echo ""
-   echo "Usage: $0 -s <ownCloud Server URL> -t <filter> -a <Appium Server URL> -d <device UID> "
+   echo "Usage: $0 -t <filter>"
    echo ""
-   echo -e "\t-s (mandatory) URL of ownCloud server to test against"
-   echo -e "\t-a (optional) Appium server URL. if Appium Server is not specified, will be used \"localhost:4723/wd/hub\""
-   echo -e "\t-t (optional) Filter. F. ex: @createfolder will send only tests tagged with such label. Tags are allowed to concatenate, sepparated by \",\". It is also allowed to use a classpath to execute all the test in such class"
-   echo -e "\t-d (optional) In case of several devices attached, tests will be sent against the device name set in this option"
-   echo -e "\t-u (optional) UDID of the device to execute the tests against"
-   echo ""
+   echo -e "\t-t <filter> Used to execute tagged tests. F. ex: @createfolder will send only tests tagged with such label. OR/AND operations are allowed. It is also allowed to use a classpath to execute all the test in such class"
+   echo -e ""
+   echo -e "Examples:"
+   echo -e ""
+   echo -e "\t\t ./executeTests -t \"@createfolder\" -> This will execute only tests with the tag @createfolder"
+   echo -e ""
+   echo -e "\t\t ./executeTests -t \"'@createfolder and copy'\" -> This will execute tests tagged with both @createfolder and @copy" 
+   echo -e ""
+   echo -e "\t\t ./executeTests -t \"'@createfolder or copy'\" -> This will execute tests tagged with @createfolder or @copy" 
+   echo -e ""
+   echo -e "\t\t ./executeTests  -> This will execute all the tests"
+   echo -e ""
+   echo -e "Some environment variables are needed to work as well:"
+   echo -e ""
+   echo -e "\t\t\$OC_SERVER_URL (mandatory): URL of ownCloud server to test against"
+   echo -e ""
+   echo -e "\t\t\$UDID_DEVICE (mandatory): UDID of the device to execute the tests against"
+   echo -e ""
+   echo -e "\t\t\$APPIUM_URL (optional): Appium server URL. if Appium Server is not specified, will be used \"localhost:4723/wd/hub\""
+   echo -e ""
+   echo -e "The option -h: will show this help"
+   echo -e ""
+   echo -e ""
    exit 1 
 }
 
-while getopts ":t:a:s:d:h" opt; do
+while getopts "t::h" opt; do
   case $opt in
     t) tags="$OPTARG"
-    ;;
-    a) appium="$OPTARG"
-    ;;
-    s) oc="$OPTARG"
-    ;;
-    d) device="$OPTARG"
-    ;;
-    u) udid="$OPTARG"
     ;;
     h) help
     ;;
@@ -52,19 +61,20 @@ while getopts ":t:a:s:d:h" opt; do
   esac
 done
 
-if [ $# -eq 0 ]
+export oc=$OC_SERVER_URL
+export appium=$APPIUM_URL
+export udid=$UDID_DEVICE
+
+
+if [ -z "$oc" ]
 then
-  help
-elif [ -z "$oc" ]
-then
-   echo "ownCloud Server URL is missing";
+   echo "ownCloud Server URL is missing. Please export the variable OC_SERVER_URL with the server URL to test against";
    help
 fi
 
 echo "Appium server: $appium"
 echo "oC server: $oc"
 echo "tags: $tags"
-echo "device: $device"
 echo "udid: $udid"
 
 if [ -z "$tags" ]
@@ -72,7 +82,6 @@ then
  ./gradlew clean test aggregate \
   --info \
   -Dappium=$appium \
-  -Ddevice=$device \
   -Dudid=$udid \
   -Dserver=$oc
 else
@@ -80,7 +89,6 @@ else
   --info \
   -Dcucumber.options="--tags $tags" \
   -Dappium=$appium \
-  -Ddevice=$device \
   -Dudid=$udid \
   -Dserver=$oc
 fi
