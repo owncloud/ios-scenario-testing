@@ -68,6 +68,20 @@ public class CommonPage {
         wait.until(ExpectedConditions.invisibilityOf(mobileElement));
     }
 
+    // The following method should be used only in case implicit/explicit waits are not valid for the
+    // scenario. Blocking the thread is not desirable and using it is not a good solution.
+    public static void wait(int seconds) {
+        try {
+            Thread.sleep(seconds*1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public MobileElement findXpath(String xpath){
+        return (MobileElement) driver.findElement(By.xpath(xpath));
+    }
+
     public static void swipe (double startx, double starty, double endx, double endy) {
         Dimension size = driver.manage().window().getSize();
         int startY=(int)(size.height * starty);
@@ -166,11 +180,7 @@ public class CommonPage {
         }
 
         // always allow swipe action to complete
-        try {
-            Thread.sleep(ANIMATION_TIME);
-        } catch (InterruptedException e) {
-            // ignore
-        }
+        wait(ANIMATION_TIME/1000);
     }
 
     public static void takeScreenshot (String name) {

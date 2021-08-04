@@ -77,16 +77,9 @@ public class FileListPage extends CommonPage {
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
     }
 
-    public void waitToload(){
-    }
-
     public void createFolder() {
         Log.log(Level.FINE, "Starts: create folder");
-        try {
-            Thread.sleep(4000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        wait(3);
         plusButton.click();
         createFolder.click();
     }
@@ -94,7 +87,6 @@ public class FileListPage extends CommonPage {
     public void executeOperation(String operation, String itemName, String typeItem, String menu){
         Log.log(Level.FINE, "Starts: execute operation: " + operation + " " +
                 itemName + " "+ menu);
-        waitToload();
         if (!isItemInList(itemName)){
             Log.log(Level.FINE, "Searching item... swiping: " + itemName);
             swipe(0.50, 0.90, 0.50, 0.20);
@@ -140,7 +132,7 @@ public class FileListPage extends CommonPage {
         Log.log(Level.FINE, "Starts: select contextual item from list: " + itemName);
         String itemXpath = "//XCUIElementTypeCell[@name=\"" + itemName + "\"]";
         waitByXpath(10, itemXpath);
-        MobileElement listCell = (MobileElement) driver.findElement(By.xpath(itemXpath));
+        MobileElement listCell = findXpath(itemXpath);
         new TouchAction(driver).longPress(LongPressOptions.longPressOptions()
                 .withElement(ElementOption.element(listCell))).release().perform();
     }
@@ -149,7 +141,7 @@ public class FileListPage extends CommonPage {
         Log.log(Level.FINE, "Starts: select item from list by swiping: " + itemName);
         String itemXpath = "//XCUIElementTypeCell[@name=\"" + itemName + "\"]";
         waitByXpath(10, itemXpath);
-        MobileElement listCell = (MobileElement) driver.findElement(By.xpath(itemXpath));
+        MobileElement listCell = findXpath(itemXpath);
         swipeElementIOS(listCell, "LEFT");
     }
 
@@ -159,22 +151,22 @@ public class FileListPage extends CommonPage {
         waitByXpath(5, xpath_card);
         switch (operationName){
             case "delete":
-                operation = (MobileElement) driver.findElement(By.xpath(xpath_delete));
+                operation = (MobileElement) findXpath(xpath_delete);
                 break;
             case "rename":
-                operation = (MobileElement) driver.findElement(By.xpath(xpath_rename));
+                operation = (MobileElement) findXpath(xpath_rename);
                 break;
             case "move":
-                operation = (MobileElement) driver.findElement(By.xpath(xpath_move));
+                operation = (MobileElement) findXpath(xpath_move);
                 break;
             case "copy":
-                operation = (MobileElement) driver.findElement(By.xpath(xpath_copy));
+                operation = (MobileElement) findXpath(xpath_copy);
                 break;
             case "duplicate":
-                operation = (MobileElement) driver.findElement(By.xpath(xpath_duplicate));
+                operation = (MobileElement) findXpath(xpath_duplicate);
                 break;
             case "make available offline":
-                operation = (MobileElement) driver.findElement(By.xpath(xpath_avoffline));
+                operation = (MobileElement) findXpath(xpath_avoffline);
                 break;
             case "share":
                 String xpath_sharetype;
@@ -183,16 +175,16 @@ public class FileListPage extends CommonPage {
                 } else {
                     xpath_sharetype = xpath_sharefile;
                 }
-                operation = (MobileElement) driver.findElement(By.xpath(xpath_sharetype));
+                operation = (MobileElement) findXpath(xpath_sharetype);
                 break;
             case "edit share":
-                operation = (MobileElement) driver.findElement(By.xpath(xpath_editshare));
+                operation = (MobileElement) findXpath(xpath_editshare);
                 break;
             case "share by link":
-                operation = (MobileElement) driver.findElement(By.xpath(xpath_sharelink));
+                operation = (MobileElement) findXpath(xpath_sharelink);
                 break;
             case "edit link":
-                operation = (MobileElement) driver.findElement(By.xpath(xpath_editlink));
+                operation = (MobileElement) findXpath(xpath_editlink);
                 break;
             default:
                 break;
@@ -200,7 +192,7 @@ public class FileListPage extends CommonPage {
         operation.click();
         if (operationName.equals("copy")){
             Log.log(Level.FINE, "Selecting copy to directory");
-            driver.findElement(By.xpath(xpath_copydirectory)).click();
+            findXpath(xpath_copydirectory).click();
         }
     }
 
@@ -246,6 +238,7 @@ public class FileListPage extends CommonPage {
 
     public void browse(String folderName){
         Log.log(Level.FINE, "Starts: browse to " + folderName);
+        wait(3);
         driver.findElement(By.xpath("//XCUIElementTypeStaticText[@name=\""+folderName+"\"]")).click();
     }
 
@@ -260,13 +253,26 @@ public class FileListPage extends CommonPage {
     }
 
     public boolean fileIsMarkedAsAvOffline(String itemName){
-        selectItemListActions(itemName);
         //Action turns to unavailable offline
-        boolean menuUnavoffline = driver.findElement(By.id(id_unavoffline)).isDisplayed();
+        String finalName = null;
+        boolean menuUnavoffline = false;
+        //depending on the location of the file
+        if (itemName.contains("/")){  //we have to browse
+            finalName = parsePath(itemName);
+            Log.log(Level.FINE, "Final file name: " + finalName);
+            selectItemListActions(finalName);
+            //Option do not appear if the containing folder is av. offline
+            menuUnavoffline = driver.findElements(By.id(id_unavoffline)).isEmpty()
+                    && driver.findElements(By.id(id_avoffline)).isEmpty();
+        } else {
+            selectItemListActions(itemName);
+            menuUnavoffline = driver.findElement(By.id(id_unavoffline)).isDisplayed();
+        }
         Log.log(Level.FINE, "Av. Offline conditions: " + menuUnavoffline);
         return menuUnavoffline;
     }
 
+    //Turn to item disappear
     public void waitItemDownloaded(String itemName){
         MobileElement element = (MobileElement) driver.findElement(By.xpath(
                 "//XCUIElementTypeCell[@name=\""+ itemName +"\"]/XCUIElementTypeOther[2]"));
@@ -296,12 +302,17 @@ public class FileListPage extends CommonPage {
         return found;
     }
 
-    private void parsePath(String path){
+    private String parsePath(String path){
+        Log.log(Level.FINE, "Path: " + path);
+        String lastChunk = null;
         String[] route = path.split("/");
-        if (route.length > 0) { //we have to browse
-            for (int i = 1; i < route.length; i++) {
+        if (route.length > 1) { //we have to browse
+            for (int i = 0; i < route.length - 1; i++) {
+                Log.log(Level.FINE, "Managing: " + route[i]);
                 browse(route[i]);
+                lastChunk = route[i+1];
             }
         }
+        return lastChunk;
     }
 }

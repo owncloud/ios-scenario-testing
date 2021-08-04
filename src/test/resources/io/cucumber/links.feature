@@ -9,7 +9,9 @@ Feature: Public Links
 
   @smoke
   Scenario Outline: Create a public link with name
-    Given the <type> <item> has been created in the account
+    #Given the <type> <item> has been created in the account
+    Given the following items have been created in the account
+      | <type>  | <item>  |
     When Alice selects to share by link the <type> <item> using the Actions menu
     And Alice creates link on <type> <item> with the following fields
       | name | <name> |
@@ -22,7 +24,8 @@ Feature: Public Links
       |  file     |  Links2.txt    |  link2   |
 
   Scenario Outline: Create a public link with password
-    Given the <type> <item> has been created in the account
+    Given the following items have been created in the account
+      | <type>  | <item>  |
     When Alice selects to share by link the <type> <item> using the Actions menu
     And Alice creates link on <type> <item> with the following fields
       | name     | <name>     |
@@ -38,7 +41,8 @@ Feature: Public Links
 
   @expiration
   Scenario Outline: Create a public link with expiration date
-    Given the <type> <item> has been created in the account
+    Given the following items have been created in the account
+      | <type>  | <item>  |
     When Alice selects to share by link the <type> <item> using the Actions menu
     And Alice creates link on <type> <item> with the following fields
       | name            | <name>  |
@@ -53,7 +57,8 @@ Feature: Public Links
       |  file    |  Links6.txt   |  link6   |    17        |
 
   Scenario Outline: Create a public link with permissions on a folder
-    Given the folder <item> has been created in the account
+    Given the following items have been created in the account
+      | folder  | <item>  |
     When Alice selects to share by link the folder <item> using the Actions menu
     And Alice creates link on folder <item> with the following fields
       | name       | <name>        |
@@ -69,7 +74,8 @@ Feature: Public Links
       |  Links9       |  link9   |    1        |
 
   Scenario Outline: Create a public link with name using the contextual menu
-    Given the <type> <item> has been created in the account
+    Given the following items have been created in the account
+      | <type>  | <item>  |
     When Alice selects to share by link the <type> <item> using the Contextual menu
     And Alice creates link on <type> <item> with the following fields
       | name | <name> |
@@ -82,7 +88,8 @@ Feature: Public Links
       |  file   |  Links11.txt  |  link11   |
 
   Scenario Outline: Edit existing share on a folder, changing permissions
-    Given the folder <item> has been created in the account
+    Given the following items have been created in the account
+      | folder  | <item>  |
     And Alice has shared the folder <item> by link
     When Alice selects to edit link the folder <item> using the Actions menu
     And Alice edits the link on <item> with the following fields
@@ -99,7 +106,8 @@ Feature: Public Links
       |  Links14  |  link14  |     1       |
 
   Scenario Outline: Delete existing link
-    Given the <type> <item> has been created in the account
+    Given the following items have been created in the account
+      | <type>  | <item>  |
     And Alice has shared the <type> <item> by link
     When user selects to edit link the <type> <item> using the Actions menu
     And Alice deletes the link on <item>

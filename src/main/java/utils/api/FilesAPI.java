@@ -28,7 +28,8 @@ public class FilesAPI extends CommonAPI {
 
     public void removeItem(String itemName)
             throws IOException {
-        String url = urlServer + davEndpoint + user + "/"+itemName+"/";
+        String chunks[] = itemName.split("/");
+        String url = urlServer + davEndpoint + user + "/"+chunks[0]+"/";
         Log.log(Level.FINE, "Starts: Request remove item from server");
         Log.log(Level.FINE, "URL: " + url);
         Request request = deleteRequest(url);

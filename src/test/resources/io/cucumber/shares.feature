@@ -10,7 +10,8 @@ Feature: Private Share
 
   @smoke
   Scenario Outline: Correct share with user
-    Given the <type> <item> has been created in the account
+    Given the following items have been created in the account
+      | <type>  | <item>  |
     When Alice selects to share the <type> <item> using the Actions menu
     And Alice selects user Bob as sharee with default permissions
     Then user Bob should have access to <item>
@@ -24,7 +25,8 @@ Feature: Private Share
 
   @smoke
   Scenario Outline: Correct share with group
-    Given the <type> <item> has been created in the account
+    Given the following items have been created in the account
+      | <type>  | <item>  |
     When Alice selects to share the <type> <item> using the Actions menu
     And Alice selects group test as sharee with default permissions
     Then group test should have access to <item>
@@ -37,7 +39,8 @@ Feature: Private Share
       |  folder |  Share4      |
 
   Scenario Outline: Correct share with user using the Contextual menu
-    Given the <type> <item> has been created in the account
+    Given the following items have been created in the account
+      | <type>  | <item>  |
     When Alice selects to share the <type> <item> using the Contextual menu
     And Alice selects user Bob as sharee with default permissions
     Then user Bob should have access to <item>
@@ -50,7 +53,8 @@ Feature: Private Share
       |  folder |  Share6      |
 
   Scenario Outline: Correct federated share
-    Given the <type> <item> has been created in the account
+    Given the following items have been created in the account
+      | <type>  | <item>  |
     When Alice selects to share the <type> <item> using the Actions menu
     And Alice selects user demo@demo.owncloud.com as sharee with default permissions
     Then share should be created on <item> with the following fields
@@ -62,7 +66,8 @@ Feature: Private Share
       |  folder |  Share8      |
 
   Scenario Outline: Edit existing share on a folder, removing permissions
-    Given the folder <item> has been created in the account
+    Given the following items have been created in the account
+      | folder  | <item>  |
     And Alice has shared folder <item> with <user> with permissions 31
     When Alice selects to edit share the folder <item> using the Actions menu
     And Alice edits the share on <item> with permissions <permissions>
@@ -86,7 +91,8 @@ Feature: Private Share
       |  Share12  |   Bob   |   17        |
 
   Scenario: Reshare allowed
-    Given the file Share13.txt has been created in the account
+    Given the following items have been created in the account
+      | file  | Share13.txt  |
     When Alice selects to share the file Share13.txt using the Actions menu
     And Alice selects user Bob as sharee with default permissions
     And Bob shares file Share13.txt with Charles with permissions 31
@@ -97,7 +103,8 @@ Feature: Private Share
       | sharee  | Charles   |
 
   Scenario: Reshare not allowed
-    Given the file Share14.txt has been created in the account
+    Given the following items have been created in the account
+      | file  | Share14.txt  |
     When Alice selects to share the file Share14.txt using the Actions menu
     And Alice selects user Bob as sharee without share permission
     And Bob shares file Share14.txt with Charles with permissions 31
@@ -105,7 +112,8 @@ Feature: Private Share
     But user Charles should not have access to Share14.txt
 
   Scenario: Delete existing share on folder
-    Given the folder Share15 has been created in the account
+    Given the following items have been created in the account
+      | folder  | Share15  |
     And Alice has shared folder Share15 with Bob with permissions 31
     When Alice selects to edit share the folder Share15 using the Actions menu
     And Alice deletes the share

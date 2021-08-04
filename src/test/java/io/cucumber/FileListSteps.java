@@ -40,29 +40,22 @@ public class FileListSteps {
     protected FilesAPI filesAPI = new FilesAPI();
 
     @Given("^the following items have been created in the account$")
-    public void items_created(DataTable table) throws Throwable {
+    public void items_created_in_account(DataTable table) throws Throwable {
         String currentStep = StepEventBus.getEventBus().getCurrentStep().get().toString();
         Log.log(Level.FINE, "----STEP----: " + currentStep);
-        List<String> listItems = (List<String>) table.asList();
-        Iterator iterator = listItems.iterator();
-        while(iterator.hasNext()) {
-            String itemName = (String)iterator.next();
-            if (!filesAPI.itemExist(itemName)) {
-                filesAPI.createFolder(itemName);
+        List<List<String>> listItems = table.asLists();
+        for (List<String> rows : listItems) {
+            String type = rows.get(0);
+            String name = rows.get(1);
+            Log.log(Level.FINE, type + " " + name);
+            if (!filesAPI.itemExist(name)) {
+                if (type.equals("folder") || type.equals("item")) {
+                    filesAPI.createFolder(name);
+                } else if (type.equals("file")) {
+                    filesAPI.pushFile(name);
+                }
             }
         }
-    }
-
-    @Given("^the (item|folder|file) (.+) has been created in the account$")
-    public void items_created_2(String type, String itemName) throws Throwable {
-        String currentStep = StepEventBus.getEventBus().getCurrentStep().get().toString();
-        Log.log(Level.FINE, "----STEP----: " + currentStep);
-        if (!filesAPI.itemExist(itemName)) {
-            if (type.equals("folder") || type.equals("item")) {
-                filesAPI.createFolder(itemName);
-            } else if (type.equals("file"))
-                filesAPI.pushFile(itemName);
-            }
     }
 
     @Given("^the folder (.+) contains (.+) files$")

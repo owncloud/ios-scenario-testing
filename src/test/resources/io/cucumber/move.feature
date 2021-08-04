@@ -8,18 +8,20 @@ Feature: Move item
   Background: User is logged in
     Given user Alice is logged in
     And the following items have been created in the account
-      | Documents  |
+      | folder | Documents3  |
 
   Scenario: Move an existent folder to another location using the Actions menu
-    Given the folder move1 has been created in the account
+    Given the following items have been created in the account
+      | folder   | move1  |
     When Alice selects to move the folder move1 using the Actions menu
-    And Alice selects Documents as target folder of the move operation
+    And Alice selects Documents3 as target folder of the move operation
     Then Alice should not see move1 in the filelist anymore
-    And Alice should see move1 inside the folder Documents
+    And Alice should see move1 inside the folder Documents3
 
   Scenario: Move an existent folder to another location using the Contextual menu
-    Given the folder move2 has been created in the account
+    Given the following items have been created in the account
+      | folder   | move2  |
     When Alice selects to move the folder move2 using the Contextual menu
-    And Alice selects Documents as target folder of the move operation
+    And Alice selects Documents3 as target folder of the move operation
     Then Alice should not see move2 in the filelist anymore
-    And Alice should see move2 inside the folder Documents
+    And Alice should see move2 inside the folder Documents3

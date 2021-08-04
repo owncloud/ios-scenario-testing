@@ -9,14 +9,16 @@ Feature: Rename an item
 
   @smoke
   Scenario: Rename an item using the Actions menu
-    Given the item rename1 has been created in the account
+    Given the following items have been created in the account
+      | item   | rename1  |
     When Alice selects to rename the item rename1 using the Actions menu
     And Alice sets renamed1 as new name
     Then Alice should see renamed1 in the filelist
     And Alice should not see rename1 in the filelist anymore
 
   Scenario: Rename an item using the Contextual menu
-    Given the item rename2 has been created in the account
+    Given the following items have been created in the account
+      | item   | rename2  |
     When Alice selects to rename the item rename2 using the Contextual menu
     And Alice sets renamed2 as new name
     Then Alice should see renamed2 in the filelist
