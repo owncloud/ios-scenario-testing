@@ -41,35 +41,35 @@ public class FileListPage extends CommonPage {
     private MobileElement browseRoot;
 
     //Actions in action menu
-    private String xpath_delete = "//XCUIElementTypeCell[@name=\"com.owncloud.action.delete\"]";
-    private String xpath_rename = "//XCUIElementTypeCell[@name=\"com.owncloud.action.rename\"]";
-    private String xpath_move = "//XCUIElementTypeCell[@name=\"com.owncloud.action.move\"]";
-    private String xpath_copy = "//XCUIElementTypeCell[@name=\"com.owncloud.action.copy\"]";
-    private String xpath_duplicate = "//XCUIElementTypeCell[@name=\"com.owncloud.action.duplicate\"]";
-    private String xpath_avoffline = "//XCUIElementTypeCell[@name=\"com.owncloud.action.makeAvailableOffline\"]";
-    private String xpath_unavoffline = "//XCUIElementTypeCell[@name=\"com.owncloud.action.makeUnavailableOffline\"]";
-    private String xpath_sharefolder = "//XCUIElementTypeStaticText[@name=\"Share this folder\"]";
-    private String xpath_sharefile = "//XCUIElementTypeStaticText[@name=\"Share this file\"]";
-    private String xpath_editshare = "//XCUIElementTypeApplication[@name=\"ownCloud\"]/XCUIElementTypeWindow[1]/" +
+    private final String xpath_delete = "//XCUIElementTypeCell[@name=\"com.owncloud.action.delete\"]";
+    private final String xpath_rename = "//XCUIElementTypeCell[@name=\"com.owncloud.action.rename\"]";
+    private final String xpath_move = "//XCUIElementTypeCell[@name=\"com.owncloud.action.move\"]";
+    private final String xpath_copy = "//XCUIElementTypeCell[@name=\"com.owncloud.action.copy\"]";
+    private final String xpath_duplicate = "//XCUIElementTypeCell[@name=\"com.owncloud.action.duplicate\"]";
+    private final String xpath_avoffline = "//XCUIElementTypeCell[@name=\"com.owncloud.action.makeAvailableOffline\"]";
+    private final String xpath_unavoffline = "//XCUIElementTypeCell[@name=\"com.owncloud.action.makeUnavailableOffline\"]";
+    private final String xpath_sharefolder = "//XCUIElementTypeStaticText[@name=\"Share this folder\"]";
+    private final String xpath_sharefile = "//XCUIElementTypeStaticText[@name=\"Share this file\"]";
+    private final String xpath_editshare = "//XCUIElementTypeApplication[@name=\"ownCloud\"]/XCUIElementTypeWindow[1]/" +
             "XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeTable/XCUIElementTypeCell[1]";
-    private String xpath_sharelink = "//XCUIElementTypeStaticText[@name=\"Links\"]";
-    private String xpath_editlink = "//XCUIElementTypeApplication[@name=\"ownCloud\"]/XCUIElementTypeWindow[1]/" +
+    private final String xpath_sharelink = "//XCUIElementTypeStaticText[@name=\"Links\"]";
+    private final String xpath_editlink = "//XCUIElementTypeApplication[@name=\"ownCloud\"]/XCUIElementTypeWindow[1]/" +
             "XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeTable/XCUIElementTypeCell[2]";
-    private String xpath_card = "//XCUIElementTypeApplication[@name=\"ownCloud\"]/XCUIElementTypeWindow[1]" +
+    private final String xpath_card = "//XCUIElementTypeApplication[@name=\"ownCloud\"]/XCUIElementTypeWindow[1]" +
             "/XCUIElementTypeOther/XCUIElementTypeOther[2]";
-    private String xpath_copydirectory = "//XCUIElementTypeButton[@name=\"Choose destination directory…\"]";
-    private String xpath_copyclipboard = "//XCUIElementTypeButton[@name=\"Copy to Clipboard\"]";
+    private final String xpath_copydirectory = "//XCUIElementTypeButton[@name=\"Choose destination directory…\"]";
+    private final String xpath_copyclipboard = "//XCUIElementTypeButton[@name=\"Copy to Clipboard\"]";
 
     //Actions in contextual menu menu
-    private String id_delete = "Delete, Delete";
-    private String id_rename = "Rename";
-    private String id_move = "Move";
-    private String id_copy = "Copy";
-    private String id_duplicate = "Duplicate";
-    private String id_avoffline = "Make available offline";
-    private String id_unavoffline = "com.owncloud.action.makeUnavailableOffline";
-    private String id_share = "Sharing";
-    private String id_link = "Links";
+    private final String id_delete = "Delete, Delete";
+    private final String id_rename = "Rename";
+    private final String id_move = "Move";
+    private final String id_copy = "Copy";
+    private final String id_duplicate = "Duplicate";
+    private final String id_avoffline = "Make available offline";
+    private final String id_unavoffline = "com.owncloud.action.makeUnavailableOffline";
+    private final String id_share = "Sharing";
+    private final String id_link = "Links";
 
 
     public FileListPage() {

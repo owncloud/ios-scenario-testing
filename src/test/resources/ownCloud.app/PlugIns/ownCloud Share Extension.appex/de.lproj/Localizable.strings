@@ -113,7 +113,6 @@
 "Show more results" = "Mehr Ergebnisse anzeigen";
 
 /* Search scope */
-
 "Search scope" = "Suchbereich";
 "Toggle Search Scope" = "Suchbereich umschalten";
 
@@ -169,6 +168,8 @@
 "Continue offline" = "Offline fortfahren";
 "Media upload in the previous session was incomplete since the application was terminated" = "Der Medien-Upload in der vorherigen Sitzung war unvollständig, da die Anwendung beendet wurde.";
 
+"Waiting for response from login session in external browser…" = "Warten auf die Antwort der Anmeldesitzung in externem Browser...";
+
 "All done" = "Alles fertig";
 "No pending messages or ongoing actions." = "Keine ausstehenden Mitteilungen oder laufenden Aktionen.";
 
@@ -206,7 +207,6 @@
 "Touch ID" = "Fingerabdruck-ID";
 "Videos" = "Videos";
 "Photos" = "Fotos";
-"Background uploads" = "Hochladen im Hintergrund";
 "Wifi only" = "Nur WLAN";
 "Settings" = "Einstellungen";
 "Lock application" = "Anwendung sperren";
@@ -230,6 +230,10 @@
 "Please configure an email account" = "Bitte richten Sie ein E-Mail-Konto ein";
 "You need to configure an email account first to be able to send emails." = "Sie müssen zuerst ein E-Mail-Konto einrichten, um E-Mails senden zu können.";
 "Do you want to open the following URL?" = "Möchten Sie die folgende URL öffnen?";
+"Passcode option" = "Passcode-Option";
+"Please choose how many digits you want to use for the passcode lock?" = "Bitte wählen Sie, wie viele Ziffern Sie für die Passcode-Sperre verwenden möchten?";
+"%ld digit code" = "%ld Zifferncode";
+"Enter a new code with %ld digits" = "Geben Sie einen neuen Code mit %ld Ziffern ein";
 
 "%@%@ %@ version %@ build %@\n(app: %@, sdk: %@)" = "%@ %@ %@ version %@ build %@\n(app: %@, sdk: %@)";
 "beta" = "Beta";
@@ -357,6 +361,9 @@
 "Open in a new Window" = "In neuen Fenster öffnen";
 "Open in Window" = "In Fenster öffnen";
 "Take photo or video" = "Foto oder Video aufnehmen";
+"%ld Item was copied to the clipboard" = "%ld Element wurde in die Zwischenablage kopiert";
+"%ld Items were copied to the clipboard" = "%ld Elemente wurden in die Zwischenablage kopiert";
+"Please note: Folders can only be pasted into the %@ app and the same account." = "Bitte beachten Sie: Ordner können nur in die %@ App und in das gleiche Konto eingefügt werden.";
 
 "Preparing…" = "Vorbereiten…";
 
@@ -503,7 +510,7 @@
 "Accept Share failed" = "Freigabe annehmen fehlgeschlagen";
 "Decline Share failed" = "Freigabe ablehnen fehlgeschlagen";
 "Accept" = "Akzeptieren";
-"Decline" = "Ablehnen";
+"Decline" = "Abgelehnt";
 "Declined" = "Abgelehnt";
 "Decline Share" = "Freigabe ablehnen";
 "Unshare" = "Freigabe aufheben";
@@ -571,12 +578,14 @@
 "Video upload" = "Video Upload";
 
 /* Background media uploads */
+"Background uploads (Lab Version)" = "Hintergrund-Uploads (Laborversion)";
 "Background uploads" = "Hochladen im Hintergrund";
 "Use background refresh" = "Hintergrundaktualisierung verwenden";
+"Allow this app to refresh the content when on Wi-Fi or mobile network in background." = "Erlauben Sie dieser App, über WLAN oder das mobile Netz, im Hintergrund Inhalte zu aktualisieren.";
 "Enable background uploads" = "Aktiviere Hintergrund-Uploads";
 "Use background location updates" = "Verwende Hintergrund Standortaktualisierung";
 "Background upload notifications" = "Hintergrund Upload-Benachrichtigungen";
-"if you would like background media uploads to be more reliable, you should enable background location updates." = "Wenn Sie möchten, dass das Hochladen von Hintergrundmedien zuverlässiger ist, sollten Sie Aktualisierungen des Hintergrundstandorts aktivieren.";
+"If you would like background media uploads to be more reliable, you should enable background location updates." = "Wenn Sie möchten, dass die Medien-Uploads im Hintergrund zuverlässiger sind, sollten Sie die Standortaktualisierung im Hintergrund aktivieren.";
 "Background media uploads rely on location updates and will stop working if location acquisition permissions are revoked." = "Das Hochladen von Hintergrundmedien hängt von Standortaktualisierungen ab und funktioniert nicht mehr, wenn die Berechtigungen zur Standorterfassung widerrufen werden.";
 "Otherwise background media uploads using background refresh technology would depend on how frequently you use the app." = "Andernfalls hängt das Hochladen von Hintergrundmedien mithilfe der Hintergrundaktualisierungstechnologie davon ab, wie häufig Sie die App verwenden.";
 "Location permission denied" = "Standortberechtigung verweigert";
@@ -652,8 +661,9 @@
 "Select Last Item on Page" = "Letztes Element in der Liste auswählen";
 "Scroll to Top" = "Nach oben scrollen";
 "Scroll to Bottom" = "Nach unten scrollen";
-"Copy to Clipboard" = "In Zwischenablage kopieren";
-"Import from Clipboard" = "Aus Zwischenablage importieren";
+"Copy to Clipboard" = "In die Zwischenablage kopieren";
+"Import from Clipboard" = "Importieren aus der Zwischenablage";
+"Choose destination directory…" = "Zielverzeichnis auswählen...";
 "Next" = "Weiter";
 "Previous" = "Zurück";
 "Favorite" = "Favorit";
@@ -826,10 +836,10 @@
 "Flash" = "Blitz";
 "Fired" = "Ein";
 "Didn't fire" = "Aus";
-"No strobe return detection" = "No strobe return detection";
-"Strobe return light not detected" = "Strobe return light not detected";
-"Strobe return light detected" = "Strobe return light detected";
-"Compulsory flash firing" = "Compulsory flash firing";
+"No strobe return detection" = "Kein Blitz Return Erkennung";
+"Strobe return light not detected" = "Blitzrücklicht nicht erkannt";
+"Strobe return light detected" = "Blitzrücklicht nicht erkannt";
+"Compulsory flash firing" = "Bitzunterdrückung";
 "Compulsory flash supression" = "Bitzunterdrückung";
 "Auto mode" = "Auto-Modus";
 "Red eye detection supported" = "Rote-Augen-Erkennung unterstützt";

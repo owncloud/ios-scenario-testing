@@ -168,6 +168,8 @@
 "Continue offline" = "الاستمرار دون اتصال بالإنترنت";
 "Media upload in the previous session was incomplete since the application was terminated" = "لم يكتمل تحميل الوسائط في الجلسة السابقة بسبب إنهاء التطبيق";
 
+"Waiting for response from login session in external browser…" = "Waiting for response from login session in external browser…";
+
 "All done" = "تم كل شيء";
 "No pending messages or ongoing actions." = "لا توجد رسائل عالقة أو إجراءات جارية.";
 
@@ -205,7 +207,6 @@
 "Touch ID" = "معرّف اللمس";
 "Videos" = "مقاطع فيديو";
 "Photos" = "صور";
-"Background uploads" = "تحميلات الخلفية";
 "Wifi only" = "Wifi فقط";
 "Settings" = "الإعدادات";
 "Lock application" = "تطبيق القفل";
@@ -229,6 +230,10 @@
 "Please configure an email account" = "يُرجى تكوين حساب بريد إلكتروني";
 "You need to configure an email account first to be able to send emails." = "تحتاج إلى تكوين حساب بريد إلكتروني أولًا حتى تتمكن من إرسال رسائل البريد الإلكتروني.";
 "Do you want to open the following URL?" = "هل ترغب في فتح عنوان URL التالي؟";
+"Passcode option" = "Passcode option";
+"Please choose how many digits you want to use for the passcode lock?" = "Please choose how many digits you want to use for the passcode lock?";
+"%ld digit code" = "%ld digit code";
+"Enter a new code with %ld digits" = "Enter a new code with %ld digits";
 
 "%@%@ %@ version %@ build %@\n(app: %@, sdk: %@)" = "%@%@%@ إصدار %@ نسخة%@\n(تطبيق: %@, sdk: %@)";
 "beta" = "بيتا";
@@ -356,6 +361,9 @@
 "Open in a new Window" = "فتح في نافذة جديدة";
 "Open in Window" = "فتح في نافذة";
 "Take photo or video" = "التقط صورة أو فيديو";
+"%ld Item was copied to the clipboard" = "%ld Item was copied to the clipboard";
+"%ld Items were copied to the clipboard" = "%ld Items were copied to the clipboard";
+"Please note: Folders can only be pasted into the %@ app and the same account." = "Please note: Folders can only be pasted into the %@ app and the same account.";
 
 "Preparing…" = "جارٍ الإعداد…";
 
@@ -570,12 +578,14 @@
 "Video upload" = "تحميل فيديو";
 
 /* Background media uploads */
+"Background uploads (Lab Version)" = "Background uploads (Lab Version)";
 "Background uploads" = "تحميلات الخلفية";
 "Use background refresh" = "استخدم تحديث الخلفية";
+"Allow this app to refresh the content when on Wi-Fi or mobile network in background." = "Allow this app to refresh the content when on Wi-Fi or mobile network in background.";
 "Enable background uploads" = "تفعيل التحميلات في الخلفية";
 "Use background location updates" = "استخدم تحديثات الموقع في الخلفية";
 "Background upload notifications" = "إشعارات تحميل الخلفية";
-"if you would like background media uploads to be more reliable, you should enable background location updates." = "إذا كنت ترغب في أن تكون عمليات تحميل وسائط الإعلام في الخلفية موثوقة أكثر ، فيجب تمكين تحديثات الموقع في الخلفية.";
+"If you would like background media uploads to be more reliable, you should enable background location updates." = "If you would like background media uploads to be more reliable, you should enable background location updates.";
 "Background media uploads rely on location updates and will stop working if location acquisition permissions are revoked." = "تعتمد عمليات تحميل وسائط الإعلام في الخلفية على تحديثات الموقع وستتوقف عن العمل إذا تم إبطال أذونات الحصول على الموقع.";
 "Otherwise background media uploads using background refresh technology would depend on how frequently you use the app." = "وبخلاف ذلك ، فإن عمليات تحميل وسائط الإعلام في الخلفية باستخدام تقنية تحديث الخلفية ستعتمد على مدى تكرار استخدامك للتطبيق.";
 "Location permission denied" = "تم رفض إذن الموقع";
@@ -651,8 +661,9 @@
 "Select Last Item on Page" = "حدد آخر عنصر في الصفحة";
 "Scroll to Top" = "مرِّر إلى الأعلى";
 "Scroll to Bottom" = "مرِّر إلى الأسفل";
-"Copy to Clipboard" = "نسخ إلى اللوحة المؤقتة";
-"Import from Clipboard" = "استيراد من اللوحة المؤقتة";
+"Copy to Clipboard" = "Copy to Clipboard";
+"Import from Clipboard" = "Import from Clipboard";
+"Choose destination directory…" = "Choose destination directory…";
 "Next" = "التالي";
 "Previous" = "السابق";
 "Favorite" = "المفضلة";

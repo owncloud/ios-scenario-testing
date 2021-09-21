@@ -9,7 +9,6 @@ import java.util.logging.Level;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.pagefactory.iOSXCUITFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
-import utils.LocProperties;
 import utils.log.Log;
 
 public class LoginPage extends CommonPage{
@@ -41,14 +40,16 @@ public class LoginPage extends CommonPage{
     @iOSXCUITFindBy(accessibility = "server-bookmark-cell")
     private MobileElement bookmarkCell;
 
+    //Only for login tests, from env variables. Needed some instances running to check
+    //whether authentication works (ftm, only basic)
+    private final String serverURL = System.getProperty("login_serverURL");
+    private final String oauth2URL = System.getProperty("login_oauth2URL");
+    private final String oidcURL = System.getProperty("login_oidcURL");
+    private final String LDAPURL = System.getProperty("login_LDAPURL");
+    private final String red301URL = System.getProperty("login_red301URL");
+    private final String red302URL = System.getProperty("login_red302URL");
 
-    private final String serverURL = LocProperties.getProperties().getProperty("serverBasicTest");
-    private final String oauth2URL = LocProperties.getProperties().getProperty("serverOAuth2Test");
-    private final String oidcURL = LocProperties.getProperties().getProperty("serverOIDCTest");
-    private final String LDAPURL = LocProperties.getProperties().getProperty("serverLDAPTest");
-    private final String red301URL = LocProperties.getProperties().getProperty("server301Test");
-    private final String red302URL = LocProperties.getProperties().getProperty("server302Test");
-
+    //For the regular tests
     private final String server = System.getProperty("server");
 
     public LoginPage(){
@@ -56,9 +57,9 @@ public class LoginPage extends CommonPage{
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
     }
 
-    public boolean notLoggedIn(){
-        Log.log(Level.FINE, "Logged: " + addServer.size());
-        return addServer.size() > 0;
+    public boolean loggedIn(){
+        Log.log(Level.FINE, "Logged: " + bookmarkCells.size());
+        return bookmarkCells.size() > 0;
     }
 
     public void typeURL(){
@@ -71,7 +72,7 @@ public class LoginPage extends CommonPage{
 
     public void typeURL(String authMethod){
         Log.log(Level.FINE, "Starts: Type URL.");
-        waitById(15, urlServer.get(0));
+        waitById(5, urlServer.get(0));
         urlServer.get(0).sendKeys(selectURL(authMethod));
         continueOption.click();
         approveIssue();

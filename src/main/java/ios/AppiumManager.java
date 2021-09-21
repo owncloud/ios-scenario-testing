@@ -47,8 +47,8 @@ public class AppiumManager {
         capabilities.setCapability("showXcodeLog", true);
         //The following capabilities prevents reinstalling the app every test. Need to adapt the code
         //before using:
-        //capabilities.setCapability(MobileCapabilityType.FULL_RESET, false);
-        //capabilities.setCapability(MobileCapabilityType.NO_RESET, true);
+        capabilities.setCapability(MobileCapabilityType.FULL_RESET, false);
+        capabilities.setCapability(MobileCapabilityType.NO_RESET, true);
 
         try {
             if (driverURL.equals(null)) {

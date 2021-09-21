@@ -14,7 +14,7 @@ import io.cucumber.junit.CucumberOptions;
 import utils.log.Log;
 
 @RunWith(CucumberWithSerenity.class)
-@CucumberOptions(plugin = {"pretty"})
+@CucumberOptions(plugin = {"pretty"}, tags = {"not @login"})
 
 public class RunCucumberTest {
 
@@ -23,12 +23,15 @@ public class RunCucumberTest {
     public static void beforeclass(){
         Log.init();
         Log.log(Level.FINE, "START EXECUTION\n");
+        //Accepting required system permissions
+        AppiumManager.getManager().getDriver().switchTo().alert().accept();
     }
 
     // After the whole execution
     @AfterClass
     public static void afterclass(){
         //remove the oC app
+        AppiumManager.getManager().getDriver().removeApp("com.owncloud.ios-app");
         AppiumManager.getManager().getDriver().quit();
         Log.log(Level.FINE, "END EXECUTION\n");
     }

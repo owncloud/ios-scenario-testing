@@ -72,7 +72,7 @@
 "Logout" = "ออกจากระบบ";
 
 /* Bookmark Info */
-"Bookmark Metadata" = "Bookmark Metadata";
+"Bookmark Metadata" = "ข้อมูลเมตาของบุ๊กมาร์ก";
 
 /* Client */
 "Browse" = "เรียกดู";
@@ -99,33 +99,33 @@
 "kind" = "ประเภท";
 "size" = "ขนาด";
 "date" = "วันที่";
-"Search folder" = "Search folder";
-"Search account" = "Search account";
+"Search folder" = "ค้นหาโฟลเดอร์";
+"Search account" = "ค้นหาบัญชี";
 "Pending" = "อยู่ระหว่างดำเนินการ";
 "Show parent paths" = "แสดงพาธ";
-"Reveal in folder" = "Reveal in folder";
+"Reveal in folder" = "เปิดเผยในโฟลเดอร์";
 
 "%@ of %@ used" = "มีทั้งหมด %@ ใช้ไปแล้ว%@";
 "Total: %@" = "ทั้งหมด: %@";
 "%@ item | " = "%@ รายการ | ";
 "%@ items | " = "%@ รายการ";
 
-"Show more results" = "Show more results";
+"Show more results" = "แสดงผลลัพธ์เพิ่มเติม";
 
 /* Search scope */
-"Search scope" = "Search scope";
-"Toggle Search Scope" = "Toggle Search Scope";
+"Search scope" = "ขอบเขตการค้นหา";
+"Toggle Search Scope" = "สลับขอบเขตการค้นหา";
 
 /* Static Login Setup */
 "Server error" = "ข้อผิดพลาดของเซิร์ฟเวอร์";
 "The server doesn't support any allowed authentication method." = "เซิร์ฟเวอร์ไม่รองรับวิธีการตรวจสอบการอนุญาตสิทธิ์ใดๆ";
 "The server doesn't support any known and allowed authentication method found." = "เซิร์ฟเวอร์ไม่รองรับวิธีการตรวจสอบสิทธิ์ในปัจจุบัน";
 "Retry detection" = "ลองค้นหาอีกครั้ง";
-"Enter your username and password" = "Enter your username and password";
-"Please log in to authorize the app." = "Please log in to authorize the app.";
-"Welcome to %@" = "Welcome to %@";
-"Please enter a server URL" = "Please enter a server URL";
-"Please pick a profile to begin setup" = "Please pick a profile to begin setup";
+"Enter your username and password" = "ป้อนชื่อผู้ใช้และรหัสผ่านของคุณ";
+"Please log in to authorize the app." = "กรุณาเข้าสู่ระบบเพื่ออนุญาตแอป";
+"Welcome to %@" = "ยินดีต้อนรับสู่ %@";
+"Please enter a server URL" = "กรุณาป้อน URL ของเซิร์ฟเวอร์";
+"Please pick a profile to begin setup" = "โปรดเลือกโปรไฟล์เพื่อเริ่มการตั้งค่า";
 
 /* Single Account */
 "You are connected as\n%@" = "คุณเชื่อมต่อด้วยบัญชี %@";
@@ -168,6 +168,8 @@
 "Continue offline" = "ใช่งานแบบออฟไลน์ต่อไป";
 "Media upload in the previous session was incomplete since the application was terminated" = "การอัปโหลดสื่อในเซสชันก่อนหน้าไม่สมบูรณ์เนื่องจากแอปพลิเคชันถูกยกเลิก";
 
+"Waiting for response from login session in external browser…" = "Waiting for response from login session in external browser…";
+
 "All done" = "เสร็จเรียบร้อยแล้ว";
 "No pending messages or ongoing actions." = "ไม่มีข้อความที่รอดำเนินการหรือดำเนินการอยู่";
 
@@ -205,7 +207,6 @@
 "Touch ID" = "ยืนยันตนด้วยลายนิ้วมือ";
 "Videos" = "วิดีโอ";
 "Photos" = "รูปภาพ";
-"Background uploads" = "อัปโหลดพื้นหลัง";
 "Wifi only" = "Wifi เท่านั้น";
 "Settings" = "ตั้งค่า";
 "Lock application" = "ล็อกแอปพลิเคชัน";
@@ -229,6 +230,10 @@
 "Please configure an email account" = "โปรดกำหนดค่าบัญชีอีเมล";
 "You need to configure an email account first to be able to send emails." = "คุณต้องกำหนดค่าบัญชีอีเมลก่อนจึงจะสามารถส่งอีเมลได้";
 "Do you want to open the following URL?" = "คุณต้องการเปิด URL ต่อไปนี้?";
+"Passcode option" = "Passcode option";
+"Please choose how many digits you want to use for the passcode lock?" = "Please choose how many digits you want to use for the passcode lock?";
+"%ld digit code" = "%ld digit code";
+"Enter a new code with %ld digits" = "Enter a new code with %ld digits";
 
 "%@%@ %@ version %@ build %@\n(app: %@, sdk: %@)" = "%@%@%@ เวอร์ชัน %@ บิวด์ %@\n(แอป: %@, sdk: %@)";
 "beta" = "เวอร์ชันเบต้า";
@@ -356,6 +361,9 @@
 "Open in a new Window" = "เปิดในหน้าต่างใหม่";
 "Open in Window" = "เปิดหน้าต่าง";
 "Take photo or video" = "ถ่ายภาพหรือวิดีโอ";
+"%ld Item was copied to the clipboard" = "%ld Item was copied to the clipboard";
+"%ld Items were copied to the clipboard" = "%ld Items were copied to the clipboard";
+"Please note: Folders can only be pasted into the %@ app and the same account." = "Please note: Folders can only be pasted into the %@ app and the same account.";
 
 "Preparing…" = "กำลังจัดเตรียม…";
 
@@ -384,11 +392,11 @@
 "Connecting..." = "กำลังเชื่อมต่อ ...";
 
 "File" = "ไฟล์";
-"%@ was updated" = "%@ was updated";
-"Would you like to view the updated version?" = "Would you like to view the updated version?";
-"Show new version" = "Show new version";
-"Refresh without asking" = "Refresh without asking";
-"Ignore updates" = "Ignore updates";
+"%@ was updated" = "%@ ได้รับการอัปเดตแล้ว";
+"Would you like to view the updated version?" = "คุณต้องการดูเวอร์ชันที่อัปเดตแล้ว?";
+"Show new version" = "แสดงเวอร์ชันใหม่";
+"Refresh without asking" = "รีเฟรชโดยไม่ต้องถาม";
+"Ignore updates" = "ไม่สนใจการอัปเดต";
 
 /* PDF Viewer */
 "Resume" = "ดำเนินการต่อ";
@@ -570,12 +578,14 @@
 "Video upload" = "อัปโหลดวิดีโอ";
 
 /* Background media uploads */
+"Background uploads (Lab Version)" = "Background uploads (Lab Version)";
 "Background uploads" = "อัปโหลดพื้นหลัง";
 "Use background refresh" = "ใช้การรีเฟรชพื้นหลัง";
+"Allow this app to refresh the content when on Wi-Fi or mobile network in background." = "Allow this app to refresh the content when on Wi-Fi or mobile network in background.";
 "Enable background uploads" = "เปิดใช้งานการอัปโหลดพื้นหลัง";
 "Use background location updates" = "ใช้การอัปเดตตำแหน่งพื้นหลัง";
 "Background upload notifications" = "แจ้งเตือนการอัปโหลดพื้นหลัง";
-"if you would like background media uploads to be more reliable, you should enable background location updates." = "หากคุณต้องการให้การอัปโหลดพื้นหลังมีความน่าเชื่อถือมากยิ่งขึ้น คุณควรเปิดใช้งานการอัปเดตตำแหน่งพื้นหลัง";
+"If you would like background media uploads to be more reliable, you should enable background location updates." = "If you would like background media uploads to be more reliable, you should enable background location updates.";
 "Background media uploads rely on location updates and will stop working if location acquisition permissions are revoked." = "การอัปโหลดพื้นหลังจะขึ้นอยู่กับการอัปเดตตำแหน่งและจะหยุดทำงานหากมีการเพิกถอนสิทธิ์การเข้าถึงตำแหน่ง";
 "Otherwise background media uploads using background refresh technology would depend on how frequently you use the app." = "การอัปโหลดในพื้นหลังจะใช้เทคโนโลยีการรีเฟรชพื้นหลัง โดยจะขึ้นอยู่กับความถี่ที่คุณใช้แอป";
 "Location permission denied" = "ปฏิเสธสิทธิ์การเข้าถึงตำแหน่ง";
@@ -651,8 +661,9 @@
 "Select Last Item on Page" = "เลือกรายการสุดท้ายในหน้า";
 "Scroll to Top" = "เลื่อนขึ้นด้านบน";
 "Scroll to Bottom" = "เลื่อนลงด้านล่าง";
-"Copy to Clipboard" = "คัดลอกไปยังนามบัตร";
-"Import from Clipboard" = "นำเข้าจาก Pasteboard";
+"Copy to Clipboard" = "Copy to Clipboard";
+"Import from Clipboard" = "Import from Clipboard";
+"Choose destination directory…" = "Choose destination directory…";
 "Next" = "ถัดไป";
 "Previous" = "ก่อนหน้า";
 "Favorite" = "รายการโปรด";
@@ -663,7 +674,7 @@
 "Go to Beginning" = "ไปที่จุดเริ่มต้น";
 "Mute/Unmute" = "ปิดเสียง / เปิดเสียง";
 "Full Screen" = "เต็มจอ";
-"Switch Theme Style" = "Switch Theme Style";
+"Switch Theme Style" = "เปลี่ยนรูปแบบธีม";
 
 /* Markup */
 "How should this file be saved?" = "ไฟล์นี้ควรถูกบันทึก?";
@@ -890,7 +901,7 @@
 "No Access to the media selected for upload" = "ไม่มีการเข้าถึงสื่อที่เลือกสำหรับการอัปโหลด";
 
 /* macOS support */
-"Passcode protection is not supported on this device.\nPlease disable passcode lock in the app settings." = "อุปกรณ์นี้ไม่รองรับการป้องกันรหัสผ่าน\nโปรดปิดการใช้งานการล็อกรหัสผ่านในการตั้งค่าแอป";
+"Passcode protection is not supported on this device.\nPlease disable passcode lock in the app settings." = "อุปกรณ์นี้ไม่รองรับการป้องกันรหัสผ่าน\nโปรดปิดการใช้งานรหัสปลดล็อคในการตั้งค่าแอป";
 
 /* MDM settings push */
 "New settings received from MDM" = "การตั้งค่าใหม่ที่ได้รับจาก MDM";

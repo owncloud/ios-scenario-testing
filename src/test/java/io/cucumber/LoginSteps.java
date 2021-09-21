@@ -39,8 +39,7 @@ public class LoginSteps {
             throws Throwable {
         String currentStep = StepEventBus.getEventBus().getCurrentStep().get().toString();
         Log.log(Level.FINE, "----STEP----: " + currentStep);
-        loginPage.acceptPermissions();
-        if (loginPage.notLoggedIn()) {
+        if (!loginPage.loggedIn()) {
             Log.log(Level.FINE, "Not logged. Starting login process");
             String authMethod = commonAPI.checkAuthMethod();
             String password = LocProperties.getProperties().getProperty("passw1");
@@ -67,6 +66,8 @@ public class LoginSteps {
                 default:
                     break;
             }
+        } else { //Selecting first account
+            loginPage.selectFirstBookmark();
         }
     }
 

@@ -71,8 +71,12 @@
 "Access Files" = "Acceder a ficheros";
 "Logout" = "Logout";
 
+/* Bookmark Info */
+"Bookmark Metadata" = "Metadatos de marcadores";
+
 /* Client */
 "Browse" = "Navegar";
+"Files" = "Archivos";
 "Disconnect" = "Desconectar";
 "Connecting…" = "Conectando...";
 "Connected." = "Conectado.";
@@ -95,20 +99,33 @@
 "kind" = "tipo";
 "size" = "tamaño";
 "date" = "fecha";
-"Search this folder" = "Buscar en esta carpeta";
+"Search folder" = "Buscar carpeta";
+"Search account" = "Buscar cuenta";
 "Pending" = "Pendiente";
 "Show parent paths" = "Mostrar ruta raíz";
+"Reveal in folder" = "Revelar en carpeta";
 
 "%@ of %@ used" = "%@ de %@ usados";
 "Total: %@" = "Total: %@";
 "%@ item | " = "%@ Elemento I";
 "%@ items | " = "%@Elementos |";
 
+"Show more results" = "Mostrar más resultados";
+
+/* Search scope */
+"Search scope" = "Alcance de búsqueda";
+"Toggle Search Scope" = "Toggle alcance de búsqueda";
+
 /* Static Login Setup */
 "Server error" = "Error en servidor";
 "The server doesn't support any allowed authentication method." = "El servidor no soporta ningún método de autenticación";
 "The server doesn't support any known and allowed authentication method found." = "El servidor no soporta ningún método de autenticación conocido o permitido.";
 "Retry detection" = "Reintentar detección";
+"Enter your username and password" = "Ingrese su nombre de usuario y contraseña";
+"Please log in to authorize the app." = "Inicie sesión para autorizar la aplicación.";
+"Welcome to %@" = "Bienvenido a %@";
+"Please enter a server URL" = "Ingrese una URL de servidor";
+"Please pick a profile to begin setup" = "Elija un perfil para comenzar la configuración";
 
 /* Single Account */
 "You are connected as\n%@" = "Está conectado como \n%@";
@@ -151,6 +168,8 @@
 "Continue offline" = "Seguir offline";
 "Media upload in the previous session was incomplete since the application was terminated" = "Hay subidas de ficheros  que no se completaron en su última sesión porque la aplicación fue cerrada.";
 
+"Waiting for response from login session in external browser…" = "Waiting for response from login session in external browser…";
+
 "All done" = "Terminado.";
 "No pending messages or ongoing actions." = "No hay mensajes o acciones pendientes.";
 
@@ -188,7 +207,6 @@
 "Touch ID" = "Touch ID";
 "Videos" = "Vídeos";
 "Photos" = "Fotos";
-"Background uploads" = "Subidas en segundo plano";
 "Wifi only" = "Solo wifi";
 "Settings" = "Ajustes";
 "Lock application" = "Bloquear aplicación";
@@ -208,11 +226,16 @@
 "After 1 minute" = "Después de 1 minuto";
 "After 5 minutes" = "Después de 5 minutos";
 "After 30 minutes" = "Después de 30 minutos";
+"If you choose \"Immediately\" the App will be locked, when it is no longer in foreground." = "Si elige \"Inmediatamente\", la aplicación se bloqueará cuando ya no esté en primer plano.";
 "Please configure an email account" = "Por favor configure una cuenta de correo electrónico";
 "You need to configure an email account first to be able to send emails." = "Necesita configurar una cuenta de correo electrónico para poder enviar correos.";
 "Do you want to open the following URL?" = "¿Desea abrir la siguiente URL?";
+"Passcode option" = "Passcode option";
+"Please choose how many digits you want to use for the passcode lock?" = "Please choose how many digits you want to use for the passcode lock?";
+"%ld digit code" = "%ld digit code";
+"Enter a new code with %ld digits" = "Enter a new code with %ld digits";
 
-"%@%@ %@ version %@ build %@\n(app: %@, sdk: %@)" = "%@%@ %@ version %@ build %@\n(app: %@, sdk: %@)";
+"%@%@ %@ version %@ build %@\n(app: %@, sdk: %@)" = "%@%@%@versión %@ build %@\n(app: %@, sdk: %@)";
 "beta" = "beta";
 "release" = "lanzamiento";
 "App Version" = "App Version";
@@ -267,7 +290,7 @@
 "This action can't be undone." = "Esta acción no se puede deshacer.";
 
 /* Data usage settings */
-"Data usage" = "Data usage";
+"Data usage" = "Uso de datos";
 "Delete unused local copies" = "Borrar copias locales no usadas";
 "Time measured since uploading, editing, downloading or viewing the respective file through this device. Does not apply to files downloaded via the Available Offline feature. Local copies may be deleted before the given period of time has passed, f.ex. because there's a newer version of a file on the server - or through the manual deletion of offline copies. Also, local copies may not be deleted after the given period of time has passed, f.ex. if an action is performed on it, the file is still in use - or the account holding the file hasn't been used in the app." = "Tiempo medido desde que se sube, edita, descarga o visualiza el fichero en este dispositivo. No aplica a ficheros descargados a través de la funcionalidad \"Disponible offline\". Las copias locales pueden ser borradas  antes de que el tiempo seleccionado haya transcurrido, por ejemplo, si hay una nueva versión del fichero en el servidor o por el borrado manual de copias offline. Las copias locales pueden no ser borradas después de que el tiempo haya transcurrido, por ejemplo, si se ejecuta una acción sobre él, si el archivo está en uso, o si la cuenta que lo contiene no ha sido usada aún en la app.";
 "never" = "nunca";
@@ -275,24 +298,24 @@
 "Decrease Slider Value" = "Decrementar valor";
 "Increase Slider Value" = "Incrementar valor";
 
-"Cellular transfers" = "Cellular transfers";
-"Some cellular data may still be used. To completely avoid the usage of cellular data, please turn off access to cellular for the entire app in the Settings app." = "Some cellular data may still be used. To completely avoid the usage of cellular data, please turn off access to cellular for the entire app in the Settings app.";
-"Cellular transfers have been disabled via MDM configuration. Please contact your administrator for more information." = "Cellular transfers have been disabled via MDM configuration. Please contact your administrator for more information.";
+"Cellular transfers" = "Transferencias celulares";
+"Some cellular data may still be used. To completely avoid the usage of cellular data, please turn off access to cellular for the entire app in the Settings app." = "Es posible que aún se utilicen algunos datos móviles. Para evitar por completo el uso de datos móviles, desactive el acceso al móvil para toda la aplicación desde la configuración de la aplicación.";
+"Cellular transfers have been disabled via MDM configuration. Please contact your administrator for more information." = "Las transferencias móviles se han desactivado mediante la configuración de MDM. Comuníquese con su administrador para obtener más información.";
 "General" = "General";
-"By feature" = "By feature";
+"By feature" = "por característica";
 
-"off" = "off";
+"off" = "apagado";
 "enabled" = "activado";
 
 /* Display settings */
 "Advanced settings" = "Configuración avanzada";
 "Show hidden files and folders" = "Mostrar archivos y carpetas ocultos";
-"Show folders on top" = "Show folders on top";
-"Prevent gestures" = "Prevent gestures";
-"Prevent dragging of files and folders and multiselection using system defined gestures" = "Prevent dragging of files and folders and multiselection using system defined gestures";
+"Show folders on top" = "Mostrar carpetas encima";
+"Prevent gestures" = "Prevenir gestos";
+"Prevent dragging of files and folders and multiselection using system defined gestures" = "Evite el arrastre de archivos y carpetas y la selección múltiple mediante gestos definidos por el sistema";
 
 /* Advanced settings */
-"Enable diagnostics" = "Enable diagnostics";
+"Enable diagnostics" = "Habilitar diagnósticos";
 
 /* Passcode Messages */
 
@@ -304,7 +327,7 @@
 "Please try again in %@" = "Por favor pruebe nuevamente en %@";
 "Unlock %@" = "Desbloquear %@";
 "Biometric authentication failed" = "Fallo de autenticación biométrica.";
-"You are required to set the passcode" = "You are required to set the passcode";
+"You are required to set the passcode" = "Debe configurar el código de acceso";
 
 /* Certificate management */
 
@@ -319,8 +342,8 @@
 
 "Forbidden Characters" = "Caracteres prohibidos";
 "File name cannot contain / or \\" = "El nombre de archivo no puede contener / o \\";
-"Item with same name already exists" = "Item with same name already exists";
-"An item with the same name already exists in this location." = "An item with the same name already exists in this location.";
+"Item with same name already exists" = "El artículo con el mismo nombre ya existe";
+"An item with the same name already exists in this location." = "El artículo con el mismo nombre ya existe en esta localización";
 "New Folder" = "Nueva carpeta";
 "Folder name" = "Nombre de la carpeta";
 "Rename" ="Cambiar nombre";
@@ -337,17 +360,24 @@
 "Close Window" = "Cerrar ventana";
 "Open in a new Window" = "Abrir en nueva ventana";
 "Open in Window" = "Abrir en ventana";
-"Take photo or video" = "Take photo or video";
+"Take photo or video" = "Toma foto o video";
+"%ld Item was copied to the clipboard" = "%ld Item was copied to the clipboard";
+"%ld Items were copied to the clipboard" = "%ld Items were copied to the clipboard";
+"Please note: Folders can only be pasted into the %@ app and the same account." = "Please note: Folders can only be pasted into the %@ app and the same account.";
 
 "Preparing…" = "Preparando...";
 
 "No actions available" = "No hay acciones disponibles";
 "No actions are available for this folder, possibly because of missing permissions." = "No hay acciones disponibles para esta carpeta, posiblemente por falta de permisos.";
 
-"Close actions menu" = "Close actions menu";
+"Close actions menu" = "Cerrar el menú de acciones";
 "Favorited" = "Agregado a Favoritos";
-"Favorite item" = "Favorite item";
-"Unfavorite item" = "Unfavorite item";
+"Favorite item" = "Artículo favorito";
+"Unfavorite item" = "Artículo no favorito";
+"Presentation Mode" = "Modo presentación";
+"Enabling presentation mode will prevent the display from sleep mode until the view is closed." = "Habilitar el modo de presentación evitará que la pantalla pase al modo de suspensión hasta que se cierre la vista.";
+"Enable" = "Activar";
+"Exit Full Screen" = "Salir de pantalla completa";
 
 /* Directory Picker Messages */
 "Move here" = "Mover aquí";
@@ -359,7 +389,14 @@
 "Could not get the picture" = "No se pudo obtener la imagen";
 "Downloading" = "Descargando";
 "File couldn't be opened" = "Archivo no pudo ser abierto";
-"Connecting..." = "Connecting...";
+"Connecting..." = "Conectando...";
+
+"File" = "Archivo";
+"%@ was updated" = "%@ ha sido actualizado";
+"Would you like to view the updated version?" = "¿Le gustaría ver la versión actualizada?";
+"Show new version" = "Mostrar nueva versión";
+"Refresh without asking" = "Actualizar sin preguntar";
+"Ignore updates" = "Ignorar actualizaciones";
 
 /* PDF Viewer */
 "Resume" = "Continuar";
@@ -371,6 +408,9 @@
 "The entered page number doesn't exist" = "El número de página introducida no existe";
 "Search PDF" = "Buscar PDF";
 "Outline" = "Descripción";
+"Find Next" = "Encontrar siguiente";
+"Find Previous" = "Encontrar anterior";
+"Close Search" = "Cerrar búsqueda";
 
 /* Photo Upload */
 "Upload" = "Subir";
@@ -382,9 +422,9 @@
 "Media import" = "importar media";
 "%@ of %@" = "%@ de %@";
 "Selected folder lacks file creation permission" = "La carpeta seleccionada no tiene permisos de creación de archivos";
-"%d Item" = "%d Item";
-"%d Items" = "%d Items";
-"Select Items" = "Select Items";
+"%d Item" = "%d Artículo";
+"%d Items" = "%d Artículos";
+"Select Items" = "Seleccionar artículo";
 
 /* Scan */
 "Scan" = "Escanear";
@@ -497,6 +537,10 @@
 "Private Link" = "Enlace privado";
 "Created Public Link" = "Enlace Público creado";
 "URL was copied to the clipboard" = "La URL fue copiada al portapapeles";
+"%@ is not available, when this account is offline. Please open the app and log into your account before you can do this action." = "%@ no está disponible cuando esta cuenta está desconectada. Abra la aplicación e inicie sesión en su cuenta antes de poder realizar esta acción.";
+"%@ is not available for this item." = "%@ no está disponible para este artículo.";
+"Share with user/group" = "Compartir con usuario/grupo";
+"Share link" = "Compartir enlace";
 
 /* Quick Access view */
 "Quick Access" = "Acceso rápido";
@@ -511,15 +555,15 @@
 
 /* Media files settings */
 "Media Files" = "Archivos multimedia";
-"Download instead of streaming" = "Download instead of streaming";
+"Download instead of streaming" = "Descargar en vez de transmitir";
 
 /* Photo upload settings */
 "Media Upload" = "Subir multimedia";
-"Media Export" = "Media Export";
-"Auto Upload" = "Auto Upload";
+"Media Export" = "Exportación de medios";
+"Auto Upload" = "Subida automática";
 "Convert HEIC to JPEG" = "Convertir HEIC a JPEG";
 "Convert videos to MP4" = "Convertir videos a MP4";
-"Preserve original media file names" = "Preserve original media file names";
+"Preserve original media file names" = "Conservar los nombres de los archivos multimedia originales";
 "Auto Upload Photos" = "Auto actualizar Fotos";
 "Auto Upload Videos" = "Auto actualizar Videos";
 "Account" = "Cuenta";
@@ -530,21 +574,23 @@
 "Select Upload Path" = "Seleccionar ruta de subida";
 "Auto upload of media was disabled since configured account / folder was not found" = "La subida automática de media ha sido des habilitada puesto que la cuenta/carpeta no ha podido ser encontrada.";
 "Importing %@ media files for upload" = "Importando %@ archivos para su subida";
-"Photo upload" = "Photo upload";
-"Video upload" = "Video upload";
+"Photo upload" = "Subir foto";
+"Video upload" = "Subir video";
 
 /* Background media uploads */
+"Background uploads (Lab Version)" = "Background uploads (Lab Version)";
 "Background uploads" = "Subidas en segundo plano";
-"Use background refresh" = "Use background refresh";
-"Enable background uploads" = "Enable background uploads";
-"Use background location updates" = "Use background location updates";
-"Background upload notifications" = "Background upload notifications";
-"if you would like background media uploads to be more reliable, you should enable background location updates." = "if you would like background media uploads to be more reliable, you should enable background location updates.";
-"Background media uploads rely on location updates and will stop working if location acquisition permissions are revoked." = "Background media uploads rely on location updates and will stop working if location acquisition permissions are revoked.";
-"Otherwise background media uploads using background refresh technology would depend on how frequently you use the app." = "Otherwise background media uploads using background refresh technology would depend on how frequently you use the app.";
-"Location permission denied" = "Location permission denied";
-"Please re-enable location acquisition in system settings" = "Please re-enable location acquisition in system settings";
-"Scheduled upload of %ld media assets" = "Scheduled upload of %ld media assets";
+"Use background refresh" = "Usar refrescado en segundo plano";
+"Allow this app to refresh the content when on Wi-Fi or mobile network in background." = "Allow this app to refresh the content when on Wi-Fi or mobile network in background.";
+"Enable background uploads" = "Habilitar cargas en segundo plano";
+"Use background location updates" = "Usar actualizaciones de ubicación en segundo plano";
+"Background upload notifications" = "Notificaciones de carga en segundo plano";
+"If you would like background media uploads to be more reliable, you should enable background location updates." = "If you would like background media uploads to be more reliable, you should enable background location updates.";
+"Background media uploads rely on location updates and will stop working if location acquisition permissions are revoked." = "Las cargas de medios en segundo plano dependen de las actualizaciones de ubicación y dejarán de funcionar si se revocan los permisos de adquisición de ubicación.";
+"Otherwise background media uploads using background refresh technology would depend on how frequently you use the app." = "De lo contrario, las cargas de medios en segundo plano con tecnología de actualización en segundo plano dependerían de la frecuencia con la que utilice la aplicación.";
+"Location permission denied" = "Permiso de ubicación denegado";
+"Please re-enable location acquisition in system settings" = "Vuelva a habilitar la adquisición de ubicación en la configuración del sistema";
+"Scheduled upload of %ld media assets" = "Carga programada de %ld activos multimedia";
 
 /* Progress summarizer */
 "Creating %ld folders…" = "Creando %ld carpetas...";
@@ -570,14 +616,14 @@
 "Files and folders marked as Available Offline will become unavailable. They will be re-downloaded next time you log into your account (connectivity required)." = "Ficheros y carpetas marcadas como disponible offline no estarán disponibles. Serán descargados de nuevo la próxima vez que entre en su cuenta (se requiere conexión)";
 
 /* Diagnostic */
-"Diagnostic Overview" = "Diagnostic Overview";
+"Diagnostic Overview" = "Descripción general del diagnóstico";
 "Diagnostics" = "Diagnósticos";
-"Share Diagnostics" = "Share Diagnostics";
-"Action executed" = "Action executed";
+"Share Diagnostics" = "Compartir diagnósticos";
+"Action executed" = "Acción ejecutada";
 
-"Update Status" = "Update Status";
-"Completed update scans" = "Completed update scans";
-"Total update scans" = "Total update scans";
+"Update Status" = "Estado de actualización";
+"Completed update scans" = "Análisis de actualización completo";
+"Total update scans" = "Escaneos de actualización total";
 
 /* Available offline */
 "Root folder" = "Carpeta raíz";
@@ -598,9 +644,9 @@
 
 /* Release Notes */
 "Proceed" = "Proceder";
-"New in %@" = "New in %@";
+"New in %@" = "Nuevo en %@";
 "Thank you for using %@.\nIf you like our App, please leave an AppStore review.\n❤️" = "Gracias por usar %@.\nSI le gustó nuestra aplicación, por favor deje una reseña en la AppStore.\n❤️";
-"Thank you for using %@.\n" = "Thank you for using %@.\n";
+"Thank you for using %@.\n" = "Gracias por usar %@. \n";
 
 /* Key Commands */
 "Select Next" = "Seleccione el siguiente";
@@ -615,12 +661,20 @@
 "Select Last Item on Page" = "Seleccionar el último elemento de la página";
 "Scroll to Top" = "Ir al inicio";
 "Scroll to Bottom" = "Ir al final";
-"Copy to Clipboard" = "Copiar al portapapeles";
-"Import from Clipboard" = "Importar del portapapeles";
+"Copy to Clipboard" = "Copy to Clipboard";
+"Import from Clipboard" = "Import from Clipboard";
+"Choose destination directory…" = "Choose destination directory…";
 "Next" = "Siguiente";
 "Previous" = "Anterior";
 "Favorite" = "Favorito";
 "Cut" = "Cortar";
+"Play/Pause" = "Play/Pausa";
+"Skip Back" = "Ir hacia atrás";
+"Skip Ahead" = "Ir hacia delante";
+"Go to Beginning" = "Ir al principio";
+"Mute/Unmute" = "Mutear/Desmutear";
+"Full Screen" = "Pantalla completa";
+"Switch Theme Style" = "Cambiar estilo del tema";
 
 /* Markup */
 "How should this file be saved?" = "¿Cómo debe ser guardado este archivo?";
@@ -660,7 +714,7 @@
 "Error restoring purchases" = "Se produjo un error al restaurar las compras";
 "Error loading product info from App Store"= "Se produjo un error al cargar la información del producto desde la App Store";
 "Purchase failed" = "Falló la compra";
-"More information" = "More information";
+"More information" = "Más información";
 
 /* Licensing: Enterprise */
 "Enterprise" = "Enterprise";
@@ -691,157 +745,165 @@
 "trial" = "prueba";
 "purchase" = "compra";
 "subscription" = "suscripción";
-"Photo Pro Features" = "Photo Pro Features";
-"Image metadata, extended upload options" = "Image metadata, extended upload options";
-"Purchase" = "Purchase";
+"Photo Pro Features" = "Funciones de Photo Pro";
+"Image metadata, extended upload options" = "Metadatos de imagen, opciones de carga extendidas";
+"Purchase" = "Compra";
 "Subscribe" = "Subscribirse";
 
-"No accounts found" = "No accounts found";
-"In order to accurately determine your current licensing status, please add one or more accounts first." = "In order to accurately determine your current licensing status, please add one or more accounts first.";
+"No accounts found" = "No se han encontrado cuentas";
+"In order to accurately determine your current licensing status, please add one or more accounts first." = "Para determinar con precisión su estado actual de licencia, primero agregue una o más cuentas.";
 
 /* Share Sheet */
 "Save File" = "Guardar archivo";
-"Choose an account and folder to import into." = "Choose an account and folder to import into.";
-"No account configured.\nSetup an new account in the app to save to." = "No account configured.\nSetup an new account in the app to save to.";
-"Importing item %ld of %ld" = "Importing item %ld of %ld";
-"Error importing %@" = "Error importing %@";
-"Error loading item" = "Error loading item";
+"Choose an account and folder to import into." = "Elija una cuenta y una carpeta para importar.";
+"No account configured.\nSetup an new account in the app to save to." = "No hay una cuenta configurada. \nConfigure una nueva cuenta en la aplicación para guardar.";
+"Importing item %ld of %ld" = "Importa artículo %Id de %Id";
+"Error importing %@" = "Error al importar %@";
+"Error loading item" = "Error al cargar artículo.";
 "Preparing…" = "Preparando...";
-"Save here" = "Save here";
+"Save here" = "Guardar aquí";
 
 /* Data migration from legacy app */
-"Account Migration" = "Account Migration";
-"App Passcode" = "App Passcode";
-"Instant Upload Settings" = "Instant Upload Settings";
-"Migrating" = "Migrating";
-"Migrated" = "Migrated";
-"Failed to migrate" = "Failed to migrate";
-"Failed to access legacy user data" = "Failed to access legacy user data";
-"The app was upgraded to a new version. Below there is an overview of all migrated accounts." = "The app was upgraded to a new version. Below there is an overview of all migrated accounts.";
+"Account Migration" = "Migración de cuenta";
+"App Passcode" = "Código de acceso de la aplicación";
+"Instant Upload Settings" = "Configuración de carga instantánea";
+"Migrating" = "Migrando";
+"Migrated" = "Migrado";
+"Failed to migrate" = "No se pudo migrar";
+"Failed to access legacy user data" = "No se pudo acceder a los datos de usuario heredados";
+"The app was upgraded to a new version. Below there is an overview of all migrated accounts." = "La aplicación se actualizó a una nueva versión. A continuación, se muestra una descripción general de todas las cuentas migradas.";
 
 /* Misc. accessibility */
-"Enter multiple selection" = "Enter multiple selection";
+"Enter multiple selection" = "Ingresar selección múltiple";
 
 /* Universal Links */
-"Resolving link…" = "Resolving link…";
-"Link resolution failed" = "Link resolution failed";
-"Couldn't resolve a private link since you are offline and corresponding item is not cached locally." = "Couldn't resolve a private link since you are offline and corresponding item is not cached locally.";
-"Couldn't resolve a private link since the item is not known to the server." = "Couldn't resolve a private link since the item is not known to the server.";
-"Link points to an account bookmark which is not configured in the app." = "Link points to an account bookmark which is not configured in the app.";
+"Resolving link…" = "Resolviendo vínculo…";
+"Link resolution failed" = "Falló la resolución del enlace";
+"Couldn't resolve a private link since you are offline and corresponding item is not cached locally." = "No se pudo resolver un vínculo privado porque no está conectado y el elemento correspondiente no está almacenado en caché localmente.";
+"Couldn't resolve a private link since the item is not known to the server." = "No se pudo resolver un vínculo privado porque el servidor no conoce el elemento.";
+"Link points to an account bookmark which is not configured in the app." = "El enlace apunta a un marcador de cuenta que no está configurado en la aplicación.";
 
 /* Photo meta-data */
-"Image metadata" = "Image metadata";
-"Image details" = "Image details";
-"Profile" = "Profile";
+"Image metadata" = "Metadatos de imagen";
+"Image details" = "Detalles de la imagen";
+"Profile" = "Perfil";
 "Size" = "Tamaño";
-"Density" = "Density";
-"Color model" = "Color model";
-"%@ (%d bits/channel)" = "%@ (%d bits/channel)";
-"Histogram" = "Histogram";
+"Density" = "Densidad";
+"Color model" = "Modelo de color";
+"%@ (%d bits/channel)" = "%@ (%d bits/canal)";
+"Histogram" = "Histograma";
 
-"Camera details" = "Camera details";
-"Capture settings" = "Capture settings";
+"Camera details" = "Detalles de la cámara";
+"Capture settings" = "Configuración de captura";
 "Time" = "Hora";
-"EXIF aux info" = "EXIF aux info";
-"Authoring" =  "Authoring";
+"EXIF aux info" = "Información auxiliar EXIF";
+"Authoring" =  "Autoría";
 "TIFF" = "TIFF";
 
-"Lens make" = "Lens make";
-"Lens model" = "Lens model";
-"Lens info" = "Lens info";
-"Focal length" = "Focal length";
-"Focal length @ 35 mm" = "Focal length @ 35 mm";
+"Lens make" = "Marca de la lente";
+"Lens model" = "Modelo de lente";
+"Lens info" = "Información de la lente";
+"Focal length" = "Longitud focal";
+"Focal length @ 35 mm" = "Longitud focal @ 35 mm";
 
-"Shutter speed" = "Shutter speed";
-"Aperture" = "Aperture";
+"Shutter speed" = "Velocidad del obturador";
+"Aperture" = "Abertura";
 "ISO" = "ISO";
 
 /* EXIF: exposure program */
-"Program" = "Program";
-"Not defined" = "Not defined";
+"Program" = "Programa";
+"Not defined" = "No definida";
 "Manual" = "Manual";
 "Normal" = "Normal";
-"Aperture priority" = "Aperture priority";
-"Shutter priority" = "Shutter priority";
-"Creative" = "Creative";
+"Aperture priority" = "Prioridad de apertura";
+"Shutter priority" = "Prioridad de obturador";
+"Creative" = "Creativo";
 "Action" = "Acción";
-"Portrait" = "Portrait";
-"Landscape" = "Landscape";
+"Portrait" = "Retrato";
+"Landscape" = "Paisaje";
 
 /* EXIF: exposure metering mode */
-"Metering" = "Metering";
+"Metering" = "Medida";
 "unknown" = "desconocido";
-"Average" = "Average";
-"CenterWeightedAverage" = "CenterWeightedAverage";
-"Spot" = "Spot";
+"Average" = "Promedio";
+"CenterWeightedAverage" = "Promedio ponderado central";
+"Spot" = "Lugar";
 "MultiSpot" = "MultiSpot";
 "Pattern" = "Patrón";
-"Partial" = "Partial";
+"Partial" = "Parcial";
 
 /* EXIF: flash mode */
-"Flash" = "Flash";
-"Fired" = "Fired";
-"Didn't fire" = "Didn't fire";
-"No strobe return detection" = "No strobe return detection";
-"Strobe return light not detected" = "Strobe return light not detected";
-"Strobe return light detected" = "Strobe return light detected";
-"Compulsory flash firing" = "Compulsory flash firing";
-"Compulsory flash supression" = "Compulsory flash supression";
-"Auto mode" = "Auto mode";
-"Red eye detection supported" = "Red eye detection supported";
-"not present" = "not present";
+"Flash" = "Destello";
+"Fired" = "disparó";
+"Didn't fire" = "No disparó";
+"No strobe return detection" = "Sin detección de retorno de luz estroboscópica";
+"Strobe return light not detected" = "Luz de retorno estroboscópica no detectada";
+"Strobe return light detected" = "Luz de retorno estroboscópica detectada";
+"Compulsory flash firing" = "Disparo de flash obligatorio";
+"Compulsory flash supression" = "Supresión de flash obligatoria";
+"Auto mode" = "Modo automático";
+"Red eye detection supported" = "Compatible con detección de ojos rojos";
+"not present" = "no presente";
 
 /* EXIF: white balance */
-"White balance" = "White balance";
-"Auto" = "Auto";
+"White balance" = "Balance de blancos";
+"Auto" = "auto";
 "Manual" = "Manual";
 
-"Exposure bias" = "Exposure bias";
-"Uncalibrated" = "Uncalibrated";
-"Original date" = "Original date";
-"Digitized date" = "Digitized date";
+"Exposure bias" = "Sesgo de exposición";
+"Uncalibrated" = "Sin calibrar";
+"Original date" = "Fecha original";
+"Digitized date" = "Fecha digitalizada";
 
-"Color space" = "Color space";
+"Color space" = "Espacio de color";
 
 /* EXIF: aux info */
-"Lens ID" = "Lens ID";
-"Lens serial" = "Lens serial";
-"Serial number" = "Serial number";
-"Flash compensation" = "Flash compensation";
+"Lens ID" = "ID de lente";
+"Lens serial" = "Serie de lentes";
+"Serial number" = "Número de serie";
+"Flash compensation" = "Compensación de flash";
 "Owner" = "Propietario";
 "Firmware" = "Firmware";
-"Keywords" = "Keywords";
+"Keywords" = "Palabras clave";
 "Copyright" = "Derechos de Autor";
 
 /* IPTC meta data */
-"Contact info" = "Contact info";
-"Usage terms" = "Usage terms";
-"Scene" = "Scene";
+"Contact info" = "Datos de contacto";
+"Usage terms" = "Términos de uso";
+"Scene" = "Escena";
 "Description" = "Descripción";
 
 /* IPTC photometric interpretation */
-"Photometric interpretation" = "Photometric interpretation";
+"Photometric interpretation" = "Interpretación fotométrica";
 "none" = "ninguno";
 "RGB" = "RGB";
 "YCbCr" = "YCbCr";
 
 /* EXIF: gps position data */
-"GPS Location" = "GPS Location";
-"Coordinates" = "Coordinates";
-"Altitude" = "Altitude";
-"Place" = "Place";
+"GPS Location" = "Ubicación GPS";
+"Coordinates" = "Coordenadas";
+"Altitude" = "Altitud";
+"Place" = "Lugar";
 "E" = "E";
 "W" = "W";
 "N" = "N";
 "S" = "S";
 
 /* Pro photo upload settings */
-"Extended upload settings" = "Extended upload settings";
-"Prefer unedited photos" = "Prefer unedited photos";
-"Prefer RAW photos" = "Prefer RAW photos";
-"Prefer original videos" = "Prefer original videos";
+"Extended upload settings" = "Configuración de carga extendida";
+"Prefer unedited photos" = "Prefiero fotos sin editar";
+"Prefer RAW photos" = "Prefiero fotos RAW";
+"Prefer original videos" = "Prefiero videos originales";
 
 /* Limited photo library access */
-"Limited Photo Access" = "Limited Photo Access";
-"Access for the media selected for upload is limited" = "Access for the media selected for upload is limited";
-"No Access to the media selected for upload" = "No Access to the media selected for upload";
+"Limited Photo Access" = "Acceso limitado a fotos";
+"Access for the media selected for upload is limited" = "El acceso a los medios seleccionados para cargar es limitado";
+"No Access to the media selected for upload" = "Sin acceso a los medios seleccionados para cargar";
+
+/* macOS support */
+"Passcode protection is not supported on this device.\nPlease disable passcode lock in the app settings." = "La protección con contraseña no es compatible con este dispositivo. \nDesactive el bloqueo con contraseña en la configuración de la aplicación.";
+
+/* MDM settings push */
+"New settings received from MDM" = "Nueva configuración recibida de MDM";
+"Tap to quit the app." = "Toque para salir de la aplicación.";
+"Tap to launch the app." = "Toque para iniciar la aplicación.";

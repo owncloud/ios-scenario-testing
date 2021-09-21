@@ -72,7 +72,7 @@
 "Logout" = "Выход";
 
 /* Bookmark Info */
-"Bookmark Metadata" = "Bookmark Metadata";
+"Bookmark Metadata" = "Описание закладки";
 
 /* Client */
 "Browse" = "Просмотр";
@@ -99,33 +99,33 @@
 "kind" = "добрый";
 "size" = "размеру";
 "date" = "дате";
-"Search folder" = "Search folder";
-"Search account" = "Search account";
+"Search folder" = "Поиск в папке";
+"Search account" = "Поиск в учётной записи";
 "Pending" = "Ожидается";
 "Show parent paths" = "Показать вышестоящие пути";
-"Reveal in folder" = "Reveal in folder";
+"Reveal in folder" = "Показать в папке";
 
 "%@ of %@ used" = "Использовано %@ из %@";
 "Total: %@" = "Всего: %@";
 "%@ item | " = "%@ элемент | ";
 "%@ items | " = "%@ элементов | ";
 
-"Show more results" = "Show more results";
+"Show more results" = "Показать больше результатов";
 
 /* Search scope */
-"Search scope" = "Search scope";
-"Toggle Search Scope" = "Toggle Search Scope";
+"Search scope" = "Область поиска";
+"Toggle Search Scope" = "Переключить область поиска";
 
 /* Static Login Setup */
 "Server error" = "Ошибка сервера";
 "The server doesn't support any allowed authentication method." = "Сервер не поддерживает ни один из допустимых методов аутентификации.";
 "The server doesn't support any known and allowed authentication method found." = "Сервер не поддерживает ни один из известных и разрешённых методов аутентификации.";
 "Retry detection" = "Обнаружение повторных попыток";
-"Enter your username and password" = "Enter your username and password";
-"Please log in to authorize the app." = "Please log in to authorize the app.";
-"Welcome to %@" = "Welcome to %@";
-"Please enter a server URL" = "Please enter a server URL";
-"Please pick a profile to begin setup" = "Please pick a profile to begin setup";
+"Enter your username and password" = "Введите ваше имя пользователя и пароль";
+"Please log in to authorize the app." = "Пожалуйста, войдите, чтобы авторизовать приложение.";
+"Welcome to %@" = "Добро пожаловать в %@";
+"Please enter a server URL" = "Пожалуйста введите адресную строку сервера";
+"Please pick a profile to begin setup" = "Пожалуйста, выберите профиль, чтобы начать установку";
 
 /* Single Account */
 "You are connected as\n%@" = "Вы подключены, как\n%@";
@@ -168,6 +168,8 @@
 "Continue offline" = "Продолжить без сети";
 "Media upload in the previous session was incomplete since the application was terminated" = "Загрузка данных в прошлом сеансе не была завершена, так как приложение было завершено";
 
+"Waiting for response from login session in external browser…" = "Жду ответа от сеанса, вошедшего во внешнем браузере…";
+
 "All done" = "Всё выполнено";
 "No pending messages or ongoing actions." = "Нет ожидаемых сообщений или продолжающихся действий.";
 
@@ -205,7 +207,6 @@
 "Touch ID" = "Touch ID";
 "Videos" = "Видео";
 "Photos" = "Фото";
-"Background uploads" = "Фоновые загрузки";
 "Wifi only" = "Только через WiFi";
 "Settings" = "Настройки";
 "Lock application" = "Блокировка приложения";
@@ -225,10 +226,14 @@
 "After 1 minute" = "Через 1 минуту";
 "After 5 minutes" = "Через 5 минут";
 "After 30 minutes" = "Через 30 минут";
-"If you choose \"Immediately\" the App will be locked, when it is no longer in foreground." = "If you choose \"Immediately\" the App will be locked, when it is no longer in foreground.";
+"If you choose \"Immediately\" the App will be locked, when it is no longer in foreground." = "Если вы выберете «немедленно», то приложение будет заблокировано, как только перестанет быть на переднем плане.";
 "Please configure an email account" = "Пожалуйста, настройте учётную запись почты";
 "You need to configure an email account first to be able to send emails." = "Чтобы иметь возможность отправлять сообщения, вам нужно сначала настроить учётную запись почты.";
 "Do you want to open the following URL?" = "Вы хотите открыть следующую ссылку?";
+"Passcode option" = "Passcode option";
+"Please choose how many digits you want to use for the passcode lock?" = "Please choose how many digits you want to use for the passcode lock?";
+"%ld digit code" = "%ld digit code";
+"Enter a new code with %ld digits" = "Enter a new code with %ld digits";
 
 "%@%@ %@ version %@ build %@\n(app: %@, sdk: %@)" = "%@%@ %@ версия %@ сборка %@\n(приложение: %@, sdk: %@)";
 "beta" = "бета";
@@ -356,6 +361,9 @@
 "Open in a new Window" = "Открыть в новом окне";
 "Open in Window" = "Открыть в окне";
 "Take photo or video" = "Снять фото или видео";
+"%ld Item was copied to the clipboard" = "%ld Item was copied to the clipboard";
+"%ld Items were copied to the clipboard" = "%ld Items were copied to the clipboard";
+"Please note: Folders can only be pasted into the %@ app and the same account." = "Please note: Folders can only be pasted into the %@ app and the same account.";
 
 "Preparing…" = "Подготовка";
 
@@ -366,10 +374,10 @@
 "Favorited" = "Избранное";
 "Favorite item" = "Добавить элемент в избранное";
 "Unfavorite item" = "Убрать элемент из избранного";
-"Presentation Mode" = "Presentation Mode";
-"Enabling presentation mode will prevent the display from sleep mode until the view is closed." = "Enabling presentation mode will prevent the display from sleep mode until the view is closed.";
+"Presentation Mode" = "Режим презентации";
+"Enabling presentation mode will prevent the display from sleep mode until the view is closed." = "Включение режима презентации не даст экрану уйти в спящий режим, пока просмотр не будет закрыт.";
 "Enable" = "Включить";
-"Exit Full Screen" = "Exit Full Screen";
+"Exit Full Screen" = "Выйти из полноэкранного режима";
 
 /* Directory Picker Messages */
 "Move here" = "Поместить сюда";
@@ -384,11 +392,11 @@
 "Connecting..." = "Соединение…";
 
 "File" = "Файл";
-"%@ was updated" = "%@ was updated";
-"Would you like to view the updated version?" = "Would you like to view the updated version?";
-"Show new version" = "Show new version";
-"Refresh without asking" = "Refresh without asking";
-"Ignore updates" = "Ignore updates";
+"%@ was updated" = "%@ обновлено";
+"Would you like to view the updated version?" = "Хотите посмотреть обновлённую версию?";
+"Show new version" = "Показать новую версию";
+"Refresh without asking" = "Обновлять не спрашивая";
+"Ignore updates" = "Игнорировать обновления";
 
 /* PDF Viewer */
 "Resume" = "Возобновить";
@@ -400,9 +408,9 @@
 "The entered page number doesn't exist" = "Введённый номер страницы не существует";
 "Search PDF" = "Поиск PDF";
 "Outline" = "Оглавление";
-"Find Next" = "Find Next";
-"Find Previous" = "Find Previous";
-"Close Search" = "Close Search";
+"Find Next" = "Найти следующее";
+"Find Previous" = "Найти предыдущее";
+"Close Search" = "Закрыть поиск";
 
 /* Photo Upload */
 "Upload" = "Загрузить";
@@ -529,9 +537,9 @@
 "Private Link" = "Личная ссылка";
 "Created Public Link" = "Созданная публичная ссылка";
 "URL was copied to the clipboard" = "URL была скопирована в буфер обмена";
-"%@ is not available, when this account is offline. Please open the app and log into your account before you can do this action." = "%@ is not available, when this account is offline. Please open the app and log into your account before you can do this action.";
-"%@ is not available for this item." = "%@ is not available for this item.";
-"Share with user/group" = "Share with user/group";
+"%@ is not available, when this account is offline. Please open the app and log into your account before you can do this action." = "%@ не доступно, когда учётная запись отключена. Пожалуйста, откройте приложение и войдите под вашей учётной записью, чтобы выполнить это действие.";
+"%@ is not available for this item." = "%@ не доступно для этого элемента.";
+"Share with user/group" = "Поделиться с пользователем или группой";
 "Share link" = "Поделиться ссылкой";
 
 /* Quick Access view */
@@ -570,12 +578,14 @@
 "Video upload" = "Закачка видео";
 
 /* Background media uploads */
+"Background uploads (Lab Version)" = "Background uploads (Lab Version)";
 "Background uploads" = "Фоновые загрузки";
 "Use background refresh" = "Использовать фоновое обновление";
+"Allow this app to refresh the content when on Wi-Fi or mobile network in background." = "Allow this app to refresh the content when on Wi-Fi or mobile network in background.";
 "Enable background uploads" = "Разрешить фоновые закачки";
 "Use background location updates" = "Использовать фоновое обновление местоположения";
 "Background upload notifications" = "Уведомления о фоновых закачках";
-"if you would like background media uploads to be more reliable, you should enable background location updates." = "Если вы хотите сделать фоновые загрузки мультимедиа более надёжными, вам следует включить фоновое обновление местоположения.";
+"If you would like background media uploads to be more reliable, you should enable background location updates." = "If you would like background media uploads to be more reliable, you should enable background location updates.";
 "Background media uploads rely on location updates and will stop working if location acquisition permissions are revoked." = "Фоновые закачки мультимедиа полагаются на обновления местоположения и перестанут работать, если отобрать разрешение на получение местоположения.";
 "Otherwise background media uploads using background refresh technology would depend on how frequently you use the app." = "Иначе фоновые закачки мультимедиа, использующие технологию обновления, будут зависеть от того, насколько часто вы используете приложение.";
 "Location permission denied" = "Отказано в разрешении определить местоположение.";
@@ -651,19 +661,20 @@
 "Select Last Item on Page" = "Выбрать последний элемент на странице";
 "Scroll to Top" = "Прокрутить в начало";
 "Scroll to Bottom" = "Прокрутить в конец";
-"Copy to Clipboard" = "Копировать в буфер обмена";
-"Import from Clipboard" = "Импорт из буфера обмена";
+"Copy to Clipboard" = "Copy to Clipboard";
+"Import from Clipboard" = "Import from Clipboard";
+"Choose destination directory…" = "Choose destination directory…";
 "Next" = "Следующий";
 "Previous" = "Предыдущий";
 "Favorite" = "В избранное";
 "Cut" = "Вырезать";
-"Play/Pause" = "Play/Pause";
-"Skip Back" = "Skip Back";
-"Skip Ahead" = "Skip Ahead";
-"Go to Beginning" = "Go to Beginning";
-"Mute/Unmute" = "Mute/Unmute";
-"Full Screen" = "Full Screen";
-"Switch Theme Style" = "Switch Theme Style";
+"Play/Pause" = "Проигрывание/Пауза";
+"Skip Back" = "Пропустить назад";
+"Skip Ahead" = "Пропустить вперёд";
+"Go to Beginning" = "Перейти в начало";
+"Mute/Unmute" = "Выключить/включить звук";
+"Full Screen" = "Полный экран";
+"Switch Theme Style" = "Переключить стиль темы";
 
 /* Markup */
 "How should this file be saved?" = "Как следует сохранять этот файл?";
@@ -890,9 +901,9 @@
 "No Access to the media selected for upload" = "Нет доступа к материалам, выбранным для закачки";
 
 /* macOS support */
-"Passcode protection is not supported on this device.\nPlease disable passcode lock in the app settings." = "Passcode protection is not supported on this device.\nPlease disable passcode lock in the app settings.";
+"Passcode protection is not supported on this device.\nPlease disable passcode lock in the app settings." = "Блокировка кодом доступа не поддерживается на этом устройстве.\nПожалуйста, отключите блокировку кодом доступа в настройках приложения.";
 
 /* MDM settings push */
-"New settings received from MDM" = "New settings received from MDM";
-"Tap to quit the app." = "Tap to quit the app.";
-"Tap to launch the app." = "Tap to launch the app.";
+"New settings received from MDM" = "Через MDM получены новые настройки";
+"Tap to quit the app." = "Нажмите, чтобы выйти из приложения.";
+"Tap to launch the app." = "Нажмите, чтобы запустить приложение.";

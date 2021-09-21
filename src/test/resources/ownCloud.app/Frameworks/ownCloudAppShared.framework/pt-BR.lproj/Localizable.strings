@@ -168,6 +168,8 @@
 "Continue offline" = "Continuar offline";
 "Media upload in the previous session was incomplete since the application was terminated" = "O envio de mídia na sessão anterior estava incompleto desde que o aplicativo foi encerrado";
 
+"Waiting for response from login session in external browser…" = "Aguardando resposta da sessão de conexão no navegador externo...";
+
 "All done" = "Tudo feito";
 "No pending messages or ongoing actions." = "Sem mensagens pendentes ou ações em andamento.";
 
@@ -205,7 +207,6 @@
 "Touch ID" = "ID de toque";
 "Videos" = "Videos";
 "Photos" = "Imagens";
-"Background uploads" = "Atualização em segundo plano";
 "Wifi only" = "Somente wifi";
 "Settings" = "Configurações";
 "Lock application" = "Bloquear aplicação";
@@ -229,6 +230,10 @@
 "Please configure an email account" = "Por favor, configure uma conta de email";
 "You need to configure an email account first to be able to send emails." = "Você precisa configurar uma conta de e-mail primeiro para poder enviar e-mails.";
 "Do you want to open the following URL?" = "Você deseja abrir o seguinte endereço URL?";
+"Passcode option" = "Passcode option";
+"Please choose how many digits you want to use for the passcode lock?" = "Please choose how many digits you want to use for the passcode lock?";
+"%ld digit code" = "%ld digit code";
+"Enter a new code with %ld digits" = "Enter a new code with %ld digits";
 
 "%@%@ %@ version %@ build %@\n(app: %@, sdk: %@)" = "%@%@ %@ versão%@ construir %@\n(app: %@, sdk: %@)";
 "beta" = "beta";
@@ -356,6 +361,9 @@
 "Open in a new Window" = "Abrir em uma nova Janela";
 "Open in Window" = "Abrir na Janela";
 "Take photo or video" = "Tirar foto ou vídeo";
+"%ld Item was copied to the clipboard" = "%ld Item was copied to the clipboard";
+"%ld Items were copied to the clipboard" = "%ld Items were copied to the clipboard";
+"Please note: Folders can only be pasted into the %@ app and the same account." = "Please note: Folders can only be pasted into the %@ app and the same account.";
 
 "Preparing…" = "Preparando…";
 
@@ -570,12 +578,14 @@
 "Video upload" = "Envio de vídeo";
 
 /* Background media uploads */
+"Background uploads (Lab Version)" = "Background uploads (Lab Version)";
 "Background uploads" = "Atualização em segundo plano";
 "Use background refresh" = "Usar atualização de fundo";
+"Allow this app to refresh the content when on Wi-Fi or mobile network in background." = "Allow this app to refresh the content when on Wi-Fi or mobile network in background.";
 "Enable background uploads" = "Ativar envios em segundo plano";
 "Use background location updates" = "Use atualizações de localização em segundo plano";
 "Background upload notifications" = "Notificações de upload em segundo plano";
-"if you would like background media uploads to be more reliable, you should enable background location updates." = "se desejar que os uploads de mídia em segundo plano sejam mais confiáveis, habilite as atualizações de localização em segundo plano.";
+"If you would like background media uploads to be more reliable, you should enable background location updates." = "If you would like background media uploads to be more reliable, you should enable background location updates.";
 "Background media uploads rely on location updates and will stop working if location acquisition permissions are revoked." = "Os envios de mídia em segundo plano dependem de atualizações de localização e deixarão de funcionar se as permissões de aquisição de localização forem revogadas.";
 "Otherwise background media uploads using background refresh technology would depend on how frequently you use the app." = "Caso contrário, os envios de mídia em segundo plano usando a tecnologia de atualização em segundo plano dependeriam da frequência com que você usa o aplicativo.";
 "Location permission denied" = "Permissão de localização negada";
@@ -651,8 +661,9 @@
 "Select Last Item on Page" = "Selecione Último item na Página";
 "Scroll to Top" = "Rolar para o Topo";
 "Scroll to Bottom" = "Rolar para Baixo";
-"Copy to Clipboard" = "Copiar para o Segundo Plano";
-"Import from Clipboard" = "Importar do Segundo Plano";
+"Copy to Clipboard" = "Copy to Clipboard";
+"Import from Clipboard" = "Import from Clipboard";
+"Choose destination directory…" = "Choose destination directory…";
 "Next" = "Próxima";
 "Previous" = "Anterior";
 "Favorite" = "Favorito";

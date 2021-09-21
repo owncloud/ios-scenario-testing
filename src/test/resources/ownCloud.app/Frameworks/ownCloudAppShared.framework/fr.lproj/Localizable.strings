@@ -168,6 +168,8 @@
 "Continue offline" = "Continuer hors ligne";
 "Media upload in the previous session was incomplete since the application was terminated" = "Le téléchargement des médias lors de la session précédente était incomplet car l'application est terminée";
 
+"Waiting for response from login session in external browser…" = "Waiting for response from login session in external browser…";
+
 "All done" = "C'est fini";
 "No pending messages or ongoing actions." = "Aucun message en attente ou action en cours.";
 
@@ -205,7 +207,6 @@
 "Touch ID" = "Touch ID";
 "Videos" = "Vidéos";
 "Photos" = "Photos";
-"Background uploads" = "Téléchargements en arrière-plan";
 "Wifi only" = "Wifi uniquement";
 "Settings" = "Paramètres";
 "Lock application" = "Verrouiller l'application";
@@ -229,6 +230,10 @@
 "Please configure an email account" = "Veuillez configurer un compte de messagerie";
 "You need to configure an email account first to be able to send emails." = "Vous devez d'abord configurer un compte de messagerie pour pouvoir envoyer des e-mails.";
 "Do you want to open the following URL?" = "Voulez-vous ouvrir l'URL suivante?";
+"Passcode option" = "Passcode option";
+"Please choose how many digits you want to use for the passcode lock?" = "Please choose how many digits you want to use for the passcode lock?";
+"%ld digit code" = "%ld digit code";
+"Enter a new code with %ld digits" = "Enter a new code with %ld digits";
 
 "%@%@ %@ version %@ build %@\n(app: %@, sdk: %@)" = "%@%@%@version%@build%@\n(app: %@, sdk: %@)";
 "beta" = "bêta";
@@ -356,6 +361,9 @@
 "Open in a new Window" = "Ouvrir dans une nouvelle fenêtre";
 "Open in Window" = "Ouvrir dans la fenêtre";
 "Take photo or video" = "Prendre une photo ou une vidéo";
+"%ld Item was copied to the clipboard" = "%ld Item was copied to the clipboard";
+"%ld Items were copied to the clipboard" = "%ld Items were copied to the clipboard";
+"Please note: Folders can only be pasted into the %@ app and the same account." = "Please note: Folders can only be pasted into the %@ app and the same account.";
 
 "Preparing…" = "En cours de préparation";
 
@@ -570,12 +578,14 @@
 "Video upload" = "Téléchargement vidéo";
 
 /* Background media uploads */
+"Background uploads (Lab Version)" = "Background uploads (Lab Version)";
 "Background uploads" = "Téléchargements en arrière-plan";
 "Use background refresh" = "Utiliser l'actualisation de l'arrière-plan";
+"Allow this app to refresh the content when on Wi-Fi or mobile network in background." = "Allow this app to refresh the content when on Wi-Fi or mobile network in background.";
 "Enable background uploads" = "Activer les téléchargements en arrière-plan";
 "Use background location updates" = "Utiliser les mises à jour de l'emplacement en arrière-plan";
 "Background upload notifications" = "Notifications de téléchargement en arrière-plan";
-"if you would like background media uploads to be more reliable, you should enable background location updates." = "Si vous souhaitez que les téléchargements de médias en arrière-plan soient plus fiables, vous devez activer les mises à jour de l'emplacement en arrière-plan.";
+"If you would like background media uploads to be more reliable, you should enable background location updates." = "If you would like background media uploads to be more reliable, you should enable background location updates.";
 "Background media uploads rely on location updates and will stop working if location acquisition permissions are revoked." = "Les téléchargements de médias en arrière-plan reposent sur les mises à jour de l'emplacement et cesseront de fonctionner si les autorisations d'acquisition de l'emplacement sont révoquées.";
 "Otherwise background media uploads using background refresh technology would depend on how frequently you use the app." = "Sinon, les téléchargements de médias en arrière-plan à l'aide de la technologie d'actualisation en arrière-plan dépendront de la fréquence à laquelle vous utilisez l'application.";
 "Location permission denied" = "Autorisation de localisation refusée";
@@ -651,8 +661,9 @@
 "Select Last Item on Page" = "Sélectionnez le dernier élément sur la page";
 "Scroll to Top" = "Faire défiler vers le haut";
 "Scroll to Bottom" = "Faire défiler vers le bas";
-"Copy to Clipboard" = "Copier dans le Pasteboard";
-"Import from Clipboard" = "Importer depuis le Pasteboard";
+"Copy to Clipboard" = "Copy to Clipboard";
+"Import from Clipboard" = "Import from Clipboard";
+"Choose destination directory…" = "Choose destination directory…";
 "Next" = "Suivant";
 "Previous" = "Précédent";
 "Favorite" = "Ajouter aux favoris";

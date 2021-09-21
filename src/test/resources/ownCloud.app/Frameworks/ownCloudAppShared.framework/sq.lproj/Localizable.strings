@@ -72,7 +72,7 @@
 "Logout" = "Dalje";
 
 /* Bookmark Info */
-"Bookmark Metadata" = "Bookmark Metadata";
+"Bookmark Metadata" = "Tejtëdhëna Faqerojtësi";
 
 /* Client */
 "Browse" = "Shfletoni";
@@ -114,7 +114,7 @@
 
 /* Search scope */
 "Search scope" = "Shtrirje kërkimi";
-"Toggle Search Scope" = "Toggle Search Scope";
+"Toggle Search Scope" = "Aktivizoni/Çaktivizoni Shtrirje Kërkimi";
 
 /* Static Login Setup */
 "Server error" = "Gabim shërbyesi";
@@ -168,6 +168,8 @@
 "Continue offline" = "Vazhdo pa qenë në linjë";
 "Media upload in the previous session was incomplete since the application was terminated" = "Ngarkimi media në sesionin e mëparshëm qe i paplotë, ngaqë aplikacioni u mbyll";
 
+"Waiting for response from login session in external browser…" = "Po pritet për përgjigje prej sesioni hyrjeje në shfletues të jashtëm…";
+
 "All done" = "U bë";
 "No pending messages or ongoing actions." = "S’ka mesazhe pezull apo veprime në kryerje e sipër.";
 
@@ -205,7 +207,6 @@
 "Touch ID" = "Touch ID";
 "Videos" = "Video";
 "Photos" = "Foto";
-"Background uploads" = "Ngarkime në prapaskenë";
 "Wifi only" = "Vetëm wifi";
 "Settings" = "Rregullime";
 "Lock application" = "Kyçe aplikacionin";
@@ -229,6 +230,10 @@
 "Please configure an email account" = "Ju lutemi, formësoni një llogari email";
 "You need to configure an email account first to be able to send emails." = "Së pari lypset të formësoni një llogari email, që të jeni në gjendje të dërgoni email-e.";
 "Do you want to open the following URL?" = "Doni të hapet URL-ja vijuese?";
+"Passcode option" = "Mundësi kodkalimi";
+"Please choose how many digits you want to use for the passcode lock?" = "Ju lutemi, zgjidhni sa shifra doni të përdoren për kyçje me kodkalim?";
+"%ld digit code" = "Kod me %ld shifra";
+"Enter a new code with %ld digits" = "Jepni një kod të ri me %ld shifra";
 
 "%@%@ %@ version %@ build %@\n(app: %@, sdk: %@)" = "%@%@ %@ version %@ montimi %@\n(aplikacion: %@, sdk: %@)";
 "beta" = "beta";
@@ -356,6 +361,9 @@
 "Open in a new Window" = "Hape në Dritare të re";
 "Open in Window" = "Hape në Dritare";
 "Take photo or video" = "Bëni foto ose video";
+"%ld Item was copied to the clipboard" = "Në të papastër u kopjua %ld objekt";
+"%ld Items were copied to the clipboard" = "%ld Objekte u kopjuan në të papastër";
+"Please note: Folders can only be pasted into the %@ app and the same account." = "Ju lutemi, mbani parasysh: Dosjet mund të ngjiten vetëm te aplikacioni %@ dhe e njëjta llogari.";
 
 "Preparing…" = "Po përgatitet…";
 
@@ -570,12 +578,14 @@
 "Video upload" = "Ngarkim videosh";
 
 /* Background media uploads */
+"Background uploads (Lab Version)" = "Ngarkime në sfond (Lab Version)";
 "Background uploads" = "Ngarkime në prapaskenë";
 "Use background refresh" = "Përdor rifreskim në prapaskenë";
+"Allow this app to refresh the content when on Wi-Fi or mobile network in background." = "Lejojeni këtë aplikacion të rifreskojë në prapaskenë lëndën, kur gjendet në rrjet Wi-Fi ose celular.";
 "Enable background uploads" = "Aktivizo ngarkime në prapaskenë";
 "Use background location updates" = "Përdor përditësime në prapaskenë të vendndodhjes";
 "Background upload notifications" = "Njoftime ngarkimesh në prapaskenë";
-"if you would like background media uploads to be more reliable, you should enable background location updates." = "Nëse do të donit që ngarkimet në prapaskenë të mediave të jenë më të qëndrueshme, duhet të aktivizoni përditësime vendndodhjeje në prapaskenë.";
+"If you would like background media uploads to be more reliable, you should enable background location updates." = "Nëse do të donit që ngarkimet në prapaskenë të mediave të jenë më të qëndrueshme, duhet të aktivizoni përditësime vendndodhjeje në prapaskenë.";
 "Background media uploads rely on location updates and will stop working if location acquisition permissions are revoked." = "Ngarkimet në prapaskenë të mediave bazohen në përditësime vendndodhjeje dhe do të reshtin së funksionuari, nëse hiqet leja për marrje vendndodhjeje.";
 "Otherwise background media uploads using background refresh technology would depend on how frequently you use the app." = "Përndryshe, ngarkimet në prapaskenë të mediave duke përdorur teknologji rifreskimi do të vareshin nga fakti se sa shpesh e përdorni aplikacionin.";
 "Location permission denied" = "Leje e mohuar për vendndodhje";
@@ -652,7 +662,8 @@
 "Scroll to Top" = "Rrëshqitni drejt Kreut";
 "Scroll to Bottom" = "Rrëshqitni drejt Fundit";
 "Copy to Clipboard" = "Kopjoje në të Papastër";
-"Import from Clipboard" = "Importo prej të Papastre";
+"Import from Clipboard" = "Importoje prej të Papastre";
+"Choose destination directory…" = "Zgjidhni drejtori vendmbërritje…";
 "Next" = "Pasuesja";
 "Previous" = "E mëparshmja";
 "Favorite" = "Vëre Si të Parapëlqyer";
