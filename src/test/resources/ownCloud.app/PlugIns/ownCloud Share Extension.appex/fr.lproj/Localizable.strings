@@ -69,7 +69,7 @@
 "Edit Login" = "Modifier la connexion";
 "Manage Storage" = "Gérer le stockage";
 "Access Files" = "Accéder aux fichiers";
-"Logout" = "Se déconnecter";
+"Log out" = "Se déconnecter";
 
 /* Bookmark Info */
 "Bookmark Metadata" = "Bookmark Metadata";
@@ -187,7 +187,7 @@
 "Do you really want to disconnect from your '%@' account?" = "Voulez-vous vraiment vous déconnecter de votre '%@' compte ''?";
 "This will remove all locally stored file copies from your device." = "Cela supprimera toutes les copies de fichiers stockées localement de votre appareil.";
 "Really delete '%@'?" = "Voulez -vous vraiment supprimer '%@'?";
-"Really logout from '%@'?" = "Voulez-vous vraiment vous déconnecter de '%@'?";
+"Do you want to log out from '%@'?" = "Voulez-vous vraiment vous déconnecter de '%@'?";
 "This will also delete all locally stored file copies." = "Cela supprimera également toutes les copies de fichiers stockées localement.";
 "Delete" = "Supprimer";
 "Remove" = "Supprimer";
@@ -298,9 +298,9 @@
 "Decrease Slider Value" = "Diminuer la valeur du curseur";
 "Increase Slider Value" = "Augmenter la valeur du curseur";
 
-"Cellular transfers" = "Transferts cellulaires";
+"Cellular Data Usage" = "Transferts cellulaires";
 "Some cellular data may still be used. To completely avoid the usage of cellular data, please turn off access to cellular for the entire app in the Settings app." = "Certaines données cellulaires peuvent encore être utilisées. Pour éviter complètement l'utilisation des données cellulaires, veuillez désactiver l'accès au cellulaire pour toute l'application dans les paramètres de l'app.";
-"Cellular transfers have been disabled via MDM configuration. Please contact your administrator for more information." = "Les transferts cellulaires ont été désactivés via la configuration MDM. Veuillez contacter votre administrateur pour plus d'informations.";
+"Cellular Data Usage have been disabled via MDM configuration. Please contact your administrator for more information." = "Les transferts cellulaires ont été désactivés via la configuration MDM. Veuillez contacter votre administrateur pour plus d'informations.";
 "General" = "Paramètres";
 "By feature" = "Par fonctionnalité";
 
@@ -311,7 +311,7 @@
 "Advanced settings" = "Paramètres avancés";
 "Show hidden files and folders" = "Afficher les fichiers et dossiers cachés";
 "Show folders on top" = "Afficher les dossiers en haut";
-"Prevent gestures" = "Empêcher les gestes";
+"Disable gestures" = "Empêcher les gestes";
 "Prevent dragging of files and folders and multiselection using system defined gestures" = "Empêcher le glissement de fichiers et de dossiers et la sélection multiple à l'aide de gestes définis par le système";
 
 /* Advanced settings */
@@ -607,7 +607,7 @@
 "Offline files use" = "Utilisation des fichiers hors ligne";
 "Compacting of '%@' failed" = "Le compactage de '%@' a échoué";
 "Include available offline files" = "Inclure les fichiers hors connexion disponibles";
-"Delete Local Copies" = "Supprimer les copies locales";
+"Delete all Offline Files" = "Supprimer les copies locales";
 "Manage" = "Gérer";
 "Storage" = "Stockage";
 "Compacting" = "compactage";

@@ -1,14 +1,14 @@
 package ios;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.support.PageFactory;
 
 import java.util.List;
 import java.util.logging.Level;
 
 import io.appium.java_client.MobileElement;
-import io.appium.java_client.pagefactory.iOSXCUITFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
+import io.appium.java_client.pagefactory.iOSXCUITFindBy;
+import io.appium.java_client.remote.HideKeyboardStrategy;
 import utils.log.Log;
 
 public class LoginPage extends CommonPage{
@@ -34,10 +34,10 @@ public class LoginPage extends CommonPage{
     @iOSXCUITFindBy(accessibility = "row-credentials-password")
     private MobileElement passwordInput;
 
-    @iOSXCUITFindBy(accessibility = "server-bookmark-cell")
+    @iOSXCUITFindBy(accessibility = "access-files")
     private List<MobileElement> bookmarkCells;
 
-    @iOSXCUITFindBy(accessibility = "server-bookmark-cell")
+    @iOSXCUITFindBy(accessibility = "access-files")
     private MobileElement bookmarkCell;
 
     //Only for login tests, from env variables. Needed some instances running to check
@@ -99,7 +99,6 @@ public class LoginPage extends CommonPage{
     public void typeCredentials(String username, String password){
         Log.log(Level.FINE, "Starts: Type credentials: username: "
                 + username + " - password: " + password);
-        waitById(15, usernameInput);
         usernameInput.sendKeys(username);
         passwordInput.sendKeys(password);
     }
@@ -110,19 +109,21 @@ public class LoginPage extends CommonPage{
     }
 
     public boolean isCredentialsError(){
-        return driver.findElements(By.id("server-bookmark-cell")).size() == 0;
+        return bookmarkCells.size() == 0;
     }
 
     public boolean isBookmarkCreated(){
-        return driver.findElements(By.id("server-bookmark-cell")).size() > 0;
+        return bookmarkCells.size() > 0;
     }
 
     public void selectBookmarkIndex(int index) {
-        MobileElement firstServer =  (MobileElement) driver.findElements(By.id("server-bookmark-cell")).get(index);
+        MobileElement firstServer = bookmarkCells.get(index);
         firstServer.click();
     }
 
     public void selectFirstBookmark() {
+        driver.hideKeyboard(HideKeyboardStrategy.PRESS_KEY, "Done");
+        waitById(5, bookmarkCell);
         bookmarkCell.click();
     }
 

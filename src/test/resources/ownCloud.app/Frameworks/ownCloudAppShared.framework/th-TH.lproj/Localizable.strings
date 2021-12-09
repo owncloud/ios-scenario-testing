@@ -69,7 +69,7 @@
 "Edit Login" = "แก้ไขการเข้าสู่ระบบ";
 "Manage Storage" = "จัดการพื้นที่เก็บข้อมูล";
 "Access Files" = "เข้าถึงไฟล์";
-"Logout" = "ออกจากระบบ";
+"Log out" = "ออกจากระบบ";
 
 /* Bookmark Info */
 "Bookmark Metadata" = "ข้อมูลเมตาของบุ๊กมาร์ก";
@@ -187,7 +187,7 @@
 "Do you really want to disconnect from your '%@' account?" = "คุณต้องการยกเลิกการเชื่อมต่อจากบัญชี %@?";
 "This will remove all locally stored file copies from your device." = "การดำเนินการนี้จะลบไฟล์สำเนาที่เก็บไว้ในเครื่องทั้งหมดออกจากอุปกรณ์ของคุณ";
 "Really delete '%@'?" = "ต้องการลบ '%@'?";
-"Really logout from '%@'?" = "ต้องการออกจากระบบ '%@' ?";
+"Do you want to log out from '%@'?" = "ต้องการออกจากระบบ '%@' ?";
 "This will also delete all locally stored file copies." = "นอกจากนี้จะลบไฟล์สำเนาที่เก็บไว้ในเครื่องทั้งหมด";
 "Delete" = "ลบ";
 "Remove" = "ลบออก";
@@ -298,9 +298,9 @@
 "Decrease Slider Value" = "ลดจำนวน Slider";
 "Increase Slider Value" = "เพิ่มจำนวน Slider";
 
-"Cellular transfers" = "ส่งข้อมูลผ่านเน็ตมือถือ";
+"Cellular Data Usage" = "ส่งข้อมูลผ่านเน็ตมือถือ";
 "Some cellular data may still be used. To completely avoid the usage of cellular data, please turn off access to cellular for the entire app in the Settings app." = "เพื่อหลีกเลี่ยงค่าบริการเพิ่มเติมท่านสามารถปิดการใช้งานเน็ตมือถือผ่านหน้าตั้งค่า";
-"Cellular transfers have been disabled via MDM configuration. Please contact your administrator for more information." = "การโอนย้ายข้อมูลผ่านเน็ตมือถือถูกปิดใช้งาน จากการกำหนดค่า MDM โปรดติดต่อผู้ดูแลระบบของคุณสำหรับข้อมูลเพิ่มเติม";
+"Cellular Data Usage have been disabled via MDM configuration. Please contact your administrator for more information." = "การโอนย้ายข้อมูลผ่านเน็ตมือถือถูกปิดใช้งาน จากการกำหนดค่า MDM โปรดติดต่อผู้ดูแลระบบของคุณสำหรับข้อมูลเพิ่มเติม";
 "General" = "ทั่วไป";
 "By feature" = "ตามคุณลักษณะ";
 
@@ -311,7 +311,7 @@
 "Advanced settings" = "ตั้งค่าขั้นสูง";
 "Show hidden files and folders" = "แสดงไฟล์และโฟลเดอร์ที่ซ่อน";
 "Show folders on top" = "แสดงโฟลเดอร์ด้านบน";
-"Prevent gestures" = "ป้องกันท่าทาง";
+"Disable gestures" = "ป้องกันท่าทาง";
 "Prevent dragging of files and folders and multiselection using system defined gestures" = "ป้องกันการลากไฟล์และโฟลเดอร์และการเลือกหลายรายการโดยใช้ท่าทางที่ระบบกำหนด";
 
 /* Advanced settings */
@@ -607,7 +607,7 @@
 "Offline files use" = "ใช้ไฟล์ออฟไลน์";
 "Compacting of '%@' failed" = "กำลังย่อข้อมูลพบความล้มเหลว '%@'";
 "Include available offline files" = "รวมถึงไฟล์ออฟไลน์ที่มีอยู่";
-"Delete Local Copies" = "ลบสำเนาในเครื่อง";
+"Delete all Offline Files" = "ลบสำเนาในเครื่อง";
 "Manage" = "การจัดการ";
 "Storage" = "พื้นที่จัดเก็บข้อมูล";
 "Compacting" = "กำลังย่อ";

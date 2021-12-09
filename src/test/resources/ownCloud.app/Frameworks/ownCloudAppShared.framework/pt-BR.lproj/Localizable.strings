@@ -69,7 +69,7 @@
 "Edit Login" = "Editar Login";
 "Manage Storage" = "Gerenciar Armazenamento ";
 "Access Files" = "Arquivos de Acesso";
-"Logout" = "Sair";
+"Log out" = "Sair";
 
 /* Bookmark Info */
 "Bookmark Metadata" = "Metadados de Favoritos ";
@@ -187,7 +187,7 @@
 "Do you really want to disconnect from your '%@' account?" = "Você realmente quer conectar '%@' da sua conta?";
 "This will remove all locally stored file copies from your device." = "Isso removerá todas as cópias de arquivos armazenados localmente do seu dispositivo.";
 "Really delete '%@'?" = "Realmente excluir '%@'?";
-"Really logout from '%@'?" = "Deseja realmente sair de '%@'?";
+"Do you want to log out from '%@'?" = "Deseja realmente sair de '%@'?";
 "This will also delete all locally stored file copies." = "Isto também irá excluir todas as cópias locais dos arquivo salvos.";
 "Delete" = "Excluir";
 "Remove" = "Remover";
@@ -298,9 +298,9 @@
 "Decrease Slider Value" = "Decrescer o Valor de Recuo";
 "Increase Slider Value" = "Acrescer o Valor de Avanço";
 
-"Cellular transfers" = "Transferências de Celular";
+"Cellular Data Usage" = "Transferências de Celular";
 "Some cellular data may still be used. To completely avoid the usage of cellular data, please turn off access to cellular for the entire app in the Settings app." = "Alguns dados do celular ainda podem ser usados. Para evitar completamente o uso de dados do celular, desligue o acesso ao celular para todo o aplicativo nas configurações do aplicativo.";
-"Cellular transfers have been disabled via MDM configuration. Please contact your administrator for more information." = "As transferências de celular foram desativadas por meio da configuração do MDM. Entre em contato com seu administrador para obter mais informações.";
+"Cellular Data Usage have been disabled via MDM configuration. Please contact your administrator for more information." = "As transferências de celular foram desativadas por meio da configuração do MDM. Entre em contato com seu administrador para obter mais informações.";
 "General" = "Geral";
 "By feature" = "Por recurso";
 
@@ -311,7 +311,7 @@
 "Advanced settings" = "Configurações avançadas";
 "Show hidden files and folders" = "Mostrar arquivos e pastas escondidos";
 "Show folders on top" = "Mostrar pastas no topo ";
-"Prevent gestures" = "Impedir gestos";
+"Disable gestures" = "Impedir gestos";
 "Prevent dragging of files and folders and multiselection using system defined gestures" = "Impedir o arrastamento de arquivos e pastas e a seleção múltipla usando gestos definidos pelo sistema";
 
 /* Advanced settings */
@@ -607,7 +607,7 @@
 "Offline files use" = "Uso de arquivos off-line";
 "Compacting of '%@' failed" = "Compactação de '%@' falhou";
 "Include available offline files" = "Incluir arquivos disponíveis offline";
-"Delete Local Copies" = "Excluir Cópias Locais";
+"Delete all Offline Files" = "Excluir Cópias Locais";
 "Manage" = "Gerenciar";
 "Storage" = "Armazenamento";
 "Compacting" = "Compactando";

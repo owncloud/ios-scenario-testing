@@ -61,7 +61,7 @@ public class FileListPage extends CommonPage {
     private final String xpath_copyclipboard = "//XCUIElementTypeButton[@name=\"Copy to Clipboard\"]";
 
     //Actions in contextual menu menu
-    private final String id_delete = "Delete, Delete";
+    private final String id_delete = "Delete";
     private final String id_rename = "Rename";
     private final String id_move = "Move";
     private final String id_copy = "Copy";

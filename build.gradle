@@ -1,15 +1,12 @@
-defaultTasks 'clean','test','aggregate'
+defaultTasks 'clean','test'
 
 project.ext {
-    cucumberVersion = '5.5.0'
+    cucumberVersion = '7.0.0'
     apacheCommonsExecVersion = '1.3'
     apacheCommonsLangVersion = '3.9'
     apacheCommonsTextVersion = '1.9'
     apacheCommonsCodec = '1.10'
     apacheCommonsIo = '2.6'
-    serenityCoreVersion = '2.2.0'
-    serenityCucumberVersion = '2.2.0'
-    serenityJunitVersion = '2.2.0'
     byteBuddyVersion = '1.10.5'
     guavaVersion = '30.1-jre'
     javaClientVersion = '7.5.0'
@@ -26,13 +23,9 @@ buildscript {
         jcenter()
         mavenLocal()
     }
-    dependencies {
-        classpath("net.serenity-bdd:serenity-gradle-plugin:2.2.13")
-    }
 }
 
 apply plugin: 'java'
-apply plugin: 'net.serenity-bdd.aggregator'
 
 dependencies {
     testImplementation 'io.cucumber:cucumber-java:' + cucumberVersion
@@ -40,9 +33,6 @@ dependencies {
     testImplementation 'org.apache.commons:commons-exec:' + apacheCommonsExecVersion
     testImplementation 'org.apache.commons:commons-lang3:' + apacheCommonsLangVersion
     testImplementation 'io.cucumber:cucumber-core:' + cucumberVersion
-    testImplementation 'net.serenity-bdd:serenity-core:' + serenityCoreVersion
-    testImplementation 'net.serenity-bdd:serenity-cucumber5:' + serenityCucumberVersion
-    testImplementation 'net.serenity-bdd:serenity-junit:' + serenityJunitVersion
 
     implementation 'net.bytebuddy:byte-buddy:' + byteBuddyVersion
     implementation 'com.google.guava:guava:' + guavaVersion
@@ -53,7 +43,6 @@ dependencies {
     implementation 'org.apache.commons:commons-text:' + apacheCommonsTextVersion
     implementation 'commons-codec:commons-codec:' + apacheCommonsCodec
     implementation 'commons-io:commons-io:' + apacheCommonsIo
-    implementation group: 'io.cucumber', name: 'datatable', version: '4.0.0'
 
     // Other dependencies
     testImplementation "org.slf4j:slf4j-api:" + slf4japiVersion,
@@ -67,7 +56,7 @@ repositories {
 
 test {
     testLogging.showStandardStreams = true
-    systemProperty "cucumber.options", System.getProperty("cucumber.options")
+    systemProperty "cucumber.filter.tags", System.getProperty("cucumber.filter.tags")
     systemProperty "appium", System.getProperty("appium")
     systemProperty "device", System.getProperty("device")
     systemProperty "server", System.getProperty("server")
@@ -83,4 +72,3 @@ test {
 }
 
 gradle.startParameter.continueOnFailure = true
-test.finalizedBy(aggregate)

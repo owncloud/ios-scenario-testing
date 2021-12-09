@@ -1,20 +1,18 @@
 package io.cucumber;
 
-import ios.AppiumManager;
-
-import net.serenitybdd.cucumber.CucumberWithSerenity;
-
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.runner.RunWith;
 
 import java.util.logging.Level;
 
+import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
+import ios.AppiumManager;
 import utils.log.Log;
 
-@RunWith(CucumberWithSerenity.class)
-@CucumberOptions(plugin = {"pretty"}, tags = {"not @login"})
+@RunWith(Cucumber.class)
+@CucumberOptions(plugin = {"pretty"})
 
 public class RunCucumberTest {
 

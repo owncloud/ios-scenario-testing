@@ -23,6 +23,7 @@ Feature: Public Links
       |  folder   |  Links1        |  link1   |
       |  file     |  Links2.txt    |  link2   |
 
+
   Scenario Outline: Create a public link with password
     Given the following items have been created in the account
       | <type>  | <item>  |
@@ -45,7 +46,7 @@ Feature: Public Links
       | <type>  | <item>  |
     When Alice selects to share by link the <type> <item> using the Actions menu
     And Alice creates link on <type> <item> with the following fields
-      | name            | <name>  |
+      | name            | <name>        |
       | expiration days | <expiration>  |
     Then link should be created on <item> with the following fields
       | name            | <name>        |
@@ -109,7 +110,7 @@ Feature: Public Links
     Given the following items have been created in the account
       | <type>  | <item>  |
     And Alice has shared the <type> <item> by link
-    When user selects to edit link the <type> <item> using the Actions menu
+    When Alice selects to edit link the <type> <item> using the Actions menu
     And Alice deletes the link on <item>
     Then link on <item> should not exist anymore
 

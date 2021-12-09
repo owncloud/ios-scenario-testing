@@ -2441,8 +2441,6 @@
 							<string>Confirmation</string>
 						</dict>
 					</array>
-					<key>INIntentParameterSupportsDynamicEnumeration</key>
-					<true/>
 					<key>INIntentParameterSupportsResolution</key>
 					<true/>
 					<key>INIntentParameterTag</key>

@@ -69,7 +69,7 @@
 "Edit Login" = "Править логин";
 "Manage Storage" = "Управлять хранилищем";
 "Access Files" = "Доступ к файлам";
-"Logout" = "Выход";
+"Log out" = "Выход";
 
 /* Bookmark Info */
 "Bookmark Metadata" = "Описание закладки";
@@ -187,7 +187,7 @@
 "Do you really want to disconnect from your '%@' account?" = "Вы действительно хотите отключиться от вашей учётной записи '%@'?";
 "This will remove all locally stored file copies from your device." = "Это удалит все локально сохранённые копии файлов с вашего устройства.";
 "Really delete '%@'?" = "Действительно удалить '%@'?";
-"Really logout from '%@'?" = "Действительно выйти из '%@'?";
+"Do you want to log out from '%@'?" = "Действительно выйти из '%@'?";
 "This will also delete all locally stored file copies." = "Это так же удалит все локально сохранённые копии файла.";
 "Delete" = "Удалить";
 "Remove" = "Удалить";
@@ -298,9 +298,9 @@
 "Decrease Slider Value" = "Увеличить значение слайдера";
 "Increase Slider Value" = "Уменьшить значение слайдера";
 
-"Cellular transfers" = "Пересылки по сотовой сети";
+"Cellular Data Usage" = "Пересылки по сотовой сети";
 "Some cellular data may still be used. To completely avoid the usage of cellular data, please turn off access to cellular for the entire app in the Settings app." = "Будет использовано некоторое количество сотового трафика. Чтобы полностью избежать его использования, пожалуйста отключите доступ к сотовой сети для всего приложения в приложении Настроек.";
-"Cellular transfers have been disabled via MDM configuration. Please contact your administrator for more information." = "Передача данных по сотовой сети была отключена в настройках MDM. Чтобы узнать подробности, пожалуйста свяжитесь с вашим администратором.";
+"Cellular Data Usage have been disabled via MDM configuration. Please contact your administrator for more information." = "Передача данных по сотовой сети была отключена в настройках MDM. Чтобы узнать подробности, пожалуйста свяжитесь с вашим администратором.";
 "General" = "Основные";
 "By feature" = "По возможностям";
 
@@ -311,7 +311,7 @@
 "Advanced settings" = "Расширенные настройки";
 "Show hidden files and folders" = "Показывать скрытые файлы и папки";
 "Show folders on top" = "Показывать папки в начале";
-"Prevent gestures" = "Предотвратить жесты";
+"Disable gestures" = "Предотвратить жесты";
 "Prevent dragging of files and folders and multiselection using system defined gestures" = "Предотвратить перетаскивание файлов и папок, а так же множественный выбор, с помощью заданных в системе жестов";
 
 /* Advanced settings */
@@ -607,7 +607,7 @@
 "Offline files use" = "Использование автономных файлов";
 "Compacting of '%@' failed" = "Сжатие '%@' не удалось";
 "Include available offline files" = "Включить доступные автономные файлы";
-"Delete Local Copies" = "Удалить локальные копии";
+"Delete all Offline Files" = "Удалить локальные копии";
 "Manage" = "Управление";
 "Storage" = "Хранилище";
 "Compacting" = "Сжатие";

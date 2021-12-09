@@ -95,7 +95,7 @@ Feature: Private Share
       | file  | Share13.txt  |
     When Alice selects to share the file Share13.txt using the Actions menu
     And Alice selects user Bob as sharee with default permissions
-    And Bob shares file Share13.txt with Charles with permissions 31
+    And Bob has shared file Share13.txt with Charles with permissions 31
     Then user Bob should have access to Share13.txt
     And user Charles should have access to Share13.txt
     And share should be created on Share13.txt with the following fields
@@ -107,7 +107,7 @@ Feature: Private Share
       | file  | Share14.txt  |
     When Alice selects to share the file Share14.txt using the Actions menu
     And Alice selects user Bob as sharee without share permission
-    And Bob shares file Share14.txt with Charles with permissions 31
+    And Bob has shared file Share14.txt with Charles with permissions 31
     Then user Bob should have access to Share14.txt
     But user Charles should not have access to Share14.txt
 

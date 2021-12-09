@@ -257,9 +257,9 @@
 "Decrease Slider Value" = "减少滑块值";
 "Increase Slider Value" = "增加滑块值";
 
-"Cellular transfers" = "Cellular transfers";
+"Cellular Data Usage" = "Cellular Data Usage";
 "Some cellular data may still be used. To completely avoid the usage of cellular data, please turn off access to cellular for the entire app in the Settings app." = "Some cellular data may still be used. To completely avoid the usage of cellular data, please turn off access to cellular for the entire app in the Settings app.";
-"Cellular transfers have been disabled via MDM configuration. Please contact your administrator for more information." = "Cellular transfers have been disabled via MDM configuration. Please contact your administrator for more information.";
+"Cellular Data Usage have been disabled via MDM configuration. Please contact your administrator for more information." = "Cellular Data Usage have been disabled via MDM configuration. Please contact your administrator for more information.";
 "General" = "常规";
 "By feature" = "By feature";
 
@@ -270,7 +270,7 @@
 "Advanced settings" = "高级选项";
 "Show hidden files and folders" = "显示隐藏的文件和文件夹";
 "Show folders on top" = "Show folders on top";
-"Prevent gestures" = "Prevent gestures";
+"Disable gestures" = "Disable gestures";
 "Prevent dragging of files and folders and multiselection using system defined gestures" = "Prevent dragging of files and folders and multiselection using system defined gestures";
 
 /* Advanced settings */
@@ -541,7 +541,7 @@
 "Offline files use" = "离线文件使用";
 "Compacting of '%@' failed" = "对“%@”的压缩失败";
 "Include available offline files" = "包含可用的离线文件";
-"Delete Local Copies" = "删除本地副本";
+"Delete all Offline Files" = "删除本地副本";
 "Manage" = "管理";
 "Storage" = "存储";
 "Compacting" = "压缩中";

@@ -69,7 +69,7 @@
 "Edit Login" = "تحرير تسجيل الدخول";
 "Manage Storage" = "ادارة المساحة";
 "Access Files" = "ملفات الوصول";
-"Logout" = " تسجيل الخروج";
+"Log out" = " تسجيل الخروج";
 
 /* Bookmark Info */
 "Bookmark Metadata" = "Bookmark Metadata";
@@ -187,7 +187,7 @@
 "Do you really want to disconnect from your '%@' account?" = "هل تريد حقًا تسجيل الخروج من حسابك '%@'؟";
 "This will remove all locally stored file copies from your device." = "هذا سيؤدي إلى إزالة جميع نسخ الملفات المخزنة محليًا من جهازك.";
 "Really delete '%@'?" = "هل تريد بالتأكيد حذف '%@'؟";
-"Really logout from '%@'?" = "حقًا تسجيل الخروج من  '%@'؟";
+"Do you want to log out from '%@'?" = "حقًا تسجيل الخروج من  '%@'؟";
 "This will also delete all locally stored file copies." = "سيحذف هذا جميع نسخ الملف المخزنة محليًا.";
 "Delete" = "حذف";
 "Remove" = "إزالة";
@@ -298,9 +298,9 @@
 "Decrease Slider Value" = "قلل قيمة شريط التمرير";
 "Increase Slider Value" = "زد قيمة شريط التمرير";
 
-"Cellular transfers" = "التحويلات الخلوية";
+"Cellular Data Usage" = "التحويلات الخلوية";
 "Some cellular data may still be used. To completely avoid the usage of cellular data, please turn off access to cellular for the entire app in the Settings app." = "لا يزال من الممكن استخدام بعض البيانات الخلوية. لتجنب استخدام البيانات الخلوية تمامًا ، يرجى إيقاف تشغيل الوصول إلى الهاتف الخلوي للتطبيق بأكمله في تطبيق الإعدادات.";
-"Cellular transfers have been disabled via MDM configuration. Please contact your administrator for more information." = "تم تعطيل عمليات النقل الخلوي عبر تكوين MDM. الرجاء الاتصال بالمدير للحصول على مزيد من المعلومات.";
+"Cellular Data Usage have been disabled via MDM configuration. Please contact your administrator for more information." = "تم تعطيل عمليات النقل الخلوي عبر تكوين MDM. الرجاء الاتصال بالمدير للحصول على مزيد من المعلومات.";
 "General" = "عام";
 "By feature" = "حسب الميزة";
 
@@ -311,7 +311,7 @@
 "Advanced settings" = "الإعدادات المتقدمة";
 "Show hidden files and folders" = "اعرض الملفات والمجلدات المخفية";
 "Show folders on top" = "إظهار المجلدات في الأعلى";
-"Prevent gestures" = "منع الإيماءات";
+"Disable gestures" = "منع الإيماءات";
 "Prevent dragging of files and folders and multiselection using system defined gestures" = "منع سحب الملفات والمجلدات والاختيار المتعدد باستخدام إيماءات محددة من قبل النظام";
 
 /* Advanced settings */
@@ -607,7 +607,7 @@
 "Offline files use" = "استخدام الملفات دون اتصال";
 "Compacting of '%@' failed" = "فشل ضغط '%@'";
 "Include available offline files" = "أدخل الملفات المتوفرة دون اتصال";
-"Delete Local Copies" = "احذف النسخ المحلية";
+"Delete all Offline Files" = "احذف النسخ المحلية";
 "Manage" = "إدارة";
 "Storage" = "السعة التخزينية";
 "Compacting" = "مضغوط";

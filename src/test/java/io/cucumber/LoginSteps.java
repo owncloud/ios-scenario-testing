@@ -1,44 +1,45 @@
 package io.cucumber;
 
-import net.thucydides.core.annotations.Steps;
-import net.thucydides.core.steps.StepEventBus;
+import static org.junit.Assert.assertTrue;
 
 import java.util.logging.Level;
 
+import io.cucumber.java.ParameterType;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import ios.OidcPage;
 import ios.LoginPage;
 import ios.OAuth2Page;
+import ios.OidcPage;
 import utils.LocProperties;
 import utils.api.CommonAPI;
 import utils.log.Log;
 
-import static org.junit.Assert.assertTrue;
-
 public class LoginSteps {
 
     //Involved pages
-    @Steps
-    private LoginPage loginPage;
-
+    private LoginPage loginPage = new LoginPage();
     private CommonAPI commonAPI = new CommonAPI();
 
-    @Given("^app has been launched for the first time$")
+    @ParameterType("basic auth|LDAP|redirection 301|redirection 302")
+    public String authtype(String type){
+        return type;
+    }
+
+    @Given("app has been launched for the first time")
     public void app_from_scratch(){
-        String currentStep = StepEventBus.getEventBus().getCurrentStep().get().toString();
-        Log.log(Level.FINE, "----STEP----: " + currentStep);
+        String stepName = new Object(){}.getClass().getEnclosingMethod().getName();
+        Log.log(Level.FINE, "----STEP----: " + stepName);
         //In case it is installed, we remove to execute login tests
         loginPage.reinstallApp();
         loginPage.acceptPermissions();
     }
 
-    @Given("^user (.+) is logged in$")
+    @Given("user {word} is logged in")
     public void logged(String userName)
             throws Throwable {
-        String currentStep = StepEventBus.getEventBus().getCurrentStep().get().toString();
-        Log.log(Level.FINE, "----STEP----: " + currentStep);
+        String stepName = new Object(){}.getClass().getEnclosingMethod().getName();
+        Log.log(Level.FINE, "----STEP----: " + stepName);
         if (!loginPage.loggedIn()) {
             Log.log(Level.FINE, "Not logged. Starting login process");
             String authMethod = commonAPI.checkAuthMethod();
@@ -49,7 +50,8 @@ public class LoginSteps {
                 case "Basic":
                     loginPage.typeCredentials(userName, password);
                     loginPage.submitLogin();
-                    loginPage.selectBookmarkIndex(0);
+                    loginPage.selectFirstBookmark();
+                    //loginPage.selectBookmarkIndex(0);
                     break;
                 case "Bearer":
                     loginPage.submitLogin();
@@ -71,20 +73,20 @@ public class LoginSteps {
         }
     }
 
-    @Given("^server with (.+) is available$")
+    @Given("server with {authtype} is available")
     public void server_available(String authMethod) {
-        String currentStep = StepEventBus.getEventBus().getCurrentStep().get().toString();
-        Log.log(Level.FINE, "----STEP----: " + currentStep);
+        String stepName = new Object(){}.getClass().getEnclosingMethod().getName();
+        Log.log(Level.FINE, "----STEP----: " + stepName);
         loginPage.acceptPermissions();
         loginPage.skipAddServer();
         loginPage.typeURL(authMethod);
     }
 
-    @When("^user logins as (.+) with password (.+) as (.+) credentials$")
+    @When("user logins as {word} with password {word} as {authtype} credentials")
     public void login_with_password_auth_method(String username, String password,
                                                 String authMethod) {
-        String currentStep = StepEventBus.getEventBus().getCurrentStep().get().toString();
-        Log.log(Level.FINE, "----STEP----: " + currentStep);
+        String stepName = new Object(){}.getClass().getEnclosingMethod().getName();
+        Log.log(Level.FINE, "----STEP----: " + stepName);
         switch (authMethod) {
             case "basic auth":
             case "LDAP":
@@ -108,17 +110,17 @@ public class LoginSteps {
         }
     }
 
-    @Then("^user accepts the redirection$")
+    @Then("user accepts the redirection")
     public void accept_redirection() {
-        String currentStep = StepEventBus.getEventBus().getCurrentStep().get().toString();
-        Log.log(Level.FINE, "----STEP----: " + currentStep);
+        String stepName = new Object(){}.getClass().getEnclosingMethod().getName();
+        Log.log(Level.FINE, "----STEP----: " + stepName);
         loginPage.approveIssue();
     }
 
-    @Then("^user should be correctly logged$")
+    @Then("user should be correctly logged")
     public void correctly_logged() {
-        String currentStep = StepEventBus.getEventBus().getCurrentStep().get().toString();
-        Log.log(Level.FINE, "----STEP----: " + currentStep);
+        String stepName = new Object(){}.getClass().getEnclosingMethod().getName();
+        Log.log(Level.FINE, "----STEP----: " + stepName);
         try {
             assertTrue(loginPage.isBookmarkCreated());
             // In case the assertion fails, we have to remove the app to keep executing other tests
@@ -131,10 +133,10 @@ public class LoginSteps {
         loginPage.removeApp();
     }
 
-    @Then("^user should see an error$")
+    @Then("user should see an error")
     public void credential_error() {
-        String currentStep = StepEventBus.getEventBus().getCurrentStep().get().toString();
-        Log.log(Level.FINE, "----STEP----: " + currentStep);
+        String stepName = new Object(){}.getClass().getEnclosingMethod().getName();
+        Log.log(Level.FINE, "----STEP----: " + stepName);
         try {
             assertTrue(loginPage.isCredentialsError());
             // In case the assertion fails, we have to remove the app to keep executing other tests
