@@ -40,6 +40,9 @@ public class FileListPage extends CommonPage {
     @iOSXCUITFindBy(id="Files")
     private MobileElement browseRoot;
 
+    @iOSXCUITFindBy(id="Close actions menu")
+    private MobileElement closeActions;
+
     //Actions in action menu
     private final String xpath_delete = "//XCUIElementTypeCell[@name=\"com.owncloud.action.delete\"]";
     private final String xpath_rename = "//XCUIElementTypeCell[@name=\"com.owncloud.action.rename\"]";
@@ -55,6 +58,8 @@ public class FileListPage extends CommonPage {
     private final String xpath_sharelink = "//XCUIElementTypeStaticText[@name=\"Links\"]";
     private final String xpath_editlink = "//XCUIElementTypeApplication[@name=\"ownCloud\"]/XCUIElementTypeWindow[1]/" +
             "XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeTable/XCUIElementTypeCell[2]";
+    private final String xpath_favorite = "//XCUIElementTypeApplication[@name=\"ownCloud\"]/XCUIElementTypeWindow[1]/" +
+            "XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeTable/XCUIElementTypeCell[2]";
     private final String xpath_card = "//XCUIElementTypeApplication[@name=\"ownCloud\"]/XCUIElementTypeWindow[1]" +
             "/XCUIElementTypeOther/XCUIElementTypeOther[2]";
     private final String xpath_copydirectory = "//XCUIElementTypeButton[@name=\"Choose destination directory…\"]";
@@ -67,6 +72,8 @@ public class FileListPage extends CommonPage {
     private final String id_copy = "Copy";
     private final String id_duplicate = "Duplicate";
     private final String id_avoffline = "Make available offline";
+    private final String id_favorite = "Favorite item";
+    private final String id_unfavorite = "Unfavorite item";
     private final String id_unavoffline = "com.owncloud.action.makeUnavailableOffline";
     private final String id_share = "Sharing";
     private final String id_link = "Links";
@@ -186,6 +193,9 @@ public class FileListPage extends CommonPage {
             case "edit link":
                 operation = (MobileElement) findXpath(xpath_editlink);
                 break;
+            case "favorite":
+                operation = (MobileElement) driver.findElement(By.id(id_favorite));
+                break;
             default:
                 break;
         }
@@ -226,6 +236,9 @@ public class FileListPage extends CommonPage {
             case "edit link":
                 operation = (MobileElement) driver.findElement(By.id(id_link));
                 break;
+            case "favorite":
+                operation = (MobileElement) driver.findElement(By.id(id_favorite));
+                break;
             default:
                 break;
         }
@@ -234,6 +247,11 @@ public class FileListPage extends CommonPage {
             Log.log(Level.FINE, "Selecting copy to directory");
             driver.findElement(By.xpath(xpath_copydirectory)).click();
         }
+    }
+
+    public void closeActions(){
+        Log.log(Level.FINE, "Starts: Close Actions Menu");
+        closeActions.click();
     }
 
     public void browse(String folderName){
@@ -270,6 +288,11 @@ public class FileListPage extends CommonPage {
         }
         Log.log(Level.FINE, "Av. Offline conditions: " + menuUnavoffline);
         return menuUnavoffline;
+    }
+
+    public boolean itemIsFavorite(String itemName){
+        selectItemListActions(itemName);
+        return driver.findElement(By.id(id_unfavorite)).isDisplayed();
     }
 
     //Turn to item disappear

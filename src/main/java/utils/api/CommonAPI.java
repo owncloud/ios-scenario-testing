@@ -58,6 +58,7 @@ public class CommonAPI {
             "    <OC:id />\n" +
             "    <OC:size />\n" +
             "    <OC:privatelink />\n" +
+            "    <OC:favorite/>\n" +
             "  </prop>\n" +
             "</propfind>";
 

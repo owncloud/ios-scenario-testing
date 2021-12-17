@@ -99,6 +99,21 @@ public class FilesAPI extends CommonAPI {
         return isFolder;
     }
 
+    public boolean isFavorite(String itemName)
+            throws IOException, ParserConfigurationException, SAXException {
+        String url = urlServer + davEndpoint + user + "/" + itemName;
+        Log.log(Level.FINE, "Starts: Request check if item is favorite");
+        Log.log(Level.FINE, "URL: " + url);
+        Response response;
+        RequestBody body = RequestBody.create(MediaType.parse("application/xml; charset=utf-8"),
+                basicPropfindBody);
+        Request request = davRequest(url, "PROPFIND", body);
+        response = httpClient.newCall(request).execute();
+        boolean isFavorite = getList(response).get(0).getFavorite().equals("1");
+        response.close();
+        return isFavorite;
+    }
+
     public ArrayList<OCFile> listItems(String path)
             throws IOException, SAXException, ParserConfigurationException {
         Response response;

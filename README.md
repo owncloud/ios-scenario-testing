@@ -18,7 +18,7 @@ Syntax](https://cucumber.io/docs/gherkin/).
 
 - Device interaction with [Appium](http://appium.io/)
 
-- Reports generated with [Serenity](https://github.com/serenity-bdd/)
+- Reports generated with [Cucumber Reports](https://reports.cucumber.io/)
 
 ![](architecture.png)
 

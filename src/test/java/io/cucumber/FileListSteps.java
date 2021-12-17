@@ -3,6 +3,8 @@ package io.cucumber;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
+import org.openqa.selenium.By;
+
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -35,7 +37,7 @@ public class FileListSteps {
         return type;
     }
 
-    @ParameterType("make available offline|move|copy|delete|duplicate|share by link|edit link|rename|share|edit share")
+    @ParameterType("make available offline|move|copy|delete|duplicate|share by link|edit link|rename|share|edit share|favorite")
     public String operation(String operation){
         return operation;
     }
@@ -79,7 +81,7 @@ public class FileListSteps {
         fileListPage.createFolder();
     }
 
-    @When("Alice selects to {operation} the {itemtype} {word} using the {word} menu")
+    @When("Alice selects/sets to/as {operation} the {itemtype} {word} using the {word} menu")
     public void select_item_to_some_operation(String operation, String typeItem, String itemName, String menu) {
         String stepName = new Object(){}.getClass().getEnclosingMethod().getName();
         Log.log(Level.FINE, "----STEP----: " + stepName);
@@ -106,6 +108,13 @@ public class FileListSteps {
         String stepName = new Object(){}.getClass().getEnclosingMethod().getName();
         Log.log(Level.FINE, "----STEP----: " + stepName);
         inputNamePage.setItemName(itemName);
+    }
+
+    @When("Alice closes the Actions menu")
+    public void close_actions_menu() {
+        String stepName = new Object(){}.getClass().getEnclosingMethod().getName();
+        Log.log(Level.FINE, "----STEP----: " + stepName);
+        fileListPage.closeActions();
     }
 
     @Then("Alice should see {word} in the filelist")
@@ -164,4 +173,15 @@ public class FileListSteps {
         ArrayList<OCFile> listServer = filesAPI.listItems(path);
         assertTrue(fileListPage.displayedList(path, listServer));
     }
+
+    @Then("item {word} should be set as favorite")
+    public void item_is_now_favorite(String itemName)
+            throws Throwable {
+        Log.log(Level.FINE, "----STEP----: " +
+                new Object(){}.getClass().getEnclosingMethod().getName() + ": " + itemName);
+        assertTrue(fileListPage.itemIsFavorite(itemName));
+        assertTrue(filesAPI.isFavorite(itemName));
+        filesAPI.removeItem(itemName);
+    }
+
 }

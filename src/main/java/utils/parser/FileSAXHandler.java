@@ -58,6 +58,10 @@ public class FileSAXHandler extends DefaultHandler {
                 file.setType(text);
                 break;
             }
+            case "oc:favorite": {
+                file.setFavorite(text);
+                break;
+            }
             default:
                 break;
         }

@@ -8,7 +8,7 @@ public class OCFile {
     private String permissions;
     private String privateLink;
     private String lastModified;
-
+    private String favorite;
     private String type;
 
     public OCFile(){
@@ -61,6 +61,14 @@ public class OCFile {
 
     public void setLastModified(String lastModified) {
         this.lastModified = lastModified;
+    }
+
+    public String getFavorite() {
+        return favorite;
+    }
+
+    public void setFavorite(String favorite) {
+        this.favorite = favorite;
     }
 
     public String getType() {
