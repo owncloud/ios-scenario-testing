@@ -21,6 +21,7 @@ public class AppiumManager {
     private static IOSDriver driver;
     private static final String driverDefect = LocProperties.getProperties().getProperty("appiumURL");
     private static final String driverURL = System.getProperty("appium");
+    private static File app;
 
     private AppiumManager() {
         init();
@@ -30,30 +31,17 @@ public class AppiumManager {
 
         File rootPath = new File(System.getProperty("user.dir"));
         File appDir = new File(rootPath, "src/test/resources");
-        File app = new File(appDir, LocProperties.getProperties().getProperty("appName"));
+        app = new File(appDir, LocProperties.getProperties().getProperty("appName"));
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
-
-        capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, "iOS");
-        if (System.getProperty("device") != null && !System.getProperty("device").isEmpty()) {
-            capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, System.getProperty("device"));
-        } else { //Will use iPhone X as default simulator
-            capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "iPhone X");
-        }
-        capabilities.setCapability("udid", System.getProperty("udid"));
-
-        capabilities.setCapability(MobileCapabilityType.APP, app.getAbsolutePath());
-        capabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, AutomationName.IOS_XCUI_TEST);
-        capabilities.setCapability("showXcodeLog", true);
-        //The following capabilities prevents reinstalling the app every test. Need to adapt the code
-        //before using:
-        capabilities.setCapability(MobileCapabilityType.FULL_RESET, false);
-        capabilities.setCapability(MobileCapabilityType.NO_RESET, true);
+        setCapabilities(capabilities);
 
         try {
-            if (driverURL.equals(null)) {
+            if (!driverURL.isEmpty()) {
+                Log.log(Level.FINE,"Appium driver located in: " + driverURL);
                 driver = new IOSDriver(new URL(driverURL), capabilities);
             } else {
+                Log.log(Level.FINE,"Appium driver located in: " + driverDefect);
                 driver = new IOSDriver(new URL(driverDefect), capabilities);
             }
         } catch (MalformedURLException e) {
@@ -72,5 +60,30 @@ public class AppiumManager {
 
     public IOSDriver getDriver(){
         return driver;
+    }
+
+    //Check https://appium.io/docs/en/writing-running-appium/caps/
+    private static void setCapabilities(DesiredCapabilities capabilities){
+
+        capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, "iOS");
+
+        if (System.getProperty("device") != null && !System.getProperty("device").isEmpty()) {
+            capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, System.getProperty("device"));
+        } else { //Will use iPhone X as default simulator
+            capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "iPhone X");
+        }
+
+        capabilities.setCapability("udid", System.getProperty("udid"));
+
+        capabilities.setCapability(MobileCapabilityType.APP, app.getAbsolutePath());
+
+        capabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, AutomationName.IOS_XCUI_TEST);
+
+        capabilities.setCapability("showXcodeLog", true);
+
+        //The following capabilities prevents reinstalling the app every test.
+        capabilities.setCapability(MobileCapabilityType.FULL_RESET, false);
+
+        capabilities.setCapability(MobileCapabilityType.NO_RESET, true);
     }
 }

@@ -37,8 +37,11 @@ public class LoginPage extends CommonPage{
     @iOSXCUITFindBy(accessibility = "access-files")
     private List<MobileElement> bookmarkCells;
 
-    @iOSXCUITFindBy(accessibility = "access-files")
+    @iOSXCUITFindBy(xpath = "//XCUIElementTypeCell[@name=\"access-files\"]")
     private MobileElement bookmarkCell;
+
+    @iOSXCUITFindBy(accessibility = "Continue")
+    private MobileElement continueSafari;
 
     //Only for login tests, from env variables. Needed some instances running to check
     //whether authentication works (ftm, only basic)
@@ -108,6 +111,11 @@ public class LoginPage extends CommonPage{
         continueOption.click();
     }
 
+    public void submitBrowser(){
+        Log.log(Level.FINE, "Starts: Accept moving to browser");
+        continueSafari.click();
+    }
+
     public boolean isCredentialsError(){
         return bookmarkCells.size() == 0;
     }
@@ -123,7 +131,6 @@ public class LoginPage extends CommonPage{
 
     public void selectFirstBookmark() {
         driver.hideKeyboard(HideKeyboardStrategy.PRESS_KEY, "Done");
-        waitById(5, bookmarkCell);
         bookmarkCell.click();
     }
 

@@ -132,7 +132,8 @@ public class FileListPage extends CommonPage {
     private void selectItemListActions(String itemName) {
         Log.log(Level.FINE, "Starts: select actions item from list: " + itemName);
         waitByXpath(10, "//XCUIElementTypeCell[@name=\"" + itemName + "\"]");
-        driver.findElement(By.id(itemName + " Actions")).click();
+        //driver.findElement(By.id(itemName + " Actions")).click();
+        driver.findElement(By.xpath("//XCUIElementTypeButton[@name=\"" + itemName + " Actions\"]")).click();
     }
 
     private void selectItemListContextual(String itemName) {

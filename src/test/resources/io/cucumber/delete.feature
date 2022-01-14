@@ -15,12 +15,13 @@ Feature: Delete item
     And Alice confirms the deletion
     Then Alice should not see delete1 in the filelist anymore
 
-  Scenario: Delete an existent folder using the Contextual menu
-    Given the following items have been created in the account
-      | folder  | delete2  |
-    When Alice selects to delete the folder delete2 using the Contextual menu
-    And Alice confirms the deletion
-    Then Alice should not see delete2 in the filelist anymore
+  #Scenario: Delete an existent folder using the Contextual menu
+    #Given the following items have been created in the account
+    #Given the following items have been created in the account
+    #  | folder  | delete2  |
+    #When Alice selects to delete the folder delete2 using the Contextual menu
+    #And Alice confirms the deletion
+    #Then Alice should not see delete2 in the filelist anymore
 
   Scenario: Delete an existent folder using the Swipe menu
     Given the following items have been created in the account

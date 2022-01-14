@@ -10,10 +10,10 @@ Feature: Duplicate item
 
   Scenario: Duplicate an existent folder using the Actions menu
     Given the following items have been created in the account
-      | folder  | dupl  |
-    When Alice selects to duplicate the folder dupl using the Actions menu
-    Then Alice should see dupl in the filelist
-    And Alice should see dupl 2 in the filelist
+      | folder  | dupl1  |
+    When Alice selects to duplicate the folder dupl1 using the Actions menu
+    Then Alice should see dupl1 in the filelist
+    And Alice should see dupl1 2 in the filelist
 
   Scenario: Duplicate an existent folder using the Contextual menu
     Given the following items have been created in the account

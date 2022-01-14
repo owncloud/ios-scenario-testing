@@ -51,19 +51,21 @@ public class LoginSteps {
                     loginPage.typeCredentials(userName, password);
                     loginPage.submitLogin();
                     loginPage.selectFirstBookmark();
-                    //loginPage.selectBookmarkIndex(0);
                     break;
                 case "Bearer":
                     loginPage.submitLogin();
+                    loginPage.submitBrowser();
                     OAuth2Page oauth2Page = new OAuth2Page();
                     oauth2Page.enterCredentials(userName,password);
                     oauth2Page.authorize();
+                    loginPage.selectFirstBookmark();
                     break;
                 case "OIDC":
                     loginPage.submitLogin();
                     OidcPage oidcPage = new OidcPage();
                     oidcPage.enterCredentials(userName, password);
                     oidcPage.authorize();
+                    loginPage.selectFirstBookmark();
                     break;
                 default:
                     break;

@@ -9,16 +9,19 @@ import utils.log.Log;
 public class OAuth2Page extends CommonPage {
 
     private String username_xpath = "//XCUIElementTypeTextField[@name=\"Username or email\"]";
-    private String password_xpath = "\"//XCUIElementTypeSecureTextField[@name=\\\"Password\\\"]";
+    private String password_xpath = "//XCUIElementTypeSecureTextField[@name=\"Password\"]";
     private String loginbutton_xpath = "//XCUIElementTypeButton[@name=\"Login\"]";
-    private String switch_xpath = "//XCUIElementTypeButton[@name=\"Switch users to continue\"]";
     private String authorize_xpath = "//XCUIElementTypeButton[@name=\"Authorize\"]";
+    private String switch_xpath = "//XCUIElementTypeButton[@name=\"Switch users to continue\"]";
 
     public OAuth2Page(){
         super();
     }
 
     public void enterCredentials(String username, String password){
+        if (!driver.findElements(By.xpath(switch_xpath)).isEmpty()) {
+            switchUser();
+        }
         Log.log(Level.FINE, "Starts: enter OAuth2 credentials");
         findXpath(username_xpath).sendKeys(username);
         findXpath(password_xpath).sendKeys(password);

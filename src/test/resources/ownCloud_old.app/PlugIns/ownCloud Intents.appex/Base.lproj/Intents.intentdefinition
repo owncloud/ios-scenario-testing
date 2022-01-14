@@ -128,9 +128,9 @@
 	<key>INIntentDefinitionSystemVersion</key>
 	<string>20G95</string>
 	<key>INIntentDefinitionToolsBuildVersion</key>
-	<string>12E507</string>
+	<string>13A1030d</string>
 	<key>INIntentDefinitionToolsVersion</key>
-	<string>12.5.1</string>
+	<string>13.1</string>
 	<key>INIntents</key>
 	<array>
 		<dict>
@@ -142,6 +142,8 @@
 			<string>Get a list of all configured accounts</string>
 			<key>INIntentDescriptionID</key>
 			<string>wK4bqS</string>
+			<key>INIntentHash</key>
+			<integer>11548394705966692724</integer>
 			<key>INIntentIneligibleForSuggestions</key>
 			<true/>
 			<key>INIntentManagedParameterCombinations</key>
@@ -283,6 +285,8 @@
 			<string>Get a directory listing for the given account and path</string>
 			<key>INIntentDescriptionID</key>
 			<string>2IChwb</string>
+			<key>INIntentHash</key>
+			<integer>7333332548206396474</integer>
 			<key>INIntentIneligibleForSuggestions</key>
 			<true/>
 			<key>INIntentInput</key>
@@ -658,6 +662,8 @@
 			<string>Get file for the given path in account</string>
 			<key>INIntentDescriptionID</key>
 			<string>nvFl2W</string>
+			<key>INIntentHash</key>
+			<integer>12813305897959722754</integer>
 			<key>INIntentIneligibleForSuggestions</key>
 			<true/>
 			<key>INIntentInput</key>
@@ -933,6 +939,8 @@
 			<string>Save a file into the path in account</string>
 			<key>INIntentDescriptionID</key>
 			<string>dtUvRf</string>
+			<key>INIntentHash</key>
+			<integer>17296737857730066919</integer>
 			<key>INIntentIneligibleForSuggestions</key>
 			<true/>
 			<key>INIntentInput</key>
@@ -1419,6 +1427,8 @@
 			<string>Create a folder with the given name into the path.</string>
 			<key>INIntentDescriptionID</key>
 			<string>XmX9YS</string>
+			<key>INIntentHash</key>
+			<integer>18154822365724241918</integer>
 			<key>INIntentIneligibleForSuggestions</key>
 			<true/>
 			<key>INIntentInput</key>
@@ -1776,6 +1786,8 @@
 			<string>Retrieve file infos for the given path</string>
 			<key>INIntentDescriptionID</key>
 			<string>LdHBeL</string>
+			<key>INIntentHash</key>
+			<integer>6361700344374834048</integer>
 			<key>INIntentIneligibleForSuggestions</key>
 			<true/>
 			<key>INIntentInput</key>
@@ -2041,6 +2053,8 @@
 			<string>Check if the given path exists</string>
 			<key>INIntentDescriptionID</key>
 			<string>PthGCb</string>
+			<key>INIntentHash</key>
+			<integer>7254253781380042018</integer>
 			<key>INIntentInput</key>
 			<string>path</string>
 			<key>INIntentKeyParameter</key>
@@ -2315,6 +2329,8 @@
 			<string>Delete the given path in account</string>
 			<key>INIntentDescriptionID</key>
 			<string>jkLupt</string>
+			<key>INIntentHash</key>
+			<integer>16974422261094578530</integer>
 			<key>INIntentInput</key>
 			<string>path</string>
 			<key>INIntentKeyParameter</key>
@@ -2567,6 +2583,8 @@
 			<string>Get the account for the given account UUID</string>
 			<key>INIntentDescriptionID</key>
 			<string>U3l2bk</string>
+			<key>INIntentHash</key>
+			<integer>9578183444640854000</integer>
 			<key>INIntentInput</key>
 			<string>accountUUID</string>
 			<key>INIntentKeyParameter</key>
