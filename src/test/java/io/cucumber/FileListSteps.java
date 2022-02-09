@@ -35,7 +35,7 @@ public class FileListSteps {
         return type;
     }
 
-    @ParameterType("make available offline|move|copy|delete|duplicate|share by link|edit link|rename|share|edit share|favorite")
+    @ParameterType("make available offline|move|copy|delete|duplicate|share by link|edit link|rename|share|edit share|favorite|cut")
     public String operation(String operation){
         return operation;
     }
@@ -127,6 +127,22 @@ public class FileListSteps {
         String stepName = new Object(){}.getClass().getEnclosingMethod().getName();
         Log.log(Level.FINE, "----STEP----: " + stepName);
         fileListPage.closeActions();
+    }
+
+    @When("Alice browses into folder {word}")
+    public void browses_into(String itemName) {
+        String stepName = new Object(){}.getClass().getEnclosingMethod().getName();
+        Log.log(Level.FINE, "----STEP----: " + stepName);
+        fileListPage.browse(itemName);
+    }
+
+    @When("Alice selects to paste into the folder")
+    public void paste_item() {
+        String stepName = new Object(){}.getClass().getEnclosingMethod().getName();
+        Log.log(Level.FINE, "----STEP----: " + stepName);
+        fileListPage.openThreeDotButton();
+        fileListPage.pasteAction();
+        fileListPage.browseRoot();
     }
 
     @Then("Alice should see {word} in the filelist")

@@ -1,28 +1,18 @@
 package ios;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.Dimension;
-import org.openqa.selenium.Rectangle;
 import org.openqa.selenium.support.PageFactory;
 
-import java.io.File;
-import java.io.IOException;
-import java.time.Duration;
 import java.util.ArrayList;
 import java.util.Iterator;
-import java.util.List;
-import java.util.ListIterator;
 import java.util.logging.Level;
 
-import io.appium.java_client.MobileBy;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.TouchAction;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import io.appium.java_client.pagefactory.iOSXCUITFindBy;
 import io.appium.java_client.touch.LongPressOptions;
-import io.appium.java_client.touch.WaitOptions;
 import io.appium.java_client.touch.offset.ElementOption;
-import io.appium.java_client.touch.offset.PointOption;
 import utils.LocProperties;
 import utils.entities.OCFile;
 import utils.log.Log;
@@ -50,11 +40,17 @@ public class FileListPage extends CommonPage {
     @iOSXCUITFindBy(id="Close actions menu")
     private MobileElement closeActions;
 
+    @iOSXCUITFindBy(id="client.folder-action")
+    private MobileElement threeDotButton;
+
+
     //Actions in action menu
     private final String xpath_delete = "//XCUIElementTypeCell[@name=\"com.owncloud.action.delete\"]";
     private final String xpath_rename = "//XCUIElementTypeCell[@name=\"com.owncloud.action.rename\"]";
     private final String xpath_move = "//XCUIElementTypeCell[@name=\"com.owncloud.action.move\"]";
     private final String xpath_copy = "//XCUIElementTypeCell[@name=\"com.owncloud.action.copy\"]";
+    private final String xpath_cut = "//XCUIElementTypeCell[@name=\"com.owncloud.action.cutpasteboard\"]";
+    private final String xpath_paste = "//XCUIElementTypeCell[@name=\"com.owncloud.action.importpasteboard\"]";
     private final String xpath_duplicate = "//XCUIElementTypeCell[@name=\"com.owncloud.action.duplicate\"]";
     private final String xpath_avoffline = "//XCUIElementTypeCell[@name=\"com.owncloud.action.makeAvailableOffline\"]";
     private final String xpath_unavoffline = "com.owncloud.action.makeUnavailableOffline";
@@ -77,6 +73,7 @@ public class FileListPage extends CommonPage {
     private final String id_rename = "Rename";
     private final String id_move = "Move";
     private final String id_copy = "Copy";
+    private final String id_cut = "Cut";
     private final String id_duplicate = "Duplicate";
     private final String id_avoffline = "Make available offline";
     private final String id_favorite = "Favorite item";
@@ -95,6 +92,16 @@ public class FileListPage extends CommonPage {
         Log.log(Level.FINE, "Starts: create folder");
         openPlusButton();
         createFolder.click();
+    }
+
+    public void openThreeDotButton() {
+        Log.log(Level.FINE, "Starts: Open three dot button");
+        threeDotButton.click();
+    }
+
+    public void pasteAction() {
+        Log.log(Level.FINE, "Starts: Paste action");
+        findXpath(xpath_paste).click();
     }
 
     public void uploadFromGallery() {
@@ -136,7 +143,7 @@ public class FileListPage extends CommonPage {
         return "";
     }
 
-    private void openPlusButton(){
+    public void openPlusButton(){
         Log.log(Level.FINE, "Starts: Open plus button");
         //Waiting for the list of files to be loaded
         waitById(5, "Documents");
@@ -219,6 +226,12 @@ public class FileListPage extends CommonPage {
             case "make available offline":
                 operation = (MobileElement) findXpath(xpath_avoffline);
                 //The file take some to download
+                break;
+            case "cut":
+                operation = (MobileElement) findXpath(xpath_cut);
+                break;
+            case "paste":
+                operation = (MobileElement) findXpath(xpath_paste);
                 break;
             case "share":
                 String xpath_sharetype;
@@ -309,8 +322,9 @@ public class FileListPage extends CommonPage {
 
     public void browse(String folderName){
         Log.log(Level.FINE, "Starts: browse to " + folderName);
-        wait(3);
-        driver.findElement(By.xpath("//XCUIElementTypeStaticText[@name=\""+folderName+"\"]")).click();
+        String xpathFolder = "//XCUIElementTypeCell[@name=\""+folderName+"\"]";
+        waitByXpath(10, xpathFolder);
+        findXpath(xpathFolder).click();
     }
 
     public void browseRoot(){
@@ -320,7 +334,7 @@ public class FileListPage extends CommonPage {
 
     public void acceptDeletion(){
         Log.log(Level.FINE, "Starts: accept deletion");
-        driver.findElement(By.xpath("//XCUIElementTypeButton[@name=\"Delete\"]")).click();
+        findXpath("//XCUIElementTypeButton[@name=\"Delete\"]").click();
     }
 
     public boolean fileIsMarkedAsAvOffline(String itemName){
