@@ -3,8 +3,6 @@ package io.cucumber;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
-import org.openqa.selenium.By;
-
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -81,6 +79,20 @@ public class FileListSteps {
         fileListPage.createFolder();
     }
 
+    @When("Alice selects the option upload from photo gallery")
+    public void upload_gallery() {
+        String stepName = new Object(){}.getClass().getEnclosingMethod().getName();
+        Log.log(Level.FINE, "----STEP----: " + stepName);
+        fileListPage.uploadFromGallery();
+    }
+
+    @When("Alice selects a photo")
+    public void select_photo() {
+        String stepName = new Object(){}.getClass().getEnclosingMethod().getName();
+        Log.log(Level.FINE, "----STEP----: " + stepName);
+        fileListPage.selectPhotoGallery();
+    }
+
     @When("Alice selects/sets to/as {operation} the {itemtype} {word} using the {word} menu")
     public void select_item_to_some_operation(String operation, String typeItem, String itemName, String menu) {
         String stepName = new Object(){}.getClass().getEnclosingMethod().getName();
@@ -125,6 +137,17 @@ public class FileListSteps {
         assertTrue(fileListPage.isItemInList(itemName));
         assertTrue(filesAPI.itemExist(itemName));
         filesAPI.removeItem(itemName);
+    }
+
+    @Then("Alice should see the photo in the filelist")
+    public void photo_in_filelist()
+            throws Throwable {
+        String stepName = new Object(){}.getClass().getEnclosingMethod().getName();
+        Log.log(Level.FINE, "----STEP----: " + stepName);
+        ArrayList<OCFile> list = filesAPI.listItems("/");
+        String fileUploaded = fileListPage.photoUploaded(list);
+        assertFalse(fileUploaded.isEmpty());
+        filesAPI.removeItem(fileUploaded);
     }
 
     @Then("Alice should see {word} 2 in the filelist")

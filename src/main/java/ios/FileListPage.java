@@ -5,9 +5,13 @@ import org.openqa.selenium.Dimension;
 import org.openqa.selenium.Rectangle;
 import org.openqa.selenium.support.PageFactory;
 
+import java.io.File;
+import java.io.IOException;
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.List;
+import java.util.ListIterator;
 import java.util.logging.Level;
 
 import io.appium.java_client.MobileBy;
@@ -31,6 +35,9 @@ public class FileListPage extends CommonPage {
     @iOSXCUITFindBy(xpath="//XCUIElementTypeButton[@name=\"Create folder\"]")
     private MobileElement createFolder;
 
+    @iOSXCUITFindBy(xpath="//XCUIElementTypeButton[@name=\"Upload from your photo library\"]")
+    private MobileElement uploadFile;
+
     @iOSXCUITFindBy(xpath="//XCUIElementTypeTabBar[@name=\"Tab Bar\"]")
     private MobileElement bottomBar;
 
@@ -50,7 +57,7 @@ public class FileListPage extends CommonPage {
     private final String xpath_copy = "//XCUIElementTypeCell[@name=\"com.owncloud.action.copy\"]";
     private final String xpath_duplicate = "//XCUIElementTypeCell[@name=\"com.owncloud.action.duplicate\"]";
     private final String xpath_avoffline = "//XCUIElementTypeCell[@name=\"com.owncloud.action.makeAvailableOffline\"]";
-    private final String xpath_unavoffline = "//XCUIElementTypeCell[@name=\"com.owncloud.action.makeUnavailableOffline\"]";
+    private final String xpath_unavoffline = "com.owncloud.action.makeUnavailableOffline";
     private final String xpath_sharefolder = "//XCUIElementTypeStaticText[@name=\"Share this folder\"]";
     private final String xpath_sharefile = "//XCUIElementTypeStaticText[@name=\"Share this file\"]";
     private final String xpath_editshare = "//XCUIElementTypeApplication[@name=\"ownCloud\"]/XCUIElementTypeWindow[1]/" +
@@ -86,17 +93,61 @@ public class FileListPage extends CommonPage {
 
     public void createFolder() {
         Log.log(Level.FINE, "Starts: create folder");
-        wait(3);
-        plusButton.click();
+        openPlusButton();
         createFolder.click();
+    }
+
+    public void uploadFromGallery() {
+        Log.log(Level.FINE, "Starts: Upload file from Gallery");
+        String xpathOptionGallery = "//XCUIElementTypeAlert[@name=\"“ownCloud” Would Like to Access Your Photos\"]" +
+                "/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeScrollView[2]" +
+                "/XCUIElementTypeOther[1]/XCUIElementTypeOther/XCUIElementTypeOther[3]";
+        openPlusButton();
+        uploadFile.click();
+        driver.findElement(By.xpath(xpathOptionGallery)).click();
+        //Wait till gallery loads. When the "Cancel" button is present
+        waitById(4, "Cancel");
+    }
+
+    public void selectPhotoGallery(){
+        Log.log(Level.FINE, "Starts: Select Photo Gallery");
+        String xpathAnyPhoto = "//XCUIElementTypeApplication[@name=\"ownCloud\"]/XCUIElementTypeWindow[1]" +
+                "/XCUIElementTypeOther[3]/XCUIElementTypeOther[2]/XCUIElementTypeOther/XCUIElementTypeOther" +
+                "/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther" +
+                "/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther" +
+                "/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther" +
+                "/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeScrollView" +
+                "/XCUIElementTypeOther/XCUIElementTypeOther[1]/XCUIElementTypeOther/XCUIElementTypeOther" +
+                "/XCUIElementTypeOther[1]/XCUIElementTypeOther/XCUIElementTypeOther[@index='0']";
+        driver.findElement(By.xpath(xpathAnyPhoto)).click();
+        driver.findElement(By.id("Add")).click();
+        //Wait till upload finishes before asserting
+        wait(5);
+    }
+
+    public String photoUploaded(ArrayList<OCFile> listFiles){
+        Log.log(Level.FINE, "Items: " + listFiles.size());
+        for (OCFile ocfile: listFiles) {
+            Log.log(Level.FINE, "Item: " + ocfile.getName());
+            if ((ocfile.getName().contains("Photo-")) || (ocfile.getName().contains("Video-"))) {
+                return ocfile.getName();
+            }
+        }
+        return "";
+    }
+
+    private void openPlusButton(){
+        Log.log(Level.FINE, "Starts: Open plus button");
+        //Waiting for the list of files to be loaded
+        waitById(5, "Documents");
+        plusButton.click();
     }
 
     public void executeOperation(String operation, String itemName, String typeItem, String menu){
         Log.log(Level.FINE, "Starts: execute operation: " + operation + " " +
                 itemName + " "+ menu);
         if (!isItemInList(itemName)){
-            Log.log(Level.FINE, "Searching item... swiping: " + itemName);
-            swipe(0.50, 0.90, 0.50, 0.20);
+            Log.log(Level.FINE, "Waiting for item: " + itemName);
         }
         switch (menu) {
             case "Actions":
@@ -115,10 +166,6 @@ public class FileListPage extends CommonPage {
 
     public void downloadAction(String itemName) {
         Log.log(Level.FINE, "Starts: download action: " + itemName);
-        if (!isItemInList(itemName)){
-            Log.log(Level.FINE, "Searching item... swiping: " + itemName);
-            swipe(0.50, 0.90, 0.50, 0.20);
-        }
         driver.findElement(By.id(itemName)).click();
     }
 
@@ -131,15 +178,12 @@ public class FileListPage extends CommonPage {
 
     private void selectItemListActions(String itemName) {
         Log.log(Level.FINE, "Starts: select actions item from list: " + itemName);
-        waitByXpath(10, "//XCUIElementTypeCell[@name=\"" + itemName + "\"]");
-        //driver.findElement(By.id(itemName + " Actions")).click();
-        driver.findElement(By.xpath("//XCUIElementTypeButton[@name=\"" + itemName + " Actions\"]")).click();
+        driver.findElement(By.id(itemName + " Actions")).click();
     }
 
     private void selectItemListContextual(String itemName) {
         Log.log(Level.FINE, "Starts: select contextual item from list: " + itemName);
         String itemXpath = "//XCUIElementTypeCell[@name=\"" + itemName + "\"]";
-        waitByXpath(10, itemXpath);
         MobileElement listCell = findXpath(itemXpath);
         new TouchAction(driver).longPress(LongPressOptions.longPressOptions()
                 .withElement(ElementOption.element(listCell))).release().perform();
@@ -148,7 +192,6 @@ public class FileListPage extends CommonPage {
     private void selectItemListSwipe(String itemName) {
         Log.log(Level.FINE, "Starts: select item from list by swiping: " + itemName);
         String itemXpath = "//XCUIElementTypeCell[@name=\"" + itemName + "\"]";
-        waitByXpath(10, itemXpath);
         MobileElement listCell = findXpath(itemXpath);
         swipeElementIOS(listCell, "LEFT");
     }
@@ -175,6 +218,7 @@ public class FileListPage extends CommonPage {
                 break;
             case "make available offline":
                 operation = (MobileElement) findXpath(xpath_avoffline);
+                //The file take some to download
                 break;
             case "share":
                 String xpath_sharetype;
@@ -204,6 +248,10 @@ public class FileListPage extends CommonPage {
         if (operationName.equals("copy")){
             Log.log(Level.FINE, "Selecting copy to directory");
             findXpath(xpath_copydirectory).click();
+        } else if (operationName.equals("make available offline")){
+            Log.log(Level.FINE, "Wait file to be downloaded");
+            //Condition to be improved
+            wait(3);
         }
     }
 
@@ -247,6 +295,10 @@ public class FileListPage extends CommonPage {
         if (operationName.equals("copy")){
             Log.log(Level.FINE, "Selecting copy to directory");
             driver.findElement(By.xpath(xpath_copydirectory)).click();
+        } else if (operationName.equals("make available offline")){
+            Log.log(Level.FINE, "Wait file to be downloaded");
+            //Condition to be improved
+            wait(3);
         }
     }
 
@@ -281,11 +333,11 @@ public class FileListPage extends CommonPage {
             Log.log(Level.FINE, "Final file name: " + finalName);
             selectItemListActions(finalName);
             //Option do not appear if the containing folder is av. offline
-            menuUnavoffline = driver.findElements(By.id(id_unavoffline)).isEmpty()
-                    && driver.findElements(By.id(id_avoffline)).isEmpty();
+            menuUnavoffline = driver.findElements(By.id(xpath_unavoffline)).isEmpty()
+                    && driver.findElements(By.xpath(xpath_avoffline)).isEmpty();
         } else {
             selectItemListActions(itemName);
-            menuUnavoffline = driver.findElement(By.id(id_unavoffline)).isDisplayed();
+            menuUnavoffline = driver.findElement(By.id(xpath_unavoffline)).isDisplayed();
         }
         Log.log(Level.FINE, "Av. Offline conditions: " + menuUnavoffline);
         return menuUnavoffline;

@@ -70,10 +70,10 @@ Feature: Public Links
           | permission | <permissions> |
 
         Examples:
-          |  item         |  name    | permissions |
-          |  Links7       |  link7   |    15       |
-          |  Links8       |  link8   |    4        |
-          |  Links9       |  link9   |    1        |
+          |  item         |  name    | permissions | description
+          |  Links7       |  link7   |    15       | Download / View / Upload
+          |  Links8       |  link8   |    4        | Upload Only (File drop)
+          |  Links9       |  link9   |    1        | Download / View
 
       Scenario Outline: Create a public link with name using the contextual menu
         Given the following items have been created in the account
@@ -105,10 +105,10 @@ Feature: Public Links
           | name        | <name>        |
 
         Examples:
-          |  item     |  name    | permissions |
-          |  Links12  |  link12  |     15      |
-          |  Links13  |  link13  |     4       |
-          |  Links14  |  link14  |     1       |
+          |  item     |  name    | permissions | description
+          |  Links12  |  link12  |     15      | Download / View / Upload
+          |  Links13  |  link13  |     4       | Upload Only (File drop)
+          |  Links14  |  link14  |     1       | Download / View
 
     @deletelink
     Rule: Delete a public link
