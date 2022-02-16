@@ -72,6 +72,16 @@ public class FileListSteps {
         }
     }
 
+    @When("Alice opens a private link pointing to {word} with scheme {word}")
+    public void open_private_link(String filePath, String scheme)
+            throws Throwable {
+        String stepName = new Object(){}.getClass().getEnclosingMethod().getName();
+        Log.log(Level.FINE, "----STEP----: " + stepName);
+        OCFile item = filesAPI.listItems(filePath).get(0);
+        String privateLink = fileListPage.getPrivateLink(scheme, item.getPrivateLink());
+        fileListPage.openPrivateLink(privateLink);
+    }
+
     @When("Alice selects the option Create Folder")
     public void create_folder() {
         String stepName = new Object(){}.getClass().getEnclosingMethod().getName();
@@ -160,7 +170,7 @@ public class FileListSteps {
             throws Throwable {
         String stepName = new Object(){}.getClass().getEnclosingMethod().getName();
         Log.log(Level.FINE, "----STEP----: " + stepName);
-        ArrayList<OCFile> list = filesAPI.listItems("/");
+        ArrayList<OCFile> list = filesAPI.listItems("");
         String fileUploaded = fileListPage.photoUploaded(list);
         assertFalse(fileUploaded.isEmpty());
         filesAPI.removeItem(fileUploaded);

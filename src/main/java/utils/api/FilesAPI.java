@@ -117,7 +117,7 @@ public class FilesAPI extends CommonAPI {
     public ArrayList<OCFile> listItems(String path)
             throws IOException, SAXException, ParserConfigurationException {
         Response response;
-        String url = urlServer + davEndpoint + user + path;
+        String url = urlServer + davEndpoint + user + "/" + path;
         Log.log(Level.FINE, "Starts: Request to fetch list of items from server");
         Log.log(Level.FINE, "URL: " + url);
         RequestBody body = RequestBody.create(MediaType.parse("application/xml; charset=utf-8"),
@@ -127,6 +127,10 @@ public class FilesAPI extends CommonAPI {
         ArrayList<OCFile> listItems = getList(response);
         response.close();
         return listItems;
+    }
+
+    public String buildItemPath (String itemName){
+        return urlServer + davEndpoint + user + itemName;
     }
 
     private ArrayList<OCFile> getList(Response httpResponse)

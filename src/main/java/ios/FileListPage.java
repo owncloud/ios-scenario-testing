@@ -196,6 +196,22 @@ public class FileListPage extends CommonPage {
                 .withElement(ElementOption.element(listCell))).release().perform();
     }
 
+    public String getPrivateLink(String scheme, String linkOriginal) {
+        Log.log(Level.FINE, "Starts: Create private link: " + scheme + " " + linkOriginal);
+        String originalScheme = linkOriginal.split("://")[0];
+        Log.log(Level.FINE, "Original scheme: " + originalScheme);
+        return linkOriginal.replace(originalScheme, scheme);
+    }
+
+    public void openPrivateLink(String privateLink) {
+        Log.log(Level.FINE, "Starts: Open private link: " + privateLink);
+        driver.get(privateLink);
+    }
+
+    public boolean itemOpened (String itemName) {
+        return findXpath("//XCUIElementTypeStaticText[@name=\"" + itemName + "\"]").isDisplayed();
+    }
+
     private void selectItemListSwipe(String itemName) {
         Log.log(Level.FINE, "Starts: select item from list by swiping: " + itemName);
         String itemXpath = "//XCUIElementTypeCell[@name=\"" + itemName + "\"]";

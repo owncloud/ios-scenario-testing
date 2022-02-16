@@ -77,6 +77,15 @@ public class FileSAXHandler extends DefaultHandler {
         return listFiles;
     }
 
+    public OCFile getItemByname(String itemName){
+        for (OCFile file: listFiles){
+            if (file.getName().equals(itemName)){
+                return file;
+            }
+        }
+        return null;
+    }
+
     private String getFileNameFromPath(String path){
         try {
             String[] pathSplitted = path.split("/");
