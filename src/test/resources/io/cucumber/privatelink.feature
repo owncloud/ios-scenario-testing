@@ -13,7 +13,7 @@ Feature: Private Links
     Given the following items have been created in the account
       | <type> | <name> |
     When Alice opens a private link pointing to <name> with scheme owncloud
-    Then Alice should see <name> in the filelist
+    Then <type> <name> is opened in the app
 
     Examples:
       | type    |  name             |

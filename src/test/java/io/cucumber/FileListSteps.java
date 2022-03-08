@@ -165,6 +165,15 @@ public class FileListSteps {
         filesAPI.removeItem(itemName);
     }
 
+    @Then("{itemtype} {word} is opened in the app")
+    public void original_is_opened(String itemType, String itemName)
+            throws Throwable {
+        String stepName = new Object(){}.getClass().getEnclosingMethod().getName();
+        Log.log(Level.FINE, "----STEP----: " + stepName);
+        assertTrue(fileListPage.itemOpened(itemType, itemName));
+        filesAPI.removeItem(itemName);
+    }
+
     @Then("Alice should see the photo in the filelist")
     public void photo_in_filelist()
             throws Throwable {

@@ -6,6 +6,7 @@ import org.openqa.selenium.support.PageFactory;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.logging.Level;
+import java.util.regex.Pattern;
 
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.TouchAction;
@@ -70,6 +71,7 @@ public class FileListPage extends CommonPage {
 
     //Actions in contextual menu menu
     private final String id_delete = "Delete";
+    private final String xp_delete = "//XCUIElementTypeButton[@name=\"Delete\"]";
     private final String id_rename = "Rename";
     private final String id_move = "Move";
     private final String id_copy = "Copy";
@@ -208,8 +210,14 @@ public class FileListPage extends CommonPage {
         driver.get(privateLink);
     }
 
-    public boolean itemOpened (String itemName) {
-        return findXpath("//XCUIElementTypeStaticText[@name=\"" + itemName + "\"]").isDisplayed();
+    public boolean itemOpened (String itemType, String itemName) {
+        Log.log(Level.FINE, "Starts: checking if item is opened: " + itemType + " " + itemName);
+        if (itemType.equals("file")) {
+            return findXpath("//XCUIElementTypeStaticText[@name=\"" + itemName + "\"]").isDisplayed();
+        } else if (itemType.equals("folder")) {
+            return driver.findElement(By.id("show-paths-button")).isDisplayed();
+        }
+        return false;
     }
 
     private void selectItemListSwipe(String itemName) {
@@ -359,7 +367,7 @@ public class FileListPage extends CommonPage {
         boolean menuUnavoffline = false;
         //depending on the location of the file
         if (itemName.contains("/")){  //we have to browse
-            finalName = parsePath(itemName);
+            finalName = navigateFile(itemName);
             Log.log(Level.FINE, "Final file name: " + finalName);
             selectItemListActions(finalName);
             //Option do not appear if the containing folder is av. offline
@@ -387,7 +395,7 @@ public class FileListPage extends CommonPage {
 
     public boolean displayedList(String path, ArrayList<OCFile> listServer){
         boolean found = true;
-        parsePath(path); //moving to the folder
+        navigateFolder(path); //moving to the folder
         Iterator iterator = listServer.iterator();
         while (iterator.hasNext()){
             OCFile ocfile = (OCFile) iterator.next();
@@ -408,17 +416,36 @@ public class FileListPage extends CommonPage {
         return found;
     }
 
-    private String parsePath(String path){
+    private void navigateFolder(String path){
         Log.log(Level.FINE, "Path: " + path);
-        String lastChunk = null;
-        String[] route = path.split("/");
-        if (route.length > 1) { //we have to browse
-            for (int i = 0; i < route.length - 1; i++) {
-                Log.log(Level.FINE, "Managing: " + route[i]);
+        String completePath = Pattern.quote("/");
+        String[] route = path.split(completePath);
+        Log.log(Level.FINE, "Route lenght: " + route.length);
+        if (route.length > 0) { //we have to browse
+            int i;
+            for (i = 1 ; i < route.length ; i++) {
+                Log.log(Level.FINE, "Browsing: " + route[i]);
                 browse(route[i]);
-                lastChunk = route[i+1];
             }
         }
-        return lastChunk;
+    }
+
+    private String navigateFile(String path){
+        Log.log(Level.FINE, "Path: " + path);
+        String completePath = Pattern.quote("/");
+        String[] route = path.split(completePath);
+        Log.log(Level.FINE, "Route lenght: " + route.length);
+        for (int j = 0 ; j < route.length ; j++) {
+            Log.log(Level.FINE, "Chunk: " + j + ": " + route[j]);
+        }
+        if (route.length > 0) { //we have to browse
+            int i;
+            for (i = 0; i < route.length - 1 ; i++) {
+                Log.log(Level.FINE, "Browsing: " + route[i]);
+                browse(route[i]);
+            }
+            return route[i];
+        }
+        return "";
     }
 }
