@@ -19,3 +19,11 @@ Feature: Cut/Paste item
     Then Alice should not see cut1 in the filelist anymore
     And Alice should see cut1 inside the folder DocumentsPaste
 
+  Scenario: Cut an existent folder to another location using the Contextual menu
+    Given the following items have been created in the account
+      | file   | cut2.txt  |
+    When Alice selects to cut the file cut2.txt using the Contextual menu
+    And Alice browses into folder DocumentsPaste
+    And Alice selects to paste into the folder
+    Then Alice should not see cut2.txt in the filelist anymore
+    And Alice should see cut2.txt inside the folder DocumentsPaste

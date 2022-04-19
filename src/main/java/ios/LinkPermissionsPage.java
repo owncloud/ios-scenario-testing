@@ -141,14 +141,14 @@ public class LinkPermissionsPage extends CommonPage {
         switch (type) {
             default:
             case "folder":
-                driver.findElement(By.xpath(MonthPicker_xpath)).sendKeys(month);
-                driver.findElement(By.xpath(DayPicker_xpath)).sendKeys(day);
-                driver.findElement(By.xpath(YearPicker_xpath)).sendKeys(year);
+                findXpath(MonthPicker_xpath).sendKeys(month);
+                findXpath(DayPicker_xpath).sendKeys(day);
+                findXpath(YearPicker_xpath).sendKeys(year);
             break;
             case "file":
-                driver.findElement(By.xpath(MonthPicker_xpath_file)).sendKeys(month);
-                driver.findElement(By.xpath(DayPicker_xpath_file)).sendKeys(day);
-                driver.findElement(By.xpath(YearPicker_xpath_file)).sendKeys(year);
+                findXpath(MonthPicker_xpath_file).sendKeys(month);
+                findXpath(DayPicker_xpath_file).sendKeys(day);
+                findXpath(YearPicker_xpath_file).sendKeys(year);
             break;
         }
     }

@@ -42,7 +42,7 @@ public class PrivateSharePage extends SharePage {
             shareeName += " (Group)";
         }
         waitByXpath(5, xpath_invite);
-        driver.findElement(By.xpath("//XCUIElementTypeStaticText[@name=\"" + shareeName + "\"]")).click();
+        findXpath("//XCUIElementTypeStaticText[@name=\"" + shareeName + "\"]").click();
     }
 
     public boolean isItemInListPrivateShares(String sharee) {

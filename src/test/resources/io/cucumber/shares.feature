@@ -120,8 +120,8 @@ Feature: Private Share
         Then user Bob should have access to Share14.txt
         But user Charles should not have access to Share14.txt
 
-    @editshare
-    Rule: Edit an existing share
+    @deleteshare
+    Rule: Delete an existing share
 
       Scenario: Delete existing share on folder
         Given the following items have been created in the account

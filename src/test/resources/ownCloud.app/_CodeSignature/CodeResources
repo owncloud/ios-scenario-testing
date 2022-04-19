@@ -14,19 +14,31 @@
 		</data>
 		<key>Assets.car</key>
 		<data>
-		bAfyf/7DvQ/2rCZa39kABlBsaog=
+		1UsmtATL7jM0ljB4ZylCskmmaEA=
 		</data>
 		<key>Base.lproj/Intents.intentdefinition</key>
 		<data>
-		dtI6MxlM7xj/Oxn73VtvYT4oO+g=
+		Fh6Dx4RM3ooll6UQ6FkYk3cT65o=
 		</data>
 		<key>Branding.plist</key>
 		<data>
 		zmV6UqBSo6r1NOz798vd5O4zTBA=
 		</data>
+		<key>Frameworks/OpenSSL.framework/Info.plist</key>
+		<data>
+		cHEAL0EAQlIDl/PCIbU+NHUrKQM=
+		</data>
+		<key>Frameworks/OpenSSL.framework/OpenSSL</key>
+		<data>
+		v9rkksMP6qpsd+OtQuuMw9a8wJg=
+		</data>
+		<key>Frameworks/OpenSSL.framework/_CodeSignature/CodeResources</key>
+		<data>
+		iBO1hN+R0+R1kxcHrWKZjPqOv2U=
+		</data>
 		<key>Frameworks/libzip.framework/Info.plist</key>
 		<data>
-		lqVgN1GpzH1pOTAFh2e/4W/yDjQ=
+		veUeUr6GmO+co4x8NRwSNSqHelQ=
 		</data>
 		<key>Frameworks/libzip.framework/LICENSE</key>
 		<data>
@@ -34,27 +46,11 @@
 		</data>
 		<key>Frameworks/libzip.framework/_CodeSignature/CodeResources</key>
 		<data>
-		efZSDFmjAjbNy+Vaznn0kWvvyDE=
+		W0pmNG+0jrlf4giJfM6QrptYm7U=
 		</data>
 		<key>Frameworks/libzip.framework/libzip</key>
 		<data>
-		BzB1BJrzl5D+AGbfzXz9lRp/6nU=
-		</data>
-		<key>Frameworks/openssl.framework/Info.plist</key>
-		<data>
-		VK9HSfExLswzfxbcNFccvVWv6dU=
-		</data>
-		<key>Frameworks/openssl.framework/LICENSE</key>
-		<data>
-		Aif4bZrcKGIzt8HueuFKTwaJeGc=
-		</data>
-		<key>Frameworks/openssl.framework/_CodeSignature/CodeResources</key>
-		<data>
-		D/JBF1IEBf154nIOpkPR46eKd4k=
-		</data>
-		<key>Frameworks/openssl.framework/openssl</key>
-		<data>
-		bLICYHw3s2fVTn5JEblupMb3zfc=
+		9vMZQTGvO0KRqjaRHZGZ9Xg/8kM=
 		</data>
 		<key>Frameworks/ownCloudApp.framework/AppleIncRootCertificate.cer</key>
 		<data>
@@ -62,11 +58,11 @@
 		</data>
 		<key>Frameworks/ownCloudApp.framework/Info.plist</key>
 		<data>
-		XJav1pQ61y1+445aUa2uXBfwzLs=
+		RCd8W5bydKxmKt2MXgSidNYf7EI=
 		</data>
 		<key>Frameworks/ownCloudApp.framework/_CodeSignature/CodeResources</key>
 		<data>
-		gYliT4rOr19Syu3vOEMH6bnRevs=
+		DF2nMfzim/zSHK8RvY+sQn1EUhY=
 		</data>
 		<key>Frameworks/ownCloudApp.framework/ar.lproj/Localizable.strings</key>
 		<dict>
@@ -178,7 +174,7 @@
 		</dict>
 		<key>Frameworks/ownCloudApp.framework/ownCloudApp</key>
 		<data>
-		gdnXmm/f0MnxeVgxwKactmQDa4s=
+		rFnNJVMZ7Uk3LRinSRw+8OyFOXM=
 		</data>
 		<key>Frameworks/ownCloudApp.framework/pt-BR.lproj/Localizable.strings</key>
 		<dict>
@@ -236,7 +232,7 @@
 		</dict>
 		<key>Frameworks/ownCloudAppShared.framework/Info.plist</key>
 		<data>
-		NbX6aUgPnCetYcg4rZomuKFP7eM=
+		c/1KuRIobzSNsSZzPrIt95nNQUU=
 		</data>
 		<key>Frameworks/ownCloudAppShared.framework/PasscodeViewController.nib/objects-14.0+.nib</key>
 		<data>
@@ -252,7 +248,7 @@
 		</data>
 		<key>Frameworks/ownCloudAppShared.framework/_CodeSignature/CodeResources</key>
 		<data>
-		hTTumF1Xa59buYAcL8Tg5Anq2YA=
+		jEyAuvmyaFxqGnKldqm6GLJ3XYg=
 		</data>
 		<key>Frameworks/ownCloudAppShared.framework/application-pdf.tvg</key>
 		<data>
@@ -266,7 +262,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			Mpj199tcLiBp7F+VBgb1W75Fk2Q=
+			wnDbUkdvg4gWXwf+oIJaBXgA+c4=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -288,7 +284,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			JJRtefS8yUjXdV3fiLJYln1Wi8g=
+			lT3vtRduX9njN1urlfRhIOzFPTA=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -315,7 +311,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			l6KAAf0cw966ke3T3Vd7bBFN+/k=
+			y8E3umgEm27oR3CuuRYdqxu+j3s=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -365,7 +361,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			MJ75yizEEqhPsssHOTGKoTCHN7g=
+			mmJaG6ESjPchdnFBl1/oyYwsRAQ=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -428,7 +424,7 @@
 		</dict>
 		<key>Frameworks/ownCloudAppShared.framework/ownCloudAppShared</key>
 		<data>
-		ihssZGicxIi32OpoEkZidi+4Hcc=
+		7/AMEyjXdUPWmYyEgH1TeLxi/04=
 		</data>
 		<key>Frameworks/ownCloudAppShared.framework/owncloud-logo.tvg</key>
 		<data>
@@ -442,7 +438,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			7oZU7cFMoft3lXjFFWtWe09IKKg=
+			WnKamXpTpX2dSniOlHGWZQsdiHA=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -460,7 +456,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			ItS9qOPodUr/wt7vsRye55kibCI=
+			TkYqGDVKPl9YVgMfQGpyeO6pPHw=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -469,7 +465,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			Rb55YklrIM190j5xLSrTy6hVIwU=
+			K125ESZXxTuvhbqXMVHJKosHS2s=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -498,7 +494,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			F40vCAN9WcoFY4gb8cd4PlffizE=
+			YOXxRs+3mtjE3zaQKvP1nhhXzW4=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -534,7 +530,7 @@
 		</data>
 		<key>Frameworks/ownCloudSDK.framework/Info.plist</key>
 		<data>
-		W0eXrq5tBFeSvYO6GuEk/+KxL1A=
+		QFblxu3Qzf2T3cnUR+vMU22LF48=
 		</data>
 		<key>Frameworks/ownCloudSDK.framework/LICENSE</key>
 		<data>
@@ -542,7 +538,7 @@
 		</data>
 		<key>Frameworks/ownCloudSDK.framework/_CodeSignature/CodeResources</key>
 		<data>
-		md2msTZ47OVlzxVgwisNuSyGjJc=
+		CcVGQ5OskNre7uRJknDZ8j4wsZM=
 		</data>
 		<key>Frameworks/ownCloudSDK.framework/cs.lproj/Localizable.strings</key>
 		<dict>
@@ -636,7 +632,7 @@
 		</dict>
 		<key>Frameworks/ownCloudSDK.framework/ownCloudSDK</key>
 		<data>
-		acQUqFP5RpXcgXbYpgq/QjOUEfg=
+		ZfLn2LOtU8uuqY+9hpPeXx9H7jE=
 		</data>
 		<key>Frameworks/ownCloudSDK.framework/pt-BR.lproj/Localizable.strings</key>
 		<dict>
@@ -694,11 +690,11 @@
 		</dict>
 		<key>Frameworks/ownCloudUI.framework/Info.plist</key>
 		<data>
-		qoWxGSANwL+rJBVwenvJAMGBN/A=
+		1xTEN9TFpmq35cZF0Q01nix6t/4=
 		</data>
 		<key>Frameworks/ownCloudUI.framework/_CodeSignature/CodeResources</key>
 		<data>
-		BnVl/2jnTo1QIYto60OWHQMyzjA=
+		kwW/FGPxzS9X3W/0QcTySHs4zwU=
 		</data>
 		<key>Frameworks/ownCloudUI.framework/cs.lproj/Localizable.strings</key>
 		<dict>
@@ -792,7 +788,7 @@
 		</dict>
 		<key>Frameworks/ownCloudUI.framework/ownCloudUI</key>
 		<data>
-		qlGaaybctGSnSZKEAupko4Xolf8=
+		B3ZxE4hWdZFKDizb154mOhfSx2k=
 		</data>
 		<key>Frameworks/ownCloudUI.framework/pt-BR.lproj/Localizable.strings</key>
 		<dict>
@@ -850,7 +846,7 @@
 		</dict>
 		<key>Info.plist</key>
 		<data>
-		utsMrrlbjmOwQm5ZoKGdQt4J5ac=
+		N9ytInhfRGC/cxBuXpc3iYfBreE=
 		</data>
 		<key>LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib</key>
 		<data>
@@ -919,11 +915,11 @@
 		</dict>
 		<key>PlugIns/ownCloud File Provider UI.appex/Info.plist</key>
 		<data>
-		mt0WPfVVO83ro1jE4bGrL4k9V9Q=
+		F8ZrLKcSWGoxr7KTB64NcTKGm3Q=
 		</data>
 		<key>PlugIns/ownCloud File Provider UI.appex/PocketSVG_PocketSVG.bundle/Info.plist</key>
 		<data>
-		/fXj7rMps2uGCeII3SoI9WYZQsc=
+		NWVNkuqaYO+sb9eEGk9dnPGQ3NY=
 		</data>
 		<key>PlugIns/ownCloud File Provider UI.appex/PocketSVG_PocketSVG.bundle/SVGColors.plist</key>
 		<data>
@@ -931,7 +927,7 @@
 		</data>
 		<key>PlugIns/ownCloud File Provider UI.appex/PocketSVG_PocketSVG.bundle/_CodeSignature/CodeDirectory</key>
 		<data>
-		CQwdvgNmYpCfTbUsdUVInr0jLs8=
+		Cu/nnG+dZungUjtK+aIYylw9STo=
 		</data>
 		<key>PlugIns/ownCloud File Provider UI.appex/PocketSVG_PocketSVG.bundle/_CodeSignature/CodeRequirements</key>
 		<data>
@@ -939,7 +935,7 @@
 		</data>
 		<key>PlugIns/ownCloud File Provider UI.appex/PocketSVG_PocketSVG.bundle/_CodeSignature/CodeRequirements-1</key>
 		<data>
-		eoRF8DsD9n7JLJWanpncBr9lSsk=
+		Vi/en6xLTGhtW1SxLFUTbqyVeY4=
 		</data>
 		<key>PlugIns/ownCloud File Provider UI.appex/PocketSVG_PocketSVG.bundle/_CodeSignature/CodeResources</key>
 		<data>
@@ -951,19 +947,19 @@
 		</data>
 		<key>PlugIns/ownCloud File Provider UI.appex/_CodeSignature/CodeResources</key>
 		<data>
-		wZFkKS4MUiXE0gh2E0Y07Q1M1r8=
+		gP/3zlf5newafA88CCFv7dhhizI=
 		</data>
 		<key>PlugIns/ownCloud File Provider UI.appex/ownCloud File Provider UI</key>
 		<data>
-		sMDC9AvHHTMZkeaNCxDW+/iQ91o=
+		jEknelk/7YUl9EZXHdGpHJFUCkg=
 		</data>
 		<key>PlugIns/ownCloud File Provider.appex/Info.plist</key>
 		<data>
-		k2IPzl2BnC+cHW1PjdHBn06Z38M=
+		YnCtynvQoESErZnK1VIWXIT9Wn0=
 		</data>
 		<key>PlugIns/ownCloud File Provider.appex/_CodeSignature/CodeResources</key>
 		<data>
-		aObaQSYuuEVYqV79gOKOWskoBJQ=
+		ObDRGHBSxdGhOtvS9rLb7lR2aiY=
 		</data>
 		<key>PlugIns/ownCloud File Provider.appex/en.lproj/Localizable.strings</key>
 		<dict>
@@ -985,24 +981,24 @@
 		</dict>
 		<key>PlugIns/ownCloud File Provider.appex/ownCloud File Provider</key>
 		<data>
-		ygKsTUniQ9jpvfUWdfQwBtBhr9s=
+		av2UvbvrxFaLTsIarD7CfZW5Igg=
 		</data>
 		<key>PlugIns/ownCloud Intents.appex/Base.lproj/Intents.intentdefinition</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			dtI6MxlM7xj/Oxn73VtvYT4oO+g=
+			Fh6Dx4RM3ooll6UQ6FkYk3cT65o=
 			</data>
 			<key>optional</key>
 			<true/>
 		</dict>
 		<key>PlugIns/ownCloud Intents.appex/Info.plist</key>
 		<data>
-		wsvJjmU+qYJJcCFUZcaXIyaDyCU=
+		0c21CIyPVHf2GL6VqQpPvfaFTvw=
 		</data>
 		<key>PlugIns/ownCloud Intents.appex/PocketSVG_PocketSVG.bundle/Info.plist</key>
 		<data>
-		/fXj7rMps2uGCeII3SoI9WYZQsc=
+		NWVNkuqaYO+sb9eEGk9dnPGQ3NY=
 		</data>
 		<key>PlugIns/ownCloud Intents.appex/PocketSVG_PocketSVG.bundle/SVGColors.plist</key>
 		<data>
@@ -1010,7 +1006,7 @@
 		</data>
 		<key>PlugIns/ownCloud Intents.appex/PocketSVG_PocketSVG.bundle/_CodeSignature/CodeDirectory</key>
 		<data>
-		CQwdvgNmYpCfTbUsdUVInr0jLs8=
+		Cu/nnG+dZungUjtK+aIYylw9STo=
 		</data>
 		<key>PlugIns/ownCloud Intents.appex/PocketSVG_PocketSVG.bundle/_CodeSignature/CodeRequirements</key>
 		<data>
@@ -1018,7 +1014,7 @@
 		</data>
 		<key>PlugIns/ownCloud Intents.appex/PocketSVG_PocketSVG.bundle/_CodeSignature/CodeRequirements-1</key>
 		<data>
-		eoRF8DsD9n7JLJWanpncBr9lSsk=
+		Vi/en6xLTGhtW1SxLFUTbqyVeY4=
 		</data>
 		<key>PlugIns/ownCloud Intents.appex/PocketSVG_PocketSVG.bundle/_CodeSignature/CodeResources</key>
 		<data>
@@ -1030,7 +1026,7 @@
 		</data>
 		<key>PlugIns/ownCloud Intents.appex/_CodeSignature/CodeResources</key>
 		<data>
-		e3V04/5WmmnfBQYPi2CtA76qoq4=
+		YoY7u2OIy72/Vt/1+mn13Rr6iTI=
 		</data>
 		<key>PlugIns/ownCloud Intents.appex/ar.lproj/Intents.strings</key>
 		<dict>
@@ -1142,7 +1138,7 @@
 		</dict>
 		<key>PlugIns/ownCloud Intents.appex/ownCloud Intents</key>
 		<data>
-		pOkQRdfCp07C3i0WOFcZ4+DgQPI=
+		kqFjdu/r9+mlzwPc7YaRr/6s+7U=
 		</data>
 		<key>PlugIns/ownCloud Intents.appex/pt-BR.lproj/Intents.strings</key>
 		<dict>
@@ -1200,15 +1196,15 @@
 		</dict>
 		<key>PlugIns/ownCloud Share Extension.appex/Assets.car</key>
 		<data>
-		LF5Jt1IgRSmS2aRXHhDn7mGe3S8=
+		lV06vFgfOrKfjgfpANrXZ7RYmWw=
 		</data>
 		<key>PlugIns/ownCloud Share Extension.appex/Info.plist</key>
 		<data>
-		CSUIgc0Sr3fzYlSQoRShpsc06X8=
+		vSP27ZVxGnRAhcroFA4ybcAYIfk=
 		</data>
 		<key>PlugIns/ownCloud Share Extension.appex/PocketSVG_PocketSVG.bundle/Info.plist</key>
 		<data>
-		/fXj7rMps2uGCeII3SoI9WYZQsc=
+		NWVNkuqaYO+sb9eEGk9dnPGQ3NY=
 		</data>
 		<key>PlugIns/ownCloud Share Extension.appex/PocketSVG_PocketSVG.bundle/SVGColors.plist</key>
 		<data>
@@ -1216,7 +1212,7 @@
 		</data>
 		<key>PlugIns/ownCloud Share Extension.appex/PocketSVG_PocketSVG.bundle/_CodeSignature/CodeDirectory</key>
 		<data>
-		CQwdvgNmYpCfTbUsdUVInr0jLs8=
+		Cu/nnG+dZungUjtK+aIYylw9STo=
 		</data>
 		<key>PlugIns/ownCloud Share Extension.appex/PocketSVG_PocketSVG.bundle/_CodeSignature/CodeRequirements</key>
 		<data>
@@ -1224,7 +1220,7 @@
 		</data>
 		<key>PlugIns/ownCloud Share Extension.appex/PocketSVG_PocketSVG.bundle/_CodeSignature/CodeRequirements-1</key>
 		<data>
-		eoRF8DsD9n7JLJWanpncBr9lSsk=
+		Vi/en6xLTGhtW1SxLFUTbqyVeY4=
 		</data>
 		<key>PlugIns/ownCloud Share Extension.appex/PocketSVG_PocketSVG.bundle/_CodeSignature/CodeResources</key>
 		<data>
@@ -1236,7 +1232,7 @@
 		</data>
 		<key>PlugIns/ownCloud Share Extension.appex/_CodeSignature/CodeResources</key>
 		<data>
-		bMova8OjpArAGhiFsmbahWvNRUA=
+		HGa0VSY6jScZY43+zr2aUeR7yOE=
 		</data>
 		<key>PlugIns/ownCloud Share Extension.appex/ar.lproj/InfoPlist.strings</key>
 		<dict>
@@ -1251,7 +1247,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			Mpj199tcLiBp7F+VBgb1W75Fk2Q=
+			wnDbUkdvg4gWXwf+oIJaBXgA+c4=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -1287,7 +1283,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			JJRtefS8yUjXdV3fiLJYln1Wi8g=
+			lT3vtRduX9njN1urlfRhIOzFPTA=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -1341,7 +1337,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			l6KAAf0cw966ke3T3Vd7bBFN+/k=
+			y8E3umgEm27oR3CuuRYdqxu+j3s=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -1377,7 +1373,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			MJ75yizEEqhPsssHOTGKoTCHN7g=
+			mmJaG6ESjPchdnFBl1/oyYwsRAQ=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -1456,7 +1452,7 @@
 		</dict>
 		<key>PlugIns/ownCloud Share Extension.appex/ownCloud Share Extension</key>
 		<data>
-		aao6EqUAM51gpO/RXf2S+7dAnoM=
+		Vq+PZ84/1NoO+BiB4Vm3Di7V4Io=
 		</data>
 		<key>PlugIns/ownCloud Share Extension.appex/pt-BR.lproj/InfoPlist.strings</key>
 		<dict>
@@ -1471,7 +1467,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			7oZU7cFMoft3lXjFFWtWe09IKKg=
+			WnKamXpTpX2dSniOlHGWZQsdiHA=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -1507,7 +1503,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			ItS9qOPodUr/wt7vsRye55kibCI=
+			TkYqGDVKPl9YVgMfQGpyeO6pPHw=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -1525,7 +1521,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			Rb55YklrIM190j5xLSrTy6hVIwU=
+			K125ESZXxTuvhbqXMVHJKosHS2s=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -1543,7 +1539,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			F40vCAN9WcoFY4gb8cd4PlffizE=
+			YOXxRs+3mtjE3zaQKvP1nhhXzW4=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -1568,7 +1564,7 @@
 		</dict>
 		<key>PocketSVG_PocketSVG.bundle/Info.plist</key>
 		<data>
-		/fXj7rMps2uGCeII3SoI9WYZQsc=
+		NWVNkuqaYO+sb9eEGk9dnPGQ3NY=
 		</data>
 		<key>PocketSVG_PocketSVG.bundle/SVGColors.plist</key>
 		<data>
@@ -1576,7 +1572,7 @@
 		</data>
 		<key>PocketSVG_PocketSVG.bundle/_CodeSignature/CodeDirectory</key>
 		<data>
-		CQwdvgNmYpCfTbUsdUVInr0jLs8=
+		Cu/nnG+dZungUjtK+aIYylw9STo=
 		</data>
 		<key>PocketSVG_PocketSVG.bundle/_CodeSignature/CodeRequirements</key>
 		<data>
@@ -1584,7 +1580,7 @@
 		</data>
 		<key>PocketSVG_PocketSVG.bundle/_CodeSignature/CodeRequirements-1</key>
 		<data>
-		eoRF8DsD9n7JLJWanpncBr9lSsk=
+		Vi/en6xLTGhtW1SxLFUTbqyVeY4=
 		</data>
 		<key>PocketSVG_PocketSVG.bundle/_CodeSignature/CodeResources</key>
 		<data>
@@ -1604,11 +1600,11 @@
 		</data>
 		<key>ReleaseNotes.plist</key>
 		<data>
-		MPeP6mrRNO1EWEPF0h2ZyrxLPjY=
+		JQXS486onhkgHDPqIzcQLHB49ww=
 		</data>
 		<key>ServerListTableViewController.nib</key>
 		<data>
-		gLgrl+xP/1qvtWF+qfN1MIjlOA4=
+		Q7eHWDbNsZLFNB3oMSY1XfiLgV4=
 		</data>
 		<key>ar.lproj/InfoPlist.strings</key>
 		<dict>
@@ -1632,7 +1628,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			NtuQyeG3yDxxnEBNjH4B0RDVQzQ=
+			VJaUq2sYGtnsLn6ris+VugrCASc=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -1706,26 +1702,18 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			5iEmKqbZ/JMY9EURXptWDyg1m38=
+			1+eRYoa0A1TXxMPo06uSW+/3qqw=
 			</data>
 			<key>optional</key>
 			<true/>
 		</dict>
-		<key>doc/APP_BUILD_FLAGS.md</key>
-		<data>
-		R3gnXrn6jqllxX45NhibCWisXIw=
-		</data>
-		<key>doc/BUILD_CUSTOMIZATION.md</key>
-		<data>
-		1a7AOCwUI8+3BXB/tczQ0gQb3jA=
-		</data>
 		<key>doc/CONFIGURATION.json</key>
 		<data>
 		sR7B6aMk8OL8chZwZ0GhTyPwlYU=
 		</data>
-		<key>doc/CONFIGURATION.md</key>
+		<key>doc/README.md</key>
 		<data>
-		qAJl3wROJjPbcu8+MSPkEv8uJUg=
+		jd2+CUUvzFPFFuyJ6tpeoOC4LyY=
 		</data>
 		<key>doc/SECURITY.md</key>
 		<data>
@@ -1750,6 +1738,702 @@
 		<key>doc/Themes/Light-scheme.md</key>
 		<data>
 		iAkrB3rl0VnkkHq1z3SS9gUksNA=
+		</data>
+		<key>doc/configuration.adoc</key>
+		<data>
+		g+g8ZCeAGGAWAKdxkqgmQEBCdrk=
+		</data>
+		<key>doc/images/Framefile.json</key>
+		<data>
+		8a8D2e69vRbv/Piw2pBkp6strJM=
+		</data>
+		<key>doc/images/README.md</key>
+		<data>
+		jvh163dCpjnStgQW94LBBFRoJ2E=
+		</data>
+		<key>doc/images/README.txt</key>
+		<data>
+		eZljUVabLOZmqAo0yaeeuVm7ULk=
+		</data>
+		<key>doc/images/ar/keyword.strings</key>
+		<data>
+		SI7ePrdszMORK1iB4katC0BO/ss=
+		</data>
+		<key>doc/images/ar/title.strings</key>
+		<data>
+		SI7ePrdszMORK1iB4katC0BO/ss=
+		</data>
+		<key>doc/images/background.jpg</key>
+		<data>
+		S0t6NLRIZvpGHFv+dpf3JKEmBVg=
+		</data>
+		<key>doc/images/ca/keyword.strings</key>
+		<data>
+		LtxjLe6bk+/ajDxNrlpq0iMjOTY=
+		</data>
+		<key>doc/images/ca/title.strings</key>
+		<data>
+		FgU17iYL8YbqgEEQhQMRm/R/jVA=
+		</data>
+		<key>doc/images/de-DE/README.md</key>
+		<data>
+		BU/4m32lQAbuJLOTpdftNAROU80=
+		</data>
+		<key>doc/images/de-DE/keyword.strings</key>
+		<data>
+		nfAPsjUkoPsVYp8Xks7vyqqTZuo=
+		</data>
+		<key>doc/images/de-DE/title.strings</key>
+		<data>
+		g3yOKRE/szWPG74apY3dayMWqLs=
+		</data>
+		<key>doc/images/de/keyword.strings</key>
+		<data>
+		nfAPsjUkoPsVYp8Xks7vyqqTZuo=
+		</data>
+		<key>doc/images/de/title.strings</key>
+		<data>
+		g3yOKRE/szWPG74apY3dayMWqLs=
+		</data>
+		<key>doc/images/de_CH/keyword.strings</key>
+		<data>
+		nfAPsjUkoPsVYp8Xks7vyqqTZuo=
+		</data>
+		<key>doc/images/de_CH/title.strings</key>
+		<data>
+		g3yOKRE/szWPG74apY3dayMWqLs=
+		</data>
+		<key>doc/images/el/keyword.strings</key>
+		<data>
+		RSiVEsUG4JoAwyDgY/BoeNMDPCE=
+		</data>
+		<key>doc/images/el/title.strings</key>
+		<data>
+		KTvM+c8dqzxQcIv2hMd0HsAmTdE=
+		</data>
+		<key>doc/images/en-GB/keyword.strings</key>
+		<data>
+		dalCkipI/Aq1oJbxVnc0/NFJyhY=
+		</data>
+		<key>doc/images/en-GB/title.strings</key>
+		<data>
+		LbCP5n536pJGdHcaJqEToZFcBjA=
+		</data>
+		<key>doc/images/en-US/iPad Pro (12.9-inch) (2nd generation)-10_ios_accounts_welcome_demo.png</key>
+		<data>
+		sigIadxPYcJ0ukhjuYwf6qMLbpc=
+		</data>
+		<key>doc/images/en-US/iPad Pro (12.9-inch) (2nd generation)-11_ios_accounts_list_demo.png</key>
+		<data>
+		cSLKcdEpiE21howCy1y5sCgF3Tg=
+		</data>
+		<key>doc/images/en-US/iPad Pro (12.9-inch) (2nd generation)-20_ios_files_list_demo.png</key>
+		<data>
+		T8Txwo9Y/SMNEURQhAkvPBwxMQc=
+		</data>
+		<key>doc/images/en-US/iPad Pro (12.9-inch) (2nd generation)-21_ios_files_actions_demo.png</key>
+		<data>
+		UzbO9VezbzJE7MdLta5bVt1LAUk=
+		</data>
+		<key>doc/images/en-US/iPad Pro (12.9-inch) (2nd generation)-22_ios_files_preview_pdf_demo.png</key>
+		<data>
+		OH0aPOiY/IWZBapdLECPvsgADXA=
+		</data>
+		<key>doc/images/en-US/iPad Pro (12.9-inch) (2nd generation)-23_ios_files_list_multiple_window_landscape.png</key>
+		<data>
+		GdUFkHn8fIA63Eizxo9Sbi9fJhs=
+		</data>
+		<key>doc/images/en-US/iPad Pro (12.9-inch) (2nd generation)-40_ios_quick_access_demo.png</key>
+		<data>
+		BUKoPQ/yDXb5wqv6rQg6TK02Ww0=
+		</data>
+		<key>doc/images/en-US/iPad Pro (12.9-inch) (2nd generation)-60_ios_settings_demo.png</key>
+		<data>
+		q869Cr3luxx6Z527f4crHP26XXg=
+		</data>
+		<key>doc/images/en-US/iPad Pro (12.9-inch) (4th generation)-10_ios_accounts_welcome_demo.png</key>
+		<data>
+		8TrpFYtNKlLEbs+Jm39Z1X8TB4Y=
+		</data>
+		<key>doc/images/en-US/iPad Pro (12.9-inch) (4th generation)-10_ios_accounts_welcome_demo_framed.png</key>
+		<data>
+		3MSiSbMCNPBASEY43L0wRJy2SDk=
+		</data>
+		<key>doc/images/en-US/iPad Pro (12.9-inch) (4th generation)-11_ios_accounts_list_demo.png</key>
+		<data>
+		//1VLlsqvbOdPxsVfUeqLHsZw/w=
+		</data>
+		<key>doc/images/en-US/iPad Pro (12.9-inch) (4th generation)-11_ios_accounts_list_demo_framed.png</key>
+		<data>
+		nPYINbkbgIi8CcEQUHAUC1XfaYg=
+		</data>
+		<key>doc/images/en-US/iPad Pro (12.9-inch) (4th generation)-20_ios_files_list_demo.png</key>
+		<data>
+		V1hh7ruJJgMWVgB3QZA227osf7A=
+		</data>
+		<key>doc/images/en-US/iPad Pro (12.9-inch) (4th generation)-20_ios_files_list_demo_framed.png</key>
+		<data>
+		n8+BpjWQw4RUz5+pXR6ATrCiSx8=
+		</data>
+		<key>doc/images/en-US/iPad Pro (12.9-inch) (4th generation)-21_ios_files_actions_demo.png</key>
+		<data>
+		GDa3488Hth3XaxuAEnwwxJN5K9s=
+		</data>
+		<key>doc/images/en-US/iPad Pro (12.9-inch) (4th generation)-21_ios_files_actions_demo_framed.png</key>
+		<data>
+		sWXFFZsBFPEqhmuDUJ2BtyzWyUc=
+		</data>
+		<key>doc/images/en-US/iPad Pro (12.9-inch) (4th generation)-22_ios_files_preview_pdf_demo.png</key>
+		<data>
+		1F3y760lralZRNnd3EbkmJInN1o=
+		</data>
+		<key>doc/images/en-US/iPad Pro (12.9-inch) (4th generation)-22_ios_files_preview_pdf_demo_framed.png</key>
+		<data>
+		9xmfjgSqNOhWKW7UISkhpdZ5bcU=
+		</data>
+		<key>doc/images/en-US/iPad Pro (12.9-inch) (4th generation)-60_ios_settings_demo.png</key>
+		<data>
+		N3f5G/puvhCB/l8EXx+M0goa2Ms=
+		</data>
+		<key>doc/images/en-US/iPad Pro (12.9-inch) (4th generation)-60_ios_settings_demo_framed.png</key>
+		<data>
+		6jkerfMJsNdyLdlzfYgUp2Pgpjs=
+		</data>
+		<key>doc/images/en-US/iPad Pro (12.9-inch) (5th generation)-10_ios_accounts_welcome_demo.png</key>
+		<data>
+		r4ubxb0ACOUiP0rHxsoW7EhWqnY=
+		</data>
+		<key>doc/images/en-US/iPad Pro (12.9-inch) (5th generation)-11_ios_accounts_list_demo.png</key>
+		<data>
+		KzKJeekDpOXcUPIAB/+QGoOtoXs=
+		</data>
+		<key>doc/images/en-US/iPad Pro (12.9-inch) (5th generation)-20_ios_files_list_demo.png</key>
+		<data>
+		Enui+V0a9LHqV8yNWTuQWHTfuCI=
+		</data>
+		<key>doc/images/en-US/iPad Pro (12.9-inch) (5th generation)-21_ios_files_actions_demo.png</key>
+		<data>
+		0slBb7o7mGVHtb0GVbh/Ozkdt/Q=
+		</data>
+		<key>doc/images/en-US/iPad Pro (12.9-inch) (5th generation)-22_ios_files_preview_pdf_demo.png</key>
+		<data>
+		GpI6iOIOZzPpzamkv2PZXPQoRxY=
+		</data>
+		<key>doc/images/en-US/iPad Pro (12.9-inch) (5th generation)-23_ios_files_list_multiple_window_landscape.png</key>
+		<data>
+		Q1Ixed7DMb2MkBDCW1I9ZO2UgRM=
+		</data>
+		<key>doc/images/en-US/iPad Pro (12.9-inch) (5th generation)-40_ios_quick_access_demo.png</key>
+		<data>
+		MkSKt+BXQSFcXWbRSs4mAdnZX4E=
+		</data>
+		<key>doc/images/en-US/iPad Pro (12.9-inch) (5th generation)-60_ios_settings_demo.png</key>
+		<data>
+		Sg1oDesSXBbnP14uaXxs+JjyGHM=
+		</data>
+		<key>doc/images/en-US/iPad Pro (9.7-inch)-10_ios_accounts_welcome_demo.png</key>
+		<data>
+		JrD7Tk9rh3sEWLBlWOmKnfDoOSU=
+		</data>
+		<key>doc/images/en-US/iPad Pro (9.7-inch)-10_ios_accounts_welcome_demo_framed.png</key>
+		<data>
+		qh5lHSGOZ909sMKdPnrnut+Smh8=
+		</data>
+		<key>doc/images/en-US/iPad Pro (9.7-inch)-11_ios_accounts_list_demo.png</key>
+		<data>
+		RY9AI+btIWRd0/pbQYzKPj9ASYY=
+		</data>
+		<key>doc/images/en-US/iPad Pro (9.7-inch)-11_ios_accounts_list_demo_framed.png</key>
+		<data>
+		LDycvf0dDZRlNdZU3828992tpRw=
+		</data>
+		<key>doc/images/en-US/iPad Pro (9.7-inch)-20_ios_files_list_demo.png</key>
+		<data>
+		yTRpBsLbi/HwUltLrigDXfKO0Pw=
+		</data>
+		<key>doc/images/en-US/iPad Pro (9.7-inch)-20_ios_files_list_demo_framed.png</key>
+		<data>
+		W7swPnc95iiwPqbeWzaQSebjpC4=
+		</data>
+		<key>doc/images/en-US/iPad Pro (9.7-inch)-21_ios_files_actions_demo.png</key>
+		<data>
+		QRzmnZmm6wlfMEETlucnbLzGQl8=
+		</data>
+		<key>doc/images/en-US/iPad Pro (9.7-inch)-21_ios_files_actions_demo_framed.png</key>
+		<data>
+		ADpBYY21kjtKEF4RGM1ShsyQBLk=
+		</data>
+		<key>doc/images/en-US/iPad Pro (9.7-inch)-22_ios_files_preview_pdf_demo.png</key>
+		<data>
+		K0yrjfEm9h3XnjgAi3Fc9F5M83Y=
+		</data>
+		<key>doc/images/en-US/iPad Pro (9.7-inch)-22_ios_files_preview_pdf_demo_framed.png</key>
+		<data>
+		U70SoUGb8eSxh17K225plkzvUQ4=
+		</data>
+		<key>doc/images/en-US/iPad Pro (9.7-inch)-23_ios_files_list_multiple_window_landscape.png</key>
+		<data>
+		RS3WA/J3vEwqWvJJNa1tSMsk1Y0=
+		</data>
+		<key>doc/images/en-US/iPad Pro (9.7-inch)-23_ios_files_list_multiple_window_landscape_framed.png</key>
+		<data>
+		tU2ST8tn8b8Vhj6AwL3qbvAqERY=
+		</data>
+		<key>doc/images/en-US/iPad Pro (9.7-inch)-40_ios_quick_access_demo.png</key>
+		<data>
+		uhYqMwWV40LLGwq6YWCNyu50AAM=
+		</data>
+		<key>doc/images/en-US/iPad Pro (9.7-inch)-40_ios_quick_access_demo_framed.png</key>
+		<data>
+		wwwrF2Eoa5YNU/WhrXdnIsEbpKI=
+		</data>
+		<key>doc/images/en-US/iPad Pro (9.7-inch)-60_ios_settings_demo.png</key>
+		<data>
+		y4x81hykwtXEWXyRHvAzto+2BzA=
+		</data>
+		<key>doc/images/en-US/iPad Pro (9.7-inch)-60_ios_settings_demo_framed.png</key>
+		<data>
+		Db+t1f91DnDA77GtFTnV4xBz0yM=
+		</data>
+		<key>doc/images/en-US/iPhone 11 Pro Max-10_ios_accounts_welcome_demo.png</key>
+		<data>
+		SEuBLwI44b6FGClOs2HRoNO/h70=
+		</data>
+		<key>doc/images/en-US/iPhone 11 Pro Max-10_ios_accounts_welcome_demo_framed.png</key>
+		<data>
+		hQLOIHGHwDbn2RRgoiyukAx2uQI=
+		</data>
+		<key>doc/images/en-US/iPhone 11 Pro Max-11_ios_accounts_list_demo.png</key>
+		<data>
+		cvnnB1IqBeaM6huBfyDKB+Y+q6o=
+		</data>
+		<key>doc/images/en-US/iPhone 11 Pro Max-11_ios_accounts_list_demo_framed.png</key>
+		<data>
+		FD31b8G5j3sL+WE321TdYgeROpQ=
+		</data>
+		<key>doc/images/en-US/iPhone 11 Pro Max-20_ios_files_list_demo.png</key>
+		<data>
+		EotMfiL0LBa/L89vFCUTExxCwmM=
+		</data>
+		<key>doc/images/en-US/iPhone 11 Pro Max-20_ios_files_list_demo_framed.png</key>
+		<data>
+		1VckawFIqB6V4v4RO+3wwpWcpxs=
+		</data>
+		<key>doc/images/en-US/iPhone 11 Pro Max-21_ios_files_actions_demo.png</key>
+		<data>
+		9ZEKVGAeZC3YUC1aG31cuLaKlNs=
+		</data>
+		<key>doc/images/en-US/iPhone 11 Pro Max-21_ios_files_actions_demo_framed.png</key>
+		<data>
+		nG7VvcyXvGauDu2cZrbbXuF5E+Q=
+		</data>
+		<key>doc/images/en-US/iPhone 11 Pro Max-22_ios_files_preview_pdf_demo.png</key>
+		<data>
+		QWWeusyaUgCG63rXdTa1gI99NRk=
+		</data>
+		<key>doc/images/en-US/iPhone 11 Pro Max-22_ios_files_preview_pdf_demo_framed.png</key>
+		<data>
+		TkW2PPzr5dTgjxAtK83PBTqMvKk=
+		</data>
+		<key>doc/images/en-US/iPhone 11 Pro Max-40_ios_quick_access_demo.png</key>
+		<data>
+		v/4gtoX7Bb3H5H8YRyISgkm1WyE=
+		</data>
+		<key>doc/images/en-US/iPhone 11 Pro Max-40_ios_quick_access_demo_framed.png</key>
+		<data>
+		6lhnN4ysY2GXxU16E3n21ATL/bE=
+		</data>
+		<key>doc/images/en-US/iPhone 11 Pro Max-60_ios_settings_demo.png</key>
+		<data>
+		2PE/ALDqkOKztHTacffBIxcPE1k=
+		</data>
+		<key>doc/images/en-US/iPhone 11 Pro Max-60_ios_settings_demo_framed.png</key>
+		<data>
+		A3udVcJEMosi5U1AEbvr0l8kA6k=
+		</data>
+		<key>doc/images/en-US/iPhone 11-10_ios_accounts_welcome_demo.png</key>
+		<data>
+		Zzy2HLKyw+u7gOAqH2VJ03QlqvU=
+		</data>
+		<key>doc/images/en-US/iPhone 11-10_ios_accounts_welcome_demo_framed.png</key>
+		<data>
+		DM1W6EKBdbO73gZW+Td6Y7vQn/A=
+		</data>
+		<key>doc/images/en-US/iPhone 11-11_ios_accounts_list_demo.png</key>
+		<data>
+		nAY4hSj1yVuXdWUv1Yn42gqZsnk=
+		</data>
+		<key>doc/images/en-US/iPhone 11-11_ios_accounts_list_demo_framed.png</key>
+		<data>
+		SBoDToHZWgv3eToQx/iQqh38l6Q=
+		</data>
+		<key>doc/images/en-US/iPhone 11-20_ios_files_list_demo.png</key>
+		<data>
+		YTmS2o9lw50bRlwA+38l+nhwxHs=
+		</data>
+		<key>doc/images/en-US/iPhone 11-20_ios_files_list_demo_framed.png</key>
+		<data>
+		mdz1ywyDPNu3T7V+dCH40jJ+iOw=
+		</data>
+		<key>doc/images/en-US/iPhone 11-21_ios_files_actions_demo.png</key>
+		<data>
+		Z0V92C5uPnPrzLBB3EBnpfZQPOQ=
+		</data>
+		<key>doc/images/en-US/iPhone 11-21_ios_files_actions_demo_framed.png</key>
+		<data>
+		IE4ZKKwTlOPZuoJyt0+zMIFdFQU=
+		</data>
+		<key>doc/images/en-US/iPhone 11-22_ios_files_preview_pdf_demo.png</key>
+		<data>
+		boawtgM5KgvqxsPrX0h0w9WkmIk=
+		</data>
+		<key>doc/images/en-US/iPhone 11-22_ios_files_preview_pdf_demo_framed.png</key>
+		<data>
+		J/ddnfF68O2oN6kiD0dKqisGApI=
+		</data>
+		<key>doc/images/en-US/iPhone 11-40_ios_quick_access_demo.png</key>
+		<data>
+		tAqD9Sf9ugkgEZ3BgjyeVjcVN5g=
+		</data>
+		<key>doc/images/en-US/iPhone 11-40_ios_quick_access_demo_framed.png</key>
+		<data>
+		i1ifIV5jbV/O5bdNf7W28F1JFLw=
+		</data>
+		<key>doc/images/en-US/iPhone 11-60_ios_settings_demo.png</key>
+		<data>
+		jEBjVFVZhdrHAEyCvkQybSC75Vc=
+		</data>
+		<key>doc/images/en-US/iPhone 11-60_ios_settings_demo_framed.png</key>
+		<data>
+		zxyhRFuaIixCFEpONIs/nLQHbsA=
+		</data>
+		<key>doc/images/en-US/iPhone 8 Plus-10_ios_accounts_welcome_demo.png</key>
+		<data>
+		8fk0aPG11BPjnWSgDYT0L3APVMY=
+		</data>
+		<key>doc/images/en-US/iPhone 8 Plus-10_ios_accounts_welcome_demo_framed.png</key>
+		<data>
+		JCcY1QzCVuS1TZUZSFndHmGzPaw=
+		</data>
+		<key>doc/images/en-US/iPhone 8 Plus-11_ios_accounts_list_demo.png</key>
+		<data>
+		Z3NMlHNlE3b9Pe16dLG4P9ntcwM=
+		</data>
+		<key>doc/images/en-US/iPhone 8 Plus-11_ios_accounts_list_demo_framed.png</key>
+		<data>
+		zL6GSyak7uJyJ5U0Ve+pvMw1VT0=
+		</data>
+		<key>doc/images/en-US/iPhone 8 Plus-20_ios_files_list_demo.png</key>
+		<data>
+		rt4BWnBBtfSeS9tq9sV39NZAk54=
+		</data>
+		<key>doc/images/en-US/iPhone 8 Plus-20_ios_files_list_demo_framed.png</key>
+		<data>
+		ytrlohJREi53qwzb53FogvPPhok=
+		</data>
+		<key>doc/images/en-US/iPhone 8 Plus-21_ios_files_actions_demo.png</key>
+		<data>
+		4MSXpswCHVonADAG14/5njcOa74=
+		</data>
+		<key>doc/images/en-US/iPhone 8 Plus-21_ios_files_actions_demo_framed.png</key>
+		<data>
+		O52/o3cFrA/xIbFIWIPgBJlrNgw=
+		</data>
+		<key>doc/images/en-US/iPhone 8 Plus-22_ios_files_preview_pdf_demo.png</key>
+		<data>
+		uTaJu4g7CStDyGCgXh0CvssR014=
+		</data>
+		<key>doc/images/en-US/iPhone 8 Plus-22_ios_files_preview_pdf_demo_framed.png</key>
+		<data>
+		neM01jAZiSoZ9a3HQIcwheF1JeE=
+		</data>
+		<key>doc/images/en-US/iPhone 8 Plus-40_ios_quick_access_demo.png</key>
+		<data>
+		QKpH3U/L43j3UQIiCPg+gZQEvLU=
+		</data>
+		<key>doc/images/en-US/iPhone 8 Plus-40_ios_quick_access_demo_framed.png</key>
+		<data>
+		Fr3zzBsBBm7/bQnQCTri0+tn5yM=
+		</data>
+		<key>doc/images/en-US/iPhone 8 Plus-60_ios_settings_demo.png</key>
+		<data>
+		0PbEW0qHT1yOn6JYmsbZZU7bIWE=
+		</data>
+		<key>doc/images/en-US/iPhone 8 Plus-60_ios_settings_demo_framed.png</key>
+		<data>
+		GxP0LmqU6oEF3H0hmrN7rO4G3hk=
+		</data>
+		<key>doc/images/en-US/iPhone 8-10_ios_accounts_welcome_demo.png</key>
+		<data>
+		U7HH49gUlTrRhmjjN49KchYTB6I=
+		</data>
+		<key>doc/images/en-US/iPhone 8-10_ios_accounts_welcome_demo_framed.png</key>
+		<data>
+		4U63vTpd1BRZyLGh8jatYETngAs=
+		</data>
+		<key>doc/images/en-US/iPhone 8-11_ios_accounts_list_demo.png</key>
+		<data>
+		tT0DCvLc+4AfSa7Qdo0bNF0TPYo=
+		</data>
+		<key>doc/images/en-US/iPhone 8-11_ios_accounts_list_demo_framed.png</key>
+		<data>
+		8b+DbZfF3A7il3ddFRCBgM5fxPg=
+		</data>
+		<key>doc/images/en-US/iPhone 8-20_ios_files_list_demo.png</key>
+		<data>
+		XUkgWioZTHmXos3k809h4HYe80M=
+		</data>
+		<key>doc/images/en-US/iPhone 8-20_ios_files_list_demo_framed.png</key>
+		<data>
+		5aXZPACpbX5Wan5YlACRaIrWJyY=
+		</data>
+		<key>doc/images/en-US/iPhone 8-21_ios_files_actions_demo.png</key>
+		<data>
+		5b/HFToEj6wugEPv2AsFW0bzLIY=
+		</data>
+		<key>doc/images/en-US/iPhone 8-21_ios_files_actions_demo_framed.png</key>
+		<data>
+		11jQQJ77u9ZG35q3ANpQNFG8Fus=
+		</data>
+		<key>doc/images/en-US/iPhone 8-22_ios_files_preview_pdf_demo.png</key>
+		<data>
+		i/SDesaK1Yh+/BGUHR+ve5ELXF8=
+		</data>
+		<key>doc/images/en-US/iPhone 8-22_ios_files_preview_pdf_demo_framed.png</key>
+		<data>
+		4u3imZ+as+P7mBtEYjIP6X2Urhs=
+		</data>
+		<key>doc/images/en-US/iPhone 8-40_ios_quick_access_demo.png</key>
+		<data>
+		VmsMUfFAAMsNRyK8ym6eC6/xXFA=
+		</data>
+		<key>doc/images/en-US/iPhone 8-40_ios_quick_access_demo_framed.png</key>
+		<data>
+		VY50ay5bUWAvQ1NmTtFMH6Kkjyw=
+		</data>
+		<key>doc/images/en-US/iPhone 8-60_ios_settings_demo.png</key>
+		<data>
+		N/OAi8qRMJ/8+VIVpcU03EY1kXs=
+		</data>
+		<key>doc/images/en-US/iPhone 8-60_ios_settings_demo_framed.png</key>
+		<data>
+		Pa+JwiICPAUFvzCNSMY0ttI7qhk=
+		</data>
+		<key>doc/images/en-US/iPhone SE (2nd generation)-10_ios_accounts_welcome_demo.png</key>
+		<data>
+		dXI4hKNyIAg+VkMdrXeATPjppY8=
+		</data>
+		<key>doc/images/en-US/iPhone SE (2nd generation)-10_ios_accounts_welcome_demo_framed.png</key>
+		<data>
+		s/Wo1dSz/kRzykhUlfgvzPLEy5I=
+		</data>
+		<key>doc/images/en-US/iPhone SE (2nd generation)-11_ios_accounts_list_demo.png</key>
+		<data>
+		PZ+6RLHP6OJSS6Bd8RxXy3rY9Sg=
+		</data>
+		<key>doc/images/en-US/iPhone SE (2nd generation)-11_ios_accounts_list_demo_framed.png</key>
+		<data>
+		47SuCgv0WGfCQCjVpB+UZjRKGFU=
+		</data>
+		<key>doc/images/en-US/iPhone SE (2nd generation)-20_ios_files_list_demo.png</key>
+		<data>
+		x3vhz7uPjncfWKnqXLM/1uoAZ+k=
+		</data>
+		<key>doc/images/en-US/iPhone SE (2nd generation)-20_ios_files_list_demo_framed.png</key>
+		<data>
+		OAzJkmFYLirLMf0RR71rMWxJzu8=
+		</data>
+		<key>doc/images/en-US/iPhone SE (2nd generation)-21_ios_files_actions_demo.png</key>
+		<data>
+		LsEKepw9VIjEx0A/TOZLB6O1cNk=
+		</data>
+		<key>doc/images/en-US/iPhone SE (2nd generation)-21_ios_files_actions_demo_framed.png</key>
+		<data>
+		hDXI5GjwIAEF+8I8JO2g87igMKQ=
+		</data>
+		<key>doc/images/en-US/iPhone SE (2nd generation)-22_ios_files_preview_pdf_demo.png</key>
+		<data>
+		zt44eKgQ+1NeGNjJ/5CdVQgOiT4=
+		</data>
+		<key>doc/images/en-US/iPhone SE (2nd generation)-22_ios_files_preview_pdf_demo_framed.png</key>
+		<data>
+		yKQCBSmeRs9+UwU34c/bPNVB8GA=
+		</data>
+		<key>doc/images/en-US/iPhone SE (2nd generation)-40_ios_quick_access_demo.png</key>
+		<data>
+		hDlVh0JggTbP8OJ8nTysW1/tUtw=
+		</data>
+		<key>doc/images/en-US/iPhone SE (2nd generation)-40_ios_quick_access_demo_framed.png</key>
+		<data>
+		jONJLgFp1HFNeN2NJbLphIFYxus=
+		</data>
+		<key>doc/images/en-US/iPhone SE (2nd generation)-60_ios_settings_demo.png</key>
+		<data>
+		02B3X140LPG0FBtdvQhyCQud264=
+		</data>
+		<key>doc/images/en-US/iPhone SE (2nd generation)-60_ios_settings_demo_framed.png</key>
+		<data>
+		2AVDGnBmRVyyRzV7Z8CQpNpChgM=
+		</data>
+		<key>doc/images/en-US/keyword.strings</key>
+		<data>
+		l6BZ4Ouc5MMBorBzaxDXT1vhjuY=
+		</data>
+		<key>doc/images/en-US/title.strings</key>
+		<data>
+		o/+r3fZ608Sfgx5skEpi+5t3+fM=
+		</data>
+		<key>doc/images/en/keyword.strings</key>
+		<data>
+		edMhkh2vtb1c8VmlniuvSthIMdQ=
+		</data>
+		<key>doc/images/en/title.strings</key>
+		<data>
+		aWeInA80ueM4beyso0nVkjv8TvY=
+		</data>
+		<key>doc/images/es/README.md</key>
+		<data>
+		EgzGjAjNskS4HjobhDcVOne9OKM=
+		</data>
+		<key>doc/images/es/keyword.strings</key>
+		<data>
+		4AhruS13SVKhigimBQ2XAy0F9y8=
+		</data>
+		<key>doc/images/es/title.strings</key>
+		<data>
+		c5uxlo+GRxDwB/QREuKg91Ahm5E=
+		</data>
+		<key>doc/images/et_EE/title.strings</key>
+		<data>
+		Ew6T3uuxEiCKN5aEvbg6fkQGs9Y=
+		</data>
+		<key>doc/images/eu/keyword.strings</key>
+		<data>
+		S5nzXK2VZztPlE0OY2NDtTN2MDQ=
+		</data>
+		<key>doc/images/eu/title.strings</key>
+		<data>
+		AHjCOlGG4AuQ06YlFF6ku8JfOeE=
+		</data>
+		<key>doc/images/fonts/OpenSans-Regular.ttf</key>
+		<data>
+		3JwHMDojkvnuAv22NoFJcHU6yUo=
+		</data>
+		<key>doc/images/fonts/OpenSans-Semibold.ttf</key>
+		<data>
+		8e56nG0T7i1kKoBsCec3J15hN5I=
+		</data>
+		<key>doc/images/fonts/README.md</key>
+		<data>
+		c9iaHFWEIA3Pvm8ViohH1kE49wc=
+		</data>
+		<key>doc/images/fr/title.strings</key>
+		<data>
+		sarDAtSTfDC2ekstdFqCvCzRluY=
+		</data>
+		<key>doc/images/gl/keyword.strings</key>
+		<data>
+		Es4T0YMvNZ/p5K6v2n6BpEZ4jVE=
+		</data>
+		<key>doc/images/gl/title.strings</key>
+		<data>
+		5X04kKhtrff7kMO6BXjl/bf4f0A=
+		</data>
+		<key>doc/images/he/keyword.strings</key>
+		<data>
+		GelarvY8rLQW+PlmHYZkFrbVN/s=
+		</data>
+		<key>doc/images/he/title.strings</key>
+		<data>
+		0cHSej2nmlOqhgHo5dWYUApLMA0=
+		</data>
+		<key>doc/images/id/keyword.strings</key>
+		<data>
+		JCDWud+LLXjPI55vJ7nyK3MFChg=
+		</data>
+		<key>doc/images/km/keyword.strings</key>
+		<data>
+		epYVOD5lnpCxpwDhpWRspgSsmw0=
+		</data>
+		<key>doc/images/lt_LT/keyword.strings</key>
+		<data>
+		t0bhK5gzptfUg/Rb4rHREOi/pqw=
+		</data>
+		<key>doc/images/lv/title.strings</key>
+		<data>
+		wp5TascrahD2IrjSgj/sONbUwEw=
+		</data>
+		<key>doc/images/pl/keyword.strings</key>
+		<data>
+		lEbE1l7PtmrDSUlwFxVr3Wi47zA=
+		</data>
+		<key>doc/images/pl/title.strings</key>
+		<data>
+		l760E4IzYsF+wuEYaWHNwWDkjrk=
+		</data>
+		<key>doc/images/pt-BR/keyword.strings</key>
+		<data>
+		1a4ptkyXCnRbxEiJ9DMhAG3GiN4=
+		</data>
+		<key>doc/images/pt-BR/title.strings</key>
+		<data>
+		Mozy/EPKeMStNlaBcw1OqQT03qI=
+		</data>
+		<key>doc/images/ru/keyword.strings</key>
+		<data>
+		WSNBEBF4Qru8O3aeeXe4gmN3L6A=
+		</data>
+		<key>doc/images/ru/title.strings</key>
+		<data>
+		mnaxTF54mEKCj36zcl7Fq70sBps=
+		</data>
+		<key>doc/images/screenshots.html</key>
+		<data>
+		zeuMHdPR5V85dI0IckKtX6/uOr0=
+		</data>
+		<key>doc/images/sq/keyword.strings</key>
+		<data>
+		1vMjIwiLCroB7I9C1mxN3To+UyM=
+		</data>
+		<key>doc/images/sq/title.strings</key>
+		<data>
+		AshP+BZVYXLLvAaIi1jJ4lkG+NI=
+		</data>
+		<key>doc/images/th-TH/keyword.strings</key>
+		<data>
+		f9PyVSIoA9zf+yOHkAU9718Moao=
+		</data>
+		<key>doc/images/th-TH/title.strings</key>
+		<data>
+		86wsbWhrqMtHmlrNOIZNoeSW+58=
+		</data>
+		<key>doc/images/tr/keyword.strings</key>
+		<data>
+		1Qfa6y43Se849tPDDXGzjF538Wo=
+		</data>
+		<key>doc/images/tr/title.strings</key>
+		<data>
+		MPlpLAMtdtgcGa4dyQ2xdzmaFeE=
+		</data>
+		<key>doc/images/ur_PK/keyword.strings</key>
+		<data>
+		pQtgucyBZ/6xXb97uvSnJFZPgr8=
+		</data>
+		<key>doc/images/zh-Hans/keyword.strings</key>
+		<data>
+		eKvmuQYckDhd4po4n5lxAIo7sDU=
+		</data>
+		<key>doc/images/zh-Hans/title.strings</key>
+		<data>
+		IAPRrpm8W/ULI/xe3mNno/VsksM=
+		</data>
+		<key>doc/images/zh_TW/keyword.strings</key>
+		<data>
+		2OBFpmkcf8n9VxdcdbS8PBHks3w=
+		</data>
+		<key>doc/images/zh_TW/title.strings</key>
+		<data>
+		ujLwi4dHnmYfN1U1tJText65rQ0=
 		</data>
 		<key>en-GB.lproj/InfoPlist.strings</key>
 		<dict>
@@ -1827,7 +2511,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			c/kj2VwOBhM6c7YJGDr+xHC6EYs=
+			N97ywwYHyH3TPPCso/5BSjP4bnc=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -1881,7 +2565,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			kgDAEMPy8SyX9U0pUSE5FvkIAl8=
+			Ic3b5kkRZp1DwFd5bLFEh0rsJiY=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -2020,7 +2704,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			Tike7aMwcAFTEhoc5L/G+gf5Yik=
+			1YQ2MZNyJmQxhL6Yq1pLsCiy/xk=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -2074,7 +2758,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			07V4MYqvO42I3ryGxjAavnehT80=
+			Y/Z2UjNOJ2f75IrkIhHnlBD1h4Q=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -2101,7 +2785,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			Rd3fKr8b7XyRhlyzfzZVu1mdz6g=
+			BVjMdMAg1O2vnEUPQb5UCL+RH3M=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -2132,7 +2816,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			aBI6XNXl3SkpUuycYmfDs2uH9TQ=
+			GPCx3B8j0ffvuyVcpNP47PkPHEI=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -2185,14 +2869,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			+XUQVkAxdoFxbvnKrgdpAnEDGa4p3hO9wfTtgccPsOc=
+			ImDCAMidgm34smGS8VF96denWgb5Upgi54xtmAHD6DU=
 			</data>
 		</dict>
 		<key>Base.lproj/Intents.intentdefinition</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			3Wu3lv+khCKf3RKjLugY3aPL2tjDkzugpt8bOOLxrlw=
+			aZjK/JbbcaE5mIKV5n1tRNWU2O8RTotkBXYWxhclYy4=
 			</data>
 		</dict>
 		<key>Branding.plist</key>
@@ -2202,11 +2886,32 @@
 			kmHsztpgjvF0JW5f3HdMHm49z1M0CcG8OT1JDQHHE/E=
 			</data>
 		</dict>
+		<key>Frameworks/OpenSSL.framework/Info.plist</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			F/lqHIIir7iFSqjj+6SgpvNPTI4uXQNcalcw3c/3iKk=
+			</data>
+		</dict>
+		<key>Frameworks/OpenSSL.framework/OpenSSL</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			GBbba3m8GxLtLTOfDvYj1h8XA9Kclh4xVLqxhR0Q1u8=
+			</data>
+		</dict>
+		<key>Frameworks/OpenSSL.framework/_CodeSignature/CodeResources</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			UttMfYav3hple2X484LEqKCzp43gOQFGrFI+rxbbNt8=
+			</data>
+		</dict>
 		<key>Frameworks/libzip.framework/Info.plist</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			xIEqjyJu+dGcbBzNgbGohFSh3vKoTc88N4O8f6r9Ci4=
+			CJe8IR/aIvdlJI5rZDWQUKJYWTGcMx+LaGXtou0SqTs=
 			</data>
 		</dict>
 		<key>Frameworks/libzip.framework/LICENSE</key>
@@ -2220,42 +2925,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			yG5SURH4iY1gGRAv1UmTvd/Bmytl8aIKIomtpV0me7w=
+			vVwzNAj6XZ9P4AUFV5lRtpwzEgI9NG53UvLXRpqZRUk=
 			</data>
 		</dict>
 		<key>Frameworks/libzip.framework/libzip</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			whnroOXDHmDUOJdR3JWhvxVT9Efb/65GmGS+Ejpybe0=
-			</data>
-		</dict>
-		<key>Frameworks/openssl.framework/Info.plist</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			ysin0S0c6XP9MMKrPnA1l2zP3ejK2L67ZOLjCM4GvK8=
-			</data>
-		</dict>
-		<key>Frameworks/openssl.framework/LICENSE</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			nuN9cpZrtKhBND8GBs5E1Bs+rk30KFIAxajdwrk1mSo=
-			</data>
-		</dict>
-		<key>Frameworks/openssl.framework/_CodeSignature/CodeResources</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			KesCB7dRfLiIWfcwSwxL+Ae0+RG82Jv+/U7LNTW1mIc=
-			</data>
-		</dict>
-		<key>Frameworks/openssl.framework/openssl</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			GbsZlPBfMbrsbEz58pczbxY5Z4ZZ+NkJSxf3R/bkPdo=
+			1zQF5jfrcFzFJCttoT0bIaR1iHHxTm2cWDti7YAV4g0=
 			</data>
 		</dict>
 		<key>Frameworks/ownCloudApp.framework/AppleIncRootCertificate.cer</key>
@@ -2269,14 +2946,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			9X4GPrRRCQfLbghx65dqo0x6F8c1GimECDCOQ0oqjFM=
+			zmrbWKPeLneKTjXOodh9wUetcRuBEglzIgcFqzZuYlc=
 			</data>
 		</dict>
 		<key>Frameworks/ownCloudApp.framework/_CodeSignature/CodeResources</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Yeylqi4CGkjZPOO5Na2vTqynPiH64RI1442PV4pyeu0=
+			vfMy71o1Xz1gx+ZiQHVBG4brDY95Ojpfwp/lsXmIrvk=
 			</data>
 		</dict>
 		<key>Frameworks/ownCloudApp.framework/ar.lproj/Localizable.strings</key>
@@ -2391,7 +3068,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			vf6Zf+CSvgB9sg1HOarXdBa3SC1S1grlj7kLCAGD9fk=
+			0BExj5zmSW2Qj3F2KiHTxWOmBSusP3GNjUV+b034eCQ=
 			</data>
 		</dict>
 		<key>Frameworks/ownCloudApp.framework/pt-BR.lproj/Localizable.strings</key>
@@ -2452,7 +3129,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			zkuuvETjmUt5TLme3xuwW48Y8jrkyWP8HIt/YUFfXmU=
+			U5VrEQPAP88jgh75P01WP2z0zWLAwvvPiCiHcJmn990=
 			</data>
 		</dict>
 		<key>Frameworks/ownCloudAppShared.framework/PasscodeViewController.nib/objects-14.0+.nib</key>
@@ -2480,7 +3157,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			NIOW3V/WHOfnAc7SiJpeBX/rU89WvnxVjwBwBD0087c=
+			Lr7qzRyLQ1FUMFV/GsWXID8GJOPCP+4wkmH9GpebmoY=
 			</data>
 		</dict>
 		<key>Frameworks/ownCloudAppShared.framework/application-pdf.tvg</key>
@@ -2501,7 +3178,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			5dWc4WM5x82w1S2ZVs87np6IzvIcmsW15ek9m6bcO00=
+			bLjQE+tUmVCBU1RYtko8Qq/4BjgDimsNWaSDO4nOwTQ=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -2526,7 +3203,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			rNKcf1mVJzBF8B3IvjqH+Tk8w6kb/0i9ZL+G7BbSf9g=
+			9kj87kQ7K2M4bMvb4Bg2JQJ1JPEdFKsUSKIzZ4FQDCw=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -2553,7 +3230,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			mZl8MUebFfKXjHq+Sjz7duxMk5Ydu5r7sX+r8rTJr9E=
+			gfgWWy5BW2Mg7hD/XOHIpthbZSBPIEOkJxgIGYgmlBA=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -2627,7 +3304,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			i29FPAmwzX3F7t64C7O4iEHreT20GKttPuAf7W3nSnk=
+			qVi6i8hqNq0oXyIiRufDEpMHRGhiRWfTvinA0M8fEGQ=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -2707,7 +3384,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			CBTDoU9w6vQQpCHgA7bBQMqJ9/nO0x52t51ZUFox3l8=
+			YP0igwg+OIqn8KKLEhxEFrLN3d5EKqbaSDh6YztKeIA=
 			</data>
 		</dict>
 		<key>Frameworks/ownCloudAppShared.framework/owncloud-logo.tvg</key>
@@ -2728,7 +3405,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			56kgEtqrZ3LwOd8YPg/ylaO3MAIHZmnvJw4TTRTEnbA=
+			Lt0bI3S3HGZaEsfhM+uOVI2FuUSNOgttLXBAe+D8mL4=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -2746,7 +3423,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			viWTEjkUmpQ/40GnLJQFCIcZY1GovAGwBlBlmnbqbl4=
+			TkPE2B4SnCHPrkdD0QNUDDI1Qx6SmPrO/vAxKRFSxQQ=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -2755,7 +3432,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			eUpwQb6otoEbbds0IfjRqZZy0G9jCfisAhh8juzw0U0=
+			1JsBj4ZLmnzzYcUpIDnd2G47eaiKLvlu6ClnwCCA6Z4=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -2799,7 +3476,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			xehUVjY46VMDg2iCFYp7kdPzJ71U41FUv7BTdo+lbIg=
+			gOjNqeeQxFvw8UupDCtb8M+KWIYS9ecAt2RhjLnDP7E=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -2852,7 +3529,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			A/GK6HS3aTnusN2HqOFc8nN24wjv6X83hpbI2Fx5P3k=
+			ZoqBdYX8ID+F7oJEy6jo6WkiCah4ccaG5gO9mMN9sZI=
 			</data>
 		</dict>
 		<key>Frameworks/ownCloudSDK.framework/LICENSE</key>
@@ -2866,7 +3543,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			z9NBgv01MCnpZvyRs2XZsva85mKl9SGe6pk6B5ZQWmg=
+			k6RNngHZbkiSyrRkeMz29GU0FSESlFxZIPANLPPUCaw=
 			</data>
 		</dict>
 		<key>Frameworks/ownCloudSDK.framework/cs.lproj/Localizable.strings</key>
@@ -2963,7 +3640,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			w7eU8wBvIncCJyvkEc+H1tCKM0VIDucSVBNW0j1sBnk=
+			PBH3RAwPFoEvtPwlaQuNOhDV6mpF5UhpnXy4AcHvvpk=
 			</data>
 		</dict>
 		<key>Frameworks/ownCloudSDK.framework/pt-BR.lproj/Localizable.strings</key>
@@ -3024,14 +3701,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			eU7zdwT2jvgWD/CnLuhvvz9uN/ekaiuMLu+tjk7PEuo=
+			Ifqj11kpLl2od60a5QuVYJOI0TPl1/Y4f0V37Q5ywYA=
 			</data>
 		</dict>
 		<key>Frameworks/ownCloudUI.framework/_CodeSignature/CodeResources</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			CJmMkhwhfiO6OSxkWNoNB+IFpRHhtod1JguhlBJ1Bq4=
+			/1oUoX0MC4Aq39SnK6Iqr94p6u3kMr5kj1rqxWoPz8c=
 			</data>
 		</dict>
 		<key>Frameworks/ownCloudUI.framework/cs.lproj/Localizable.strings</key>
@@ -3128,7 +3805,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			g4qDIvBDIsekrDa05JinpyQCSVotZcvLBE3K5bUe+Nk=
+			Gh3o4S/Rix49hnZ0Hw6ozK4Ynep1SCq56JHbqHsClpY=
 			</data>
 		</dict>
 		<key>Frameworks/ownCloudUI.framework/pt-BR.lproj/Localizable.strings</key>
@@ -3262,14 +3939,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Mwn+ITwQl9/ilYfVGmwrv0TMXv82Zr+Uz8DvihhBqv4=
+			EWzW+wS2xeO6hsog2xUwyFi+S6kLRyfULjL/oISVNBM=
 			</data>
 		</dict>
 		<key>PlugIns/ownCloud File Provider UI.appex/PocketSVG_PocketSVG.bundle/Info.plist</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			U8l9L5kknd+Ec2KJcwjV814bDr0R+MbGgW99DVocisw=
+			3kaiyLMbKDgaSJtrSp8X6EqPWlN1n3tlJpYvAceJODs=
 			</data>
 		</dict>
 		<key>PlugIns/ownCloud File Provider UI.appex/PocketSVG_PocketSVG.bundle/SVGColors.plist</key>
@@ -3283,7 +3960,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			QcSA1BOE4an/DLUjbD0l3QBcVJ4AdLvXHYeUWfK/wRY=
+			eW+g1+iSIJaGNbEsINimuRzqz4uPo2qFbi0bOyRzsps=
 			</data>
 		</dict>
 		<key>PlugIns/ownCloud File Provider UI.appex/PocketSVG_PocketSVG.bundle/_CodeSignature/CodeRequirements</key>
@@ -3297,7 +3974,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Q7ypYAf1LJMGNJon0pS/j5Yr9iH+hCyJOi9cYxG0TFE=
+			goXI7oWK7y+T854GEpRzIHVKZrINDNQaW/1W4XPDNcQ=
 			</data>
 		</dict>
 		<key>PlugIns/ownCloud File Provider UI.appex/PocketSVG_PocketSVG.bundle/_CodeSignature/CodeResources</key>
@@ -3318,28 +3995,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			2jHfANAO0x2NbSl4vu+tRcjqE1DdzGhcdfKpH3tPDng=
+			jAmD/KeonqbeuXM1dEZg0xV0jEh1P+tmcUUyDXVDLF0=
 			</data>
 		</dict>
 		<key>PlugIns/ownCloud File Provider UI.appex/ownCloud File Provider UI</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			EthHN0HNCBsGXwD05lf5LjAJQgl4J2HLyZ1XOoxorW4=
+			i7p7uMcyRyKlCspWOrQrg/sum84+CWosWgigdNJK4Cs=
 			</data>
 		</dict>
 		<key>PlugIns/ownCloud File Provider.appex/Info.plist</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Pb2iZt2zRnCTbjSaQ/kzJdnVXFrWhbNsq60EGm7IEkg=
+			oX+K5buTKfL8ok76gOFREdGH5UvJEu9uchZhe+0nAM4=
 			</data>
 		</dict>
 		<key>PlugIns/ownCloud File Provider.appex/_CodeSignature/CodeResources</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			WE6SV/28KNGlrIna2y29Xow5d4cJKvROqYck+tLGOE8=
+			/jiIzjxubqV5NXrSVmUPtlu+QW+2NaK9jaiNqna0G6g=
 			</data>
 		</dict>
 		<key>PlugIns/ownCloud File Provider.appex/en.lproj/Localizable.strings</key>
@@ -3364,14 +4041,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			uuLnRhCyBYTXYI9yTGpklPSvt9aURJrgJZZ5MojYXMw=
+			UF7MW57D+Q8VOSNelgp5pTLwVqAjVUiyAbAMjQwQbUc=
 			</data>
 		</dict>
 		<key>PlugIns/ownCloud Intents.appex/Base.lproj/Intents.intentdefinition</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			3Wu3lv+khCKf3RKjLugY3aPL2tjDkzugpt8bOOLxrlw=
+			aZjK/JbbcaE5mIKV5n1tRNWU2O8RTotkBXYWxhclYy4=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -3380,14 +4057,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			kiwJuM6+nAwtNpiCjiByakUrD8umKi+ylKERIw0gBd4=
+			eB+uLR4R3jTBO8K2iEO2k/swm5JVIBb9eMX4oRAkqOo=
 			</data>
 		</dict>
 		<key>PlugIns/ownCloud Intents.appex/PocketSVG_PocketSVG.bundle/Info.plist</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			U8l9L5kknd+Ec2KJcwjV814bDr0R+MbGgW99DVocisw=
+			3kaiyLMbKDgaSJtrSp8X6EqPWlN1n3tlJpYvAceJODs=
 			</data>
 		</dict>
 		<key>PlugIns/ownCloud Intents.appex/PocketSVG_PocketSVG.bundle/SVGColors.plist</key>
@@ -3401,7 +4078,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			QcSA1BOE4an/DLUjbD0l3QBcVJ4AdLvXHYeUWfK/wRY=
+			eW+g1+iSIJaGNbEsINimuRzqz4uPo2qFbi0bOyRzsps=
 			</data>
 		</dict>
 		<key>PlugIns/ownCloud Intents.appex/PocketSVG_PocketSVG.bundle/_CodeSignature/CodeRequirements</key>
@@ -3415,7 +4092,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Q7ypYAf1LJMGNJon0pS/j5Yr9iH+hCyJOi9cYxG0TFE=
+			goXI7oWK7y+T854GEpRzIHVKZrINDNQaW/1W4XPDNcQ=
 			</data>
 		</dict>
 		<key>PlugIns/ownCloud Intents.appex/PocketSVG_PocketSVG.bundle/_CodeSignature/CodeResources</key>
@@ -3436,7 +4113,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			gZYwZkI0ZCLwwWxQKWjXkSge0m03ryBEAq1yv/Jwj3g=
+			y9ASlWfjcYD2nXs3rfYbtA+Z2HMcEvEUZoGUJpANmYg=
 			</data>
 		</dict>
 		<key>PlugIns/ownCloud Intents.appex/ar.lproj/Intents.strings</key>
@@ -3551,7 +4228,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Ga2+MtSPGnar2GG7mnO7GAZIvFh1P8YiRoPaykNq5vk=
+			oM1rZzKu6lkGr1B/jjhFs4h2iU377yNFJKhE0uAEiP4=
 			</data>
 		</dict>
 		<key>PlugIns/ownCloud Intents.appex/pt-BR.lproj/Intents.strings</key>
@@ -3612,21 +4289,21 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			I+jyqqL6I2XmZE0FZx5N2OiXVY3ryzzS4iV9Fl/7pjE=
+			aAkK9KxtmyLQ/DOhgD4HxE8dasMklz2nFdMMWxLtM9k=
 			</data>
 		</dict>
 		<key>PlugIns/ownCloud Share Extension.appex/Info.plist</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			bGgAkRRDbrFXLt4Dd3PfAtV4vva5ZtB8yFdS3STTNx4=
+			LpKb+BW2VAUxKE3PMADToNmFyBHSYmtC2R2n2abjD2s=
 			</data>
 		</dict>
 		<key>PlugIns/ownCloud Share Extension.appex/PocketSVG_PocketSVG.bundle/Info.plist</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			U8l9L5kknd+Ec2KJcwjV814bDr0R+MbGgW99DVocisw=
+			3kaiyLMbKDgaSJtrSp8X6EqPWlN1n3tlJpYvAceJODs=
 			</data>
 		</dict>
 		<key>PlugIns/ownCloud Share Extension.appex/PocketSVG_PocketSVG.bundle/SVGColors.plist</key>
@@ -3640,7 +4317,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			QcSA1BOE4an/DLUjbD0l3QBcVJ4AdLvXHYeUWfK/wRY=
+			eW+g1+iSIJaGNbEsINimuRzqz4uPo2qFbi0bOyRzsps=
 			</data>
 		</dict>
 		<key>PlugIns/ownCloud Share Extension.appex/PocketSVG_PocketSVG.bundle/_CodeSignature/CodeRequirements</key>
@@ -3654,7 +4331,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Q7ypYAf1LJMGNJon0pS/j5Yr9iH+hCyJOi9cYxG0TFE=
+			goXI7oWK7y+T854GEpRzIHVKZrINDNQaW/1W4XPDNcQ=
 			</data>
 		</dict>
 		<key>PlugIns/ownCloud Share Extension.appex/PocketSVG_PocketSVG.bundle/_CodeSignature/CodeResources</key>
@@ -3675,7 +4352,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			aRcd9QuiZwo0qnMujTYXEadHjHXUsVXmXw1hqWSWpq0=
+			hGnbpgo5sgA2UD6BNgX6FpXkZDJG60RlqMfYqOrVghE=
 			</data>
 		</dict>
 		<key>PlugIns/ownCloud Share Extension.appex/ar.lproj/InfoPlist.strings</key>
@@ -3691,7 +4368,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			5dWc4WM5x82w1S2ZVs87np6IzvIcmsW15ek9m6bcO00=
+			bLjQE+tUmVCBU1RYtko8Qq/4BjgDimsNWaSDO4nOwTQ=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -3727,7 +4404,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			rNKcf1mVJzBF8B3IvjqH+Tk8w6kb/0i9ZL+G7BbSf9g=
+			9kj87kQ7K2M4bMvb4Bg2JQJ1JPEdFKsUSKIzZ4FQDCw=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -3781,7 +4458,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			mZl8MUebFfKXjHq+Sjz7duxMk5Ydu5r7sX+r8rTJr9E=
+			gfgWWy5BW2Mg7hD/XOHIpthbZSBPIEOkJxgIGYgmlBA=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -3817,7 +4494,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			i29FPAmwzX3F7t64C7O4iEHreT20GKttPuAf7W3nSnk=
+			qVi6i8hqNq0oXyIiRufDEpMHRGhiRWfTvinA0M8fEGQ=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -3898,7 +4575,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			cVcRjVJ/36+fSSjlK+845ehUB/eCVjLHJR1XWZMYMfQ=
+			CcjBVQOiWxYGOvZqSIwslvyjLFL8E3xuX+36zr219fQ=
 			</data>
 		</dict>
 		<key>PlugIns/ownCloud Share Extension.appex/pt-BR.lproj/InfoPlist.strings</key>
@@ -3914,7 +4591,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			56kgEtqrZ3LwOd8YPg/ylaO3MAIHZmnvJw4TTRTEnbA=
+			Lt0bI3S3HGZaEsfhM+uOVI2FuUSNOgttLXBAe+D8mL4=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -3950,7 +4627,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			viWTEjkUmpQ/40GnLJQFCIcZY1GovAGwBlBlmnbqbl4=
+			TkPE2B4SnCHPrkdD0QNUDDI1Qx6SmPrO/vAxKRFSxQQ=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -3968,7 +4645,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			eUpwQb6otoEbbds0IfjRqZZy0G9jCfisAhh8juzw0U0=
+			1JsBj4ZLmnzzYcUpIDnd2G47eaiKLvlu6ClnwCCA6Z4=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -3986,7 +4663,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			xehUVjY46VMDg2iCFYp7kdPzJ71U41FUv7BTdo+lbIg=
+			gOjNqeeQxFvw8UupDCtb8M+KWIYS9ecAt2RhjLnDP7E=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -4013,7 +4690,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			U8l9L5kknd+Ec2KJcwjV814bDr0R+MbGgW99DVocisw=
+			3kaiyLMbKDgaSJtrSp8X6EqPWlN1n3tlJpYvAceJODs=
 			</data>
 		</dict>
 		<key>PocketSVG_PocketSVG.bundle/SVGColors.plist</key>
@@ -4027,7 +4704,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			QcSA1BOE4an/DLUjbD0l3QBcVJ4AdLvXHYeUWfK/wRY=
+			eW+g1+iSIJaGNbEsINimuRzqz4uPo2qFbi0bOyRzsps=
 			</data>
 		</dict>
 		<key>PocketSVG_PocketSVG.bundle/_CodeSignature/CodeRequirements</key>
@@ -4041,7 +4718,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Q7ypYAf1LJMGNJon0pS/j5Yr9iH+hCyJOi9cYxG0TFE=
+			goXI7oWK7y+T854GEpRzIHVKZrINDNQaW/1W4XPDNcQ=
 			</data>
 		</dict>
 		<key>PocketSVG_PocketSVG.bundle/_CodeSignature/CodeResources</key>
@@ -4076,14 +4753,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			a9wbezmFFE7Ib9hTBT+JkFWCRClm2+iGbQyYZqxgU3M=
+			TB1F/0vejPLm5Qwtl42VaE4I0UAAZe6NQaJVh0WDeWY=
 			</data>
 		</dict>
 		<key>ServerListTableViewController.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			gm/FIPAcCuoHDcF1lUqd749wD6sk30wCiJHzYPQh6VI=
+			AcGy+vRRzr/R4J/lqEVnpAWgC8+2zhyRwYbAcnBzVCw=
 			</data>
 		</dict>
 		<key>ar.lproj/InfoPlist.strings</key>
@@ -4108,7 +4785,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			XVxUs0vjSMqsIuvS6sMbN2mr8RYV9R6zaAj4NCfbdGc=
+			SjZ6wlY98+eXURrHMdR0vR5OTqQtE0sUQF8SfFYQbP4=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -4197,24 +4874,10 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			9JYv2wbDE9rCI81PO07JKsMXNtOtmZu+WfHveafMbmA=
+			p1uBwKw3mQ1/MBYgGyQGqSAhUFt4AnbOgbxCKC4D6Ws=
 			</data>
 			<key>optional</key>
 			<true/>
-		</dict>
-		<key>doc/APP_BUILD_FLAGS.md</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			G4u12ymvf8oXuFKu27b9rgAIOwavihkAdcNe1zbM5iQ=
-			</data>
-		</dict>
-		<key>doc/BUILD_CUSTOMIZATION.md</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			gdT0dxl6OyX5bwNJWqNqfnwhQ0T/3ILYvQy9FuIgafA=
-			</data>
 		</dict>
 		<key>doc/CONFIGURATION.json</key>
 		<dict>
@@ -4223,11 +4886,11 @@
 			Vk24DqiPmqrMF4rlZaqQU7be+H1Bmq6dviMt123xrZk=
 			</data>
 		</dict>
-		<key>doc/CONFIGURATION.md</key>
+		<key>doc/README.md</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			jekZDFrlGGwfbdjk4UJWZL6RVXwmqWrA9V3YK5cqhx0=
+			NswmChu2Q5exToId5/CwkyFZpDsgjHXv+pCQ8JdwRYo=
 			</data>
 		</dict>
 		<key>doc/SECURITY.md</key>
@@ -4270,6 +4933,1224 @@
 			<key>hash2</key>
 			<data>
 			3Qcy/0CTUm03PIZz7pGKqCV6gdNQhImHFOkm2LbMwtM=
+			</data>
+		</dict>
+		<key>doc/configuration.adoc</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			aI1P2+9bevXat5ma7yqKdg1rCEAwJ9ixYdH/2jt4zHM=
+			</data>
+		</dict>
+		<key>doc/images/Framefile.json</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			Oi3dqy+6MMh449a+v6uma9Q5Eaxm1yyVAO2GM4wVT+w=
+			</data>
+		</dict>
+		<key>doc/images/README.md</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			ZbkrU+vKRQlHdQwifCqCyERSjkN2Mlc2OOtiSq65wSw=
+			</data>
+		</dict>
+		<key>doc/images/README.txt</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			YwC6JHshM1Ry89YGrlkx4yQslEw4Ezj63Nmd2C0GV5s=
+			</data>
+		</dict>
+		<key>doc/images/ar/keyword.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			UiM3XRo/u2qJyGTX04AkJaj0610Mve5sC1I7l233ogQ=
+			</data>
+		</dict>
+		<key>doc/images/ar/title.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			UiM3XRo/u2qJyGTX04AkJaj0610Mve5sC1I7l233ogQ=
+			</data>
+		</dict>
+		<key>doc/images/background.jpg</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			zQ9F+sXtjBr0VveuVJ6iV5tzpAfXBVlDalqSyMZx8gU=
+			</data>
+		</dict>
+		<key>doc/images/ca/keyword.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			HKTTB4uWOPbEb16AjYogDkCMVBikzsMtUyrs6u34hts=
+			</data>
+		</dict>
+		<key>doc/images/ca/title.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			EGT8u/gG3Oiszkr+xGCLHZ4CfkrfpOhRDxrINOBVTrM=
+			</data>
+		</dict>
+		<key>doc/images/de-DE/README.md</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			C4u/LW5EeURqf9KDwB3ihkrdVCVugGtTARc7AcbEARg=
+			</data>
+		</dict>
+		<key>doc/images/de-DE/keyword.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			hgjxv+SuNhXpHKY13RDVFAUE0Wl1nLtlKpta46bR7Ro=
+			</data>
+		</dict>
+		<key>doc/images/de-DE/title.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			znaV5O6faQeUIQxXUNn3FLkTMHKF7pJ8KycHDZzZkww=
+			</data>
+		</dict>
+		<key>doc/images/de/keyword.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			hgjxv+SuNhXpHKY13RDVFAUE0Wl1nLtlKpta46bR7Ro=
+			</data>
+		</dict>
+		<key>doc/images/de/title.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			znaV5O6faQeUIQxXUNn3FLkTMHKF7pJ8KycHDZzZkww=
+			</data>
+		</dict>
+		<key>doc/images/de_CH/keyword.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			hgjxv+SuNhXpHKY13RDVFAUE0Wl1nLtlKpta46bR7Ro=
+			</data>
+		</dict>
+		<key>doc/images/de_CH/title.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			znaV5O6faQeUIQxXUNn3FLkTMHKF7pJ8KycHDZzZkww=
+			</data>
+		</dict>
+		<key>doc/images/el/keyword.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			jYU4nK6iMW6A9bj6VIVx8VpVaUdSSQvE3NMSEr2MZ24=
+			</data>
+		</dict>
+		<key>doc/images/el/title.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			2Lj19/dTeKfLwWa1DO8aDhr68oUouzf76HAHxs41L4A=
+			</data>
+		</dict>
+		<key>doc/images/en-GB/keyword.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			o/AIyPM/Ft+ouPiiBhe9jmTAnXUak+fnARWOOVc0/4c=
+			</data>
+		</dict>
+		<key>doc/images/en-GB/title.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			AJHsTmTtce4xogBqBhkE5sVCuDyos2B+eomygijNm3Y=
+			</data>
+		</dict>
+		<key>doc/images/en-US/iPad Pro (12.9-inch) (2nd generation)-10_ios_accounts_welcome_demo.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			q0uH4piiIIU/lMlubBSlXELvQV+ietHZID+Ki7FwnWo=
+			</data>
+		</dict>
+		<key>doc/images/en-US/iPad Pro (12.9-inch) (2nd generation)-11_ios_accounts_list_demo.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			QwC/Jtk/XdsjTDHh2nNpKjShWca90rGAZL3mMLBsR5s=
+			</data>
+		</dict>
+		<key>doc/images/en-US/iPad Pro (12.9-inch) (2nd generation)-20_ios_files_list_demo.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			DyO3P1VZCV/GqksaLy9WIvi3t93iLlSq4TtxSqfkp9M=
+			</data>
+		</dict>
+		<key>doc/images/en-US/iPad Pro (12.9-inch) (2nd generation)-21_ios_files_actions_demo.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			VNYY5dOKGo+agCj2wpGjNsLyLREORDRIFAjNLGRDPzg=
+			</data>
+		</dict>
+		<key>doc/images/en-US/iPad Pro (12.9-inch) (2nd generation)-22_ios_files_preview_pdf_demo.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			r9H+G9bSXJBSseIJQvDMQVTucFveIuS6b86+nYtf6BY=
+			</data>
+		</dict>
+		<key>doc/images/en-US/iPad Pro (12.9-inch) (2nd generation)-23_ios_files_list_multiple_window_landscape.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			owEn1+IJaQDL0JIz8FmLFHPvXEsCln2o/Ji2H6XX0og=
+			</data>
+		</dict>
+		<key>doc/images/en-US/iPad Pro (12.9-inch) (2nd generation)-40_ios_quick_access_demo.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			y9EKZqdobYCwF1xAaP3gpaimhXoz4UhmAVC7eWG2lUE=
+			</data>
+		</dict>
+		<key>doc/images/en-US/iPad Pro (12.9-inch) (2nd generation)-60_ios_settings_demo.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			XOJZmxOLJEdRsTwfXT6xrl7tHHCtX3Fy3DELGkrvOMI=
+			</data>
+		</dict>
+		<key>doc/images/en-US/iPad Pro (12.9-inch) (4th generation)-10_ios_accounts_welcome_demo.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			dav/I2qKck7W6o31LiF1RZrwWkftz9qH/KGlEwei0so=
+			</data>
+		</dict>
+		<key>doc/images/en-US/iPad Pro (12.9-inch) (4th generation)-10_ios_accounts_welcome_demo_framed.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			59lQzU03wkoSUy4k2IXRaKGytQTsSSNHX5URccR4DvY=
+			</data>
+		</dict>
+		<key>doc/images/en-US/iPad Pro (12.9-inch) (4th generation)-11_ios_accounts_list_demo.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			Kyj24WvHQOFOWLemw9OedHMHXbjp+HxSAk53zMUXOa0=
+			</data>
+		</dict>
+		<key>doc/images/en-US/iPad Pro (12.9-inch) (4th generation)-11_ios_accounts_list_demo_framed.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			7YmPQIMNF3QSUBQbE+KeGdECs32II4mGsZ/Z9FgWLsQ=
+			</data>
+		</dict>
+		<key>doc/images/en-US/iPad Pro (12.9-inch) (4th generation)-20_ios_files_list_demo.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			sQ6LAgKnPPg2LIZxRctF65hdUcE2JQtdL1gPQM5bqW0=
+			</data>
+		</dict>
+		<key>doc/images/en-US/iPad Pro (12.9-inch) (4th generation)-20_ios_files_list_demo_framed.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			UoK6wUUJPKQDjvHc07lFlNAg83GLShRCEl/ob9zL9hg=
+			</data>
+		</dict>
+		<key>doc/images/en-US/iPad Pro (12.9-inch) (4th generation)-21_ios_files_actions_demo.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			845zg43clfBw8CisfKcxC97STft5lNhQsLAgxb751r4=
+			</data>
+		</dict>
+		<key>doc/images/en-US/iPad Pro (12.9-inch) (4th generation)-21_ios_files_actions_demo_framed.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			XGpgj2j39oCd2r0TeCMg7cneEHELkDvXzUUFxZXVR2I=
+			</data>
+		</dict>
+		<key>doc/images/en-US/iPad Pro (12.9-inch) (4th generation)-22_ios_files_preview_pdf_demo.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			yRQwBCV4ZJ5sSNMw2HZawrlIn4W1i76lnU17VEN8wrU=
+			</data>
+		</dict>
+		<key>doc/images/en-US/iPad Pro (12.9-inch) (4th generation)-22_ios_files_preview_pdf_demo_framed.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			0xywfkBU0gNxjzK1NbI2V0aTkWGtVNHJFYWk2S61nwI=
+			</data>
+		</dict>
+		<key>doc/images/en-US/iPad Pro (12.9-inch) (4th generation)-60_ios_settings_demo.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			Tpuo9fjYFmBjkFk7bod32eA8sa8nF9hJwGO9LidTBEg=
+			</data>
+		</dict>
+		<key>doc/images/en-US/iPad Pro (12.9-inch) (4th generation)-60_ios_settings_demo_framed.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			4grccIhgYtTGCxmBRNU9Ow9TGdnTl0MePPhOUzsWoRc=
+			</data>
+		</dict>
+		<key>doc/images/en-US/iPad Pro (12.9-inch) (5th generation)-10_ios_accounts_welcome_demo.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			eUAWLUP2UYFkYTeu25hgD9o/HieeBtZaaBU9RQw5a3E=
+			</data>
+		</dict>
+		<key>doc/images/en-US/iPad Pro (12.9-inch) (5th generation)-11_ios_accounts_list_demo.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			ncptSXOX0wmqQ9m8B604lPrvpl6Va8Vtq9873mZjsUI=
+			</data>
+		</dict>
+		<key>doc/images/en-US/iPad Pro (12.9-inch) (5th generation)-20_ios_files_list_demo.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			2J3vOzktcPKJkh5D6rviGE+OdQntcqgnTA64PQ8czmg=
+			</data>
+		</dict>
+		<key>doc/images/en-US/iPad Pro (12.9-inch) (5th generation)-21_ios_files_actions_demo.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			43OM6I4dSZnkGuk+7Xl3DSXd/TgAYYamx/Ta/U+Ypu4=
+			</data>
+		</dict>
+		<key>doc/images/en-US/iPad Pro (12.9-inch) (5th generation)-22_ios_files_preview_pdf_demo.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			Q2DMwZrC6dSc4V3Vs1TEeQvPwCpaOs0xnzVf+5at6Pg=
+			</data>
+		</dict>
+		<key>doc/images/en-US/iPad Pro (12.9-inch) (5th generation)-23_ios_files_list_multiple_window_landscape.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			ZMpJ33AYVfZU37A4sgjMIif90QlCf8H4FSyTCGY7gYE=
+			</data>
+		</dict>
+		<key>doc/images/en-US/iPad Pro (12.9-inch) (5th generation)-40_ios_quick_access_demo.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			vbjIEsIhIh0xSzQXDJ+5U5NM/60f8HGzd64sBDUl/pI=
+			</data>
+		</dict>
+		<key>doc/images/en-US/iPad Pro (12.9-inch) (5th generation)-60_ios_settings_demo.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			5XbddaPKvDxMjZD8bM2/t98zff+cB5DMDSZoXTa+G7c=
+			</data>
+		</dict>
+		<key>doc/images/en-US/iPad Pro (9.7-inch)-10_ios_accounts_welcome_demo.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			ZZp8v6f5qNtqy1KwJ2jage0TcTzvj6cfUhcHybXyyb8=
+			</data>
+		</dict>
+		<key>doc/images/en-US/iPad Pro (9.7-inch)-10_ios_accounts_welcome_demo_framed.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			PkETBOWJQP9DUDHF7fJC6qvJUzJKbzTz5/w9vre1qjU=
+			</data>
+		</dict>
+		<key>doc/images/en-US/iPad Pro (9.7-inch)-11_ios_accounts_list_demo.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			WrkrdsDAVvyW9reoMlAIcXqWAVeV7dzLyL5CBOuyzCQ=
+			</data>
+		</dict>
+		<key>doc/images/en-US/iPad Pro (9.7-inch)-11_ios_accounts_list_demo_framed.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			/JcZxyQGXQrx4Lk6KO/iHpNC0gTs1XfE/UBaUlSUM0Y=
+			</data>
+		</dict>
+		<key>doc/images/en-US/iPad Pro (9.7-inch)-20_ios_files_list_demo.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			6WrFkKkzEDdFoS16VvhDujjASj2H504YHV9DMHLpNHI=
+			</data>
+		</dict>
+		<key>doc/images/en-US/iPad Pro (9.7-inch)-20_ios_files_list_demo_framed.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			MIx0Gva3W1NgSxFz4pxnGpCk8WOlJ/DFPhCkycsTyWY=
+			</data>
+		</dict>
+		<key>doc/images/en-US/iPad Pro (9.7-inch)-21_ios_files_actions_demo.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			3yyQ/W0iyx1N+INiRgyXwxXReJfFJ1g63slVnF4qysY=
+			</data>
+		</dict>
+		<key>doc/images/en-US/iPad Pro (9.7-inch)-21_ios_files_actions_demo_framed.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			Gnj9zgmonlUIsaAFgkFElC059Km6Qx6GBx9fZ0ZprbE=
+			</data>
+		</dict>
+		<key>doc/images/en-US/iPad Pro (9.7-inch)-22_ios_files_preview_pdf_demo.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			pzAaEzNOUGLQuOrQA67GO0ufSx8HvQWnKTBU1ijk+Vc=
+			</data>
+		</dict>
+		<key>doc/images/en-US/iPad Pro (9.7-inch)-22_ios_files_preview_pdf_demo_framed.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			K3WfXAdc6tlT/Xz3Nz0Rx4toeYDTqWgUdOdud60TPo8=
+			</data>
+		</dict>
+		<key>doc/images/en-US/iPad Pro (9.7-inch)-23_ios_files_list_multiple_window_landscape.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			HBhD82I9xBQfRqBnT5e62MRMsi2xtb491333X34ZKKs=
+			</data>
+		</dict>
+		<key>doc/images/en-US/iPad Pro (9.7-inch)-23_ios_files_list_multiple_window_landscape_framed.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			O0Zdc8WrEas/vFwhS/NYAzYkX+dCLPj+q83NH17VJEQ=
+			</data>
+		</dict>
+		<key>doc/images/en-US/iPad Pro (9.7-inch)-40_ios_quick_access_demo.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			+Gj/d7A8gjJ1CvBaezuedXXCdUqeMeP9aYJ5aWLgYL0=
+			</data>
+		</dict>
+		<key>doc/images/en-US/iPad Pro (9.7-inch)-40_ios_quick_access_demo_framed.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			fDALBR4LSBS6Zr2QJnj68hS+E/JGFCkAY4JG8wG98xI=
+			</data>
+		</dict>
+		<key>doc/images/en-US/iPad Pro (9.7-inch)-60_ios_settings_demo.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			ZpYOvqwXbacq7bZqrTgCewX4aWksKmwDZLOG03MTrWU=
+			</data>
+		</dict>
+		<key>doc/images/en-US/iPad Pro (9.7-inch)-60_ios_settings_demo_framed.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			oD5hXtXfU7nDSDKT1sSWt+FNz6anAQuD5cwgHeTcOIk=
+			</data>
+		</dict>
+		<key>doc/images/en-US/iPhone 11 Pro Max-10_ios_accounts_welcome_demo.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			OXmM//dYlHGCXblgXDlGZnseOnAUZ493dHszCz33X/s=
+			</data>
+		</dict>
+		<key>doc/images/en-US/iPhone 11 Pro Max-10_ios_accounts_welcome_demo_framed.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			0GKFh/gbGG1U1tgk+JXtW3btfLIO7V/sRROjuip22sA=
+			</data>
+		</dict>
+		<key>doc/images/en-US/iPhone 11 Pro Max-11_ios_accounts_list_demo.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			Wb0yuf+Xp5BYq+MVLW88nJDALS4UUcXn7ymIynupkto=
+			</data>
+		</dict>
+		<key>doc/images/en-US/iPhone 11 Pro Max-11_ios_accounts_list_demo_framed.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			SbJm81tYl0CvqkN+zx/kLfIK3dB97c8At1e6C29aPJg=
+			</data>
+		</dict>
+		<key>doc/images/en-US/iPhone 11 Pro Max-20_ios_files_list_demo.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			fWFGk85vVWoL4Fn7RLQtGMnpWHbbEypKg1IaVtaIjXU=
+			</data>
+		</dict>
+		<key>doc/images/en-US/iPhone 11 Pro Max-20_ios_files_list_demo_framed.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			lXbsKjvMeIrPpSiIG9X/AwDi2o+WtQhhI4zQrbqIlJE=
+			</data>
+		</dict>
+		<key>doc/images/en-US/iPhone 11 Pro Max-21_ios_files_actions_demo.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			Wp0o8AAAoexX0QFPXPsclAuyfzJZxl6bBVIeIgf4Vwc=
+			</data>
+		</dict>
+		<key>doc/images/en-US/iPhone 11 Pro Max-21_ios_files_actions_demo_framed.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			OUX9gpEjqgdF7FUfa6iRN7KzTjCsACaM6UarUlB0yP4=
+			</data>
+		</dict>
+		<key>doc/images/en-US/iPhone 11 Pro Max-22_ios_files_preview_pdf_demo.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			Oy+RPANrZ4CQW80LFBn+yTXpt6voe53kZs16xmuOYVc=
+			</data>
+		</dict>
+		<key>doc/images/en-US/iPhone 11 Pro Max-22_ios_files_preview_pdf_demo_framed.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			ltGrn8rR5FjNbq0HLYBvlcuWUaaFAe9o2HdaSdPuLRU=
+			</data>
+		</dict>
+		<key>doc/images/en-US/iPhone 11 Pro Max-40_ios_quick_access_demo.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			SV4PfGYAUNszzKtib3720ojzFz+SXsB8lbMEtkmfY0Y=
+			</data>
+		</dict>
+		<key>doc/images/en-US/iPhone 11 Pro Max-40_ios_quick_access_demo_framed.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			ltgFWAy6buea+k7B7bp9nrA4kEGulP6xZi6EmzJJa7U=
+			</data>
+		</dict>
+		<key>doc/images/en-US/iPhone 11 Pro Max-60_ios_settings_demo.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			ak7MNFe+VwWVOSyUQRlC/o6apOp0+a2cRFPg/9G46Do=
+			</data>
+		</dict>
+		<key>doc/images/en-US/iPhone 11 Pro Max-60_ios_settings_demo_framed.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			Vgva+Iy5c21i8rIjf+qlVOvoNudVpB1MuqVUK/bpu9o=
+			</data>
+		</dict>
+		<key>doc/images/en-US/iPhone 11-10_ios_accounts_welcome_demo.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			gYgTn5okQeUCxIBDJZuSVP/ZwMjzUFIEcdCABqiRLeA=
+			</data>
+		</dict>
+		<key>doc/images/en-US/iPhone 11-10_ios_accounts_welcome_demo_framed.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			1+Cb0Tl7o7ZNQtHyqNlS8iHwBBzfDUCuMY0fQ2UF6hI=
+			</data>
+		</dict>
+		<key>doc/images/en-US/iPhone 11-11_ios_accounts_list_demo.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			52/ROn0n0fW6CC8eD20KtuxhE5SjGi1sxD2WRHbu1so=
+			</data>
+		</dict>
+		<key>doc/images/en-US/iPhone 11-11_ios_accounts_list_demo_framed.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			vjS9AsXfomhbbSeIPPYTmSkxLQCxTGstTbbmpjGJ67U=
+			</data>
+		</dict>
+		<key>doc/images/en-US/iPhone 11-20_ios_files_list_demo.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			7rgai/AeRQ5eLVxKYTGJUkeYSyDeBT4MVHZA0xzCD0Q=
+			</data>
+		</dict>
+		<key>doc/images/en-US/iPhone 11-20_ios_files_list_demo_framed.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			0Pjk0piPqOycPJyyGvRU/4CUN/uYVIkJ1t4uOsO4gHk=
+			</data>
+		</dict>
+		<key>doc/images/en-US/iPhone 11-21_ios_files_actions_demo.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			RZhOkxt/Ir72Mh95ydIcg6KcwkjANdsAdQ9gVk69FO0=
+			</data>
+		</dict>
+		<key>doc/images/en-US/iPhone 11-21_ios_files_actions_demo_framed.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			mOQVyOnjgGj21PpJ0G2WZiDeWUQwZdCV7QHBZ847t8g=
+			</data>
+		</dict>
+		<key>doc/images/en-US/iPhone 11-22_ios_files_preview_pdf_demo.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			ZH6LhvfPi+4u8XEu/jw+8ulJV0nZo5crc2F0mPyCZLM=
+			</data>
+		</dict>
+		<key>doc/images/en-US/iPhone 11-22_ios_files_preview_pdf_demo_framed.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			/VEgNGP/XZgu31dQLheGSnNnd+5zVWpNcWeUPcZvMMg=
+			</data>
+		</dict>
+		<key>doc/images/en-US/iPhone 11-40_ios_quick_access_demo.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			+fH3NCr/uZflfP10qRe3+FbAbDiOLUCP/6grU1TsSXg=
+			</data>
+		</dict>
+		<key>doc/images/en-US/iPhone 11-40_ios_quick_access_demo_framed.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			5SPdHt2ByYpuJz7hOsQs2ymzPkD/2XbwOdmiPFFm1XY=
+			</data>
+		</dict>
+		<key>doc/images/en-US/iPhone 11-60_ios_settings_demo.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			GHVzND/8XCaUdk9KJns6AUHBqyaxyYmJRLOx8lhYqdw=
+			</data>
+		</dict>
+		<key>doc/images/en-US/iPhone 11-60_ios_settings_demo_framed.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			Um4jtaLGUdNx7l5PYL7Wc6vxq8OYbfdW5krs35y+XII=
+			</data>
+		</dict>
+		<key>doc/images/en-US/iPhone 8 Plus-10_ios_accounts_welcome_demo.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			ju8kzb+Ir1/y/zI0wcliCQx/LiBH4PN6j1SfnihYp2g=
+			</data>
+		</dict>
+		<key>doc/images/en-US/iPhone 8 Plus-10_ios_accounts_welcome_demo_framed.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			sojXvSSWcbCwJUBrvsNFoEH72KX+ftlxWv7r5TIcmKA=
+			</data>
+		</dict>
+		<key>doc/images/en-US/iPhone 8 Plus-11_ios_accounts_list_demo.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			TVi3BiIPEmqxWhnSNbj7o528U/RL4Ee78L1MOp7/Uas=
+			</data>
+		</dict>
+		<key>doc/images/en-US/iPhone 8 Plus-11_ios_accounts_list_demo_framed.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			WMkvM9c9FiFBn8KHpesOTjGw4wEd9yjfh/C4QDVwbUQ=
+			</data>
+		</dict>
+		<key>doc/images/en-US/iPhone 8 Plus-20_ios_files_list_demo.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			b68owc/bftTs+L6bYHlcCR/BwgvyfCPTl28h1JRhrPo=
+			</data>
+		</dict>
+		<key>doc/images/en-US/iPhone 8 Plus-20_ios_files_list_demo_framed.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			PuLzPmVDz/xvgEYL+0eS1NEt8dvh0xUJlrYS1jWwLsI=
+			</data>
+		</dict>
+		<key>doc/images/en-US/iPhone 8 Plus-21_ios_files_actions_demo.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			2lw1IKf2zgM/Pvz7bAvZ3Cst2k8SPH8agl6XeSrRhd4=
+			</data>
+		</dict>
+		<key>doc/images/en-US/iPhone 8 Plus-21_ios_files_actions_demo_framed.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			mL4EAnzY58AaUo6oPfQJORww7wMQDe/tqu/jTIcm6p8=
+			</data>
+		</dict>
+		<key>doc/images/en-US/iPhone 8 Plus-22_ios_files_preview_pdf_demo.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			9+NXMFCNxtp5N1BuSDAjtiMHulUxvSogSpZpi+qNJg0=
+			</data>
+		</dict>
+		<key>doc/images/en-US/iPhone 8 Plus-22_ios_files_preview_pdf_demo_framed.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			Z4rk/GeaLewrWuqi8lO27ctkWZ0dxHKQWXMjflzQV1Y=
+			</data>
+		</dict>
+		<key>doc/images/en-US/iPhone 8 Plus-40_ios_quick_access_demo.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			LI5pLKK4kEAcqd8iM7lLZfzeQ0F16aJjhdu0PL6FfXQ=
+			</data>
+		</dict>
+		<key>doc/images/en-US/iPhone 8 Plus-40_ios_quick_access_demo_framed.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			CjCPQ2kd0EuAwUTc2S/sj6DhF6ciY/K+O8ht5Bj0hJc=
+			</data>
+		</dict>
+		<key>doc/images/en-US/iPhone 8 Plus-60_ios_settings_demo.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			J5q8s/4sicgA1Y6kMfU9YQBCpWN4hxE8RI0/f7nrLJY=
+			</data>
+		</dict>
+		<key>doc/images/en-US/iPhone 8 Plus-60_ios_settings_demo_framed.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			CB3QttwPccEN44BIeNGiNfcyNA5b0jbzFpbjvpxPwAc=
+			</data>
+		</dict>
+		<key>doc/images/en-US/iPhone 8-10_ios_accounts_welcome_demo.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			+GJhySsA8FcizDEVxY7xGcpnyk/mgRSR1oVtKB1Oazo=
+			</data>
+		</dict>
+		<key>doc/images/en-US/iPhone 8-10_ios_accounts_welcome_demo_framed.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			ennIDbbKsu9T0gJbrZirkHgsQGCVHt4LpU4j2BxZzQw=
+			</data>
+		</dict>
+		<key>doc/images/en-US/iPhone 8-11_ios_accounts_list_demo.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			qJ82bs1iKCzxdmzqA4EOu6P7UP5//5OAcJcix5VxJJ0=
+			</data>
+		</dict>
+		<key>doc/images/en-US/iPhone 8-11_ios_accounts_list_demo_framed.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			fJoXmE/xWu0uMC365Kh2j5+q+EwuNp9NKanecufb4PQ=
+			</data>
+		</dict>
+		<key>doc/images/en-US/iPhone 8-20_ios_files_list_demo.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			HoVXD19T0vA3dW0aaW86WIKog9nB9USW0IlI2wh+n+M=
+			</data>
+		</dict>
+		<key>doc/images/en-US/iPhone 8-20_ios_files_list_demo_framed.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			mJwqQqo2CBswmJTkgVmpiurd5ppG0pUlM1kmxfG8wlo=
+			</data>
+		</dict>
+		<key>doc/images/en-US/iPhone 8-21_ios_files_actions_demo.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			/110HsLZw7qLkW/3++YKu8qJACNmwwaBBFfiqYKJ9gE=
+			</data>
+		</dict>
+		<key>doc/images/en-US/iPhone 8-21_ios_files_actions_demo_framed.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			4/3sEMci6JIdTFKdvMpekZGdBiz1V8wm3ymeX61/Afo=
+			</data>
+		</dict>
+		<key>doc/images/en-US/iPhone 8-22_ios_files_preview_pdf_demo.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			eLzbiiPdy12twW171ryPxbHEB3e/tfMT/bzo6zPRCX0=
+			</data>
+		</dict>
+		<key>doc/images/en-US/iPhone 8-22_ios_files_preview_pdf_demo_framed.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			yjTR9IfqPF5HOmJ/nOkt2iY7bNDN1AbTv8CKlS+Cr4g=
+			</data>
+		</dict>
+		<key>doc/images/en-US/iPhone 8-40_ios_quick_access_demo.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			b7XuaLl13eUdfoLJnDWGxe5dUz3lmJ5/c9HH2ZCuPuo=
+			</data>
+		</dict>
+		<key>doc/images/en-US/iPhone 8-40_ios_quick_access_demo_framed.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			BDUFmucCF8SYCy5+qIQQRoBMWbtqqSvecHzVXEPavNY=
+			</data>
+		</dict>
+		<key>doc/images/en-US/iPhone 8-60_ios_settings_demo.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			sHuXXlmqZRyQe2lnh17HBLQAS3s4bOqygXmAfflW+U4=
+			</data>
+		</dict>
+		<key>doc/images/en-US/iPhone 8-60_ios_settings_demo_framed.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			r+9JUE9x6ovw1h5vzT/R6/uAwuiUqLFcVGicBRiUGS8=
+			</data>
+		</dict>
+		<key>doc/images/en-US/iPhone SE (2nd generation)-10_ios_accounts_welcome_demo.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			1s6jVRPhOfOVpDHbHMmHadNzT2kYS8W071LgY1FYjKA=
+			</data>
+		</dict>
+		<key>doc/images/en-US/iPhone SE (2nd generation)-10_ios_accounts_welcome_demo_framed.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			MQ5R908IbVs/0VLT8q9l8hYPqIBFm53s4XSSX9b7PvE=
+			</data>
+		</dict>
+		<key>doc/images/en-US/iPhone SE (2nd generation)-11_ios_accounts_list_demo.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			63sTGGf4in4NVKfToCZvSMGa15EsT26sc/1hMRsGYDY=
+			</data>
+		</dict>
+		<key>doc/images/en-US/iPhone SE (2nd generation)-11_ios_accounts_list_demo_framed.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			opUDirYFInjpI69vXHuqqJsbzdYxpw7V8Hm4/9aIKAY=
+			</data>
+		</dict>
+		<key>doc/images/en-US/iPhone SE (2nd generation)-20_ios_files_list_demo.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			ZI9CO1SpPEpHo7YZFvM3X15ZyQDsVIA27t9b8NvRqFA=
+			</data>
+		</dict>
+		<key>doc/images/en-US/iPhone SE (2nd generation)-20_ios_files_list_demo_framed.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			za+naqHh19XYPfdD1loAojUQRpcXtdV+SrAQW87C7So=
+			</data>
+		</dict>
+		<key>doc/images/en-US/iPhone SE (2nd generation)-21_ios_files_actions_demo.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			i12ZRBMk7NW+8FY/T84BhRu9NpBLUHlxn61UFMKK7OE=
+			</data>
+		</dict>
+		<key>doc/images/en-US/iPhone SE (2nd generation)-21_ios_files_actions_demo_framed.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			YTXwYvsZlVabLYM+ay3NJRPOC8sik6/i66irvp86tLI=
+			</data>
+		</dict>
+		<key>doc/images/en-US/iPhone SE (2nd generation)-22_ios_files_preview_pdf_demo.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			bEuwBQEE9wVrLnsY1XPJGi7Nhe4PVlSfYFgfEogmBx4=
+			</data>
+		</dict>
+		<key>doc/images/en-US/iPhone SE (2nd generation)-22_ios_files_preview_pdf_demo_framed.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			ZJbcGS6sZz4cWu3OxIJtKPpikOmdzJA/i/Zjj/czWyU=
+			</data>
+		</dict>
+		<key>doc/images/en-US/iPhone SE (2nd generation)-40_ios_quick_access_demo.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			2ziMvq638UNO21GIQ71D4Jt18oz/WnKm7XqktqXeynQ=
+			</data>
+		</dict>
+		<key>doc/images/en-US/iPhone SE (2nd generation)-40_ios_quick_access_demo_framed.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			k6UROea3b5KLQbKZiiJR02JAUMFA3baNF6bGeHJt5gg=
+			</data>
+		</dict>
+		<key>doc/images/en-US/iPhone SE (2nd generation)-60_ios_settings_demo.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			KtzqllsIAftwCNY9fcMx+L7Vo4GY9jhMWMcrgGAgxFc=
+			</data>
+		</dict>
+		<key>doc/images/en-US/iPhone SE (2nd generation)-60_ios_settings_demo_framed.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			bjf4IeMIRVDvyuCvd83jq5a4xO2++8CHcOSnBf/Uo5k=
+			</data>
+		</dict>
+		<key>doc/images/en-US/keyword.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			fNsVvG87HaBUtQGj7RYRzHd/3D+IbZEOBQd2t/pKOk0=
+			</data>
+		</dict>
+		<key>doc/images/en-US/title.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			0fnXc+2lISLJkW28RWkyIepF25ZRRGARMOYZbNraCLs=
+			</data>
+		</dict>
+		<key>doc/images/en/keyword.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			XwjAUl/qfF3H+z85K/IIifJPg9kBCIgmkfEw6N2wL4g=
+			</data>
+		</dict>
+		<key>doc/images/en/title.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			42WjxjZKy3OD1Fj+H/fSemd3SIU/0CCBxWpkPF2nqFI=
+			</data>
+		</dict>
+		<key>doc/images/es/README.md</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			Ye2BNKMuiZZxv14C7xXeFKlE99OrpZ2+L06MOApZ8r8=
+			</data>
+		</dict>
+		<key>doc/images/es/keyword.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			bvDQG+b7YDWH9kBfH+2CfnXhPlx4ivd+FUfdBIxhUeQ=
+			</data>
+		</dict>
+		<key>doc/images/es/title.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			8bbe5VkyGSv2h/X285CE44YEyKHGQzZup1RTpKNFkpg=
+			</data>
+		</dict>
+		<key>doc/images/et_EE/title.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			j48hecDeoV8D5G66y9DXPZjf9zdxyPp5z5N4+p8om5Y=
+			</data>
+		</dict>
+		<key>doc/images/eu/keyword.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			BPlWV4AzbZHBbenBDGP1Mza1FzXAAtjjMFao9eTU1EU=
+			</data>
+		</dict>
+		<key>doc/images/eu/title.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			pSV6C8sn530fE7f39OXxYbrcTDlVk0ZreRoqpMrQQb0=
+			</data>
+		</dict>
+		<key>doc/images/fonts/OpenSans-Regular.ttf</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			NK1nz8NiQD47qr5K0PTvC0traOLyUt1wO7seEBmBiOI=
+			</data>
+		</dict>
+		<key>doc/images/fonts/OpenSans-Semibold.ttf</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			qjsO9T2xLj1FCUAwysDmnThORMxZeGQ91DkAQcrVRuI=
+			</data>
+		</dict>
+		<key>doc/images/fonts/README.md</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			+TYYMCxjEqYQq7znL7BdYgMFnLq6MzCEThJt8hd56Cw=
+			</data>
+		</dict>
+		<key>doc/images/fr/title.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			uHPb4X6micIjlXJ10MdVbXK/qSk6de68bC0Mc3oS9tM=
+			</data>
+		</dict>
+		<key>doc/images/gl/keyword.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			lLvSUTepllwjWLizSeKEpIs/9HuwsORgksK8pzcs9Gc=
+			</data>
+		</dict>
+		<key>doc/images/gl/title.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			vbSfsWkM8olEf2uqacYGAJiHYbSmbswOLGCoA6jXj6o=
+			</data>
+		</dict>
+		<key>doc/images/he/keyword.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			1nzD+i6upJRGjWfp3p54EagGXIdrjL9Bis2tacuh8kM=
+			</data>
+		</dict>
+		<key>doc/images/he/title.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			MLFTduxhmXBDEopv8pQ5P0ZnjpKLqVu9WSMb89+NM44=
+			</data>
+		</dict>
+		<key>doc/images/id/keyword.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			6P43fuYnNX7dQzaKAkV3Y8tbU55tw5ze5V8Tys5yiHs=
+			</data>
+		</dict>
+		<key>doc/images/km/keyword.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			dNpKWMF2KRvggEGmFy+iiOT8yDfer6h2uCXHEksDA58=
+			</data>
+		</dict>
+		<key>doc/images/lt_LT/keyword.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			4WnZ4MlB5A0nXwOTahHDCeLZPEfex9QlH7C1zy8lKn4=
+			</data>
+		</dict>
+		<key>doc/images/lv/title.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			DFZetKOmR2FNYJg0Hk9KJxLmnsfpYPsohjPpaBo73ss=
+			</data>
+		</dict>
+		<key>doc/images/pl/keyword.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			k9MFcr45nivjmZLWZ7WTH40f9NkABuJ4vG63n+4tbhw=
+			</data>
+		</dict>
+		<key>doc/images/pl/title.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			GBHfyeTs/O01QQh0UtRUk3PFmnVBtDFIK9SApaPERI4=
+			</data>
+		</dict>
+		<key>doc/images/pt-BR/keyword.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			Bi4crQUVBYCshv4bHGrQ6AAqdbIVWMb4+RNJn6HoyFg=
+			</data>
+		</dict>
+		<key>doc/images/pt-BR/title.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			r2hh3HG4T+BEK/QYY8hFH189Wxm/2/gb5csZXYKfVf4=
+			</data>
+		</dict>
+		<key>doc/images/ru/keyword.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			7FAJHuQI3VsMY1q0MBe3NvNw4QuzM/olysqiXpE7vMY=
+			</data>
+		</dict>
+		<key>doc/images/ru/title.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			HJbVaRmbWzP6hKimnqymw7DEgzVZzQxU8YQ2a542KOU=
+			</data>
+		</dict>
+		<key>doc/images/screenshots.html</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			Z+CxQnX0TemcrRFxhZMKT24F1TmTI1MIS5sagzqRDUc=
+			</data>
+		</dict>
+		<key>doc/images/sq/keyword.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			PgoaQoNKqbXwy9NXzZIEGrIrEVDD0UqxQJgt6Q8Ov/M=
+			</data>
+		</dict>
+		<key>doc/images/sq/title.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			ep8XbQBQOBOTIWzU8G0c8K1cyUDVdlOBx+3qjnmMu6U=
+			</data>
+		</dict>
+		<key>doc/images/th-TH/keyword.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			y2HKtvjSnWuhG2I2kxny8eaWud3Ba+0OwN2jr11V1/A=
+			</data>
+		</dict>
+		<key>doc/images/th-TH/title.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			M0jptYl8mYRCR3yMlv/bFNnZTpeSjVAjq+GuVUUzVzo=
+			</data>
+		</dict>
+		<key>doc/images/tr/keyword.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			8618z9aZkwkh+HkQJ9CaCjoaph6VeidGB3Ip4kBrzW0=
+			</data>
+		</dict>
+		<key>doc/images/tr/title.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			neG9zgPmo0DeWnk+rkgWQgHMnvbAi8w+jVmhEaJxPc0=
+			</data>
+		</dict>
+		<key>doc/images/ur_PK/keyword.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			wmkx890yZs0ZSJIThb1+krXQfwjSRXm6VtOUHOuzD7c=
+			</data>
+		</dict>
+		<key>doc/images/zh-Hans/keyword.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			5R9li4tvdDGWjQp3vC1qoH6S/TPkZdzZENTzcUbbBIk=
+			</data>
+		</dict>
+		<key>doc/images/zh-Hans/title.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			8DqiV45lY346HMlYhcNL9IZQpt0plW5kOax5zaqCytg=
+			</data>
+		</dict>
+		<key>doc/images/zh_TW/keyword.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			GNyJMGKZUntJDAszZFqdqvqcVzgz0/Vk9Hr6L1TQh1M=
+			</data>
+		</dict>
+		<key>doc/images/zh_TW/title.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			TqFK4RVMbcZaQ4+iRBmTxNCtBzALEMtHI7nDJUTg4eQ=
 			</data>
 		</dict>
 		<key>en-GB.lproj/InfoPlist.strings</key>
@@ -4348,7 +6229,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			NHxjJrwlUsYUrafIjPjj+5WVAyso20jMvVa0slZn1dY=
+			EgJpIzf9FGPSMSzuSKSxl6WkRBGnetpQnFRmLBk1ldk=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -4402,7 +6283,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			N8RO+kjITwEFF9g1hw9dGQxJsIQkyBG9ty578UvKVRQ=
+			JtA0RkvBl5Kp5xU6qjrVEb4Zo4eq26EnelpbmdBz+ws=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -4544,7 +6425,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			ctz+QVMNWYD0K/mFtLKXwoWQELYrDUH+4lmom1mu/So=
+			gMBH7HDTtVg9sHG+jLYcG79nelIWvTh37f4Wgx8n9po=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -4598,7 +6479,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			L2eN1L/O3ORTYZudDzYLhh2nnT7FGiQlvgZ+JlX65zY=
+			ORBMKGT9NWTtWQ4H3PrA2QGprHTnCkVwqhe8Fz3o8UA=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -4625,7 +6506,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			54lgKKXcXQz1W3BjK4+qOqKBtcIXvepBSDlVguVnIgQ=
+			kFSbNqKL7Ml1MIyh31nczifuqqLgere5t4oD7zF7EmY=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -4659,7 +6540,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			5wWE1N38YnO6y67YWftJUNcrfCMPCL+2qS1/ZLrvdts=
+			dZ2TMik71ScSm5U+YZV9hDDuDM5L1frdFMlubzVaw9o=
 			</data>
 			<key>optional</key>
 			<true/>

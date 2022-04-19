@@ -1,4 +1,4 @@
-@avoffline
+@avoffline @ignore
 Feature: Set items as available offline (downloaded and synced)
 
   As a user

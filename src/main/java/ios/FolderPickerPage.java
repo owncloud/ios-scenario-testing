@@ -32,8 +32,8 @@ public class FolderPickerPage extends CommonPage {
     public void selectFolder(String targetFolder){
         Log.log(Level.FINE, "Start: Select folder from picker: " + targetFolder);
         waitById(10, createFolder);
-        driver.findElement(By.xpath(xpath_picker))
-                .findElement(By.xpath("//XCUIElementTypeCell[@name=\""+targetFolder+"\"]")).click();
+        findXpath(xpath_picker)
+            .findElement(By.xpath("//XCUIElementTypeCell[@name=\""+targetFolder+"\"]")).click();
     }
 
     public void createFolder(){
@@ -44,9 +44,9 @@ public class FolderPickerPage extends CommonPage {
     public void accept(String operation){
         Log.log(Level.FINE, "Start: Accept selection picker");
         if(operation.equals("move")){
-            driver.findElement(By.xpath(xpath_move)).click();
+            findXpath(xpath_move).click();
         } else if(operation.equals("copy")) {
-            driver.findElement(By.xpath(xpath_copy)).click();
+            findXpath(xpath_copy).click();
         }
     }
 

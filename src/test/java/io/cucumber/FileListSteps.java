@@ -3,7 +3,6 @@ package io.cucumber;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
@@ -216,7 +215,7 @@ public class FileListSteps {
 
     @Then("Alice should see the item {word} as av.offline")
     public void item_as_avoffline(String itemName)
-            throws IOException {
+            throws Throwable {
         String stepName = new Object(){}.getClass().getEnclosingMethod().getName();
         Log.log(Level.FINE, "----STEP----: " + stepName);
         assertTrue(fileListPage.fileIsMarkedAsAvOffline(itemName));
@@ -232,8 +231,8 @@ public class FileListSteps {
         assertTrue(fileListPage.displayedList(path, listServer));
     }
 
-    @Then("item {word} should be set as favorite")
-    public void item_is_now_favorite(String itemName)
+    @Then("{itemtype} {word} should be set as favorite")
+    public void item_is_now_favorite(String itemType, String itemName)
             throws Throwable {
         Log.log(Level.FINE, "----STEP----: " +
                 new Object(){}.getClass().getEnclosingMethod().getName() + ": " + itemName);

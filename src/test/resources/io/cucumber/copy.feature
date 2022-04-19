@@ -20,8 +20,8 @@ Feature: Copy item
 
   Scenario: Copy an existent folder to another location using the Contextual menu
     Given the following items have been created in the account
-      | folder  | copy2 |
-    When Alice selects to copy the folder copy2 using the Contextual menu
+      | file  | copy2.txt |
+    When Alice selects to copy the file copy2.txt using the Contextual menu
     And Alice selects Documents2 as target folder of the copy operation
-    Then Alice should see copy2 inside the folder Documents2
-    And Alice should see copy2 in the filelist
+    Then Alice should see copy2.txt inside the folder Documents2
+    And Alice should see copy2.txt in the filelist

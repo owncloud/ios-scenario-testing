@@ -1,7 +1,5 @@
 package ios;
 
-import org.openqa.selenium.By;
-
 import java.util.logging.Level;
 
 import utils.log.Log;
@@ -19,7 +17,7 @@ public class OAuth2Page extends CommonPage {
     }
 
     public void enterCredentials(String username, String password){
-        if (!driver.findElements(By.xpath(switch_xpath)).isEmpty()) {
+        if (!findListXpath(switch_xpath).isEmpty()){
             switchUser();
         }
         Log.log(Level.FINE, "Starts: enter OAuth2 credentials");

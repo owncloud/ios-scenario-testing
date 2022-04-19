@@ -19,6 +19,7 @@ import java.nio.file.Paths;
 import java.sql.Timestamp;
 import java.text.SimpleDateFormat;
 import java.time.Duration;
+import java.util.List;
 import java.util.logging.Level;
 
 import io.appium.java_client.MobileBy;
@@ -80,6 +81,10 @@ public class CommonPage {
 
     public MobileElement findXpath(String xpath){
         return (MobileElement) driver.findElement(By.xpath(xpath));
+    }
+
+    public List<MobileElement> findListXpath(String xpath){
+        return (List<MobileElement>) driver.findElements(By.xpath(xpath));
     }
 
     public static void swipe (double startx, double starty, double endx, double endy) {

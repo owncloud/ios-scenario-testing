@@ -10,7 +10,7 @@ Feature: Rename an item
   @smoke
   Scenario: Rename an item using the Actions menu
     Given the following items have been created in the account
-      | item   | rename1  |
+      | folder   | rename1  |
     When Alice selects to rename the item rename1 using the Actions menu
     And Alice sets renamed1 as new name
     Then Alice should see renamed1 in the filelist
@@ -18,8 +18,8 @@ Feature: Rename an item
 
   Scenario: Rename an item using the Contextual menu
     Given the following items have been created in the account
-      | item   | rename2  |
-    When Alice selects to rename the item rename2 using the Contextual menu
-    And Alice sets renamed2 as new name
-    Then Alice should see renamed2 in the filelist
-    And Alice should not see rename2 in the filelist anymore
+      | file   | rename2.txt  |
+    When Alice selects to rename the item rename2.txt using the Contextual menu
+    And Alice sets renamed2.txt as new name
+    Then Alice should see renamed2.txt in the filelist
+    And Alice should not see rename2.txt in the filelist anymore

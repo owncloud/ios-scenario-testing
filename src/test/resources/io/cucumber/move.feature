@@ -20,8 +20,8 @@ Feature: Move item
 
   Scenario: Move an existent folder to another location using the Contextual menu
     Given the following items have been created in the account
-      | folder   | move2  |
-    When Alice selects to move the folder move2 using the Contextual menu
+      | file   | move2.txt  |
+    When Alice selects to move the file move2.txt using the Contextual menu
     And Alice selects Documents3 as target folder of the move operation
-    Then Alice should not see move2 in the filelist anymore
-    And Alice should see move2 inside the folder Documents3
+    Then Alice should not see move2.txt in the filelist anymore
+    And Alice should see move2.txt inside the folder Documents3

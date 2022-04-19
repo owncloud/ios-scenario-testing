@@ -58,6 +58,10 @@
 "Fetching user information…" = "Po sillen të dhëna përdoruesi…";
 "Updating connection…" = "Po përditësohet lidhja…";
 
+"Preparing account" = "Përgatitje llogarie";
+"Please wait…" = "Ju lutemi, prisni…";
+"Skip" = "Anashkalojeni";
+
 "Missing hostname" = "Mungon strehëemër";
 "The entered URL does not include a hostname." = "URL-ja e dhënë nuk përmban një strehëemër.";
 "Add account" = "Shtoni llogari";
@@ -69,7 +73,8 @@
 "Edit Login" = "Përpunoni Kredenciale Hyrjeje";
 "Manage Storage" = "Administroni Depozitim";
 "Access Files" = "Përdorni Kartela";
-"Log out" = "Dalje";
+"Log out" = "Dilni";
+"Retry" = "Riprovo";
 
 /* Bookmark Info */
 "Bookmark Metadata" = "Tejtëdhëna Faqerojtësi";
@@ -187,7 +192,7 @@
 "Do you really want to disconnect from your '%@' account?" = "Doni vërtet të shkëputet prej llogarisë tuaj '%@'?";
 "This will remove all locally stored file copies from your device." = "Kjo do të heqë prej pajisjes tuaj krejt kopjet e kartelave të depozituara lokalisht.";
 "Really delete '%@'?" = "Të fshihet '%@' vërtet?";
-"Do you want to log out from '%@'?" = "Të dilet vërtet nga '%@'?";
+"Do you want to log out from '%@'?" = "Doni të dilni nga '%@'?";
 "This will also delete all locally stored file copies." = "Kjo do të shkaktojë fshirjen edhe të krejt kopjeve të kartelës të depozituara lokalisht.";
 "Delete" = "Fshije";
 "Remove" = "Hiqe";
@@ -205,6 +210,7 @@
 "Passcode Lock" = "Kyçje Me Kodkalim";
 "Face ID" = "Face ID";
 "Touch ID" = "Touch ID";
+"Unlock using %@?" = "Shkyçe duke përdorur %@?";
 "Videos" = "Video";
 "Photos" = "Foto";
 "Wifi only" = "Vetëm wifi";
@@ -219,6 +225,7 @@
 "Privacy Policy" = "Rregulla Privatësie";
 "Terms Of Use" = "Kushte Përdorimi";
 "Acknowledgements" = "Falënderime";
+"license" = "licencë";
 "Portions of this app may utilize the following copyrighted material, the use of which is hereby acknowledged." = "Pjesë të këtij aplikacioni mund të përdorin materialin vijues që është nën të drejta kopjimi, përdorimi i të cilit këtu është i lejuar.";
 "Video upload path" = "Shteg ngarkimesh videosh";
 "Photo upload path" = "Shteg ngarkimi fotosh";
@@ -226,6 +233,7 @@
 "After 1 minute" = "Pas 1 minute";
 "After 5 minutes" = "Pas 5 minutash";
 "After 30 minutes" = "Pas 30 minutash";
+"After %ld seconds" = "Pas %ld sekondash";
 "If you choose \"Immediately\" the App will be locked, when it is no longer in foreground." = "Nëse zgjidhni “Menjëherë”, Aplikacioni do të kyçet, kur s’është më përpara në ekran.";
 "Please configure an email account" = "Ju lutemi, formësoni një llogari email";
 "You need to configure an email account first to be able to send emails." = "Së pari lypset të formësoni një llogari email, që të jeni në gjendje të dërgoni email-e.";
@@ -298,9 +306,9 @@
 "Decrease Slider Value" = "Zvogëloni Vlerë Rrëshqitësi";
 "Increase Slider Value" = "Zmadhoni Vlerë Rrëshqitësi";
 
-"Cellular Data Usage" = "Shpërngulje prej celulari";
+"Cellular Data Usage" = "Përdorim të Dhënash Celulari";
 "Some cellular data may still be used. To completely avoid the usage of cellular data, please turn off access to cellular for the entire app in the Settings app." = "Disa të dhëna celulari mund të jenë ende duke u përdorur Për të shmangur plotësisht përdorimin e të dhënave të shërbimit celular, ju lutemi, çaktivizoni  hyrjen në celular për krejt aplikacionin, që nga aplikacioni Rregullime.";
-"Cellular Data Usage have been disabled via MDM configuration. Please contact your administrator for more information." = "Shpërnguljet përmes celularit janë çaktivizuar përmes formësimit MDM. Për më tepër hollësi, ju lutemi, lidhuni me përgjegjësin tuaj.";
+"Cellular Data Usage have been disabled via MDM configuration. Please contact your administrator for more information." = "Përdorimi i të Dhënave Celulare është çaktivizuar përmes formësimit të MDM-së. Për më tepër hollësi, ju lutemi, lidhuni me përgjegjësin.";
 "General" = "Të përgjithshme";
 "By feature" = "Sipas veçorish";
 
@@ -311,7 +319,7 @@
 "Advanced settings" = "Rregullime të mëtejshme";
 "Show hidden files and folders" = "Shfaq kartela dhe dosje të fshehura";
 "Show folders on top" = "Dosjet shfaqi në krye";
-"Disable gestures" = "Parandalo gjeste";
+"Disable gestures" = "Çaktivizo gjeste";
 "Prevent dragging of files and folders and multiselection using system defined gestures" = "Parandalo tërheqje kartelash dhe dosjesh dhe përzgjedhje të shumëfishta duke përdorur gjeste të përcaktuara nga sistemi";
 
 /* Advanced settings */
@@ -506,7 +514,7 @@
 "Shared with others" = "Të ndara me të tjerët";
 "Shares" = "Ndarje";
 "Copy Private Link" = "Kopjo Lidhje Private";
-"Only recipients can use this link. Use it as a permanent link to point to this resource" = "Vetëm marrësit mund ta përdorin këtë lidhje. Përdoreni si një lidhje të përhershme që shpie te ky burim";
+"Only people who have access to the file/folder can use it. Use it as a permanent link for yourself or to point others to files within shares." = "Vetëm personat që kanë hyrje te kartela/dosja mund ta përdorin atë. Përdoreni si një lidhje të përhershme për veten tuaj, ose për t’u treguar të tjerëve kartela brenda ndarjeve.";
 "Accept Share failed" = "Dështoi Pranimi i Ndarjes";
 "Decline Share failed" = "Dështoi Hedhja Tej e Ndarjes";
 "Accept" = "Pranoje";
@@ -607,13 +615,14 @@
 "Offline files use" = "Përdorim kartelash pa internet";
 "Compacting of '%@' failed" = "Dështoi ngjeshja e '%@'";
 "Include available offline files" = "Përfshi kartela të passhme jashtë linje";
-"Delete all Offline Files" = "Fshi Kopje Vendore";
+"Delete all Offline Files" = "Fshi Krejt Kartelat Jo Në Linjë";
 "Manage" = "Administroni";
 "Storage" = "Depozitë";
 "Compacting" = "Po ngjeshet";
 
 "Really include available offline files?" = "Të përfshihen vërtet kartela të passhme jashtë linje?";
 "Files and folders marked as Available Offline will become unavailable. They will be re-downloaded next time you log into your account (connectivity required)." = "Kartelat dhe dosjet me shenjë për Të Passhme Jashtë Linje s’do të mund të përdoren dot. Ato do të rishkarkohen herës pasuese që bëni hyrjen në llogarinë tuaj (lypset lidhje në internet).";
+"Removes downloaded files and local copies of items marked as Available Offline. The latter will be re-downloaded next time you log into your account (connectivity required)." = "Heq kartelat e shkarkuara dhe kopjet vendore që tregohen si Të Përdorshme Jo Në Linjë. Këto të dytat do të rishkarkohen herën tjetër që bëni hyrjen në llogarinë tuaj (lyp lidhje në internet).";
 
 /* Diagnostic */
 "Diagnostic Overview" = "Përmbledhje Diagnostikimi";
@@ -668,6 +677,7 @@
 "Previous" = "E mëparshmja";
 "Favorite" = "Vëre Si të Parapëlqyer";
 "Cut" = "Prije";
+"Paste" = "Ngjite";
 "Play/Pause" = "Luaje/Pushoje";
 "Skip Back" = "Kërcim Prapa";
 "Skip Ahead" = "Kërcim Përpara";
@@ -762,6 +772,19 @@
 "Error loading item" = "Gabim në ngarkim objekti";
 "Preparing…" = "Po përgatitet…";
 "Save here" = "Ruaje këtu";
+
+/* Disallowed Import Methods */
+/* - Share Extension */
+"Share Extension disabled" = "Share Extension disabled";
+"Importing files through the Share Extension is not allowed on this device." = "Në këtë pajisje nuk lejohet importim kartelash përmes Share Extension.";
+
+/* - Open with */
+"Opening not allowed" = "Nuk lejohet hapja";
+"Importing files through opening is not allowed on this device." = "Në këtë pajisje nuk lejohet importim kartelash përmes hapjes.";
+
+/* - Files.app */
+"Import not allowed" = "Nuk lejohet importimi";
+"Importing files through the File Provider is not allowed on this device." = "Në këtë pajisje nuk lejohet importimi i kartelave përmes Furnizuesit të Kartelave.";
 
 /* Data migration from legacy app */
 "Account Migration" = "Migrim Llogarie";
