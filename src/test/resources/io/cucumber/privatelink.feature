@@ -19,3 +19,7 @@ Feature: Private Links
       | type    |  name             |
       | file    | privateLink1.pdf  |
       | folder  | privateLink2      |
+
+  Scenario: Item not existing
+    When Alice opens a private link pointing to non-existing item
+    Then Alice should see a link resolution error

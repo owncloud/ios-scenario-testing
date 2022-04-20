@@ -200,7 +200,7 @@ public class FileListPage extends CommonPage {
 
     public String getPrivateLink(String scheme, String linkOriginal) {
         Log.log(Level.FINE, "Starts: Create private link: " + scheme + " " + linkOriginal);
-        String originalScheme = linkOriginal.split("://")[0];
+        String originalScheme = getScheme(linkOriginal);
         Log.log(Level.FINE, "Original scheme: " + originalScheme);
         return linkOriginal.replace(originalScheme, scheme);
     }
@@ -210,6 +210,24 @@ public class FileListPage extends CommonPage {
         driver.get(privateLink);
         //Let some time to load... did not found a reliable condition to avoid this ugly wait
         wait (5);
+    }
+
+    public void openFakePrivateLink() {
+        Log.log(Level.FINE, "Starts: Open fake private link");
+        String originalScheme = getScheme(System.getProperty("server"));
+        String fakeURL = System.getProperty("server").replace(originalScheme, "owncloud") + "/f/11111111111";
+        Log.log(Level.FINE, "Fake URL: " + fakeURL);
+        driver.get(fakeURL);
+        //Let some time to load... did not found a reliable condition to avoid this ugly wait
+        wait (5);
+    }
+
+    private String getScheme (String originalURL){
+        return originalURL.split("://")[0];
+    }
+
+    public boolean privateLinkFailed() {
+        return findXpath("//XCUIElementTypeStaticText[@name=\"Link resolution failed\"]").isDisplayed();
     }
 
     public boolean itemOpened (String itemType, String itemName) {

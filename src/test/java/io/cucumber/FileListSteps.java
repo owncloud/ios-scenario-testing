@@ -81,6 +81,14 @@ public class FileListSteps {
         fileListPage.openPrivateLink(privateLink);
     }
 
+    @When("Alice opens a private link pointing to non-existing item")
+    public void open_fake_private_link()
+            throws Throwable {
+        String stepName = new Object(){}.getClass().getEnclosingMethod().getName();
+        Log.log(Level.FINE, "----STEP----: " + stepName);
+        fileListPage.openFakePrivateLink();
+    }
+
     @When("Alice selects the option Create Folder")
     public void create_folder() {
         String stepName = new Object(){}.getClass().getEnclosingMethod().getName();
@@ -241,4 +249,11 @@ public class FileListSteps {
         filesAPI.removeItem(itemName);
     }
 
+    @Then("Alice should see a link resolution error")
+    public void link_resolution_error()
+            throws Throwable {
+        String stepName = new Object(){}.getClass().getEnclosingMethod().getName();
+        Log.log(Level.FINE, "----STEP----: " + stepName);
+        assertTrue(fileListPage.privateLinkFailed());
+    }
 }

@@ -152,7 +152,7 @@ public class LinkSteps {
             throws Throwable {
         String stepName = new Object(){}.getClass().getEnclosingMethod().getName();
         Log.log(Level.FINE, "----STEP----: " + stepName);
-        assertFalse(publicLinkPage.isItemInListLinks(itemName+ " link"));
+        assertFalse(publicLinkPage.isItemInListLinks(itemName + " link"));
         assertTrue(shareAPI.getShare(itemName) == null);
         filesAPI.removeItem(itemName);
     }
