@@ -14,7 +14,7 @@ import utils.log.Log;
 public class LoginPage extends CommonPage{
 
     @iOSXCUITFindBy(accessibility = "addServer")
-    private List<MobileElement> addServer;
+    private MobileElement addServer;
 
     @iOSXCUITFindBy(accessibility = "row-url-url")
     private List<MobileElement> urlServer;
@@ -96,7 +96,7 @@ public class LoginPage extends CommonPage{
     }
 
     public void skipAddServer(){
-        addServer.get(0).click();
+        addServer.click();
     }
 
     public void typeCredentials(String username, String password){
@@ -159,5 +159,4 @@ public class LoginPage extends CommonPage{
                 return null;
         }
     }
-
 }

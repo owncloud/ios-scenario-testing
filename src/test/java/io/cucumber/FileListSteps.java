@@ -90,7 +90,7 @@ public class FileListSteps {
     }
 
     @When("Alice selects the option Create Folder")
-    public void create_folder() {
+    public void create_folder() throws InterruptedException{
         String stepName = new Object(){}.getClass().getEnclosingMethod().getName();
         Log.log(Level.FINE, "----STEP----: " + stepName);
         fileListPage.createFolder();
@@ -111,9 +111,11 @@ public class FileListSteps {
     }
 
     @When("Alice selects/sets to/as {operation} the {itemtype} {word} using the {word} menu")
-    public void select_item_to_some_operation(String operation, String typeItem, String itemName, String menu) {
+    public void select_item_to_some_operation(String operation, String typeItem, String itemName, String menu)
+            throws InterruptedException {
         String stepName = new Object(){}.getClass().getEnclosingMethod().getName();
         Log.log(Level.FINE, "----STEP----: " + stepName);
+        fileListPage.refreshBySwipe();
         fileListPage.executeOperation(operation, itemName, typeItem, menu);
     }
 
@@ -144,6 +146,13 @@ public class FileListSteps {
         String stepName = new Object(){}.getClass().getEnclosingMethod().getName();
         Log.log(Level.FINE, "----STEP----: " + stepName);
         fileListPage.closeActions();
+    }
+
+    @When("Alice opens the Actions menu of {word}")
+    public void open_actions_menu(String itemName) throws InterruptedException{
+        String stepName = new Object(){}.getClass().getEnclosingMethod().getName();
+        Log.log(Level.FINE, "----STEP----: " + stepName);
+        fileListPage.selectItemListActions(itemName);
     }
 
     @When("Alice browses into folder {word}")

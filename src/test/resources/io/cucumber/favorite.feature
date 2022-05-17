@@ -18,5 +18,6 @@ Feature: Set an item as favorite (starred)
     Given the following items have been created in the account
       | file   | fav2.txt  |
     When Alice sets as favorite the file fav2.txt using the Contextual menu
+    And Alice opens the Actions menu of fav2.txt
     Then item fav2.txt should be set as favorite
 

@@ -87,15 +87,18 @@ public class CommonPage {
         return (List<MobileElement>) driver.findElements(By.xpath(xpath));
     }
 
-    public static void swipe (double startx, double starty, double endx, double endy) {
+    public static void swipe (double startx, double starty, double endx, double endy)
+            throws InterruptedException {
+        //Need a short waiter. Should be improved.
+        Thread.sleep(1000);
         Dimension size = driver.manage().window().getSize();
-        int startY=(int)(size.height * starty);
-        int endY=(int)(size.height * endy);
         int startX=(int)(size.width * startx);
-        int endX=(int)(size.height * endx);
-        TouchAction ts = new TouchAction(driver);
-        ts.longPress(PointOption.point(startX, startY))
-                .moveTo(PointOption.point(startX, endY)).release().perform();
+        int startY=(int)(size.height * starty);
+        int endX=(int)(size.width * endx);
+        int endY=(int)(size.height * endy);
+        TouchAction touchAction = new TouchAction(driver);
+        touchAction.longPress(PointOption.point(startX, startY))
+                .moveTo(PointOption.point(startX, endY)).perform().release();
     }
 
     // This code comes from the Appium official docu

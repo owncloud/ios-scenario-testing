@@ -89,6 +89,10 @@ public class FileListPage extends CommonPage {
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
     }
 
+    public void refreshBySwipe() throws InterruptedException {
+        swipe(0.50, 0.40, 0.50, 0.90);
+    }
+
     public void createFolder() {
         Log.log(Level.FINE, "Starts: create folder");
         openPlusButton();
@@ -155,9 +159,6 @@ public class FileListPage extends CommonPage {
     public void executeOperation(String operation, String itemName, String typeItem, String menu){
         Log.log(Level.FINE, "Starts: execute operation: " + operation + " " +
                 itemName + " "+ menu);
-        if (!isItemInList(itemName)){
-            Log.log(Level.FINE, "Waiting for item: " + itemName);
-        }
         switch (menu) {
             case "Actions":
                 selectItemListActions(itemName);
@@ -185,7 +186,7 @@ public class FileListPage extends CommonPage {
         return !driver.findElements(By.id(itemName)).isEmpty();
     }
 
-    private void selectItemListActions(String itemName) {
+    public void selectItemListActions(String itemName) {
         Log.log(Level.FINE, "Starts: select actions item from list: " + itemName);
         driver.findElement(By.id(itemName + " Actions")).click();
     }
@@ -386,7 +387,7 @@ public class FileListPage extends CommonPage {
         findXpath("//XCUIElementTypeButton[@name=\"Delete\"]").click();
     }
 
-    public boolean fileIsMarkedAsAvOffline(String itemName){
+    public boolean fileIsMarkedAsAvOffline(String itemName) throws InterruptedException{
         Log.log(Level.FINE, "Starts: Check if file is av. offline");
         //Action turns to unavailable offline
         String finalName = null;
