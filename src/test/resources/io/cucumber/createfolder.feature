@@ -11,3 +11,11 @@ Feature: Create a new folder
     When Alice selects the option Create Folder
     And Alice sets FolderTest as new name
     Then Alice should see FolderTest in the filelist
+
+  Scenario: Create a new folder with an incorrect name
+    Given user Alice is logged in
+    And the following items have been created in the account
+      | folder   | Documents  |
+    When Alice selects the option Create Folder
+    And Alice sets Documents as new name
+    Then Alice should see a duplicated item error

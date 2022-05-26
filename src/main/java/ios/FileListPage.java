@@ -188,7 +188,11 @@ public class FileListPage extends CommonPage {
 
     public void selectItemListActions(String itemName) {
         Log.log(Level.FINE, "Starts: select actions item from list: " + itemName);
-        driver.findElement(By.id(itemName + " Actions")).click();
+        String fileName = itemName;
+        if (itemName.contains("/")) { //If it does contain "/", browse to
+            fileName = navigateFile(itemName);
+        }
+        driver.findElement(By.id(fileName + " Actions")).click();
     }
 
     private void selectItemListContextual(String itemName) {
@@ -370,13 +374,6 @@ public class FileListPage extends CommonPage {
         closeActions.click();
     }
 
-    public void browse(String folderName){
-        Log.log(Level.FINE, "Starts: browse to " + folderName);
-        String xpathFolder = "//XCUIElementTypeCell[@name=\""+folderName+"\"]";
-        waitByXpath(10, xpathFolder);
-        findXpath(xpathFolder).click();
-    }
-
     public void browseRoot(){
         Log.log(Level.FINE, "Starts: browse to root");
         browseRoot.click();
@@ -404,7 +401,7 @@ public class FileListPage extends CommonPage {
         } else {
             Log.log(Level.FINE, "no browsing, file name");
             selectItemListActions(itemName);
-            menuUnavoffline = driver.findElement(By.id(xpath_unavoffline)).isDisplayed();
+            menuUnavoffline = !driver.findElements(By.id(xpath_unavoffline)).isEmpty();
         }
         Log.log(Level.FINE, "Av. Offline conditions: " + menuUnavoffline);
         return menuUnavoffline;
@@ -443,38 +440,5 @@ public class FileListPage extends CommonPage {
             }
         }
         return found;
-    }
-
-    private void navigateFolder(String path){
-        Log.log(Level.FINE, "Path: " + path);
-        String completePath = Pattern.quote("/");
-        String[] route = path.split(completePath);
-        Log.log(Level.FINE, "Route lenght: " + route.length);
-        if (route.length > 0) { //we have to browse
-            int i;
-            for (i = 1 ; i < route.length ; i++) {
-                Log.log(Level.FINE, "Browsing: " + route[i]);
-                browse(route[i]);
-            }
-        }
-    }
-
-    private String navigateFile(String path){
-        Log.log(Level.FINE, "Path: " + path);
-        String completePath = Pattern.quote("/");
-        String[] route = path.split(completePath);
-        Log.log(Level.FINE, "Route lenght: " + route.length);
-        for (int j = 0 ; j < route.length ; j++) {
-            Log.log(Level.FINE, "Chunk: " + j + ": " + route[j]);
-        }
-        if (route.length > 0) { //we have to browse
-            int i;
-            for (i = 0; i < route.length - 1 ; i++) {
-                Log.log(Level.FINE, "Browsing: " + route[i]);
-                browse(route[i]);
-            }
-            return route[i];
-        }
-        return "";
     }
 }

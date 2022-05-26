@@ -6,15 +6,15 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		lV06vFgfOrKfjgfpANrXZ7RYmWw=
+		gyh/KYlX4TIbOtgXLjg1imuTB1Y=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		bEx4n/EVXGOPMKhUBb29hBQ2Seo=
+		lgwnemZR23P1bZkwIQhj1g848rw=
 		</data>
 		<key>PocketSVG_PocketSVG.bundle/Info.plist</key>
 		<data>
-		NWVNkuqaYO+sb9eEGk9dnPGQ3NY=
+		t33x8FzwcBljvDS3krWhVfZTiWg=
 		</data>
 		<key>PocketSVG_PocketSVG.bundle/SVGColors.plist</key>
 		<data>
@@ -22,7 +22,7 @@
 		</data>
 		<key>PocketSVG_PocketSVG.bundle/_CodeSignature/CodeDirectory</key>
 		<data>
-		Cu/nnG+dZungUjtK+aIYylw9STo=
+		iIkLb4DnqJHShPT8hS0W9YF+u4s=
 		</data>
 		<key>PocketSVG_PocketSVG.bundle/_CodeSignature/CodeRequirements</key>
 		<data>
@@ -30,7 +30,7 @@
 		</data>
 		<key>PocketSVG_PocketSVG.bundle/_CodeSignature/CodeRequirements-1</key>
 		<data>
-		Vi/en6xLTGhtW1SxLFUTbqyVeY4=
+		mC/6SUVjP1/5byoDVj9MpR2B/gs=
 		</data>
 		<key>PocketSVG_PocketSVG.bundle/_CodeSignature/CodeResources</key>
 		<data>
@@ -371,14 +371,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			aAkK9KxtmyLQ/DOhgD4HxE8dasMklz2nFdMMWxLtM9k=
+			uKPfnLTbe7GAzlfGOD0amSov6tlYf9BINfj+DkTsmLo=
 			</data>
 		</dict>
 		<key>PocketSVG_PocketSVG.bundle/Info.plist</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			3kaiyLMbKDgaSJtrSp8X6EqPWlN1n3tlJpYvAceJODs=
+			YAjHi/Awqb0tPEoQVWRKLQ1YBHoYXAa7A+nyVTpIswg=
 			</data>
 		</dict>
 		<key>PocketSVG_PocketSVG.bundle/SVGColors.plist</key>
@@ -392,7 +392,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			eW+g1+iSIJaGNbEsINimuRzqz4uPo2qFbi0bOyRzsps=
+			OiIv+omadgGCp9shCLT9TsV5Tzi4As4wd1gsJhQuRkE=
 			</data>
 		</dict>
 		<key>PocketSVG_PocketSVG.bundle/_CodeSignature/CodeRequirements</key>
@@ -406,7 +406,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			goXI7oWK7y+T854GEpRzIHVKZrINDNQaW/1W4XPDNcQ=
+			38KoXGsWgb+fxheg5HYiKnIjLCaxbVitUqjHTGYeTCs=
 			</data>
 		</dict>
 		<key>PocketSVG_PocketSVG.bundle/_CodeSignature/CodeResources</key>

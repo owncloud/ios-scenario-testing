@@ -1,5 +1,6 @@
 package ios;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.support.PageFactory;
 
 import java.util.logging.Level;
@@ -27,5 +28,10 @@ public class InputNamePage extends CommonPage {
         newName.clear();
         newName.sendKeys(itemName);
         acceptButton.click();
+    }
+
+    public boolean errorDuplicated(){
+        String errorCreation = "Item with same name already exists";
+        return driver.findElement(By.id(errorCreation)).isDisplayed();
     }
 }

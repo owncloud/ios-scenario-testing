@@ -32,8 +32,14 @@ public class FolderPickerPage extends CommonPage {
     public void selectFolder(String targetFolder){
         Log.log(Level.FINE, "Start: Select folder from picker: " + targetFolder);
         waitById(10, createFolder);
-        findXpath(xpath_picker)
-            .findElement(By.xpath("//XCUIElementTypeCell[@name=\""+targetFolder+"\"]")).click();
+        if (!targetFolder.equals("/")) { //If it is root, nothing to do
+            if (!targetFolder.contains("/")) { //If it does not contain "/", just browse to next level
+            findXpath(xpath_picker)
+                    .findElement(By.xpath("//XCUIElementTypeCell[@name=\"" + targetFolder + "\"]")).click();
+            } else { //browsing to deeper
+                navigateFolder(targetFolder);
+            }
+        }
     }
 
     public void createFolder(){
@@ -53,5 +59,9 @@ public class FolderPickerPage extends CommonPage {
     public void cancel(){
         Log.log(Level.FINE, "Start: Cancel selection picker");
         cancelButton.click();
+    }
+
+    public boolean actionEnabled(String actionId){
+        return driver.findElement(By.id(actionId)).isEnabled();
     }
 }

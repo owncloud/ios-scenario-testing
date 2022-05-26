@@ -162,6 +162,13 @@ public class FileListSteps {
         fileListPage.browse(itemName);
     }
 
+    @When("Alice browses to root folder")
+    public void browses_root() {
+        String stepName = new Object(){}.getClass().getEnclosingMethod().getName();
+        Log.log(Level.FINE, "----STEP----: " + stepName);
+        fileListPage.browseRoot();
+    }
+
     @When("Alice selects to paste into the folder")
     public void paste_item() {
         String stepName = new Object(){}.getClass().getEnclosingMethod().getName();
@@ -178,7 +185,6 @@ public class FileListSteps {
         Log.log(Level.FINE, "----STEP----: " + stepName);
         assertTrue(fileListPage.isItemInList(itemName));
         assertTrue(filesAPI.itemExist(itemName));
-        filesAPI.removeItem(itemName);
     }
 
     @Then("{itemtype} {word} is opened in the app")
@@ -187,7 +193,6 @@ public class FileListSteps {
         String stepName = new Object(){}.getClass().getEnclosingMethod().getName();
         Log.log(Level.FINE, "----STEP----: " + stepName);
         assertTrue(fileListPage.itemOpened(itemType, itemName));
-        filesAPI.removeItem(itemName);
     }
 
     @Then("Alice should see the photo in the filelist")
@@ -198,7 +203,6 @@ public class FileListSteps {
         ArrayList<OCFile> list = filesAPI.listItems("");
         String fileUploaded = fileListPage.photoUploaded(list);
         assertFalse(fileUploaded.isEmpty());
-        filesAPI.removeItem(fileUploaded);
     }
 
     @Then("Alice should see {word} 2 in the filelist")
@@ -208,7 +212,6 @@ public class FileListSteps {
         Log.log(Level.FINE, "----STEP----: " + stepName);
         assertTrue(fileListPage.isItemInList(itemName + " 2"));
         assertTrue(filesAPI.itemExist(itemName+ " 2"));
-        filesAPI.removeItem(itemName+ " 2");
     }
 
     @Then("Alice should see {word} inside the folder {word}")
@@ -218,7 +221,6 @@ public class FileListSteps {
         fileListPage.browse(targetFolder);
         fileListPage.isItemInList(itemName);
         assertTrue(filesAPI.itemExist(targetFolder+"/"+itemName));
-        filesAPI.removeItem(targetFolder+"/"+itemName);
         fileListPage.browseRoot();
     }
 
@@ -236,7 +238,14 @@ public class FileListSteps {
         String stepName = new Object(){}.getClass().getEnclosingMethod().getName();
         Log.log(Level.FINE, "----STEP----: " + stepName);
         assertTrue(fileListPage.fileIsMarkedAsAvOffline(itemName));
-        filesAPI.removeItem(itemName);
+    }
+
+    @Then("Alice should not see the item {word} as av.offline")
+    public void item_not_avoffline(String itemName)
+            throws Throwable {
+        String stepName = new Object(){}.getClass().getEnclosingMethod().getName();
+        Log.log(Level.FINE, "----STEP----: " + stepName);
+        assertFalse(fileListPage.fileIsMarkedAsAvOffline(itemName));
     }
 
     @Then("the list of files in {word} folder should match with the server")
@@ -264,5 +273,25 @@ public class FileListSteps {
         String stepName = new Object(){}.getClass().getEnclosingMethod().getName();
         Log.log(Level.FINE, "----STEP----: " + stepName);
         assertTrue(fileListPage.privateLinkFailed());
+    }
+
+    @Then("Alice should see a duplicated item error")
+    public void folder_creation_error()
+            throws Throwable{
+        String stepName = new Object(){}.getClass().getEnclosingMethod().getName();
+        Log.log(Level.FINE, "----STEP----: " + stepName);
+        assertTrue(inputNamePage.errorDuplicated());
+    }
+
+    @Then("{word} action should not be allowed")
+    public void action_not_allowed(String action)
+            throws Throwable{
+        String stepName = new Object(){}.getClass().getEnclosingMethod().getName();
+        Log.log(Level.FINE, "----STEP----: " + stepName);
+            if (action.equals("copy")){
+                assertFalse(folderPickerPage.actionEnabled("Copy here"));
+            } else if (action.equals("move")){
+                assertFalse(folderPickerPage.actionEnabled("Move here"));
+            }
     }
 }

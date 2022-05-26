@@ -21,6 +21,7 @@ import java.text.SimpleDateFormat;
 import java.time.Duration;
 import java.util.List;
 import java.util.logging.Level;
+import java.util.regex.Pattern;
 
 import io.appium.java_client.MobileBy;
 import io.appium.java_client.MobileElement;
@@ -99,6 +100,46 @@ public class CommonPage {
         TouchAction touchAction = new TouchAction(driver);
         touchAction.longPress(PointOption.point(startX, startY))
                 .moveTo(PointOption.point(startX, endY)).perform().release();
+    }
+
+    public void browse(String folderName){
+        Log.log(Level.FINE, "Starts: browse to " + folderName);
+        String xpathFolder = "//XCUIElementTypeCell[@name=\""+folderName+"\"]";
+        waitByXpath(10, xpathFolder);
+        findXpath(xpathFolder).click();
+    }
+
+    protected String navigateFile(String path){
+        Log.log(Level.FINE, "Path: " + path);
+        String completePath = Pattern.quote("/");
+        String[] route = path.split(completePath);
+        Log.log(Level.FINE, "Route lenght: " + route.length);
+        for (int j = 0 ; j < route.length ; j++) {
+            Log.log(Level.FINE, "Chunk: " + j + ": " + route[j]);
+        }
+        if (route.length > 0) { //we have to browse
+            int i;
+            for (i = 0; i < route.length - 1 ; i++) {
+                Log.log(Level.FINE, "Browsing: " + route[i]);
+                browse(route[i]);
+            }
+            return route[i];
+        }
+        return "";
+    }
+
+    protected void navigateFolder(String path){
+        Log.log(Level.FINE, "Path: " + path);
+        String completePath = Pattern.quote("/");
+        String[] route = path.split(completePath);
+        Log.log(Level.FINE, "Route lenght: " + route.length);
+        if (route.length > 0) { //we have to browse
+            int i;
+            for (i = 1 ; i < route.length ; i++) {
+                Log.log(Level.FINE, "Browsing: " + route[i]);
+                browse(route[i]);
+            }
+        }
     }
 
     // This code comes from the Appium official docu

@@ -23,3 +23,11 @@ Feature: Rename an item
     And Alice sets renamed2.txt as new name
     Then Alice should see renamed2.txt in the filelist
     And Alice should not see rename2.txt in the filelist anymore
+
+  Scenario: Rename an item using the Actions menu with an existing name
+    Given the following items have been created in the account
+      | folder   | Photos     |
+      | folder   | Documents  |
+    When Alice selects to rename the folder Photos using the Actions menu
+    And Alice sets Documents as new name
+    Then Alice should see a duplicated item error

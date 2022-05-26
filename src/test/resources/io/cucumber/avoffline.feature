@@ -29,3 +29,13 @@ Feature: Set items as available offline (downloaded and synced)
     And Alice selects to move the file file3.pdf using the Actions menu
     And Alice selects folderTest as target folder of the move operation
     Then Alice should see the item folderTest/file3.pdf as av.offline
+
+  Scenario: Moving a file inside an av.offline folder to a non av.offline folder, it turns not av.offline
+    Given the following items have been created in the account
+      | folder | folderTest2             |
+      | file   | folderTest2/file4.txt   |
+    When Alice selects to make available offline the folder folderTest2 using the Actions menu
+    And Alice selects to move the file folderTest2/file4.txt using the Actions menu
+    And Alice selects / as target folder of the move operation
+    And Alice browses to root folder
+    Then Alice should not see the item file4.txt as av.offline
