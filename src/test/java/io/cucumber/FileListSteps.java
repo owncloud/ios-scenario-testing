@@ -264,7 +264,6 @@ public class FileListSteps {
                 new Object(){}.getClass().getEnclosingMethod().getName() + ": " + itemName);
         assertTrue(fileListPage.itemIsFavorite(itemName));
         assertTrue(filesAPI.isFavorite(itemName));
-        filesAPI.removeItem(itemName);
     }
 
     @Then("Alice should see a link resolution error")

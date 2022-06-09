@@ -1,12 +1,10 @@
 package ios;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.support.PageFactory;
 
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.logging.Level;
-import java.util.regex.Pattern;
 
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.TouchAction;
@@ -133,7 +131,7 @@ public class FileListPage extends CommonPage {
                 "/XCUIElementTypeOther/XCUIElementTypeOther[1]/XCUIElementTypeOther/XCUIElementTypeOther" +
                 "/XCUIElementTypeOther[1]/XCUIElementTypeOther/XCUIElementTypeOther[@index='0']";
         findXpath(xpathAnyPhoto).click();
-        driver.findElement(By.id("Add")).click();
+        findId("Add").click();
         //Wait till upload finishes before asserting
         wait(5);
     }
@@ -176,14 +174,14 @@ public class FileListPage extends CommonPage {
 
     public void downloadAction(String itemName) {
         Log.log(Level.FINE, "Starts: download action: " + itemName);
-        driver.findElement(By.id(itemName)).click();
+        findId(itemName).click();
     }
 
     public boolean isItemInList (String itemName) {
         Log.log(Level.FINE, "Starts: Check if item is in list: " + itemName);
         //"+" button to assure we are in the filelist
         waitByXpath(10, "//XCUIElementTypeButton[@name=\"client.file-add\"]");
-        return !driver.findElements(By.id(itemName)).isEmpty();
+        return !findListId(itemName).isEmpty();
     }
 
     public void selectItemListActions(String itemName) {
@@ -192,7 +190,7 @@ public class FileListPage extends CommonPage {
         if (itemName.contains("/")) { //If it does contain "/", browse to
             fileName = navigateFile(itemName);
         }
-        driver.findElement(By.id(fileName + " Actions")).click();
+        findId(fileName + " Actions").click();
     }
 
     private void selectItemListContextual(String itemName) {
@@ -242,7 +240,7 @@ public class FileListPage extends CommonPage {
             return findXpath("//XCUIElementTypeStaticText[@name=\"" + itemName + "\"]").isDisplayed();
         } else if (itemType.equals("folder")) {
             Log.log(Level.FINE, "Opening folder");
-            return driver.findElement(By.id("show-paths-button")).isDisplayed();
+            return findId("show-paths-button").isDisplayed();
         }
         return false;
     }
@@ -303,7 +301,7 @@ public class FileListPage extends CommonPage {
                 operation = (MobileElement) findXpath(xpath_editlink);
                 break;
             case "favorite":
-                operation = (MobileElement) driver.findElement(By.id(id_favorite));
+                operation = findId(id_favorite);
                 break;
             default:
                 break;
@@ -324,36 +322,36 @@ public class FileListPage extends CommonPage {
         Log.log(Level.FINE, "Starts contextual: " + operationName);
         switch (operationName){
             case "delete":
-                operation = (MobileElement) driver.findElement(By.id(id_delete));
+                operation = findId(id_delete);
                 break;
             case "rename":
-                operation = (MobileElement) driver.findElement(By.id(id_rename));
+                operation = findId(id_rename);
                 break;
             case "move":
-                operation = (MobileElement) driver.findElement(By.id(id_move));
+                operation = findId(id_move);
                 break;
             case "copy":
-                operation = (MobileElement) driver.findElement(By.id(id_copy));
+                operation = findId(id_copy);
                 break;
             case "cut":
-                operation = (MobileElement) driver.findElement(By.id(id_cut));
+                operation = findId(id_cut);
                 break;
             case "duplicate":
-                operation = (MobileElement) driver.findElement(By.id(id_duplicate));
+                operation = findId(id_duplicate);
                 break;
             case "make available offline":
-                operation = (MobileElement) driver.findElement(By.id(id_avoffline));
+                operation = findId(id_avoffline);
                 break;
             case "share":
             case "edit share":
-                operation = (MobileElement) driver.findElement(By.id(id_share));
+                operation = findId(id_share);
                 break;
             case "share by link":
             case "edit link":
-                operation = (MobileElement) driver.findElement(By.id(id_link));
+                operation = findId(id_link);
                 break;
             case "favorite":
-                operation = (MobileElement) driver.findElement(By.id(id_favorite));
+                operation = findId(id_favorite);
                 break;
             default:
                 break;
@@ -396,12 +394,12 @@ public class FileListPage extends CommonPage {
             Log.log(Level.FINE, "Final file name: " + finalName);
             selectItemListActions(finalName);
             //Option do not appear if the containing folder is av. offline
-            menuUnavoffline = driver.findElements(By.id(xpath_unavoffline)).isEmpty()
-                    && findListXpath(xpath_avoffline).isEmpty();
+            menuUnavoffline = findListXpath(xpath_avoffline).isEmpty() &&
+                    findListXpath(xpath_avoffline).isEmpty();
         } else {
             Log.log(Level.FINE, "no browsing, file name");
             selectItemListActions(itemName);
-            menuUnavoffline = !driver.findElements(By.id(xpath_unavoffline)).isEmpty();
+            menuUnavoffline = !findListId(id_unavoffline).isEmpty();
         }
         Log.log(Level.FINE, "Av. Offline conditions: " + menuUnavoffline);
         return menuUnavoffline;
@@ -409,7 +407,7 @@ public class FileListPage extends CommonPage {
 
     public boolean itemIsFavorite(String itemName){
         selectItemListActions(itemName);
-        return driver.findElement(By.id(id_unfavorite)).isDisplayed();
+        return findId(id_unfavorite).isDisplayed();
     }
 
     //Turn to item disappear

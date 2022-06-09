@@ -81,11 +81,19 @@ public class CommonPage {
     }
 
     public MobileElement findXpath(String xpath){
-        return (MobileElement) driver.findElement(By.xpath(xpath));
+        return (MobileElement) driver.findElement(MobileBy.xpath(xpath));
     }
 
     public List<MobileElement> findListXpath(String xpath){
-        return (List<MobileElement>) driver.findElements(By.xpath(xpath));
+        return (List<MobileElement>) driver.findElements(MobileBy.xpath(xpath));
+    }
+
+    public MobileElement findId(String id){
+        return (MobileElement) driver.findElement(MobileBy.id(id));
+    }
+
+    public List<MobileElement> findListId(String id){
+        return (List<MobileElement>) driver.findElements(MobileBy.id(id));
     }
 
     public static void swipe (double startx, double starty, double endx, double endy)

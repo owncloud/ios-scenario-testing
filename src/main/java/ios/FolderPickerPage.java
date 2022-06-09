@@ -62,6 +62,6 @@ public class FolderPickerPage extends CommonPage {
     }
 
     public boolean actionEnabled(String actionId){
-        return driver.findElement(By.id(actionId)).isEnabled();
+        return findId(actionId).isEnabled();
     }
 }

@@ -1,6 +1,5 @@
 package ios;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.support.PageFactory;
 
 import java.util.logging.Level;
@@ -46,20 +45,20 @@ public class PrivateSharePage extends SharePage {
     }
 
     public boolean isItemInListPrivateShares(String sharee) {
-        return !driver.findElements(By.id(sharee)).isEmpty();
+        return !findListId(sharee).isEmpty();
     }
 
     public void deletePrivateShare(String sharee){
-        driver.findElement(By.id(sharee)).click();
+        findId(sharee).click();
         removeShare.click();
     }
 
     public void openPrivateShare(String sharee){
-        driver.findElement(By.id(sharee)).click();
+        findId(sharee).click();
     }
 
     public boolean displayedPermission(String permissionName){
-        return !driver.findElements(By.id(permissionName)).isEmpty();
+        return !findListId(permissionName).isEmpty();
     }
 
     public boolean isPasswordEnabled () {

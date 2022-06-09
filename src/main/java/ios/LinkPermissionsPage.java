@@ -1,6 +1,5 @@
 package ios;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.support.PageFactory;
 import org.xml.sax.SAXException;
 
@@ -199,7 +198,7 @@ public class LinkPermissionsPage extends CommonPage {
         String year = dateFragments[2];
         String displayedDate = month + " " + day + ", " + year;
         Log.log(Level.FINE, "Date to check in the screen: " + displayedDate);
-        boolean dateCorrect = !driver.findElements(By.id(displayedDate)).isEmpty();
+        boolean dateCorrect = !findListId(displayedDate).isEmpty();
         return switchEnabled && dateCorrect;
     }
 

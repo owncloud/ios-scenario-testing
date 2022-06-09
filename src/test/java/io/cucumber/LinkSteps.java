@@ -144,7 +144,6 @@ public class LinkSteps {
         //Asserts in server via API
         OCShare share = shareAPI.getShare(itemName);
         assertTrue(sharePage.checkCorrectShare(share, listItems));
-        filesAPI.removeItem(itemName);
     }
 
     @Then("link on {word} should not exist anymore")
@@ -154,6 +153,5 @@ public class LinkSteps {
         Log.log(Level.FINE, "----STEP----: " + stepName);
         assertFalse(publicLinkPage.isItemInListLinks(itemName + " link"));
         assertTrue(shareAPI.getShare(itemName) == null);
-        filesAPI.removeItem(itemName);
     }
 }

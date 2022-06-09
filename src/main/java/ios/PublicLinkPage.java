@@ -1,6 +1,5 @@
 package ios;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.support.PageFactory;
 
 import java.util.logging.Level;
@@ -32,12 +31,12 @@ public class PublicLinkPage extends SharePage {
     public void openPublicLink(String linkName){
         Log.log(Level.FINE, "Starts: open public link: " + linkName);
         waitByXpath(10, xpath_header);
-        driver.findElement(By.id(linkName)).click();
+        findId(linkName).click();
     }
 
     public boolean isItemInListLinks(String itemName) {
         Log.log(Level.FINE, "Starts: link in list: " + itemName);
         waitByXpath(10, xpath_header);
-        return !driver.findElements(By.id(itemName)).isEmpty();
+        return !findListId(itemName).isEmpty();
     }
 }

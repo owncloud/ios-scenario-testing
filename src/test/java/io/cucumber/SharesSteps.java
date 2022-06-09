@@ -218,7 +218,6 @@ public class SharesSteps {
         //Asserts in server via API
         OCShare share = shareAPI.getShare(itemName);
         assertTrue(sharePage.checkCorrectShare(share, listItems));
-        filesAPI.removeItem(itemName);
     }
 
     @Then("{usertype} {word} should have access to {word}")
@@ -239,7 +238,6 @@ public class SharesSteps {
         String stepName = new Object(){}.getClass().getEnclosingMethod().getName();
         Log.log(Level.FINE, "----STEP----: " + stepName);
         assertFalse(shareAPI.isSharedWithMe(itemName, userName,false));
-        filesAPI.removeItem(itemName);
     }
 
     @Then("{word} should not be shared anymore with {word}")
@@ -248,6 +246,5 @@ public class SharesSteps {
         String stepName = new Object(){}.getClass().getEnclosingMethod().getName();
         Log.log(Level.FINE, "----STEP----: " + stepName);
         assertFalse(privateSharePage.isItemInListPrivateShares(sharee));
-        filesAPI.removeItem(itemName);
     }
 }
