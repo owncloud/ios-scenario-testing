@@ -58,10 +58,6 @@
 "Fetching user information…" = "กำลังเรียกข้อมูลผู้ใช้...";
 "Updating connection…" = "กำลังอัปเดตการเชื่อมต่อ ...";
 
-"Preparing account" = "Preparing account";
-"Please wait…" = "โปรดรอ…";
-"Skip" = "ข้าม";
-
 "Missing hostname" = "ไม่มีชื่อโฮสต์";
 "The entered URL does not include a hostname." = "ป้อน URL โดยไม่รวมชื่อโฮสต์";
 "Add account" = "เพิ่มบัญชี";
@@ -74,10 +70,9 @@
 "Manage Storage" = "จัดการพื้นที่เก็บข้อมูล";
 "Access Files" = "เข้าถึงไฟล์";
 "Log out" = "ออกจากระบบ";
-"Retry" = "ลองใหม่อีกครั้ง";
 
 /* Bookmark Info */
-"Bookmark Metadata" = "ข้อมูล metadata ของบุ๊กมาร์ก";
+"Bookmark Metadata" = "ข้อมูลเมตาของบุ๊กมาร์ก";
 
 /* Client */
 "Browse" = "เรียกดู";
@@ -107,7 +102,7 @@
 "Search folder" = "ค้นหาโฟลเดอร์";
 "Search account" = "ค้นหาบัญชี";
 "Pending" = "อยู่ระหว่างดำเนินการ";
-"Show parent paths" = "แสดง path";
+"Show parent paths" = "แสดงพาธ";
 "Reveal in folder" = "เปิดเผยในโฟลเดอร์";
 
 "%@ of %@ used" = "มีทั้งหมด %@ ใช้ไปแล้ว%@";
@@ -173,7 +168,7 @@
 "Continue offline" = "ใช่งานแบบออฟไลน์ต่อไป";
 "Media upload in the previous session was incomplete since the application was terminated" = "การอัปโหลดสื่อในเซสชันก่อนหน้าไม่สมบูรณ์เนื่องจากแอปพลิเคชันถูกยกเลิก";
 
-"Waiting for response from login session in external browser…" = "กำลังรอการตอบสนองจากเซสชันการเข้าสู่ระบบในเบราว์เซอร์ภายนอก...";
+"Waiting for response from login session in external browser…" = "Waiting for response from login session in external browser…";
 
 "All done" = "เสร็จเรียบร้อยแล้ว";
 "No pending messages or ongoing actions." = "ไม่มีข้อความที่รอดำเนินการหรือดำเนินการอยู่";
@@ -192,7 +187,7 @@
 "Do you really want to disconnect from your '%@' account?" = "คุณต้องการยกเลิกการเชื่อมต่อจากบัญชี %@?";
 "This will remove all locally stored file copies from your device." = "การดำเนินการนี้จะลบไฟล์สำเนาที่เก็บไว้ในเครื่องทั้งหมดออกจากอุปกรณ์ของคุณ";
 "Really delete '%@'?" = "ต้องการลบ '%@'?";
-"Do you want to log out from '%@'?" = "Do you want to log out from '%@'?";
+"Do you want to log out from '%@'?" = "ต้องการออกจากระบบ '%@' ?";
 "This will also delete all locally stored file copies." = "นอกจากนี้จะลบไฟล์สำเนาที่เก็บไว้ในเครื่องทั้งหมด";
 "Delete" = "ลบ";
 "Remove" = "ลบออก";
@@ -210,10 +205,9 @@
 "Passcode Lock" = "รหัสปลดล็อค";
 "Face ID" = "ปลดล็อคด้วยใบหน้า";
 "Touch ID" = "ยืนยันตนด้วยลายนิ้วมือ";
-"Unlock using %@?" = "Unlock using %@?";
 "Videos" = "วิดีโอ";
 "Photos" = "รูปภาพ";
-"Wifi only" = "เฉพาะ WiFi เท่านั้น";
+"Wifi only" = "Wifi เท่านั้น";
 "Settings" = "ตั้งค่า";
 "Lock application" = "ล็อกแอปพลิเคชัน";
 "Upload videos via WiFi only" = "อัปโหลดวีดีโอผ่านทาง WiFi เท่านั้น";
@@ -225,23 +219,21 @@
 "Privacy Policy" = "นโยบายความเป็นส่วนตัว";
 "Terms Of Use" = "ข้อตกลงในการใช้งาน";
 "Acknowledgements" = "กิตติกรรมประกาศ";
-"license" = "license";
 "Portions of this app may utilize the following copyrighted material, the use of which is hereby acknowledged." = "ลิขสิทธิ์ทั้งหมดของแอปพลิเคชัน จะถูกเก็บรักษาไว้โดยบริษัทหรือผู้ให้อนุญาตลิขสิทธิ์ดังกล่าว";
 "Video upload path" = "เส้นทางการอัปโหลดวิดีโอ";
-"Photo upload path" = "Path สำหรับอัปโหลดภาพ";
+"Photo upload path" = "เส้นทางการอัปโหลดภาพ";
 "Immediately" = "ทันที";
 "After 1 minute" = "หลังจากผ่านไป 1 นาที";
 "After 5 minutes" = "หลังจากผ่านไป 5 นาที";
 "After 30 minutes" = "หลังจากผ่านไป 30 นาที";
-"After %ld seconds" = "After %ld seconds";
 "If you choose \"Immediately\" the App will be locked, when it is no longer in foreground." = "หากคุณเลือก \"ทันที\" แอปจะถูกล็อกเมื่อไม่ได้อยู่เบื้องหน้าอีกต่อไป";
 "Please configure an email account" = "โปรดกำหนดค่าบัญชีอีเมล";
 "You need to configure an email account first to be able to send emails." = "คุณต้องกำหนดค่าบัญชีอีเมลก่อนจึงจะสามารถส่งอีเมลได้";
 "Do you want to open the following URL?" = "คุณต้องการเปิด URL ต่อไปนี้?";
-"Passcode option" = "ตัวเลือกรหัสปลดล็อค";
-"Please choose how many digits you want to use for the passcode lock?" = "โปรดเลือกจำนวนตัวอักษรที่คุณต้องการใช้สำหรับรหัสปลดล็อค";
-"%ld digit code" = "%ld ตัวอักษร";
-"Enter a new code with %ld digits" = "ใส่รหัสใหม่ %ld ตัวอักษร";
+"Passcode option" = "Passcode option";
+"Please choose how many digits you want to use for the passcode lock?" = "Please choose how many digits you want to use for the passcode lock?";
+"%ld digit code" = "%ld digit code";
+"Enter a new code with %ld digits" = "Enter a new code with %ld digits";
 
 "%@%@ %@ version %@ build %@\n(app: %@, sdk: %@)" = "%@%@%@ เวอร์ชัน %@ บิวด์ %@\n(แอป: %@, sdk: %@)";
 "beta" = "เวอร์ชันเบต้า";
@@ -306,9 +298,9 @@
 "Decrease Slider Value" = "ลดจำนวน Slider";
 "Increase Slider Value" = "เพิ่มจำนวน Slider";
 
-"Cellular Data Usage" = "Cellular Data Usage";
+"Cellular Data Usage" = "ส่งข้อมูลผ่านเน็ตมือถือ";
 "Some cellular data may still be used. To completely avoid the usage of cellular data, please turn off access to cellular for the entire app in the Settings app." = "เพื่อหลีกเลี่ยงค่าบริการเพิ่มเติมท่านสามารถปิดการใช้งานเน็ตมือถือผ่านหน้าตั้งค่า";
-"Cellular Data Usage have been disabled via MDM configuration. Please contact your administrator for more information." = "Cellular Data Usage have been disabled via MDM configuration. Please contact your administrator for more information.";
+"Cellular Data Usage have been disabled via MDM configuration. Please contact your administrator for more information." = "การโอนย้ายข้อมูลผ่านเน็ตมือถือถูกปิดใช้งาน จากการกำหนดค่า MDM โปรดติดต่อผู้ดูแลระบบของคุณสำหรับข้อมูลเพิ่มเติม";
 "General" = "ทั่วไป";
 "By feature" = "ตามคุณลักษณะ";
 
@@ -319,7 +311,7 @@
 "Advanced settings" = "ตั้งค่าขั้นสูง";
 "Show hidden files and folders" = "แสดงไฟล์และโฟลเดอร์ที่ซ่อน";
 "Show folders on top" = "แสดงโฟลเดอร์ด้านบน";
-"Disable gestures" = "Disable gestures";
+"Disable gestures" = "ป้องกันท่าทาง";
 "Prevent dragging of files and folders and multiselection using system defined gestures" = "ป้องกันการลากไฟล์และโฟลเดอร์และการเลือกหลายรายการโดยใช้ท่าทางที่ระบบกำหนด";
 
 /* Advanced settings */
@@ -358,7 +350,7 @@
 "Create folder" ="สร้างโฟลเดอร์";
 "Duplicate" = "ซ้ำ";
 "Move" = "ย้าย";
-"Open in" = "เปิดด้วย";
+"Open in" = "เปิดใน";
 "Copy" = "คัดลอก";
 "Copy here" = "ึคัดลอก";
 "Cannot connect to " = "ไม่สามารถเชื่อมต่อ";
@@ -367,11 +359,11 @@
 "copy" = "คัดลอก";
 "Close Window" = "ปิดหน้าต่าง";
 "Open in a new Window" = "เปิดในหน้าต่างใหม่";
-"Open in Window" = "เปิดในหน้าต่าง";
+"Open in Window" = "เปิดหน้าต่าง";
 "Take photo or video" = "ถ่ายภาพหรือวิดีโอ";
-"%ld Item was copied to the clipboard" = "%ld ถูกคัดลอกไปยังคลิปบอร์ดแล้ว";
-"%ld Items were copied to the clipboard" = "%ld รายการได้ถูกคัดลอกไปยังคลิปบอร์ดแล้ว";
-"Please note: Folders can only be pasted into the %@ app and the same account." = "โปรดทราบ: สามารถวางโฟลเดอร์ลงในแอพ %@ ด้วยบัญชีเดียวกันเท่านั้น";
+"%ld Item was copied to the clipboard" = "%ld Item was copied to the clipboard";
+"%ld Items were copied to the clipboard" = "%ld Items were copied to the clipboard";
+"Please note: Folders can only be pasted into the %@ app and the same account." = "Please note: Folders can only be pasted into the %@ app and the same account.";
 
 "Preparing…" = "กำลังจัดเตรียม…";
 
@@ -514,7 +506,7 @@
 "Shared with others" = "แชร์กับผู้อื่น";
 "Shares" = "แชร์";
 "Copy Private Link" = "คัดลอกลิงก์ส่วนตัว";
-"Only people who have access to the file/folder can use it. Use it as a permanent link for yourself or to point others to files within shares." = "Only people who have access to the file/folder can use it. Use it as a permanent link for yourself or to point others to files within shares.";
+"Only recipients can use this link. Use it as a permanent link to point to this resource" = "ผู้รับเท่านั้นที่สามารถใช้ลิงก์นี้ ใช้เป็นลิงก์ถาวรเพื่อชี้ไปยังแหล่งข้อมูลนี้";
 "Accept Share failed" = "ยอมรับการแชร์ล้มเหลว";
 "Decline Share failed" = "ปฏิเสธการแชร์ล้มเหลว";
 "Accept" = "ยอมรับ";
@@ -577,23 +569,23 @@
 "Account" = "บัญชี";
 "Accounts" = "บัญชี";
 "Select account" = "เลือกบัญชี";
-"Photo upload path" = "Path สำหรับอัปโหลดภาพ";
+"Photo upload path" = "เส้นทางการอัปโหลดภาพ";
 "Video upload path" = "เส้นทางการอัปโหลดวิดีโอ";
-"Select Upload Path" = "เลือก path สำหรับอัปโหลด";
+"Select Upload Path" = "เลือกเส้นทางอัปโหลด";
 "Auto upload of media was disabled since configured account / folder was not found" = "การอัปโหลดสื่ออัตโนมัติถูกปิดใช้งานเนื่องจาก ไม่พบบัญชีหรือโฟลเดอร์ที่กำหนดค่า";
 "Importing %@ media files for upload" = "กำลังนำเข้าไฟล์สื่อ %@ สำหรับการอัปโหลด";
 "Photo upload" = "อัปโหลดรูปภาพ";
 "Video upload" = "อัปโหลดวิดีโอ";
 
 /* Background media uploads */
-"Background uploads (Lab Version)" = "อัปโหลดพื้นหลัง (เวอร์ชันแล็บ)";
+"Background uploads (Lab Version)" = "Background uploads (Lab Version)";
 "Background uploads" = "อัปโหลดพื้นหลัง";
 "Use background refresh" = "ใช้การรีเฟรชพื้นหลัง";
-"Allow this app to refresh the content when on Wi-Fi or mobile network in background." = "อนุญาตให้แอปนี้รีเฟรชเนื้อหาเมื่อใช้ Wi-Fi หรือเครือข่ายมือถือในพื้นหลัง";
+"Allow this app to refresh the content when on Wi-Fi or mobile network in background." = "Allow this app to refresh the content when on Wi-Fi or mobile network in background.";
 "Enable background uploads" = "เปิดใช้งานการอัปโหลดพื้นหลัง";
 "Use background location updates" = "ใช้การอัปเดตตำแหน่งพื้นหลัง";
 "Background upload notifications" = "แจ้งเตือนการอัปโหลดพื้นหลัง";
-"If you would like background media uploads to be more reliable, you should enable background location updates." = "หากคุณต้องการให้การอัปโหลดสื่อพื้นหลังมีความน่าเชื่อถือมากยิ่งขึ้น คุณควรเปิดใช้งานการอัปเดตตำแหน่งในเบื้องหลัง";
+"If you would like background media uploads to be more reliable, you should enable background location updates." = "If you would like background media uploads to be more reliable, you should enable background location updates.";
 "Background media uploads rely on location updates and will stop working if location acquisition permissions are revoked." = "การอัปโหลดพื้นหลังจะขึ้นอยู่กับการอัปเดตตำแหน่งและจะหยุดทำงานหากมีการเพิกถอนสิทธิ์การเข้าถึงตำแหน่ง";
 "Otherwise background media uploads using background refresh technology would depend on how frequently you use the app." = "การอัปโหลดในพื้นหลังจะใช้เทคโนโลยีการรีเฟรชพื้นหลัง โดยจะขึ้นอยู่กับความถี่ที่คุณใช้แอป";
 "Location permission denied" = "ปฏิเสธสิทธิ์การเข้าถึงตำแหน่ง";
@@ -615,14 +607,13 @@
 "Offline files use" = "ใช้ไฟล์ออฟไลน์";
 "Compacting of '%@' failed" = "กำลังย่อข้อมูลพบความล้มเหลว '%@'";
 "Include available offline files" = "รวมถึงไฟล์ออฟไลน์ที่มีอยู่";
-"Delete all Offline Files" = "Delete all Offline Files";
+"Delete all Offline Files" = "ลบสำเนาในเครื่อง";
 "Manage" = "การจัดการ";
 "Storage" = "พื้นที่จัดเก็บข้อมูล";
 "Compacting" = "กำลังย่อ";
 
 "Really include available offline files?" = "รวมไฟล์ออฟไลน์ที่มีอยู่?";
 "Files and folders marked as Available Offline will become unavailable. They will be re-downloaded next time you log into your account (connectivity required)." = "ไฟล์และโฟลเดอร์ที่ทำเครื่องหมายว่าพร้อมใช้งานแบบออฟไลน์จะไม่สามารถใช้งานได้ ไฟล์เหล่านี้จะถูกดาวน์โหลดอีกในครั้งต่อไปที่คุณเข้าสู่บัญชีของคุณ (จำเป็นต้องเชื่อมต่อ)";
-"Removes downloaded files and local copies of items marked as Available Offline. The latter will be re-downloaded next time you log into your account (connectivity required)." = "Removes downloaded files and local copies of items marked as Available Offline. The latter will be re-downloaded next time you log into your account (connectivity required).";
 
 /* Diagnostic */
 "Diagnostic Overview" = "ภาพรวมการวินิจฉัย";
@@ -670,14 +661,13 @@
 "Select Last Item on Page" = "เลือกรายการสุดท้ายในหน้า";
 "Scroll to Top" = "เลื่อนขึ้นด้านบน";
 "Scroll to Bottom" = "เลื่อนลงด้านล่าง";
-"Copy to Clipboard" = "คัดลอกไปที่คลิปบอร์ด";
-"Import from Clipboard" = "นำเข้าจากคลิปบอร์ด";
-"Choose destination directory…" = "เลือกไดเร็กทอรีปลายทาง...";
+"Copy to Clipboard" = "Copy to Clipboard";
+"Import from Clipboard" = "Import from Clipboard";
+"Choose destination directory…" = "Choose destination directory…";
 "Next" = "ถัดไป";
 "Previous" = "ก่อนหน้า";
 "Favorite" = "รายการโปรด";
 "Cut" = "ตัด";
-"Paste" = "Paste";
 "Play/Pause" = "เล่น / หยุดชั่วคราว";
 "Skip Back" = "ข้ามกลับ";
 "Skip Ahead" = "ข้ามไปข้างหน้า";
@@ -756,7 +746,7 @@
 "purchase" = "คำสั่งซื้อ";
 "subscription" = "สมัครสมาชิก";
 "Photo Pro Features" = "คุณสมบัติ Photo pro";
-"Image metadata, extended upload options" = "ข้อมูล metadata ของรูปภาพ, ตัวเลือกการอัปโหลดเพิ่มเติม";
+"Image metadata, extended upload options" = "ข้อมูลเมตาดาต้าของรูปภาพ, ตัวเลือกการอัปโหลดเพิ่มเติม";
 "Purchase" = "การสั่งซื้อ";
 "Subscribe" = "สมัครรับข้อมูล";
 
@@ -772,19 +762,6 @@
 "Error loading item" = "เกิดข้อผิดพลาดขณะโหลดรายการ";
 "Preparing…" = "กำลังจัดเตรียม…";
 "Save here" = "บันทึกที่นี่";
-
-/* Disallowed Import Methods */
-/* - Share Extension */
-"Share Extension disabled" = "Share Extension disabled";
-"Importing files through the Share Extension is not allowed on this device." = "Importing files through the Share Extension is not allowed on this device.";
-
-/* - Open with */
-"Opening not allowed" = "Opening not allowed";
-"Importing files through opening is not allowed on this device." = "Importing files through opening is not allowed on this device.";
-
-/* - Files.app */
-"Import not allowed" = "Import not allowed";
-"Importing files through the File Provider is not allowed on this device." = "Importing files through the File Provider is not allowed on this device.";
 
 /* Data migration from legacy app */
 "Account Migration" = "การย้ายบัญชี";
@@ -807,7 +784,7 @@
 "Link points to an account bookmark which is not configured in the app." = "ในแอปยังไม่ได้กำหนดค่าลิงก์คะแนนไปยังบัญชีบุ๊คมาร์ค";
 
 /* Photo meta-data */
-"Image metadata" = "ข้อมูล metadata ของรูปภาพ";
+"Image metadata" = "ข้อมูลเมตาของรูปภาพ";
 "Image details" = "รายละเอียดรูปภาพ";
 "Profile" = "ข้อมูลส่วนตัว";
 "Size" = "ขนาด";

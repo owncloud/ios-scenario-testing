@@ -62,6 +62,15 @@ public class CommonAPI {
             "  </prop>\n" +
             "</propfind>";
 
+    protected String setFavoriteBody = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n" +
+            "<D:propertyupdate xmlns:D=\"DAV:\" xmlns:oc=\"http://owncloud.org/ns\">\n" +
+            "  <D:set>\n" +
+            "    <D:prop>\n" +
+            "      <favorite xmlns=\"http://owncloud.org/ns\">1</favorite>\n" +
+            "    </D:prop>\n" +
+            "  </D:set>\n" +
+            "</D:propertyupdate>";
+
     public CommonAPI(){
     }
 

@@ -128,9 +128,9 @@
 	<key>INIntentDefinitionSystemVersion</key>
 	<string>21E258</string>
 	<key>INIntentDefinitionToolsBuildVersion</key>
-	<string>13F17a</string>
+	<string>13E500a</string>
 	<key>INIntentDefinitionToolsVersion</key>
-	<string>13.4</string>
+	<string>13.3.1</string>
 	<key>INIntents</key>
 	<array>
 		<dict>
@@ -2330,7 +2330,7 @@
 			<key>INIntentDescriptionID</key>
 			<string>jkLupt</string>
 			<key>INIntentHash</key>
-			<integer>4477980867472164072</integer>
+			<integer>16974422261094578530</integer>
 			<key>INIntentInput</key>
 			<string>path</string>
 			<key>INIntentKeyParameter</key>
@@ -2373,8 +2373,6 @@
 			<array>
 				<dict>
 					<key>INIntentParameterConfigurable</key>
-					<true/>
-					<key>INIntentParameterCustomDisambiguation</key>
 					<true/>
 					<key>INIntentParameterDisplayName</key>
 					<string>Path</string>
@@ -2459,8 +2457,6 @@
 							<string>Confirmation</string>
 						</dict>
 					</array>
-					<key>INIntentParameterSupportsDynamicEnumeration</key>
-					<true/>
 					<key>INIntentParameterSupportsResolution</key>
 					<true/>
 					<key>INIntentParameterTag</key>

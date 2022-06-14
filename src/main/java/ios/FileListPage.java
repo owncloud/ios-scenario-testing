@@ -5,6 +5,7 @@ import org.openqa.selenium.support.PageFactory;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.logging.Level;
+import java.util.regex.Pattern;
 
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.TouchAction;
@@ -186,11 +187,9 @@ public class FileListPage extends CommonPage {
 
     public void selectItemListActions(String itemName) {
         Log.log(Level.FINE, "Starts: select actions item from list: " + itemName);
-        String fileName = itemName;
-        if (itemName.contains("/")) { //If it does contain "/", browse to
-            fileName = navigateFile(itemName);
-        }
-        findId(fileName + " Actions").click();
+        String name = itemName;
+        name = browseTo(itemName);
+        openCard(name);
     }
 
     private void selectItemListContextual(String itemName) {
@@ -243,6 +242,26 @@ public class FileListPage extends CommonPage {
             return findId("show-paths-button").isDisplayed();
         }
         return false;
+    }
+
+    protected String browseTo(String path){
+        Log.log(Level.FINE, "Browse to path: " + path);
+        String completePath = Pattern.quote("/");
+        String[] route = path.split(completePath);
+        Log.log(Level.FINE, "Route lenght: " + route.length);
+        for (int j = 0 ; j < route.length ; j++) {
+            Log.log(Level.FINE, "Chunk: " + j + ": " + route[j]);
+        }
+        if (route.length > 0) { //we have to browse
+            int i;
+            for (i = 0; i < route.length - 1 ; i++) {
+                Log.log(Level.FINE, "Browsing to: " + route[i]);
+                browse(route[i]);
+            }
+            return route[i];
+        } else { //root folder, nothing to do
+            return path;
+        }
     }
 
     private void selectItemListSwipe(String itemName) {
@@ -303,6 +322,9 @@ public class FileListPage extends CommonPage {
             case "favorite":
                 operation = findId(id_favorite);
                 break;
+            case "unfavorite":
+                operation = findId(id_unfavorite);
+                break;
             default:
                 break;
         }
@@ -353,6 +375,9 @@ public class FileListPage extends CommonPage {
             case "favorite":
                 operation = findId(id_favorite);
                 break;
+            case "unfavorite":
+                operation = findId(id_unfavorite);
+                break;
             default:
                 break;
         }
@@ -382,44 +407,31 @@ public class FileListPage extends CommonPage {
         findXpath("//XCUIElementTypeButton[@name=\"Delete\"]").click();
     }
 
-    public boolean fileIsMarkedAsAvOffline(String itemName) throws InterruptedException{
+    public void openCard(String itemName){
+        Log.log(Level.FINE, "Starts: openCard for " + itemName);
+        waitById(5, itemName + " Actions");
+        findId(itemName + " Actions").click();
+    }
+
+    public boolean fileIsMarkedAsAvOffline(String itemName) {
         Log.log(Level.FINE, "Starts: Check if file is av. offline");
-        //Action turns to unavailable offline
-        String finalName = null;
-        boolean menuUnavoffline = false;
-        //depending on the location of the file
-        if (itemName.contains("/")){  //we have to browse
-            Log.log(Level.FINE, "browsing");
-            finalName = navigateFile(itemName);
-            Log.log(Level.FINE, "Final file name: " + finalName);
-            selectItemListActions(finalName);
-            //Option do not appear if the containing folder is av. offline
-            menuUnavoffline = findListXpath(xpath_avoffline).isEmpty() &&
-                    findListXpath(xpath_avoffline).isEmpty();
-        } else {
-            Log.log(Level.FINE, "no browsing, file name");
-            selectItemListActions(itemName);
-            menuUnavoffline = !findListId(id_unavoffline).isEmpty();
-        }
-        Log.log(Level.FINE, "Av. Offline conditions: " + menuUnavoffline);
-        return menuUnavoffline;
+        boolean menuAvoffline = false;
+        String finalName = browseTo(itemName);
+        Log.log(Level.FINE, "Final file name: " + finalName);
+        openCard(finalName);
+        menuAvoffline = findListId(id_avoffline).isEmpty();
+        Log.log(Level.FINE, "Av. Offline conditions: " + menuAvoffline);
+        return menuAvoffline;
     }
 
     public boolean itemIsFavorite(String itemName){
         selectItemListActions(itemName);
-        return findId(id_unfavorite).isDisplayed();
-    }
-
-    //Turn to item disappear
-    public void waitItemDownloaded(String itemName){
-        MobileElement element = (MobileElement) findXpath (
-                "//XCUIElementTypeCell[@name=\""+ itemName +"\"]/XCUIElementTypeOther[2]");
-        waitByIdInvisible(10, element);
+        return !findListId(id_unfavorite).isEmpty();
     }
 
     public boolean displayedList(String path, ArrayList<OCFile> listServer){
         boolean found = true;
-        navigateFolder(path); //moving to the folder
+        browseToFolder(path); //moving to the folder
         Iterator iterator = listServer.iterator();
         while (iterator.hasNext()){
             OCFile ocfile = (OCFile) iterator.next();

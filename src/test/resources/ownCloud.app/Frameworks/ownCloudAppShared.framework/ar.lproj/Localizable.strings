@@ -58,10 +58,6 @@
 "Fetching user information…" = "جارٍ إحضار معلومات المستخدم…";
 "Updating connection…" = "جارٍ تحديث الاتصال…";
 
-"Preparing account" = "Preparing account";
-"Please wait…" = "يُرجى الانتظار…";
-"Skip" = "تخطي";
-
 "Missing hostname" = "اسم المضيف مفقود";
 "The entered URL does not include a hostname." = "لا يتضمن عنوان URL المُدخل اسم مضيف.";
 "Add account" = "إضافة حساب";
@@ -73,8 +69,7 @@
 "Edit Login" = "تحرير تسجيل الدخول";
 "Manage Storage" = "ادارة المساحة";
 "Access Files" = "ملفات الوصول";
-"Log out" = "تسجيل الخروج";
-"Retry" = "إعادة المحاولة";
+"Log out" = " تسجيل الخروج";
 
 /* Bookmark Info */
 "Bookmark Metadata" = "Bookmark Metadata";
@@ -192,7 +187,7 @@
 "Do you really want to disconnect from your '%@' account?" = "هل تريد حقًا تسجيل الخروج من حسابك '%@'؟";
 "This will remove all locally stored file copies from your device." = "هذا سيؤدي إلى إزالة جميع نسخ الملفات المخزنة محليًا من جهازك.";
 "Really delete '%@'?" = "هل تريد بالتأكيد حذف '%@'؟";
-"Do you want to log out from '%@'?" = "Do you want to log out from '%@'?";
+"Do you want to log out from '%@'?" = "حقًا تسجيل الخروج من  '%@'؟";
 "This will also delete all locally stored file copies." = "سيحذف هذا جميع نسخ الملف المخزنة محليًا.";
 "Delete" = "حذف";
 "Remove" = "إزالة";
@@ -210,7 +205,6 @@
 "Passcode Lock" = "قفل رمز المرور";
 "Face ID" = "معرّف الوجه";
 "Touch ID" = "معرّف اللمس";
-"Unlock using %@?" = "Unlock using %@?";
 "Videos" = "مقاطع فيديو";
 "Photos" = "صور";
 "Wifi only" = "Wifi فقط";
@@ -225,7 +219,6 @@
 "Privacy Policy" = "سياسة الخصوصية";
 "Terms Of Use" = "شروط الاستخدام";
 "Acknowledgements" = "رسائل الإقرار";
-"license" = "license";
 "Portions of this app may utilize the following copyrighted material, the use of which is hereby acknowledged." = "قد تستخدم أجزاء من هذا التطبيق المواد التالية المحمية بحقوق الطبع والنشر ، والتي يُعترف باستخدامها بموجب هذا.";
 "Video upload path" = "مسار تحميل الفيديو";
 "Photo upload path" = "مسار تحميل الصورة";
@@ -233,7 +226,6 @@
 "After 1 minute" = "بعد دقيقة واحدة (1)";
 "After 5 minutes" = "بعد 5 دقائق";
 "After 30 minutes" = "بعد 30 دقيقة";
-"After %ld seconds" = "After %ld seconds";
 "If you choose \"Immediately\" the App will be locked, when it is no longer in foreground." = "إذا اخترت \"فورًا\" فسيتم قفل التطبيق ، عندما لم يعد في المقدمة.";
 "Please configure an email account" = "يُرجى تكوين حساب بريد إلكتروني";
 "You need to configure an email account first to be able to send emails." = "تحتاج إلى تكوين حساب بريد إلكتروني أولًا حتى تتمكن من إرسال رسائل البريد الإلكتروني.";
@@ -306,9 +298,9 @@
 "Decrease Slider Value" = "قلل قيمة شريط التمرير";
 "Increase Slider Value" = "زد قيمة شريط التمرير";
 
-"Cellular Data Usage" = "Cellular Data Usage";
+"Cellular Data Usage" = "التحويلات الخلوية";
 "Some cellular data may still be used. To completely avoid the usage of cellular data, please turn off access to cellular for the entire app in the Settings app." = "لا يزال من الممكن استخدام بعض البيانات الخلوية. لتجنب استخدام البيانات الخلوية تمامًا ، يرجى إيقاف تشغيل الوصول إلى الهاتف الخلوي للتطبيق بأكمله في تطبيق الإعدادات.";
-"Cellular Data Usage have been disabled via MDM configuration. Please contact your administrator for more information." = "Cellular Data Usage have been disabled via MDM configuration. Please contact your administrator for more information.";
+"Cellular Data Usage have been disabled via MDM configuration. Please contact your administrator for more information." = "تم تعطيل عمليات النقل الخلوي عبر تكوين MDM. الرجاء الاتصال بالمدير للحصول على مزيد من المعلومات.";
 "General" = "عام";
 "By feature" = "حسب الميزة";
 
@@ -319,7 +311,7 @@
 "Advanced settings" = "الإعدادات المتقدمة";
 "Show hidden files and folders" = "اعرض الملفات والمجلدات المخفية";
 "Show folders on top" = "إظهار المجلدات في الأعلى";
-"Disable gestures" = "Disable gestures";
+"Disable gestures" = "منع الإيماءات";
 "Prevent dragging of files and folders and multiselection using system defined gestures" = "منع سحب الملفات والمجلدات والاختيار المتعدد باستخدام إيماءات محددة من قبل النظام";
 
 /* Advanced settings */
@@ -514,7 +506,7 @@
 "Shared with others" = "تمت المشاركة مع الآخرين";
 "Shares" = "المشاركات";
 "Copy Private Link" = "انسخ رابطًا خاصًا";
-"Only people who have access to the file/folder can use it. Use it as a permanent link for yourself or to point others to files within shares." = "Only people who have access to the file/folder can use it. Use it as a permanent link for yourself or to point others to files within shares.";
+"Only recipients can use this link. Use it as a permanent link to point to this resource" = "لا يتمكن سوى المستلمون من استخدام هذا الرابط فقط. استخدمه كرابط دائم للإشارة إلى هذا المصدر";
 "Accept Share failed" = "فشلت الموافقة على المشاركة";
 "Decline Share failed" = "فشل رفض المشاركة";
 "Accept" = "قبول";
@@ -615,14 +607,13 @@
 "Offline files use" = "استخدام الملفات دون اتصال";
 "Compacting of '%@' failed" = "فشل ضغط '%@'";
 "Include available offline files" = "أدخل الملفات المتوفرة دون اتصال";
-"Delete all Offline Files" = "Delete all Offline Files";
+"Delete all Offline Files" = "احذف النسخ المحلية";
 "Manage" = "إدارة";
 "Storage" = "السعة التخزينية";
 "Compacting" = "مضغوط";
 
 "Really include available offline files?" = "هل تريد بالفعل تضمين الملفات المتوفرة دون اتصال؟";
 "Files and folders marked as Available Offline will become unavailable. They will be re-downloaded next time you log into your account (connectivity required)." = "ستصبح الملفات والمجلدات المُشار إليها بـ متوفرة دون اتصال غير متوفرة. وسيُعاد تنزيلها في المرة القادمة التي تسجل فيها الدخول إلى حسابك (الاتصال مطلوب).";
-"Removes downloaded files and local copies of items marked as Available Offline. The latter will be re-downloaded next time you log into your account (connectivity required)." = "Removes downloaded files and local copies of items marked as Available Offline. The latter will be re-downloaded next time you log into your account (connectivity required).";
 
 /* Diagnostic */
 "Diagnostic Overview" = "نظرة عامة على التشخيص";
@@ -677,7 +668,6 @@
 "Previous" = "السابق";
 "Favorite" = "المفضلة";
 "Cut" = "قص";
-"Paste" = "Paste";
 "Play/Pause" = "تشغيل/توقف";
 "Skip Back" = "التخطي للخلف";
 "Skip Ahead" = "التخطي إلى الأمام";
@@ -772,19 +762,6 @@
 "Error loading item" = "خطأ في تحميل العنصر";
 "Preparing…" = "جارٍ الإعداد…";
 "Save here" = "قم بالحفظ هنا";
-
-/* Disallowed Import Methods */
-/* - Share Extension */
-"Share Extension disabled" = "Share Extension disabled";
-"Importing files through the Share Extension is not allowed on this device." = "Importing files through the Share Extension is not allowed on this device.";
-
-/* - Open with */
-"Opening not allowed" = "Opening not allowed";
-"Importing files through opening is not allowed on this device." = "Importing files through opening is not allowed on this device.";
-
-/* - Files.app */
-"Import not allowed" = "Import not allowed";
-"Importing files through the File Provider is not allowed on this device." = "Importing files through the File Provider is not allowed on this device.";
 
 /* Data migration from legacy app */
 "Account Migration" = "ترحيل الحساب";

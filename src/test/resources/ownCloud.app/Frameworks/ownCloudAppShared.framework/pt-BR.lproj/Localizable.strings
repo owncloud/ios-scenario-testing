@@ -58,10 +58,6 @@
 "Fetching user information…" = "Buscando informações do usuário...";
 "Updating connection…" = "Atualizando conexão...";
 
-"Preparing account" = "Preparing account";
-"Please wait…" = "Por favor aguarde...";
-"Skip" = "Pular";
-
 "Missing hostname" = "Nome do host ausente";
 "The entered URL does not include a hostname." = "O URL inserida não inclui um nome de host.";
 "Add account" = "Adicionar uma conta";
@@ -74,7 +70,6 @@
 "Manage Storage" = "Gerenciar Armazenamento ";
 "Access Files" = "Arquivos de Acesso";
 "Log out" = "Sair";
-"Retry" = "Repetir";
 
 /* Bookmark Info */
 "Bookmark Metadata" = "Metadados de Favoritos ";
@@ -192,7 +187,7 @@
 "Do you really want to disconnect from your '%@' account?" = "Você realmente quer conectar '%@' da sua conta?";
 "This will remove all locally stored file copies from your device." = "Isso removerá todas as cópias de arquivos armazenados localmente do seu dispositivo.";
 "Really delete '%@'?" = "Realmente excluir '%@'?";
-"Do you want to log out from '%@'?" = "Do you want to log out from '%@'?";
+"Do you want to log out from '%@'?" = "Deseja realmente sair de '%@'?";
 "This will also delete all locally stored file copies." = "Isto também irá excluir todas as cópias locais dos arquivo salvos.";
 "Delete" = "Excluir";
 "Remove" = "Remover";
@@ -210,7 +205,6 @@
 "Passcode Lock" = "Senha-código de bloqueio";
 "Face ID" = "ID de Face";
 "Touch ID" = "ID de toque";
-"Unlock using %@?" = "Unlock using %@?";
 "Videos" = "Videos";
 "Photos" = "Imagens";
 "Wifi only" = "Somente wifi";
@@ -225,7 +219,6 @@
 "Privacy Policy" = "Política de Privacidade";
 "Terms Of Use" = "Termos de Uso";
 "Acknowledgements" = "Agradecimentos";
-"license" = "license";
 "Portions of this app may utilize the following copyrighted material, the use of which is hereby acknowledged." = "Partes deste aplicativo podem utilizar o seguinte material protegido por direitos autorais, cujo uso é aqui reconhecido.";
 "Video upload path" = "Caminho para vídeos enviados";
 "Photo upload path" = "Caminho para envio de imagens";
@@ -233,15 +226,14 @@
 "After 1 minute" = "Após 1 minuto";
 "After 5 minutes" = "Após 5 minutos";
 "After 30 minutes" = "Após 30 minutos";
-"After %ld seconds" = "After %ld seconds";
 "If you choose \"Immediately\" the App will be locked, when it is no longer in foreground." = "Se você escolher \"Imediatamente\", o aplicativo será bloqueado, quando não estiver mais em primeiro plano. ";
 "Please configure an email account" = "Por favor, configure uma conta de email";
 "You need to configure an email account first to be able to send emails." = "Você precisa configurar uma conta de e-mail primeiro para poder enviar e-mails.";
 "Do you want to open the following URL?" = "Você deseja abrir o seguinte endereço URL?";
-"Passcode option" = "Opção de senha ";
-"Please choose how many digits you want to use for the passcode lock?" = "Por favor, escolha quantos dígitos você deseja usar para o bloqueio por senha? ";
-"%ld digit code" = "%ld código de dígito ";
-"Enter a new code with %ld digits" = "Entre novo código com %ld digitos";
+"Passcode option" = "Passcode option";
+"Please choose how many digits you want to use for the passcode lock?" = "Please choose how many digits you want to use for the passcode lock?";
+"%ld digit code" = "%ld digit code";
+"Enter a new code with %ld digits" = "Enter a new code with %ld digits";
 
 "%@%@ %@ version %@ build %@\n(app: %@, sdk: %@)" = "%@%@ %@ versão%@ construir %@\n(app: %@, sdk: %@)";
 "beta" = "beta";
@@ -306,9 +298,9 @@
 "Decrease Slider Value" = "Decrescer o Valor de Recuo";
 "Increase Slider Value" = "Acrescer o Valor de Avanço";
 
-"Cellular Data Usage" = "Cellular Data Usage";
+"Cellular Data Usage" = "Transferências de Celular";
 "Some cellular data may still be used. To completely avoid the usage of cellular data, please turn off access to cellular for the entire app in the Settings app." = "Alguns dados do celular ainda podem ser usados. Para evitar completamente o uso de dados do celular, desligue o acesso ao celular para todo o aplicativo nas configurações do aplicativo.";
-"Cellular Data Usage have been disabled via MDM configuration. Please contact your administrator for more information." = "Cellular Data Usage have been disabled via MDM configuration. Please contact your administrator for more information.";
+"Cellular Data Usage have been disabled via MDM configuration. Please contact your administrator for more information." = "As transferências de celular foram desativadas por meio da configuração do MDM. Entre em contato com seu administrador para obter mais informações.";
 "General" = "Geral";
 "By feature" = "Por recurso";
 
@@ -319,7 +311,7 @@
 "Advanced settings" = "Configurações avançadas";
 "Show hidden files and folders" = "Mostrar arquivos e pastas escondidos";
 "Show folders on top" = "Mostrar pastas no topo ";
-"Disable gestures" = "Disable gestures";
+"Disable gestures" = "Impedir gestos";
 "Prevent dragging of files and folders and multiselection using system defined gestures" = "Impedir o arrastamento de arquivos e pastas e a seleção múltipla usando gestos definidos pelo sistema";
 
 /* Advanced settings */
@@ -369,9 +361,9 @@
 "Open in a new Window" = "Abrir em uma nova Janela";
 "Open in Window" = "Abrir na Janela";
 "Take photo or video" = "Tirar foto ou vídeo";
-"%ld Item was copied to the clipboard" = "%ld O item foi copiado para a área de transferência ";
-"%ld Items were copied to the clipboard" = "%ld os itens foram copiados para a área de transferência ";
-"Please note: Folders can only be pasted into the %@ app and the same account." = "Observação: as pastas só podem ser coladas no  %@ aplicativo e a mesma conta. ";
+"%ld Item was copied to the clipboard" = "%ld Item was copied to the clipboard";
+"%ld Items were copied to the clipboard" = "%ld Items were copied to the clipboard";
+"Please note: Folders can only be pasted into the %@ app and the same account." = "Please note: Folders can only be pasted into the %@ app and the same account.";
 
 "Preparing…" = "Preparando…";
 
@@ -514,7 +506,7 @@
 "Shared with others" = "Compartilhado com outros";
 "Shares" = "Compartilhamentos";
 "Copy Private Link" = "Copiar Linque Privado";
-"Only people who have access to the file/folder can use it. Use it as a permanent link for yourself or to point others to files within shares." = "Only people who have access to the file/folder can use it. Use it as a permanent link for yourself or to point others to files within shares.";
+"Only recipients can use this link. Use it as a permanent link to point to this resource" = "Somente destinatários podem usar este linque. Use-o como um linque permanente para apontar para este recurso";
 "Accept Share failed" = "Aceitar compartilhamento falhou";
 "Decline Share failed" = "Recusa de compartilhamento falhou";
 "Accept" = "Aceitar";
@@ -586,14 +578,14 @@
 "Video upload" = "Envio de vídeo";
 
 /* Background media uploads */
-"Background uploads (Lab Version)" = "Envios em segundo plano (versão de laboratório) ";
+"Background uploads (Lab Version)" = "Background uploads (Lab Version)";
 "Background uploads" = "Atualização em segundo plano";
 "Use background refresh" = "Usar atualização de fundo";
-"Allow this app to refresh the content when on Wi-Fi or mobile network in background." = "Permitir que este aplicativo atualize o conteúdo quando estiver em uma rede Wi-Fi ou móvel em segundo plano. ";
+"Allow this app to refresh the content when on Wi-Fi or mobile network in background." = "Allow this app to refresh the content when on Wi-Fi or mobile network in background.";
 "Enable background uploads" = "Ativar envios em segundo plano";
 "Use background location updates" = "Use atualizações de localização em segundo plano";
 "Background upload notifications" = "Notificações de upload em segundo plano";
-"If you would like background media uploads to be more reliable, you should enable background location updates." = "Se desejar que os envios de mídia em segundo plano sejam mais confiáveis, você deve habilitar as atualizações de localização em segundo plano.";
+"If you would like background media uploads to be more reliable, you should enable background location updates." = "If you would like background media uploads to be more reliable, you should enable background location updates.";
 "Background media uploads rely on location updates and will stop working if location acquisition permissions are revoked." = "Os envios de mídia em segundo plano dependem de atualizações de localização e deixarão de funcionar se as permissões de aquisição de localização forem revogadas.";
 "Otherwise background media uploads using background refresh technology would depend on how frequently you use the app." = "Caso contrário, os envios de mídia em segundo plano usando a tecnologia de atualização em segundo plano dependeriam da frequência com que você usa o aplicativo.";
 "Location permission denied" = "Permissão de localização negada";
@@ -615,14 +607,13 @@
 "Offline files use" = "Uso de arquivos off-line";
 "Compacting of '%@' failed" = "Compactação de '%@' falhou";
 "Include available offline files" = "Incluir arquivos disponíveis offline";
-"Delete all Offline Files" = "Delete all Offline Files";
+"Delete all Offline Files" = "Excluir Cópias Locais";
 "Manage" = "Gerenciar";
 "Storage" = "Armazenamento";
 "Compacting" = "Compactando";
 
 "Really include available offline files?" = " Realmente incluir arquivos offline disponíveis?";
 "Files and folders marked as Available Offline will become unavailable. They will be re-downloaded next time you log into your account (connectivity required)." = " Arquivos e pastas marcados como Disponível offline ficarão indisponíveis. Eles serão baixados novamente na próxima vez que você fizer login na sua conta (é necessária conectividade).";
-"Removes downloaded files and local copies of items marked as Available Offline. The latter will be re-downloaded next time you log into your account (connectivity required)." = "Removes downloaded files and local copies of items marked as Available Offline. The latter will be re-downloaded next time you log into your account (connectivity required).";
 
 /* Diagnostic */
 "Diagnostic Overview" = "Visão geral do Diagnóstico";
@@ -670,14 +661,13 @@
 "Select Last Item on Page" = "Selecione Último item na Página";
 "Scroll to Top" = "Rolar para o Topo";
 "Scroll to Bottom" = "Rolar para Baixo";
-"Copy to Clipboard" = "Copiar para área de transferência ";
-"Import from Clipboard" = "Importar da área de transferência ";
-"Choose destination directory…" = "Escolha o diretório de destino... ";
+"Copy to Clipboard" = "Copy to Clipboard";
+"Import from Clipboard" = "Import from Clipboard";
+"Choose destination directory…" = "Choose destination directory…";
 "Next" = "Próxima";
 "Previous" = "Anterior";
 "Favorite" = "Favorito";
 "Cut" = "Cortar";
-"Paste" = "Paste";
 "Play/Pause" = "Rodar/Pausar";
 "Skip Back" = "Não Retornar";
 "Skip Ahead" = "Pular À frente ";
@@ -772,19 +762,6 @@
 "Error loading item" = "Erro carregando o item";
 "Preparing…" = "Preparando…";
 "Save here" = "Salvar aqui";
-
-/* Disallowed Import Methods */
-/* - Share Extension */
-"Share Extension disabled" = "Share Extension disabled";
-"Importing files through the Share Extension is not allowed on this device." = "Importing files through the Share Extension is not allowed on this device.";
-
-/* - Open with */
-"Opening not allowed" = "Opening not allowed";
-"Importing files through opening is not allowed on this device." = "Importing files through opening is not allowed on this device.";
-
-/* - Files.app */
-"Import not allowed" = "Import not allowed";
-"Importing files through the File Provider is not allowed on this device." = "Importing files through the File Provider is not allowed on this device.";
 
 /* Data migration from legacy app */
 "Account Migration" = "Migração de Conta";

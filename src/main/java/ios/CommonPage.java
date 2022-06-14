@@ -117,8 +117,8 @@ public class CommonPage {
         findXpath(xpathFolder).click();
     }
 
-    protected String navigateFile(String path){
-        Log.log(Level.FINE, "Path: " + path);
+    protected void browseToFolder(String path){
+        Log.log(Level.FINE, "Browse to folder: " + path);
         String completePath = Pattern.quote("/");
         String[] route = path.split(completePath);
         Log.log(Level.FINE, "Route lenght: " + route.length);
@@ -127,24 +127,8 @@ public class CommonPage {
         }
         if (route.length > 0) { //we have to browse
             int i;
-            for (i = 0; i < route.length - 1 ; i++) {
-                Log.log(Level.FINE, "Browsing: " + route[i]);
-                browse(route[i]);
-            }
-            return route[i];
-        }
-        return "";
-    }
-
-    protected void navigateFolder(String path){
-        Log.log(Level.FINE, "Path: " + path);
-        String completePath = Pattern.quote("/");
-        String[] route = path.split(completePath);
-        Log.log(Level.FINE, "Route lenght: " + route.length);
-        if (route.length > 0) { //we have to browse
-            int i;
             for (i = 1 ; i < route.length ; i++) {
-                Log.log(Level.FINE, "Browsing: " + route[i]);
+                Log.log(Level.FINE, "Browsing towards: " + route[i]);
                 browse(route[i]);
             }
         }

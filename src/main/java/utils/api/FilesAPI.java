@@ -114,6 +114,19 @@ public class FilesAPI extends CommonAPI {
         return isFavorite;
     }
 
+    public void setFavorite(String itemName)
+            throws IOException {
+        String url = urlServer + davEndpoint + user + "/" + itemName;
+        Log.log(Level.FINE, "Starts: To set item as favorite");
+        Log.log(Level.FINE, "URL: " + url);
+        Response response;
+        RequestBody body = RequestBody.create(MediaType.parse("application/xml; charset=utf-8"),
+                setFavoriteBody);
+        Request request = davRequest(url, "PROPPATCH", body);
+        response = httpClient.newCall(request).execute();
+        response.close();
+    }
+
     public ArrayList<OCFile> listItems(String path)
             throws IOException, SAXException, ParserConfigurationException {
         Response response;

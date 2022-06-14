@@ -58,10 +58,6 @@
 "Fetching user information…" = "Récupération des informations utilisateur...";
 "Updating connection…" = "Mise à jour de la connexion ";
 
-"Preparing account" = "Preparing account";
-"Please wait…" = "Veuillez patienter...";
-"Skip" = "Passer";
-
 "Missing hostname" = "Nom d'hôte manquant";
 "The entered URL does not include a hostname." = "L'URL saisie n'inclut pas de nom d'hôte.";
 "Add account" = "Ajouter un compte";
@@ -74,7 +70,6 @@
 "Manage Storage" = "Gérer le stockage";
 "Access Files" = "Accéder aux fichiers";
 "Log out" = "Se déconnecter";
-"Retry" = "Réessayer";
 
 /* Bookmark Info */
 "Bookmark Metadata" = "Bookmark Metadata";
@@ -128,8 +123,8 @@
 "Retry detection" = "Réessayer la détection";
 "Enter your username and password" = "Enter your username and password";
 "Please log in to authorize the app." = "Please log in to authorize the app.";
-"Welcome to %@" = "Bienvenue sur %@";
-"Please enter a server URL" = "Veuillez saisir une URL de serveur";
+"Welcome to %@" = "Welcome to %@";
+"Please enter a server URL" = "Please enter a server URL";
 "Please pick a profile to begin setup" = "Please pick a profile to begin setup";
 
 /* Single Account */
@@ -192,7 +187,7 @@
 "Do you really want to disconnect from your '%@' account?" = "Voulez-vous vraiment vous déconnecter de votre '%@' compte ''?";
 "This will remove all locally stored file copies from your device." = "Cela supprimera toutes les copies de fichiers stockées localement de votre appareil.";
 "Really delete '%@'?" = "Voulez -vous vraiment supprimer '%@'?";
-"Do you want to log out from '%@'?" = "Do you want to log out from '%@'?";
+"Do you want to log out from '%@'?" = "Voulez-vous vraiment vous déconnecter de '%@'?";
 "This will also delete all locally stored file copies." = "Cela supprimera également toutes les copies de fichiers stockées localement.";
 "Delete" = "Supprimer";
 "Remove" = "Supprimer";
@@ -210,7 +205,6 @@
 "Passcode Lock" = "Code de sécurité";
 "Face ID" = "Face ID";
 "Touch ID" = "Touch ID";
-"Unlock using %@?" = "Unlock using %@?";
 "Videos" = "Vidéos";
 "Photos" = "Photos";
 "Wifi only" = "Wifi uniquement";
@@ -225,7 +219,6 @@
 "Privacy Policy" = "Politique de confidentialité";
 "Terms Of Use" = "Conditions d'utilisation";
 "Acknowledgements" = "Accusés de réception";
-"license" = "license";
 "Portions of this app may utilize the following copyrighted material, the use of which is hereby acknowledged." = "Certaines parties de cette application peuvent utiliser le matériel protégé par le droit d'auteur suivant, dont l'utilisation est reconnue par la présente.";
 "Video upload path" = "Chemin d'accès au répertoire de téléversement des vidéos";
 "Photo upload path" = "Chemin de téléversement de photos";
@@ -233,12 +226,11 @@
 "After 1 minute" = "Après 1 minute";
 "After 5 minutes" = "Après 5 minutes";
 "After 30 minutes" = "Après 30 minutes";
-"After %ld seconds" = "After %ld seconds";
 "If you choose \"Immediately\" the App will be locked, when it is no longer in foreground." = "If you choose \"Immediately\" the App will be locked, when it is no longer in foreground.";
 "Please configure an email account" = "Veuillez configurer un compte de messagerie";
 "You need to configure an email account first to be able to send emails." = "Vous devez d'abord configurer un compte de messagerie pour pouvoir envoyer des e-mails.";
 "Do you want to open the following URL?" = "Voulez-vous ouvrir l'URL suivante?";
-"Passcode option" = "Option de code de sécurité";
+"Passcode option" = "Passcode option";
 "Please choose how many digits you want to use for the passcode lock?" = "Please choose how many digits you want to use for the passcode lock?";
 "%ld digit code" = "%ld digit code";
 "Enter a new code with %ld digits" = "Enter a new code with %ld digits";
@@ -306,9 +298,9 @@
 "Decrease Slider Value" = "Diminuer la valeur du curseur";
 "Increase Slider Value" = "Augmenter la valeur du curseur";
 
-"Cellular Data Usage" = "Cellular Data Usage";
+"Cellular Data Usage" = "Transferts cellulaires";
 "Some cellular data may still be used. To completely avoid the usage of cellular data, please turn off access to cellular for the entire app in the Settings app." = "Certaines données cellulaires peuvent encore être utilisées. Pour éviter complètement l'utilisation des données cellulaires, veuillez désactiver l'accès au cellulaire pour toute l'application dans les paramètres de l'app.";
-"Cellular Data Usage have been disabled via MDM configuration. Please contact your administrator for more information." = "Cellular Data Usage have been disabled via MDM configuration. Please contact your administrator for more information.";
+"Cellular Data Usage have been disabled via MDM configuration. Please contact your administrator for more information." = "Les transferts cellulaires ont été désactivés via la configuration MDM. Veuillez contacter votre administrateur pour plus d'informations.";
 "General" = "Paramètres";
 "By feature" = "Par fonctionnalité";
 
@@ -319,7 +311,7 @@
 "Advanced settings" = "Paramètres avancés";
 "Show hidden files and folders" = "Afficher les fichiers et dossiers cachés";
 "Show folders on top" = "Afficher les dossiers en haut";
-"Disable gestures" = "Disable gestures";
+"Disable gestures" = "Empêcher les gestes";
 "Prevent dragging of files and folders and multiselection using system defined gestures" = "Empêcher le glissement de fichiers et de dossiers et la sélection multiple à l'aide de gestes définis par le système";
 
 /* Advanced settings */
@@ -382,10 +374,10 @@
 "Favorited" = "Marqué comme favori";
 "Favorite item" = "Élément préféré";
 "Unfavorite item" = "Élément défavorable";
-"Presentation Mode" = "Mode présentation";
+"Presentation Mode" = "Presentation Mode";
 "Enabling presentation mode will prevent the display from sleep mode until the view is closed." = "Enabling presentation mode will prevent the display from sleep mode until the view is closed.";
 "Enable" = "Activer";
-"Exit Full Screen" = "Quitter le mode plein écran";
+"Exit Full Screen" = "Exit Full Screen";
 
 /* Directory Picker Messages */
 "Move here" = "Déplacer ici";
@@ -400,9 +392,9 @@
 "Connecting..." = "connexion en cours...";
 
 "File" = "Fichier";
-"%@ was updated" = "%@ a été mis à jour";
+"%@ was updated" = "%@ was updated";
 "Would you like to view the updated version?" = "Would you like to view the updated version?";
-"Show new version" = "Afficher la nouvelle version";
+"Show new version" = "Show new version";
 "Refresh without asking" = "Refresh without asking";
 "Ignore updates" = "Ignore updates";
 
@@ -514,7 +506,7 @@
 "Shared with others" = "Partagés avec d'autres";
 "Shares" = "Partages";
 "Copy Private Link" = "Copier le lien privé";
-"Only people who have access to the file/folder can use it. Use it as a permanent link for yourself or to point others to files within shares." = "Only people who have access to the file/folder can use it. Use it as a permanent link for yourself or to point others to files within shares.";
+"Only recipients can use this link. Use it as a permanent link to point to this resource" = "Seuls les destinataires peuvent utiliser ce lien. Utilisez-le comme lien permanent pour pointer vers cette ressource";
 "Accept Share failed" = "Accepter le partage a échoué";
 "Decline Share failed" = "Refuser le partage a échoué";
 "Accept" = "Accepter";
@@ -547,7 +539,7 @@
 "URL was copied to the clipboard" = "L'URL a été copiée dans le presse-papiers";
 "%@ is not available, when this account is offline. Please open the app and log into your account before you can do this action." = "%@ is not available, when this account is offline. Please open the app and log into your account before you can do this action.";
 "%@ is not available for this item." = "%@ is not available for this item.";
-"Share with user/group" = "Partager avec utilisateur/groupe";
+"Share with user/group" = "Share with user/group";
 "Share link" = "Partager par lien public";
 
 /* Quick Access view */
@@ -615,14 +607,13 @@
 "Offline files use" = "Utilisation des fichiers hors ligne";
 "Compacting of '%@' failed" = "Le compactage de '%@' a échoué";
 "Include available offline files" = "Inclure les fichiers hors connexion disponibles";
-"Delete all Offline Files" = "Delete all Offline Files";
+"Delete all Offline Files" = "Supprimer les copies locales";
 "Manage" = "Gérer";
 "Storage" = "Stockage";
 "Compacting" = "compactage";
 
 "Really include available offline files?" = "Voulez-vous vraiment inclure les fichiers hors ligne disponibles?";
 "Files and folders marked as Available Offline will become unavailable. They will be re-downloaded next time you log into your account (connectivity required)." = "Les fichiers et dossiers marqués comme disponibles hors ligne ne seront plus disponibles. Ils seront téléchargés à nouveau la prochaine fois que vous vous connecterez à votre compte (connectivité exigée).";
-"Removes downloaded files and local copies of items marked as Available Offline. The latter will be re-downloaded next time you log into your account (connectivity required)." = "Removes downloaded files and local copies of items marked as Available Offline. The latter will be re-downloaded next time you log into your account (connectivity required).";
 
 /* Diagnostic */
 "Diagnostic Overview" = "Aperçu du diagnostic";
@@ -670,20 +661,19 @@
 "Select Last Item on Page" = "Sélectionnez le dernier élément sur la page";
 "Scroll to Top" = "Faire défiler vers le haut";
 "Scroll to Bottom" = "Faire défiler vers le bas";
-"Copy to Clipboard" = "Copier dans le presse-papier";
-"Import from Clipboard" = "Importer depuis le Presse-papier";
+"Copy to Clipboard" = "Copy to Clipboard";
+"Import from Clipboard" = "Import from Clipboard";
 "Choose destination directory…" = "Choose destination directory…";
 "Next" = "Suivant";
 "Previous" = "Précédent";
 "Favorite" = "Ajouter aux favoris";
 "Cut" = "Couper";
-"Paste" = "Paste";
 "Play/Pause" = "Play/Pause";
 "Skip Back" = "Skip Back";
 "Skip Ahead" = "Skip Ahead";
 "Go to Beginning" = "Go to Beginning";
 "Mute/Unmute" = "Mute/Unmute";
-"Full Screen" = "Plein écran";
+"Full Screen" = "Full Screen";
 "Switch Theme Style" = "Switch Theme Style";
 
 /* Markup */
@@ -772,19 +762,6 @@
 "Error loading item" = "Erreur lors du chargement de l'élément";
 "Preparing…" = "En cours de préparation";
 "Save here" = "Enregistrer ici";
-
-/* Disallowed Import Methods */
-/* - Share Extension */
-"Share Extension disabled" = "Share Extension disabled";
-"Importing files through the Share Extension is not allowed on this device." = "Importing files through the Share Extension is not allowed on this device.";
-
-/* - Open with */
-"Opening not allowed" = "Opening not allowed";
-"Importing files through opening is not allowed on this device." = "Importing files through opening is not allowed on this device.";
-
-/* - Files.app */
-"Import not allowed" = "Import not allowed";
-"Importing files through the File Provider is not allowed on this device." = "Importing files through the File Provider is not allowed on this device.";
 
 /* Data migration from legacy app */
 "Account Migration" = "Migration de compte";
@@ -927,6 +904,6 @@
 "Passcode protection is not supported on this device.\nPlease disable passcode lock in the app settings." = "Passcode protection is not supported on this device.\nPlease disable passcode lock in the app settings.";
 
 /* MDM settings push */
-"New settings received from MDM" = "Nouveaux paramètres reçus de MDM";
-"Tap to quit the app." = "Appuyez sur pour quitter l'application.";
-"Tap to launch the app." = "Appuyez sur pour lancer l'application.";
+"New settings received from MDM" = "New settings received from MDM";
+"Tap to quit the app." = "Tap to quit the app.";
+"Tap to launch the app." = "Tap to launch the app.";

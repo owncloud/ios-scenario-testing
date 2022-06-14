@@ -34,7 +34,7 @@ public class FileListSteps {
         return type;
     }
 
-    @ParameterType("make available offline|move|copy|delete|duplicate|share by link|edit link|rename|share|edit share|favorite|cut")
+    @ParameterType("make available offline|move|copy|delete|duplicate|share by link|edit link|rename|share|edit share|favorite|cut|unfavorite")
     public String operation(String operation){
         return operation;
     }
@@ -69,6 +69,14 @@ public class FileListSteps {
         for (int i=0; i<files; i++){
             filesAPI.pushFile(folderName+"/file_"+i+".txt");
         }
+    }
+
+    @Given("item {word} has been set as favorite")
+    public void item_favorited(String itemName)
+            throws Throwable {
+        String stepName = new Object(){}.getClass().getEnclosingMethod().getName();
+        Log.log(Level.FINE, "----STEP----: " + stepName);
+        filesAPI.setFavorite(itemName);
     }
 
     @When("Alice opens a private link pointing to {word} with scheme {word}")
@@ -264,6 +272,15 @@ public class FileListSteps {
                 new Object(){}.getClass().getEnclosingMethod().getName() + ": " + itemName);
         assertTrue(fileListPage.itemIsFavorite(itemName));
         assertTrue(filesAPI.isFavorite(itemName));
+    }
+
+    @Then("{itemtype} {word} should be set as unfavorite")
+    public void item_is_now_unfavorite(String itemType, String itemName)
+            throws Throwable {
+        Log.log(Level.FINE, "----STEP----: " +
+                new Object(){}.getClass().getEnclosingMethod().getName() + ": " + itemName);
+        assertFalse(fileListPage.itemIsFavorite(itemName));
+        assertFalse(filesAPI.isFavorite(itemName));
     }
 
     @Then("Alice should see a link resolution error")

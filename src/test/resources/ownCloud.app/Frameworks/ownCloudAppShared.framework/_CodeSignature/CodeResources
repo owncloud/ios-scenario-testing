@@ -6,15 +6,11 @@
 	<dict>
 		<key>Info.plist</key>
 		<data>
-		d/Ie7K1/69qq0TvaF7+5A3+anew=
+		CjHHgY0H/d2CYgIkASKF4b9+a2o=
 		</data>
-		<key>PasscodeViewController.nib/objects-14.0+.nib</key>
+		<key>PasscodeViewController.nib</key>
 		<data>
-		i/Bf/eUGYGwFdJQd+VRqZ5+3OE0=
-		</data>
-		<key>PasscodeViewController.nib/runtime.nib</key>
-		<data>
-		GICcD1yv648JcsZ+TvmRZHLmBKE=
+		N2fFWXXVzoKpR7Xy0LjVABf4kmw=
 		</data>
 		<key>PocketSVG.LICENSE</key>
 		<data>
@@ -32,7 +28,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			wnDbUkdvg4gWXwf+oIJaBXgA+c4=
+			Mpj199tcLiBp7F+VBgb1W75Fk2Q=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -54,7 +50,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			lT3vtRduX9njN1urlfRhIOzFPTA=
+			JJRtefS8yUjXdV3fiLJYln1Wi8g=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -72,7 +68,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			/hMOy9GwwESgphYop8Z3fSt+1Y4=
+			5aa/oMcKQ95ZEcQUxtiBTXjeZ3g=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -81,7 +77,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			y8E3umgEm27oR3CuuRYdqxu+j3s=
+			l6KAAf0cw966ke3T3Vd7bBFN+/k=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -131,7 +127,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			mmJaG6ESjPchdnFBl1/oyYwsRAQ=
+			MJ75yizEEqhPsssHOTGKoTCHN7g=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -204,7 +200,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			WnKamXpTpX2dSniOlHGWZQsdiHA=
+			7oZU7cFMoft3lXjFFWtWe09IKKg=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -222,7 +218,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			TkYqGDVKPl9YVgMfQGpyeO6pPHw=
+			ItS9qOPodUr/wt7vsRye55kibCI=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -231,7 +227,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			K125ESZXxTuvhbqXMVHJKosHS2s=
+			Rb55YklrIM190j5xLSrTy6hVIwU=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -260,7 +256,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			YOXxRs+3mtjE3zaQKvP1nhhXzW4=
+			F40vCAN9WcoFY4gb8cd4PlffizE=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -293,18 +289,11 @@
 	</dict>
 	<key>files2</key>
 	<dict>
-		<key>PasscodeViewController.nib/objects-14.0+.nib</key>
+		<key>PasscodeViewController.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			7mKpsJYcpIYwvsuhKfwbxVINb9yv+DOCtwktPuuYAJg=
-			</data>
-		</dict>
-		<key>PasscodeViewController.nib/runtime.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			iQuA0Oiwvg4q05rSh8x4KncFB3/AUnbUsDrq7JAK/tc=
+			ckLg+BDMcIAexc0A0xi+KbL2n8RchwjmRmcP60JvyQ8=
 			</data>
 		</dict>
 		<key>PocketSVG.LICENSE</key>
@@ -332,7 +321,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			bLjQE+tUmVCBU1RYtko8Qq/4BjgDimsNWaSDO4nOwTQ=
+			5dWc4WM5x82w1S2ZVs87np6IzvIcmsW15ek9m6bcO00=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -357,7 +346,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			9kj87kQ7K2M4bMvb4Bg2JQJ1JPEdFKsUSKIzZ4FQDCw=
+			rNKcf1mVJzBF8B3IvjqH+Tk8w6kb/0i9ZL+G7BbSf9g=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -375,7 +364,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			7Uhx54zP5d98F+Wg3N3a8CU4DI5LHUm5ufMQrwLTkjg=
+			BQI3wFcWUNQmliESaumE14yF7harzLxoW/feHIGRmKQ=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -384,7 +373,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			gfgWWy5BW2Mg7hD/XOHIpthbZSBPIEOkJxgIGYgmlBA=
+			mZl8MUebFfKXjHq+Sjz7duxMk5Ydu5r7sX+r8rTJr9E=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -458,7 +447,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			qVi6i8hqNq0oXyIiRufDEpMHRGhiRWfTvinA0M8fEGQ=
+			i29FPAmwzX3F7t64C7O4iEHreT20GKttPuAf7W3nSnk=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -552,7 +541,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Lt0bI3S3HGZaEsfhM+uOVI2FuUSNOgttLXBAe+D8mL4=
+			56kgEtqrZ3LwOd8YPg/ylaO3MAIHZmnvJw4TTRTEnbA=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -570,7 +559,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			TkPE2B4SnCHPrkdD0QNUDDI1Qx6SmPrO/vAxKRFSxQQ=
+			viWTEjkUmpQ/40GnLJQFCIcZY1GovAGwBlBlmnbqbl4=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -579,7 +568,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			1JsBj4ZLmnzzYcUpIDnd2G47eaiKLvlu6ClnwCCA6Z4=
+			eUpwQb6otoEbbds0IfjRqZZy0G9jCfisAhh8juzw0U0=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -623,7 +612,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			gOjNqeeQxFvw8UupDCtb8M+KWIYS9ecAt2RhjLnDP7E=
+			xehUVjY46VMDg2iCFYp7kdPzJ71U41FUv7BTdo+lbIg=
 			</data>
 			<key>optional</key>
 			<true/>

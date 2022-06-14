@@ -55,6 +55,7 @@ Feature: Private Share
           |  file   |  Share5.txt  |
           |  folder |  Share6      |
 
+      @federated
       Scenario Outline: Correct federated share
         Given the following items have been created in the account
           | <type>  | <item>  |

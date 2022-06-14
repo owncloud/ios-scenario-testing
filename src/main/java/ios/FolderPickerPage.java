@@ -37,7 +37,7 @@ public class FolderPickerPage extends CommonPage {
             findXpath(xpath_picker)
                     .findElement(By.xpath("//XCUIElementTypeCell[@name=\"" + targetFolder + "\"]")).click();
             } else { //browsing to deeper
-                navigateFolder(targetFolder);
+                browseToFolder(targetFolder);
             }
         }
     }
