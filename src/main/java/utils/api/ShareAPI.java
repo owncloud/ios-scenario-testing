@@ -25,12 +25,10 @@ import utils.parser.ShareSAXHandler;
 public class ShareAPI extends CommonAPI {
 
     private String sharingEndpoint = "/ocs/v1.php/apps/files_sharing/api/v1/shares";
-    private String shareeEndpoint = "/ocs/v2.php/apps/files_sharing/api/v1/sharees";
     private final String owner = LocProperties.getProperties().getProperty("userName1");
     private final String shareeU = LocProperties.getProperties().getProperty("userToShare");
-    private final String shareeG = LocProperties.getProperties().getProperty("groupToShare");
 
-    public ShareAPI(){
+    public ShareAPI() throws IOException {
         super();
     }
 

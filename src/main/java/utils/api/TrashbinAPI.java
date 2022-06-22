@@ -11,7 +11,7 @@ public class TrashbinAPI extends CommonAPI {
 
     private String trashEndpoint = "/remote.php/dav/trash-bin/";
 
-    public TrashbinAPI() {
+    public TrashbinAPI() throws IOException {
         super();
     }
 

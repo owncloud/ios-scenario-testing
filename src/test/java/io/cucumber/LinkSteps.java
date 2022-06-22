@@ -3,6 +3,7 @@ package io.cucumber;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
+import java.io.IOException;
 import java.util.List;
 import java.util.logging.Level;
 
@@ -27,7 +28,9 @@ public class LinkSteps {
 
     //APIs to call
     protected ShareAPI shareAPI = new ShareAPI();
-    protected FilesAPI filesAPI = new FilesAPI();
+
+    public LinkSteps() throws IOException {
+    }
 
     @Given("Alice has shared the {itemtype} {word} by link")
     public void item_already_shared_by_link(String type, String itemName)

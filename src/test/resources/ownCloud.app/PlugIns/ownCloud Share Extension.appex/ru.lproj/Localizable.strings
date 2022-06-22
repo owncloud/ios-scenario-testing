@@ -58,6 +58,10 @@
 "Fetching user information…" = "Получение информации о пользователе…";
 "Updating connection…" = "Соединение обновляется…";
 
+"Preparing account" = "Preparing account";
+"Please wait…" = "Пожалуйста, ждите…";
+"Skip" = "Пропустить";
+
 "Missing hostname" = "Отсутствует имя сервера";
 "The entered URL does not include a hostname." = "Введённый адрес URL не содержит в себе имя сервера.";
 "Add account" = "Добавить учетную запись";
@@ -69,7 +73,8 @@
 "Edit Login" = "Править логин";
 "Manage Storage" = "Управлять хранилищем";
 "Access Files" = "Доступ к файлам";
-"Log out" = "Выход";
+"Log out" = "Выйти";
+"Retry" = "Повторить";
 
 /* Bookmark Info */
 "Bookmark Metadata" = "Описание закладки";
@@ -187,7 +192,7 @@
 "Do you really want to disconnect from your '%@' account?" = "Вы действительно хотите отключиться от вашей учётной записи '%@'?";
 "This will remove all locally stored file copies from your device." = "Это удалит все локально сохранённые копии файлов с вашего устройства.";
 "Really delete '%@'?" = "Действительно удалить '%@'?";
-"Do you want to log out from '%@'?" = "Действительно выйти из '%@'?";
+"Do you want to log out from '%@'?" = "Do you want to log out from '%@'?";
 "This will also delete all locally stored file copies." = "Это так же удалит все локально сохранённые копии файла.";
 "Delete" = "Удалить";
 "Remove" = "Удалить";
@@ -205,6 +210,7 @@
 "Passcode Lock" = "Блокировка кодом доступа";
 "Face ID" = "Идентификатор лица";
 "Touch ID" = "Touch ID";
+"Unlock using %@?" = "Unlock using %@?";
 "Videos" = "Видео";
 "Photos" = "Фото";
 "Wifi only" = "Только через WiFi";
@@ -219,6 +225,7 @@
 "Privacy Policy" = "Политика конфиденциальности";
 "Terms Of Use" = "Условия использования";
 "Acknowledgements" = "Благодарности";
+"license" = "license";
 "Portions of this app may utilize the following copyrighted material, the use of which is hereby acknowledged." = "Части этого приложения могут использовать нижеперечисленный материал, защищённый авторским правом, и здесь подтверждается его использование.";
 "Video upload path" = "Путь загрузки видео";
 "Photo upload path" = "Путь загрузки фото";
@@ -226,6 +233,7 @@
 "After 1 minute" = "Через 1 минуту";
 "After 5 minutes" = "Через 5 минут";
 "After 30 minutes" = "Через 30 минут";
+"After %ld seconds" = "After %ld seconds";
 "If you choose \"Immediately\" the App will be locked, when it is no longer in foreground." = "Если вы выберете «немедленно», то приложение будет заблокировано, как только перестанет быть на переднем плане.";
 "Please configure an email account" = "Пожалуйста, настройте учётную запись почты";
 "You need to configure an email account first to be able to send emails." = "Чтобы иметь возможность отправлять сообщения, вам нужно сначала настроить учётную запись почты.";
@@ -298,9 +306,9 @@
 "Decrease Slider Value" = "Увеличить значение слайдера";
 "Increase Slider Value" = "Уменьшить значение слайдера";
 
-"Cellular Data Usage" = "Пересылки по сотовой сети";
+"Cellular Data Usage" = "Cellular Data Usage";
 "Some cellular data may still be used. To completely avoid the usage of cellular data, please turn off access to cellular for the entire app in the Settings app." = "Будет использовано некоторое количество сотового трафика. Чтобы полностью избежать его использования, пожалуйста отключите доступ к сотовой сети для всего приложения в приложении Настроек.";
-"Cellular Data Usage have been disabled via MDM configuration. Please contact your administrator for more information." = "Передача данных по сотовой сети была отключена в настройках MDM. Чтобы узнать подробности, пожалуйста свяжитесь с вашим администратором.";
+"Cellular Data Usage have been disabled via MDM configuration. Please contact your administrator for more information." = "Cellular Data Usage have been disabled via MDM configuration. Please contact your administrator for more information.";
 "General" = "Основные";
 "By feature" = "По возможностям";
 
@@ -311,7 +319,7 @@
 "Advanced settings" = "Расширенные настройки";
 "Show hidden files and folders" = "Показывать скрытые файлы и папки";
 "Show folders on top" = "Показывать папки в начале";
-"Disable gestures" = "Предотвратить жесты";
+"Disable gestures" = "Disable gestures";
 "Prevent dragging of files and folders and multiselection using system defined gestures" = "Предотвратить перетаскивание файлов и папок, а так же множественный выбор, с помощью заданных в системе жестов";
 
 /* Advanced settings */
@@ -506,7 +514,7 @@
 "Shared with others" = "Доступные для других";
 "Shares" = "События обмена файлами";
 "Copy Private Link" = "Копировать приватную ссылку";
-"Only recipients can use this link. Use it as a permanent link to point to this resource" = "Только получатели смогут воспользоваться этой ссылкой. Используйте постоянную ссылку для этого ресурса.";
+"Only people who have access to the file/folder can use it. Use it as a permanent link for yourself or to point others to files within shares." = "Only people who have access to the file/folder can use it. Use it as a permanent link for yourself or to point others to files within shares.";
 "Accept Share failed" = "Ошибка подтверждения совместного доступа";
 "Decline Share failed" = "Ошибка отклонения совместного доступа";
 "Accept" = "Принять";
@@ -607,13 +615,14 @@
 "Offline files use" = "Использование автономных файлов";
 "Compacting of '%@' failed" = "Сжатие '%@' не удалось";
 "Include available offline files" = "Включить доступные автономные файлы";
-"Delete all Offline Files" = "Удалить локальные копии";
+"Delete all Offline Files" = "Delete all Offline Files";
 "Manage" = "Управление";
 "Storage" = "Хранилище";
 "Compacting" = "Сжатие";
 
 "Really include available offline files?" = "Действительно включить доступные автономные файлы?";
 "Files and folders marked as Available Offline will become unavailable. They will be re-downloaded next time you log into your account (connectivity required)." = "Файлы и папки, помеченные как доступные без сети, станут недоступными. При следующем входе в учётную запись они будут скачаны повторно (нужна связь).";
+"Removes downloaded files and local copies of items marked as Available Offline. The latter will be re-downloaded next time you log into your account (connectivity required)." = "Removes downloaded files and local copies of items marked as Available Offline. The latter will be re-downloaded next time you log into your account (connectivity required).";
 
 /* Diagnostic */
 "Diagnostic Overview" = "Диагностический обзор";
@@ -668,6 +677,7 @@
 "Previous" = "Предыдущий";
 "Favorite" = "В избранное";
 "Cut" = "Вырезать";
+"Paste" = "Paste";
 "Play/Pause" = "Проигрывание/Пауза";
 "Skip Back" = "Пропустить назад";
 "Skip Ahead" = "Пропустить вперёд";
@@ -762,6 +772,19 @@
 "Error loading item" = "Ошибка при загрузке элемента";
 "Preparing…" = "Подготовка";
 "Save here" = "Сохранить здесь";
+
+/* Disallowed Import Methods */
+/* - Share Extension */
+"Share Extension disabled" = "Share Extension disabled";
+"Importing files through the Share Extension is not allowed on this device." = "Importing files through the Share Extension is not allowed on this device.";
+
+/* - Open with */
+"Opening not allowed" = "Opening not allowed";
+"Importing files through opening is not allowed on this device." = "Importing files through opening is not allowed on this device.";
+
+/* - Files.app */
+"Import not allowed" = "Import not allowed";
+"Importing files through the File Provider is not allowed on this device." = "Importing files through the File Provider is not allowed on this device.";
 
 /* Data migration from legacy app */
 "Account Migration" = "Миграция учётной записи";

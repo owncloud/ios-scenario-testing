@@ -10,6 +10,7 @@ Feature: Cut/Paste item
     And the following items have been created in the account
       | folder | DocumentsPaste  |
 
+  @smoke
   Scenario: Cut an existent folder to another location using the Actions menu
     Given the following items have been created in the account
       | folder   | cut1  |

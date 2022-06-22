@@ -35,7 +35,6 @@ public class PrivateSharePage extends SharePage {
 
     public void searchSharee(String shareeName, String type){
         Log.log(Level.FINE, "Starts: Searching for sharee: " + shareeName + " that is a "+type);
-        waitById(5, searchSharee);
         searchSharee.sendKeys(shareeName);
         if (type.equals("group")){
             shareeName += " (Group)";

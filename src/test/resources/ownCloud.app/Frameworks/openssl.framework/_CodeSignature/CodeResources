@@ -6,23 +6,11 @@
 	<dict>
 		<key>Info.plist</key>
 		<data>
-		K2COC/SBMHpZXNdMX7lyp+GbPmY=
-		</data>
-		<key>LICENSE</key>
-		<data>
-		Aif4bZrcKGIzt8HueuFKTwaJeGc=
+		q80NAak57Ooed8Hniwrx/ohelBU=
 		</data>
 	</dict>
 	<key>files2</key>
-	<dict>
-		<key>LICENSE</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			nuN9cpZrtKhBND8GBs5E1Bs+rk30KFIAxajdwrk1mSo=
-			</data>
-		</dict>
-	</dict>
+	<dict/>
 	<key>rules</key>
 	<dict>
 		<key>^.*</key>

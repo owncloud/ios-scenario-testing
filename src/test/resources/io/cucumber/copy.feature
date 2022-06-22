@@ -8,6 +8,7 @@ Feature: Copy item
   Background: User is logged in
     Given user Alice is logged in
 
+  @smoke
   Scenario: Copy an existent folder to another location using the Actions menu
     Given the following items have been created in the account
       | folder  | copy1      |
@@ -20,10 +21,10 @@ Feature: Copy item
   Scenario: Copy an existent file to another location using the Contextual menu
     Given the following items have been created in the account
       | file    | copy2.txt  |
-      | folder  | Documents3 |
+      | folder  | Documents2 |
     When Alice selects to copy the file copy2.txt using the Contextual menu
-    And Alice selects Documents3 as target folder of the copy operation
-    Then Alice should see copy2.txt inside the folder Documents3
+    And Alice selects Documents2 as target folder of the copy operation
+    Then Alice should see copy2.txt inside the folder Documents2
     And Alice should see copy2.txt in the filelist
 
   Scenario: Copy an existent item to same location is not allowed

@@ -8,6 +8,7 @@ Feature: Delete item
   Background: User is logged in
     Given user Alice is logged in
 
+  @smoke
   Scenario: Delete an existent folder using the Actions menu
     Given the following items have been created in the account
       | folder  | delete1  |

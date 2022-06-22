@@ -8,6 +8,7 @@ Feature: Move item
   Background: User is logged in
     Given user Alice is logged in
 
+  @smoke
   Scenario: Move an existent folder to another location using the Actions menu
     Given the following items have been created in the account
       | folder   | move1       |

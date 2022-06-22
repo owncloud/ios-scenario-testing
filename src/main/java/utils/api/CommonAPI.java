@@ -1,30 +1,22 @@
 package utils.api;
 
 import java.io.IOException;
-import java.security.cert.CertificateException;
 import java.util.Base64;
-import java.util.List;
 import java.util.logging.Level;
 
-import javax.net.ssl.HostnameVerifier;
-import javax.net.ssl.SSLContext;
-import javax.net.ssl.SSLSession;
-import javax.net.ssl.SSLSocketFactory;
-import javax.net.ssl.TrustManager;
-import javax.net.ssl.X509TrustManager;
-
-import okhttp3.Headers;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.RequestBody;
 import okhttp3.Response;
 import utils.LocProperties;
 import utils.log.Log;
+import utils.network.oCHttpClient;
+import utils.parser.DrivesJSONHandler;
 
 
 public class CommonAPI {
 
-    protected final OkHttpClient httpClient = getUnsafeOkHttpClient();
+    protected OkHttpClient httpClient =  oCHttpClient.getUnsafeOkHttpClient();
 
     protected String urlServer = System.getProperty("server");
     protected String userAgent = LocProperties.getProperties().getProperty("userAgent");
@@ -32,12 +24,13 @@ public class CommonAPI {
 
     protected String user = LocProperties.getProperties().getProperty("userName1");
     protected String password = LocProperties.getProperties().getProperty("passw1");
-    protected String shareeUser = LocProperties.getProperties().getProperty("userToShare");
-    protected String shareePassword = LocProperties.getProperties().getProperty("userToSharePwd");
     protected String credentialsB64 = Base64.getEncoder().encodeToString((user+":"+password).getBytes());
-    protected String credentialsB64Sharee = Base64.getEncoder().encodeToString((shareeUser+":"+shareePassword).getBytes());
 
-    protected final String davEndpoint = "/remote.php/dav/files/";
+    protected final String webdavEndpoint = "/remote.php/dav/files";
+    protected final String spacesEndpoint = "/dav/spaces/";
+    protected final String graphDrivesEndpoint = "/graph/v1.0/me/drives";
+    protected String davEndpoint = "";
+    protected String space = "";
 
     protected String basicPropfindBody = "<?xml version='1.0' encoding='UTF-8' ?>\n" +
             "<propfind xmlns=\"DAV:\" xmlns:CAL=\"urn:ietf:params:xml:ns:caldav\"" +
@@ -71,57 +64,28 @@ public class CommonAPI {
             "  </D:set>\n" +
             "</D:propertyupdate>";
 
-    public CommonAPI(){
-    }
-
-    public String checkAuthMethod()
-            throws IOException {
-        Log.log(Level.FINE, "Checking available auth methods");
-        String url = urlServer + davEndpoint;
-        Log.log(Level.FINE, "Request to: " + url);
-        Request request = davRequestUnauth(url, "GET");
-        Response response = httpClient.newCall(request).execute();
-        Headers headers = response.headers();
-        response.close();
-        List<String> allHeaders = headers.values("Www-Authenticate");
-        for (String header : allHeaders){
-            Log.log(Level.FINE, "Header to check: " + header);
-            if (header.contains("Bearer")) {
-                if (isOidc(urlServer)) {
-                    Log.log(Level.FINE, "Auth method: OIDC");
-                    return "OIDC";
-                }
-                Log.log(Level.FINE, "Auth method: Bearer");
-                return "Bearer";
-            }
+    public CommonAPI() throws IOException {
+        AuthAPI authAPI = new AuthAPI();
+        //ftm, OIDC == oCIS. Bad.
+        if (authAPI.checkAuthMethod().equals("OIDC")){
+            space = getPersonalDrives(urlServer);
+            davEndpoint = spacesEndpoint + space;
+        } else {
+            davEndpoint = webdavEndpoint+"/"+user;
         }
-        Log.log(Level.FINE, "Auth method: Basic");
-        return "Basic";
+        Log.log(Level.FINE, "Endpoint: " + davEndpoint);
     }
 
-    protected boolean isOidc(String url)
-            throws IOException {
-        String urlCheck = url+"/.well-known/openid-configuration";
-        Request request = getRequest(urlCheck);
-        Response response = httpClient.newCall(request).execute();
-        Log.log(Level.FINE, "Body lenght: " + response.body().contentLength());
-        boolean withBody = response.body().contentLength() > 0;
-        response.close();
-        if (withBody)
-            return true;
-        else
-            return false;
+    public String getEndpoint(){
+        return davEndpoint;
     }
 
-    public String getCapabilities()
-            throws IOException {
-        String urlCheck = urlServer+"/ocs/v2.php/cloud/capabilities?format=json";
-        Request request = getRequest(urlCheck);
-        Response response = httpClient.newCall(request).execute();
-        Log.log(Level.FINE, "Capabilities: " + response.body());
-        String capabilities =  response.body().string();
-        response.close();
-        return capabilities;
+    public String getSpace() {
+        return space;
+    }
+
+    public void setSpace(String space) {
+        this.space = space;
     }
 
     protected Request davRequest(String url, String method, RequestBody body) {
@@ -132,17 +96,6 @@ public class CommonAPI {
                 .addHeader("Authorization", "Basic "+ credentialsB64)
                 .addHeader("Host", host)
                 .method(method, body)
-                .build();
-        return request;
-    }
-
-    protected Request davRequestUnauth(String url, String method) {
-        Request request = new Request.Builder()
-                .url(url)
-                .addHeader("OCS-APIREQUEST", "true")
-                .addHeader("User-Agent", userAgent)
-                .addHeader("Host", host)
-                .method(method, null)
                 .build();
         return request;
     }
@@ -212,49 +165,13 @@ public class CommonAPI {
         return request;
     }
 
-    // Returns an okHttpClient resistent to non-secured connections. It will be posible to check
-    // server APIs with no errors due to handshake problems.
-    private static OkHttpClient getUnsafeOkHttpClient() {
-        try {
-            // Create a trust manager that does not validate certificate chains
-            final TrustManager[] trustAllCerts = new TrustManager[] {
-                    new X509TrustManager() {
-                        @Override
-                        public void checkClientTrusted(java.security.cert.X509Certificate[] chain,
-                               String authType) throws CertificateException {
-                        }
-
-                        @Override
-                        public void checkServerTrusted(java.security.cert.X509Certificate[] chain,
-                               String authType) throws CertificateException {
-                        }
-
-                        @Override
-                        public java.security.cert.X509Certificate[] getAcceptedIssuers() {
-                            return new java.security.cert.X509Certificate[]{};
-                        }
-                    }
-            };
-
-            // Install the all-trusting trust manager
-            final SSLContext sslContext = SSLContext.getInstance("SSL");
-            sslContext.init(null, trustAllCerts, new java.security.SecureRandom());
-            // Create an ssl socket factory with our all-trusting manager
-            final SSLSocketFactory sslSocketFactory = sslContext.getSocketFactory();
-
-            OkHttpClient.Builder builder = new OkHttpClient.Builder();
-            builder.sslSocketFactory(sslSocketFactory, (X509TrustManager)trustAllCerts[0]);
-            builder.hostnameVerifier(new HostnameVerifier() {
-                @Override
-                public boolean verify(String hostname, SSLSession session) {
-                    return true;
-                }
-            });
-
-            OkHttpClient okHttpClient = builder.build();
-            return okHttpClient;
-        } catch (Exception e) {
-            throw new RuntimeException(e);
-        }
+    private String getPersonalDrives(String url) throws IOException {
+        Request request = getRequest(url + graphDrivesEndpoint);
+        Response response = httpClient.newCall(request).execute();
+        String body = response.body().string();
+        response.close();
+        String personalId = DrivesJSONHandler.getPersonalDriveId(body);
+        Log.log(Level.FINE, "Personal Drive ID: " + personalId);
+        return personalId;
     }
 }

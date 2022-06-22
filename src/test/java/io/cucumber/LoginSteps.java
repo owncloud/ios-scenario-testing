@@ -2,6 +2,7 @@ package io.cucumber;
 
 import static org.junit.Assert.assertTrue;
 
+import java.io.IOException;
 import java.util.logging.Level;
 
 import io.cucumber.java.ParameterType;
@@ -12,14 +13,14 @@ import ios.LoginPage;
 import ios.OAuth2Page;
 import ios.OidcPage;
 import utils.LocProperties;
-import utils.api.CommonAPI;
+import utils.api.AuthAPI;
 import utils.log.Log;
 
 public class LoginSteps {
 
     //Involved pages
     private LoginPage loginPage = new LoginPage();
-    private CommonAPI commonAPI = new CommonAPI();
+    private AuthAPI authAPI = new AuthAPI();
 
     @ParameterType("basic auth|LDAP|redirection 301|redirection 302")
     public String authtype(String type){
@@ -42,7 +43,7 @@ public class LoginSteps {
         Log.log(Level.FINE, "----STEP----: " + stepName);
         if (!loginPage.loggedIn()) {
             Log.log(Level.FINE, "Not logged. Starting login process");
-            String authMethod = commonAPI.checkAuthMethod();
+            String authMethod = authAPI.checkAuthMethod();
             String password = LocProperties.getProperties().getProperty("passw1");
             loginPage.skipAddServer();
             loginPage.typeURL();

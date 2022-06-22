@@ -3,6 +3,7 @@ package io.cucumber;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
+import java.io.IOException;
 import java.util.List;
 import java.util.logging.Level;
 
@@ -15,7 +16,6 @@ import ios.PrivateSharePage;
 import ios.SharePage;
 import ios.SharePermissionsPage;
 import utils.LocProperties;
-import utils.api.FilesAPI;
 import utils.api.ShareAPI;
 import utils.entities.OCShare;
 import utils.log.Log;
@@ -29,7 +29,9 @@ public class SharesSteps {
 
     //APIs to call
     protected ShareAPI shareAPI = new ShareAPI();
-    protected FilesAPI filesAPI = new FilesAPI();
+
+    public SharesSteps() throws IOException {
+    }
 
     @ParameterType("user|group")
     public String usertype(String type){

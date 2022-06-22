@@ -150,8 +150,6 @@ public class FileListPage extends CommonPage {
 
     public void openPlusButton(){
         Log.log(Level.FINE, "Starts: Open plus button");
-        //Waiting for the list of files to be loaded
-        waitById(5, "Documents");
         plusButton.click();
     }
 
@@ -194,8 +192,7 @@ public class FileListPage extends CommonPage {
 
     private void selectItemListContextual(String itemName) {
         Log.log(Level.FINE, "Starts: select contextual item from list: " + itemName);
-        String itemXpath = "//XCUIElementTypeCell[@name=\"" + itemName + "\"]";
-        MobileElement listCell = findXpath(itemXpath);
+        MobileElement listCell = findId(itemName);
         new TouchAction(driver).longPress(LongPressOptions.longPressOptions()
                 .withElement(ElementOption.element(listCell))).release().perform();
     }
@@ -266,8 +263,7 @@ public class FileListPage extends CommonPage {
 
     private void selectItemListSwipe(String itemName) {
         Log.log(Level.FINE, "Starts: select item from list by swiping: " + itemName);
-        String itemXpath = "//XCUIElementTypeCell[@name=\"" + itemName + "\"]";
-        MobileElement listCell = findXpath(itemXpath);
+        MobileElement listCell = findId(itemName);
         swipeElementIOS(listCell, "LEFT");
     }
 

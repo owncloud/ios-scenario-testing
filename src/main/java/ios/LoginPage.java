@@ -2,6 +2,7 @@ package ios;
 
 import org.openqa.selenium.support.PageFactory;
 
+import java.io.IOException;
 import java.util.List;
 import java.util.logging.Level;
 
@@ -9,6 +10,7 @@ import io.appium.java_client.MobileElement;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import io.appium.java_client.pagefactory.iOSXCUITFindBy;
 import io.appium.java_client.remote.HideKeyboardStrategy;
+import utils.api.AuthAPI;
 import utils.log.Log;
 
 public class LoginPage extends CommonPage{
@@ -129,9 +131,18 @@ public class LoginPage extends CommonPage{
         firstServer.click();
     }
 
-    public void selectFirstBookmark() {
+    public void selectDrive() throws IOException {
+        AuthAPI authAPI = new AuthAPI();
+        //assuming OIDC == oCIS. Bad, but works ftm
+        if (authAPI.checkAuthMethod().equals("OIDC")) {
+            findId("personal").click();
+        }
+    }
+
+    public void selectFirstBookmark() throws IOException {
         driver.hideKeyboard(HideKeyboardStrategy.PRESS_KEY, "Done");
         bookmarkCell.click();
+        selectDrive();
     }
 
     private String selectURL(String authMehod){

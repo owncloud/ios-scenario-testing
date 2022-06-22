@@ -3,6 +3,7 @@ package io.cucumber;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
@@ -28,6 +29,9 @@ public class FileListSteps {
 
     //APIs to call
     protected FilesAPI filesAPI = new FilesAPI();
+
+    public FileListSteps() throws IOException {
+    }
 
     @ParameterType("item|file|folder")
     public String itemtype(String type){

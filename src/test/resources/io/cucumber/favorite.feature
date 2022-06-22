@@ -17,6 +17,7 @@ Feature: Set an item as favorite (starred)
       And Alice closes the Actions menu
       Then folder fav1 should be set as favorite
 
+    @smoke
     Scenario: Favorite an item using the Contextual menu
       Given the following items have been created in the account
         | file   | fav2.txt  |
