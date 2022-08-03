@@ -14,8 +14,18 @@ public class PublicLinkPage extends SharePage {
     @iOSXCUITFindBy(xpath = "//XCUIElementTypeStaticText[@name=\"Create Public Link\"]")
     private MobileElement selectCreateLink;
 
+    @iOSXCUITFindBy(xpath = "//XCUIElementTypeButton[@name=\"Add\"]")
+    private MobileElement selectCreateLinkPlusButton;
+
     @iOSXCUITFindBy(xpath = "//XCUIElementTypeStaticText[@name=\"Links\"]")
     private MobileElement header;
+
+    @iOSXCUITFindBy(id = "Done")
+    private MobileElement done;
+
+    @iOSXCUITFindBy(xpath = "XCUIElementTypeButton[@name=\"Done\"]")
+    private MobileElement doneXpath;
+
 
     private final String xpath_header = "//XCUIElementTypeStaticText[@name=\"Links\"]";
 
@@ -38,5 +48,11 @@ public class PublicLinkPage extends SharePage {
         Log.log(Level.FINE, "Starts: link in list: " + itemName);
         waitByXpath(10, xpath_header);
         return !findListId(itemName).isEmpty();
+    }
+
+    public void close(){
+        Log.log(Level.FINE, "Starts: Close public links");
+        waitByXpath(5, "//XCUIElementTypeButton[@name=\"Add\"]");
+        done.click();
     }
 }

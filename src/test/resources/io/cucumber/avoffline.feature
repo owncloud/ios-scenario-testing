@@ -1,4 +1,4 @@
-@avoffline @ignore
+@avoffline
 Feature: Set items as available offline (downloaded and synced)
 
   As a user
@@ -8,12 +8,14 @@ Feature: Set items as available offline (downloaded and synced)
   Background: User is logged in
     Given user Alice is logged in
 
+  @ignore
   Scenario: Set a file as available offline using the Actions menu
     Given the following items have been created in the account
       | file   | file.pdf  |
     When Alice selects to make available offline the file file.pdf using the Actions menu
     Then Alice should see the item file.pdf as av.offline
 
+  @ignore
   Scenario: Set a file as available offline using the Contextual menu
     Given the following items have been created in the account
       | file   | file2.pdf  |
@@ -38,3 +40,16 @@ Feature: Set items as available offline (downloaded and synced)
     And Alice selects / as target folder of the move operation
     And Alice browses to root folder
     Then Alice should not see the item file4.txt as av.offline
+
+  @quickaccess
+  Rule: Av.offline quick access
+
+    Scenario: Av.offline item is available in "Av.offline" quick access
+      Given the following items have been created in the account
+        | file   | file5.txt  |
+        | folder | folder5      |
+      And Alice selects to make available offline the file file5.txt using the Actions menu
+      And Alice selects to make available offline the folder folder5 using the Actions menu
+      When Alice opens the Available Offline collection of Quick Access
+      Then Alice should see file5.txt in Quick Access
+      And Alice should see folder5 in Quick Access

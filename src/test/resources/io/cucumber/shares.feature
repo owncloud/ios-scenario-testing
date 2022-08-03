@@ -55,19 +55,21 @@ Feature: Private Share
           |  file   |  Share5.txt  |
           |  folder |  Share6      |
 
-      @federated
-      Scenario Outline: Correct federated share
-        Given the following items have been created in the account
-          | <type>  | <item>  |
-        When Alice selects to share the <type> <item> using the Actions menu
-        And Alice selects user demo@demo.owncloud.com as sharee with default permissions
-        Then share should be created on <item> with the following fields
-          | sharee | demo@demo.owncloud.com |
 
-        Examples:
-          |  type   |  item        |
-          |  file   |  Share7.txt  |
-          |  folder |  Share8      |
+      # Better solution needed to share with other server
+      #@federated
+      #Scenario Outline: Correct federated share
+      #  Given the following items have been created in the account
+      #    | <type>  | <item>  |
+      #  When Alice selects to share the <type> <item> using the Actions menu
+      #  And Alice selects user demo@demo.owncloud.com as sharee with default permissions
+      #  Then share should be created on <item> with the following fields
+      #    | sharee | demo@demo.owncloud.com |
+
+      #  Examples:
+      #    |  type   |  item        |
+      #    |  file   |  Share7.txt  |
+      #    |  folder |  Share8      |
 
     @editshare
     Rule: Edit an existing share

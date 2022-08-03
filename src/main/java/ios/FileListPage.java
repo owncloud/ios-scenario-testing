@@ -37,6 +37,9 @@ public class FileListPage extends CommonPage {
     @iOSXCUITFindBy(id="Files")
     private MobileElement browseRoot;
 
+    @iOSXCUITFindBy(id="Quick Access")
+    private MobileElement quickAccess;
+
     @iOSXCUITFindBy(id="Close actions menu")
     private MobileElement closeActions;
 
@@ -153,6 +156,12 @@ public class FileListPage extends CommonPage {
         plusButton.click();
     }
 
+    public void openCollection(String collection){
+        Log.log(Level.FINE, "Starts: Open Quick Access collection: " + collection);
+        quickAccess.click();
+        findId(collection+"-collection-row").click();
+    }
+
     public void executeOperation(String operation, String itemName, String typeItem, String menu){
         Log.log(Level.FINE, "Starts: execute operation: " + operation + " " +
                 itemName + " "+ menu);
@@ -180,6 +189,11 @@ public class FileListPage extends CommonPage {
         Log.log(Level.FINE, "Starts: Check if item is in list: " + itemName);
         //"+" button to assure we are in the filelist
         waitByXpath(10, "//XCUIElementTypeButton[@name=\"client.file-add\"]");
+        return !findListId(itemName).isEmpty();
+    }
+
+    public boolean isItemInScreen (String itemName) {
+        Log.log(Level.FINE, "Starts: Check if item is in QuickAccess: " + itemName);
         return !findListId(itemName).isEmpty();
     }
 

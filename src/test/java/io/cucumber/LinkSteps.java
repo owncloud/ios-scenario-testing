@@ -109,6 +109,13 @@ public class LinkSteps {
         linkPermissionsPage.deleteLink();
     }
 
+    @When("Alice closes Public Links")
+    public void close_public_links() {
+        String stepName = new Object(){}.getClass().getEnclosingMethod().getName();
+        Log.log(Level.FINE, "----STEP----: " + stepName);
+        publicLinkPage.close();
+    }
+
     @Then("link should be created on {word} with the following fields")
     public void link_created_with_fields(String itemName, DataTable table)
             throws Throwable {

@@ -43,6 +43,11 @@ public class FileListSteps {
         return operation;
     }
 
+    @ParameterType("Favorites|Available Offline|Public Links|Shared with you")
+    public String collection(String type){
+        return type;
+    }
+
     @Given("the following items have been created in the account")
     public void items_created_in_account(DataTable table) throws Throwable {
         String stepName = new Object(){}.getClass().getEnclosingMethod().getName();
@@ -190,6 +195,13 @@ public class FileListSteps {
         fileListPage.browseRoot();
     }
 
+    @When("Alice opens the {collection} collection of Quick Access")
+    public void open_collection_quick_access(String collection) throws InterruptedException {
+        String stepName = new Object(){}.getClass().getEnclosingMethod().getName();
+        Log.log(Level.FINE, "----STEP----: " + stepName);
+        fileListPage.openCollection(collection);
+    }
+
     @Then("Alice should see {word} in the filelist")
     public void original_item_filelist(String itemName)
             throws Throwable {
@@ -197,6 +209,14 @@ public class FileListSteps {
         Log.log(Level.FINE, "----STEP----: " + stepName);
         assertTrue(fileListPage.isItemInList(itemName));
         assertTrue(filesAPI.itemExist(itemName));
+    }
+
+    @Then("Alice should see {word} in Quick Access")
+    public void item_in_quickaccess(String itemName)
+            throws Throwable {
+        String stepName = new Object(){}.getClass().getEnclosingMethod().getName();
+        Log.log(Level.FINE, "----STEP----: " + stepName);
+        assertTrue(fileListPage.isItemInScreen(itemName));
     }
 
     @Then("{itemtype} {word} is opened in the app")
@@ -242,6 +262,13 @@ public class FileListSteps {
         Log.log(Level.FINE, "----STEP----: " + stepName);
         assertFalse(fileListPage.isItemInList(itemName));
         assertFalse(filesAPI.itemExist(itemName));
+    }
+
+    @Then("Alice should not see {word} in Quick Access")
+    public void item_not_quickaccess(String itemName) throws Throwable {
+        String stepName = new Object(){}.getClass().getEnclosingMethod().getName();
+        Log.log(Level.FINE, "----STEP----: " + stepName);
+        assertFalse(fileListPage.isItemInScreen(itemName));
     }
 
     @Then("Alice should see the item {word} as av.offline")

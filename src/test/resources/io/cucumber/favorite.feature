@@ -41,3 +41,31 @@ Feature: Set an item as favorite (starred)
         And item fav4.txt has been set as favorite
         When Alice sets as unfavorite the file fav4.txt using the Contextual menu
         Then file fav4.txt should be set as unfavorite
+
+    @quickaccess
+    Rule: Favorites quick access
+
+      Scenario: Favorite item is available in "Favorites" quick access
+        Given the following items have been created in the account
+          | file   | fav5.txt  |
+          | folder | fav6      |
+        And Alice sets as favorite the file fav5.txt using the Actions menu
+        And Alice sets as favorite the folder fav6 using the Actions menu
+        And Alice closes the Actions menu
+        When Alice opens the Favorites collection of Quick Access
+        Then Alice should see fav5.txt in Quick Access
+        And Alice should see fav6 in Quick Access
+
+      @quickaccess
+      Scenario: Favorite item is not available in "Favorites" quick access anymore after unfavoriting
+        Given the following items have been created in the account
+          | file     | fav7.txt  |
+          | folder   | fav8      |
+        And item fav7.txt has been set as favorite
+        And item fav8 has been set as favorite
+        And Alice sets as unfavorite the file fav7.txt using the Actions menu
+        And Alice sets as unfavorite the folder fav8 using the Actions menu
+        And Alice closes the Actions menu
+        When Alice opens the Favorites collection of Quick Access
+        Then Alice should not see fav7.txt in Quick Access
+        And Alice should not see fav8 in Quick Access
