@@ -1,7 +1,9 @@
 package ios;
 
+import org.checkerframework.checker.units.qual.A;
 import org.openqa.selenium.support.PageFactory;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -15,6 +17,7 @@ import io.appium.java_client.pagefactory.iOSXCUITFindBy;
 import io.appium.java_client.touch.LongPressOptions;
 import io.appium.java_client.touch.offset.ElementOption;
 import utils.LocProperties;
+import utils.api.AuthAPI;
 import utils.entities.OCFile;
 import utils.log.Log;
 
@@ -46,6 +49,9 @@ public class FileListPage extends CommonPage {
 
     @iOSXCUITFindBy(id="client.folder-action")
     private MobileElement threeDotButton;
+
+    @iOSXCUITFindBy(id="Personal")
+    private MobileElement personal;
 
 
     //Actions in action menu
@@ -86,10 +92,14 @@ public class FileListPage extends CommonPage {
     private final String id_share = "Sharing";
     private final String id_link = "Links";
 
+    private String authType = "";
 
-    public FileListPage() {
+    public FileListPage()
+            throws IOException {
         super();
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
+        AuthAPI authAPI = new AuthAPI();
+        authType = authAPI.checkAuthMethod();
     }
 
     public void refreshBySwipe() throws InterruptedException {
@@ -413,7 +423,12 @@ public class FileListPage extends CommonPage {
 
     public void browseRoot(){
         Log.log(Level.FINE, "Starts: browse to root");
-        browseRoot.click();
+        //Different labels in oCIS - oC10
+        if (authType.equals("OIDC")) {
+            personal.click();
+        } else {
+            browseRoot.click();
+        }
     }
 
     public void acceptDeletion(){

@@ -112,9 +112,9 @@ public class CommonPage {
 
     public void browse(String folderName){
         Log.log(Level.FINE, "Starts: browse to " + folderName);
-        String xpathFolder = "//XCUIElementTypeCell[@name=\""+folderName+"\"]";
-        waitByXpath(10, xpathFolder);
-        findXpath(xpathFolder).click();
+        //Need a waiter till notification gones. To improve
+        wait(5);
+        findId(folderName).click();
     }
 
     protected void browseToFolder(String path){
@@ -125,7 +125,7 @@ public class CommonPage {
         for (int j = 0 ; j < route.length ; j++) {
             Log.log(Level.FINE, "Chunk: " + j + ": " + route[j]);
         }
-        if (route.length > 0) { //we have to browse
+        if (route.length > 0) { //browse
             int i;
             for (i = 1 ; i < route.length ; i++) {
                 Log.log(Level.FINE, "Browsing towards: " + route[i]);
