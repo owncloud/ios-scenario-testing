@@ -48,7 +48,7 @@
 "Certificate has issues.\nOpen 'Certificate Details' for more informations." = "Certificate has issues.\nOpen 'Certificate Details' for more informations.";
 "No issues found. Certificate passed validation." = "No issues found. Certificate passed validation.";
 "Certificate may have issues, but was accepted by user.\nOpen 'Certificate Details' for more informations." = "Certificate may have issues, but was accepted by user.\nOpen 'Certificate Details' for more informations.";
-"If you 'Continue', you will be prompted to allow the '%@' App to open OAuth2 login where you can enter your credentials." = "If you 'Continue', you will be prompted to allow the '%@' App to open OAuth2 login where you can enter your credentials.";
+"If you 'Continue', you will be prompted to allow the '{{app.name}}' app to open the {{authmethodName}} login page where you can enter your credentials." = "If you 'Continue', you will be prompted to allow the '{{app.name}}' app to open the {{authmethodName}} login page where you can enter your credentials.";
 
 "Error opening %@" = "Error opening %@";
 
@@ -105,7 +105,13 @@
 "size" = "size";
 "date" = "date";
 "Search folder" = "Search folder";
+"Search tree" = "Search tree";
+"Search from {{folder.name}}" = "Search from {{folder.name}}";
+"Search space" = "Search space";
+"Search {{space.name}}" = "Search {{space.name}}";
 "Search account" = "Search account";
+"Enter a search term" = "Enter a search term";
+
 "Pending" = "Pending";
 "Show parent paths" = "Show parent paths";
 "Reveal in folder" = "Reveal in folder";
@@ -115,7 +121,21 @@
 "%@ item | " = "%@ item | ";
 "%@ items | " = "%@ items | ";
 
+"{{itemCount}} items with {{totalSize}} total ({{fileCount}} files, {{folderCount}} folders)" = "{{itemCount}} items with {{totalSize}} total ({{fileCount}} files, {{folderCount}} folders)";
+"{{remaining}} available" = "{{remaining}} available";
+
 "Show more results" = "Show more results";
+
+/* Saved searches */
+"Saved search views" = "Saved search views";
+"Saved search templates" = "Saved search templates";
+"Save as search view" = "Save as search view";
+"Save as search template" = "Save as search template";
+
+"Name of view" = "Name of view";
+"Search view" = "Search view";
+"Name of template" = "Name of template";
+"Search template" = "Search template";
 
 /* Search scope */
 "Search scope" = "Search scope";
@@ -142,7 +162,9 @@
 
 /* Client Messages */
 "Empty folder" = "Empty folder";
+"No contents" = "No contents";
 "This folder contains no files or folders." = "This folder contains no files or folders.";
+"This folder is empty. Fill it with content:" = "This folder is empty. Fill it with content:";
 
 "Folder removed" = "Folder removed";
 "This folder no longer exists on the server." = "This folder no longer exists on the server.";
@@ -159,6 +181,7 @@
 "Upload files" = "Upload files";
 
 "No matches" = "No matches";
+"The search term you entered did not match any item in the selected scope." = "The search term you entered did not match any item in the selected scope.";
 "There are no results for this search term" = "There are no results for this search term";
 "Status" = "Status";
 
@@ -254,6 +277,8 @@
 "Theme" = "Theme";
 "User Interface" = "User Interface";
 "Dark" = "Dark";
+"Dark Blue" = "Dark Blue";
+"Dark Web" = "Dark Web";
 "Light" = "Light";
 "Classic" = "Classic";
 "System" = "System";
@@ -373,6 +398,8 @@
 "%ld Items were copied to the clipboard" = "%ld Items were copied to the clipboard";
 "Please note: Folders can only be pasted into the %@ app and the same account." = "Please note: Folders can only be pasted into the %@ app and the same account.";
 
+"Processing on server" = "Processing on server";
+
 "Preparing…" = "Preparing…";
 
 "No actions available" = "No actions available";
@@ -386,6 +413,15 @@
 "Enabling presentation mode will prevent the display from sleep mode until the view is closed." = "Enabling presentation mode will prevent the display from sleep mode until the view is closed.";
 "Enable" = "Enable";
 "Exit Full Screen" = "Exit Full Screen";
+
+/* App Provider */
+"New document" = "New document";
+"Pick a name" = "Pick a name";
+"Pick a document type to create:" = "Pick a document type to create:";
+"Error creating {{itemName}}" = "Error creating {{itemName}}";
+
+"Open in {{appName}} (web)" = "Open in {{appName}} (web)";
+"Error opening {{itemName}} in {{appName}}" = "Error opening {{itemName}} in {{appName}}";
 
 /* Directory Picker Messages */
 "Move here" = "Move here";
@@ -773,6 +809,12 @@
 "Preparing…" = "Preparing…";
 "Save here" = "Save here";
 
+/* FileProvider */
+/* - Disabled */
+"File Provider access has been disabled by the administrator.\n\nPlease use the app to access your files." = "File Provider access has been disabled by the administrator.\n\nPlease use the app to access your files.";
+"File Provider access has been disabled by the administrator. Please use the app to create new folders." = "File Provider access has been disabled by the administrator. Please use the app to create new folders.";
+"File Provider access has been disabled by the administrator. Please use the share extension to import files." = "File Provider access has been disabled by the administrator. Please use the share extension to import files.";
+
 /* Disallowed Import Methods */
 /* - Share Extension */
 "Share Extension disabled" = "Share Extension disabled";
@@ -930,3 +972,8 @@
 "New settings received from MDM" = "New settings received from MDM";
 "Tap to quit the app." = "Tap to quit the app.";
 "Tap to launch the app." = "Tap to launch the app.";
+
+/* Beta warning */
+"Beta Warning" = "Beta Warning";
+"\nThis is a BETA release that may - and likely will - still contain bugs.\n\nYOU SHOULD NOT USE THIS BETA VERSION WITH PRODUCTION SYSTEMS, PRODUCTION DATA OR DATA OF VALUE. YOU'RE USING THIS BETA AT YOUR OWN RISK.\n\nPlease let us know about any issues that come up via the \"Send Feedback\" option in the settings." = "\nThis is a BETA release that may - and likely will - still contain bugs.\n\nYOU SHOULD NOT USE THIS BETA VERSION WITH PRODUCTION SYSTEMS, PRODUCTION DATA OR DATA OF VALUE. YOU'RE USING THIS BETA AT YOUR OWN RISK.\n\nPlease let us know about any issues that come up via the \"Send Feedback\" option in the settings.";
+"Agree" = "Agree";

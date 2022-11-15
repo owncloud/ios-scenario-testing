@@ -9,7 +9,6 @@ import java.util.logging.Level;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import io.appium.java_client.pagefactory.iOSXCUITFindBy;
-import io.appium.java_client.remote.HideKeyboardStrategy;
 import utils.api.AuthAPI;
 import utils.log.Log;
 
@@ -37,10 +36,13 @@ public class LoginPage extends CommonPage{
     private MobileElement passwordInput;
 
     @iOSXCUITFindBy(accessibility = "access-files")
+    private MobileElement bookmarkCell;
+
+    @iOSXCUITFindBy(accessibility = "access-files")
     private List<MobileElement> bookmarkCells;
 
-    @iOSXCUITFindBy(xpath = "//XCUIElementTypeCell[@name=\"access-files\"]")
-    private MobileElement bookmarkCell;
+    @iOSXCUITFindBy(accessibility = "Personal")
+    private MobileElement personal;
 
     @iOSXCUITFindBy(accessibility = "Continue")
     private MobileElement continueSafari;
@@ -81,7 +83,6 @@ public class LoginPage extends CommonPage{
         urlServer.get(0).sendKeys(selectURL(authMethod));
         continueOption.click();
         approveIssue();
-        continueOption.click();
     }
 
     public void approveIssue(){
@@ -135,12 +136,16 @@ public class LoginPage extends CommonPage{
         AuthAPI authAPI = new AuthAPI();
         //assuming OIDC == oCIS. Bad, but works ftm
         if (authAPI.checkAuthMethod().equals("OIDC")) {
-            findId("personal").click();
+            personal.click();
         }
     }
 
     public void selectFirstBookmark() throws IOException {
-        driver.hideKeyboard(HideKeyboardStrategy.PRESS_KEY, "Done");
+        //To dismiss soft keyboard
+        //if (!findListId("Done").isEmpty()){
+        //    findId("Done").click();
+        //}
+        //driver.hideKeyboard(HideKeyboardStrategy.PRESS_KEY, "Done");
         bookmarkCell.click();
         selectDrive();
     }
@@ -153,15 +158,6 @@ public class LoginPage extends CommonPage{
             case "OAuth2":
                 Log.log(Level.FINE, "URL: " + oauth2URL);
                 return oauth2URL;
-            case "LDAP":
-                Log.log(Level.FINE, "URL: " + LDAPURL);
-                return LDAPURL;
-            case "redirection 301":
-                Log.log(Level.FINE, "URL: " + red301URL);
-                return red301URL;
-            case "redirection 302":
-                Log.log(Level.FINE, "URL: " + red302URL);
-                return red302URL;
             case "OIDC":
                 Log.log(Level.FINE, "URL: " + oidcURL);
                 return oidcURL;

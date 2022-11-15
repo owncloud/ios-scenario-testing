@@ -40,8 +40,8 @@ public class OidcPage extends CommonPage {
             Log.log(Level.FINE, "Closing keyboard");
             findId("Done").click();
         }
-        findXpath(username_xpath).sendKeys(userName);
         findXpath(password_xpath).sendKeys(password);
+        findXpath(username_xpath).sendKeys(userName);
         findId(loginButton_id).click();
     }
 

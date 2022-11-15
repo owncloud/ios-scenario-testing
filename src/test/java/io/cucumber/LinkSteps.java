@@ -37,7 +37,7 @@ public class LinkSteps {
             throws Throwable {
         String stepName = new Object(){}.getClass().getEnclosingMethod().getName();
         Log.log(Level.FINE, "----STEP----: " + stepName);
-        shareAPI.createShare("Alice", itemName, "", "3", "1", itemName + " link");
+        shareAPI.createShare("Alice", itemName, "", "3", "1", itemName + " link", 0);
     }
 
     @When("Alice creates link on {itemtype} {word} with the following fields")
@@ -162,6 +162,6 @@ public class LinkSteps {
         String stepName = new Object(){}.getClass().getEnclosingMethod().getName();
         Log.log(Level.FINE, "----STEP----: " + stepName);
         assertFalse(publicLinkPage.isItemInListLinks(itemName + " link"));
-        assertTrue(shareAPI.getShare(itemName) == null);
+        assertTrue(shareAPI.getSharesByUser("").isEmpty());
     }
 }

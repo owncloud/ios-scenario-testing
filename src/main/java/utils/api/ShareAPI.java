@@ -5,6 +5,7 @@ import org.xml.sax.SAXException;
 
 import java.io.IOException;
 import java.io.StringReader;
+import java.util.ArrayList;
 import java.util.logging.Level;
 
 import javax.xml.parsers.ParserConfigurationException;
@@ -16,8 +17,6 @@ import okhttp3.Request;
 import okhttp3.RequestBody;
 import okhttp3.Response;
 import utils.LocProperties;
-import utils.date.DateUtils;
-import utils.entities.OCCapability;
 import utils.entities.OCShare;
 import utils.log.Log;
 import utils.parser.ShareSAXHandler;
@@ -25,21 +24,22 @@ import utils.parser.ShareSAXHandler;
 public class ShareAPI extends CommonAPI {
 
     private String sharingEndpoint = "/ocs/v1.php/apps/files_sharing/api/v1/shares";
-    private final String owner = LocProperties.getProperties().getProperty("userName1");
+    private String pendingEndpoint = "/pending";
     private final String shareeU = LocProperties.getProperties().getProperty("userToShare");
+    private AuthAPI authAPI = new AuthAPI();
 
     public ShareAPI() throws IOException {
         super();
     }
 
     public void createShare(String sharingUser, String itemPath, String sharee, String type,
-                            String permissions, String name)
+                            String permissions, String name, int sharelevel)
             throws IOException {
         String url = urlServer + sharingEndpoint;
         Log.log(Level.FINE, "Starts: Create Share - " + sharingUser + " " + sharee + " "
                 + itemPath + " " + type);
         Log.log(Level.FINE, "URL: " + url);
-        Request request = postRequest(url, createBodyShare(itemPath, sharee, type, permissions, name), sharingUser);
+        Request request = postRequest(url, createBodyShare(itemPath, sharee, type, permissions, name, sharelevel), sharingUser);
         Response response = httpClient.newCall(request).execute();
         Log.log(Level.FINE, String.valueOf(response.code()));
         Log.log(Level.FINE, response.body().string());
@@ -58,6 +58,23 @@ public class ShareAPI extends CommonAPI {
         return share;
     }
 
+    public ArrayList<OCShare> getSharesByUser(String userName)
+            throws IOException, SAXException, ParserConfigurationException {
+        String url = urlServer + sharingEndpoint + "?state=all&shared_with_me=true";
+        Log.log(Level.FINE, "Starts: Request Shares by user - " + userName);
+        Log.log(Level.FINE, "URL: " + url);
+        if (userName.isEmpty()){
+            userName = "alice"; //Fallback option and default user
+        }
+        Request request = getRequest(url, userName);
+        Response response = httpClient.newCall(request).execute();
+        Log.log(Level.FINE, "Response code: " + response.code());
+        ArrayList<OCShare> shares = getSharesFromRequest(response);
+        Log.log(Level.FINE, "Shares from user " + userName+ ": " + shares.size());
+        response.close();
+        return shares;
+    }
+
     public boolean isSharedWithMe(String itemName, String userName, boolean isGroup)
             throws IOException, ParserConfigurationException, SAXException {
         String url = urlServer + sharingEndpoint + "?shared_with_me=true";
@@ -71,17 +88,16 @@ public class ShareAPI extends CommonAPI {
             request = getRequest(url, userName);
         }
         Response response = httpClient.newCall(request).execute();
-        OCShare share = getId(response);
+        ArrayList<OCShare> myShares = getSharesFromRequest(response);
+        Log.log(Level.FINE, myShares.size() + " shares found");
         response.close();
-        //Is not shared if the list of shares is empty (null) or any other share exists (different itemName)
-        if (share == null || !share.getItemName().equalsIgnoreCase(itemName)) {
-            Log.log(Level.FINE, itemName + " not shared with me");
-            return false;
+        for (OCShare share: myShares) {
+            Log.log(Level.FINE, "ItemName: " + itemName + " ShareName: " + share.getItemName());
+            if (share.getItemName().contains(itemName)){ //Current item found
+                return share.getShareeName().equalsIgnoreCase(userName);
+            }
         }
-        Log.log(Level.FINE, "Item returned: Sharee:" + share.getShareeName() +". Expected sharee:" + userName);
-        Log.log(Level.FINE, "Owner returned:" + share.getOwner() +". Expected owner:" + owner);
-        Log.log(Level.FINE, String.valueOf(share.getShareeName().equals(userName) && share.getOwner().equals(owner)));
-        return share.getShareeName().equalsIgnoreCase(userName) && share.getOwner().equalsIgnoreCase(owner);
+        return false;
     }
 
     public void removeShare(String id)
@@ -93,24 +109,48 @@ public class ShareAPI extends CommonAPI {
         httpClient.newCall(request).execute();
     }
 
+    public void acceptAllShares(String type, String userName)
+            throws IOException, ParserConfigurationException, SAXException {
+        Log.log(Level.FINE, "ACCEPT ALL SHARES FROM "+ type + " - " + userName);
+        String userToShare = userName;
+        if (type.equals("group")){
+            userToShare = "bob"; //Using Bob as default user inside group to test.
+        }
+        Log.log(Level.FINE, "User to share: " + userToShare);
+        ArrayList<OCShare> sharesToAccept = getSharesByUser(userToShare);
+        Log.log(Level.FINE, "Shares to accept: "+ sharesToAccept.size());
+        for (OCShare share: sharesToAccept) {
+            String url = urlServer + sharingEndpoint + pendingEndpoint + "/" + share.getId();
+            Log.log(Level.FINE, "URL: " + url);
+            Request request = postRequest(url, acceptPendingShare(share.getId()), userToShare);
+            Response response = httpClient.newCall(request).execute();
+            Log.log(Level.FINE, "Response Body: " + response.body().string());
+            response.close();
+        }
+    }
+
+
     private RequestBody createBodyShare(String itemPath, String sharee, String type,
-                                        String permissions, String name) {
-        Boolean passwordEnforced = OCCapability.getInstance().isPasswordEnforced();
-        Boolean expirationEnforced = OCCapability.getInstance().isExpirationDateEnforced();
+                                        String permissions, String name, int isReshare)
+            throws IOException {
+        Log.log(Level.FINE, "BODY SHARE: path " + itemPath+ " sharee: " + sharee + " type: "
+                + type + " permi: " + permissions + " name:" + name);
         FormBody.Builder body = new FormBody.Builder();
-        body.add("path", "\\" + itemPath + "\\");
+        if (isReshare == 1 && authAPI.isOidc(urlServer)) {
+            body.add("path", "/Shares/" + itemPath);
+        } else {
+            body.add("path", itemPath);
+        }
         body.add("shareType", type);
         body.add("shareWith", sharee);
         body.add("permissions", permissions);
         body.add("name", name);
-        //Password and expiration in body in case of enforcement
-        if (passwordEnforced){
-            body.add("password", "a");
-        }
-        if (expirationEnforced){
-            //Add 7 days in the future as default...
-            body.add("expirationDate", DateUtils.dateInDaysShareRequestFormat("7"));
-        }
+        return body.build();
+    }
+
+    private RequestBody acceptPendingShare(String shareId) {
+        FormBody.Builder body = new FormBody.Builder();
+        body.add("share_id", shareId);
         return body.build();
     }
 
@@ -124,5 +164,17 @@ public class ShareAPI extends CommonAPI {
         parser.parse(new InputSource(new StringReader(httpResponse.body().string())), handler);
         httpResponse.body().close();
         return handler.getShare();
+    }
+
+    private ArrayList<OCShare> getSharesFromRequest(Response httpResponse)
+            throws IOException, SAXException, ParserConfigurationException {
+        //Create SAX parser
+        SAXParserFactory parserFactor = SAXParserFactory.newInstance();
+        SAXParser parser = parserFactor.newSAXParser();
+        ShareSAXHandler handler = new ShareSAXHandler();
+
+        parser.parse(new InputSource(new StringReader(httpResponse.body().string())), handler);
+        httpResponse.body().close();
+        return handler.getAllShares();
     }
 }

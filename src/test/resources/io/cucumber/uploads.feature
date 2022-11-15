@@ -1,4 +1,4 @@
-@upload
+@upload @ignore
 Feature: Upload new content
 
   As a user

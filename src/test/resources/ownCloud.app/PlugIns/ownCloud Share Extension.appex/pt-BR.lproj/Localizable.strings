@@ -192,7 +192,7 @@
 "Do you really want to disconnect from your '%@' account?" = "Você realmente quer conectar '%@' da sua conta?";
 "This will remove all locally stored file copies from your device." = "Isso removerá todas as cópias de arquivos armazenados localmente do seu dispositivo.";
 "Really delete '%@'?" = "Realmente excluir '%@'?";
-"Do you want to log out from '%@'?" = "Do you want to log out from '%@'?";
+"Do you want to log out from '%@'?" = "Gostaria de desconectar de '%@'?";
 "This will also delete all locally stored file copies." = "Isto também irá excluir todas as cópias locais dos arquivo salvos.";
 "Delete" = "Excluir";
 "Remove" = "Remover";
@@ -210,7 +210,7 @@
 "Passcode Lock" = "Senha-código de bloqueio";
 "Face ID" = "ID de Face";
 "Touch ID" = "ID de toque";
-"Unlock using %@?" = "Unlock using %@?";
+"Unlock using %@?" = "Desbloquear usando %@?";
 "Videos" = "Videos";
 "Photos" = "Imagens";
 "Wifi only" = "Somente wifi";
@@ -225,7 +225,7 @@
 "Privacy Policy" = "Política de Privacidade";
 "Terms Of Use" = "Termos de Uso";
 "Acknowledgements" = "Agradecimentos";
-"license" = "license";
+"license" = "licença";
 "Portions of this app may utilize the following copyrighted material, the use of which is hereby acknowledged." = "Partes deste aplicativo podem utilizar o seguinte material protegido por direitos autorais, cujo uso é aqui reconhecido.";
 "Video upload path" = "Caminho para vídeos enviados";
 "Photo upload path" = "Caminho para envio de imagens";
@@ -233,7 +233,7 @@
 "After 1 minute" = "Após 1 minuto";
 "After 5 minutes" = "Após 5 minutos";
 "After 30 minutes" = "Após 30 minutos";
-"After %ld seconds" = "After %ld seconds";
+"After %ld seconds" = "Após %ld segundos";
 "If you choose \"Immediately\" the App will be locked, when it is no longer in foreground." = "Se você escolher \"Imediatamente\", o aplicativo será bloqueado, quando não estiver mais em primeiro plano. ";
 "Please configure an email account" = "Por favor, configure uma conta de email";
 "You need to configure an email account first to be able to send emails." = "Você precisa configurar uma conta de e-mail primeiro para poder enviar e-mails.";
@@ -254,6 +254,8 @@
 "Theme" = "Tema";
 "User Interface" = "Interface de Usuário";
 "Dark" = "Escuro";
+"Dark Blue" = "Dark Blue";
+"Dark Web" = "Dark Web";
 "Light" = "Claro";
 "Classic" = "Clássico";
 "System" = "Sistema";
@@ -306,9 +308,9 @@
 "Decrease Slider Value" = "Decrescer o Valor de Recuo";
 "Increase Slider Value" = "Acrescer o Valor de Avanço";
 
-"Cellular Data Usage" = "Cellular Data Usage";
+"Cellular Data Usage" = "Uso de dados móveis";
 "Some cellular data may still be used. To completely avoid the usage of cellular data, please turn off access to cellular for the entire app in the Settings app." = "Alguns dados do celular ainda podem ser usados. Para evitar completamente o uso de dados do celular, desligue o acesso ao celular para todo o aplicativo nas configurações do aplicativo.";
-"Cellular Data Usage have been disabled via MDM configuration. Please contact your administrator for more information." = "Cellular Data Usage have been disabled via MDM configuration. Please contact your administrator for more information.";
+"Cellular Data Usage have been disabled via MDM configuration. Please contact your administrator for more information." = "O Uso de Dados Celulares foi desabilitado por meio da configuração do MDM. Entre em contato com o administrador para obter mais informações.";
 "General" = "Geral";
 "By feature" = "Por recurso";
 
@@ -319,7 +321,7 @@
 "Advanced settings" = "Configurações avançadas";
 "Show hidden files and folders" = "Mostrar arquivos e pastas escondidos";
 "Show folders on top" = "Mostrar pastas no topo ";
-"Disable gestures" = "Disable gestures";
+"Disable gestures" = "Desativar gestos";
 "Prevent dragging of files and folders and multiselection using system defined gestures" = "Impedir o arrastamento de arquivos e pastas e a seleção múltipla usando gestos definidos pelo sistema";
 
 /* Advanced settings */
@@ -514,7 +516,7 @@
 "Shared with others" = "Compartilhado com outros";
 "Shares" = "Compartilhamentos";
 "Copy Private Link" = "Copiar Linque Privado";
-"Only people who have access to the file/folder can use it. Use it as a permanent link for yourself or to point others to files within shares." = "Only people who have access to the file/folder can use it. Use it as a permanent link for yourself or to point others to files within shares.";
+"Only people who have access to the file/folder can use it. Use it as a permanent link for yourself or to point others to files within shares." = "Somente as pessoas que têm acesso ao arquivo/pasta podem usá-lo. Use-o como um link permanente para você ou para direcionar outras pessoas para arquivos dentro de compartilhamentos.";
 "Accept Share failed" = "Aceitar compartilhamento falhou";
 "Decline Share failed" = "Recusa de compartilhamento falhou";
 "Accept" = "Aceitar";
@@ -615,14 +617,14 @@
 "Offline files use" = "Uso de arquivos off-line";
 "Compacting of '%@' failed" = "Compactação de '%@' falhou";
 "Include available offline files" = "Incluir arquivos disponíveis offline";
-"Delete all Offline Files" = "Delete all Offline Files";
+"Delete all Offline Files" = "Excluir todos os arquivos offline";
 "Manage" = "Gerenciar";
 "Storage" = "Armazenamento";
 "Compacting" = "Compactando";
 
 "Really include available offline files?" = " Realmente incluir arquivos offline disponíveis?";
 "Files and folders marked as Available Offline will become unavailable. They will be re-downloaded next time you log into your account (connectivity required)." = " Arquivos e pastas marcados como Disponível offline ficarão indisponíveis. Eles serão baixados novamente na próxima vez que você fizer login na sua conta (é necessária conectividade).";
-"Removes downloaded files and local copies of items marked as Available Offline. The latter will be re-downloaded next time you log into your account (connectivity required)." = "Removes downloaded files and local copies of items marked as Available Offline. The latter will be re-downloaded next time you log into your account (connectivity required).";
+"Removes downloaded files and local copies of items marked as Available Offline. The latter will be re-downloaded next time you log into your account (connectivity required)." = "Remove arquivos baixados e cópias locais de itens marcados como Disponíveis offline. Este último será baixado novamente na próxima vez que você fizer login em sua conta (conectividade necessária).";
 
 /* Diagnostic */
 "Diagnostic Overview" = "Visão geral do Diagnóstico";
@@ -775,16 +777,16 @@
 
 /* Disallowed Import Methods */
 /* - Share Extension */
-"Share Extension disabled" = "Share Extension disabled";
-"Importing files through the Share Extension is not allowed on this device." = "Importing files through the Share Extension is not allowed on this device.";
+"Share Extension disabled" = "Extensão de compartilhamento desabilitada";
+"Importing files through the Share Extension is not allowed on this device." = "A importação de arquivos por meio da extensão de compartilhamento não é permitida neste dispositivo.";
 
 /* - Open with */
-"Opening not allowed" = "Opening not allowed";
-"Importing files through opening is not allowed on this device." = "Importing files through opening is not allowed on this device.";
+"Opening not allowed" = "Abertura não permitida";
+"Importing files through opening is not allowed on this device." = "A importação de arquivos através da abertura não é permitida neste dispositivo.";
 
 /* - Files.app */
-"Import not allowed" = "Import not allowed";
-"Importing files through the File Provider is not allowed on this device." = "Importing files through the File Provider is not allowed on this device.";
+"Import not allowed" = "Importação não autorizado";
+"Importing files through the File Provider is not allowed on this device." = "Importação de arquivos pelo gerenciador de arquivos não permitida nesse dispositivo.";
 
 /* Data migration from legacy app */
 "Account Migration" = "Migração de Conta";

@@ -254,6 +254,8 @@
 "Theme" = "Temë";
 "User Interface" = "Ndërfaqe Përdoruesi";
 "Dark" = "E errët";
+"Dark Blue" = "Dark Blue";
+"Dark Web" = "Dark Web";
 "Light" = "E çelët";
 "Classic" = "Klasike";
 "System" = "Sistem";
@@ -459,7 +461,7 @@
 "Create one file per page" = "Krijo një kartelë për faqe";
 
 /* Sharing */
-"Searching Shares…" = "Po kërkohet në Ndarje…";
+"Searching Shares…" = "Po kërkohet në Pjesë…";
 "Recipient" = "Marrës";
 "Recipients" = "Marrëss";
 "Public Link" = "Lidhje Publike";
@@ -472,7 +474,7 @@
 "Groups" = "Grupe";
 "Start typing to search users, groups and remote users." = "Filloni të shtypni që të kërkohet për përdorues, grupe dhe përdorues të largët.";
 "(Group)" = "(Grup)";
-"Adding User to Share failed" = "Dështoi shtim Përdoruesi te Ndarje";
+"Adding User to Share failed" = "Dështoi shtim Përdoruesi te Pjesë";
 "Permissions" = "Leje";
 "Invited: %@" = "U ftua: %@";
 "Created: %@" = "U krijua: %@";
@@ -512,15 +514,15 @@
 "Pending Invites" = "Ftesa Pezull";
 "Shared with you" = "Të ndara me ju";
 "Shared with others" = "Të ndara me të tjerët";
-"Shares" = "Ndarje";
+"Shares" = "Pjesë";
 "Copy Private Link" = "Kopjo Lidhje Private";
-"Only people who have access to the file/folder can use it. Use it as a permanent link for yourself or to point others to files within shares." = "Vetëm personat që kanë hyrje te kartela/dosja mund ta përdorin atë. Përdoreni si një lidhje të përhershme për veten tuaj, ose për t’u treguar të tjerëve kartela brenda ndarjeve.";
-"Accept Share failed" = "Dështoi Pranimi i Ndarjes";
-"Decline Share failed" = "Dështoi Hedhja Tej e Ndarjes";
+"Only people who have access to the file/folder can use it. Use it as a permanent link for yourself or to point others to files within shares." = "Vetëm personat që kanë hyrje te kartela/dosja mund ta përdorin atë. Përdoreni si një lidhje të përhershme për veten tuaj, ose për t’u treguar të tjerëve kartela brenda pjesësh.";
+"Accept Share failed" = "Dështoi Pranimi i Pjesës";
+"Decline Share failed" = "Dështoi Hedhja Tej e Pjesës";
 "Accept" = "Pranoje";
 "Decline" = "Hidhe poshtë";
 "Declined" = "Hedhur Poshtë";
-"Decline Share" = "Hidhe Poshtë Ndarjen";
+"Decline Share" = "Hidhe Poshtë Pjesën";
 "Unshare" = "Hiqi ndarjen me të tjerë";
 "Unshare failed" = "Dështoi heqja e ndarjes";
 "Are you sure you want to unshare these items?" = "Jeni i sigurt se doni të hiqet ndarja e këtyre objekteve?";
@@ -548,7 +550,7 @@
 "%@ is not available, when this account is offline. Please open the app and log into your account before you can do this action." = "Kur kjo llogari s’është në linjë,  %@ s’mund të përdoret. Ju lutemi, hapni aplikacionin dhe hyni në llogarinë tuaj, përpara se të provoni këtë veprim.";
 "%@ is not available for this item." = "%@ s’mund të kryhet për këtë objekt.";
 "Share with user/group" = "Ndajeni me përdorues/grup";
-"Share link" = "Lidhje ndarjesh me të tjerë";
+"Share link" = "Lidhje pjese";
 
 /* Quick Access view */
 "Quick Access" = "Hyrje e Shpejtë";

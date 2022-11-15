@@ -48,7 +48,6 @@
 "Certificate has issues.\nOpen 'Certificate Details' for more informations." = "Zertifikat hat Probleme.\nÖffnen Sie 'Zertifikat-Details' für weitere Informationen.";
 "No issues found. Certificate passed validation." = "Keine Probleme gefunden. Zertifikat hat die Validierung bestanden.";
 "Certificate may have issues, but was accepted by user.\nOpen 'Certificate Details' for more informations." = "Das Zertifikat hat möglicherweise Probleme, wurde aber vom Benutzer akzeptiert.\nÖffnen Sie 'Zertifikat-Details' für weitere Informationen.";
-"If you 'Continue', you will be prompted to allow the '%@' App to open OAuth2 login where you can enter your credentials." = "Wenn Sie auf 'Fortsetzen' klicken, werden Sie aufgefordert, der App '%@' zu erlauben, die Anmeldung bei OAuth2 zu öffnen, wo Sie Ihre Zugangsdaten eingeben können.";
 
 "Error opening %@" = "Fehler beim Öffnen von %@";
 
@@ -74,7 +73,7 @@
 "Manage Storage" = "Speicher verwalten";
 "Access Files" = "Dateien öffnen";
 "Log out" = "Abmelden";
-"Retry" = "Retry";
+"Retry" = "Erneut versuchen";
 
 /* Bookmark Info */
 "Bookmark Metadata" = "Bookmark Metadata";
@@ -114,6 +113,9 @@
 "Total: %@" = "Gesamt: %@";
 "%@ item | " = "%@ Objekt | ";
 "%@ items | " = "%@ Objekte | ";
+
+"{{itemCount}} items with {{totalSize}} total ({{fileCount}} files, {{folderCount}} folders)" = "{{itemCount}} Objekte mit insgesamt {{totalSize}} ({{fileCount}} Dateien, {{folderCount}} Ordner)";
+"{{remaining}} available" = "{{remaining}} verfügbar";
 
 "Show more results" = "Mehr Ergebnisse anzeigen";
 
@@ -386,6 +388,33 @@
 "Enabling presentation mode will prevent the display from sleep mode until the view is closed." = "Wenn Sie den Präsentationsmodus aktivieren, wird das Display nicht in den Ruhezustand versetzt, bis die Ansicht geschlossen wird.";
 "Enable" = "Aktivieren";
 "Exit Full Screen" = "Vollbildmodus beenden";
+
+/* V12 */
+"Search {{space.name}}" = "{{space.name}} durchsuchen";
+"Name of template" = "Name der Vorlage";
+"Search space" = "Space durchsuchen";
+"Error opening {{itemName}} in {{appName}}" = "Fehler beim Öffnen von {{itemName}} in {{appName}}";
+"The search term you entered did not match any item in the selected scope." = "Kein Treffer für den eingegebenen Suchbegriff im ausgewählten Bereich.";
+"New document" = "Neues Dokument";
+"Search tree" = "Baum durchsuchen";
+"Search from {{folder.name}}" = "{{folder.name}} durchsuchen";
+"Saved search views" = "Gespeicherte Suchansichten";
+"Save as search template" = "Suchvorlage speichern";
+"Name of view" = "Name der Ansicht";
+"Search template" = "Suchvorlage";
+"Saved search templates" = "Suchvorlage speichern";
+"Error creating {{itemName}}" = "Fehler beim Erstellen von {{itemName}}";
+"If you 'Continue', you will be prompted to allow the '{{app.name}}' app to open the {{authmethodName}} login page where you can enter your credentials." = "Wenn Sie auf 'Fortsetzen' klicken, werden Sie aufgefordert, der App '{{app.name}}' zu erlauben, die {{authmethodName}}-Anmeldeseite zu öffnen, auf der Sie Ihre Zugangsdaten eingeben können.";
+
+"Search view" = "Suchansicht";
+"Open in {{appName}} (web)" = "Öffnen in {{appName}} (web)";
+"Processing on server" = "In Verarbeitung auf Server";
+"Pick a name" = "Wählen Sie einen Namen";
+"Pick a document type to create:" = "Wählen Sie den zu erstellenden Dokumententyp:";
+"Save as search view" = "Suchansicht speichern";
+"No contents" = "Kein Inhalt";
+"This folder is empty. Fill it with content:" = "Dieser Ordner ist leer. Füllen Sie ihn mit Inhalten:";
+"Enter a search term" = "Suchbegriff eingeben";
 
 /* Directory Picker Messages */
 "Move here" = "Hierhin verschieben";
@@ -930,3 +959,8 @@
 "New settings received from MDM" = "Neue Einstellungen vom MDM empfangen";
 "Tap to quit the app." = "Tippen Sie hier, um die App zu beenden.";
 "Tap to launch the app." = "Tippen Sie hier, um die App zu starten.";
+
+/* Beta warning */
+"Beta Warning" = "Beta Warnung";
+"\nThis is a BETA release that may - and likely will - still contain bugs.\n\nYOU SHOULD NOT USE THIS BETA VERSION WITH PRODUCTION SYSTEMS, PRODUCTION DATA OR DATA OF VALUE. YOU'RE USING THIS BETA AT YOUR OWN RISK.\n\nPlease let us know about any issues that come up via the \"Send Feedback\" option in the settings." = "\nDies ist eine BETA Version die noch Fehler enthalten kann - und wahrscheinlich auch wird.\n\nVERWENDEN SIE DIESE BETA VERSION NICHT MIT PRODUKTIVSYSTEMEN, PRODUKTIVDATEN ODER DATEN VON WERT. SIE VERWENDEN DIESE BETA AUF EIGENES RISIKO.\n\nBitte teilen Sie uns mit, wenn Probleme bei Ihnen auftreten. Nutzen Sie hierzu bitte die Option \"Feedback senden\" in den Einstellungen.";
+"Agree" = "Akzeptieren";

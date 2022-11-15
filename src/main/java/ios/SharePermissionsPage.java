@@ -82,7 +82,7 @@ public class SharePermissionsPage extends CommonPage {
     }
 
     public boolean isShareEnabled(){
-        Log.log(Level.FINE, "AAAAAAAA" + sharePermission.getAttribute("selected"));
+        Log.log(Level.FINE, sharePermission.getAttribute("selected"));
         return parseIntBool(sharePermission.getAttribute("selected"));
     }
 

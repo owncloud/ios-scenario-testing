@@ -14,7 +14,6 @@ import io.appium.java_client.remote.MobileCapabilityType;
 import utils.LocProperties;
 import utils.log.Log;
 
-
 public class AppiumManager {
 
     private static AppiumManager appiumManager;
@@ -48,7 +47,7 @@ public class AppiumManager {
             Log.log(Level.SEVERE, "Driver could not be created: " + e.getMessage());
             e.printStackTrace();
         }
-        driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
     }
 
     public static AppiumManager getManager() {

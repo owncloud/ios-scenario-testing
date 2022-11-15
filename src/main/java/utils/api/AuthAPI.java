@@ -60,7 +60,7 @@ public class AuthAPI {
         return "Basic";
     }
 
-    protected boolean isOidc(String url)
+    public boolean isOidc(String url)
             throws IOException {
         String urlCheck = url + wellKnown;
         Log.log(Level.FINE, "is OIDC?: " + urlCheck);

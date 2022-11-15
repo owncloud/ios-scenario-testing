@@ -4,6 +4,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.List;
 import java.util.logging.Level;
 import java.util.regex.Pattern;
 
@@ -97,6 +98,8 @@ public class FileListPage extends CommonPage {
 
     public void createFolder() {
         Log.log(Level.FINE, "Starts: create folder");
+        //Needed a short wait, to improve
+        wait(1);
         openPlusButton();
         createFolder.click();
     }
@@ -134,7 +137,8 @@ public class FileListPage extends CommonPage {
                 "/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeScrollView" +
                 "/XCUIElementTypeOther/XCUIElementTypeOther[1]/XCUIElementTypeOther/XCUIElementTypeOther" +
                 "/XCUIElementTypeOther[1]/XCUIElementTypeOther/XCUIElementTypeOther[@index='0']";
-        findXpath(xpathAnyPhoto).click();
+        List<MobileElement> photoList = findListId("Photo");
+        photoList.get(0).click();
         findId("Add").click();
         //Wait till upload finishes before asserting
         wait(5);

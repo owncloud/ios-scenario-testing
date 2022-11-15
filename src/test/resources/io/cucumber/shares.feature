@@ -16,7 +16,9 @@ Feature: Private Share
         Given the following items have been created in the account
           | <type>  | <item>  |
         When Alice selects to share the <type> <item> using the Actions menu
-        And Alice selects user Bob as sharee with default permissions
+        And Alice selects the following user as sharee with default permissions
+          | sharee | Bob         |
+          | email  | bob@own.com |
         Then user Bob should have access to <item>
         And share should be created on <item> with the following fields
           | sharee | Bob |
@@ -31,7 +33,8 @@ Feature: Private Share
         Given the following items have been created in the account
           | <type>  | <item>  |
         When Alice selects to share the <type> <item> using the Actions menu
-        And Alice selects group test as sharee with default permissions
+        And Alice selects the following group as sharee with default permissions
+          | sharee | test  |
         Then group test should have access to <item>
         And share should be created on <item> with the following fields
           | group | test |
@@ -45,7 +48,9 @@ Feature: Private Share
         Given the following items have been created in the account
           | <type>  | <item>  |
         When Alice selects to share the <type> <item> using the Contextual menu
-        And Alice selects user Bob as sharee with default permissions
+        And Alice selects the following user as sharee with default permissions
+          | sharee | Bob         |
+          | email  | bob@own.com |
         Then user Bob should have access to <item>
         And share should be created on <item> with the following fields
           | sharee | Bob |
@@ -106,8 +111,10 @@ Feature: Private Share
         Given the following items have been created in the account
           | file  | Share13.txt  |
         When Alice selects to share the file Share13.txt using the Actions menu
-        And Alice selects user Bob as sharee with default permissions
-        And Bob has shared file Share13.txt with Charles with permissions 31
+        And Alice selects the following user as sharee with default permissions
+          | sharee | Bob         |
+          | email  | bob@own.com |
+        And Bob has reshared file Share13.txt with Charles with permissions 31
         Then user Bob should have access to Share13.txt
         And user Charles should have access to Share13.txt
         And share should be created on Share13.txt with the following fields
@@ -118,8 +125,10 @@ Feature: Private Share
         Given the following items have been created in the account
           | file  | Share14.txt  |
         When Alice selects to share the file Share14.txt using the Actions menu
-        And Alice selects user Bob as sharee without share permission
-        And Bob has shared file Share14.txt with Charles with permissions 31
+        And Alice selects the following user as sharee without share permission
+          | sharee | Bob         |
+          | email  | bob@own.com |
+        And Bob has reshared file Share14.txt with Charles with permissions 31
         Then user Bob should have access to Share14.txt
         But user Charles should not have access to Share14.txt
 
@@ -131,6 +140,6 @@ Feature: Private Share
           | folder  | Share15  |
         And Alice has shared folder Share15 with Bob with permissions 31
         When Alice selects to edit share the folder Share15 using the Actions menu
-        And Alice deletes the share
+        And Alice deletes the share with Bob
         Then user Bob should not have access to Share15
         And Share15 should not be shared anymore with Bob

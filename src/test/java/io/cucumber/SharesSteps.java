@@ -38,27 +38,51 @@ public class SharesSteps {
         return type;
     }
 
-    @Given("{word} has shared {itemtype} {word} with {word} with permissions {word}")
-    public void item_already_shared(String sharingUser, String type, String itemName,
+    @ParameterType("shared|reshared")
+    public int sharelevel(String type){
+        if (type.equals("shared")) {
+            return 0; //share, first level
+        } else {
+            return 1; //reshare
+        }
+    }
+
+    @Given("{word} has {sharelevel} {itemtype} {word} with {word} with permissions {word}")
+    public void item_already_shared(String sharingUser, int sharelevel, String type, String itemName,
                                     String recipientUser, String permissions) throws Throwable {
         String stepName = new Object(){}.getClass().getEnclosingMethod().getName();
         Log.log(Level.FINE, "----STEP----: " + stepName);
-        shareAPI.createShare(sharingUser, itemName, recipientUser, "0", permissions, "");
+        shareAPI.createShare(sharingUser, itemName, recipientUser, "0", permissions, "", sharelevel);
     }
 
-    @When("Alice selects {usertype} {word} as sharee with default permissions")
-    public void select_sharee_default(String type, String sharee) {
+    @When("Alice selects the following {usertype} as sharee with default permissions")
+    public void select_sharee_default(String type,  DataTable table)
+            throws Throwable {
         String stepName = new Object(){}.getClass().getEnclosingMethod().getName();
         Log.log(Level.FINE, "----STEP----: " + stepName);
-        privateSharePage.searchSharee(sharee, type);
+        List<List<String>> listUser = table.asLists();
+        String sharee = listUser.get(0).get(1);
+        String email = "";
+        if (listUser.size() > 1) { //in case there are more than one column... distinguish oCIS-oC10
+            email = listUser.get(1).get(1);
+        }
+        privateSharePage.searchSharee(sharee, email, type);
         sharePermissionsPage.savePermissions();
+        shareAPI.acceptAllShares(type,sharee);
     }
 
-    @When("Alice selects {usertype} {word} as sharee without {word} permission")
-    public void select_sharee_permissions(String type, String sharee, String permission) {
+    @When("Alice selects the following {usertype} as sharee without {word} permission")
+    public void select_sharee_permissions(String type, String permission, DataTable table)
+            throws IOException {
         String stepName = new Object(){}.getClass().getEnclosingMethod().getName();
         Log.log(Level.FINE, "----STEP----: " + stepName);
-        privateSharePage.searchSharee(sharee, type);
+        List<List<String>> listUser = table.asLists();
+        String sharee = listUser.get(0).get(1);
+        String email = "";
+        if (listUser.size() > 1) { //in case there are more than one column... distinguish oCIS-oC10
+            email = listUser.get(1).get(1);
+        }
+        privateSharePage.searchSharee(sharee, email, type);
         switch (permission){
             case "share": {
                 sharePermissionsPage.switchShare();
@@ -84,8 +108,7 @@ public class SharesSteps {
     }
 
     @When("Alice edits the share on {word} with permissions {word}")
-    public void user_edits_share(String itemName, String permissions)
-            throws Throwable{
+    public void user_edits_share(String itemName, String permissions) {
         String stepName = new Object(){}.getClass().getEnclosingMethod().getName();
         Log.log(Level.FINE, "----STEP----: " + stepName);
         privateSharePage.openPrivateShare(LocProperties.getProperties().getProperty("userToShare"));
@@ -138,11 +161,11 @@ public class SharesSteps {
         privateSharePage.close();
     }
 
-    @When("Alice deletes the share")
-    public void user_deletes_share() {
+    @When("Alice deletes the share with {word}")
+    public void user_deletes_share(String sharee) {
         String stepName = new Object(){}.getClass().getEnclosingMethod().getName();
         Log.log(Level.FINE, "----STEP----: " + stepName);
-        privateSharePage.deletePrivateShare(LocProperties.getProperties().getProperty("userToShare"));
+        privateSharePage.deletePrivateShare(sharee);
     }
 
     @Then("share should be created on {word} with the following fields")
@@ -170,7 +193,6 @@ public class SharesSteps {
                 }
                 case "group": {
                     assertTrue(privateSharePage.isItemInListPrivateShares(rows.get(1)));
-                    groupName = rows.get(1);
                     break;
                 }
                 case "permissions": {

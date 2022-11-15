@@ -4,18 +4,26 @@ import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler;
 
+import java.util.ArrayList;
+
 import utils.entities.OCShare;
 
 public class ShareSAXHandler extends DefaultHandler {
 
     private OCShare share;
+    private ArrayList<OCShare> allShares;
     private static String text = null;
 
 
     @Override
     public void startElement(String uri, String localName, String node, Attributes attributes){
-        if (node.equals("element")){
-            share = new OCShare();
+        switch (node) {
+            case ("data"): {
+                allShares = new ArrayList<OCShare>();
+            }
+            case ("element"): {
+                share = new OCShare();
+            }
         }
     }
 
@@ -55,6 +63,9 @@ public class ShareSAXHandler extends DefaultHandler {
                 share.setExpiration(text);
                 break;
             }
+            case ("element"): {
+                allShares.add(share);
+            }
         }
     }
 
@@ -65,6 +76,10 @@ public class ShareSAXHandler extends DefaultHandler {
 
     public OCShare getShare(){
         return share;
+    }
+
+    public ArrayList<OCShare> getAllShares() {
+        return allShares;
     }
 
 }

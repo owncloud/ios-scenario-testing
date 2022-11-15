@@ -292,6 +292,7 @@ public class FileListSteps {
             throws Throwable {
         Log.log(Level.FINE, "----STEP----: " +
                 new Object(){}.getClass().getEnclosingMethod().getName() + ": " + path);
+        fileListPage.refreshBySwipe();
         ArrayList<OCFile> listServer = filesAPI.listItems(path);
         assertTrue(fileListPage.displayedList(path, listServer));
     }
