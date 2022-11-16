@@ -16,8 +16,8 @@ public class TrashbinAPI extends CommonAPI {
     }
 
     public void emptyTrashbin() throws IOException {
+        Log.log(Level.FINE, "Starts: Empty Trashbin");
         String url = urlServer + trashEndpoint + user + "/";
-        Log.log(Level.FINE, "Starts: Empty trashbin");
         Log.log(Level.FINE, url);
         Request request = deleteRequest(url);
         Response response = httpClient.newCall(request).execute();

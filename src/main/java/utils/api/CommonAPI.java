@@ -64,7 +64,8 @@ public class CommonAPI {
             "  </D:set>\n" +
             "</D:propertyupdate>";
 
-    public CommonAPI() throws IOException {
+    public CommonAPI()
+            throws IOException {
         AuthAPI authAPI = new AuthAPI();
         //ftm, OIDC == oCIS. Bad.
         if (authAPI.checkAuthMethod().equals("OIDC")){
@@ -89,6 +90,7 @@ public class CommonAPI {
     }
 
     protected Request davRequest(String url, String method, RequestBody body) {
+        Log.log(Level.FINE, "Starts: DAV Request");
         Request request = new Request.Builder()
                 .url(url)
                 .addHeader("OCS-APIREQUEST", "true")
@@ -101,6 +103,7 @@ public class CommonAPI {
     }
 
     protected Request postRequest(String url, RequestBody body) {
+        Log.log(Level.FINE, "Starts: POST Request without username");
         Request request = new Request.Builder()
                 .url(url)
                 .addHeader("OCS-APIREQUEST", "true")
@@ -114,6 +117,7 @@ public class CommonAPI {
     }
 
     protected Request postRequest(String url, RequestBody body, String userName) {
+        Log.log(Level.FINE, "Starts: POST Request with username " + userName + ": " + url);
         Request request = new Request.Builder()
                 .url(url)
                 .addHeader("OCS-APIREQUEST", "true")
@@ -128,6 +132,7 @@ public class CommonAPI {
     }
 
     protected Request deleteRequest(String url){
+        Log.log(Level.FINE, "Starts: DELETE Request: " + url);
         Request request = new Request.Builder()
                 .url(url)
                 .addHeader("OCS-APIREQUEST", "true")
@@ -140,6 +145,7 @@ public class CommonAPI {
     }
 
     protected Request getRequest(String url) {
+        Log.log(Level.FINE, "Starts: GET Request without username: " + url);
         Request request = new Request.Builder()
                 .url(url)
                 .addHeader("OCS-APIREQUEST", "true")
@@ -153,19 +159,23 @@ public class CommonAPI {
 
     //overloaded, to use with specific credentials
     protected Request getRequest(String url, String userName) {
+        Log.log(Level.FINE, "Starts: GET Request with username " + userName + ": " + url );
+        String password = LocProperties.getProperties().getProperty("passw1");
         Request request = new Request.Builder()
                 .url(url)
                 .addHeader("OCS-APIREQUEST", "true")
                 .addHeader("User-Agent", userAgent)
                 .addHeader("Authorization", "Basic " +
-                        Base64.getEncoder().encodeToString((userName+":a").getBytes()))
+                        Base64.getEncoder().encodeToString((userName+":"+password).getBytes()))
                 .addHeader("Host", host)
                 .get()
                 .build();
         return request;
     }
 
-    private String getPersonalDrives(String url) throws IOException {
+    private String getPersonalDrives(String url)
+            throws IOException {
+        Log.log(Level.FINE, "Starts: GET personal drives: " + url );
         Request request = getRequest(url + graphDrivesEndpoint);
         Response response = httpClient.newCall(request).execute();
         String body = response.body().string();

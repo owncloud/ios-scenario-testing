@@ -25,6 +25,7 @@ public class AuthAPI {
     }
 
     protected Request davRequestUnauth(String url) {
+        Log.log(Level.FINE, "Starts: DAV request with no authorization: " + url);
         Request request = new Request.Builder()
                 .url(url)
                 .addHeader("OCS-APIREQUEST", "true")
@@ -37,7 +38,7 @@ public class AuthAPI {
 
     public String checkAuthMethod()
             throws IOException {
-        Log.log(Level.FINE, "Checking available auth methods");
+        Log.log(Level.FINE, "Starts: Checking available auth methods");
         String url = urlServer + davEndpoint;
         Log.log(Level.FINE, "Request to: " + url);
         Request request = davRequestUnauth(url);
@@ -62,6 +63,7 @@ public class AuthAPI {
 
     public boolean isOidc(String url)
             throws IOException {
+        Log.log(Level.FINE, "Starts: is OIDC? " + url);
         String urlCheck = url + wellKnown;
         Log.log(Level.FINE, "is OIDC?: " + urlCheck);
         Request request = davRequestUnauth(urlCheck);

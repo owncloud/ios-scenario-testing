@@ -14,7 +14,6 @@ import io.cucumber.java.en.When;
 import ios.LinkPermissionsPage;
 import ios.PublicLinkPage;
 import ios.SharePage;
-import utils.api.FilesAPI;
 import utils.api.ShareAPI;
 import utils.entities.OCShare;
 import utils.log.Log;
@@ -43,7 +42,7 @@ public class LinkSteps {
     @When("Alice creates link on {itemtype} {word} with the following fields")
     public void create_link_with_fields(String type, String itemName, DataTable table)
             throws Throwable {
-        String stepName = new Object(){}.getClass().getEnclosingMethod().getName();
+        String stepName = new Object(){}.getClass().getEnclosingMethod().getName().toUpperCase();
         Log.log(Level.FINE, "----STEP----: " + stepName);
         publicLinkPage.createLink(itemName);
         List<List<String>> listItems = table.asLists();
@@ -75,7 +74,7 @@ public class LinkSteps {
     @When("Alice edits the link on {word} with the following fields")
     public void edit_public_link(String itemName, DataTable table)
             throws Throwable {
-        String stepName = new Object(){}.getClass().getEnclosingMethod().getName();
+        String stepName = new Object(){}.getClass().getEnclosingMethod().getName().toUpperCase();;
         Log.log(Level.FINE, "----STEP----: " + stepName);
         List<List<String>> listItems = table.asLists();
         publicLinkPage.openPublicLink(itemName + " link");
@@ -86,7 +85,6 @@ public class LinkSteps {
                     break;
                 }
                 case "permissions": {
-                    Log.log(Level.FINE, "Set permission: " + rows.get(1));
                     linkPermissionsPage.setPermission(rows.get(1));
                     break;
                 }
@@ -103,7 +101,7 @@ public class LinkSteps {
 
     @When("Alice deletes the link on {word}")
     public void delete_link(String item) {
-        String stepName = new Object(){}.getClass().getEnclosingMethod().getName();
+        String stepName = new Object(){}.getClass().getEnclosingMethod().getName().toUpperCase();;
         Log.log(Level.FINE, "----STEP----: " + stepName);
         publicLinkPage.openPublicLink(item + " link");
         linkPermissionsPage.deleteLink();
@@ -111,7 +109,7 @@ public class LinkSteps {
 
     @When("Alice closes Public Links")
     public void close_public_links() {
-        String stepName = new Object(){}.getClass().getEnclosingMethod().getName();
+        String stepName = new Object(){}.getClass().getEnclosingMethod().getName().toUpperCase();;
         Log.log(Level.FINE, "----STEP----: " + stepName);
         publicLinkPage.close();
     }
@@ -119,7 +117,7 @@ public class LinkSteps {
     @Then("link should be created on {word} with the following fields")
     public void link_created_with_fields(String itemName, DataTable table)
             throws Throwable {
-        String stepName = new Object(){}.getClass().getEnclosingMethod().getName();
+        String stepName = new Object(){}.getClass().getEnclosingMethod().getName().toUpperCase();;
         Log.log(Level.FINE, "----STEP----: " + stepName);
         //Asserts in UI
         String linkName = "";
@@ -137,7 +135,6 @@ public class LinkSteps {
                     break;
                 }
                 case "permission": {
-                    Log.log(Level.FINE, "checking permissions: " + rows.get(1));
                     publicLinkPage.openPublicLink(linkName);
                     assertTrue(linkPermissionsPage.checkPermissions(rows.get(1)));
                     break;
@@ -159,7 +156,7 @@ public class LinkSteps {
     @Then("link on {word} should not exist anymore")
     public void link_not_existing(String itemName)
             throws Throwable {
-        String stepName = new Object(){}.getClass().getEnclosingMethod().getName();
+        String stepName = new Object(){}.getClass().getEnclosingMethod().getName().toUpperCase();;
         Log.log(Level.FINE, "----STEP----: " + stepName);
         assertFalse(publicLinkPage.isItemInListLinks(itemName + " link"));
         assertTrue(shareAPI.getSharesByUser("").isEmpty());

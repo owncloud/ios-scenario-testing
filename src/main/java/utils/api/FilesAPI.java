@@ -28,6 +28,7 @@ public class FilesAPI extends CommonAPI {
 
     public void removeItem(String itemName)
             throws IOException {
+        Log.log(Level.FINE, "Starts: Remove Item: " + itemName);
         String chunks[] = itemName.split("/");
         String url = urlServer + getEndpoint() + "/"+chunks[0]+"/";
         Log.log(Level.FINE, "Starts: Request remove item from server");
@@ -39,8 +40,8 @@ public class FilesAPI extends CommonAPI {
 
     public void createFolder(String folderName)
             throws IOException {
+        Log.log(Level.FINE, "Starts: Request create folder: " + folderName);
         String url = urlServer + getEndpoint() + "/"+folderName+"/";
-        Log.log(Level.FINE, "Starts: Request create folder");
         Log.log(Level.FINE, "URL: " + url);
         Request request = davRequest(url, "MKCOL", null);
         Response response = httpClient.newCall(request).execute();
@@ -49,6 +50,7 @@ public class FilesAPI extends CommonAPI {
 
     public void pushFile(String fileName)
             throws IOException {
+        Log.log(Level.FINE, "Starts: Push file: " + fileName);
         String url = urlServer + getEndpoint() + "/"+fileName+"/";
         Log.log(Level.FINE, "Starts: Request create file");
         Log.log(Level.FINE, "URL: " + url);
@@ -61,8 +63,8 @@ public class FilesAPI extends CommonAPI {
 
     public boolean itemExist(String itemName)
             throws IOException {
+        Log.log(Level.FINE, "Starts: Item exists: " + itemName);
         String url = urlServer + getEndpoint() + "/" + itemName;
-        Log.log(Level.FINE, "Starts: Request check if item exists in server");
         Log.log(Level.FINE, "URL: " + url);
         Response response;
         Request request = davRequest(url, "PROPFIND", null);
@@ -88,8 +90,8 @@ public class FilesAPI extends CommonAPI {
 
     public boolean isFolder(String itemName)
             throws IOException, SAXException, ParserConfigurationException {
+        Log.log(Level.FINE, "Starts: isFolder: " + itemName);
         String url = urlServer + getEndpoint() + user + "/" + itemName;
-        Log.log(Level.FINE, "Starts: Request check if item is file or folder");
         Log.log(Level.FINE, "URL: " + url);
         Response response;
         Request request = davRequest(url, "PROPFIND", null);
@@ -101,8 +103,8 @@ public class FilesAPI extends CommonAPI {
 
     public boolean isFavorite(String itemName)
             throws IOException, ParserConfigurationException, SAXException {
+        Log.log(Level.FINE, "Starts: Check if item is favorite");
         String url = urlServer + getEndpoint() + "/" + itemName;
-        Log.log(Level.FINE, "Starts: Request check if item is favorite");
         Log.log(Level.FINE, "URL: " + url);
         Response response;
         RequestBody body = RequestBody.create(MediaType.parse("application/xml; charset=utf-8"),
@@ -116,8 +118,8 @@ public class FilesAPI extends CommonAPI {
 
     public void setFavorite(String itemName)
             throws IOException {
+        Log.log(Level.FINE, "Starts: To set item as favorite: " + itemName);
         String url = urlServer + getEndpoint() + "/" + itemName;
-        Log.log(Level.FINE, "Starts: To set item as favorite");
         Log.log(Level.FINE, "URL: " + url);
         Response response;
         RequestBody body = RequestBody.create(MediaType.parse("application/xml; charset=utf-8"),
@@ -129,9 +131,9 @@ public class FilesAPI extends CommonAPI {
 
     public ArrayList<OCFile> listItems(String path)
             throws IOException, SAXException, ParserConfigurationException {
+        Log.log(Level.FINE, "Starts: Request to fetch list of items from server");
         Response response;
         String url = urlServer + getEndpoint() + "/" + path;
-        Log.log(Level.FINE, "Starts: Request to fetch list of items from server");
         Log.log(Level.FINE, "URL: " + url);
         RequestBody body = RequestBody.create(MediaType.parse("application/xml; charset=utf-8"),
                 basicPropfindBody);
@@ -142,13 +144,10 @@ public class FilesAPI extends CommonAPI {
         return listItems;
     }
 
-    public String buildItemPath (String itemName){
-        return urlServer + getEndpoint() + itemName;
-    }
-
     private ArrayList<OCFile> getList(Response httpResponse)
             throws IOException, SAXException, ParserConfigurationException {
         //Create SAX parser
+        Log.log(Level.FINE, "Starts: Get List");
         SAXParserFactory parserFactor = SAXParserFactory.newInstance();
         SAXParser parser = parserFactor.newSAXParser();
         FileSAXHandler handler = new FileSAXHandler();

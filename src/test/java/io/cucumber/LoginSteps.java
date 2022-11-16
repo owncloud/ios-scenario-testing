@@ -15,11 +15,9 @@ public class LoginSteps {
     @Given("user {word} is logged in")
     public void logged(String userName)
             throws Throwable {
-        String stepName = new Object(){}.getClass().getEnclosingMethod().getName();
+        String stepName = new Object(){}.getClass().getEnclosingMethod().getName().toUpperCase();
         Log.log(Level.FINE, "----STEP----: " + stepName);
-        //Assuminb basic auth, available in both oC10 and oCIS
         if (!loginPage.loggedIn()) {
-            Log.log(Level.FINE, "Not logged. Starting login process");
             String password = LocProperties.getProperties().getProperty("passw1");
             loginPage.skipAddServer();
             loginPage.typeURL();

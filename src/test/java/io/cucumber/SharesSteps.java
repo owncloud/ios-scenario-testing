@@ -50,7 +50,7 @@ public class SharesSteps {
     @Given("{word} has {sharelevel} {itemtype} {word} with {word} with permissions {word}")
     public void item_already_shared(String sharingUser, int sharelevel, String type, String itemName,
                                     String recipientUser, String permissions) throws Throwable {
-        String stepName = new Object(){}.getClass().getEnclosingMethod().getName();
+        String stepName = new Object(){}.getClass().getEnclosingMethod().getName().toUpperCase();;
         Log.log(Level.FINE, "----STEP----: " + stepName);
         shareAPI.createShare(sharingUser, itemName, recipientUser, "0", permissions, "", sharelevel);
     }
@@ -58,7 +58,7 @@ public class SharesSteps {
     @When("Alice selects the following {usertype} as sharee with default permissions")
     public void select_sharee_default(String type,  DataTable table)
             throws Throwable {
-        String stepName = new Object(){}.getClass().getEnclosingMethod().getName();
+        String stepName = new Object(){}.getClass().getEnclosingMethod().getName().toUpperCase();;
         Log.log(Level.FINE, "----STEP----: " + stepName);
         List<List<String>> listUser = table.asLists();
         String sharee = listUser.get(0).get(1);
@@ -72,9 +72,8 @@ public class SharesSteps {
     }
 
     @When("Alice selects the following {usertype} as sharee without {word} permission")
-    public void select_sharee_permissions(String type, String permission, DataTable table)
-            throws IOException {
-        String stepName = new Object(){}.getClass().getEnclosingMethod().getName();
+    public void select_sharee_permissions(String type, String permission, DataTable table) {
+        String stepName = new Object(){}.getClass().getEnclosingMethod().getName().toUpperCase();
         Log.log(Level.FINE, "----STEP----: " + stepName);
         List<List<String>> listUser = table.asLists();
         String sharee = listUser.get(0).get(1);
@@ -109,7 +108,7 @@ public class SharesSteps {
 
     @When("Alice edits the share on {word} with permissions {word}")
     public void user_edits_share(String itemName, String permissions) {
-        String stepName = new Object(){}.getClass().getEnclosingMethod().getName();
+        String stepName = new Object(){}.getClass().getEnclosingMethod().getName().toUpperCase();;
         Log.log(Level.FINE, "----STEP----: " + stepName);
         privateSharePage.openPrivateShare(LocProperties.getProperties().getProperty("userToShare"));
         int permissionsToInt = Integer.parseInt(permissions);
@@ -163,7 +162,7 @@ public class SharesSteps {
 
     @When("Alice deletes the share with {word}")
     public void user_deletes_share(String sharee) {
-        String stepName = new Object(){}.getClass().getEnclosingMethod().getName();
+        String stepName = new Object(){}.getClass().getEnclosingMethod().getName().toUpperCase();;
         Log.log(Level.FINE, "----STEP----: " + stepName);
         privateSharePage.deletePrivateShare(sharee);
     }
@@ -171,14 +170,13 @@ public class SharesSteps {
     @Then("share should be created on {word} with the following fields")
     public void share_created_with_fields(String itemName, DataTable table)
             throws Throwable {
-        String stepName = new Object(){}.getClass().getEnclosingMethod().getName();
+        String stepName = new Object(){}.getClass().getEnclosingMethod().getName().toUpperCase();;
         Log.log(Level.FINE, "----STEP----: " + stepName);
         //Asserts in UI
         String groupName = null;
         String permissionString = "Read, Share, Create, Change, Delete";
         List<List<String>> listItems = table.asLists();
         for (List<String> rows : listItems) {
-            Log.log(Level.FINE, rows.get(0));
             switch (rows.get(0)) {
                 case "password": {
                     privateSharePage.openPrivateShare(itemName);
@@ -187,7 +185,6 @@ public class SharesSteps {
                     break;
                 }
                 case "sharee": {
-                    Log.log(Level.FINE, "Checking sharee");
                     assertTrue(privateSharePage.isItemInListPrivateShares(rows.get(1)));
                     break;
                 }
@@ -247,7 +244,7 @@ public class SharesSteps {
     @Then("{usertype} {word} should have access to {word}")
     public void group_has_the_file(String type, String shareeName, String itemName)
             throws Throwable {
-        String stepName = new Object(){}.getClass().getEnclosingMethod().getName();
+        String stepName = new Object(){}.getClass().getEnclosingMethod().getName().toUpperCase();;
         Log.log(Level.FINE, "----STEP----: " + stepName);
         if (type.equals("user")){
             assertTrue(shareAPI.isSharedWithMe(itemName, shareeName, false));
@@ -259,15 +256,14 @@ public class SharesSteps {
     @Then("user {word} should not have access to {word}")
     public void sharee_does_not_have_access(String userName, String itemName)
             throws Throwable {
-        String stepName = new Object(){}.getClass().getEnclosingMethod().getName();
+        String stepName = new Object(){}.getClass().getEnclosingMethod().getName().toUpperCase();;
         Log.log(Level.FINE, "----STEP----: " + stepName);
         assertFalse(shareAPI.isSharedWithMe(itemName, userName,false));
     }
 
     @Then("{word} should not be shared anymore with {word}")
-    public void share_is_deleted(String itemName, String sharee)
-            throws Throwable {
-        String stepName = new Object(){}.getClass().getEnclosingMethod().getName();
+    public void share_is_deleted(String itemName, String sharee) {
+        String stepName = new Object(){}.getClass().getEnclosingMethod().getName().toUpperCase();;
         Log.log(Level.FINE, "----STEP----: " + stepName);
         assertFalse(privateSharePage.isItemInListPrivateShares(sharee));
     }
