@@ -32,6 +32,7 @@ import io.appium.java_client.ios.IOSStartScreenRecordingOptions.VideoQuality;
 import io.appium.java_client.touch.WaitOptions;
 import io.appium.java_client.touch.offset.PointOption;
 import utils.LocProperties;
+import utils.api.AuthAPI;
 import utils.log.Log;
 
 public class CommonPage {
@@ -40,9 +41,17 @@ public class CommonPage {
     protected static Actions actions;
     private static final SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMdd_HHmmss");
     protected final String packag = LocProperties.getProperties().getProperty("appPackage");
+    protected String authType = "";
 
-    public CommonPage()  {
+    public CommonPage() {
         actions = new Actions(driver);
+        //Determine auth method
+        AuthAPI authAPI = new AuthAPI();
+        try {
+            authType = authAPI.checkAuthMethod();
+        } catch (IOException e){
+            e.printStackTrace();
+        }
     }
 
     public static void waitByXpath(int timeToWait, String resourceXpath){

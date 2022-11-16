@@ -1,6 +1,5 @@
 package ios;
 
-import org.checkerframework.checker.units.qual.A;
 import org.openqa.selenium.support.PageFactory;
 
 import java.io.IOException;
@@ -17,7 +16,6 @@ import io.appium.java_client.pagefactory.iOSXCUITFindBy;
 import io.appium.java_client.touch.LongPressOptions;
 import io.appium.java_client.touch.offset.ElementOption;
 import utils.LocProperties;
-import utils.api.AuthAPI;
 import utils.entities.OCFile;
 import utils.log.Log;
 
@@ -92,14 +90,9 @@ public class FileListPage extends CommonPage {
     private final String id_share = "Sharing";
     private final String id_link = "Links";
 
-    private String authType = "";
-
-    public FileListPage()
-            throws IOException {
+    public FileListPage() {
         super();
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
-        AuthAPI authAPI = new AuthAPI();
-        authType = authAPI.checkAuthMethod();
     }
 
     public void refreshBySwipe() throws InterruptedException {
@@ -229,7 +222,9 @@ public class FileListPage extends CommonPage {
         Log.log(Level.FINE, "Starts: Create private link: " + scheme + " " + linkOriginal);
         String originalScheme = getScheme(linkOriginal);
         Log.log(Level.FINE, "Original scheme: " + originalScheme);
-        return linkOriginal.replace(originalScheme, scheme);
+        String linkToOpen = linkOriginal.replace(originalScheme, scheme);
+        Log.log(Level.FINE, "Link to open: " + linkToOpen);
+        return linkToOpen;
     }
 
     public void openPrivateLink(String privateLink) {

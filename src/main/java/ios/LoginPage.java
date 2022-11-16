@@ -9,7 +9,6 @@ import java.util.logging.Level;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import io.appium.java_client.pagefactory.iOSXCUITFindBy;
-import utils.api.AuthAPI;
 import utils.log.Log;
 
 public class LoginPage extends CommonPage{
@@ -47,19 +46,10 @@ public class LoginPage extends CommonPage{
     @iOSXCUITFindBy(accessibility = "Continue")
     private MobileElement continueSafari;
 
-    //Only for login tests, from env variables. Needed some instances running to check
-    //whether authentication works (ftm, only basic)
-    private final String serverURL = System.getProperty("login_serverURL");
-    private final String oauth2URL = System.getProperty("login_oauth2URL");
-    private final String oidcURL = System.getProperty("login_oidcURL");
-    private final String LDAPURL = System.getProperty("login_LDAPURL");
-    private final String red301URL = System.getProperty("login_red301URL");
-    private final String red302URL = System.getProperty("login_red302URL");
-
     //For the regular tests
     private final String server = System.getProperty("server");
 
-    public LoginPage(){
+    public LoginPage() {
         super();
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
     }
@@ -75,14 +65,6 @@ public class LoginPage extends CommonPage{
         continueOption.click();
         approveIssue();
         continueOption.click();
-    }
-
-    public void typeURL(String authMethod){
-        Log.log(Level.FINE, "Starts: Type URL.");
-        waitById(5, urlServer.get(0));
-        urlServer.get(0).sendKeys(selectURL(authMethod));
-        continueOption.click();
-        approveIssue();
     }
 
     public void approveIssue(){
@@ -133,37 +115,14 @@ public class LoginPage extends CommonPage{
     }
 
     public void selectDrive() throws IOException {
-        AuthAPI authAPI = new AuthAPI();
         //assuming OIDC == oCIS. Bad, but works ftm
-        if (authAPI.checkAuthMethod().equals("OIDC")) {
+        if (authType.equals("OIDC")) {
             personal.click();
         }
     }
 
     public void selectFirstBookmark() throws IOException {
-        //To dismiss soft keyboard
-        //if (!findListId("Done").isEmpty()){
-        //    findId("Done").click();
-        //}
-        //driver.hideKeyboard(HideKeyboardStrategy.PRESS_KEY, "Done");
         bookmarkCell.click();
         selectDrive();
-    }
-
-    private String selectURL(String authMehod){
-        switch (authMehod){
-            case "basic auth":
-                Log.log(Level.FINE, "URL: " + serverURL);
-                return serverURL;
-            case "OAuth2":
-                Log.log(Level.FINE, "URL: " + oauth2URL);
-                return oauth2URL;
-            case "OIDC":
-                Log.log(Level.FINE, "URL: " + oidcURL);
-                return oidcURL;
-            default:
-                Log.log(Level.WARNING, "No URL");
-                return null;
-        }
     }
 }
