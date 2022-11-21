@@ -68,16 +68,11 @@ public class LoginPage extends CommonPage{
     }
 
     public void approveIssue(){
-        waitById(5, approveButton);
         approveButton.click();
     }
 
     public void cancelIssue(){
         cancelButton.click();
-    }
-
-    public void acceptPermissions(){
-        driver.switchTo().alert().accept();
     }
 
     public void skipAddServer(){
@@ -96,32 +91,14 @@ public class LoginPage extends CommonPage{
         continueOption.click();
     }
 
-    public void submitBrowser(){
-        Log.log(Level.FINE, "Starts: Accept moving to browser");
-        continueSafari.click();
-    }
-
-    public boolean isCredentialsError(){
-        return bookmarkCells.size() == 0;
-    }
-
-    public boolean isBookmarkCreated(){
-        return bookmarkCells.size() > 0;
-    }
-
-    public void selectBookmarkIndex(int index) {
-        MobileElement firstServer = bookmarkCells.get(index);
-        firstServer.click();
-    }
-
-    public void selectDrive() throws IOException {
+    public void selectDrive() {
         //assuming OIDC == oCIS. Bad, but works ftm
         if (authType.equals("OIDC")) {
             personal.click();
         }
     }
 
-    public void selectFirstBookmark() throws IOException {
+    public void selectFirstBookmark() {
         bookmarkCell.click();
         selectDrive();
     }

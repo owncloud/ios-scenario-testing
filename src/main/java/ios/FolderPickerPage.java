@@ -31,7 +31,7 @@ public class FolderPickerPage extends CommonPage {
 
     public void selectFolder(String targetFolder){
         Log.log(Level.FINE, "Start: Select folder from picker: " + targetFolder);
-        waitById(10, createFolder);
+        //waitById(10, createFolder);
         if (!targetFolder.equals("/")) { //If it is root, nothing to do
             if (!targetFolder.contains("/")) { //If it does not contain "/", just browse to next level
             findXpath(xpath_picker)

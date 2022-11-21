@@ -87,6 +87,13 @@ public class FileListSteps {
         filesAPI.setFavorite(itemName);
     }
 
+    @Given("item {word} is visible")
+    public void item_is_visible(String itemName){
+        String stepName = new Object(){}.getClass().getEnclosingMethod().getName().toUpperCase();
+        Log.log(Level.FINE, "----STEP----: " + stepName);
+        fileListPage.itemInScreen(itemName);
+    }
+
     @When("Alice opens a private link pointing to {word} with scheme {word}")
     public void open_private_link(String filePath, String scheme)
             throws Throwable {
@@ -106,7 +113,7 @@ public class FileListSteps {
     }
 
     @When("Alice selects the option Create Folder")
-    public void create_folder() throws InterruptedException{
+    public void create_folder() {
         String stepName = new Object(){}.getClass().getEnclosingMethod().getName().toUpperCase();
         Log.log(Level.FINE, "----STEP----: " + stepName);
         fileListPage.createFolder();
@@ -210,6 +217,14 @@ public class FileListSteps {
         assertTrue(filesAPI.itemExist(itemName));
     }
 
+    @Then("Alice should not see {word} in the filelist anymore")
+    public void item_not_in_list(String itemName) throws Throwable {
+        String stepName = new Object(){}.getClass().getEnclosingMethod().getName().toUpperCase();
+        Log.log(Level.FINE, "----STEP----: " + stepName);
+        assertFalse(fileListPage.isItemInList(itemName));
+        assertFalse(filesAPI.itemExist(itemName));
+    }
+
     @Then("Alice should see {word} in Quick Access")
     public void item_in_quickaccess(String itemName)
             throws Throwable {
@@ -250,17 +265,17 @@ public class FileListSteps {
         String stepName = new Object(){}.getClass().getEnclosingMethod().getName().toUpperCase();
         Log.log(Level.FINE, "----STEP----: " + stepName);
         fileListPage.browse(targetFolder);
-        fileListPage.isItemInList(itemName);
+        assertTrue(fileListPage.isItemInList(itemName));
         assertTrue(filesAPI.itemExist(targetFolder+"/"+itemName));
         fileListPage.browseRoot();
     }
 
-    @Then("Alice should not see {word} in the filelist anymore")
-    public void item_not_in_list(String itemName) throws Throwable {
+    @Then("Alice should see an empty list of files")
+    public void empty_list_files() {
         String stepName = new Object(){}.getClass().getEnclosingMethod().getName().toUpperCase();
         Log.log(Level.FINE, "----STEP----: " + stepName);
-        assertFalse(fileListPage.isItemInList(itemName));
-        assertFalse(filesAPI.itemExist(itemName));
+        assertTrue(fileListPage.isListEmpty());
+        //assertFalse(filesAPI.itemExist(itemName));
     }
 
     @Then("Alice should not see {word} in Quick Access")
@@ -287,7 +302,6 @@ public class FileListSteps {
     @Then("the list of files in {word} folder should match with the server")
     public void list_matches_server(String path)
             throws Throwable {
-
         String stepName = new Object(){}.getClass().getEnclosingMethod().getName().toUpperCase();
         Log.log(Level.FINE, "----STEP----: " + stepName);
         fileListPage.refreshBySwipe();

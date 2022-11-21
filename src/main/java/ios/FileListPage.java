@@ -2,7 +2,6 @@ package ios;
 
 import org.openqa.selenium.support.PageFactory;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -192,16 +191,30 @@ public class FileListPage extends CommonPage {
         findId(itemName).click();
     }
 
-    public boolean isItemInList (String itemName) {
+    public boolean isItemInList(String itemName) {
         Log.log(Level.FINE, "Starts: Check if item is in list: " + itemName);
-        //"+" button to assure we are in the filelist
-        waitByXpath(10, "//XCUIElementTypeButton[@name=\"client.file-add\"]");
         return !findListId(itemName).isEmpty();
     }
 
-    public boolean isItemInScreen (String itemName) {
+    public boolean isListEmpty() {
+        Log.log(Level.FINE, "Starts: Check if filelist is empty");
+        if (authType.equals("OIDC")){
+            Log.log(Level.FINE, "OCIS list");
+            return !findListId("No contents").isEmpty();
+        } else {
+            Log.log(Level.FINE, "No OCIS list");
+            return !findListId("Empty folder").isEmpty();
+        }
+    }
+
+    public boolean isItemInScreen(String itemName) {
         Log.log(Level.FINE, "Starts: Check if item is in QuickAccess: " + itemName);
         return !findListId(itemName).isEmpty();
+    }
+
+    public void itemInScreen(String itemName) {
+        Log.log(Level.FINE, "Starts: Check if item is in QuickAccess: " + itemName);
+        findListId(itemName).isEmpty();
     }
 
     public void selectItemListActions(String itemName) {
@@ -293,7 +306,6 @@ public class FileListPage extends CommonPage {
     public void selectOperationFromActions(String itemName, String operationName, String typeItem) {
         MobileElement operation = null;
         Log.log(Level.FINE, "Starts actions: " + operationName);
-        waitByXpath(5, xpath_card);
         switch (operationName){
             case "delete":
                 operation = (MobileElement) findXpath(xpath_delete);
@@ -433,7 +445,6 @@ public class FileListPage extends CommonPage {
 
     public void openCard(String itemName){
         Log.log(Level.FINE, "Starts: openCard for " + itemName);
-        waitById(5, itemName + " Actions");
         findId(itemName + " Actions").click();
     }
 

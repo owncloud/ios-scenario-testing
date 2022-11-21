@@ -9,23 +9,27 @@ Feature: Delete item
     Given user Alice is logged in
 
   @smoke
-  Scenario: Delete an existent folder using the Actions menu
+  Scenario: Delete the only item (folder) using the Actions menu
     Given the following items have been created in the account
       | folder  | delete1  |
     When Alice selects to delete the folder delete1 using the Actions menu
     And Alice confirms the deletion
     Then Alice should not see delete1 in the filelist anymore
+    And Alice should see an empty list of files
 
   Scenario: Delete an existent folder using the Contextual menu
     Given the following items have been created in the account
-      | folder  | delete2  |
+      | folder  | delete2      |
+      | file    | delete3.txt  |
     When Alice selects to delete the folder delete2 using the Contextual menu
     And Alice confirms the deletion
     Then Alice should not see delete2 in the filelist anymore
+    And Alice should see delete3.txt in the filelist
 
-  Scenario: Delete an existent folder using the Swipe menu
+  Scenario: Delete an existent file using the Swipe menu
     Given the following items have been created in the account
-      | file  | delete3.txt  |
-    When Alice selects to delete the folder delete3.txt using the Swipe menu
+      | file  | delete4.txt  |
+    When Alice selects to delete the folder delete4.txt using the Swipe menu
     And Alice confirms the deletion
-    Then Alice should not see delete3.txt in the filelist anymore
+    Then Alice should not see delete4.txt in the filelist anymore
+    And Alice should see an empty list of files

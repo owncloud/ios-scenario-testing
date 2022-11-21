@@ -230,7 +230,7 @@
 		</dict>
 		<key>Frameworks/ownCloudApp.framework/ownCloudApp</key>
 		<data>
-		F2b4x40LOzr6dBZZMeIX8Bs71jA=
+		xIeVD2OZ15x5kVXv/m0M/G1wXfE=
 		</data>
 		<key>Frameworks/ownCloudApp.framework/pt-BR.lproj/Localizable.strings</key>
 		<dict>
@@ -480,7 +480,7 @@
 		</dict>
 		<key>Frameworks/ownCloudAppShared.framework/ownCloudAppShared</key>
 		<data>
-		DxXgrjCCzA24ba4aePOAJrMMfts=
+		9j4kOghbgdFew85IqS+Sq7Lttno=
 		</data>
 		<key>Frameworks/ownCloudAppShared.framework/owncloud-logo.tvg</key>
 		<data>
@@ -688,7 +688,7 @@
 		</dict>
 		<key>Frameworks/ownCloudSDK.framework/ownCloudSDK</key>
 		<data>
-		BxSL/tlqTota1WalWuuugdY4Pzk=
+		DKnLwe+eFDw5rAeT5N0dGLPTR8Q=
 		</data>
 		<key>Frameworks/ownCloudSDK.framework/pt-BR.lproj/Localizable.strings</key>
 		<dict>
@@ -844,7 +844,7 @@
 		</dict>
 		<key>Frameworks/ownCloudUI.framework/ownCloudUI</key>
 		<data>
-		O6LlvKzJ0/oPyVADb/O/4jRivaE=
+		K9btRyv5elAkHlxDbnZ/cXFC7+I=
 		</data>
 		<key>Frameworks/ownCloudUI.framework/pt-BR.lproj/Localizable.strings</key>
 		<dict>
@@ -1007,7 +1007,7 @@
 		</data>
 		<key>PlugIns/ownCloud File Provider UI.appex/ownCloud File Provider UI</key>
 		<data>
-		FVZe4UXH6k+nxBclt9bMtElLyPA=
+		7rX7HBaRKNpvz+dO28pAW1XAZ7Q=
 		</data>
 		<key>PlugIns/ownCloud File Provider.appex/Info.plist</key>
 		<data>
@@ -1037,7 +1037,7 @@
 		</dict>
 		<key>PlugIns/ownCloud File Provider.appex/ownCloud File Provider</key>
 		<data>
-		jAEPy7z7JENciy6Vs0ZGZvBNU60=
+		/D2FAzEGm2E5pf9XigVaVIwbUiY=
 		</data>
 		<key>PlugIns/ownCloud Intents.appex/Base.lproj/Intents.intentdefinition</key>
 		<dict>
@@ -1194,7 +1194,7 @@
 		</dict>
 		<key>PlugIns/ownCloud Intents.appex/ownCloud Intents</key>
 		<data>
-		1WdbUjQhAimN5JtYPCjjI/SLwyU=
+		D9Gc+eCewIekNPpqnKucR8028F0=
 		</data>
 		<key>PlugIns/ownCloud Intents.appex/pt-BR.lproj/Intents.strings</key>
 		<dict>
@@ -1508,7 +1508,7 @@
 		</dict>
 		<key>PlugIns/ownCloud Share Extension.appex/ownCloud Share Extension</key>
 		<data>
-		ZV3Z1Q2pb7kOQGGnp3Mg21BHTqc=
+		28wfGiQEPC+wJdsIUg8byZ8d+tg=
 		</data>
 		<key>PlugIns/ownCloud Share Extension.appex/pt-BR.lproj/InfoPlist.strings</key>
 		<dict>
@@ -3234,7 +3234,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			ZFRa8Vg4kwAIQ2Sq9jmqJEd7ujnzyqlBOkkKY0gD1Pg=
+			SRtmRnnQhFIPCcshKjk07NHwIf8YCPWjeooMtoQbdG4=
 			</data>
 		</dict>
 		<key>Frameworks/ownCloudApp.framework/pt-BR.lproj/Localizable.strings</key>
@@ -3550,7 +3550,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Re8wrW5KQ+paFn7iga+8xpaflWGAqC0pGKzxMn0ss5s=
+			MZiRQR6zMuruT7rjzXWuxm+Bt60DTrBFP9jUGASMBg8=
 			</data>
 		</dict>
 		<key>Frameworks/ownCloudAppShared.framework/owncloud-logo.tvg</key>
@@ -3806,7 +3806,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			S+B8eJ+rqz5XTt0dc0H5YnpV8/JOfXsFFAhSD816ZXI=
+			4v+nFW6vWC65+Ra+fWskGPfsJsCkaCiaQtwkIUUniho=
 			</data>
 		</dict>
 		<key>Frameworks/ownCloudSDK.framework/pt-BR.lproj/Localizable.strings</key>
@@ -3971,7 +3971,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			R3brKGkZCcBubQ9h8UvdvudLMqx8BQxObFX8QTS9csk=
+			BdRcj3g6/PfQBSUyH9z+ZupMFc5a1LZZi8zR9k899Xk=
 			</data>
 		</dict>
 		<key>Frameworks/ownCloudUI.framework/pt-BR.lproj/Localizable.strings</key>
@@ -4168,7 +4168,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			i/OiP/mlnxEjouN/LREhFgMwz2k6b/ZTMJ2t1Euimdc=
+			ArskGt9nPdRxnA5x2Ve0agXl5oQXHP6pSxDYELaCpj4=
 			</data>
 		</dict>
 		<key>PlugIns/ownCloud File Provider.appex/Info.plist</key>
@@ -4207,7 +4207,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			L8BsTupP8u5VhR1Tpn3rxtr0GsWmJIyGsEL/em2gFCU=
+			d/bw8OjC1SsWdZFD21qeO5goIR/54ZDaV3D037bwUdo=
 			</data>
 		</dict>
 		<key>PlugIns/ownCloud Intents.appex/Base.lproj/Intents.intentdefinition</key>
@@ -4394,7 +4394,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			ZVQsFpjnnxII8TSAzizEeympsOREB8ev0WKtMxdMQks=
+			vddzvqO24aMYC3ufYf86wqkjKsuE/Jfqk4koSwcqOAA=
 			</data>
 		</dict>
 		<key>PlugIns/ownCloud Intents.appex/pt-BR.lproj/Intents.strings</key>
@@ -4741,7 +4741,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			6UgzRyJxIeds5H6onnbvbPs/brhpdc1gZEfgHSm8hHc=
+			EyxqAbdidb53BsBWla07OM9W4Rx7ZnutEnBoVCfCdQk=
 			</data>
 		</dict>
 		<key>PlugIns/ownCloud Share Extension.appex/pt-BR.lproj/InfoPlist.strings</key>
