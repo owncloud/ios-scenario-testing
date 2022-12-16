@@ -193,7 +193,13 @@ public class FileListPage extends CommonPage {
 
     public boolean isItemInList(String itemName) {
         Log.log(Level.FINE, "Starts: Check if item is in list: " + itemName);
-        return !findListId(itemName).isEmpty();
+        wait (2);
+        return findId(itemName).isDisplayed();
+    }
+
+    public boolean isNotItemInList(String itemName) {
+        Log.log(Level.FINE, "Starts: Check if item is NOT in list: " + itemName);
+        return findListId(itemName).isEmpty();
     }
 
     public boolean isListEmpty() {

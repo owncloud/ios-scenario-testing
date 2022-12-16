@@ -221,7 +221,7 @@ public class FileListSteps {
     public void item_not_in_list(String itemName) throws Throwable {
         String stepName = new Object(){}.getClass().getEnclosingMethod().getName().toUpperCase();
         Log.log(Level.FINE, "----STEP----: " + stepName);
-        assertFalse(fileListPage.isItemInList(itemName));
+        assertTrue(fileListPage.isNotItemInList(itemName));
         assertFalse(filesAPI.itemExist(itemName));
     }
 
