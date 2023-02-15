@@ -18,6 +18,9 @@ public class FolderPickerPage extends CommonPage {
     @iOSXCUITFindBy(id="client.folder-create")
     private MobileElement createFolder;
 
+    @iOSXCUITFindBy(id="person")
+    private MobileElement personalList;
+
     private String xpath_move = "//XCUIElementTypeButton[@name=\"Move here\"]";
     private String xpath_copy = "//XCUIElementTypeButton[@name=\"Copy here\"]";
     private String xpath_picker = "//XCUIElementTypeApplication[@name=\"ownCloud\"]/XCUIElementTypeWindow[1]/" +
@@ -29,9 +32,11 @@ public class FolderPickerPage extends CommonPage {
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
     }
 
-    public void selectFolder(String targetFolder){
+    public void selectFolder(String targetFolder, String action){
         Log.log(Level.FINE, "Start: Select folder from picker: " + targetFolder);
-        //waitById(10, createFolder);
+        if (action.equals("copy")) { //Complete with oCIS, different behaviour
+            personalList.click();
+        }
         if (!targetFolder.equals("/")) { //If it is root, nothing to do
             if (!targetFolder.contains("/")) { //If it does not contain "/", just browse to next level
             findXpath(xpath_picker)

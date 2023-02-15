@@ -105,10 +105,7 @@ public class CommonPage {
         return (List<MobileElement>) driver.findElements(MobileBy.id(id));
     }
 
-    public static void swipe (double startx, double starty, double endx, double endy)
-            throws InterruptedException {
-        //Need a short waiter. Should be improved.
-        Thread.sleep(1000);
+    public static void swipe (double startx, double starty, double endx, double endy) {
         Dimension size = driver.manage().window().getSize();
         int startX=(int)(size.width * startx);
         int startY=(int)(size.height * starty);

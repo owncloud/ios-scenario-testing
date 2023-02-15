@@ -360,9 +360,15 @@
 "Create folder" ="Ordner erstellen";
 "Duplicate" = "Duplizieren";
 "Move" = "Verschieben";
-"Open in" = "Öffnen in";
+"Move {{itemCount}} items" = "{{itemCount}} Elemente verschieben";
+"Move \"{{itemName}}\"" = "„{{itemName}}” verschieben";
+"Move here" = "Hierhin verschieben";
 "Copy" = "Kopieren";
+"Copy {{itemCount}} items" = "{{itemCount}} Elemente kopieren";
+"Copy \"{{itemName}}\"" = "„{{itemName}}” kopieren";
 "Copy here" = "Hierhin kopieren";
+"Select target." = "Ziel wählen.";
+"Open in" = "Öffnen in";
 "Cannot connect to " = "Keine Verbindung möglich zu";
 " couldn't download file(s)" = "Datei(en) konnte nicht geladen werden";
 "Actions" = "Aktionen";
@@ -389,6 +395,8 @@
 "Enable" = "Aktivieren";
 "Exit Full Screen" = "Vollbildmodus beenden";
 
+"Select one or more items." = "Wählen Sie ein Objekt oder mehrere Objekte.";
+
 /* V12 */
 "Search {{space.name}}" = "{{space.name}} durchsuchen";
 "Name of template" = "Name der Vorlage";
@@ -398,26 +406,26 @@
 "New document" = "Neues Dokument";
 "Search tree" = "Baum durchsuchen";
 "Search from {{folder.name}}" = "{{folder.name}} durchsuchen";
-"Saved search views" = "Gespeicherte Suchansichten";
+"Saved search" = "Gespeicherte Suche";
 "Save as search template" = "Suchvorlage speichern";
-"Name of view" = "Name der Ansicht";
+"Name of saved search" = "Name der gespeicherten Suche";
 "Search template" = "Suchvorlage";
+"Search templates" = "Suchvorlagen";
 "Saved search templates" = "Suchvorlage speichern";
 "Error creating {{itemName}}" = "Fehler beim Erstellen von {{itemName}}";
 "If you 'Continue', you will be prompted to allow the '{{app.name}}' app to open the {{authmethodName}} login page where you can enter your credentials." = "Wenn Sie auf 'Fortsetzen' klicken, werden Sie aufgefordert, der App '{{app.name}}' zu erlauben, die {{authmethodName}}-Anmeldeseite zu öffnen, auf der Sie Ihre Zugangsdaten eingeben können.";
 
-"Search view" = "Suchansicht";
+"Saved search" = "Gespeicherte Suche";
+"Saved searches" = "Gespeicherte Suchen";
 "Open in {{appName}} (web)" = "Öffnen in {{appName}} (web)";
 "Processing on server" = "In Verarbeitung auf Server";
 "Pick a name" = "Wählen Sie einen Namen";
 "Pick a document type to create:" = "Wählen Sie den zu erstellenden Dokumententyp:";
-"Save as search view" = "Suchansicht speichern";
+"Save search" = "Suche speichern";
 "No contents" = "Kein Inhalt";
+"This folder is empty." = "Dieser Ordner ist leer.";
 "This folder is empty. Fill it with content:" = "Dieser Ordner ist leer. Füllen Sie ihn mit Inhalten:";
 "Enter a search term" = "Suchbegriff eingeben";
-
-/* Directory Picker Messages */
-"Move here" = "Hierhin verschieben";
 
 /* Preview */
 "Open file" = "Datei öffnen";
@@ -547,7 +555,7 @@
 "Accept Share failed" = "Freigabe annehmen fehlgeschlagen";
 "Decline Share failed" = "Freigabe ablehnen fehlgeschlagen";
 "Accept" = "Akzeptieren";
-"Decline" = "Abgelehnt";
+"Decline" = "Ablehnen";
 "Declined" = "Abgelehnt";
 "Decline Share" = "Freigabe ablehnen";
 "Unshare" = "Freigabe aufheben";
@@ -578,6 +586,10 @@
 "%@ is not available for this item." = "%@ ist für dieses Objekt nicht verfügbar.";
 "Share with user/group" = "Mit Benutzer/Gruppe teilen";
 "Share link" = "Link teilen";
+
+"Shared with me" = "Mit mir geteilt";
+"Shared by me" = "Mit anderen geteilt";
+"Shared by link" = "Per Link geteilt";
 
 /* Quick Access view */
 "Quick Access" = "Schnellzugriff";
@@ -760,7 +772,7 @@
 
 /* Licensing: Settings */
 "In-App Purchases" = "In-App-Käufe";
-"Purchases" = "Käufe";
+"Purchases & Subscriptions" = "Käufe und Abonnements";
 "Error fetching transactions" = "Fehler beim Abrufen von Transaktionen";
 "Document Scanner" = "Dokumentenscanner";
 "Scan documents and photos with your camera." = "Scannen Sie Dokumente und Fotos mit Ihrer Kamera.";
@@ -800,6 +812,8 @@
 "Error importing %@" = "Fehler beim importieren von %@";
 "Error loading item" = "Fehler beim Laden des Objekt";
 "Preparing…" = "Vorbereiten…";
+"Import \"{{itemName}}\"" = "„{{itemName}}” importieren";
+"Import {{itemCount}} files" = "{{itemCount}} Dateien importieren";
 "Save here" = "Hier speichern";
 
 /* Disallowed Import Methods */
@@ -814,16 +828,6 @@
 /* - Files.app */
 "Import not allowed" = "Importieren nicht erlaubt";
 "Importing files through the File Provider is not allowed on this device." = "Der Import von Dateien über den File Provider ist auf diesem Gerät nicht zulässig.";
-
-/* Data migration from legacy app */
-"Account Migration" = "Konto-Migration";
-"App Passcode" = "App PIN-Sperre";
-"Instant Upload Settings" = "Auto Upload Einstellungen";
-"Migrating" = "Migrieren";
-"Migrated" = "Migriert";
-"Failed to migrate" = "Migration fehlgeschlagen";
-"Failed to access legacy user data" = "Zugriff auf ältere Benutzerdaten fehlgeschlagen";
-"The app was upgraded to a new version. Below there is an overview of all migrated accounts." = "Die App wurde auf eine neue Version aktualisiert. Unten finden Sie eine Übersicht über alle migrierten Konten.";
 
 /* Misc. accessibility */
 "Enter multiple selection" = "Mehrfachauswahl beginnen";

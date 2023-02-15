@@ -38,9 +38,6 @@ public class FileListPage extends CommonPage {
     @iOSXCUITFindBy(id="Files")
     private MobileElement browseRoot;
 
-    @iOSXCUITFindBy(id="Quick Access")
-    private MobileElement quickAccess;
-
     @iOSXCUITFindBy(id="Close actions menu")
     private MobileElement closeActions;
 
@@ -49,6 +46,9 @@ public class FileListPage extends CommonPage {
 
     @iOSXCUITFindBy(id="Personal")
     private MobileElement personal;
+
+    @iOSXCUITFindBy(xpath="//XCUIElementTypeStaticText[@name=\"Quick Access\"]")
+    private MobileElement quickAccess;
 
 
     //Actions in action menu
@@ -164,8 +164,10 @@ public class FileListPage extends CommonPage {
 
     public void openCollection(String collection){
         Log.log(Level.FINE, "Starts: Open Quick Access collection: " + collection);
+        findId("Back").click();
         quickAccess.click();
-        findId(collection+"-collection-row").click();
+        findId(collection).click();
+        //findId(collection+"-collection-row").click();
     }
 
     public void executeOperation(String operation, String itemName, String typeItem, String menu){
@@ -451,7 +453,14 @@ public class FileListPage extends CommonPage {
 
     public void openCard(String itemName){
         Log.log(Level.FINE, "Starts: openCard for " + itemName);
-        findId(itemName + " Actions").click();
+        //waitById(15, itemName);
+        //findId(itemName + " Actions").click();
+        findId("More").click();
+        //MobileElement mobileElement = findId(itemName);
+        //mobileElement.getAttribute()
+
+        //.findElement(By.xpath("./..")).findElement(By.xpath("./..")).findElement(By.id("More")).click();
+        //findXpath("(//XCUIElementTypeButton[@name=\"More\"])[1]").click();
     }
 
     public boolean fileIsMarkedAsAvOffline(String itemName) {

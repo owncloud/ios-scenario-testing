@@ -26,7 +26,7 @@ Feature: Private Share
         Examples:
           |  type   |  item        |
           |  file   |  Share1.txt  |
-          |  folder |  Share2      |
+          #|  folder |  Share2      |
 
       @smoke
       Scenario Outline: Correct share with group

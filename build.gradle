@@ -33,6 +33,7 @@ dependencies {
     testImplementation 'org.apache.commons:commons-exec:' + apacheCommonsExecVersion
     testImplementation 'org.apache.commons:commons-lang3:' + apacheCommonsLangVersion
     testImplementation 'io.cucumber:cucumber-core:' + cucumberVersion
+    testImplementation 'io.cucumber:cucumber-picocontainer:' + cucumberVersion
 
     implementation 'net.bytebuddy:byte-buddy:' + byteBuddyVersion
     implementation 'com.google.guava:guava:' + guavaVersion

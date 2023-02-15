@@ -50,6 +50,18 @@ help()
    exit 1
 }
 
+checklogs()
+{
+  if [ ! -d "logs" ]
+  then
+    mkdir ./logs
+  else
+    echo "Logs folder already exists";
+  fi
+}
+
+checklogs
+
 while getopts "t::h" opt; do
   case $opt in
     t) tags="$OPTARG"

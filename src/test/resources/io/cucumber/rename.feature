@@ -28,6 +28,6 @@ Feature: Rename an item
     Given the following items have been created in the account
       | folder   | Photos     |
       | folder   | Documents  |
-    When Alice selects to rename the folder Photos using the Actions menu
+    When Alice selects to rename the folder Photos using the Contextual menu
     And Alice sets Documents as new name
     Then Alice should see a duplicated item error

@@ -788,16 +788,6 @@
 "Import not allowed" = "Nuk lejohet importimi";
 "Importing files through the File Provider is not allowed on this device." = "Në këtë pajisje nuk lejohet importimi i kartelave përmes Furnizuesit të Kartelave.";
 
-/* Data migration from legacy app */
-"Account Migration" = "Migrim Llogarie";
-"App Passcode" = "Frazëkalim Aplikacioni";
-"Instant Upload Settings" = "Rregullime Ngarkimesh të Menjëhershëm";
-"Migrating" = "Po migrohet";
-"Migrated" = "U migrua";
-"Failed to migrate" = "S’u arrit të migrohej";
-"Failed to access legacy user data" = "S’u arrit të hyhej te të dhëna përdoruesi të dikurshëm";
-"The app was upgraded to a new version. Below there is an overview of all migrated accounts." = "Aplikacioni u përmirësua me versionin e ri. Më poshtë ka një përmbledhje të krejt llogarive të migruara.";
-
 /* Misc. accessibility */
 "Enter multiple selection" = "Jepni përzgjedhje të shumëfishtë";
 

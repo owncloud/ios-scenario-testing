@@ -788,16 +788,6 @@
 "Import not allowed" = "Import not allowed";
 "Importing files through the File Provider is not allowed on this device." = "Importing files through the File Provider is not allowed on this device.";
 
-/* Data migration from legacy app */
-"Account Migration" = "Миграция учётной записи";
-"App Passcode" = "Код доступа приложения";
-"Instant Upload Settings" = "Настройки немедленной загрузки";
-"Migrating" = "Миграция";
-"Migrated" = "Миграция завершена";
-"Failed to migrate" = "Миграция не удалась";
-"Failed to access legacy user data" = "Не удалось получить доступ к унаследованным пользовательским данным";
-"The app was upgraded to a new version. Below there is an overview of all migrated accounts." = "Приложение было обновлено до новой версии. Ниже перечислены перенесённые учётные записи.";
-
 /* Misc. accessibility */
 "Enter multiple selection" = "Введите множественный выбор";
 

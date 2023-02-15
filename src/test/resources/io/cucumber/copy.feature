@@ -14,8 +14,8 @@ Feature: Copy item
       | folder  | copy1      |
       | folder  | Documents1 |
     When Alice selects to copy the folder copy1 using the Actions menu
-    And Alice selects Documents1 as target folder of the copy operation
-    Then Alice should see copy1 inside the folder Documents1
+    And Alice selects /Documents1 as target folder of the copy operation
+    Then Alice should see copy1 inside the folder /Documents1
     And Alice should see copy1 in the filelist
 
   Scenario: Copy an existent file to another location using the Contextual menu
@@ -23,8 +23,8 @@ Feature: Copy item
       | file    | copy2.txt  |
       | folder  | Documents2 |
     When Alice selects to copy the file copy2.txt using the Contextual menu
-    And Alice selects Documents2 as target folder of the copy operation
-    Then Alice should see copy2.txt inside the folder Documents2
+    And Alice selects /Documents2 as target folder of the copy operation
+    Then Alice should see copy2.txt inside the folder /Documents2
     And Alice should see copy2.txt in the filelist
 
   Scenario: Copy an existent item to same location is not allowed

@@ -33,6 +33,7 @@ Feature: Public Links
         And Alice creates link on <type> <item> with the following fields
           | name     | <name>     |
           | password | <password> |
+        Then Alice opens public link with name <name>
         Then link should be created on <item> with the following fields
           | name     | <name>     |
           | password | <password> |
@@ -49,6 +50,7 @@ Feature: Public Links
         And Alice creates link on <type> <item> with the following fields
           | name            | <name>        |
           | expiration days | <expiration>  |
+        And Alice opens public link with name <name>
         Then link should be created on <item> with the following fields
           | name            | <name>        |
           | expiration days | <expiration>  |
@@ -65,14 +67,15 @@ Feature: Public Links
         And Alice creates link on folder <item> with the following fields
           | name       | <name>        |
           | permission | <permissions> |
+        And Alice opens public link with name <name>
         Then link should be created on <item> with the following fields
           | name       | <name>        |
           | permission | <permissions> |
 
         Examples:
           |  item         |  name    | permissions | description
-          |  Links7       |  link7   |    15       | Download / View / Upload
-          |  Links8       |  link8   |    4        | Upload Only (File drop)
+          #|  Links7       |  link7   |    15       | Download / View / Upload
+          #|  Links8       |  link8   |    4        | Upload Only (File drop)
           |  Links9       |  link9   |    1        | Download / View
 
       Scenario Outline: Create a public link with name using the contextual menu

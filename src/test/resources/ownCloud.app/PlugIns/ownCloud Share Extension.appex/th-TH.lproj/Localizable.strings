@@ -788,16 +788,6 @@
 "Import not allowed" = "Import not allowed";
 "Importing files through the File Provider is not allowed on this device." = "Importing files through the File Provider is not allowed on this device.";
 
-/* Data migration from legacy app */
-"Account Migration" = "การย้ายบัญชี";
-"App Passcode" = "รหัสปลดล็อคของแอป";
-"Instant Upload Settings" = "การตั้งค่าการอัปโหลดแบบทันที";
-"Migrating" = "กำลังย้ายข้อมูล";
-"Migrated" = "ย้ายข้อมูลแล้ว";
-"Failed to migrate" = "ไม่สามารถย้ายข้อมูล";
-"Failed to access legacy user data" = "ไม่สามารถเข้าถึงข้อมูลผู้ใช้เดิม";
-"The app was upgraded to a new version. Below there is an overview of all migrated accounts." = "แอปได้ถูกอัปเกรดเป็นเวอร์ชันใหม่ ด้านล่างนี้คือภาพรวมของบัญชีที่ถูกย้ายข้อมูลทั้งหมด";
-
 /* Misc. accessibility */
 "Enter multiple selection" = "สามารถเลือกได้หลายรายการ";
 

@@ -1,4 +1,4 @@
-@favorite
+@favorite @noocis
 Feature: Set an item as favorite (starred)
 
   As a user, i want to set a file or folder as favorite

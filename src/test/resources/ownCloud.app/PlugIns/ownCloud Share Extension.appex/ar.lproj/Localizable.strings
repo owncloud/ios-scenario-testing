@@ -788,16 +788,6 @@
 "Import not allowed" = "Import not allowed";
 "Importing files through the File Provider is not allowed on this device." = "Importing files through the File Provider is not allowed on this device.";
 
-/* Data migration from legacy app */
-"Account Migration" = "ترحيل الحساب";
-"App Passcode" = "رمز مرور التطبيق";
-"Instant Upload Settings" = "إعدادات التحميل الفوري";
-"Migrating" = "الترحيل";
-"Migrated" = "تم ترحيله";
-"Failed to migrate" = "فشل في الترحيل";
-"Failed to access legacy user data" = "فشل في الوصول إلى بيانات المستخدم القديمة";
-"The app was upgraded to a new version. Below there is an overview of all migrated accounts." = "تمت ترقية التطبيق إلى إصدار جديد. يوجد أدناه نظرة عامة على جميع الحسابات التي تم ترحيلها.";
-
 /* Misc. accessibility */
 "Enter multiple selection" = "أدخل تحديدات متعددة";
 

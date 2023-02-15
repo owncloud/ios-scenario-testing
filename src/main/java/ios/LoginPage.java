@@ -1,8 +1,8 @@
 package ios;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.support.PageFactory;
 
-import java.io.IOException;
 import java.util.List;
 import java.util.logging.Level;
 
@@ -40,7 +40,10 @@ public class LoginPage extends CommonPage{
     @iOSXCUITFindBy(accessibility = "access-files")
     private List<MobileElement> bookmarkCells;
 
-    @iOSXCUITFindBy(accessibility = "Personal")
+    //@iOSXCUITFindBy(accessibility = "Personal")
+    //private MobileElement personal;
+
+    @iOSXCUITFindBy(xpath = "//XCUIElementTypeStaticText[@name=\"Personal\"]")
     private MobileElement personal;
 
     @iOSXCUITFindBy(accessibility = "Continue")
@@ -55,8 +58,15 @@ public class LoginPage extends CommonPage{
     }
 
     public boolean loggedIn(){
-        Log.log(Level.FINE, "Logged: " + bookmarkCells.size());
-        return bookmarkCells.size() > 0;
+        driver.findElement(By.id("Back")).click();
+        if (!findListId("Alice").isEmpty()) {
+            Log.log(Level.FINE, "Logged IN");
+            return true;
+        } else {
+            Log.log(Level.FINE, "Logged OUT");
+            return false;
+        }
+        //return bookmarkCells.size() > 0;
     }
 
     public void typeURL(){
@@ -71,12 +81,8 @@ public class LoginPage extends CommonPage{
         approveButton.click();
     }
 
-    public void cancelIssue(){
-        cancelButton.click();
-    }
-
     public void skipAddServer(){
-        addServer.click();
+        driver.findElement(By.id("Add")).click();
     }
 
     public void typeCredentials(String username, String password){
@@ -95,11 +101,11 @@ public class LoginPage extends CommonPage{
         //assuming OIDC == oCIS. Bad, but works ftm
         if (authType.equals("OIDC")) {
             personal.click();
+        } else {
         }
     }
 
     public void selectFirstBookmark() {
-        bookmarkCell.click();
-        selectDrive();
+        findId("Alice").click();
     }
 }

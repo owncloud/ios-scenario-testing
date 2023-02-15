@@ -3,29 +3,32 @@ package io.cucumber;
 import java.util.logging.Level;
 
 import io.cucumber.java.en.Given;
-import ios.LoginPage;
 import utils.LocProperties;
 import utils.log.Log;
 
 public class LoginSteps {
 
-    //Involved pages
-    private LoginPage loginPage = new LoginPage();
+    private World world;
+
+    public LoginSteps(World world) {
+        this.world = world;
+    }
 
     @Given("user {word} is logged in")
     public void logged(String userName)
             throws Throwable {
-        String stepName = new Object(){}.getClass().getEnclosingMethod().getName().toUpperCase();
+        String stepName = new Object() {
+        }.getClass().getEnclosingMethod().getName().toUpperCase();
         Log.log(Level.FINE, "----STEP----: " + stepName);
-        if (!loginPage.loggedIn()) {
+        if (!world.loginPage.loggedIn()) {
             String password = LocProperties.getProperties().getProperty("passw1");
-            loginPage.skipAddServer();
-            loginPage.typeURL();
-            loginPage.typeCredentials(userName, password);
-            loginPage.submitLogin();
-            loginPage.selectFirstBookmark();
-        } else { //Selecting first account
-            loginPage.selectFirstBookmark();
+            world.loginPage.skipAddServer();
+            world.loginPage.typeURL();
+            world.loginPage.typeCredentials(userName, password);
+            world.loginPage.submitLogin();
+            world.loginPage.selectDrive();
+        } else {
+            world.loginPage.selectFirstBookmark();
         }
     }
 }

@@ -3,7 +3,6 @@ package io.cucumber;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
@@ -13,24 +12,15 @@ import io.cucumber.java.ParameterType;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import ios.FileListPage;
-import ios.FolderPickerPage;
-import ios.InputNamePage;
-import utils.api.FilesAPI;
 import utils.entities.OCFile;
 import utils.log.Log;
 
 public class FileListSteps {
 
-    //Involved pages
-    protected FileListPage fileListPage = new FileListPage();
-    protected InputNamePage inputNamePage = new InputNamePage();
-    protected FolderPickerPage folderPickerPage = new FolderPickerPage();
+    private World world;
 
-    //APIs to call
-    protected FilesAPI filesAPI = new FilesAPI();
-
-    public FileListSteps() throws IOException {
+    public FileListSteps(World world) {
+        this.world = world;
     }
 
     @ParameterType("item|file|folder")
@@ -56,11 +46,11 @@ public class FileListSteps {
         for (List<String> rows : listItems) {
             String type = rows.get(0);
             String name = rows.get(1);
-            if (!filesAPI.itemExist(name)) {
+            if (!world.filesAPI.itemExist(name)) {
                 if (type.equals("folder") || type.equals("item")) {
-                    filesAPI.createFolder(name);
+                    world.filesAPI.createFolder(name);
                 } else if (type.equals("file")) {
-                    filesAPI.pushFile(name);
+                    world.filesAPI.pushFile(name);
                 }
             }
         }
@@ -71,11 +61,11 @@ public class FileListSteps {
             throws Throwable {
         String stepName = new Object(){}.getClass().getEnclosingMethod().getName().toUpperCase();
         Log.log(Level.FINE, "----STEP----: " + stepName);
-        if (!filesAPI.itemExist(folderName)) {
-            filesAPI.createFolder(folderName);
+        if (!world.filesAPI.itemExist(folderName)) {
+            world.filesAPI.createFolder(folderName);
         }
         for (int i=0; i<files; i++){
-            filesAPI.pushFile(folderName+"/file_"+i+".txt");
+            world.filesAPI.pushFile(folderName+"/file_"+i+".txt");
         }
     }
 
@@ -84,14 +74,14 @@ public class FileListSteps {
             throws Throwable {
         String stepName = new Object(){}.getClass().getEnclosingMethod().getName().toUpperCase();
         Log.log(Level.FINE, "----STEP----: " + stepName);
-        filesAPI.setFavorite(itemName);
+        world.filesAPI.setFavorite(itemName);
     }
 
     @Given("item {word} is visible")
     public void item_is_visible(String itemName){
         String stepName = new Object(){}.getClass().getEnclosingMethod().getName().toUpperCase();
         Log.log(Level.FINE, "----STEP----: " + stepName);
-        fileListPage.itemInScreen(itemName);
+        world.fileListPage.itemInScreen(itemName);
     }
 
     @When("Alice opens a private link pointing to {word} with scheme {word}")
@@ -99,9 +89,9 @@ public class FileListSteps {
             throws Throwable {
         String stepName = new Object(){}.getClass().getEnclosingMethod().getName().toUpperCase();
         Log.log(Level.FINE, "----STEP----: " + stepName);
-        OCFile item = filesAPI.listItems(filePath).get(0);
-        String privateLink = fileListPage.getPrivateLink(scheme, item.getPrivateLink());
-        fileListPage.openPrivateLink(privateLink);
+        OCFile item = world.filesAPI.listItems(filePath).get(0);
+        String privateLink = world.fileListPage.getPrivateLink(scheme, item.getPrivateLink());
+        world.fileListPage.openPrivateLink(privateLink);
     }
 
     @When("Alice opens a private link pointing to non-existing item")
@@ -109,28 +99,28 @@ public class FileListSteps {
             throws Throwable {
         String stepName = new Object(){}.getClass().getEnclosingMethod().getName().toUpperCase();
         Log.log(Level.FINE, "----STEP----: " + stepName);
-        fileListPage.openFakePrivateLink();
+        world.fileListPage.openFakePrivateLink();
     }
 
     @When("Alice selects the option Create Folder")
     public void create_folder() {
         String stepName = new Object(){}.getClass().getEnclosingMethod().getName().toUpperCase();
         Log.log(Level.FINE, "----STEP----: " + stepName);
-        fileListPage.createFolder();
+        world.fileListPage.createFolder();
     }
 
     @When("Alice selects the option upload from photo gallery")
     public void upload_gallery() {
         String stepName = new Object(){}.getClass().getEnclosingMethod().getName().toUpperCase();
         Log.log(Level.FINE, "----STEP----: " + stepName);
-        fileListPage.uploadFromGallery();
+        world.fileListPage.uploadFromGallery();
     }
 
     @When("Alice selects a photo")
     public void select_photo() {
         String stepName = new Object(){}.getClass().getEnclosingMethod().getName().toUpperCase();
         Log.log(Level.FINE, "----STEP----: " + stepName);
-        fileListPage.selectPhotoGallery();
+        world.fileListPage.selectPhotoGallery();
     }
 
     @When("Alice selects/sets to/as {operation} the {itemtype} {word} using the {word} menu")
@@ -138,74 +128,74 @@ public class FileListSteps {
             throws InterruptedException {
         String stepName = new Object(){}.getClass().getEnclosingMethod().getName().toUpperCase();
         Log.log(Level.FINE, "----STEP----: " + stepName);
-        fileListPage.refreshBySwipe();
-        fileListPage.executeOperation(operation, itemName, typeItem, menu);
+        world.fileListPage.refreshBySwipe();
+        world.fileListPage.executeOperation(operation, itemName, typeItem, menu);
     }
 
     @When ("Alice selects {word} as target folder of the {word} operation")
     public void select_target_folder(String targetFolder, String operation) {
         String stepName = new Object(){}.getClass().getEnclosingMethod().getName().toUpperCase();
         Log.log(Level.FINE, "----STEP----: " + stepName);
-        folderPickerPage.selectFolder(targetFolder);
-        folderPickerPage.accept(operation);
+        world.folderPickerPage.selectFolder(targetFolder, operation);
+        world.folderPickerPage.accept(operation);
     }
 
     @When("Alice confirms the deletion")
     public void accept_deletion(){
         String stepName = new Object(){}.getClass().getEnclosingMethod().getName().toUpperCase();
         Log.log(Level.FINE, "----STEP----: " + stepName);
-        fileListPage.acceptDeletion();
+        world.fileListPage.acceptDeletion();
     }
 
     @When("Alice sets {word} as new name")
     public void set_new_name(String itemName) {
         String stepName = new Object(){}.getClass().getEnclosingMethod().getName().toUpperCase();
         Log.log(Level.FINE, "----STEP----: " + stepName);
-        inputNamePage.setItemName(itemName);
+        world.inputNamePage.setItemName(itemName);
     }
 
     @When("Alice closes the Actions menu")
     public void close_actions_menu() {
         String stepName = new Object(){}.getClass().getEnclosingMethod().getName().toUpperCase();
         Log.log(Level.FINE, "----STEP----: " + stepName);
-        fileListPage.closeActions();
+        world.fileListPage.closeActions();
     }
 
     @When("Alice opens the Actions menu of {word}")
     public void open_actions_menu(String itemName) throws InterruptedException{
         String stepName = new Object(){}.getClass().getEnclosingMethod().getName().toUpperCase();
         Log.log(Level.FINE, "----STEP----: " + stepName);
-        fileListPage.selectItemListActions(itemName);
+        world.fileListPage.selectItemListActions(itemName);
     }
 
     @When("Alice browses into folder {word}")
     public void browses_into(String itemName) {
         String stepName = new Object(){}.getClass().getEnclosingMethod().getName().toUpperCase();
         Log.log(Level.FINE, "----STEP----: " + stepName);
-        fileListPage.browse(itemName);
+        world.fileListPage.browse(itemName);
     }
 
     @When("Alice browses to root folder")
     public void browses_root() {
         String stepName = new Object(){}.getClass().getEnclosingMethod().getName().toUpperCase();
         Log.log(Level.FINE, "----STEP----: " + stepName);
-        fileListPage.browseRoot();
+        world.fileListPage.browseRoot();
     }
 
     @When("Alice selects to paste into the folder")
     public void paste_item() {
         String stepName = new Object(){}.getClass().getEnclosingMethod().getName().toUpperCase();
         Log.log(Level.FINE, "----STEP----: " + stepName);
-        fileListPage.openThreeDotButton();
-        fileListPage.pasteAction();
-        fileListPage.browseRoot();
+        world.fileListPage.openThreeDotButton();
+        world.fileListPage.pasteAction();
+        world.fileListPage.browseRoot();
     }
 
     @When("Alice opens the {collection} collection of Quick Access")
     public void open_collection_quick_access(String collection) {
         String stepName = new Object(){}.getClass().getEnclosingMethod().getName().toUpperCase();
         Log.log(Level.FINE, "----STEP----: " + stepName);
-        fileListPage.openCollection(collection);
+        world.fileListPage.openCollection(collection);
     }
 
     @Then("Alice should see {word} in the filelist")
@@ -213,16 +203,16 @@ public class FileListSteps {
             throws Throwable {
         String stepName = new Object(){}.getClass().getEnclosingMethod().getName().toUpperCase();
         Log.log(Level.FINE, "----STEP----: " + stepName);
-        assertTrue(fileListPage.isItemInList(itemName));
-        assertTrue(filesAPI.itemExist(itemName));
+        assertTrue(world.fileListPage.isItemInList(itemName));
+        assertTrue(world.filesAPI.itemExist(itemName));
     }
 
     @Then("Alice should not see {word} in the filelist anymore")
     public void item_not_in_list(String itemName) throws Throwable {
         String stepName = new Object(){}.getClass().getEnclosingMethod().getName().toUpperCase();
         Log.log(Level.FINE, "----STEP----: " + stepName);
-        assertTrue(fileListPage.isNotItemInList(itemName));
-        assertFalse(filesAPI.itemExist(itemName));
+        assertTrue(world.fileListPage.isNotItemInList(itemName));
+        assertFalse(world.filesAPI.itemExist(itemName));
     }
 
     @Then("Alice should see {word} in Quick Access")
@@ -230,7 +220,7 @@ public class FileListSteps {
             throws Throwable {
         String stepName = new Object(){}.getClass().getEnclosingMethod().getName().toUpperCase();
         Log.log(Level.FINE, "----STEP----: " + stepName);
-        assertTrue(fileListPage.isItemInScreen(itemName));
+        assertTrue(world.fileListPage.isItemInScreen(itemName));
     }
 
     @Then("{itemtype} {word} is opened in the app")
@@ -238,7 +228,7 @@ public class FileListSteps {
             throws Throwable {
         String stepName = new Object(){}.getClass().getEnclosingMethod().getName().toUpperCase();
         Log.log(Level.FINE, "----STEP----: " + stepName);
-        assertTrue(fileListPage.itemOpened(itemType, itemName));
+        assertTrue(world.fileListPage.itemOpened(itemType, itemName));
     }
 
     @Then("Alice should see the photo in the filelist")
@@ -246,8 +236,8 @@ public class FileListSteps {
             throws Throwable {
         String stepName = new Object(){}.getClass().getEnclosingMethod().getName().toUpperCase();
         Log.log(Level.FINE, "----STEP----: " + stepName);
-        ArrayList<OCFile> list = filesAPI.listItems("");
-        String fileUploaded = fileListPage.photoUploaded(list);
+        ArrayList<OCFile> list = world.filesAPI.listItems("");
+        String fileUploaded = world.fileListPage.photoUploaded(list);
         assertFalse(fileUploaded.isEmpty());
     }
 
@@ -256,25 +246,25 @@ public class FileListSteps {
             throws Throwable {
         String stepName = new Object(){}.getClass().getEnclosingMethod().getName().toUpperCase();
         Log.log(Level.FINE, "----STEP----: " + stepName);
-        assertTrue(fileListPage.isItemInList(itemName + " 2"));
-        assertTrue(filesAPI.itemExist(itemName+ " 2"));
+        assertTrue(world.fileListPage.isItemInList(itemName + " 2"));
+        assertTrue(world.filesAPI.itemExist(itemName+ " 2"));
     }
 
     @Then("Alice should see {word} inside the folder {word}")
     public void item_inside_folder(String itemName, String targetFolder) throws Throwable {
         String stepName = new Object(){}.getClass().getEnclosingMethod().getName().toUpperCase();
         Log.log(Level.FINE, "----STEP----: " + stepName);
-        fileListPage.browse(targetFolder);
-        assertTrue(fileListPage.isItemInList(itemName));
-        assertTrue(filesAPI.itemExist(targetFolder+"/"+itemName));
-        fileListPage.browseRoot();
+        world.fileListPage.browse(targetFolder);
+        assertTrue(world.fileListPage.isItemInList(itemName));
+        assertTrue(world.filesAPI.itemExist(targetFolder+"/"+itemName));
+        world.fileListPage.browseRoot();
     }
 
     @Then("Alice should see an empty list of files")
     public void empty_list_files() {
         String stepName = new Object(){}.getClass().getEnclosingMethod().getName().toUpperCase();
         Log.log(Level.FINE, "----STEP----: " + stepName);
-        assertTrue(fileListPage.isListEmpty());
+        assertTrue(world.fileListPage.isListEmpty());
         //assertFalse(filesAPI.itemExist(itemName));
     }
 
@@ -282,21 +272,21 @@ public class FileListSteps {
     public void item_not_quickaccess(String itemName) {
         String stepName = new Object(){}.getClass().getEnclosingMethod().getName().toUpperCase();
         Log.log(Level.FINE, "----STEP----: " + stepName);
-        assertFalse(fileListPage.isItemInScreen(itemName));
+        assertFalse(world.fileListPage.isItemInScreen(itemName));
     }
 
     @Then("Alice should see the item {word} as av.offline")
     public void item_as_avoffline(String itemName) {
         String stepName = new Object(){}.getClass().getEnclosingMethod().getName().toUpperCase();
         Log.log(Level.FINE, "----STEP----: " + stepName);
-        assertTrue(fileListPage.fileIsMarkedAsAvOffline(itemName));
+        assertTrue(world.fileListPage.fileIsMarkedAsAvOffline(itemName));
     }
 
     @Then("Alice should not see the item {word} as av.offline")
     public void item_not_avoffline(String itemName) {
         String stepName = new Object(){}.getClass().getEnclosingMethod().getName().toUpperCase();
         Log.log(Level.FINE, "----STEP----: " + stepName);
-        assertFalse(fileListPage.fileIsMarkedAsAvOffline(itemName));
+        assertFalse(world.fileListPage.fileIsMarkedAsAvOffline(itemName));
     }
 
     @Then("the list of files in {word} folder should match with the server")
@@ -304,9 +294,9 @@ public class FileListSteps {
             throws Throwable {
         String stepName = new Object(){}.getClass().getEnclosingMethod().getName().toUpperCase();
         Log.log(Level.FINE, "----STEP----: " + stepName);
-        fileListPage.refreshBySwipe();
-        ArrayList<OCFile> listServer = filesAPI.listItems(path);
-        assertTrue(fileListPage.displayedList(path, listServer));
+        world.fileListPage.refreshBySwipe();
+        ArrayList<OCFile> listServer = world.filesAPI.listItems(path);
+        assertTrue(world.fileListPage.displayedList(path, listServer));
     }
 
     @Then("{itemtype} {word} should be set as favorite")
@@ -314,8 +304,8 @@ public class FileListSteps {
             throws Throwable {
         Log.log(Level.FINE, "----STEP----: " +
                 new Object(){}.getClass().getEnclosingMethod().getName().toUpperCase() + ": " + itemName);
-        assertTrue(fileListPage.itemIsFavorite(itemName));
-        assertTrue(filesAPI.isFavorite(itemName));
+        assertTrue(world.fileListPage.itemIsFavorite(itemName));
+        assertTrue(world.filesAPI.isFavorite(itemName));
     }
 
     @Then("{itemtype} {word} should be set as unfavorite")
@@ -323,22 +313,22 @@ public class FileListSteps {
             throws Throwable {
         Log.log(Level.FINE, "----STEP----: " +
                 new Object(){}.getClass().getEnclosingMethod().getName().toUpperCase() + ": " + itemName);
-        assertFalse(fileListPage.itemIsFavorite(itemName));
-        assertFalse(filesAPI.isFavorite(itemName));
+        assertFalse(world.fileListPage.itemIsFavorite(itemName));
+        assertFalse(world.filesAPI.isFavorite(itemName));
     }
 
     @Then("Alice should see a link resolution error")
     public void link_resolution_error() {
         String stepName = new Object(){}.getClass().getEnclosingMethod().getName().toUpperCase();
         Log.log(Level.FINE, "----STEP----: " + stepName);
-        assertTrue(fileListPage.privateLinkFailed());
+        assertTrue(world.fileListPage.privateLinkFailed());
     }
 
     @Then("Alice should see a duplicated item error")
     public void folder_creation_error() {
         String stepName = new Object(){}.getClass().getEnclosingMethod().getName().toUpperCase();
         Log.log(Level.FINE, "----STEP----: " + stepName);
-        assertTrue(inputNamePage.errorDuplicated());
+        assertTrue(world.inputNamePage.errorDuplicated());
     }
 
     @Then("{word} action should not be allowed")
@@ -346,9 +336,9 @@ public class FileListSteps {
         String stepName = new Object(){}.getClass().getEnclosingMethod().getName().toUpperCase();
         Log.log(Level.FINE, "----STEP----: " + stepName);
             if (action.equals("copy")){
-                assertFalse(folderPickerPage.actionEnabled("Copy here"));
+                assertFalse(world.folderPickerPage.actionEnabled("Copy here"));
             } else if (action.equals("move")){
-                assertFalse(folderPickerPage.actionEnabled("Move here"));
+                assertFalse(world.folderPickerPage.actionEnabled("Move here"));
             }
     }
 }
