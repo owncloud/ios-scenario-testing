@@ -74,8 +74,8 @@ Feature: Public Links
 
         Examples:
           |  item         |  name    | permissions | description
-          #|  Links7       |  link7   |    15       | Download / View / Upload
-          #|  Links8       |  link8   |    4        | Upload Only (File drop)
+          |  Links7       |  link7   |    15       | Download / View / Upload
+          |  Links8       |  link8   |    4        | Upload Only (File drop)
           |  Links9       |  link9   |    1        | Download / View
 
       Scenario Outline: Create a public link with name using the contextual menu

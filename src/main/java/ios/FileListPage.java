@@ -38,6 +38,9 @@ public class FileListPage extends CommonPage {
     @iOSXCUITFindBy(id="Files")
     private MobileElement browseRoot;
 
+    @iOSXCUITFindBy(id="Back")
+    private MobileElement backArrow;
+
     @iOSXCUITFindBy(id="Close actions menu")
     private MobileElement closeActions;
 
@@ -46,6 +49,9 @@ public class FileListPage extends CommonPage {
 
     @iOSXCUITFindBy(id="Personal")
     private MobileElement personal;
+
+    @iOSXCUITFindBy(xpath = "(//XCUIElementTypeButton[@name=\"sidebar.leading\"])[2]")
+    private MobileElement sideMenuOpener;
 
     @iOSXCUITFindBy(xpath="//XCUIElementTypeStaticText[@name=\"Quick Access\"]")
     private MobileElement quickAccess;
@@ -164,10 +170,10 @@ public class FileListPage extends CommonPage {
 
     public void openCollection(String collection){
         Log.log(Level.FINE, "Starts: Open Quick Access collection: " + collection);
-        findId("Back").click();
+        String collectionXpath = "//XCUIElementTypeStaticText[@name=\"" + collection + "\"]";
+        sideMenuOpener.click();
         quickAccess.click();
-        findId(collection).click();
-        //findId(collection+"-collection-row").click();
+        findXpath(collectionXpath).click();
     }
 
     public void executeOperation(String operation, String itemName, String typeItem, String menu){
@@ -206,13 +212,7 @@ public class FileListPage extends CommonPage {
 
     public boolean isListEmpty() {
         Log.log(Level.FINE, "Starts: Check if filelist is empty");
-        if (authType.equals("OIDC")){
-            Log.log(Level.FINE, "OCIS list");
-            return !findListId("No contents").isEmpty();
-        } else {
-            Log.log(Level.FINE, "No OCIS list");
-            return !findListId("Empty folder").isEmpty();
-        }
+        return !findListId("No contents").isEmpty();
     }
 
     public boolean isItemInScreen(String itemName) {
@@ -280,7 +280,8 @@ public class FileListPage extends CommonPage {
             return findXpath("//XCUIElementTypeStaticText[@name=\"" + itemName + "\"]").isDisplayed();
         } else if (itemType.equals("folder")) {
             Log.log(Level.FINE, "Opening folder");
-            return findId("show-paths-button").isDisplayed();
+            return findXpath("//XCUIElementTypeStaticText[@name=\"" + itemName + "\"]").isDisplayed();
+            //return findId("show-paths-button").isDisplayed();
         }
         return false;
     }
@@ -438,12 +439,8 @@ public class FileListPage extends CommonPage {
 
     public void browseRoot(){
         Log.log(Level.FINE, "Starts: browse to root");
-        //Different labels in oCIS - oC10
-        if (authType.equals("OIDC")) {
-            personal.click();
-        } else {
-            browseRoot.click();
-        }
+        //assuming 1st level... to improve
+        backArrow.click();
     }
 
     public void acceptDeletion(){

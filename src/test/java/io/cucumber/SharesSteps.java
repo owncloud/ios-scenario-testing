@@ -3,7 +3,6 @@ package io.cucumber;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
-import java.io.IOException;
 import java.util.List;
 import java.util.logging.Level;
 
@@ -12,11 +11,7 @@ import io.cucumber.java.ParameterType;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import ios.PrivateSharePage;
-import ios.SharePage;
-import ios.SharePermissionsPage;
 import utils.LocProperties;
-import utils.api.ShareAPI;
 import utils.entities.OCShare;
 import utils.log.Log;
 

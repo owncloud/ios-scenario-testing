@@ -40,12 +40,11 @@ public class PublicLinkPage extends SharePage {
 
     public void openPublicLink(String linkName){
         Log.log(Level.FINE, "Starts: open public link: " + linkName);
-        waitByXpath(5, xpath_header);
         findId(linkName).click();
+        waitById(5, linkName);
     }
     public boolean isItemInListLinks(String itemName) {
         Log.log(Level.FINE, "Starts: link in list: " + itemName);
-        waitByXpath(5, xpath_header);
         return !findListId(itemName).isEmpty();
     }
 

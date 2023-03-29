@@ -46,6 +46,9 @@ public class LoginPage extends CommonPage{
     @iOSXCUITFindBy(xpath = "//XCUIElementTypeStaticText[@name=\"Personal\"]")
     private MobileElement personal;
 
+    @iOSXCUITFindBy(xpath = "//XCUIElementTypeStaticText[@name=\"Files\"]")
+    private MobileElement files;
+
     @iOSXCUITFindBy(accessibility = "Continue")
     private MobileElement continueSafari;
 
@@ -58,7 +61,6 @@ public class LoginPage extends CommonPage{
     }
 
     public boolean loggedIn(){
-        driver.findElement(By.id("Back")).click();
         if (!findListId("Alice").isEmpty()) {
             Log.log(Level.FINE, "Logged IN");
             return true;
@@ -66,7 +68,6 @@ public class LoginPage extends CommonPage{
             Log.log(Level.FINE, "Logged OUT");
             return false;
         }
-        //return bookmarkCells.size() > 0;
     }
 
     public void typeURL(){
@@ -102,6 +103,7 @@ public class LoginPage extends CommonPage{
         if (authType.equals("OIDC")) {
             personal.click();
         } else {
+            files.click();
         }
     }
 

@@ -1,4 +1,4 @@
-@privatelink @oC10
+@privatelink @noocis
 Feature: Private Links
 
   As a user
@@ -15,9 +15,9 @@ Feature: Private Links
     Then <type> <name> is opened in the app
 
     Examples:
-      | type    |  name             |
-      | file    | privateLink1.pdf  |
-      | folder  | privateLink2      |
+      | type   | name             |
+      | file   | privateLink1.pdf |
+      | folder | privateLink2     |
 
   Scenario: Item not existing
     When Alice opens a private link pointing to non-existing item

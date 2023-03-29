@@ -1,6 +1,5 @@
 package ios;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.support.PageFactory;
 
 import java.util.logging.Level;
@@ -18,14 +17,14 @@ public class FolderPickerPage extends CommonPage {
     @iOSXCUITFindBy(id="client.folder-create")
     private MobileElement createFolder;
 
-    @iOSXCUITFindBy(id="person")
+    @iOSXCUITFindBy(xpath="(//XCUIElementTypeCell[@name=\"Personal\"])[2]/XCUIElementTypeOther[1]/XCUIElementTypeOther")
     private MobileElement personalList;
+
+    @iOSXCUITFindBy(xpath="(//XCUIElementTypeCell[@name=\"Files\"])[2]/XCUIElementTypeOther[1]/XCUIElementTypeOther")
+    private MobileElement filesList;
 
     private String xpath_move = "//XCUIElementTypeButton[@name=\"Move here\"]";
     private String xpath_copy = "//XCUIElementTypeButton[@name=\"Copy here\"]";
-    private String xpath_picker = "//XCUIElementTypeApplication[@name=\"ownCloud\"]/XCUIElementTypeWindow[1]/" +
-            "XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeOther/" +
-            "XCUIElementTypeOther/XCUIElementTypeOther";
 
     public FolderPickerPage() {
         super();
@@ -34,13 +33,18 @@ public class FolderPickerPage extends CommonPage {
 
     public void selectFolder(String targetFolder, String action){
         Log.log(Level.FINE, "Start: Select folder from picker: " + targetFolder);
-        if (action.equals("copy")) { //Complete with oCIS, different behaviour
-            personalList.click();
+        if (!authType.equals("OIDC")) {
+            Log.log(Level.FINE, "Not OIDC, just selecting the folder");
+            filesList.click();
+        } else {
+            if (action.equals("copy")){
+                Log.log(Level.FINE, "OIDC with Copy = Personal");
+                personalList.click();
+            }
         }
         if (!targetFolder.equals("/")) { //If it is root, nothing to do
             if (!targetFolder.contains("/")) { //If it does not contain "/", just browse to next level
-            findXpath(xpath_picker)
-                    .findElement(By.xpath("//XCUIElementTypeCell[@name=\"" + targetFolder + "\"]")).click();
+                findXpath("(//XCUIElementTypeStaticText[@name=\"" + targetFolder + "\"])[2]").click();
             } else { //browsing to deeper
                 browseToFolder(targetFolder);
             }

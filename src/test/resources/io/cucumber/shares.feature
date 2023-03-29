@@ -24,9 +24,9 @@ Feature: Private Share
           | sharee | Bob |
 
         Examples:
-          |  type   |  item        |
-          |  file   |  Share1.txt  |
-          #|  folder |  Share2      |
+          | type   | item       |
+          | file   | Share1.txt |
+          | folder | Share2     |
 
       @smoke
       Scenario Outline: Correct share with group
@@ -56,25 +56,9 @@ Feature: Private Share
           | sharee | Bob |
 
         Examples:
-          |  type   |  item        |
-          |  file   |  Share5.txt  |
-          |  folder |  Share6      |
-
-
-      # Better solution needed to share with other server
-      #@federated
-      #Scenario Outline: Correct federated share
-      #  Given the following items have been created in the account
-      #    | <type>  | <item>  |
-      #  When Alice selects to share the <type> <item> using the Actions menu
-      #  And Alice selects user demo@demo.owncloud.com as sharee with default permissions
-      #  Then share should be created on <item> with the following fields
-      #    | sharee | demo@demo.owncloud.com |
-
-      #  Examples:
-      #    |  type   |  item        |
-      #    |  file   |  Share7.txt  |
-      #    |  folder |  Share8      |
+          | type   | item       |
+          | file   | Share5.txt |
+          | folder | Share6     |
 
     @editshare
     Rule: Edit an existing share
@@ -98,48 +82,48 @@ Feature: Private Share
         # SHARE -> 16
 
         Examples:
-          |  item     |   user  | permissions |
-          |  Share9   |   Bob   |   1         |
-          |  Share10  |   Bob   |   9         |
-          |  Share11  |   Bob   |   13        |
-          |  Share12  |   Bob   |   17        |
+          | item    | user | permissions |
+          | Share7  | Bob  | 1           |
+          | Share8  | Bob  | 9           |
+          | Share9  | Bob  | 13          |
+          | Share10 | Bob  | 17          |
 
     @resharing
     Rule: Resharing
 
       Scenario: Reshare allowed
         Given the following items have been created in the account
-          | file  | Share13.txt  |
-        When Alice selects to share the file Share13.txt using the Actions menu
+          | file | Share11.txt |
+        When Alice selects to share the file Share11.txt using the Actions menu
         And Alice selects the following user as sharee with default permissions
           | sharee | Bob         |
           | email  | bob@own.com |
-        And Bob has reshared file Share13.txt with Charles with permissions 31
-        Then user Bob should have access to Share13.txt
-        And user Charles should have access to Share13.txt
+        And Bob has reshared file Share11.txt with Charles with permissions 31
+        Then user Bob should have access to Share11.txt
+        And user Charles should have access to Share11.txt
         And share should be created on Share13.txt with the following fields
           | sharee  | Bob       |
           | sharee  | Charles   |
 
       Scenario: Reshare not allowed
         Given the following items have been created in the account
-          | file  | Share14.txt  |
-        When Alice selects to share the file Share14.txt using the Actions menu
+          | file | Share12.txt |
+        When Alice selects to share the file Share12.txt using the Actions menu
         And Alice selects the following user as sharee without share permission
           | sharee | Bob         |
           | email  | bob@own.com |
         And Bob has reshared file Share14.txt with Charles with permissions 31
-        Then user Bob should have access to Share14.txt
-        But user Charles should not have access to Share14.txt
+        Then user Bob should have access to Share12.txt
+        But user Charles should not have access to Share12.txt
 
     @deleteshare
     Rule: Delete an existing share
 
       Scenario: Delete existing share on folder
         Given the following items have been created in the account
-          | folder  | Share15  |
-        And Alice has shared folder Share15 with Bob with permissions 31
+          | folder | Share13 |
+        And Alice has shared folder Share13 with Bob with permissions 31
         When Alice selects to edit share the folder Share15 using the Actions menu
         And Alice deletes the share with Bob
-        Then user Bob should not have access to Share15
-        And Share15 should not be shared anymore with Bob
+        Then user Bob should not have access to Share13
+        And Share13 should not be shared anymore with Bob

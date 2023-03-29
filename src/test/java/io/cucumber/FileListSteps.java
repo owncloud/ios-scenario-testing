@@ -211,6 +211,7 @@ public class FileListSteps {
     public void item_not_in_list(String itemName) throws Throwable {
         String stepName = new Object(){}.getClass().getEnclosingMethod().getName().toUpperCase();
         Log.log(Level.FINE, "----STEP----: " + stepName);
+        world.fileListPage.browseRoot();
         assertTrue(world.fileListPage.isNotItemInList(itemName));
         assertFalse(world.filesAPI.itemExist(itemName));
     }
@@ -257,7 +258,6 @@ public class FileListSteps {
         world.fileListPage.browse(targetFolder);
         assertTrue(world.fileListPage.isItemInList(itemName));
         assertTrue(world.filesAPI.itemExist(targetFolder+"/"+itemName));
-        world.fileListPage.browseRoot();
     }
 
     @Then("Alice should see an empty list of files")
@@ -335,10 +335,10 @@ public class FileListSteps {
     public void action_not_allowed(String action) {
         String stepName = new Object(){}.getClass().getEnclosingMethod().getName().toUpperCase();
         Log.log(Level.FINE, "----STEP----: " + stepName);
-            if (action.equals("copy")){
-                assertFalse(world.folderPickerPage.actionEnabled("Copy here"));
-            } else if (action.equals("move")){
-                assertFalse(world.folderPickerPage.actionEnabled("Move here"));
-            }
+        if (action.equals("copy")){
+            assertFalse(world.folderPickerPage.actionEnabled("Copy here"));
+        } else if (action.equals("move")){
+            assertFalse(world.folderPickerPage.actionEnabled("Move here"));
+        }
     }
 }

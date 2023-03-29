@@ -8,22 +8,22 @@ Feature: Move item
   Background: User is logged in
     Given user Alice is logged in
 
-  @smoke @ignore
-  Scenario: Move an existent folder to another location using the Actions menu
+  @smoke
+  Scenario: Move an existent folder to another location using the Contextual menu
     Given the following items have been created in the account
       | folder   | move1       |
       | folder   | Documents1  |
-    When Alice selects to move the folder move1 using the Actions menu
+    When Alice selects to move the folder move1 using the Contextual menu
     And Alice selects Documents1 as target folder of the move operation
     Then Alice should not see move1 in the filelist anymore
     And Alice should see move1 inside the folder Documents1
 
-  Scenario: Move an existent folder to another location using the Contextual menu
+  Scenario: Move an existent file to another location using the Contextual menu
     Given the following items have been created in the account
       | file    | move2.txt   |
       | folder  | Documents3  |
     When Alice selects to move the file move2.txt using the Contextual menu
-    And Alice selects /Documents3 as target folder of the move operation
+    And Alice selects Documents3 as target folder of the move operation
     Then Alice should not see move2.txt in the filelist anymore
     And Alice should see move2.txt inside the folder Documents3
 

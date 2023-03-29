@@ -27,7 +27,7 @@ Feature: Set items as available offline (downloaded and synced)
       | folder | folderTest |
     When Alice selects to make available offline the folder folderTest using the Contextual menu
     And Alice selects to move the file file3.pdf using the Actions menu
-    And Alice selects /folderTest as target folder of the move operation
+    And Alice selects folderTest as target folder of the move operation
     Then Alice should see the item folderTest/file3.pdf as av.offline
 
   Scenario: Moving a file inside an av.offline folder to a non av.offline folder, it turns not av.offline
