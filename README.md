@@ -6,7 +6,7 @@ Available scenarios can be found
 Defined for the [ownCloud iOS app](https://github.com/owncloud/ios)
 
 
-## Global architecture
+## Global overview
 
 - Scenarios are defined with [Gherkin
 Syntax](https://cucumber.io/docs/gherkin/).
@@ -57,23 +57,14 @@ The script `executeTests` will launch the tests. The following environment varia
 		$APPIUM_URL (optional): Appium server URL.
 			If Appium Server is not specified, will be used "localhost:4723/wd/hub"
 
-The script needs some
-parameters:
+The script needs some parameters. Check help `executeTests -h`
 
-     -t (optional): Used to execute tagged tests. F. ex: @createfolder will send only tests tagged with such label. OR/AND operations are allowed. It is also allowed to use a classpath to execute all the test in such class
+To execute all tests but the ignored ones (or any other tagged ones):
 
-	Examples:
-
-		 ./executeTests -t "@createfolder" -> This will execute only tests with the tag @createfolder
-
-		 ./executeTests -t "'@createfolder and @copy'" -> This will execute tests tagged with both @createfolder and @copy
-
-		 ./executeTests -t "'@createfolder or @copy'" -> This will execute tests tagged with @createfolder or @copy
-
-		 ./executeTests  -> This will execute all the tests
-
-	 -h: display the help
-
+	export UDID_DEVICE=F10FFCD4-CE92-4F40-B246-9709A4D4086A
+	export OC_SERVER_URL=https://my.owncloud.server
+	export APPIUM_URL=localhost:4723/wd/hub
+	./executeTests -t "not @ignore"
 
 The execution will display step by step how the scenario is being executed.
 
@@ -81,7 +72,16 @@ More info in [Cucumber reference](https://cucumber.io/docs/cucumber/api/)
 
 ## Results
 
-In the folder `target`, you will find a report with the execution results
+In the folder `target`, you will find a report with the execution results in html and json formats.
+
+Besides of that, by setting the `cucumber.properties` file allow to integrate reports with [Cucumber reports](https://cucumber.io/docs/cucumber/reporting/?lang=java). An account in such platform (integrated with GitHub) is enough to use it. A new env variable must be set in advance in order to send reports to the platform. Token is provided in the Cucumber Reports account for every collection:
+
+	export CUCUMBER_PUBLISH_TOKEN=d97...
+
+Also, in `cucumber.properties` file with the following values (disabled by default):
+
+	cucumber.publish.quiet=false
+	cucumber.publish.enabled=true
 
 **Note**: This repository was forked from [Cucumber-java
 skeleton](https://github.com/cucumber/cucumber-java-skeleton)
