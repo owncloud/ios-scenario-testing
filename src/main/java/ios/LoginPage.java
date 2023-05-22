@@ -1,6 +1,5 @@
 package ios;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.support.PageFactory;
 
 import java.util.List;
@@ -52,6 +51,9 @@ public class LoginPage extends CommonPage{
     @iOSXCUITFindBy(accessibility = "Continue")
     private MobileElement continueSafari;
 
+    @iOSXCUITFindBy(xpath = "//XCUIElementTypeStaticText[@name=\"Add account\"]")
+    private MobileElement addAccountButton;
+
     //For the regular tests
     private final String server = System.getProperty("server");
 
@@ -82,8 +84,8 @@ public class LoginPage extends CommonPage{
         approveButton.click();
     }
 
-    public void skipAddServer(){
-        driver.findElement(By.id("Add")).click();
+    public void addAccount(){
+        addAccountButton.click();
     }
 
     public void typeCredentials(String username, String password){

@@ -17,12 +17,11 @@ public class LoginSteps {
     @Given("user {word} is logged in")
     public void logged(String userName)
             throws Throwable {
-        String stepName = new Object() {
-        }.getClass().getEnclosingMethod().getName().toUpperCase();
+        String stepName = new Object() {}.getClass().getEnclosingMethod().getName().toUpperCase();
         Log.log(Level.FINE, "----STEP----: " + stepName);
         if (!world.loginPage.loggedIn()) {
             String password = LocProperties.getProperties().getProperty("passw1");
-            world.loginPage.skipAddServer();
+            world.loginPage.addAccount();
             world.loginPage.typeURL();
             world.loginPage.typeCredentials(userName, password);
             world.loginPage.submitLogin();

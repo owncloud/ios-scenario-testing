@@ -6,7 +6,35 @@
 	<dict>
 		<key>Info.plist</key>
 		<data>
-		skjpNxofKmZE1DkkAjn2iUfGSMQ=
+		4QP/bd/wicstSCwMKaEUyU6Fe40=
+		</data>
+		<key>PocketSVG_PocketSVG.bundle/Info.plist</key>
+		<data>
+		31KtASn2IizbAJ04XjQ3JCSb2Vs=
+		</data>
+		<key>PocketSVG_PocketSVG.bundle/SVGColors.plist</key>
+		<data>
+		x9psQztRRBIpueBYLYfeo/fOfoo=
+		</data>
+		<key>PocketSVG_PocketSVG.bundle/_CodeSignature/CodeDirectory</key>
+		<data>
+		qepbVYbxpQXzTefVehyc0RdekIQ=
+		</data>
+		<key>PocketSVG_PocketSVG.bundle/_CodeSignature/CodeRequirements</key>
+		<data>
+		OnX22wWFKRSOFN1+obRynMCeyXM=
+		</data>
+		<key>PocketSVG_PocketSVG.bundle/_CodeSignature/CodeRequirements-1</key>
+		<data>
+		USH7HorUqli7G6N51h7z/Dj+ntk=
+		</data>
+		<key>PocketSVG_PocketSVG.bundle/_CodeSignature/CodeResources</key>
+		<data>
+		E2rDJx1Y/TvBcVe+GTVw0br2EZk=
+		</data>
+		<key>PocketSVG_PocketSVG.bundle/_CodeSignature/CodeSignature</key>
+		<data>
+		2jmj7l5rSw0yVb/vlWAYkK/YBwk=
 		</data>
 		<key>en.lproj/Localizable.strings</key>
 		<dict>
@@ -29,6 +57,55 @@
 	</dict>
 	<key>files2</key>
 	<dict>
+		<key>PocketSVG_PocketSVG.bundle/Info.plist</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			pg2VxJrB9fCAiZj0X90hoYiQnUc3aVBj5ABSfC5/2Vs=
+			</data>
+		</dict>
+		<key>PocketSVG_PocketSVG.bundle/SVGColors.plist</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			PfeuGHe81onN24sPHmMSmvyV8BY3terIbdYaoK4Wgxk=
+			</data>
+		</dict>
+		<key>PocketSVG_PocketSVG.bundle/_CodeSignature/CodeDirectory</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			KoVuyh7b4Eau/LrBipFxmdWuG78n0I5wBnmndiSgnMo=
+			</data>
+		</dict>
+		<key>PocketSVG_PocketSVG.bundle/_CodeSignature/CodeRequirements</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			mHkgkE6rZQ51eIwFSqCwUk5qgL/HGqMt+NI3phdD+YY=
+			</data>
+		</dict>
+		<key>PocketSVG_PocketSVG.bundle/_CodeSignature/CodeRequirements-1</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			nypu+tBalpZhVjEN16R5/qmIDTur8rxOlbjyCY9TmkI=
+			</data>
+		</dict>
+		<key>PocketSVG_PocketSVG.bundle/_CodeSignature/CodeResources</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			NHsEv7EHSjKjtgTzenoMJux6+cgbABclVQHpfJwYZG4=
+			</data>
+		</dict>
+		<key>PocketSVG_PocketSVG.bundle/_CodeSignature/CodeSignature</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=
+			</data>
+		</dict>
 		<key>en.lproj/Localizable.strings</key>
 		<dict>
 			<key>hash2</key>

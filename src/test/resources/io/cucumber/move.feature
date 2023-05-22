@@ -27,9 +27,27 @@ Feature: Move item
     Then Alice should not see move2.txt in the filelist anymore
     And Alice should see move2.txt inside the folder Documents3
 
+  Scenario: Move an existent item to a new created folder in the picker
+    Given the following items have been created in the account
+      | file | move2.txt |
+    When Alice selects to move the file move2.txt using the Contextual menu
+    And Alice creates new folder move3 in the folder picker to move inside
+    Then Alice should not see move2.txt in the filelist anymore
+    But Alice should see move2.txt inside the folder move3
+
   Scenario: Move an existent item to same location is not allowed
     Given the following items have been created in the account
       | file  | move3.txt |
     When Alice selects to move the file move3.txt using the Actions menu
     And Alice selects / as target folder of the move operation
     Then move action should not be allowed
+
+  Scenario: Move a folder to another place with same item name
+    Given the following items have been created in the account
+      | folder | move4       |
+      | folder | move5       |
+      | folder | move4/move5 |
+    When Alice selects to move the folder move5 using the Contextual menu
+    And Alice selects move4 as target folder of the move operation
+    Then Alice should see the following error
+      | move5 already exists |

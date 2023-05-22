@@ -466,7 +466,7 @@
 "Recipients" = "Marrëss";
 "Public Link" = "Lidhje Publike";
 "Public Links" = "Lidhje Publike";
-"Shared by %@" = "Ndarë nga %@";
+"Shared by {{owner}}" = "Ndarë nga {{owner}}";
 "Invite Recipient" = "Ftoni Marrës";
 "Recipients" = "Marrëss";
 "Add email or name" = "Shtoni email ose emër";

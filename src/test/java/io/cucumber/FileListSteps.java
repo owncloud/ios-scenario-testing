@@ -95,8 +95,7 @@ public class FileListSteps {
     }
 
     @When("Alice opens a private link pointing to non-existing item")
-    public void open_fake_private_link()
-            throws Throwable {
+    public void open_fake_private_link() {
         String stepName = new Object(){}.getClass().getEnclosingMethod().getName().toUpperCase();
         Log.log(Level.FINE, "----STEP----: " + stepName);
         world.fileListPage.openFakePrivateLink();
@@ -198,6 +197,17 @@ public class FileListSteps {
         world.fileListPage.openCollection(collection);
     }
 
+    @When("Alice creates new folder {word} in the folder picker to {word} inside")
+    public void user_creates_folder_picker(String targetFolder, String operation) {
+        String stepName = new Object() {}.getClass().getEnclosingMethod().getName().toUpperCase();
+        Log.log(Level.FINE, "----STEP----: " + stepName);
+        world.folderPickerPage.selectSpace(operation);
+        world.folderPickerPage.createFolder();
+        world.inputNamePage.setItemName(targetFolder);
+        world.folderPickerPage.selectFolder(targetFolder);
+        world.folderPickerPage.accept(operation);
+    }
+
     @Then("Alice should see {word} in the filelist")
     public void original_item_filelist(String itemName)
             throws Throwable {
@@ -265,7 +275,6 @@ public class FileListSteps {
         String stepName = new Object(){}.getClass().getEnclosingMethod().getName().toUpperCase();
         Log.log(Level.FINE, "----STEP----: " + stepName);
         assertTrue(world.fileListPage.isListEmpty());
-        //assertFalse(filesAPI.itemExist(itemName));
     }
 
     @Then("Alice should not see {word} in Quick Access")
@@ -340,5 +349,22 @@ public class FileListSteps {
         } else if (action.equals("move")){
             assertFalse(world.folderPickerPage.actionEnabled("Move here"));
         }
+    }
+
+    @Then("{word} folder is not an active option")
+    public void folder_greyed_out(String folderName) {
+        String stepName = new Object() {}.getClass().getEnclosingMethod().getName().toUpperCase();
+        Log.log(Level.FINE, "----STEP----: " + stepName);
+        assertTrue(world.folderPickerPage.isItemEnabled(folderName));
+    }
+
+    @Then("Alice should see the following error")
+    public void error_displayed(DataTable table) {
+        String stepName = new Object(){}.getClass().getEnclosingMethod().getName().toUpperCase();
+        Log.log(Level.FINE, "----STEP----: " + stepName);
+        List<List<String>> listItems = table.asLists();
+        String error = listItems.get(0).get(0);
+        Log.log(Level.FINE, "Error message to check: " + error);
+        assertTrue(world.fileListPage.isItemInScreen(error));
     }
 }

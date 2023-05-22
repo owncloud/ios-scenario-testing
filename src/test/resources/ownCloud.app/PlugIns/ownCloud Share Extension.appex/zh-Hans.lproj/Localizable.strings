@@ -396,7 +396,7 @@
 "Recipients" = "接收者";
 "Public Link" = "公共链接";
 "Public Links" = "公共链接";
-"Shared by %@" = "由%@共享";
+"Shared by {{owner}}" = "由{{owner}}共享";
 "Invite Recipient" = "邀请接收者";
 "Recipients" = "接收者";
 "Add email or name" = "添加电子邮件地址或姓名";

@@ -7,50 +7,133 @@ import java.util.logging.Level;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import io.appium.java_client.pagefactory.iOSXCUITFindBy;
+import utils.date.DateUtils;
 import utils.log.Log;
 
 public class PublicLinkPage extends SharePage {
 
-    @iOSXCUITFindBy(xpath = "//XCUIElementTypeStaticText[@name=\"Create Public Link\"]")
-    private MobileElement selectCreateLink;
+    @iOSXCUITFindBy(id="Viewer")
+    private MobileElement viewer;
 
-    @iOSXCUITFindBy(xpath = "//XCUIElementTypeButton[@name=\"Add\"]")
-    private MobileElement selectCreateLinkPlusButton;
+    @iOSXCUITFindBy(id="Editor")
+    private MobileElement editor;
 
-    @iOSXCUITFindBy(xpath = "//XCUIElementTypeStaticText[@name=\"Links\"]")
-    private MobileElement header;
+    @iOSXCUITFindBy(id="Uploader")
+    private MobileElement uploader;
 
-    @iOSXCUITFindBy(id = "Done")
-    private MobileElement done;
+    @iOSXCUITFindBy(id="Contributor")
+    private MobileElement contributor;
 
-    @iOSXCUITFindBy(xpath = "XCUIElementTypeButton[@name=\"Done\"]")
-    private MobileElement doneXpath;
+    @iOSXCUITFindBy(xpath = "(//XCUIElementTypeStaticText[@name=\"Add\"])[1]")
+    private MobileElement passwordButton;
 
+    @iOSXCUITFindBy(id = "******")
+    private MobileElement passwordEnabled;
 
-    private final String xpath_header = "//XCUIElementTypeStaticText[@name=\"Links\"]";
+    @iOSXCUITFindBy(className = "XCUIElementTypeSecureTextField")
+    private MobileElement passwordField;
+
+    @iOSXCUITFindBy(id = "OK")
+    private MobileElement OKButton;
+
+    @iOSXCUITFindBy(xpath = "(//XCUIElementTypeStaticText[@name=\"Add\"])[2]")
+    private MobileElement expirationButton;
+
+    @iOSXCUITFindBy(id = "Date Picker")
+    private MobileElement datePicker;
+
+    @iOSXCUITFindBy(id = "Month")
+    private MobileElement monthPicker;
+
+    @iOSXCUITFindBy(xpath = "//XCUIElementTypeApplication[@name=\"ownCloud\"]/XCUIElementTypeWindow[1]" +
+            "/XCUIElementTypeOther[5]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther" +
+            "/XCUIElementTypeOther[2]/XCUIElementTypeDatePicker/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]" +
+            "/XCUIElementTypeDatePicker/XCUIElementTypePicker/XCUIElementTypePickerWheel[1]")
+    private MobileElement monthWheel;
+
+    @iOSXCUITFindBy(id = "Create link")
+    private MobileElement createLink;
+
+    @iOSXCUITFindBy(xpath = "//XCUIElementTypeButton[@name=\"Save changes\"]")
+    private MobileElement saveChanges;
+
+    @iOSXCUITFindBy(xpath = "//XCUIElementTypeButton[@name=\"Unshare\"]")
+    private MobileElement unshareLink;
 
     public PublicLinkPage(){
         super();
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
     }
 
-    public void createLink (String linkName) {
-        selectCreateLink.click();
+    public void setPermission (String permission) {
+        Log.log(Level.FINE, "Starts: Set link permission: " + permission);
+        switch (permission){
+            case("Viewer"):{
+                viewer.click();
+                break;
+            }
+            case("Editor"):{
+                editor.click();
+                break;
+            }
+            case("Uploader"):{
+                uploader.click();
+                break;
+            }
+            case("Contributor"):{
+                contributor.click();
+                break;
+            }
+        }
     }
 
-    public void openPublicLink(String linkName){
-        Log.log(Level.FINE, "Starts: open public link: " + linkName);
-        findId(linkName).click();
-        waitById(5, linkName);
-    }
-    public boolean isItemInListLinks(String itemName) {
-        Log.log(Level.FINE, "Starts: link in list: " + itemName);
-        return !findListId(itemName).isEmpty();
+    public void setPassword (String password) {
+        Log.log(Level.FINE, "Starts: Add link password: " + password);
+        passwordButton.click();
+        passwordField.sendKeys("a");
+        OKButton.click();
     }
 
-    public void close(){
-        Log.log(Level.FINE, "Starts: Close public links");
-        waitByXpath(5, "//XCUIElementTypeButton[@name=\"Add\"]");
-        done.click();
+    public boolean isPasswordEnabled(String itemName) {
+        return passwordEnabled.isDisplayed();
+    }
+
+    //Day to set: given day of the following month
+    public void setExpiration (String day){
+        Log.log(Level.FINE, "Starts: Set Expiration date: " + day);
+        expirationButton.click();
+        datePicker.click();
+        monthPicker.click();
+        //No matter which month, wheel moves to th next value. Framework issue
+        monthWheel.sendKeys("December");
+        datePicker.click();
+        findId(day).click();
+    }
+
+    public boolean isExpirationCorrect(String day){
+        Log.log(Level.FINE, "Starts: Check expiration day: " + day);
+        //Build string to compare with
+        String year = Integer.toString(DateUtils.todayYear()).substring(2);
+        String month = Integer.toString(DateUtils.todayMonth() + 1);
+        if (month.equals("12")){ //Jump to next year
+            year = year + 1;
+        }
+        String displayedDate = month + "/" + day + "/" + year;
+        Log.log(Level.FINE, "Date to compare: " + displayedDate);
+        String dateInPicker = datePicker.getAttribute("value");
+        Log.log(Level.FINE, "Date to check in the screen: " + dateInPicker);
+        return dateInPicker.equals(displayedDate);
+    }
+
+    public void submitLink(){
+        createLink.click();
+    }
+
+    public void saveChanges(){
+        saveChanges.click();
+    }
+
+    public void deleteLink(){
+        unshareLink.click();
     }
 }

@@ -466,7 +466,7 @@
 "Recipients" = "Получатели";
 "Public Link" = "Общедоступная ссылка";
 "Public Links" = "Общедоступные ссылки";
-"Shared by %@" = "Поделился %@";
+"Shared by {{owner}}" = "Поделился {{owner}}";
 "Invite Recipient" = "Пригласить получателя";
 "Recipients" = "Получатели";
 "Add email or name" = "Добавьте e-mail или имя";

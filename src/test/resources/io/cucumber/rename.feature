@@ -10,7 +10,7 @@ Feature: Rename an item
   @smoke
   Scenario: Rename an item using the Actions menu
     Given the following items have been created in the account
-      | folder   | rename1  |
+      | folder | rename1 |
     When Alice selects to rename the item rename1 using the Actions menu
     And Alice sets renamed1 as new name
     Then Alice should see renamed1 in the filelist
@@ -18,7 +18,7 @@ Feature: Rename an item
 
   Scenario: Rename an item using the Contextual menu
     Given the following items have been created in the account
-      | file   | rename2.txt  |
+      | file | rename2.txt |
     When Alice selects to rename the item rename2.txt using the Contextual menu
     And Alice sets renamed2.txt as new name
     Then Alice should see renamed2.txt in the filelist
@@ -26,8 +26,8 @@ Feature: Rename an item
 
   Scenario: Rename an item using the Actions menu with an existing name
     Given the following items have been created in the account
-      | folder   | Photos     |
-      | folder   | Documents  |
-    When Alice selects to rename the folder Photos using the Contextual menu
-    And Alice sets Documents as new name
+      | folder | rename3 |
+      | folder | rename4 |
+    When Alice selects to rename the folder rename3 using the Actions menu
+    And Alice sets rename4 as new name
     Then Alice should see a duplicated item error

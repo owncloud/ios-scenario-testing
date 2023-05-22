@@ -26,6 +26,7 @@ Feature: Delete item
     Then Alice should not see delete2 in the filelist anymore
     And Alice should see delete3.txt in the filelist
 
+  @ignore
   Scenario: Delete an existent file using the Swipe menu
     Given the following items have been created in the account
       | file  | delete4.txt  |

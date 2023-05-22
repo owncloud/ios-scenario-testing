@@ -1,10 +1,15 @@
 package ios;
 
+import org.openqa.selenium.support.PageFactory;
+
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.logging.Level;
 
+import io.appium.java_client.MobileElement;
+import io.appium.java_client.pagefactory.AppiumFieldDecorator;
+import io.appium.java_client.pagefactory.iOSXCUITFindBy;
 import utils.date.DateUtils;
 import utils.entities.OCCapability;
 import utils.entities.OCShare;
@@ -12,8 +17,35 @@ import utils.log.Log;
 
 public class SharePage extends CommonPage {
 
+    @iOSXCUITFindBy(id="Invite")
+    private MobileElement inviteButton;
+
+    @iOSXCUITFindBy(id="Create link")
+    private MobileElement createLinkButton;
+
+    @iOSXCUITFindBy(id = "Copy Private Link")
+    private MobileElement copyPrivateLink;
+
+    @iOSXCUITFindBy(id="Done")
+    private MobileElement doneButton;
+
     public SharePage(){
         super();
+        PageFactory.initElements(new AppiumFieldDecorator(driver), this);
+    }
+
+    public void openPublicLink(String linkName) {
+        Log.log(Level.FINE, "Starts: open public link: " + linkName);
+        findId(linkName).click();
+    }
+
+    public void openPublicLink() {
+        Log.log(Level.FINE, "Starts: open public link with default name");
+        findId("Link").click();
+    }
+
+    public void createLink () {
+        createLinkButton.click();
     }
 
     public boolean checkCorrectShare(OCShare remoteShare, List<List<String>> dataList ){
@@ -71,24 +103,22 @@ public class SharePage extends CommonPage {
                     }
                     break;
                 }
-                case "permissions":{
-                    if (!remoteShare.getPermissions().equals(entry.getValue())){
-                        Log.log(Level.FINE, "Permissions do not match - Remote: " + remoteShare.getPermissions()
+                case "permission":{
+                    if (!translatePermissions(remoteShare.getPermissions()).equals(entry.getValue())){
+                        Log.log(Level.FINE, translatePermissions(remoteShare.getPermissions()) + " " + entry.getValue());
+                        Log.log(Level.FINE, "Permissions do not match - Remote: " + translatePermissions(remoteShare.getPermissions())
                                 + " - Expected: " + entry.getValue());
                         return false;
                     }
                     break;
                 }
-                case "expiration days":{
-                    String dateRemote = remoteShare.getExpiration();
-                    int expiration = DateUtils.minExpirationDate(
-                            OCCapability.getInstance().expirationDateDays(),
-                            Integer.valueOf(entry.getValue())
-                    );
-                    String expDate = DateUtils.dateInDaysWithServerFormat(Integer.toString(expiration));
-                    Log.log(Level.FINE, "Expiration dates: Remote: " + dateRemote
+                case "expiration":{
+                    //Get only month-day-year
+                    String remoteDate = remoteShare.getExpiration().substring(0, 10);
+                    String expDate = DateUtils.dateInDaysWithServerFormat2(Integer.valueOf(entry.getValue()));
+                    Log.log(Level.FINE, "Expiration dates: Remote: " + remoteDate
                             + " - Expected: " + expDate);
-                    if (!dateRemote.equals(expDate)){
+                    if (!remoteDate.equals(expDate)){
                         Log.log(Level.FINE, "Expiration dates do not match");
                         return false;
                     }
@@ -97,6 +127,32 @@ public class SharePage extends CommonPage {
         }
         Log.log(Level.FINE, "All fields match. Returning true");
         return true;
+    }
+
+    public boolean isItemInListLinks(String itemName) {
+        Log.log(Level.FINE, "Starts: link in list: " + itemName);
+        return !findListId(itemName).isEmpty();
+    }
+
+    public boolean isItemInListLinks() {
+        Log.log(Level.FINE, "Starts: link in list with default name");
+        return !findListId("Link").isEmpty();
+    }
+
+    //Permissions from server come in numeric format. This method translates
+    private String translatePermissions(String permission) {
+        Log.log(Level.FINE, "Permission to translate: " + permission);
+        if (permission.equals("1"))
+            return "Viewer";
+        if (permission.equals("3"))
+            return "Editor";
+        if (permission.equals("15"))
+            return "Editor";
+        if (permission.equals("4"))
+            return "Uploader";
+        if (permission.equals("5"))
+            return "Contributor";
+        return "";
     }
 
     private HashMap<String, String> turnListToHashmap(List<List<String>> dataList){

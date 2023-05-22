@@ -466,7 +466,7 @@
 "Recipients" = "ผู้รับ";
 "Public Link" = "ลิงก์สาธารณะ";
 "Public Links" = "ลิงก์สาธารณะ";
-"Shared by %@" = "แชร์แล้วโดย %@";
+"Shared by {{owner}}" = "แชร์แล้วโดย {{owner}}";
 "Invite Recipient" = "คำเชิญผู้รับ";
 "Recipients" = "ผู้รับ";
 "Add email or name" = "เพิ่มอีเมลหรือชื่อ";

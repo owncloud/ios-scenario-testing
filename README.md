@@ -35,7 +35,7 @@ file](https://github.com/owncloud/ios-scenario-testing/archive/master.zip)
 
 Different requirements:
 
-* `Appium` instance running and reachable
+* `Appium` instance running and reachable. Last Appium review: v2.0.0-beta.66
 
 * At least, one iOS simulator attached and reachable.
 

@@ -404,6 +404,7 @@
 "Error opening {{itemName}} in {{appName}}" = "Fehler beim Öffnen von {{itemName}} in {{appName}}";
 "The search term you entered did not match any item in the selected scope." = "Kein Treffer für den eingegebenen Suchbegriff im ausgewählten Bereich.";
 "New document" = "Neues Dokument";
+"Tree" = "Baum";
 "Search tree" = "Baum durchsuchen";
 "Search from {{folder.name}}" = "{{folder.name}} durchsuchen";
 "Saved search" = "Gespeicherte Suche";
@@ -411,7 +412,7 @@
 "Name of saved search" = "Name der gespeicherten Suche";
 "Search template" = "Suchvorlage";
 "Search templates" = "Suchvorlagen";
-"Saved search templates" = "Suchvorlage speichern";
+"Saved search templates" = "Gespeicherte Suchvorlagen";
 "Error creating {{itemName}}" = "Fehler beim Erstellen von {{itemName}}";
 "If you 'Continue', you will be prompted to allow the '{{app.name}}' app to open the {{authmethodName}} login page where you can enter your credentials." = "Wenn Sie auf 'Fortsetzen' klicken, werden Sie aufgefordert, der App '{{app.name}}' zu erlauben, die {{authmethodName}}-Anmeldeseite zu öffnen, auf der Sie Ihre Zugangsdaten eingeben können.";
 
@@ -483,25 +484,22 @@
 "Scan additional" = "Weitere scannen";
 "Create one file per page" = "Eine Datei pro Seite erstellen";
 
-/* Scan */
-"Scan" = "Scannen";
-"Scans" = "Scans";
-"Scan document" = "Dokument scannen";
-"Saving" = "Speichern";
-"File format" = "Dateiformat";
-"Name" = "Name";
-"Save as" = "Speichern unter";
-"Options" = "Optionen";
-"Scan additional" = "Weitere scannen";
-"Create one file per page" = "Eine Datei pro Seite erstellen";
-
 /* Sharing */
+"Sharing requires an active connection." = "Freigaben benötigen eine aktive Verbindung.";
+"No items shared with you" = "Keine mit Ihnen geteilten Objekte.";
+"No items shared by you" = "Keine von Ihnen geteilten Objekte.";
+"No items shared by link" = "Keine per Link geteilten Objekte.";
+
 "Searching Shares…" = "Suche nach Freigaben…";
 "Recipient" = "Empfänger";
 "Recipients" = "Empfänger";
 "Public Link" = "Öffentlicher Link";
 "Public Links" = "Öffentliche Links";
-"Shared by %@" = "Geteilt von %@";
+"Shared by {{owner}}" = "Geteilt von {{owner}}";
+"Shared with {{recipient}}" = "Geteilt mit {{recipient}}";
+"Shared with {{recipients}}" = "Geteilt mit {{recipients}}";
+"Expires {{expirationDate}}" = "Verfällt {{expirationDate}}";
+"Share {{itemName}}" = "{{itemName}} teilen";
 "Invite Recipient" = "Empfänger einladen";
 "Recipients" = "Empfänger";
 "Add email or name" = "E-Mail oder Name hinzufügen";
@@ -590,6 +588,10 @@
 "Shared with me" = "Mit mir geteilt";
 "Shared by me" = "Mit anderen geteilt";
 "Shared by link" = "Per Link geteilt";
+
+"Share with" = "Teilen mit";
+"Add" = "Hinzufügen";
+"Save changes" = "Änderungen speichern";
 
 /* Quick Access view */
 "Quick Access" = "Schnellzugriff";

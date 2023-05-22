@@ -1,6 +1,5 @@
 package utils.date;
 
-import java.text.DateFormatSymbols;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 import java.util.logging.Level;
@@ -9,62 +8,22 @@ import utils.log.Log;
 
 public class DateUtils {
 
-    public static String dateInDaysiOSFormat(String days) {
-        Log.log(Level.FINE, "Starts: Turns days in date");
-        GregorianCalendar gregorianCalendar = new GregorianCalendar();
-        gregorianCalendar.add(Calendar.DAY_OF_YEAR, Integer.valueOf(days));
-        Log.log(Level.FINE, "Date to format: " + gregorianCalendar.getTime());
-        String dateAfterDays = gregorianCalendar.get(Calendar.DAY_OF_MONTH)
-                + " " + getNameMonth(gregorianCalendar.get(Calendar.MONTH))
-                + " " + gregorianCalendar.get(Calendar.YEAR);
-        Log.log(Level.FINE, "Date formatted: " + dateAfterDays);
-        return dateAfterDays;
-    }
-
-    public static String dateInDaysShareRequestFormat(String days) {
-        Log.log(Level.FINE, "Starts: Turns days in date fot Share request");
-        GregorianCalendar gregorianCalendar = new GregorianCalendar();
-        gregorianCalendar.add(Calendar.DAY_OF_YEAR, Integer.valueOf(days));
-        Log.log(Level.FINE, "Date to format: " + gregorianCalendar.getTime());
-        String dateAfterDays = gregorianCalendar.get(Calendar.YEAR) + "-"
-                + "-" + gregorianCalendar.get(Calendar.MONTH) +1
-                + "-" + formatInt(gregorianCalendar.get(Calendar.DAY_OF_MONTH));
-        Log.log(Level.FINE, "Date formatted: " + dateAfterDays);
-        return dateAfterDays;
-    }
-
-    public static String dateInDaysWithServerFormat(String days) {
+    //Received the day of the following month in which it expiration date is set
+    public static String dateInDaysWithServerFormat2(int days) {
         Log.log(Level.FINE, "Starts: Turns days in date with server response format");
-        GregorianCalendar gregorianCalendar = new GregorianCalendar();
-        gregorianCalendar.add(Calendar.DAY_OF_YEAR, Integer.valueOf(days));
+        int day = days;
+        int year = todayYear();
+        int month = todayMonth();
+        if (month == 12){ //Jump to next year
+            year++;
+        }
+        GregorianCalendar gregorianCalendar = new GregorianCalendar(year,month,day);
         Log.log(Level.FINE, "Date to format: " + gregorianCalendar.getTime());
-        String dateAfterDays = gregorianCalendar.get(Calendar.YEAR)
+        String dateFormat = gregorianCalendar.get(Calendar.YEAR)
                 +"-"+formatInt(gregorianCalendar.get(Calendar.MONTH) + 1)
-                +"-"+formatInt(gregorianCalendar.get(Calendar.DAY_OF_MONTH))
-                +" 00:00:00";
-        Log.log(Level.FINE, "Date formatted: " + dateAfterDays);
-        return dateAfterDays;
-    }
-
-    public static String shortDate(String days) {
-        Log.log(Level.FINE, "Starts: Build shortDate string");
-        GregorianCalendar gregorianCalendar = new GregorianCalendar();
-        gregorianCalendar.add(Calendar.DAY_OF_YEAR, Integer.valueOf(days));
-        Log.log(Level.FINE, "Date: " + gregorianCalendar.getTime());
-        String shortDate = getNameMonth(gregorianCalendar.get(Calendar.MONTH)).substring(0, 3)
-                + " " + gregorianCalendar.get(Calendar.DAY_OF_MONTH)
-                + ", " + gregorianCalendar.get(Calendar.YEAR);
-        Log.log(Level.FINE, "Short Date: " + shortDate);
-        return shortDate;
-    }
-
-    private static String getNameMonth(int numMonth) {
-        DateFormatSymbols dateFormatSymbols = new DateFormatSymbols();
-        String[] months = dateFormatSymbols.getMonths();
-        if (numMonth >= 0 && numMonth <= 11 ) {
-            return months[numMonth];
-        } else
-            return "";
+                +"-"+formatInt(gregorianCalendar.get(Calendar.DAY_OF_MONTH));
+        Log.log(Level.FINE, "Date formatted: " + dateFormat);
+        return dateFormat;
     }
 
     private static String formatInt(int dateNumber){
@@ -86,4 +45,20 @@ public class DateUtils {
         }
         return a <= b ? a : b;
     }
+
+    public static int todayDay(){
+        GregorianCalendar gregorianCalendar = new GregorianCalendar();
+        return gregorianCalendar.get(Calendar.DAY_OF_MONTH);
+    }
+
+    public static int todayMonth(){
+        GregorianCalendar gregorianCalendar = new GregorianCalendar();
+        return gregorianCalendar.get(Calendar.MONTH) + 1;
+    }
+
+    public static int todayYear(){
+        GregorianCalendar gregorianCalendar = new GregorianCalendar();
+        return gregorianCalendar.get(Calendar.YEAR);
+    }
+
 }

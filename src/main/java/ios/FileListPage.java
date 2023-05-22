@@ -80,6 +80,7 @@ public class FileListPage extends CommonPage {
             "/XCUIElementTypeOther/XCUIElementTypeOther[2]";
     private final String xpath_copydirectory = "//XCUIElementTypeButton[@name=\"Choose destination directory…\"]";
     private final String xpath_copyclipboard = "//XCUIElementTypeButton[@name=\"Copy to Clipboard\"]";
+    private final String xpath_sharing = "//XCUIElementTypeCell[@name=\"com.owncloud.action.collaborate\"]";
 
     //Actions in contextual menu menu
     private final String id_delete = "Delete";
@@ -92,8 +93,8 @@ public class FileListPage extends CommonPage {
     private final String id_favorite = "Favorite item";
     private final String id_unfavorite = "Unfavorite item";
     private final String id_unavoffline = "com.owncloud.action.makeUnavailableOffline";
-    private final String id_share = "Sharing";
-    private final String id_link = "Links";
+    private final String id_sharing = "com.owncloud.action.collaborate";
+    private final String id_sharing_c = "Sharing";
 
     public FileListPage() {
         super();
@@ -342,22 +343,7 @@ public class FileListPage extends CommonPage {
                 operation = (MobileElement) findXpath(xpath_paste);
                 break;
             case "share":
-                String xpath_sharetype;
-                if (typeItem.equalsIgnoreCase("folder")) {
-                    xpath_sharetype = xpath_sharefolder;
-                } else {
-                    xpath_sharetype = xpath_sharefile;
-                }
-                operation = (MobileElement) findXpath(xpath_sharetype);
-                break;
-            case "edit share":
-                operation = (MobileElement) findXpath(xpath_editshare);
-                break;
-            case "share by link":
-                operation = (MobileElement) findXpath(xpath_sharelink);
-                break;
-            case "edit link":
-                operation = (MobileElement) findXpath(xpath_editlink);
+                operation = (MobileElement) findId(id_sharing);
                 break;
             case "favorite":
                 operation = findId(id_favorite);
@@ -374,7 +360,7 @@ public class FileListPage extends CommonPage {
             findXpath(xpath_copydirectory).click();
         } else if (operationName.equals("make available offline")){
             Log.log(Level.FINE, "Wait file to be downloaded");
-            //Condition to be improved
+            //Condition to be improved. Check how to verify a file is downlaoded
             wait(3);
         }
     }
@@ -405,12 +391,7 @@ public class FileListPage extends CommonPage {
                 operation = findId(id_avoffline);
                 break;
             case "share":
-            case "edit share":
-                operation = findId(id_share);
-                break;
-            case "share by link":
-            case "edit link":
-                operation = findId(id_link);
+                operation = findId(id_sharing_c);
                 break;
             case "favorite":
                 operation = findId(id_favorite);
@@ -427,7 +408,7 @@ public class FileListPage extends CommonPage {
             findXpath(xpath_copydirectory).click();
         } else if (operationName.equals("make available offline")){
             Log.log(Level.FINE, "Wait file to be downloaded");
-            //Condition to be improved
+            //Condition to be improved. Check how to verify a file is downlaoded
             wait(3);
         }
     }
@@ -450,14 +431,7 @@ public class FileListPage extends CommonPage {
 
     public void openCard(String itemName){
         Log.log(Level.FINE, "Starts: openCard for " + itemName);
-        //waitById(15, itemName);
-        //findId(itemName + " Actions").click();
         findId("More").click();
-        //MobileElement mobileElement = findId(itemName);
-        //mobileElement.getAttribute()
-
-        //.findElement(By.xpath("./..")).findElement(By.xpath("./..")).findElement(By.id("More")).click();
-        //findXpath("(//XCUIElementTypeButton[@name=\"More\"])[1]").click();
     }
 
     public boolean fileIsMarkedAsAvOffline(String itemName) {

@@ -466,7 +466,7 @@
 "Recipients" = "مستلمون";
 "Public Link" = "رابط عام";
 "Public Links" = "روابط عامة";
-"Shared by %@" = "تمت المشاركة بواسطة %@";
+"Shared by {{owner}}" = "تمت المشاركة بواسطة {{owner}}";
 "Invite Recipient" = "أرسل دعوة إلى مستلم";
 "Recipients" = "مستلمون";
 "Add email or name" = "أضف بريدًا إلكترونيًا أو اسمًا";

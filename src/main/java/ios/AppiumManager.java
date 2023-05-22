@@ -1,3 +1,13 @@
+/******
+ *
+ * ownCloud Android Scenario Tests
+ *
+ * @author Jesús Recio Rincón (@jesmrec)
+ *
+ * Last Appium review: v2.0.0-beta.66
+ * If posible, execute test with such version
+ */
+
 package ios;
 
 import org.openqa.selenium.remote.DesiredCapabilities;
@@ -47,7 +57,7 @@ public class AppiumManager {
             Log.log(Level.SEVERE, "Driver could not be created: " + e.getMessage());
             e.printStackTrace();
         }
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
     }
 
     public static AppiumManager getManager() {
@@ -84,5 +94,7 @@ public class AppiumManager {
         capabilities.setCapability(MobileCapabilityType.FULL_RESET, false);
 
         capabilities.setCapability(MobileCapabilityType.NO_RESET, true);
+
+        capabilities.setCapability("autoDismissAlerts", true);
     }
 }

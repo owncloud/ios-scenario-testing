@@ -466,7 +466,7 @@
 "Recipients" = "Destinatários";
 "Public Link" = "Linque Público";
 "Public Links" = "Linques Públicos";
-"Shared by %@" = "Compartilhado por %@";
+"Shared by {{owner}}" = "Compartilhado por {{owner}}";
 "Invite Recipient" = "Convidar Destinatário";
 "Recipients" = "Destinatários";
 "Add email or name" = "Adicionar email ou nome";

@@ -26,6 +26,40 @@ public class PrivateSharePage extends SharePage {
     @iOSXCUITFindBy(xpath="//XCUIElementTypeButton[@name=\"Sharing\"]")
     private MobileElement backButton;
 
+    @iOSXCUITFindBy(xpath="//XCUIElementTypeButton[@name=\"Invite\"]")
+    private MobileElement inviteButton;
+
+    @iOSXCUITFindBy(xpath="//XCUIElementTypeButton[@name=\"Cancel\"]")
+    private MobileElement cancelButton;
+
+    @iOSXCUITFindBy(xpath="//XCUIElementTypeTextField[@name=\"user1@192.168.1.20\"]")
+    private MobileElement searchField;
+
+    @iOSXCUITFindBy(id="Viewer")
+    private MobileElement viewer;
+
+    @iOSXCUITFindBy(id="Editor")
+    private MobileElement editor;
+
+    @iOSXCUITFindBy(id="Custom")
+    private MobileElement custom;
+
+    @iOSXCUITFindBy(id="Read")
+    private MobileElement read;
+
+    @iOSXCUITFindBy(id="Upload")
+    private MobileElement upload;
+
+    @iOSXCUITFindBy(id="Delete")
+    private MobileElement delete;
+
+    @iOSXCUITFindBy(id="Share")
+    private MobileElement share;
+
+    @iOSXCUITFindBy(id="Expiration date")
+    private MobileElement expirationDate;
+
+
     public PrivateSharePage(){
         super();
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
@@ -42,6 +76,7 @@ public class PrivateSharePage extends SharePage {
             shareeName += " (" + email + ")";
         }
         findXpath("//XCUIElementTypeStaticText[@name=\"" + shareeName + "\"]").click();
+        //**/XCUIElementTypeStaticText[`label == "user1"`][3] <- new sharee
     }
 
     public boolean isItemInListPrivateShares(String sharee) {

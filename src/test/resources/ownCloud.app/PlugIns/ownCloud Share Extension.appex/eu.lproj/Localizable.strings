@@ -355,7 +355,7 @@
 "Recipients" = "Hartzaileak";
 "Public Link" = "Esteka Publikoa";
 "Public Links" = "Esteka Publikoak";
-"Shared by %@" = "%@-ek partekatua";
+"Shared by {{owner}}" = "{{owner}}-ek partekatua";
 "Invite Recipient" = "Hartzaileak Gonbidatu";
 "Recipients" = "Hartzaileak";
 "Add email or name" = "Gehitu email edo izena";
