@@ -95,6 +95,6 @@ public class AppiumManager {
 
         capabilities.setCapability(MobileCapabilityType.NO_RESET, true);
 
-        capabilities.setCapability("autoDismissAlerts", true);
+        //capabilities.setCapability("autoDismissAlerts", true);
     }
 }

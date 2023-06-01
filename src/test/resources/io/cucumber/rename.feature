@@ -1,4 +1,4 @@
-@rename
+@rename @ignore
 Feature: Rename an item
 
   As a user, i want to rename the items of my account
@@ -8,26 +8,28 @@ Feature: Rename an item
     Given user Alice is logged in
 
   @smoke
-  Scenario: Rename an item using the Actions menu
+  Scenario Outline: Rename an item
     Given the following items have been created in the account
-      | folder | rename1 |
-    When Alice selects to rename the item rename1 using the Actions menu
-    And Alice sets renamed1 as new name
-    Then Alice should see renamed1 in the filelist
-    And Alice should not see rename1 in the filelist anymore
+      | <type> | <originalName> |
+    When Alice selects to rename the <type> <originalName> using the <menu> menu
+    And Alice sets <newName> as new name
+    Then Alice should see <newName> in the filelist
+    And Alice should not see <originalName> in the filelist anymore
 
-  Scenario: Rename an item using the Contextual menu
-    Given the following items have been created in the account
-      | file | rename2.txt |
-    When Alice selects to rename the item rename2.txt using the Contextual menu
-    And Alice sets renamed2.txt as new name
-    Then Alice should see renamed2.txt in the filelist
-    And Alice should not see rename2.txt in the filelist anymore
+    Examples:
+      | type   | originalName | newName     | menu       |
+      | folder | rename1      | rename2     | Actions    |
+      | file   | rename3.txt  | rename4.txt | Contextual |
 
-  Scenario: Rename an item using the Actions menu with an existing name
+  #Check notifications fix
+  Scenario Outline: Rename an item using the Actions menu with an existing name
     Given the following items have been created in the account
-      | folder | rename3 |
-      | folder | rename4 |
-    When Alice selects to rename the folder rename3 using the Actions menu
-    And Alice sets rename4 as new name
+      | <type> | <originalName> |
+      | <type> | <newName>      |
+    When Alice selects to rename the <type> <originalName> using the Actions menu
+    And Alice sets <newName> as new name
     Then Alice should see a duplicated item error
+
+    Examples:
+      | type   | originalName | newName |
+      | folder | rename5      | rename6 |

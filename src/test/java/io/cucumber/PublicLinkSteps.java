@@ -62,7 +62,7 @@ public class PublicLinkSteps {
         String stepName = new Object(){}.getClass().getEnclosingMethod().getName().toUpperCase();;
         Log.log(Level.FINE, "----STEP----: " + stepName);
         List<List<String>> listItems = table.asLists();
-        world.publicLinkPage.openPublicLink();
+        world.sharePage.openPublicLink();
         for (List<String> rows : listItems) {
             switch (rows.get(0)){
                 case "permissions": {
@@ -84,7 +84,7 @@ public class PublicLinkSteps {
     public void delete_link(String item) {
         String stepName = new Object(){}.getClass().getEnclosingMethod().getName().toUpperCase();;
         Log.log(Level.FINE, "----STEP----: " + stepName);
-        world.publicLinkPage.openPublicLink();
+        world.sharePage.openPublicLink();
         world.publicLinkPage.deleteLink();
     }
 
@@ -95,7 +95,7 @@ public class PublicLinkSteps {
         Log.log(Level.FINE, "----STEP----: " + stepName);
         //Asserts in UI
         List<List<String>> listItems = table.asLists();
-        world.publicLinkPage.openPublicLink();
+        world.sharePage.openPublicLink();
         for (List<String> rows : listItems) {
             switch (rows.get(0)) {
                 case "password": {
@@ -104,7 +104,6 @@ public class PublicLinkSteps {
                 }
                 case "permission": {
                     //TODO: Check how assert ticked value in UI
-                    //assertTrue(world.linkPermissionsPage.checkPermissions(rows.get(1)));
                     break;
                 }
                 case "expiration": {
@@ -125,7 +124,7 @@ public class PublicLinkSteps {
             throws Throwable {
         String stepName = new Object(){}.getClass().getEnclosingMethod().getName().toUpperCase();;
         Log.log(Level.FINE, "----STEP----: " + stepName);
-        assertFalse(world.publicLinkPage.isItemInListLinks());
+        assertFalse(world.sharePage.isItemInListLinks());
         assertTrue(world.shareAPI.getSharesByUser("").isEmpty());
     }
 }

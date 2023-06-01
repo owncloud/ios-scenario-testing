@@ -29,6 +29,7 @@ import io.appium.java_client.TouchAction;
 import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.ios.IOSStartScreenRecordingOptions;
 import io.appium.java_client.ios.IOSStartScreenRecordingOptions.VideoQuality;
+import io.appium.java_client.pagefactory.iOSXCUITFindBy;
 import io.appium.java_client.touch.WaitOptions;
 import io.appium.java_client.touch.offset.PointOption;
 import utils.LocProperties;
@@ -36,6 +37,9 @@ import utils.api.AuthAPI;
 import utils.log.Log;
 
 public class CommonPage {
+
+    @iOSXCUITFindBy(id="Allow")
+    protected List<MobileElement> allow;
 
     protected static IOSDriver driver = AppiumManager.getManager().getDriver();
     protected static Actions actions;
@@ -48,7 +52,9 @@ public class CommonPage {
         //Determine auth method
         AuthAPI authAPI = new AuthAPI();
         try {
-            authType = authAPI.checkAuthMethod();
+            if (authType.equals("")) { //Check auth type onlyonce
+                authType = authAPI.checkAuthMethod();
+            }
         } catch (IOException e){
             e.printStackTrace();
         }

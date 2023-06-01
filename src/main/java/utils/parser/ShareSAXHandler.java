@@ -28,8 +28,7 @@ public class ShareSAXHandler extends DefaultHandler {
     }
 
     @Override
-    public void endElement(String uri, String localName, String node)
-            throws SAXException {
+    public void endElement(String uri, String localName, String node) {
         switch (node) {
             case ("id"):{
                 share.setId(text);

@@ -34,22 +34,19 @@ public class Hooks {
 
     //After every scenario
     @After
-    public void tearDown(Scenario scenario)
-            throws IOException, ParserConfigurationException, SAXException {
+    public void tearDown(Scenario scenario) throws Throwable {
         cleanUp();
         Log.log(Level.FINE, "END SCENARIO EXECUTION: " + scenario.getName() + "\n\n");
         AppiumManager.getManager().getDriver().terminateApp("com.owncloud.ios-app");
     }
 
-    private void cleanUp()
-            throws IOException, ParserConfigurationException, SAXException {
+    private void cleanUp() throws Throwable {
         FilesAPI filesAPI = new FilesAPI();
         TrashbinAPI trashbinAPI = new TrashbinAPI();
         ArrayList<OCFile> filesRoot = filesAPI.listItems("");
         for (OCFile iterator: filesRoot){
             filesAPI.removeItem(iterator.getName());
         }
-        //Third, empty trashbin
         trashbinAPI.emptyTrashbin();
     }
 }

@@ -10,7 +10,7 @@ import io.appium.java_client.pagefactory.iOSXCUITFindBy;
 import utils.date.DateUtils;
 import utils.log.Log;
 
-public class PublicLinkPage extends SharePage {
+public class PublicLinkPage extends CommonPage {
 
     @iOSXCUITFindBy(id="Viewer")
     private MobileElement viewer;
@@ -112,13 +112,7 @@ public class PublicLinkPage extends SharePage {
 
     public boolean isExpirationCorrect(String day){
         Log.log(Level.FINE, "Starts: Check expiration day: " + day);
-        //Build string to compare with
-        String year = Integer.toString(DateUtils.todayYear()).substring(2);
-        String month = Integer.toString(DateUtils.todayMonth() + 1);
-        if (month.equals("12")){ //Jump to next year
-            year = year + 1;
-        }
-        String displayedDate = month + "/" + day + "/" + year;
+        String displayedDate = DateUtils.displayedDate(day);
         Log.log(Level.FINE, "Date to compare: " + displayedDate);
         String dateInPicker = datePicker.getAttribute("value");
         Log.log(Level.FINE, "Date to check in the screen: " + dateInPicker);

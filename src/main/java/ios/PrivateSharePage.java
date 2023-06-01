@@ -9,37 +9,19 @@ import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import io.appium.java_client.pagefactory.iOSXCUITFindBy;
 import utils.log.Log;
 
-public class PrivateSharePage extends SharePage {
-
-    @iOSXCUITFindBy(xpath="//XCUIElementTypeStaticText[@name=\"Sharing\"]")
-    private MobileElement sharingTitle;
-
-    @iOSXCUITFindBy(id="Add email or name")
-    private MobileElement searchSharee;
-
-    @iOSXCUITFindBy(id="Remove Recipient")
-    private MobileElement removeShare;
-
-    @iOSXCUITFindBy(id="permission-section-share")
-    private MobileElement sharePermission;
-
-    @iOSXCUITFindBy(xpath="//XCUIElementTypeButton[@name=\"Sharing\"]")
-    private MobileElement backButton;
-
-    @iOSXCUITFindBy(xpath="//XCUIElementTypeButton[@name=\"Invite\"]")
-    private MobileElement inviteButton;
-
-    @iOSXCUITFindBy(xpath="//XCUIElementTypeButton[@name=\"Cancel\"]")
-    private MobileElement cancelButton;
-
-    @iOSXCUITFindBy(xpath="//XCUIElementTypeTextField[@name=\"user1@192.168.1.20\"]")
-    private MobileElement searchField;
+public class PrivateSharePage extends CommonPage {
 
     @iOSXCUITFindBy(id="Viewer")
     private MobileElement viewer;
 
     @iOSXCUITFindBy(id="Editor")
     private MobileElement editor;
+
+    @iOSXCUITFindBy(id="Uploader")
+    private MobileElement uploader;
+
+    @iOSXCUITFindBy(id="Contributor")
+    private MobileElement contributor;
 
     @iOSXCUITFindBy(id="Custom")
     private MobileElement custom;
@@ -59,49 +41,79 @@ public class PrivateSharePage extends SharePage {
     @iOSXCUITFindBy(id="Expiration date")
     private MobileElement expirationDate;
 
+    @iOSXCUITFindBy(xpath="//XCUIElementTypeButton[@name=\"Invite\"]")
+    private MobileElement inviteButton;
+
+    @iOSXCUITFindBy(xpath = "//XCUIElementTypeButton[@name=\"Save changes\"]")
+    private MobileElement saveChanges;
+
+    @iOSXCUITFindBy(xpath="//XCUIElementTypeButton[@name=\"Unshare\"]")
+    private MobileElement unshare;
+
 
     public PrivateSharePage(){
         super();
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
     }
 
-    public void searchSharee(String shareeName, String email, String type) {
+    public void searchSharee(String shareeName, String type) {
         Log.log(Level.FINE, "Starts: Searching for sharee: " + shareeName + " that is a "+type);
-        searchSharee.sendKeys(shareeName);
-        if (type.equals("group")){
-            shareeName += " (Group)";
+        String urlShare = System.getProperty("server").substring(8)
+                .split(":")[0]; //remove protocol, get only URL
+        String searchXpath = "//XCUIElementTypeTextField[@name=\"Alice@" + urlShare + "\"]";
+        findXpath(searchXpath).sendKeys(shareeName);
+        findXpath("(//XCUIElementTypeStaticText[@name=\"" + shareeName + "\"])[1]").click();
+    }
+
+    public void setPermissions(String permission) {
+        Log.log(Level.FINE, "Starts: Set permissions: " + permission);
+        switch (permission){
+            case("Viewer"):{
+                viewer.click();
+                break;
+            }
+            case("Editor"):{
+                editor.click();
+                break;
+            }
+            case("Uploader"):{
+                uploader.click();
+                break;
+            }
+            case("Contributor"):{
+                contributor.click();
+                break;
+            }
+            //Sharing as default as custom. Changeable if needed
+            case("Custom"):{
+                custom.click();
+                share.click();
+                break;
+            }
         }
-        //oCIS (OIDC) returns email together with username. oC10, does not.
-        if (authType.equals("OIDC") && !type.equals("group")) {
-            shareeName += " (" + email + ")";
-        }
-        findXpath("//XCUIElementTypeStaticText[@name=\"" + shareeName + "\"]").click();
-        //**/XCUIElementTypeStaticText[`label == "user1"`][3] <- new sharee
     }
 
-    public boolean isItemInListPrivateShares(String sharee) {
-        return !findListId(sharee).isEmpty();
+    public void invite(){
+        Log.log(Level.FINE, "Starts: Invite sharee");
+        inviteButton.click();
     }
 
-    public void deletePrivateShare(String sharee){
-        findId(sharee).click();
-        removeShare.click();
+    public void removeSharingPermission() {
+        Log.log(Level.FINE, "Starts: Remove sharing permission");
+        custom.click();
+        share.click();
     }
 
-    public void openPrivateShare(String sharee){
-        findId(sharee).click();
+    public void savePermissions() {
+        Log.log(Level.FINE, "Starts: Save permissions private share");
+        inviteButton.click();
     }
 
-    public boolean displayedPermission(String permissionName){
-        return !findListId(permissionName).isEmpty();
+    public void deletePrivateShare(){
+        unshare.click();
     }
 
-    public boolean isPasswordEnabled () {
-        //TODO
-        return true;
-    }
-
-    public void close(){
-        backButton.click();
+    public void saveChanges(){
+        saveChanges.click();
     }
 }

@@ -34,7 +34,6 @@ Feature: Copy item
     And Alice creates new folder copy5 in the folder picker to copy inside
     Then Alice should see copy4.txt inside the folder copy5
 
-  @ignore
   Scenario: Copy a folder to another place with same item name
     Given the following items have been created in the account
       | folder | copy5       |

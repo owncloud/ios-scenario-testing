@@ -62,14 +62,16 @@ public class ShareAPI extends CommonAPI {
             throws IOException, SAXException, ParserConfigurationException {
         Log.log(Level.FINE, "Starts: Request Shares by user - " + userName);
         String url = urlServer + sharingEndpoint + "?state=all&shared_with_me=true";
-        Log.log(Level.FINE, "URL: " + url);
+        Log.log(Level.FINE, "URL get shares by user: " + url);
         if (userName.isEmpty()){
             userName = "alice"; //Fallback option and default user
         }
-        Request request = getRequest(url, userName);
+        Request request = getRequest(url, userName.toLowerCase());
         Response response = httpClient.newCall(request).execute();
+        String responseBody = response.body().string();
         Log.log(Level.FINE, "Response code: " + response.code());
-        ArrayList<OCShare> shares = getSharesFromRequest(response);
+        Log.log(Level.FINE, "Response body: " + responseBody);
+        ArrayList<OCShare> shares = getSharesFromRequest(responseBody);
         Log.log(Level.FINE, "Shares from user " + userName+ ": " + shares.size());
         response.close();
         return shares;
@@ -81,19 +83,21 @@ public class ShareAPI extends CommonAPI {
         String url = urlServer + sharingEndpoint + "?shared_with_me=true";
         Log.log(Level.FINE, "URL: " + url);
         Request request;
-        //if it is a group, we use a predefined sharee inside the group (user2)
+        //if it is a group, we use a predefined sharee inside the group (Bob)
         if (isGroup){
             request = getRequest(url, shareeU);
         } else {
             request = getRequest(url, userName);
         }
         Response response = httpClient.newCall(request).execute();
-        ArrayList<OCShare> myShares = getSharesFromRequest(response);
+        String responseString = response.body().string();
+        ArrayList<OCShare> myShares = getSharesFromRequest(responseString);
         Log.log(Level.FINE, myShares.size() + " shares found");
         response.close();
         for (OCShare share: myShares) {
             Log.log(Level.FINE, "ItemName: " + itemName + " ShareName: " + share.getItemName());
             if (share.getItemName().contains(itemName)){ //Current item found
+                Log.log(Level.FINE, "Sharee: " + share.getShareeName() + " userName: " + userName);
                 return share.getShareeName().equalsIgnoreCase(userName);
             }
         }
@@ -121,14 +125,13 @@ public class ShareAPI extends CommonAPI {
         Log.log(Level.FINE, "Shares to accept: "+ sharesToAccept.size());
         for (OCShare share: sharesToAccept) {
             String url = urlServer + sharingEndpoint + pendingEndpoint + "/" + share.getId();
-            Log.log(Level.FINE, "URL: " + url);
+            Log.log(Level.FINE, "URL to accept shares: " + url);
             Request request = postRequest(url, acceptPendingShare(share.getId()), userToShare);
             Response response = httpClient.newCall(request).execute();
             Log.log(Level.FINE, "Response Body: " + response.body().string());
             response.close();
         }
     }
-
 
     private RequestBody createBodyShare(String itemPath, String sharee, String type,
                                         String permissions, String name, int isReshare)
@@ -169,16 +172,15 @@ public class ShareAPI extends CommonAPI {
         return handler.getShare();
     }
 
-    private ArrayList<OCShare> getSharesFromRequest(Response httpResponse)
+    private ArrayList<OCShare> getSharesFromRequest(String response)
             throws IOException, SAXException, ParserConfigurationException {
         Log.log(Level.FINE, "Starts: Get all shares");
         //Create SAX parser
         SAXParserFactory parserFactor = SAXParserFactory.newInstance();
         SAXParser parser = parserFactor.newSAXParser();
         ShareSAXHandler handler = new ShareSAXHandler();
-
-        parser.parse(new InputSource(new StringReader(httpResponse.body().string())), handler);
-        httpResponse.body().close();
+        Log.log(Level.FINE, "RESPONSE to parse: " + response);
+        parser.parse(new InputSource(new StringReader(response)), handler);
         return handler.getAllShares();
     }
 }

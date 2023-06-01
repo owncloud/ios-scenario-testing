@@ -15,115 +15,110 @@ Feature: Private Share
       Scenario Outline: Correct share with user
         Given the following items have been created in the account
           | <type>  | <item>  |
-        When Alice selects to share the <type> <item> using the Actions menu
-        And Alice selects the following user as sharee with default permissions
-          | sharee | Bob         |
-          | email  | bob@own.com |
-        Then user Bob should have access to <item>
+        When Alice selects to share the <type> <item> using the <menu> menu
+        And Alice selects the following user as sharee with <permissions> permissions
+          | sharee      | <sharee>      |
+          | email       | <email>       |
+          | permissions | <permissions> |
+        Then user <sharee> should have access to <item>
         And share should be created on <item> with the following fields
-          | sharee | Bob |
+          | sharee      | <sharee> (<email>) |
+          | permissions | <permissions>      |
 
         Examples:
-          | type   | item       |
-          | file   | Share1.txt |
-          | folder | Share2     |
+          | type   | item       | permissions | sharee  | email          | menu       |
+          | file   | Share1.txt | Viewer      | Bob     | bob@own.com    | Actions    |
+          | folder | Share2     | Editor      | Charles | charly@own.com | Contextual |
 
       @smoke
       Scenario Outline: Correct share with group
         Given the following items have been created in the account
           | <type>  | <item>  |
-        When Alice selects to share the <type> <item> using the Actions menu
-        And Alice selects the following group as sharee with default permissions
-          | sharee | test  |
-        Then group test should have access to <item>
-        And share should be created on <item> with the following fields
-          | group | test |
+        When Alice selects to share the <type> <item> using the <menu> menu
+        And Alice selects the following group as sharee with <permissions> permissions
+          | group | <group> |
+        Then share should be created on <item> with the following fields
+          | group       | <group>       |
+          | permissions | <permissions> |
+        And group test should have access to <item>
 
         Examples:
-          |  type   |  item        |
-          |  file   |  Share3.txt  |
-          |  folder |  Share4      |
-
-      Scenario Outline: Correct share with user using the Contextual menu
-        Given the following items have been created in the account
-          | <type>  | <item>  |
-        When Alice selects to share the <type> <item> using the Contextual menu
-        And Alice selects the following user as sharee with default permissions
-          | sharee | Bob         |
-          | email  | bob@own.com |
-        Then user Bob should have access to <item>
-        And share should be created on <item> with the following fields
-          | sharee | Bob |
-
-        Examples:
-          | type   | item       |
-          | file   | Share5.txt |
-          | folder | Share6     |
+          | type   | item       | group | permissions | menu       |
+          | file   | Share3.txt | test  | Viewer      | Contextual |
+          | folder | Share4     | test  | Editor      | Actions    |
 
     @editshare
     Rule: Edit an existing share
 
       Scenario Outline: Edit existing share on a folder, removing permissions
         Given the following items have been created in the account
-          | folder  | <item>  |
-        And Alice has shared folder <item> with <user> with permissions 31
-        When Alice selects to edit share the folder <item> using the Actions menu
-        And Alice edits the share on <item> with permissions <permissions>
-        Then user <user> should have access to <item>
+          | folder | <item> |
+        And Alice has shared <type> <item> with user <sharee> with Viewer permissions
+        When Alice selects to share the folder <item> using the Actions menu
+        And Alice edits the share with the following fields
+          | sharee      | <sharee> (<email>) |
+          | permissions | <permissions>      |
+        Then user <sharee> should have access to <item>
         And share should be created on <item> with the following fields
-          | sharee        |  <user>        |
-          | permissions   |  <permissions> |
-
-    #Permissions
-        # READ -> 1
-        # UPDATE -> 2
-        # CREATE -> 4
-        # DELETE -> 8
-        # SHARE -> 16
+          | sharee      | <sharee> (<email>) |
+          | permissions | <permissions>      |
 
         Examples:
-          | item    | user | permissions |
-          | Share7  | Bob  | 1           |
-          | Share8  | Bob  | 9           |
-          | Share9  | Bob  | 13          |
-          | Share10 | Bob  | 17          |
+          | type   | item   | sharee | email       | permissions |
+          | folder | Share5 | Bob    | bob@own.com | Editor      |
+          | folder | Share6 | Bob    | bob@own.com | Custom      |
 
     @resharing
     Rule: Resharing
 
-      Scenario: Reshare allowed
+      Scenario Outline: Resharing allowed
         Given the following items have been created in the account
-          | file | Share11.txt |
-        When Alice selects to share the file Share11.txt using the Actions menu
-        And Alice selects the following user as sharee with default permissions
-          | sharee | Bob         |
-          | email  | bob@own.com |
-        And Bob has reshared file Share11.txt with Charles with permissions 31
-        Then user Bob should have access to Share11.txt
-        And user Charles should have access to Share11.txt
-        And share should be created on Share13.txt with the following fields
-          | sharee  | Bob       |
-          | sharee  | Charles   |
+          | <type> | <item> |
+        When Alice selects to share the <type> <item> using the Actions menu
+        And Alice selects the following user as sharee with Viewer permissions
+          | sharee | <sharee> |
+          | email  | <email>  |
+        And Bob has reshared <type> <item> with <shareetype> <sharee2> with Viewer permissions
+        Then user <sharee> should have access to <item>
+        And user <sharee2> should have access to <item>
+        And share should be created on <item> with the following fields
+          | sharee | <sharee> (<email>)   |
+          | sharee | <sharee2> (<email2>) |
 
-      Scenario: Reshare not allowed
+        Examples:
+          | type   | item       | shareetype | sharee | email       | sharee2 | email2         |
+          | file   | Share7.txt | user       | Bob    | bob@own.com | Charles | charly@own.com |
+          | folder | Share8     | user       | Bob    | bob@own.com | Charles | charly@own.com |
+
+      Scenario Outline: Resharing not allowed
         Given the following items have been created in the account
-          | file | Share12.txt |
-        When Alice selects to share the file Share12.txt using the Actions menu
-        And Alice selects the following user as sharee without share permission
-          | sharee | Bob         |
-          | email  | bob@own.com |
-        And Bob has reshared file Share14.txt with Charles with permissions 31
-        Then user Bob should have access to Share12.txt
-        But user Charles should not have access to Share12.txt
+          | <type> | <item> |
+        When Alice selects to share the <type> <item> using the Actions menu
+        And Alice selects the following user as sharee without sharing permission
+          | sharee | <sharee> |
+        And <sharee> has reshared <type> <item> with user <sharee2> with Viewer permissions
+        Then user <sharee> should have access to <item>
+        But user <sharee2> should not have access to <item>
+
+        Examples:
+          | type | item       | sharee | sharee2 |
+          | file | Share9.txt | Bob    | Charles |
 
     @deleteshare
     Rule: Delete an existing share
 
-      Scenario: Delete existing share on folder
+      Scenario Outline: Delete existing share on folder
         Given the following items have been created in the account
-          | folder | Share13 |
-        And Alice has shared folder Share13 with Bob with permissions 31
-        When Alice selects to edit share the folder Share15 using the Actions menu
-        And Alice deletes the share with Bob
-        Then user Bob should not have access to Share13
-        And Share13 should not be shared anymore with Bob
+          | <type> | <item> |
+        And Alice has shared <type> <item> with <shareetype> <sharee> with <permission> permissions
+        When Alice selects to share the <type> <item> using the Actions menu
+        And Alice deletes the share with
+          | <sharee> (<email>) |
+        Then user <sharee> should not have access to <item>
+        And <item> should not be shared anymore with
+          | <sharee> (<email>) |
+
+        Examples:
+          | type   | item    | shareetype | sharee | email       | permission |
+          | folder | Share10 | user       | Bob    | bob@own.com | Viewer     |
+

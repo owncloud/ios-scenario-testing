@@ -35,6 +35,7 @@ Feature: Move item
     Then Alice should not see move2.txt in the filelist anymore
     But Alice should see move2.txt inside the folder move3
 
+  @nooc10
   Scenario: Move an existent item to same location is not allowed
     Given the following items have been created in the account
       | file  | move3.txt |

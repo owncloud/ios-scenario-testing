@@ -41,6 +41,7 @@ Feature: Public Links
           | folder | Links3     | a        |
           | file   | Links4.txt | a        |
 
+      @expiration
       Scenario Outline: Create a public link with expiration date
         Given the following items have been created in the account
           | <type>  | <item>  |
@@ -71,7 +72,7 @@ Feature: Public Links
           | Links8 | Editor      |
 
     @editlink
-    Rule: Edit a public link
+    Rule: Edit an existing public link
 
       Scenario Outline: Edit existing share on a folder, changing permissions
         Given the following items have been created in the account

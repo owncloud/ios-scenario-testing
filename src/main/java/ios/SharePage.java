@@ -11,7 +11,6 @@ import io.appium.java_client.MobileElement;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import io.appium.java_client.pagefactory.iOSXCUITFindBy;
 import utils.date.DateUtils;
-import utils.entities.OCCapability;
 import utils.entities.OCShare;
 import utils.log.Log;
 
@@ -26,12 +25,26 @@ public class SharePage extends CommonPage {
     @iOSXCUITFindBy(id = "Copy Private Link")
     private MobileElement copyPrivateLink;
 
+    @iOSXCUITFindBy(id="Viewer (Download, preview and share)")
+    private MobileElement viewerPermission;
+
+    @iOSXCUITFindBy(id="Editor (Upload, edit, delete, download, preview and share)")
+    private MobileElement editorPermission;
+
+    @iOSXCUITFindBy(id="Custom (Set detailed permissions)")
+    private MobileElement customPermission;
+
     @iOSXCUITFindBy(id="Done")
     private MobileElement doneButton;
 
     public SharePage(){
         super();
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
+    }
+
+    public void invite() {
+        Log.log(Level.FINE, "Starts: Invite");
+        inviteButton.click();
     }
 
     public void openPublicLink(String linkName) {
@@ -42,6 +55,11 @@ public class SharePage extends CommonPage {
     public void openPublicLink() {
         Log.log(Level.FINE, "Starts: open public link with default name");
         findId("Link").click();
+    }
+
+    public void openPrivateShare(String sharee) {
+        Log.log(Level.FINE, "Starts: open private share");
+        findId(sharee).click();
     }
 
     public void createLink () {
@@ -104,9 +122,9 @@ public class SharePage extends CommonPage {
                     break;
                 }
                 case "permission":{
-                    if (!translatePermissions(remoteShare.getPermissions()).equals(entry.getValue())){
-                        Log.log(Level.FINE, translatePermissions(remoteShare.getPermissions()) + " " + entry.getValue());
-                        Log.log(Level.FINE, "Permissions do not match - Remote: " + translatePermissions(remoteShare.getPermissions())
+                    if (!translatePermissionstoString(remoteShare.getPermissions()).equals(entry.getValue())){
+                        Log.log(Level.FINE, translatePermissionstoString(remoteShare.getPermissions()) + " " + entry.getValue());
+                        Log.log(Level.FINE, "Permissions do not match - Remote: " + translatePermissionstoString(remoteShare.getPermissions())
                                 + " - Expected: " + entry.getValue());
                         return false;
                     }
@@ -115,7 +133,7 @@ public class SharePage extends CommonPage {
                 case "expiration":{
                     //Get only month-day-year
                     String remoteDate = remoteShare.getExpiration().substring(0, 10);
-                    String expDate = DateUtils.dateInDaysWithServerFormat2(Integer.valueOf(entry.getValue()));
+                    String expDate = DateUtils.dateInDaysWithServerFormat(Integer.valueOf(entry.getValue()));
                     Log.log(Level.FINE, "Expiration dates: Remote: " + remoteDate
                             + " - Expected: " + expDate);
                     if (!remoteDate.equals(expDate)){
@@ -129,18 +147,34 @@ public class SharePage extends CommonPage {
         return true;
     }
 
-    public boolean isItemInListLinks(String itemName) {
-        Log.log(Level.FINE, "Starts: link in list: " + itemName);
-        return !findListId(itemName).isEmpty();
-    }
-
     public boolean isItemInListLinks() {
-        Log.log(Level.FINE, "Starts: link in list with default name");
+        Log.log(Level.FINE, "Starts: link in list");
         return !findListId("Link").isEmpty();
     }
 
+    public boolean isItemInListPrivateShares(String sharee) {
+        Log.log(Level.FINE, "Starts: Share in list: " + sharee);
+        return !findListId(sharee).isEmpty();
+    }
+
+    public boolean displayedPermission(String permissionName){
+        switch (permissionName){
+            case "Viewer":{
+                return viewerPermission.isDisplayed();
+            }
+            case "Editor":{
+                return editorPermission.isDisplayed();
+            }
+            case "Custom":{
+                return customPermission.isDisplayed();
+            }
+            default:
+                return false;
+        }
+    }
+
     //Permissions from server come in numeric format. This method translates
-    private String translatePermissions(String permission) {
+    private String translatePermissionstoString(String permission) {
         Log.log(Level.FINE, "Permission to translate: " + permission);
         if (permission.equals("1"))
             return "Viewer";
@@ -152,6 +186,19 @@ public class SharePage extends CommonPage {
             return "Uploader";
         if (permission.equals("5"))
             return "Contributor";
+        return "";
+    }
+
+    public String translatePermissionsToInt(String permission) {
+        Log.log(Level.FINE, "Permission to translate: " + permission);
+        if (permission.equals("Viewer"))
+            return "17";
+        if (permission.equals("Editor"))
+            return "15";
+        if (permission.equals("Uploader"))
+            return "4";
+        if (permission.equals("Contributor"))
+            return "5";
         return "";
     }
 

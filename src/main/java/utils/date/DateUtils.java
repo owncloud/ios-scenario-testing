@@ -9,13 +9,19 @@ import utils.log.Log;
 public class DateUtils {
 
     //Received the day of the following month in which it expiration date is set
-    public static String dateInDaysWithServerFormat2(int days) {
+    public static String dateInDaysWithServerFormat(int days) {
         Log.log(Level.FINE, "Starts: Turns days in date with server response format");
         int day = days;
         int year = todayYear();
         int month = todayMonth();
+        int dayToday = todayDay();
         if (month == 12){ //Jump to next year
             year++;
+        }
+        //By default, expiration date is one week later. In the last week of the month
+        //the expiration date in the following month will jump to the next month
+        if (daysOfMonth(todayMonth(),todayYear()) - dayToday < 7){
+            month++;
         }
         GregorianCalendar gregorianCalendar = new GregorianCalendar(year,month,day);
         Log.log(Level.FINE, "Date to format: " + gregorianCalendar.getTime());
@@ -24,6 +30,22 @@ public class DateUtils {
                 +"-"+formatInt(gregorianCalendar.get(Calendar.DAY_OF_MONTH));
         Log.log(Level.FINE, "Date formatted: " + dateFormat);
         return dateFormat;
+    }
+
+    //Builds the string with the date displayed in the app
+    public static String displayedDate(String day){
+        String year = Integer.toString(DateUtils.todayYear()).substring(2);
+        String month = Integer.toString(DateUtils.todayMonth() + 1);
+        String dayToday = Integer.toString(DateUtils.todayDay());
+        if (month.equals("12")){ //Jump to next year
+            year = year + 1;
+        }
+        if (DateUtils.daysOfMonth(DateUtils.todayMonth(), DateUtils.todayYear()) - Integer.parseInt(dayToday) < 7){
+            month = Integer.toString(DateUtils.todayMonth() + 2);
+        } else {
+            month = Integer.toString(DateUtils.todayMonth() + 1);
+        }
+        return month + "/" + day + "/" + year;
     }
 
     private static String formatInt(int dateNumber){
@@ -36,14 +58,33 @@ public class DateUtils {
         return day;
     }
 
-    public static int minExpirationDate(int a, int b){
-        if (a == 0 && b > 0){
-            return b;
+    public static int daysOfMonth(int month, int year){
+        switch(month){
+            case 1:
+            case 3:
+            case 5:
+            case 7:
+            case 8:
+            case 10:
+            case 12:{
+                return 31;
+            }
+            case 4:
+            case 6:
+            case 9:
+            case 11:{
+                return 30;
+            }
+            case 2:{ //lap year
+                if (year%4 == 0) {
+                    return 29;
+                } else {
+                    return 28;
+                }
+            }
+            default:
+                return 0;
         }
-        if (a > 0 && b == 0){
-            return a;
-        }
-        return a <= b ? a : b;
     }
 
     public static int todayDay(){

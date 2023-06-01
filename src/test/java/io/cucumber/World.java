@@ -10,7 +10,6 @@ import java.io.IOException;
 import ios.PrivateSharePage;
 import ios.PublicLinkPage;
 import ios.SharePage;
-import ios.SharePermissionsPage;
 import utils.api.FilesAPI;
 import utils.api.ShareAPI;
 
@@ -24,7 +23,6 @@ public class World {
     PrivateSharePage privateSharePage = new PrivateSharePage();
     PublicLinkPage publicLinkPage = new PublicLinkPage();
     SharePage sharePage = new SharePage();
-    SharePermissionsPage sharePermissionsPage = new SharePermissionsPage();
 
     //APIs to call
     ShareAPI shareAPI = new ShareAPI();

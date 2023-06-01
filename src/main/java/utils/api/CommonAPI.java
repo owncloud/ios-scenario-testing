@@ -123,7 +123,7 @@ public class CommonAPI {
                 .addHeader("OCS-APIREQUEST", "true")
                 .addHeader("User-Agent", userAgent)
                 .addHeader("Authorization", "Basic " +
-                        Base64.getEncoder().encodeToString((userName+":a").getBytes()))
+                        Base64.getEncoder().encodeToString((userName.toLowerCase()+":"+password).getBytes()))
                 .addHeader("Host", host)
                 .post(body)
                 .build();

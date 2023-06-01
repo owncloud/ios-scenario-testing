@@ -56,7 +56,6 @@ public class FileListPage extends CommonPage {
     @iOSXCUITFindBy(xpath="//XCUIElementTypeStaticText[@name=\"Quick Access\"]")
     private MobileElement quickAccess;
 
-
     //Actions in action menu
     private final String xpath_delete = "//XCUIElementTypeCell[@name=\"com.owncloud.action.delete\"]";
     private final String xpath_rename = "//XCUIElementTypeCell[@name=\"com.owncloud.action.rename\"]";
@@ -66,21 +65,7 @@ public class FileListPage extends CommonPage {
     private final String xpath_paste = "//XCUIElementTypeCell[@name=\"com.owncloud.action.importpasteboard\"]";
     private final String xpath_duplicate = "//XCUIElementTypeCell[@name=\"com.owncloud.action.duplicate\"]";
     private final String xpath_avoffline = "//XCUIElementTypeCell[@name=\"com.owncloud.action.makeAvailableOffline\"]";
-    private final String xpath_unavoffline = "//XCUIElementTypeCell[@name=\"com.owncloud.action.makeUnavailableOffline\"]";
-    private final String xpath_sharefolder = "//XCUIElementTypeStaticText[@name=\"Share this folder\"]";
-    private final String xpath_sharefile = "//XCUIElementTypeStaticText[@name=\"Share this file\"]";
-    private final String xpath_editshare = "//XCUIElementTypeApplication[@name=\"ownCloud\"]/XCUIElementTypeWindow[1]/" +
-            "XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeTable/XCUIElementTypeCell[1]";
-    private final String xpath_sharelink = "//XCUIElementTypeStaticText[@name=\"Links\"]";
-    private final String xpath_editlink = "//XCUIElementTypeApplication[@name=\"ownCloud\"]/XCUIElementTypeWindow[1]/" +
-            "XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeTable/XCUIElementTypeCell[2]";
-    private final String xpath_favorite = "//XCUIElementTypeApplication[@name=\"ownCloud\"]/XCUIElementTypeWindow[1]/" +
-            "XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeTable/XCUIElementTypeCell[2]";
-    private final String xpath_card = "//XCUIElementTypeApplication[@name=\"ownCloud\"]/XCUIElementTypeWindow[1]" +
-            "/XCUIElementTypeOther/XCUIElementTypeOther[2]";
     private final String xpath_copydirectory = "//XCUIElementTypeButton[@name=\"Choose destination directory…\"]";
-    private final String xpath_copyclipboard = "//XCUIElementTypeButton[@name=\"Copy to Clipboard\"]";
-    private final String xpath_sharing = "//XCUIElementTypeCell[@name=\"com.owncloud.action.collaborate\"]";
 
     //Actions in contextual menu menu
     private final String id_delete = "Delete";
@@ -92,7 +77,6 @@ public class FileListPage extends CommonPage {
     private final String id_avoffline = "Make available offline";
     private final String id_favorite = "Favorite item";
     private final String id_unfavorite = "Unfavorite item";
-    private final String id_unavoffline = "com.owncloud.action.makeUnavailableOffline";
     private final String id_sharing = "com.owncloud.action.collaborate";
     private final String id_sharing_c = "Sharing";
 
@@ -101,7 +85,7 @@ public class FileListPage extends CommonPage {
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
     }
 
-    public void refreshBySwipe() throws InterruptedException {
+    public void refreshBySwipe() {
         swipe(0.50, 0.40, 0.50, 0.90);
     }
 
@@ -217,12 +201,17 @@ public class FileListPage extends CommonPage {
     }
 
     public boolean isItemInScreen(String itemName) {
-        Log.log(Level.FINE, "Starts: Check if item is in QuickAccess: " + itemName);
+        Log.log(Level.FINE, "Starts: Check if item is in screen: " + itemName);
+        //A system notification can rise at this point. We accept it
+        //This can be managed via capabilities but affects other test cases.
+        if (allow.size() > 0){
+            allow.get(0).click();
+        }
         return !findListId(itemName).isEmpty();
     }
 
     public void itemInScreen(String itemName) {
-        Log.log(Level.FINE, "Starts: Check if item is in QuickAccess: " + itemName);
+        Log.log(Level.FINE, "Starts: Check if item is in screen: " + itemName);
         findListId(itemName).isEmpty();
     }
 

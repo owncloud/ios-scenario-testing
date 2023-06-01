@@ -338,7 +338,7 @@
 		</dict>
 		<key>Frameworks/ownCloudApp.framework/ownCloudApp</key>
 		<data>
-		0kN3GGHSrPAsI6LdefeX80ua2yk=
+		I8bl+9JtqhvJgz8ZBQabEjLKsdU=
 		</data>
 		<key>Frameworks/ownCloudApp.framework/pt-BR.lproj/Localizable.strings</key>
 		<dict>
@@ -592,7 +592,7 @@
 		</dict>
 		<key>Frameworks/ownCloudAppShared.framework/ownCloudAppShared</key>
 		<data>
-		dthOmC49LJqAco0ndo5SMmERohU=
+		zFd2P635kZ1/dgAtGMNDj1RrGsU=
 		</data>
 		<key>Frameworks/ownCloudAppShared.framework/owncloud-logo.tvg</key>
 		<data>
@@ -702,7 +702,7 @@
 		</data>
 		<key>Frameworks/ownCloudSDK.framework/Info.plist</key>
 		<data>
-		VSM6SIhjUCOugr0IsO2Jv2GtZvA=
+		UfVbZvHg70Xjd9EGyBSLSKb0rJs=
 		</data>
 		<key>Frameworks/ownCloudSDK.framework/LICENSE</key>
 		<data>
@@ -710,7 +710,7 @@
 		</data>
 		<key>Frameworks/ownCloudSDK.framework/_CodeSignature/CodeResources</key>
 		<data>
-		KzuDPBeqp2lBqIYbHq96ItvS/Eo=
+		MiBrrCvymOiUY97+TJ8MU3MZiVA=
 		</data>
 		<key>Frameworks/ownCloudSDK.framework/cs.lproj/Localizable.strings</key>
 		<dict>
@@ -804,7 +804,7 @@
 		</dict>
 		<key>Frameworks/ownCloudSDK.framework/ownCloudSDK</key>
 		<data>
-		gofpIUh+Rs5sRqeHYkXnHwsd8vA=
+		E2o4gOismWt4OU5ujASdyNohbv4=
 		</data>
 		<key>Frameworks/ownCloudSDK.framework/pt-BR.lproj/Localizable.strings</key>
 		<dict>
@@ -960,7 +960,7 @@
 		</dict>
 		<key>Frameworks/ownCloudUI.framework/ownCloudUI</key>
 		<data>
-		sedkkCLe+EhEVWJ8VGaNfp9ka+E=
+		C90FiIDHsJrOidLiJcdRKEF7a50=
 		</data>
 		<key>Frameworks/ownCloudUI.framework/pt-BR.lproj/Localizable.strings</key>
 		<dict>
@@ -1018,7 +1018,7 @@
 		</dict>
 		<key>Info.plist</key>
 		<data>
-		l3BqxdHzC/kFqPu3K9R1AQBdslo=
+		b9JdT+O7uwiryKFALlWGlgQIDSc=
 		</data>
 		<key>LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib</key>
 		<data>
@@ -1820,7 +1820,7 @@
 		</dict>
 		<key>PlugIns/ownCloud Share Extension.appex/ownCloud Share Extension</key>
 		<data>
-		qPCL0EYOoO9MImjvhUuqmxbFCLo=
+		RUkw6RZISMNP4DJEoYyBj23XjR8=
 		</data>
 		<key>PlugIns/ownCloud Share Extension.appex/pt-BR.lproj/InfoPlist.strings</key>
 		<dict>
@@ -3719,7 +3719,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			SWzn2YBdR4NQgkMgjX55ONu0PGSK2cPRbYoZcYh65Ew=
+			54n+7ubL8zpDQnJjnNkZTSdFt+9nW+QDRVzSyGP838s=
 			</data>
 		</dict>
 		<key>Frameworks/ownCloudApp.framework/pt-BR.lproj/Localizable.strings</key>
@@ -4042,7 +4042,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			M8a0qaFEcYZJSm+RrjPFBiNyUlZxiusd1S8JQ4kr2xg=
+			UgPnIRxV++F+IWaxmfBQWE86NVYqw7d9604OV1BKsRw=
 			</data>
 		</dict>
 		<key>Frameworks/ownCloudAppShared.framework/owncloud-logo.tvg</key>
@@ -4194,7 +4194,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			/EKUj6CaeLME8u9jZmnvzTYMMthVCuUeqPQj5acTuJg=
+			n6EzBdd/BC4iKeHQE2KAxdK6vIGGsiCwRuzwWvBAtaI=
 			</data>
 		</dict>
 		<key>Frameworks/ownCloudSDK.framework/LICENSE</key>
@@ -4208,7 +4208,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			z5v/zxb/zjR+36TgijDIN8zykWeqYyEBJc/t966cm2E=
+			0LlFKRaaDVFG5RfWbCFLGCc/OBFenazY3RiWWCGCW90=
 			</data>
 		</dict>
 		<key>Frameworks/ownCloudSDK.framework/cs.lproj/Localizable.strings</key>
@@ -4305,7 +4305,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			cZ3+a/97tFKuA8autvTsDKUSOwfKL4G2tPPipPmjUXI=
+			AQ5lRhucdUUFEGpequspJBKW/t5q3LVJhCEPZ0faeh0=
 			</data>
 		</dict>
 		<key>Frameworks/ownCloudSDK.framework/pt-BR.lproj/Localizable.strings</key>
@@ -4470,7 +4470,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			W31+8IrTTOAfcH7VuJS4cbTJX30pQ3ou1Iq01W3TifU=
+			qGfxsKA/tsB1UqNQyFhlQcsqJkfllylkCbyH+CvNJI4=
 			</data>
 		</dict>
 		<key>Frameworks/ownCloudUI.framework/pt-BR.lproj/Localizable.strings</key>
@@ -5583,7 +5583,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			QhI8U8jcdWkgLqepwPKzJXbko5C5pIFNIJeKbJTSYkA=
+			MYXBazc35C1rUwabaHB9KDJgXPj00jWVn+20uJ9//FE=
 			</data>
 		</dict>
 		<key>PlugIns/ownCloud Share Extension.appex/pt-BR.lproj/InfoPlist.strings</key>

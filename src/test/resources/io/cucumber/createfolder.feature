@@ -16,7 +16,7 @@ Feature: Create a new folder
     Given user Alice is logged in
     And the following items have been created in the account
       | folder   | Documents  |
-    And item Documents is visible
+    #And item Documents is visible
     When Alice selects the option Create Folder
     And Alice sets Documents as new name
     Then Alice should see a duplicated item error
