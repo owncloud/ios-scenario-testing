@@ -78,8 +78,8 @@ public class AppiumManager {
 
         if (System.getProperty("device") != null && !System.getProperty("device").isEmpty()) {
             capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, System.getProperty("device"));
-        } else { //Will use iPhone X as default simulator
-            capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "iPhone X");
+        } else {
+            capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "iPhone 14");
         }
 
         capabilities.setCapability("udid", System.getProperty("udid"));

@@ -38,6 +38,9 @@ import utils.log.Log;
 
 public class CommonPage {
 
+    @iOSXCUITFindBy(id="Don’t Allow")
+    protected List<MobileElement> dontAllow;
+
     @iOSXCUITFindBy(id="Allow")
     protected List<MobileElement> allow;
 

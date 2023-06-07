@@ -58,8 +58,7 @@ public class PrivateSharePage extends CommonPage {
 
     public void searchSharee(String shareeName, String type) {
         Log.log(Level.FINE, "Starts: Searching for sharee: " + shareeName + " that is a "+type);
-        String urlShare = System.getProperty("server").substring(8)
-                .split(":")[0]; //remove protocol, get only URL
+        String urlShare = System.getProperty("server").split("://")[1].split(":")[0];
         String searchXpath = "//XCUIElementTypeTextField[@name=\"Alice@" + urlShare + "\"]";
         findXpath(searchXpath).sendKeys(shareeName);
         findXpath("(//XCUIElementTypeStaticText[@name=\"" + shareeName + "\"])[1]").click();

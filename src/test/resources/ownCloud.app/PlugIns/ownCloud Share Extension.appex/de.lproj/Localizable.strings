@@ -404,6 +404,7 @@
 "Error opening {{itemName}} in {{appName}}" = "Fehler beim Öffnen von {{itemName}} in {{appName}}";
 "The search term you entered did not match any item in the selected scope." = "Kein Treffer für den eingegebenen Suchbegriff im ausgewählten Bereich.";
 "New document" = "Neues Dokument";
+"Opening…" = "Öffnen…";
 "Tree" = "Baum";
 "Search tree" = "Baum durchsuchen";
 "Search from {{folder.name}}" = "{{folder.name}} durchsuchen";

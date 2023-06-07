@@ -56,6 +56,10 @@ public class FileListPage extends CommonPage {
     @iOSXCUITFindBy(xpath="//XCUIElementTypeStaticText[@name=\"Quick Access\"]")
     private MobileElement quickAccess;
 
+    @iOSXCUITFindBy(xpath ="//XCUIElementTypeButton[@name=\"Delete\"]")
+    private MobileElement delete;
+
+
     //Actions in action menu
     private final String xpath_delete = "//XCUIElementTypeCell[@name=\"com.owncloud.action.delete\"]";
     private final String xpath_rename = "//XCUIElementTypeCell[@name=\"com.owncloud.action.rename\"]";
@@ -202,10 +206,10 @@ public class FileListPage extends CommonPage {
 
     public boolean isItemInScreen(String itemName) {
         Log.log(Level.FINE, "Starts: Check if item is in screen: " + itemName);
-        //A system notification can rise at this point. We accept it
+        //A system notification can rise at this point. We refuse it
         //This can be managed via capabilities but affects other test cases.
-        if (allow.size() > 0){
-            allow.get(0).click();
+        if (dontAllow.size() > 0){
+            dontAllow.get(0).click();
         }
         return !findListId(itemName).isEmpty();
     }
@@ -415,7 +419,7 @@ public class FileListPage extends CommonPage {
 
     public void acceptDeletion(){
         Log.log(Level.FINE, "Starts: accept deletion");
-        findXpath("//XCUIElementTypeButton[@name=\"Delete\"]").click();
+        delete.click();
     }
 
     public void openCard(String itemName){

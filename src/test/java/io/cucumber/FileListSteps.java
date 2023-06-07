@@ -77,13 +77,6 @@ public class FileListSteps {
         world.filesAPI.setFavorite(itemName);
     }
 
-    @Given("item {word} is visible")
-    public void item_is_visible(String itemName){
-        String stepName = new Object(){}.getClass().getEnclosingMethod().getName().toUpperCase();
-        Log.log(Level.FINE, "----STEP----: " + stepName);
-        world.fileListPage.itemInScreen(itemName);
-    }
-
     @When("Alice opens a private link pointing to {word} with scheme {word}")
     public void open_private_link(String filePath, String scheme)
             throws Throwable {

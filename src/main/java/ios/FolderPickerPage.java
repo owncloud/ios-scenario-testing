@@ -73,8 +73,8 @@ public class FolderPickerPage extends CommonPage {
         } else if(operation.equals("copy")) {
             findXpath(xpath_copy).click();
         }
-        if (allow.size() > 0){
-            allow.get(0).click();
+        if (dontAllow.size() > 0){
+            dontAllow.get(0).click();
         }
     }
 
