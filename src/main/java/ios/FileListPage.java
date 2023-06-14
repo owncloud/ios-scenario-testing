@@ -56,6 +56,9 @@ public class FileListPage extends CommonPage {
     @iOSXCUITFindBy(xpath="//XCUIElementTypeStaticText[@name=\"Quick Access\"]")
     private MobileElement quickAccess;
 
+    @iOSXCUITFindBy(xpath="//XCUIElementTypeStaticText[@name=\"Spaces\"]")
+    private MobileElement spaces;
+
     @iOSXCUITFindBy(xpath ="//XCUIElementTypeButton[@name=\"Delete\"]")
     private MobileElement delete;
 
@@ -163,6 +166,12 @@ public class FileListPage extends CommonPage {
         sideMenuOpener.click();
         quickAccess.click();
         findXpath(collectionXpath).click();
+    }
+
+    public void openSpacesList(){
+        Log.log(Level.FINE, "Starts: Open Spces list");
+        sideMenuOpener.click();
+        spaces.click();
     }
 
     public void executeOperation(String operation, String itemName, String typeItem, String menu){

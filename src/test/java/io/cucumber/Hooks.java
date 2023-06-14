@@ -6,13 +6,8 @@
 
 package io.cucumber;
 
-import org.xml.sax.SAXException;
-
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.logging.Level;
-
-import javax.xml.parsers.ParserConfigurationException;
 
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
@@ -24,6 +19,12 @@ import utils.entities.OCFile;
 import utils.log.Log;
 
 public class Hooks {
+
+    private World world;
+
+    public Hooks (World world){
+        this.world = world;
+    }
 
     //Before every scenario
     @Before
@@ -48,5 +49,8 @@ public class Hooks {
             filesAPI.removeItem(iterator.getName());
         }
         trashbinAPI.emptyTrashbin();
+        if (world.authAPI.checkAuthMethod().equals("OIDC")){ //remove spaces
+            world.graphAPI.removeSpacesOfUser();
+        }
     }
 }

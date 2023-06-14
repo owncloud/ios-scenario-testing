@@ -10,7 +10,10 @@ import java.io.IOException;
 import ios.PrivateSharePage;
 import ios.PublicLinkPage;
 import ios.SharePage;
+import ios.SpacesPage;
+import utils.api.AuthAPI;
 import utils.api.FilesAPI;
+import utils.api.GraphAPI;
 import utils.api.ShareAPI;
 
 public class World {
@@ -23,10 +26,13 @@ public class World {
     PrivateSharePage privateSharePage = new PrivateSharePage();
     PublicLinkPage publicLinkPage = new PublicLinkPage();
     SharePage sharePage = new SharePage();
+    SpacesPage spacesPage = new SpacesPage();
 
     //APIs to call
+    AuthAPI authAPI = new AuthAPI();
     ShareAPI shareAPI = new ShareAPI();
     FilesAPI filesAPI = new FilesAPI();
+    GraphAPI graphAPI = new GraphAPI();
 
     public World() throws IOException {
     }
