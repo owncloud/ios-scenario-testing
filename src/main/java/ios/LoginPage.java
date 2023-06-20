@@ -12,8 +12,8 @@ import utils.log.Log;
 
 public class LoginPage extends CommonPage{
 
-    @iOSXCUITFindBy(accessibility = "addServer")
-    private MobileElement addServer;
+    @iOSXCUITFindBy(xpath = "//XCUIElementTypeStaticText[@name=\"Add account\"]")
+    private MobileElement addAccountButton;
 
     @iOSXCUITFindBy(accessibility = "row-url-url")
     private List<MobileElement> urlServer;
@@ -33,26 +33,11 @@ public class LoginPage extends CommonPage{
     @iOSXCUITFindBy(accessibility = "row-credentials-password")
     private MobileElement passwordInput;
 
-    @iOSXCUITFindBy(accessibility = "access-files")
-    private MobileElement bookmarkCell;
-
-    @iOSXCUITFindBy(accessibility = "access-files")
-    private List<MobileElement> bookmarkCells;
-
-    //@iOSXCUITFindBy(accessibility = "Personal")
-    //private MobileElement personal;
-
     @iOSXCUITFindBy(xpath = "//XCUIElementTypeStaticText[@name=\"Personal\"]")
     private MobileElement personal;
 
     @iOSXCUITFindBy(xpath = "//XCUIElementTypeStaticText[@name=\"Files\"]")
     private MobileElement files;
-
-    @iOSXCUITFindBy(accessibility = "Continue")
-    private MobileElement continueSafari;
-
-    @iOSXCUITFindBy(xpath = "//XCUIElementTypeStaticText[@name=\"Add account\"]")
-    private MobileElement addAccountButton;
 
     //For the regular tests
     private final String server = System.getProperty("server");

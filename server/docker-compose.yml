@@ -1,0 +1,21 @@
+version: "3.7"
+
+services:
+  ocis:
+    image: owncloud/ocis:3.0.0
+    ports:
+      - 9200:9200
+      - 9215:9215
+    environment:
+      OCIS_INSECURE: "true"
+      OCIS_URL: "https://myServerIP:9200"
+      IDM_CREATE_DEMO_USERS: "true"
+      IDM_ADMIN_PASSWORD: "admin"
+      PROXY_ENABLE_BASIC_AUTH: "true"
+    restart: "no"
+    entrypoint:
+      - /bin/sh
+    # run ocis init to initialize a configuration file with random secrets
+    # it will fail on subsequent runs, because the config file already exists
+    # therefore we ignore the error and then start the ocis server
+    command: ["-c", "ocis init || true; ocis server"]

@@ -44,6 +44,7 @@ Feature: Copy item
     Then Alice should see the following error
       | copy6 already exists |
 
+  @nooc10
   Scenario: Copy an existent item to same location is not allowed
     Given the following items have been created in the account
       | file | copy7.txt |

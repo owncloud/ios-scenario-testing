@@ -95,6 +95,8 @@ public class AppiumManager {
 
         capabilities.setCapability(MobileCapabilityType.NO_RESET, true);
 
+        capabilities.setCapability("appium:newCommandTimeout", 60);
+
         //capabilities.setCapability("autoDismissAlerts", true);
     }
 }

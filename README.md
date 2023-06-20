@@ -70,6 +70,20 @@ The execution will display step by step how the scenario is being executed.
 
 More info in [Cucumber reference](https://cucumber.io/docs/cucumber/api/)
 
+**NOTE**: Since there are two kinds of backends available (oC10, oCIS), not all tests are suitable to be executed over both. Those tests have been tagged with:
+
+- `nooc10`: tests to be executed only over oCIS, not suitable for oC10.
+- `noocis`: tests to be executed only over oC10, not suitable for oCIS.
+
+It's important to execute the tests with the mentioned tags to avoid wrong positives. Example commands:
+
+`./executeTests -t "not @ignore and not @noocis"`<br>
+This command will execute tests that are not ignored and suitable for oCIS. If this command is run over an oC10 instance, some tests will fail.
+
+`./executeTests -t "not @ignore and not @nooc10"`<br>
+This command will execute tests that are not ignored and suitable for oC10. If this command is run over an oCIS instance, some tests will fail.
+
+
 ## Results
 
 In the folder `target`, you will find a report with the execution results in html and json formats.

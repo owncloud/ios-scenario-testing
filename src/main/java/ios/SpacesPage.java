@@ -8,7 +8,7 @@ import java.util.logging.Level;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import utils.log.Log;
 
-public class SpacesPage extends CommonPage{
+public class SpacesPage extends CommonPage {
 
     public SpacesPage(){
         super();
