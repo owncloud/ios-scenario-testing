@@ -31,6 +31,7 @@ Syntax](https://cucumber.io/docs/gherkin/).
 - Download a [zip
 file](https://github.com/owncloud/ios-scenario-testing/archive/master.zip)
 
+
 ## Requirements
 
 Different requirements:
@@ -48,6 +49,35 @@ Different requirements:
 	* `ios-sim` : Simulator manager (start, launch...)
 
 ## How to test
+
+### 1. Build app
+
+First, build the [app](https://github.com/owncloud/ios-app) from the expected branch/commit to get the test object. Before building, execute the following commands in the app's folder:
+
+```
+gsed -i 's/.showBetaWarning : true/.showBetaWarning : false/i' ownCloudAppShared/Tools/VendorServices.swift
+grep .showBetaWarning ownCloudAppShared/Tools/VendorServices.swift
+gsed -i '170,200d' ownCloud/Release\ Notes/ReleaseNotesHostViewController.swift
+grep -C 2 shouldShowReleaseNotes ownCloud/Release\ Notes/ReleaseNotesHostViewController.swift
+gsed -i '136i OCConnectionAllowedAuthenticationMethodIDs : @[ OCAuthenticationMethodIdentifierBasicAuth ],' ios-sdk/ownCloudSDK/Connection/OCConnection.m
+```
+These instructions:
+
+- will disable the beta warning
+- will disable the release notes
+- will set basic auth as forced authentication method, required to execute the test suites
+
+App is built via Xcode or CLI (`xcodebuild`)
+
+After building, the `ownCloud.app` artifact is located in:
+
+`$HOME/Library/Developer/Xcode/DerivedData/ownCloud-*/Build/Products/Debug-*`
+
+move the `owncloud.app` to the correct place in the current tests project: `/src/test/resources`
+
+(in the current repository will be always an `owncloud.app` file located in the correct place.)
+
+### 2. Execute tests
 
 The script `executeTests` will launch the tests. The following environment variables must be set in advance
 
