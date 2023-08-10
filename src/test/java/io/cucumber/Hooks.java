@@ -49,8 +49,8 @@ public class Hooks {
             filesAPI.removeItem(iterator.getName());
         }
         trashbinAPI.emptyTrashbin();
-        if (world.authAPI.checkAuthMethod().equals("OIDC")){ //remove spaces
-            world.graphAPI.removeSpacesOfUser();
+        if (world.getAuthAPI().checkAuthMethod().equals("OIDC")){ //remove spaces
+            world.getGraphAPI().removeSpacesOfUser();
         }
     }
 }

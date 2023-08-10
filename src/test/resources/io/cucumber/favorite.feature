@@ -32,7 +32,7 @@ Feature: Set an item as favorite (starred)
             | <type> | <item> |
           And item <item> has been set as favorite
           When Alice sets as unfavorite the <type> <item> using the <menu> menu
-          And Alice closes the Actions menu
+          And Alice closes the <menu> menu
           Then <type> <item> should be set as unfavorite
 
           Examples:

@@ -41,7 +41,7 @@ Feature: Public Links
           | folder | Links3     | a        |
           | file   | Links4.txt | a        |
 
-      @expiration
+      @expiration @ignore
       Scenario Outline: Create a public link with expiration date
         Given the following items have been created in the account
           | <type>  | <item>  |

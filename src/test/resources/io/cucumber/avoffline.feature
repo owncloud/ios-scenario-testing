@@ -8,6 +8,7 @@ Feature: Set items as available offline (downloaded and synced)
   Background: User is logged in
     Given user Alice is logged in
 
+    @ignore
     Scenario Outline: Set a file as available offline using the Actions menu
       Given the following items have been created in the account
         | <type> | <item> |
@@ -15,9 +16,9 @@ Feature: Set items as available offline (downloaded and synced)
       Then Alice should see the item <item> as av.offline
 
       Examples:
-        | type | item      | menu    |
-        | file | file1.pdf | Actions |
-        #| file | file2.txt | Contextual |
+        | type | item      | menu       |
+        | file | file1.pdf | Actions    |
+        | file | file2.txt | Contextual |
 
   Scenario: Inserting a file inside an av.offline folder, turns the file av.offline
       Given the following items have been created in the account

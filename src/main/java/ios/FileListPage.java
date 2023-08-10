@@ -4,7 +4,6 @@ import org.openqa.selenium.support.PageFactory;
 
 import java.util.ArrayList;
 import java.util.Iterator;
-import java.util.List;
 import java.util.logging.Level;
 import java.util.regex.Pattern;
 
@@ -114,6 +113,11 @@ public class FileListPage extends CommonPage {
         findXpath(xpath_paste).click();
     }
 
+    public void openPlusButton(){
+        Log.log(Level.FINE, "Starts: Open plus button");
+        plusButton.click();
+    }
+
     public void uploadFromGallery() {
         Log.log(Level.FINE, "Starts: Upload file from Gallery");
         String xpathOptionGallery = "//XCUIElementTypeAlert[@name=\"“ownCloud” Would Like to Access Your Photos\"]" +
@@ -121,43 +125,11 @@ public class FileListPage extends CommonPage {
                 "/XCUIElementTypeOther[1]/XCUIElementTypeOther/XCUIElementTypeOther[3]";
         openPlusButton();
         uploadFile.click();
-        findXpath(xpathOptionGallery).click();
+        if (!findListXpath(xpathOptionGallery).isEmpty()){
+            findXpath(xpathOptionGallery).click();
+        }
         //Wait till gallery loads. When the "Cancel" button is present
         waitById(5, "Cancel");
-    }
-
-    public void selectPhotoGallery(){
-        Log.log(Level.FINE, "Starts: Select Photo Gallery");
-        //Very ugly, but not other way to select a picture outside the app
-        String xpathAnyPhoto = "//XCUIElementTypeApplication[@name=\"ownCloud\"]/XCUIElementTypeWindow[1]" +
-                "/XCUIElementTypeOther[3]/XCUIElementTypeOther[2]/XCUIElementTypeOther/XCUIElementTypeOther" +
-                "/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther" +
-                "/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther" +
-                "/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther" +
-                "/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeScrollView" +
-                "/XCUIElementTypeOther/XCUIElementTypeOther[1]/XCUIElementTypeOther/XCUIElementTypeOther" +
-                "/XCUIElementTypeOther[1]/XCUIElementTypeOther/XCUIElementTypeOther[@index='0']";
-        List<MobileElement> photoList = findListId("Photo");
-        photoList.get(0).click();
-        findId("Add").click();
-        //Wait till upload finishes before asserting
-        wait(5);
-    }
-
-    public String photoUploaded(ArrayList<OCFile> listFiles){
-        Log.log(Level.FINE, "Items: " + listFiles.size());
-        for (OCFile ocfile: listFiles) {
-            Log.log(Level.FINE, "Item: " + ocfile.getName());
-            if ((ocfile.getName().contains("Photo-")) || (ocfile.getName().contains("Video-"))) {
-                return ocfile.getName();
-            }
-        }
-        return "";
-    }
-
-    public void openPlusButton(){
-        Log.log(Level.FINE, "Starts: Open plus button");
-        plusButton.click();
     }
 
     public void openCollection(String collection){

@@ -1,4 +1,4 @@
-@upload @ignore
+@upload
 Feature: Upload new content
 
   As a user
@@ -9,7 +9,12 @@ Feature: Upload new content
     Given user Alice is logged in
 
   @smoke
-  Scenario: Upload a single file
+  Scenario Outline: Upload from Photo Gallery
     When Alice selects the option upload from photo gallery
-    And Alice selects a photo
-    Then Alice should see the photo in the filelist
+    And Alice selects <amount> photo
+    Then Alice should see <amount> photo in the filelist
+
+    Examples:
+      | amount |
+      | 1      |
+      | 3      |

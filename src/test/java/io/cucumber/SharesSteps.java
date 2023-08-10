@@ -46,11 +46,11 @@ public class SharesSteps {
                                     String userType, String recipientUser, String permissions) throws Throwable {
         String stepName = new Object(){}.getClass().getEnclosingMethod().getName().toUpperCase();
         Log.log(Level.FINE, "----STEP----: " + stepName);
-        world.shareAPI.createShare(sharingUser, itemName, recipientUser, "0",
-                world.sharePage.translatePermissionsToInt(permissions), "", sharelevel);
+        world.getShareAPI().createShare(sharingUser, itemName, recipientUser, "0",
+                world.getSharePage().translatePermissionsToInt(permissions), "", sharelevel);
         //Sharee is not detected at the moment.
         Thread.sleep(2000);
-        world.shareAPI.acceptAllShares(userType, recipientUser);
+        world.getShareAPI().acceptAllShares(userType, recipientUser);
     }
 
     @When("Alice selects the following {usertype} as sharee with {word} permissions")
@@ -60,17 +60,13 @@ public class SharesSteps {
         Log.log(Level.FINE, "----STEP----: " + stepName);
         List<List<String>> listUser = table.asLists();
         String sharee = listUser.get(0).get(1);
-        /*String email = "";
-        if (listUser.size() > 1) { //in case there are more than one column... distinguish oCIS-oC10
-            email = listUser.get(1).get(1);
-        }*/
-        world.sharePage.invite();
-        world.privateSharePage.searchSharee(sharee, type);
-        world.privateSharePage.setPermissions(permissions);
-        world.privateSharePage.savePermissions();
+        world.getSharePage().invite();
+        world.getPrivateSharePage().searchSharee(sharee, type);
+        world.getPrivateSharePage().setPermissions(permissions);
+        world.getPrivateSharePage().savePermissions();
         //Sharee is not detected at the moment.
         Thread.sleep(2000);
-        world.shareAPI.acceptAllShares(type,sharee);
+        world.getShareAPI().acceptAllShares(type,sharee);
     }
 
     @When("Alice selects the following {usertype} as sharee without {word} permission")
@@ -80,17 +76,13 @@ public class SharesSteps {
         Log.log(Level.FINE, "----STEP----: " + stepName);
         List<List<String>> listUser = table.asLists();
         String sharee = listUser.get(0).get(1);
-        /*String email = "";
-        if (listUser.size() > 1) { //in case there are more than one column... distinguish oCIS-oC10
-            email = listUser.get(1).get(1);
-        }*/
-        world.sharePage.invite();
-        world.privateSharePage.searchSharee(sharee, type);
-        world.privateSharePage.removeSharingPermission();
-        world.privateSharePage.invite();
+        world.getSharePage().invite();
+        world.getPrivateSharePage().searchSharee(sharee, type);
+        world.getPrivateSharePage().removeSharingPermission();
+        world.getPrivateSharePage().invite();
         //Sharee is not detected at the moment.
         Thread.sleep(2000);
-        world.shareAPI.acceptAllShares(type,sharee);
+        world.getShareAPI().acceptAllShares(type,sharee);
     }
 
     @When("Alice edits the share with the following fields")
@@ -100,9 +92,9 @@ public class SharesSteps {
         List<List<String>> fieldList = table.asLists();
         String sharee = fieldList.get(0).get(1);
         String permissions = fieldList.get(1).get(1);
-        world.sharePage.openPrivateShare(sharee);
-        world.privateSharePage.setPermissions(permissions);
-        world.privateSharePage.saveChanges();
+        world.getSharePage().openPrivateShare(sharee);
+        world.getPrivateSharePage().setPermissions(permissions);
+        world.getPrivateSharePage().saveChanges();
     }
 
     @When("Alice deletes the share with")
@@ -112,8 +104,8 @@ public class SharesSteps {
         Log.log(Level.FINE, "----STEP----: " + stepName);
         List<List<String>> list = table.asLists();
         String sharee = list.get(0).get(0);
-        world.sharePage.openPrivateShare(sharee);
-        world.privateSharePage.deletePrivateShare();
+        world.getSharePage().openPrivateShare(sharee);
+        world.getPrivateSharePage().deletePrivateShare();
         //Need to wait a little bit till share is deleted. Improvable.
         Thread.sleep(2000);
     }
@@ -130,20 +122,20 @@ public class SharesSteps {
                 case "sharee":
                 case "group": {
                     Log.log(Level.FINE, "Checking sharee/group: " + rows.get(1));
-                    assertTrue(world.sharePage.isItemInListPrivateShares(rows.get(1)));
+                    assertTrue(world.getSharePage().isItemInListPrivateShares(rows.get(1)));
                     break;
                 }
                 case "permissions": {
                     Log.log(Level.FINE, "Checking permissions: " + rows.get(1));
-                    assertTrue(world.sharePage.displayedPermission(rows.get(1)));
+                    assertTrue(world.getSharePage().displayedPermission(rows.get(1)));
                 }
                 default:
                     break;
             }
         }
         //Asserts in server via API
-        OCShare share = world.shareAPI.getShare(itemName);
-        assertTrue(world.sharePage.checkCorrectShare(share, listItems));
+        OCShare share = world.getShareAPI().getShare(itemName);
+        assertTrue(world.getSharePage().checkCorrectShare(share, listItems));
     }
 
     @Then("{usertype} {word} should have access to {word}")
@@ -152,9 +144,9 @@ public class SharesSteps {
         String stepName = new Object(){}.getClass().getEnclosingMethod().getName().toUpperCase();;
         Log.log(Level.FINE, "----STEP----: " + stepName);
         if (type.equals("user")){
-            assertTrue(world.shareAPI.isSharedWithMe(itemName, shareeName, false));
+            assertTrue(world.getShareAPI().isSharedWithMe(itemName, shareeName, false));
         } else if (type.equals("group")){
-            assertTrue(world.shareAPI.isSharedWithMe(itemName, shareeName, true));
+            assertTrue(world.getShareAPI().isSharedWithMe(itemName, shareeName, true));
         }
     }
 
@@ -163,7 +155,7 @@ public class SharesSteps {
             throws Throwable {
         String stepName = new Object(){}.getClass().getEnclosingMethod().getName().toUpperCase();;
         Log.log(Level.FINE, "----STEP----: " + stepName);
-        assertFalse(world.shareAPI.isSharedWithMe(itemName, userName,false));
+        assertFalse(world.getShareAPI().isSharedWithMe(itemName, userName,false));
     }
 
     @Then("{word} should not be shared anymore with")
@@ -172,6 +164,6 @@ public class SharesSteps {
         Log.log(Level.FINE, "----STEP----: " + stepName);
         List<List<String>> list = table.asLists();
         String sharee = list.get(0).get(0);
-        assertFalse(world.sharePage.isItemInListPrivateShares(sharee));
+        assertFalse(world.getSharePage().isItemInListPrivateShares(sharee));
     }
 }
