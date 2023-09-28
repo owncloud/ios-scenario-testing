@@ -51,7 +51,7 @@ public class PublicLinkPage extends CommonPage {
             "/XCUIElementTypeDatePicker/XCUIElementTypePicker/XCUIElementTypePickerWheel[1]")
     private MobileElement monthWheel;
 
-    @iOSXCUITFindBy(id = "Create link")
+    @iOSXCUITFindBy(xpath = "//XCUIElementTypeButton[@name=\"Create link\"]")
     private MobileElement createLink;
 
     @iOSXCUITFindBy(xpath = "//XCUIElementTypeButton[@name=\"Save changes\"]")

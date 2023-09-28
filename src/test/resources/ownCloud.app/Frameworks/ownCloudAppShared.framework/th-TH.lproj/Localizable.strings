@@ -48,7 +48,7 @@
 "Certificate has issues.\nOpen 'Certificate Details' for more informations." = "ใบรับรองมีปัญหา\nเปิด 'รายละเอียดใบรับรอง' สำหรับข้อมูลเพิ่มเติม";
 "No issues found. Certificate passed validation." = "ไม่พบปัญหา ผ่านการตรวจสอบใบรับรองแล้ว";
 "Certificate may have issues, but was accepted by user.\nOpen 'Certificate Details' for more informations." = "ใบรับรองอาจมีปัญหาแต่ได้รับการยอมรับจากผู้ใช้แล้ว\nเปิด 'รายละเอียดใบรับรอง' สำหรับข้อมูลเพิ่มเติม";
-"If you 'Continue', you will be prompted to allow the '%@' App to open OAuth2 login where you can enter your credentials." = "หากคุณ 'ดำเนินการต่อ' คุณจะได้รับแจ้งให้อนุญาตแอป '%@' เพื่อเข้าสู่ระบบ OAuth2 ที่คุณสามารถป้อนหนังสือรับรองของคุณ";
+"If you 'Continue', you will be prompted to allow the '{{app.name}}' app to open the {{authmethodName}} login page where you can enter your credentials." = "If you 'Continue', you will be prompted to allow the '{{app.name}}' app to open the {{authmethodName}} login page where you can enter your credentials.";
 
 "Error opening %@" = "เกิดข้อผิดพลาดขณะเปิด %@";
 
@@ -104,8 +104,18 @@
 "kind" = "ประเภท";
 "size" = "ขนาด";
 "date" = "วันที่";
+
+"Tree" = "Tree";
 "Search folder" = "ค้นหาโฟลเดอร์";
+"Search tree" = "Search tree";
+"Search from {{folder.name}}" = "Search from {{folder.name}}";
+"Search space" = "Search space";
+"Search {{space.name}}" = "Search {{space.name}}";
 "Search account" = "ค้นหาบัญชี";
+"Enter a search term" = "Enter a search term";
+"Search for users or groups" = "Search for users or groups";
+"Enter the user or group you want to invite." = "Enter the user or group you want to invite.";
+
 "Pending" = "อยู่ระหว่างดำเนินการ";
 "Show parent paths" = "แสดง path";
 "Reveal in folder" = "เปิดเผยในโฟลเดอร์";
@@ -115,7 +125,31 @@
 "%@ item | " = "%@ รายการ | ";
 "%@ items | " = "%@ รายการ";
 
+"{{itemCount}} items with {{totalSize}} total ({{fileCount}} files, {{folderCount}} folders)" = "{{itemCount}} items with {{totalSize}} total ({{fileCount}} files, {{folderCount}} folders)";
+"{{remaining}} available" = "{{remaining}} available";
+
 "Show more results" = "แสดงผลลัพธ์เพิ่มเติม";
+
+"An error occurred" = "เกิดข้อผิดพลาดบางประการ";
+
+/* Item Layouts */
+"List" = "รายการ";
+"Grid" = "Grid";
+"Item grid" = "Item grid";
+"Image grid" = "Image grid";
+
+/* Saved searches */
+"Saved searches" = "Saved searches";
+"Saved search templates" = "Saved search templates";
+"Save search" = "Save search";
+"Save as search template" = "Save as search template";
+
+"Name of saved search" = "Name of saved search";
+"Saved search" = "Saved search";
+"Saved searches" = "Saved searches";
+"Name of template" = "Name of template";
+"Search template" = "Search template";
+"Search templates" = "Search templates";
 
 /* Search scope */
 "Search scope" = "ขอบเขตการค้นหา";
@@ -141,8 +175,10 @@
 "The Profile '%@' does not have a URL configured.\nPlease provide a URL via configuration or MDM." = "โปรไฟล์ '%@' ไม่ได้กำหนดค่า URL\nโปรดระบุ URL ผ่านการกำหนดค่าหรือ MDM";
 
 /* Client Messages */
-"Empty folder" = "โฟลเดอร์ว่างเปล่า";
+"No contents" = "No contents";
 "This folder contains no files or folders." = "โฟลเดอร์นี้ไม่มีไฟล์หรือโฟลเดอร์";
+"This folder is empty." = "This folder is empty.";
+"This folder is empty. Fill it with content:" = "This folder is empty. Fill it with content:";
 
 "Folder removed" = "ลบโฟลเดอร์แล้ว";
 "This folder no longer exists on the server." = "โฟลเดอร์นี้ไม่มีอยู่บนเซิร์ฟเวอร์อีกต่อไป";
@@ -159,7 +195,10 @@
 "Upload files" = "อัปโหลดไฟล์";
 
 "No matches" = "ไม่ตรงกัน";
+"The search term you entered did not match any item in the selected scope." = "The search term you entered did not match any item in the selected scope.";
 "There are no results for this search term" = "ไม่มีผลลัพธ์สำหรับคำค้นหานี้";
+"No items found matching the search criteria." = "No items found matching the search criteria.";
+
 "Status" = "สถานะ";
 
 "Authorization failed" = "การอนุมัติล้มเหลว";
@@ -242,6 +281,8 @@
 "Please choose how many digits you want to use for the passcode lock?" = "โปรดเลือกจำนวนตัวอักษรที่คุณต้องการใช้สำหรับรหัสปลดล็อค";
 "%ld digit code" = "%ld ตัวอักษร";
 "Enter a new code with %ld digits" = "ใส่รหัสใหม่ %ld ตัวอักษร";
+"To use the app, you need to create a passcode." = "To use the app, you need to create a passcode.";
+"Passcode setup" = "Passcode setup";
 
 "%@%@ %@ version %@ build %@\n(app: %@, sdk: %@)" = "%@%@%@ เวอร์ชัน %@ บิวด์ %@\n(แอป: %@, sdk: %@)";
 "beta" = "เวอร์ชันเบต้า";
@@ -360,9 +401,16 @@
 "Create folder" ="สร้างโฟลเดอร์";
 "Duplicate" = "ซ้ำ";
 "Move" = "ย้าย";
+"Move {{itemCount}} items" = "Move {{itemCount}} items";
+"Move \"{{itemName}}\"" = "Move \"{{itemName}}\"";
+"Move here" = "ย้ายมาที่นี่";
+"Select target." = "Select target.";
 "Open in" = "เปิดด้วย";
 "Copy" = "คัดลอก";
+"Copy {{itemCount}} items" = "Copy {{itemCount}} items";
+"Copy \"{{itemName}}\"" = "Copy \"{{itemName}}\"";
 "Copy here" = "ึคัดลอก";
+
 "Cannot connect to " = "ไม่สามารถเชื่อมต่อ";
 " couldn't download file(s)" = "ไม่สามารถดาวน์โหลดไฟล์";
 "Actions" = "การกระทำ";
@@ -374,6 +422,8 @@
 "%ld Item was copied to the clipboard" = "%ld ถูกคัดลอกไปยังคลิปบอร์ดแล้ว";
 "%ld Items were copied to the clipboard" = "%ld รายการได้ถูกคัดลอกไปยังคลิปบอร์ดแล้ว";
 "Please note: Folders can only be pasted into the %@ app and the same account." = "โปรดทราบ: สามารถวางโฟลเดอร์ลงในแอพ %@ ด้วยบัญชีเดียวกันเท่านั้น";
+
+"Processing on server" = "Processing on server";
 
 "Preparing…" = "กำลังจัดเตรียม…";
 
@@ -389,8 +439,21 @@
 "Enable" = "เปิดใช้งาน";
 "Exit Full Screen" = "ออกจากโหมดเต็มหน้าจอ";
 
-/* Directory Picker Messages */
-"Move here" = "ย้ายมาที่นี่";
+"Select one or more items." = "Select one or more items.";
+
+"Add item" = "เพิ่มรายการ";
+
+/* App Provider */
+"New document" = "เอกสารใหม่";
+"Pick a name" = "Pick a name";
+"Pick a document type to create:" = "Pick a document type to create:";
+"Error creating {{itemName}}" = "Error creating {{itemName}}";
+
+"Opening…" = "Opening…";
+
+"Open in {{appName}} (web)" = "Open in {{appName}} (web)";
+"Error opening {{itemName}} in {{appName}}" = "Error opening {{itemName}} in {{appName}}";
+"Opening documents is not supported by the app provider on this instance." = "Opening documents is not supported by the app provider on this instance.";
 
 /* Preview */
 "Open file" = "เปิดไฟล์";
@@ -448,25 +511,24 @@
 "Scan additional" = "สแกนเพิ่มเติม";
 "Create one file per page" = "สร้างหนึ่งไฟล์ต่อหนึ่งหน้า";
 
-/* Scan */
-"Scan" = "สแกน";
-"Scans" = "สแกน";
-"Scan document" = "สแกนเอกสาร";
-"Saving" = "บันทึก";
-"File format" = "รูปแบบไฟล์";
-"Name" = "ชื่อ";
-"Save as" = "บันทึกเป็น";
-"Options" = "ตัวเลือก";
-"Scan additional" = "สแกนเพิ่มเติม";
-"Create one file per page" = "สร้างหนึ่งไฟล์ต่อหนึ่งหน้า";
-
 /* Sharing */
+"Sharing requires an active connection." = "Sharing requires an active connection.";
+"No items shared with you" = "No items shared with you";
+"No items shared by you" = "No items shared by you";
+"No items shared by link" = "No items shared by link";
+
 "Searching Shares…" = "กำลังค้นหาแชร์...";
 "Recipient" = "ผู้รับ";
 "Recipients" = "ผู้รับ";
 "Public Link" = "ลิงก์สาธารณะ";
 "Public Links" = "ลิงก์สาธารณะ";
-"Shared by {{owner}}" = "แชร์แล้วโดย {{owner}}";
+"Shared by {{owner}}" = "Shared by {{owner}}";
+"Shared with {{recipient}}" = "Shared with {{recipient}}";
+"Shared with {{recipients}}" = "Shared with {{recipients}}";
+"Expires {{expirationDate}}" = "Expires {{expirationDate}}";
+"Share {{itemName}}" = "Share {{itemName}}";
+"Create link" = "Create link";
+"Invite" = "Invite";
 "Invite Recipient" = "คำเชิญผู้รับ";
 "Recipients" = "ผู้รับ";
 "Add email or name" = "เพิ่มอีเมลหรือชื่อ";
@@ -552,6 +614,14 @@
 "Share with user/group" = "แชร์กับผู้ใช้หรือกลุ่ม";
 "Share link" = "แชร์ลิงก์";
 
+"Shared with me" = "Shared with me";
+"Shared by me" = "Shared by me";
+"Shared by link" = "ลิงก์ที่กำลังแชร์อยู่";
+
+"Share with" = "แชร์ให้กับ";
+"Add" = "เพิ่ม";
+"Save changes" = "บันทึกการเปลี่ยนแปลง\n";
+
 /* Quick Access view */
 "Quick Access" = "เข้าถึงด่วน";
 "Collection" = "รวบรวม";
@@ -562,6 +632,10 @@
 "Text" = "ข้อความ";
 "Documents" = "เอกสาร";
 "Audio" = "เสียง";
+
+/* Favorites view */
+"No favorites found" = "No favorites found";
+"If you make an item a favorite, it will turn up here." = "If you make an item a favorite, it will turn up here.";
 
 /* Media files settings */
 "Media Files" = "ไฟล์สื่อ";
@@ -645,10 +719,12 @@
 "Make unavailable offline" = "ทำให้พร้อมใช้งานแบบออฟไลน์";
 
 "Available Offline" = "พร้อมใช้งานแบบออฟไลน์แล้ว";
-"No items have been selected for offline availability." = "ไม่มีรายการที่ถูกเลือกสำหรับการใช้งานแบบออฟไลน์";
 
-"Overview" = "ภาพรวม";
-"All Files" = "ไฟล์ทั้งหมด";
+"No files available offline" = "No files available offline";
+"Files selected and downloaded for offline availability will show up here." = "Files selected and downloaded for offline availability will show up here.";
+
+"Locations" = "Locations";
+"Downloaded Files" = "Downloaded Files";
 
 /* Single Account */
 "You are connected as\n%@" = "คุณเชื่อมต่อด้วยบัญชี %@";
@@ -733,7 +809,7 @@
 
 /* Licensing: Settings */
 "In-App Purchases" = "การสั่งซื้อในแอป";
-"Purchases" = "การสั่งซื้อสินค้า";
+"Purchases & Subscriptions" = "Purchases & Subscriptions";
 "Error fetching transactions" = "เกิดข้อผิดพลาดขณะดึงข้อมูลธุรกรรม";
 "Document Scanner" = "ตัวสแกนเอกสาร";
 "Scan documents and photos with your camera." = "สแกนเอกสารและภาพถ่ายด้วยกล้องของคุณ";
@@ -773,7 +849,15 @@
 "Error importing %@" = "เกิดข้อผิดพลาดขณะนำเข้า %@";
 "Error loading item" = "เกิดข้อผิดพลาดขณะโหลดรายการ";
 "Preparing…" = "กำลังจัดเตรียม…";
+"Import \"{{itemName}}\"" = "Import \"{{itemName}}\"";
+"Import {{itemCount}} files" = "Import {{itemCount}} files";
 "Save here" = "บันทึกที่นี่";
+
+/* FileProvider */
+/* - Disabled */
+"File Provider access has been disabled by the administrator.\n\nPlease use the app to access your files." = "File Provider access has been disabled by the administrator.\n\nPlease use the app to access your files.";
+"File Provider access has been disabled by the administrator. Please use the app to create new folders." = "File Provider access has been disabled by the administrator. Please use the app to create new folders.";
+"File Provider access has been disabled by the administrator. Please use the share extension to import files." = "File Provider access has been disabled by the administrator. Please use the share extension to import files.";
 
 /* Disallowed Import Methods */
 /* - Share Extension */
@@ -922,3 +1006,8 @@
 "New settings received from MDM" = "การตั้งค่าใหม่ที่ได้รับจาก MDM";
 "Tap to quit the app." = "แตะเพื่อออกจากแอป";
 "Tap to launch the app." = "แตะเพื่อเปิดแอป";
+
+/* Beta warning */
+"Beta Warning" = "Beta Warning";
+"\nThis is a BETA release that may - and likely will - still contain bugs.\n\nYOU SHOULD NOT USE THIS BETA VERSION WITH PRODUCTION SYSTEMS, PRODUCTION DATA OR DATA OF VALUE. YOU'RE USING THIS BETA AT YOUR OWN RISK.\n\nPlease let us know about any issues that come up via the \"Send Feedback\" option in the settings." = "\nThis is a BETA release that may - and likely will - still contain bugs.\n\nYOU SHOULD NOT USE THIS BETA VERSION WITH PRODUCTION SYSTEMS, PRODUCTION DATA OR DATA OF VALUE. YOU'RE USING THIS BETA AT YOUR OWN RISK.\n\nPlease let us know about any issues that come up via the \"Send Feedback\" option in the settings.";
+"Agree" = "Agree";

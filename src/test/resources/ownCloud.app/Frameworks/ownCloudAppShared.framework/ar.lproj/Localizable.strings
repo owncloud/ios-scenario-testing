@@ -48,7 +48,7 @@
 "Certificate has issues.\nOpen 'Certificate Details' for more informations." = "حدثت مشكلة بالشهادة.\nافتح 'تفاصيل الشهادة' لمزيد من المعلومات.";
 "No issues found. Certificate passed validation." = "لم يتم العثور على أي مشكلات. اجتازت الشهادة عملية التحقق.";
 "Certificate may have issues, but was accepted by user.\nOpen 'Certificate Details' for more informations." = "قد تكون هناك مشكلة بالشهادة، ولكن المستخدم وافق عليها.\nافتح 'تفاصيل الشهادة' لمزيد من المعلومات.";
-"If you 'Continue', you will be prompted to allow the '%@' App to open OAuth2 login where you can enter your credentials." = "إذا قررت 'الاستمرار'، فسيُطلب منك السماح لتطبيق '%@' بفتح ملف تسجيل الدخول إلى OAuth2 حيث يُمكنك إدخال بيانات اعتمادك.";
+"If you 'Continue', you will be prompted to allow the '{{app.name}}' app to open the {{authmethodName}} login page where you can enter your credentials." = "If you 'Continue', you will be prompted to allow the '{{app.name}}' app to open the {{authmethodName}} login page where you can enter your credentials.";
 
 "Error opening %@" = "خطأ فتح %@";
 
@@ -104,8 +104,18 @@
 "kind" = "النوع";
 "size" = "الحجم";
 "date" = "التاريخ";
+
+"Tree" = "Tree";
 "Search folder" = "Search folder";
+"Search tree" = "Search tree";
+"Search from {{folder.name}}" = "Search from {{folder.name}}";
+"Search space" = "Search space";
+"Search {{space.name}}" = "Search {{space.name}}";
 "Search account" = "Search account";
+"Enter a search term" = "Enter a search term";
+"Search for users or groups" = "Search for users or groups";
+"Enter the user or group you want to invite." = "Enter the user or group you want to invite.";
+
 "Pending" = "تعليق";
 "Show parent paths" = "عرض المسارات الأصلية";
 "Reveal in folder" = "Reveal in folder";
@@ -115,7 +125,31 @@
 "%@ item | " = "%@ عنصر |";
 "%@ items | " = "%@عناصر |";
 
+"{{itemCount}} items with {{totalSize}} total ({{fileCount}} files, {{folderCount}} folders)" = "{{itemCount}} items with {{totalSize}} total ({{fileCount}} files, {{folderCount}} folders)";
+"{{remaining}} available" = "{{remaining}} available";
+
 "Show more results" = "Show more results";
+
+"An error occurred" = "حدث خطأ";
+
+/* Item Layouts */
+"List" = "قائمة";
+"Grid" = "Grid";
+"Item grid" = "Item grid";
+"Image grid" = "Image grid";
+
+/* Saved searches */
+"Saved searches" = "Saved searches";
+"Saved search templates" = "Saved search templates";
+"Save search" = "Save search";
+"Save as search template" = "Save as search template";
+
+"Name of saved search" = "Name of saved search";
+"Saved search" = "Saved search";
+"Saved searches" = "Saved searches";
+"Name of template" = "Name of template";
+"Search template" = "Search template";
+"Search templates" = "Search templates";
 
 /* Search scope */
 "Search scope" = "Search scope";
@@ -141,8 +175,10 @@
 "The Profile '%@' does not have a URL configured.\nPlease provide a URL via configuration or MDM." = "لم يتم تكوين عنوان URL للملف الشخصي  '%@' .يرجى تقديم عنوان URL عبر الإعدادات أو MDM.";
 
 /* Client Messages */
-"Empty folder" = "مجلد فارغ";
+"No contents" = "No contents";
 "This folder contains no files or folders." = "لا يحتوي هذا المجلد على ملفات أو مجلدات.";
+"This folder is empty." = "This folder is empty.";
+"This folder is empty. Fill it with content:" = "This folder is empty. Fill it with content:";
 
 "Folder removed" = "المجلد محذوف";
 "This folder no longer exists on the server." = "لم يعد هذا المجلد موجودًا في الخادم.";
@@ -159,7 +195,10 @@
 "Upload files" = "تحميل ملفات";
 
 "No matches" = "لا يوجد تطابقات";
+"The search term you entered did not match any item in the selected scope." = "The search term you entered did not match any item in the selected scope.";
 "There are no results for this search term" = "لا توجد نتائج عن البحث بهذا المصطلح";
+"No items found matching the search criteria." = "No items found matching the search criteria.";
+
 "Status" = "الحالة";
 
 "Authorization failed" = "فشلت المصادقة";
@@ -242,6 +281,8 @@
 "Please choose how many digits you want to use for the passcode lock?" = "Please choose how many digits you want to use for the passcode lock?";
 "%ld digit code" = "%ld digit code";
 "Enter a new code with %ld digits" = "Enter a new code with %ld digits";
+"To use the app, you need to create a passcode." = "To use the app, you need to create a passcode.";
+"Passcode setup" = "Passcode setup";
 
 "%@%@ %@ version %@ build %@\n(app: %@, sdk: %@)" = "%@%@%@ إصدار %@ نسخة%@\n(تطبيق: %@, sdk: %@)";
 "beta" = "بيتا";
@@ -360,9 +401,16 @@
 "Create folder" ="أنشئ مجلدًا";
 "Duplicate" = "تكرار";
 "Move" = "نقل";
+"Move {{itemCount}} items" = "Move {{itemCount}} items";
+"Move \"{{itemName}}\"" = "Move \"{{itemName}}\"";
+"Move here" = "نقل هنا";
+"Select target." = "Select target.";
 "Open in" = "فتح في";
 "Copy" = "نسخ";
+"Copy {{itemCount}} items" = "Copy {{itemCount}} items";
+"Copy \"{{itemName}}\"" = "Copy \"{{itemName}}\"";
 "Copy here" = "نسخ هنا";
+
 "Cannot connect to " = "تعذّر الاتصال بـ";
 " couldn't download file(s)" = "تعذّر تنزيل الملف (الملفات)";
 "Actions" = "إجراءات";
@@ -374,6 +422,8 @@
 "%ld Item was copied to the clipboard" = "%ld Item was copied to the clipboard";
 "%ld Items were copied to the clipboard" = "%ld Items were copied to the clipboard";
 "Please note: Folders can only be pasted into the %@ app and the same account." = "Please note: Folders can only be pasted into the %@ app and the same account.";
+
+"Processing on server" = "Processing on server";
 
 "Preparing…" = "جارٍ الإعداد…";
 
@@ -389,8 +439,21 @@
 "Enable" = "تفعيل";
 "Exit Full Screen" = "الخروج من وضع ملئ الشاشة";
 
-/* Directory Picker Messages */
-"Move here" = "نقل هنا";
+"Select one or more items." = "Select one or more items.";
+
+"Add item" = "Add item";
+
+/* App Provider */
+"New document" = "مستند جديد";
+"Pick a name" = "Pick a name";
+"Pick a document type to create:" = "Pick a document type to create:";
+"Error creating {{itemName}}" = "Error creating {{itemName}}";
+
+"Opening…" = "Opening…";
+
+"Open in {{appName}} (web)" = "Open in {{appName}} (web)";
+"Error opening {{itemName}} in {{appName}}" = "Error opening {{itemName}} in {{appName}}";
+"Opening documents is not supported by the app provider on this instance." = "Opening documents is not supported by the app provider on this instance.";
 
 /* Preview */
 "Open file" = "فتح الملف";
@@ -448,25 +511,24 @@
 "Scan additional" = "مسح إضافي";
 "Create one file per page" = "أنشئ ملفًا واحدًا لكل صفحة";
 
-/* Scan */
-"Scan" = "مسح";
-"Scans" = "عمليات المسح";
-"Scan document" = "مسح المستند";
-"Saving" = "حفظ";
-"File format" = "تنسيق الملف";
-"Name" = "الاسم";
-"Save as" = "حفظ بتنسيق";
-"Options" = "خيارات";
-"Scan additional" = "مسح إضافي";
-"Create one file per page" = "أنشئ ملفًا واحدًا لكل صفحة";
-
 /* Sharing */
+"Sharing requires an active connection." = "Sharing requires an active connection.";
+"No items shared with you" = "No items shared with you";
+"No items shared by you" = "No items shared by you";
+"No items shared by link" = "No items shared by link";
+
 "Searching Shares…" = "جارِ البحث في المشاركات…";
 "Recipient" = "مستلم";
 "Recipients" = "مستلمون";
 "Public Link" = "رابط عام";
 "Public Links" = "روابط عامة";
-"Shared by {{owner}}" = "تمت المشاركة بواسطة {{owner}}";
+"Shared by {{owner}}" = "Shared by {{owner}}";
+"Shared with {{recipient}}" = "Shared with {{recipient}}";
+"Shared with {{recipients}}" = "Shared with {{recipients}}";
+"Expires {{expirationDate}}" = "Expires {{expirationDate}}";
+"Share {{itemName}}" = "Share {{itemName}}";
+"Create link" = "Create link";
+"Invite" = "Invite";
 "Invite Recipient" = "أرسل دعوة إلى مستلم";
 "Recipients" = "مستلمون";
 "Add email or name" = "أضف بريدًا إلكترونيًا أو اسمًا";
@@ -552,6 +614,14 @@
 "Share with user/group" = "شارك مع مستخدم / مجموعة";
 "Share link" = "مشاركة الرابط";
 
+"Shared with me" = "Shared with me";
+"Shared by me" = "Shared by me";
+"Shared by link" = "مشاركة بواسطة الرابط";
+
+"Share with" = "مشاركة مع";
+"Add" = "إضافة";
+"Save changes" = "حفظ التغييرات";
+
 /* Quick Access view */
 "Quick Access" = "وصول سريع";
 "Collection" = "مجموعة";
@@ -562,6 +632,10 @@
 "Text" = "النص";
 "Documents" = "مستندات";
 "Audio" = "صوت";
+
+/* Favorites view */
+"No favorites found" = "No favorites found";
+"If you make an item a favorite, it will turn up here." = "If you make an item a favorite, it will turn up here.";
 
 /* Media files settings */
 "Media Files" = "ملفات الوسائط";
@@ -645,10 +719,12 @@
 "Make unavailable offline" = "اجعل العنصر غير متوفر دون اتصال";
 
 "Available Offline" = "متوفر دون اتصال بالإنترنت";
-"No items have been selected for offline availability." = "لم يتم تحديد أي عنصر للتوفر دون اتصال.";
 
-"Overview" = "نظرة عامة";
-"All Files" = "كل الملفات";
+"No files available offline" = "No files available offline";
+"Files selected and downloaded for offline availability will show up here." = "Files selected and downloaded for offline availability will show up here.";
+
+"Locations" = "Locations";
+"Downloaded Files" = "Downloaded Files";
 
 /* Single Account */
 "You are connected as\n%@" = "أنت متصل كما%@";
@@ -733,7 +809,7 @@
 
 /* Licensing: Settings */
 "In-App Purchases" = "عمليات الشراء داخل التطبيق";
-"Purchases" = "عمليات الشراء";
+"Purchases & Subscriptions" = "Purchases & Subscriptions";
 "Error fetching transactions" = "خطأ في إحضار المعاملات";
 "Document Scanner" = "ماسح المستند";
 "Scan documents and photos with your camera." = "امسح المستندات والصور بكاميرا هاتفك.";
@@ -773,7 +849,15 @@
 "Error importing %@" = "خطأ في استيراد %@";
 "Error loading item" = "خطأ في تحميل العنصر";
 "Preparing…" = "جارٍ الإعداد…";
+"Import \"{{itemName}}\"" = "Import \"{{itemName}}\"";
+"Import {{itemCount}} files" = "Import {{itemCount}} files";
 "Save here" = "قم بالحفظ هنا";
+
+/* FileProvider */
+/* - Disabled */
+"File Provider access has been disabled by the administrator.\n\nPlease use the app to access your files." = "File Provider access has been disabled by the administrator.\n\nPlease use the app to access your files.";
+"File Provider access has been disabled by the administrator. Please use the app to create new folders." = "File Provider access has been disabled by the administrator. Please use the app to create new folders.";
+"File Provider access has been disabled by the administrator. Please use the share extension to import files." = "File Provider access has been disabled by the administrator. Please use the share extension to import files.";
 
 /* Disallowed Import Methods */
 /* - Share Extension */
@@ -922,3 +1006,8 @@
 "New settings received from MDM" = "تم استلام الإعدادات الجديدة من MDM";
 "Tap to quit the app." = "انقر لإنهاء التطبيق.";
 "Tap to launch the app." = "انقر لتشغيل التطبيق.";
+
+/* Beta warning */
+"Beta Warning" = "Beta Warning";
+"\nThis is a BETA release that may - and likely will - still contain bugs.\n\nYOU SHOULD NOT USE THIS BETA VERSION WITH PRODUCTION SYSTEMS, PRODUCTION DATA OR DATA OF VALUE. YOU'RE USING THIS BETA AT YOUR OWN RISK.\n\nPlease let us know about any issues that come up via the \"Send Feedback\" option in the settings." = "\nThis is a BETA release that may - and likely will - still contain bugs.\n\nYOU SHOULD NOT USE THIS BETA VERSION WITH PRODUCTION SYSTEMS, PRODUCTION DATA OR DATA OF VALUE. YOU'RE USING THIS BETA AT YOUR OWN RISK.\n\nPlease let us know about any issues that come up via the \"Send Feedback\" option in the settings.";
+"Agree" = "Agree";

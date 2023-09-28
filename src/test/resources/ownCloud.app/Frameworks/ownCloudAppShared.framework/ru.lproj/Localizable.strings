@@ -48,7 +48,7 @@
 "Certificate has issues.\nOpen 'Certificate Details' for more informations." = "Есть проблемы с сертификатом. Для получения подробностей откройте ‘Детали сертификата'.";
 "No issues found. Certificate passed validation." = "Не выявлено проблем. Сертификат прошёл проверку.";
 "Certificate may have issues, but was accepted by user.\nOpen 'Certificate Details' for more informations." = "С сертификатом возможно есть проблемы, но он был принят пользователем\nДля получения подробностей откройте 'Детали сертификата'.";
-"If you 'Continue', you will be prompted to allow the '%@' App to open OAuth2 login where you can enter your credentials." = "Если вы нажмёте 'Продолжить', то у вас попросят разрешить приложению '%@' войти через OAuth2, и при входе вам понадобится ввести свои учётные данные.";
+"If you 'Continue', you will be prompted to allow the '{{app.name}}' app to open the {{authmethodName}} login page where you can enter your credentials." = "If you 'Continue', you will be prompted to allow the '{{app.name}}' app to open the {{authmethodName}} login page where you can enter your credentials.";
 
 "Error opening %@" = "Ошибка при открытии %@";
 
@@ -104,8 +104,18 @@
 "kind" = "добрый";
 "size" = "размеру";
 "date" = "дате";
+
+"Tree" = "Tree";
 "Search folder" = "Поиск в папке";
+"Search tree" = "Search tree";
+"Search from {{folder.name}}" = "Search from {{folder.name}}";
+"Search space" = "Search space";
+"Search {{space.name}}" = "Search {{space.name}}";
 "Search account" = "Поиск в учётной записи";
+"Enter a search term" = "Enter a search term";
+"Search for users or groups" = "Search for users or groups";
+"Enter the user or group you want to invite." = "Enter the user or group you want to invite.";
+
 "Pending" = "Ожидается";
 "Show parent paths" = "Показать вышестоящие пути";
 "Reveal in folder" = "Показать в папке";
@@ -115,7 +125,31 @@
 "%@ item | " = "%@ элемент | ";
 "%@ items | " = "%@ элементов | ";
 
+"{{itemCount}} items with {{totalSize}} total ({{fileCount}} files, {{folderCount}} folders)" = "{{itemCount}} items with {{totalSize}} total ({{fileCount}} files, {{folderCount}} folders)";
+"{{remaining}} available" = "{{remaining}} available";
+
 "Show more results" = "Показать больше результатов";
+
+"An error occurred" = "Произошла ошибка";
+
+/* Item Layouts */
+"List" = "Список";
+"Grid" = "Grid";
+"Item grid" = "Item grid";
+"Image grid" = "Image grid";
+
+/* Saved searches */
+"Saved searches" = "Saved searches";
+"Saved search templates" = "Saved search templates";
+"Save search" = "Save search";
+"Save as search template" = "Save as search template";
+
+"Name of saved search" = "Name of saved search";
+"Saved search" = "Saved search";
+"Saved searches" = "Saved searches";
+"Name of template" = "Name of template";
+"Search template" = "Search template";
+"Search templates" = "Search templates";
 
 /* Search scope */
 "Search scope" = "Область поиска";
@@ -141,8 +175,10 @@
 "The Profile '%@' does not have a URL configured.\nPlease provide a URL via configuration or MDM." = "Для профиля '%@' не настроена ссылка.\nПожалуйста, задайте URL через конфигурацию или MDM.";
 
 /* Client Messages */
-"Empty folder" = "Пустая папка";
+"No contents" = "No contents";
 "This folder contains no files or folders." = "В этой папке нет ни файлов, ни подпапок.";
+"This folder is empty." = "This folder is empty.";
+"This folder is empty. Fill it with content:" = "This folder is empty. Fill it with content:";
 
 "Folder removed" = "Папка удалена";
 "This folder no longer exists on the server." = "Эта папка больше не существует на сервере.";
@@ -159,7 +195,10 @@
 "Upload files" = "Закачать файлы";
 
 "No matches" = "Нет соответствий";
+"The search term you entered did not match any item in the selected scope." = "The search term you entered did not match any item in the selected scope.";
 "There are no results for this search term" = "По данному запросу ничего не найдено";
+"No items found matching the search criteria." = "No items found matching the search criteria.";
+
 "Status" = "Статус";
 
 "Authorization failed" = "Авторизация не прошла";
@@ -242,6 +281,8 @@
 "Please choose how many digits you want to use for the passcode lock?" = "Please choose how many digits you want to use for the passcode lock?";
 "%ld digit code" = "%ld digit code";
 "Enter a new code with %ld digits" = "Enter a new code with %ld digits";
+"To use the app, you need to create a passcode." = "To use the app, you need to create a passcode.";
+"Passcode setup" = "Passcode setup";
 
 "%@%@ %@ version %@ build %@\n(app: %@, sdk: %@)" = "%@%@ %@ версия %@ сборка %@\n(приложение: %@, sdk: %@)";
 "beta" = "бета";
@@ -360,9 +401,16 @@
 "Create folder" ="Создать папку";
 "Duplicate" = "Дублирование";
 "Move" = "Переместить";
+"Move {{itemCount}} items" = "Move {{itemCount}} items";
+"Move \"{{itemName}}\"" = "Move \"{{itemName}}\"";
+"Move here" = "Поместить сюда";
+"Select target." = "Select target.";
 "Open in" = "Открыть в";
 "Copy" = "Копировать";
+"Copy {{itemCount}} items" = "Copy {{itemCount}} items";
+"Copy \"{{itemName}}\"" = "Copy \"{{itemName}}\"";
 "Copy here" = "Копировать сюда";
+
 "Cannot connect to " = "Не удалось подключиться к ";
 " couldn't download file(s)" = "не удалось скачать файл(ы)";
 "Actions" = "Действия";
@@ -374,6 +422,8 @@
 "%ld Item was copied to the clipboard" = "%ld Item was copied to the clipboard";
 "%ld Items were copied to the clipboard" = "%ld Items were copied to the clipboard";
 "Please note: Folders can only be pasted into the %@ app and the same account." = "Please note: Folders can only be pasted into the %@ app and the same account.";
+
+"Processing on server" = "Processing on server";
 
 "Preparing…" = "Подготовка";
 
@@ -389,8 +439,21 @@
 "Enable" = "Включить";
 "Exit Full Screen" = "Выйти из полноэкранного режима";
 
-/* Directory Picker Messages */
-"Move here" = "Поместить сюда";
+"Select one or more items." = "Select one or more items.";
+
+"Add item" = "Добавить элемент";
+
+/* App Provider */
+"New document" = "Новый документ";
+"Pick a name" = "Pick a name";
+"Pick a document type to create:" = "Pick a document type to create:";
+"Error creating {{itemName}}" = "Error creating {{itemName}}";
+
+"Opening…" = "Opening…";
+
+"Open in {{appName}} (web)" = "Open in {{appName}} (web)";
+"Error opening {{itemName}} in {{appName}}" = "Error opening {{itemName}} in {{appName}}";
+"Opening documents is not supported by the app provider on this instance." = "Opening documents is not supported by the app provider on this instance.";
 
 /* Preview */
 "Open file" = "Открыть файл";
@@ -448,25 +511,24 @@
 "Scan additional" = "Сканировать дополнительно";
 "Create one file per page" = "Создавать по файлу на каждую страницу";
 
-/* Scan */
-"Scan" = "Cканировать";
-"Scans" = "Сканы";
-"Scan document" = "Сканировать документ";
-"Saving" = "Сохраняется";
-"File format" = "Формат файла";
-"Name" = "Название";
-"Save as" = "Сохранить как";
-"Options" = "Опции";
-"Scan additional" = "Сканировать дополнительно";
-"Create one file per page" = "Создавать по файлу на каждую страницу";
-
 /* Sharing */
+"Sharing requires an active connection." = "Sharing requires an active connection.";
+"No items shared with you" = "No items shared with you";
+"No items shared by you" = "No items shared by you";
+"No items shared by link" = "No items shared by link";
+
 "Searching Shares…" = "Поиск по общим ресурсам";
 "Recipient" = "Получатель";
 "Recipients" = "Получатели";
 "Public Link" = "Общедоступная ссылка";
 "Public Links" = "Общедоступные ссылки";
-"Shared by {{owner}}" = "Поделился {{owner}}";
+"Shared by {{owner}}" = "Shared by {{owner}}";
+"Shared with {{recipient}}" = "Shared with {{recipient}}";
+"Shared with {{recipients}}" = "Shared with {{recipients}}";
+"Expires {{expirationDate}}" = "Expires {{expirationDate}}";
+"Share {{itemName}}" = "Share {{itemName}}";
+"Create link" = "Create link";
+"Invite" = "Пригласить";
 "Invite Recipient" = "Пригласить получателя";
 "Recipients" = "Получатели";
 "Add email or name" = "Добавьте e-mail или имя";
@@ -552,6 +614,14 @@
 "Share with user/group" = "Поделиться с пользователем или группой";
 "Share link" = "Поделиться ссылкой";
 
+"Shared with me" = "Shared with me";
+"Shared by me" = "Shared by me";
+"Shared by link" = "Доступные по ссылке";
+
+"Share with" = "Поделиться с";
+"Add" = "Добавить";
+"Save changes" = "Сохранить изменения";
+
 /* Quick Access view */
 "Quick Access" = "Быстрый доступ";
 "Collection" = "Коллекция";
@@ -562,6 +632,10 @@
 "Text" = "Текст";
 "Documents" = "Документы";
 "Audio" = "Аудио";
+
+/* Favorites view */
+"No favorites found" = "No favorites found";
+"If you make an item a favorite, it will turn up here." = "If you make an item a favorite, it will turn up here.";
 
 /* Media files settings */
 "Media Files" = "Мультимедийные файлы";
@@ -645,10 +719,12 @@
 "Make unavailable offline" = "Сделать недоступными без сети";
 
 "Available Offline" = "Доступно без сети";
-"No items have been selected for offline availability." = "Для доступа без сети не выбрано ни одного элемента.";
 
-"Overview" = "Обзор";
-"All Files" = "Все файлы";
+"No files available offline" = "No files available offline";
+"Files selected and downloaded for offline availability will show up here." = "Files selected and downloaded for offline availability will show up here.";
+
+"Locations" = "Locations";
+"Downloaded Files" = "Downloaded Files";
 
 /* Single Account */
 "You are connected as\n%@" = "Вы подключены, как\n%@";
@@ -733,7 +809,7 @@
 
 /* Licensing: Settings */
 "In-App Purchases" = "Покупки в приложении";
-"Purchases" = "Покупки";
+"Purchases & Subscriptions" = "Purchases & Subscriptions";
 "Error fetching transactions" = "Ошибка считывания транзакций";
 "Document Scanner" = "Сканер документов";
 "Scan documents and photos with your camera." = "Сканировать документы и фотографии с помощью вашей камеры.";
@@ -773,7 +849,15 @@
 "Error importing %@" = "Ошибка при импорте %@";
 "Error loading item" = "Ошибка при загрузке элемента";
 "Preparing…" = "Подготовка";
+"Import \"{{itemName}}\"" = "Import \"{{itemName}}\"";
+"Import {{itemCount}} files" = "Import {{itemCount}} files";
 "Save here" = "Сохранить здесь";
+
+/* FileProvider */
+/* - Disabled */
+"File Provider access has been disabled by the administrator.\n\nPlease use the app to access your files." = "File Provider access has been disabled by the administrator.\n\nPlease use the app to access your files.";
+"File Provider access has been disabled by the administrator. Please use the app to create new folders." = "File Provider access has been disabled by the administrator. Please use the app to create new folders.";
+"File Provider access has been disabled by the administrator. Please use the share extension to import files." = "File Provider access has been disabled by the administrator. Please use the share extension to import files.";
 
 /* Disallowed Import Methods */
 /* - Share Extension */
@@ -922,3 +1006,8 @@
 "New settings received from MDM" = "Через MDM получены новые настройки";
 "Tap to quit the app." = "Нажмите, чтобы выйти из приложения.";
 "Tap to launch the app." = "Нажмите, чтобы запустить приложение.";
+
+/* Beta warning */
+"Beta Warning" = "Beta Warning";
+"\nThis is a BETA release that may - and likely will - still contain bugs.\n\nYOU SHOULD NOT USE THIS BETA VERSION WITH PRODUCTION SYSTEMS, PRODUCTION DATA OR DATA OF VALUE. YOU'RE USING THIS BETA AT YOUR OWN RISK.\n\nPlease let us know about any issues that come up via the \"Send Feedback\" option in the settings." = "\nThis is a BETA release that may - and likely will - still contain bugs.\n\nYOU SHOULD NOT USE THIS BETA VERSION WITH PRODUCTION SYSTEMS, PRODUCTION DATA OR DATA OF VALUE. YOU'RE USING THIS BETA AT YOUR OWN RISK.\n\nPlease let us know about any issues that come up via the \"Send Feedback\" option in the settings.";
+"Agree" = "Agree";

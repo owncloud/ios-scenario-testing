@@ -45,17 +45,17 @@
 "Accepted" = "Pranuar";
 "Validation Error" = "Gabim Vleftësim";
 "Certificate was rejected by user." = "Dëshmia u hodh poshtë nga përdoruesi.";
-"Certificate has issues.\nOpen 'Certificate Details' for more informations." = "Dëshmia ka probleme.\nPër më tepër të dhëna, hapni 'Hollësi Dëshmie'.";
+"Certificate has issues.\nOpen 'Certificate Details' for more informations." = "Dëshmia ka probleme.\nPër më tepër hollësi, hapni 'Hollësi Dëshmie'.";
 "No issues found. Certificate passed validation." = "S’u gjetën probleme. Dëshmia e mori vleftësimin.";
 "Certificate may have issues, but was accepted by user.\nOpen 'Certificate Details' for more informations." = "Dëshmia mund të ketë probleme, por u pranua nga përdoruesi.\nPër më tepër hollësi, hapni 'Hollësi Dëshmie'.";
-"If you 'Continue', you will be prompted to allow the '%@' App to open OAuth2 login where you can enter your credentials." = "Nëse 'Vazhdoni', do t’ju shfaqet kërkesa për të lejuar aplikacionin '%@' të hapë hyrjet me OAuth2, prej nga mund të jepni kredencialet tuaja.";
+"If you 'Continue', you will be prompted to allow the '{{app.name}}' app to open the {{authmethodName}} login page where you can enter your credentials." = "Nëse “Vazhdoni”, do t’ju shfaqet kërkesa për të lejuar aplikacionin '{{app.name}}' të hapë faqen e hyrjeve me {{authmethodName}}, prej nga mund të jepni kredencialet tuaja.";
 
 "Error opening %@" = "Gabim në hapjen e %@";
 
 "Contacting server…" = "Po kontaktohet shërbyesi…";
 "Authenticating…" = "Po bëhet mirëfilltësimi…";
 
-"Fetching user information…" = "Po sillen të dhëna përdoruesi…";
+"Fetching user information…" = "Po sillen hollësi përdoruesi…";
 "Updating connection…" = "Po përditësohet lidhja…";
 
 "Preparing account" = "Përgatitje llogarie";
@@ -104,8 +104,18 @@
 "kind" = "lloj";
 "size" = "madhësi";
 "date" = "datë";
+
+"Tree" = "Pemë";
 "Search folder" = "Kërko në dosje";
+"Search tree" = "Pemë kërkimesh";
+"Search from {{folder.name}}" = "Kërko prej {{folder.name}}";
+"Search space" = "Kërko në hapësirë";
+"Search {{space.name}}" = "Kërko në {{space.name}}";
 "Search account" = "Kërko llogari";
+"Enter a search term" = "Jepni një term kërkimi";
+"Search for users or groups" = "Kërkoni për përdorues ose grupe";
+"Enter the user or group you want to invite." = "Jepni përdoruesin, ose grupin, që doni të ftohet.";
+
 "Pending" = "Në pritje";
 "Show parent paths" = "Shfaq shtigjet mëmë";
 "Reveal in folder" = "Shfaqe në dosje";
@@ -115,7 +125,31 @@
 "%@ item | " = "%@ objekt | ";
 "%@ items | " = "%@ objekte | ";
 
+"{{itemCount}} items with {{totalSize}} total ({{fileCount}} files, {{folderCount}} folders)" = "{{itemCount}} objekte, me {{totalSize}} gjithsej, ({{fileCount}} kartela, {{folderCount}} dosje)";
+"{{remaining}} available" = "{{remaining}} të lira";
+
 "Show more results" = "Shfaq më tepër përfundime";
+
+"An error occurred" = "Ndodhi një gabim";
+
+/* Item Layouts */
+"List" = "Listë";
+"Grid" = "Mozaik";
+"Item grid" = "Mozaik objektesh";
+"Image grid" = "Mozaik figurash";
+
+/* Saved searches */
+"Saved searches" = "Kërkime të ruajtur";
+"Saved search templates" = "Gjedhe kërkimesh të ruajtur";
+"Save search" = "Ruaje kërkimin";
+"Save as search template" = "Ruaje si gjedhe kërkimi";
+
+"Name of saved search" = "Emër i kërkimit të ruajtur";
+"Saved search" = "Kërkim i ruajtur";
+"Saved searches" = "Kërkime të ruajtur";
+"Name of template" = "Emër gjedheje";
+"Search template" = "Gjedhe kërkimi";
+"Search templates" = "Gjedhe kërkimi";
 
 /* Search scope */
 "Search scope" = "Shtrirje kërkimi";
@@ -141,8 +175,10 @@
 "The Profile '%@' does not have a URL configured.\nPlease provide a URL via configuration or MDM." = "Profili '%@' s’ka URL të formësuar.\nJu lutemi, jepni një URL përmes formësimi ose MDM-je.";
 
 /* Client Messages */
-"Empty folder" = "Dosje e zbrazët";
+"No contents" = "Pa lëndë";
 "This folder contains no files or folders." = "Kjo dosje s’përmban kartela ose dosje.";
+"This folder is empty." = "Kjo dosje është e zbrazët.";
+"This folder is empty. Fill it with content:" = "Kjo dosje është e zbrazët. Mbusheni me lëndë:";
 
 "Folder removed" = "Dosje e hequr";
 "This folder no longer exists on the server." = "Kjo dosje s’ekziston më te shërbyesi.";
@@ -159,7 +195,10 @@
 "Upload files" = "Ngarko kartela";
 
 "No matches" = "S’ka përputhje";
+"The search term you entered did not match any item in the selected scope." = "Termi i kërkimit që dhatë, s’ka përputhje me ndonjë objekt brenda fushëveprimit të përzgjedhur.";
 "There are no results for this search term" = "S’ka përfundime për këtë term kërkimi";
+"No items found matching the search criteria." = "S’u gjetën objekte me përputhje me kriteret e kërkimit.";
+
 "Status" = "Gjendje";
 
 "Authorization failed" = "Autorizimi dështoi";
@@ -242,19 +281,21 @@
 "Please choose how many digits you want to use for the passcode lock?" = "Ju lutemi, zgjidhni sa shifra doni të përdoren për kyçje me kodkalim?";
 "%ld digit code" = "Kod me %ld shifra";
 "Enter a new code with %ld digits" = "Jepni një kod të ri me %ld shifra";
+"To use the app, you need to create a passcode." = "Që të përdorni aplikacionin, lypset të krijoni një kodkalim.";
+"Passcode setup" = "Ujdisje kodkalimi";
 
 "%@%@ %@ version %@ build %@\n(app: %@, sdk: %@)" = "%@%@ %@ version %@ montimi %@\n(aplikacion: %@, sdk: %@)";
 "beta" = "beta";
 "release" = "hedhje në qarkullim";
 "App Version" = "Version Aplikacioni";
-"Version information were copied to the clipboard" = "Të dhënat e versionit u kopjuan në të papastër";
+"Version information were copied to the clipboard" = "Hollësitë e versionit u kopjuan në të papastër";
 
 
 /* User Interface Settings */
 "Theme" = "Temë";
 "User Interface" = "Ndërfaqe Përdoruesi";
 "Dark" = "E errët";
-"Dark Blue" = "Dark Blue";
+"Dark Blue" = "Blu e Errët";
 "Dark Web" = "Dark Web";
 "Light" = "E çelët";
 "Classic" = "Klasike";
@@ -277,7 +318,7 @@
 "Options" = "Mundësi";
 
 "Off" = "Off";
-"Info" = "Të dhëna";
+"Info" = "Hollësi";
 "Default" = "Parazgjedhje";
 "Warning" = "Kujdes";
 "Error" = "Gabim";
@@ -287,7 +328,7 @@
 
 "When activated, logs may impact performance and include sensitive information. However the logs are not subject to automatic submission to %@ servers. Sharing logs with others is sole user responsibility." = "Kur aktivizohen, regjistrat mund të kenë ndikim në funksionim dhe përfshijnë të dhëna rezervat. Sidoqoftë, regjistrat nuk janë subjekt parashtrimi të automatizuar te shërbyes %@. Ndarja e regjistrave me të tjerë është përgjegjësi vetëm e përdoruesit.";
 
-"The last 10 archived logs are kept on the device - with each log covering up to 24 hours of usage. When sharing please bear in mind that logs may contain sensitive information such as server URLs and user-specific information." = "10 regjistrat e fundit të arkivuar mbahen në pajisje - ku çdo regjistër mbulon deri në 24 orë përdorim. Kur bëhet ndarje e tyre, ju lutemi, kini parasysh se regjistrat mund të përmbajnë të dhëna rezervat, të tilla si URL shërbyesi dhe të dhëna që lidhen me përdoruesin.";
+"The last 10 archived logs are kept on the device - with each log covering up to 24 hours of usage. When sharing please bear in mind that logs may contain sensitive information such as server URLs and user-specific information." = "10 regjistrat e fundit të arkivuar mbahen në pajisje - ku çdo regjistër mbulon deri në 24 orë përdorim. Kur bëhet ndarje e tyre, ju lutemi, kini parasysh se regjistrat mund të përmbajnë të dhëna rezervat, të tilla si URL shërbyesi dhe hollësi që lidhen me përdoruesin.";
 
 "Mask private data" = "Masko të dhëna private";
 "Enabling this option will attempt to mask private data, so it does not become part of any log. Since logging is a development and debugging feature, though, we can't guarantee that the log file will be free of any private data even with this option enabled. Therefore, please look through any log file and verify its free of any data you're not comfortable sharing before sharing it with anybody." = "Me aktivizimin e kësaj mundësie programi do të rreket të maskojë të dhëna private, që të mos jenë pjesë e ndonjë regjistrimi. Por, ngaqë regjistrimi është një veçori e lidhur me zhvillimin dhe diagnostikimet, s’mund të garantojmë që kartela regjistër do të jetë pa ndonjë të dhënë private, edhe pse kjo mundësi është e aktivizuar. Ndaj, ju lutemi, hidhini një sy cilësdo kartele regjistër dhe verifikoni se është pa ndonjë të dhënë për të cilën s’ndiheni rehat ta ndani me të tjerë, përpara se ta ndani me dikë.";
@@ -360,9 +401,16 @@
 "Create folder" ="Krijo dosje";
 "Duplicate" = "Përsëdyte";
 "Move" = "Zhvendose";
+"Move {{itemCount}} items" = "Lëviz {{itemCount}} objekte";
+"Move \"{{itemName}}\"" = "Lëvize “{{itemName}}”";
+"Move here" = "Shpjere këtu";
+"Select target." = "Përzgjidhni objektiv.";
 "Open in" = "Hape në";
 "Copy" = "Kopjoje";
+"Copy {{itemCount}} items" = "Kopjo {{itemCount}} objekte";
+"Copy \"{{itemName}}\"" = "Kopjo “{{itemName}}”";
 "Copy here" = "Kopjoje këtu";
+
 "Cannot connect to " = "S’lidhet dot te";
 " couldn't download file(s)" = "s’u shkarkua dot kartelë(a)";
 "Actions" = "Veprime";
@@ -374,6 +422,8 @@
 "%ld Item was copied to the clipboard" = "Në të papastër u kopjua %ld objekt";
 "%ld Items were copied to the clipboard" = "%ld Objekte u kopjuan në të papastër";
 "Please note: Folders can only be pasted into the %@ app and the same account." = "Ju lutemi, mbani parasysh: Dosjet mund të ngjiten vetëm te aplikacioni %@ dhe e njëjta llogari.";
+
+"Processing on server" = "Përpunim në shërbyes";
 
 "Preparing…" = "Po përgatitet…";
 
@@ -389,8 +439,21 @@
 "Enable" = "Aktivizoje";
 "Exit Full Screen" = "Dil nga Sa Krejt Ekrani";
 
-/* Directory Picker Messages */
-"Move here" = "Shpjere këtu";
+"Select one or more items." = "Përzgjidhni një ose më tepër objekte.";
+
+"Add item" = "Shtoni element";
+
+/* App Provider */
+"New document" = "Dokument i ri";
+"Pick a name" = "Zgjidhni një emër";
+"Pick a document type to create:" = "Zgjidhni një dokument për krijim:";
+"Error creating {{itemName}}" = "Gabim në krijimin e {{itemName}}";
+
+"Opening…" = "Po hapet…";
+
+"Open in {{appName}} (web)" = "Hape me {{appName}} (web)";
+"Error opening {{itemName}} in {{appName}}" = "Gabim në hapjen e {{itemName}} me {{appName}}";
+"Opening documents is not supported by the app provider on this instance." = "Hapja e dokumenteve nuk mbulohet nga shërbimi i aplikacioneve në këtë instancë.";
 
 /* Preview */
 "Open file" = "Hap kartelë";
@@ -448,25 +511,24 @@
 "Scan additional" = "Skanim shtesë";
 "Create one file per page" = "Krijo një kartelë për faqe";
 
-/* Scan */
-"Scan" = "Skanim";
-"Scans" = "Skanime";
-"Scan document" = "Skanoni dokument";
-"Saving" = "Po ruhet";
-"File format" = "Format kartelash";
-"Name" = "Emër";
-"Save as" = "Ruaje si";
-"Options" = "Mundësi";
-"Scan additional" = "Skanim shtesë";
-"Create one file per page" = "Krijo një kartelë për faqe";
-
 /* Sharing */
+"Sharing requires an active connection." = "Ndarja me të tjerë lyp një lidhje aktive";
+"No items shared with you" = "S’ka objekte të ndarë me ju";
+"No items shared by you" = "S’ka objekte të ndarë nga ju";
+"No items shared by link" = "S’ka objekte ndarë përmes lidhjeje";
+
 "Searching Shares…" = "Po kërkohet në Pjesë…";
 "Recipient" = "Marrës";
 "Recipients" = "Marrëss";
 "Public Link" = "Lidhje Publike";
 "Public Links" = "Lidhje Publike";
-"Shared by {{owner}}" = "Ndarë nga {{owner}}";
+"Shared by {{owner}}" = "Ndarë me të tjerë nga {{owner}}";
+"Shared with {{recipient}}" = "Ndarë me {{recipient}}";
+"Shared with {{recipients}}" = "Ndarë me {{recipients}}";
+"Expires {{expirationDate}}" = "Skadon më {{expirationDate}}";
+"Share {{itemName}}" = "Ndajeni {{itemName}} me të tjerë";
+"Create link" = "Krijo lidhje";
+"Invite" = "Ftoje";
 "Invite Recipient" = "Ftoni Marrës";
 "Recipients" = "Marrëss";
 "Add email or name" = "Shtoni email ose emër";
@@ -552,6 +614,14 @@
 "Share with user/group" = "Ndajeni me përdorues/grup";
 "Share link" = "Lidhje pjese";
 
+"Shared with me" = "Ndarë me mua";
+"Shared by me" = "Ndarë nga unë";
+"Shared by link" = "Të ndara me lidhje";
+
+"Share with" = "Ndajeni me";
+"Add" = "Shtoni";
+"Save changes" = "Ruaji ndryshimet";
+
 /* Quick Access view */
 "Quick Access" = "Hyrje e Shpejtë";
 "Collection" = "Koleksion";
@@ -562,6 +632,10 @@
 "Text" = "Tekst";
 "Documents" = "Dokumente";
 "Audio" = "Audio";
+
+/* Favorites view */
+"No favorites found" = "S’u gjetën të parapëlqyer";
+"If you make an item a favorite, it will turn up here." = "Nëse një objekti i vini shenjë si të parapëlqyer, ai do të shfaqet këtu.";
 
 /* Media files settings */
 "Media Files" = "Kartela Media";
@@ -645,10 +719,12 @@
 "Make unavailable offline" = "Bëje jo të passhme jashtë linje";
 
 "Available Offline" = "E passhme Jashtë Linje";
-"No items have been selected for offline availability." = "S’janë përzgjedhur objekte për t’i pasur jashtë linje.";
 
-"Overview" = "Përmbledhje";
-"All Files" = "Krejt Kartelat";
+"No files available offline" = "S’ka kartela për përdorim jashtë interneti";
+"Files selected and downloaded for offline availability will show up here." = "Kartelat e përzgjedhura dhe të shkarkuara për përdorim jashtë interneti do të shfaqen këtu.";
+
+"Locations" = "Vende";
+"Downloaded Files" = "Kartela të Shkarkuara";
 
 /* Single Account */
 "You are connected as\n%@" = "Jeni i lidhur si\n%@";
@@ -724,16 +800,16 @@
 "Restore purchases" = "Rikthe blerjet";
 "Restoring purchases…" = "Po rikthehen blerjet…";
 "Error restoring purchases" = "Gabim gjatë rikthimit të blerjeve";
-"Error loading product info from App Store"= "Gabim në ngarkim të dhënash produkti nga App Store";
+"Error loading product info from App Store"= "Gabim në ngarkim hollësish produkti nga App Store";
 "Purchase failed" = "Blerja dështoi";
-"More information" = "Më tepër të dhëna";
+"More information" = "Më tepër hollësi";
 
 /* Licensing: Enterprise */
 "Enterprise" = "Ndërrmarrje";
 
 /* Licensing: Settings */
 "In-App Purchases" = "Blerje Brenda Aplikacionit";
-"Purchases" = "Blerje";
+"Purchases & Subscriptions" = "Blerje & Pajtime";
 "Error fetching transactions" = "Gabim në sjellje transaksionesh";
 "Document Scanner" = "Skaner Dokumentesh";
 "Scan documents and photos with your camera." = "Skanoni me kamerën tuaj dokumente dhe photo.";
@@ -773,7 +849,15 @@
 "Error importing %@" = "Gabim në importimin e %@";
 "Error loading item" = "Gabim në ngarkim objekti";
 "Preparing…" = "Po përgatitet…";
+"Import \"{{itemName}}\"" = "Importo “{{itemName}}”";
+"Import {{itemCount}} files" = "Importo {{itemCount}} kartela";
 "Save here" = "Ruaje këtu";
+
+/* FileProvider */
+/* - Disabled */
+"File Provider access has been disabled by the administrator.\n\nPlease use the app to access your files." = "File Provider access has been disabled by the administrator.\n\nPlease use the app to access your files.";
+"File Provider access has been disabled by the administrator. Please use the app to create new folders." = "File Provider access has been disabled by the administrator. Please use the app to create new folders.";
+"File Provider access has been disabled by the administrator. Please use the share extension to import files." = "File Provider access has been disabled by the administrator. Please use the share extension to import files.";
 
 /* Disallowed Import Methods */
 /* - Share Extension */
@@ -811,13 +895,13 @@
 "Camera details" = "Hollësi kamere";
 "Capture settings" = "Rregullime fotografimi";
 "Time" = "Kohë";
-"EXIF aux info" = "Të dhëna EXIF aux";
+"EXIF aux info" = "Hollësi EXIF aux";
 "Authoring" =  "Authoring";
 "TIFF" = "TIFF";
 
 "Lens make" = "Prodhues Lenteje";
 "Lens model" = "Model lenteje";
-"Lens info" = "Informacion lenteje";
+"Lens info" = "Hollësi thjerre";
 "Focal length" = "Rreze vatrore";
 "Focal length @ 35 mm" = "Rreze vatrore @ 35 mm";
 
@@ -883,7 +967,7 @@
 "Copyright" = "Të drejta kopjimi";
 
 /* IPTC meta data */
-"Contact info" = "Të dhëna kontakti";
+"Contact info" = "Hollësi kontakti";
 "Usage terms" = "Terma përdorimi";
 "Scene" = "Skenë";
 "Description" = "Përshkrim";
@@ -922,3 +1006,8 @@
 "New settings received from MDM" = "U morën rregullime të reja nga MDM";
 "Tap to quit the app." = "Prekeni që të mbyllet aplikacioni.";
 "Tap to launch the app." = "Prekeni që të hapet aplikacioni.";
+
+/* Beta warning */
+"Beta Warning" = "Sinjalizim për Beta";
+"\nThis is a BETA release that may - and likely will - still contain bugs.\n\nYOU SHOULD NOT USE THIS BETA VERSION WITH PRODUCTION SYSTEMS, PRODUCTION DATA OR DATA OF VALUE. YOU'RE USING THIS BETA AT YOUR OWN RISK.\n\nPlease let us know about any issues that come up via the \"Send Feedback\" option in the settings." = "\nKjo është një hedhje BETA në qarkullim, që mund - dhe me gjasa do të ketë - ende të meta.\n\nS’DUHET TA PËRDORNI KËTË VERSION BETA ME SISTEME PRODHIMI, TË DHËNA PRODHIMI OSE TË DHËNA ME VLERË. E PËRDORNI KËTË BETA ME QARIN DHE ZARARIN TUAJ.\n\nJu lutemi, na bëni të ditur çfarëdo problemi që shfaqet, përmes mundësisë “Dërgoni Përshtypje”, te rregullimet.";
+"Agree" = "Pajtohem";

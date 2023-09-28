@@ -12,26 +12,35 @@ import utils.log.Log;
 
 public class LoginPage extends CommonPage{
 
-    @iOSXCUITFindBy(xpath = "//XCUIElementTypeStaticText[@name=\"Add account\"]")
-    private MobileElement addAccountButton;
+    @iOSXCUITFindBy(xpath = "//XCUIElementTypeButton[@name=\"Start setup\"]")
+    private MobileElement startSetup;
 
-    @iOSXCUITFindBy(accessibility = "row-url-url")
+    @iOSXCUITFindBy(xpath = "//XCUIElementTypeTextField[@name=\"Server URL\"]")
     private List<MobileElement> urlServer;
 
-    @iOSXCUITFindBy(accessibility = "continue-bar-button")
-    private MobileElement continueOption;
+    @iOSXCUITFindBy(xpath = "//XCUIElementTypeStaticText[@name=\"Proceed\"]")
+    private MobileElement proceed;
 
-    @iOSXCUITFindBy(accessibility = "approve-button")
-    private MobileElement approveButton;
+    @iOSXCUITFindBy(xpath = "//XCUIElementTypeStaticText[@name=\"Back\"]")
+    private MobileElement back;
 
-    @iOSXCUITFindBy(accessibility = "cancel-button")
+    @iOSXCUITFindBy(accessibility = "Approve")
+    private List<MobileElement> approveButton;
+
+    @iOSXCUITFindBy(accessibility = "Cancel")
     private MobileElement cancelButton;
 
-    @iOSXCUITFindBy(accessibility = "row-credentials-username")
+    @iOSXCUITFindBy(accessibility = "Server Username")
     private MobileElement usernameInput;
 
-    @iOSXCUITFindBy(accessibility = "row-credentials-password")
+    @iOSXCUITFindBy(accessibility = "Server Password")
     private MobileElement passwordInput;
+
+    @iOSXCUITFindBy(xpath = "//XCUIElementTypeStaticText[@name=\"Login\"]")
+    private MobileElement login;
+
+    @iOSXCUITFindBy(xpath = "//XCUIElementTypeButton[@name=\"Done\"]")
+    private MobileElement done;
 
     @iOSXCUITFindBy(xpath = "//XCUIElementTypeStaticText[@name=\"Personal\"]")
     private MobileElement personal;
@@ -60,17 +69,18 @@ public class LoginPage extends CommonPage{
     public void typeURL(){
         Log.log(Level.FINE, "Starts: Type URL.");
         urlServer.get(0).sendKeys(server);
-        continueOption.click();
-        approveIssue();
-        continueOption.click();
+        proceed.click();
+        if (approveButton.size() > 0) {
+            approveIssue();
+        }
     }
 
     public void approveIssue(){
-        approveButton.click();
+        approveButton.get(0).click();
     }
 
     public void addAccount(){
-        addAccountButton.click();
+        startSetup.click();
     }
 
     public void typeCredentials(String username, String password){
@@ -82,11 +92,13 @@ public class LoginPage extends CommonPage{
 
     public void submitLogin(){
         Log.log(Level.FINE, "Starts: Submit login");
-        continueOption.click();
+        login.click();
+        done.click();
     }
 
     public void selectDrive() {
         //assuming OIDC == oCIS. Bad, but works ftm
+        selectFirstBookmark();
         if (authType.equals("OIDC")) {
             personal.click();
         } else {

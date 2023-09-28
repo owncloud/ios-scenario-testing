@@ -4,8 +4,8 @@
  *
  * @author Jesús Recio Rincón (@jesmrec)
  *
- * Last Appium review: v2.0.0-beta.66
- * If posible, execute test with such version
+ * Last Appium review: v2.0.1
+ * If posible, execute tests with such version
  */
 
 package ios;

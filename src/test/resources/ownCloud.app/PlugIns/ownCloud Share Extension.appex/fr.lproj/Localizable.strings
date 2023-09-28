@@ -48,7 +48,7 @@
 "Certificate has issues.\nOpen 'Certificate Details' for more informations." = "Le certificat a des problèmes.\nOuvrez 'Détails du certificat' pour plus d'informations.";
 "No issues found. Certificate passed validation." = "Aucun problème n'a été trouvé. Le certificat a réussi la validation.";
 "Certificate may have issues, but was accepted by user.\nOpen 'Certificate Details' for more informations." = "Le certificat peut avoir des problèmes, mais a été accepté par l'utilisateur.\nOuvrez 'Détails du certificat' pour plus d'informations.";
-"If you 'Continue', you will be prompted to allow the '%@' App to open OAuth2 login where you can enter your credentials." = "Si vous 'Continuez', vous serez invité à autoriser l'application %@ à ouvrir la connexion OAuth2 où vous pourrez entrer vos informations d'identification";
+"If you 'Continue', you will be prompted to allow the '{{app.name}}' app to open the {{authmethodName}} login page where you can enter your credentials." = "If you 'Continue', you will be prompted to allow the '{{app.name}}' app to open the {{authmethodName}} login page where you can enter your credentials.";
 
 "Error opening %@" = "erreur en ouvrant %@";
 
@@ -104,8 +104,18 @@
 "kind" = "type";
 "size" = "taille";
 "date" = "date";
+
+"Tree" = "Tree";
 "Search folder" = "Search folder";
+"Search tree" = "Search tree";
+"Search from {{folder.name}}" = "Search from {{folder.name}}";
+"Search space" = "Search space";
+"Search {{space.name}}" = "Search {{space.name}}";
 "Search account" = "Search account";
+"Enter a search term" = "Enter a search term";
+"Search for users or groups" = "Search for users or groups";
+"Enter the user or group you want to invite." = "Enter the user or group you want to invite.";
+
 "Pending" = "En attente";
 "Show parent paths" = "Montrer les chemins parents";
 "Reveal in folder" = "Reveal in folder";
@@ -115,7 +125,31 @@
 "%@ item | " = "%@élément |";
 "%@ items | " = "%@ éléments |";
 
-"Show more results" = "Show more results";
+"{{itemCount}} items with {{totalSize}} total ({{fileCount}} files, {{folderCount}} folders)" = "{{itemCount}} items with {{totalSize}} total ({{fileCount}} files, {{folderCount}} folders)";
+"{{remaining}} available" = "{{remaining}} available";
+
+"Show more results" = "Afficher plus de résultats";
+
+"An error occurred" = "Une erreur est survenue";
+
+/* Item Layouts */
+"List" = "Lister";
+"Grid" = "Grid";
+"Item grid" = "Item grid";
+"Image grid" = "Image grid";
+
+/* Saved searches */
+"Saved searches" = "Saved searches";
+"Saved search templates" = "Saved search templates";
+"Save search" = "Save search";
+"Save as search template" = "Save as search template";
+
+"Name of saved search" = "Name of saved search";
+"Saved search" = "Saved search";
+"Saved searches" = "Saved searches";
+"Name of template" = "Name of template";
+"Search template" = "Search template";
+"Search templates" = "Search templates";
 
 /* Search scope */
 "Search scope" = "Search scope";
@@ -141,8 +175,10 @@
 "The Profile '%@' does not have a URL configured.\nPlease provide a URL via configuration or MDM." = "Le profil '%@' n’a pas d’URL configurée.\nVeuillez fournir une URL via la configuration ou MDM.";
 
 /* Client Messages */
-"Empty folder" = "Dossier vide";
+"No contents" = "No contents";
 "This folder contains no files or folders." = "Ce dossier ne contient aucun fichier ou dossier.";
+"This folder is empty." = "This folder is empty.";
+"This folder is empty. Fill it with content:" = "This folder is empty. Fill it with content:";
 
 "Folder removed" = "Dossier supprimé";
 "This folder no longer exists on the server." = "Ce dossier n'existe plus sur le serveur.";
@@ -159,7 +195,10 @@
 "Upload files" = "Mettre en ligne des fichiers";
 
 "No matches" = "Pas de couplage";
+"The search term you entered did not match any item in the selected scope." = "The search term you entered did not match any item in the selected scope.";
 "There are no results for this search term" = "Pas de résultats pour ce terme de recherche.";
+"No items found matching the search criteria." = "No items found matching the search criteria.";
+
 "Status" = "Status";
 
 "Authorization failed" = "L'autorisation a échouée";
@@ -233,7 +272,7 @@
 "After 1 minute" = "Après 1 minute";
 "After 5 minutes" = "Après 5 minutes";
 "After 30 minutes" = "Après 30 minutes";
-"After %ld seconds" = "After %ld seconds";
+"After %ld seconds" = "Après %ld secondes";
 "If you choose \"Immediately\" the App will be locked, when it is no longer in foreground." = "If you choose \"Immediately\" the App will be locked, when it is no longer in foreground.";
 "Please configure an email account" = "Veuillez configurer un compte de messagerie";
 "You need to configure an email account first to be able to send emails." = "Vous devez d'abord configurer un compte de messagerie pour pouvoir envoyer des e-mails.";
@@ -242,6 +281,8 @@
 "Please choose how many digits you want to use for the passcode lock?" = "Please choose how many digits you want to use for the passcode lock?";
 "%ld digit code" = "%ld digit code";
 "Enter a new code with %ld digits" = "Enter a new code with %ld digits";
+"To use the app, you need to create a passcode." = "To use the app, you need to create a passcode.";
+"Passcode setup" = "Passcode setup";
 
 "%@%@ %@ version %@ build %@\n(app: %@, sdk: %@)" = "%@%@%@version%@build%@\n(app: %@, sdk: %@)";
 "beta" = "bêta";
@@ -308,7 +349,7 @@
 "Decrease Slider Value" = "Diminuer la valeur du curseur";
 "Increase Slider Value" = "Augmenter la valeur du curseur";
 
-"Cellular Data Usage" = "Cellular Data Usage";
+"Cellular Data Usage" = "Données mobiles utilisées";
 "Some cellular data may still be used. To completely avoid the usage of cellular data, please turn off access to cellular for the entire app in the Settings app." = "Certaines données cellulaires peuvent encore être utilisées. Pour éviter complètement l'utilisation des données cellulaires, veuillez désactiver l'accès au cellulaire pour toute l'application dans les paramètres de l'app.";
 "Cellular Data Usage have been disabled via MDM configuration. Please contact your administrator for more information." = "Cellular Data Usage have been disabled via MDM configuration. Please contact your administrator for more information.";
 "General" = "Paramètres";
@@ -360,9 +401,16 @@
 "Create folder" ="Créer un dossier";
 "Duplicate" = "Dupliquer";
 "Move" = "Déplacer";
+"Move {{itemCount}} items" = "Move {{itemCount}} items";
+"Move \"{{itemName}}\"" = "Move \"{{itemName}}\"";
+"Move here" = "Déplacer ici";
+"Select target." = "Select target.";
 "Open in" = "Ouvrir dans";
 "Copy" = "Copier";
+"Copy {{itemCount}} items" = "Copy {{itemCount}} items";
+"Copy \"{{itemName}}\"" = "Copy \"{{itemName}}\"";
 "Copy here" = "Copier ici";
+
 "Cannot connect to " = "Impossible de se connecter à";
 " couldn't download file(s)" = "Impossible de télécharger le(s) fichier(s)";
 "Actions" = "Actions";
@@ -374,6 +422,8 @@
 "%ld Item was copied to the clipboard" = "%ld Item was copied to the clipboard";
 "%ld Items were copied to the clipboard" = "%ld Items were copied to the clipboard";
 "Please note: Folders can only be pasted into the %@ app and the same account." = "Please note: Folders can only be pasted into the %@ app and the same account.";
+
+"Processing on server" = "Processing on server";
 
 "Preparing…" = "En cours de préparation";
 
@@ -389,8 +439,21 @@
 "Enable" = "Activer";
 "Exit Full Screen" = "Quitter le mode plein écran";
 
-/* Directory Picker Messages */
-"Move here" = "Déplacer ici";
+"Select one or more items." = "Select one or more items.";
+
+"Add item" = "Ajouter une entrée";
+
+/* App Provider */
+"New document" = "Nouveau document";
+"Pick a name" = "Pick a name";
+"Pick a document type to create:" = "Pick a document type to create:";
+"Error creating {{itemName}}" = "Error creating {{itemName}}";
+
+"Opening…" = "Opening…";
+
+"Open in {{appName}} (web)" = "Open in {{appName}} (web)";
+"Error opening {{itemName}} in {{appName}}" = "Error opening {{itemName}} in {{appName}}";
+"Opening documents is not supported by the app provider on this instance." = "Opening documents is not supported by the app provider on this instance.";
 
 /* Preview */
 "Open file" = "Ouvrir le fichier";
@@ -406,7 +469,7 @@
 "Would you like to view the updated version?" = "Would you like to view the updated version?";
 "Show new version" = "Afficher la nouvelle version";
 "Refresh without asking" = "Refresh without asking";
-"Ignore updates" = "Ignore updates";
+"Ignore updates" = "Ignorer les mises à jour";
 
 /* PDF Viewer */
 "Resume" = "Reprendre";
@@ -418,9 +481,9 @@
 "The entered page number doesn't exist" = "Le numéro de page saisi n'existe pas";
 "Search PDF" = "Chercher PDF";
 "Outline" = "Aperçu";
-"Find Next" = "Find Next";
-"Find Previous" = "Find Previous";
-"Close Search" = "Close Search";
+"Find Next" = "Rechercher suivant";
+"Find Previous" = "Rechercher précédent";
+"Close Search" = "Fermer la recherche";
 
 /* Photo Upload */
 "Upload" = "Téléverser";
@@ -448,25 +511,24 @@
 "Scan additional" = "Analyse supplémentaire";
 "Create one file per page" = "Créer un fichier par page";
 
-/* Scan */
-"Scan" = "Analyse";
-"Scans" = "Analyses";
-"Scan document" = "analyse du document";
-"Saving" = "Enregistrement...";
-"File format" = "format du fichier";
-"Name" = "Nom";
-"Save as" = "Sauvegarder sous";
-"Options" = "Options";
-"Scan additional" = "Analyse supplémentaire";
-"Create one file per page" = "Créer un fichier par page";
-
 /* Sharing */
+"Sharing requires an active connection." = "Sharing requires an active connection.";
+"No items shared with you" = "No items shared with you";
+"No items shared by you" = "No items shared by you";
+"No items shared by link" = "No items shared by link";
+
 "Searching Shares…" = "Recherche de partages…";
 "Recipient" = "Destinataire";
 "Recipients" = "Les destinataires";
 "Public Link" = "Lien public";
 "Public Links" = "Liens publics";
-"Shared by {{owner}}" = "Partagé par {{owner}}";
+"Shared by {{owner}}" = "Shared by {{owner}}";
+"Shared with {{recipient}}" = "Shared with {{recipient}}";
+"Shared with {{recipients}}" = "Shared with {{recipients}}";
+"Expires {{expirationDate}}" = "Expires {{expirationDate}}";
+"Share {{itemName}}" = "Share {{itemName}}";
+"Create link" = "Create link";
+"Invite" = "Inviter";
 "Invite Recipient" = "Inviter un destinataire";
 "Recipients" = "Les destinataires";
 "Add email or name" = "Ajouter une adresse e-mail ou un nom";
@@ -548,9 +610,17 @@
 "Created Public Link" = "Lien public créé";
 "URL was copied to the clipboard" = "L'URL a été copiée dans le presse-papiers";
 "%@ is not available, when this account is offline. Please open the app and log into your account before you can do this action." = "%@ is not available, when this account is offline. Please open the app and log into your account before you can do this action.";
-"%@ is not available for this item." = "%@ is not available for this item.";
+"%@ is not available for this item." = "%@ n'est pas disponible pour cet élément.";
 "Share with user/group" = "Partager avec utilisateur/groupe";
 "Share link" = "Partager par lien public";
+
+"Shared with me" = "Shared with me";
+"Shared by me" = "Shared by me";
+"Shared by link" = "Partagés par lien";
+
+"Share with" = "Partager avec";
+"Add" = "Ajouter";
+"Save changes" = "Enregistrer les modifications";
 
 /* Quick Access view */
 "Quick Access" = "Accès rapide";
@@ -562,6 +632,10 @@
 "Text" = "Texte";
 "Documents" = "Documents";
 "Audio" = "Son";
+
+/* Favorites view */
+"No favorites found" = "No favorites found";
+"If you make an item a favorite, it will turn up here." = "If you make an item a favorite, it will turn up here.";
 
 /* Media files settings */
 "Media Files" = "Fichiers multimédias";
@@ -617,7 +691,7 @@
 "Offline files use" = "Utilisation des fichiers hors ligne";
 "Compacting of '%@' failed" = "Le compactage de '%@' a échoué";
 "Include available offline files" = "Inclure les fichiers hors connexion disponibles";
-"Delete all Offline Files" = "Delete all Offline Files";
+"Delete all Offline Files" = "Supprimer tous les fichiers hors-ligne";
 "Manage" = "Gérer";
 "Storage" = "Stockage";
 "Compacting" = "compactage";
@@ -645,10 +719,12 @@
 "Make unavailable offline" = "Rendre indisponible hors connexion";
 
 "Available Offline" = "Disponible hors ligne";
-"No items have been selected for offline availability." = "Aucun article n'a été sélectionné pour la disponibilité hors ligne.";
 
-"Overview" = "Aperçu";
-"All Files" = "Tous les fichiers";
+"No files available offline" = "No files available offline";
+"Files selected and downloaded for offline availability will show up here." = "Files selected and downloaded for offline availability will show up here.";
+
+"Locations" = "Locations";
+"Downloaded Files" = "Downloaded Files";
 
 /* Single Account */
 "You are connected as\n%@" = "Vous êtes connecté en tant que\n%@";
@@ -674,16 +750,16 @@
 "Scroll to Bottom" = "Faire défiler vers le bas";
 "Copy to Clipboard" = "Copier dans le presse-papier";
 "Import from Clipboard" = "Importer depuis le Presse-papier";
-"Choose destination directory…" = "Choose destination directory…";
+"Choose destination directory…" = "Sélectionner le dossier de destination …";
 "Next" = "Suivant";
 "Previous" = "Précédent";
 "Favorite" = "Ajouter aux favoris";
 "Cut" = "Couper";
-"Paste" = "Paste";
+"Paste" = "Coller";
 "Play/Pause" = "Play/Pause";
 "Skip Back" = "Skip Back";
 "Skip Ahead" = "Skip Ahead";
-"Go to Beginning" = "Go to Beginning";
+"Go to Beginning" = "Aller au début";
 "Mute/Unmute" = "Mute/Unmute";
 "Full Screen" = "Plein écran";
 "Switch Theme Style" = "Switch Theme Style";
@@ -733,7 +809,7 @@
 
 /* Licensing: Settings */
 "In-App Purchases" = "Achats intégrés";
-"Purchases" = "Achats";
+"Purchases & Subscriptions" = "Purchases & Subscriptions";
 "Error fetching transactions" = "Erreur lors de la récupération des transactions";
 "Document Scanner" = "Scanner de documents";
 "Scan documents and photos with your camera." = "Scanner des documents et des photos avec votre appareil photo";
@@ -773,7 +849,15 @@
 "Error importing %@" = "Erreur lors de l'importation de %@";
 "Error loading item" = "Erreur lors du chargement de l'élément";
 "Preparing…" = "En cours de préparation";
+"Import \"{{itemName}}\"" = "Import \"{{itemName}}\"";
+"Import {{itemCount}} files" = "Import {{itemCount}} files";
 "Save here" = "Enregistrer ici";
+
+/* FileProvider */
+/* - Disabled */
+"File Provider access has been disabled by the administrator.\n\nPlease use the app to access your files." = "File Provider access has been disabled by the administrator.\n\nPlease use the app to access your files.";
+"File Provider access has been disabled by the administrator. Please use the app to create new folders." = "File Provider access has been disabled by the administrator. Please use the app to create new folders.";
+"File Provider access has been disabled by the administrator. Please use the share extension to import files." = "File Provider access has been disabled by the administrator. Please use the share extension to import files.";
 
 /* Disallowed Import Methods */
 /* - Share Extension */
@@ -922,3 +1006,8 @@
 "New settings received from MDM" = "Nouveaux paramètres reçus de MDM";
 "Tap to quit the app." = "Appuyez sur pour quitter l'application.";
 "Tap to launch the app." = "Appuyez sur pour lancer l'application.";
+
+/* Beta warning */
+"Beta Warning" = "Beta Warning";
+"\nThis is a BETA release that may - and likely will - still contain bugs.\n\nYOU SHOULD NOT USE THIS BETA VERSION WITH PRODUCTION SYSTEMS, PRODUCTION DATA OR DATA OF VALUE. YOU'RE USING THIS BETA AT YOUR OWN RISK.\n\nPlease let us know about any issues that come up via the \"Send Feedback\" option in the settings." = "\nThis is a BETA release that may - and likely will - still contain bugs.\n\nYOU SHOULD NOT USE THIS BETA VERSION WITH PRODUCTION SYSTEMS, PRODUCTION DATA OR DATA OF VALUE. YOU'RE USING THIS BETA AT YOUR OWN RISK.\n\nPlease let us know about any issues that come up via the \"Send Feedback\" option in the settings.";
+"Agree" = "Agree";

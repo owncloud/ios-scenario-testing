@@ -48,7 +48,7 @@
 "Certificate has issues.\nOpen 'Certificate Details' for more informations." = "O certificado tem problemas.\nAbra \"Detalhes do certificado\" para mais informações.";
 "No issues found. Certificate passed validation." = "Nenhum problema encontrado. Certificado passou pela validação.";
 "Certificate may have issues, but was accepted by user.\nOpen 'Certificate Details' for more informations." = "O certificado pode ter problemas, mas foi aceito pelo usuário.\nAbra \"Detalhes do certificado\" para mais informações.";
-"If you 'Continue', you will be prompted to allow the '%@' App to open OAuth2 login where you can enter your credentials." = "Se você 'Continuar', você será solicitado a permitir que o '%@' App para abrir o login do OAuth2, onde você pode inserir suas credenciais.";
+"If you 'Continue', you will be prompted to allow the '{{app.name}}' app to open the {{authmethodName}} login page where you can enter your credentials." = "Se você 'Continuar', você será solicitado a permitir que o aplicativo '{{app.name}}' abra a página de login {{authmethodName}} onde você pode inserir suas credenciais.";
 
 "Error opening %@" = "Erro abrindo %@";
 
@@ -58,7 +58,7 @@
 "Fetching user information…" = "Buscando informações do usuário...";
 "Updating connection…" = "Atualizando conexão...";
 
-"Preparing account" = "Preparing account";
+"Preparing account" = "Preparando conta";
 "Please wait…" = "Por favor aguarde...";
 "Skip" = "Pular";
 
@@ -104,8 +104,18 @@
 "kind" = "tipo";
 "size" = "tamanho";
 "date" = "data";
+
+"Tree" = "Árvore";
 "Search folder" = "Pesquisar pasta";
+"Search tree" = "Árvore de pesquisa";
+"Search from {{folder.name}}" = "Pesquise em {{folder.name}}";
+"Search space" = "Espaço de pesquisa";
+"Search {{space.name}}" = "Pesquisar {{space.name}}";
 "Search account" = "Pesquisar conta ";
+"Enter a search term" = "Insira um termo de pesquisa";
+"Search for users or groups" = "Pesquisar usuários ou grupos";
+"Enter the user or group you want to invite." = "Insira o usuário ou grupo que deseja convidar.";
+
 "Pending" = "Pendente";
 "Show parent paths" = "Mostrar caminhos pai";
 "Reveal in folder" = "Revelar na pasta";
@@ -115,7 +125,31 @@
 "%@ item | " = "%@ item | ";
 "%@ items | " = "%@ itens | ";
 
+"{{itemCount}} items with {{totalSize}} total ({{fileCount}} files, {{folderCount}} folders)" = "{{itemCount}} itens com {{totalSize}} total ({{fileCount}} arquivos, {{folderCount}} pastas)";
+"{{remaining}} available" = "{{restante}} disponível";
+
 "Show more results" = "Mostrar mais resultados ";
+
+"An error occurred" = "Ocorreu um erro";
+
+/* Item Layouts */
+"List" = "Listar";
+"Grid" = "Grade";
+"Item grid" = "Grade de itens";
+"Image grid" = "Grade de imagem";
+
+/* Saved searches */
+"Saved searches" = "Pesquisas salvas";
+"Saved search templates" = "Modelos de pesquisa salvos";
+"Save search" = "Salvar busca";
+"Save as search template" = "Salvar como modelo de pesquisa";
+
+"Name of saved search" = "Nome da pesquisa salva";
+"Saved search" = "Pesquisa salva";
+"Saved searches" = "Pesquisas salvas";
+"Name of template" = "Nome do modelo";
+"Search template" = "Modelo de pesquisa";
+"Search templates" = "Pesquisar modelos";
 
 /* Search scope */
 "Search scope" = "Escopo de pesquisa ";
@@ -141,8 +175,10 @@
 "The Profile '%@' does not have a URL configured.\nPlease provide a URL via configuration or MDM." = "O Perfil '%@' não tem URL configurado.\nForneça um URL por meio da configuração ou MDM.";
 
 /* Client Messages */
-"Empty folder" = "Pasta vazia";
+"No contents" = "Sem conteúdo";
 "This folder contains no files or folders." = "Esta pasta não contém arquivos ou subpastas.";
+"This folder is empty." = "Esta pasta está vazia.";
+"This folder is empty. Fill it with content:" = "Esta pasta está vazia. Preencha com o conteúdo:";
 
 "Folder removed" = "Pasta removida";
 "This folder no longer exists on the server." = "Esta pasta não existe mais no servidor.";
@@ -159,7 +195,10 @@
 "Upload files" = "Enviar arquivos";
 
 "No matches" = "Não coincidem";
+"The search term you entered did not match any item in the selected scope." = "O termo de pesquisa inserido não corresponde a nenhum item no escopo selecionado.";
 "There are no results for this search term" = "Não há resultados para este termo de pesquisa";
+"No items found matching the search criteria." = "Não foram encontrados itens correspondentes aos critérios de pesquisa.";
+
 "Status" = "Status";
 
 "Authorization failed" = "Falha na autorização";
@@ -242,6 +281,8 @@
 "Please choose how many digits you want to use for the passcode lock?" = "Por favor, escolha quantos dígitos você deseja usar para o bloqueio por senha? ";
 "%ld digit code" = "%ld código de dígito ";
 "Enter a new code with %ld digits" = "Entre novo código com %ld digitos";
+"To use the app, you need to create a passcode." = "Para usar o aplicativo, você precisa criar uma senha.";
+"Passcode setup" = "Configuração de senha";
 
 "%@%@ %@ version %@ build %@\n(app: %@, sdk: %@)" = "%@%@ %@ versão%@ construir %@\n(app: %@, sdk: %@)";
 "beta" = "beta";
@@ -254,7 +295,7 @@
 "Theme" = "Tema";
 "User Interface" = "Interface de Usuário";
 "Dark" = "Escuro";
-"Dark Blue" = "Dark Blue";
+"Dark Blue" = "Azul Escuro";
 "Dark Web" = "Dark Web";
 "Light" = "Claro";
 "Classic" = "Clássico";
@@ -360,9 +401,16 @@
 "Create folder" ="Criar pasta";
 "Duplicate" = "Duplicado";
 "Move" = "Mover";
+"Move {{itemCount}} items" = "Mova {{itemCount}} itens";
+"Move \"{{itemName}}\"" = "Mover \"{{itemName}}\"";
+"Move here" = "Mova aqui";
+"Select target." = "Selecione o alvo.";
 "Open in" = "Aberto em";
 "Copy" = "Copiar";
+"Copy {{itemCount}} items" = "Copiar {{itemCount}} itens";
+"Copy \"{{itemName}}\"" = "Copiar \"{{itemName}}\"";
 "Copy here" = "Copiar aqui";
+
 "Cannot connect to " = "Não foi possível conectar a";
 " couldn't download file(s)" = "não foi possível baixar esse arquivo(s)";
 "Actions" = "Ações";
@@ -374,6 +422,8 @@
 "%ld Item was copied to the clipboard" = "%ld O item foi copiado para a área de transferência ";
 "%ld Items were copied to the clipboard" = "%ld os itens foram copiados para a área de transferência ";
 "Please note: Folders can only be pasted into the %@ app and the same account." = "Observação: as pastas só podem ser coladas no  %@ aplicativo e a mesma conta. ";
+
+"Processing on server" = "Processando no servidor";
 
 "Preparing…" = "Preparando…";
 
@@ -389,8 +439,21 @@
 "Enable" = "Habilitar";
 "Exit Full Screen" = "Sair da Tela cheia";
 
-/* Directory Picker Messages */
-"Move here" = "Mova aqui";
+"Select one or more items." = "Selecione um ou mais itens.";
+
+"Add item" = "Adicionar item";
+
+/* App Provider */
+"New document" = "Novo documento";
+"Pick a name" = "Escolha um nome";
+"Pick a document type to create:" = "Escolha um tipo de documento para criar:";
+"Error creating {{itemName}}" = "Erro ao criar {{itemName}}";
+
+"Opening…" = "Abertura…";
+
+"Open in {{appName}} (web)" = "Abrir em {{appName}} (web)";
+"Error opening {{itemName}} in {{appName}}" = "Erro ao abrir {{itemName}} em {{appName}}";
+"Opening documents is not supported by the app provider on this instance." = "A abertura de documentos não é suportada pelo provedor de aplicativos nesta instância.";
 
 /* Preview */
 "Open file" = "Abrir arquivo";
@@ -448,25 +511,24 @@
 "Scan additional" = "Escaneamento adicional";
 "Create one file per page" = "Criar um aquivo por página";
 
-/* Scan */
-"Scan" = "Escanear";
-"Scans" = "Escaneamentos";
-"Scan document" = "Escanear documento";
-"Saving" = "Salvando";
-"File format" = "Formato do arquivo";
-"Name" = "Nome";
-"Save as" = "Salvar como";
-"Options" = "Opções";
-"Scan additional" = "Escaneamento adicional";
-"Create one file per page" = "Criar um aquivo por página";
-
 /* Sharing */
+"Sharing requires an active connection." = "O compartilhamento requer uma conexão ativa.";
+"No items shared with you" = "Nenhum item compartilhado com você";
+"No items shared by you" = "Nenhum item compartilhado por você";
+"No items shared by link" = "Nenhum item compartilhado por link";
+
 "Searching Shares…" = "Pesquisando Compartilhamentos...";
 "Recipient" = "Destinatário";
 "Recipients" = "Destinatários";
 "Public Link" = "Linque Público";
 "Public Links" = "Linques Públicos";
 "Shared by {{owner}}" = "Compartilhado por {{owner}}";
+"Shared with {{recipient}}" = "Compartilhado com {{recipient}}";
+"Shared with {{recipients}}" = "Compartilhado com {{recipients}}";
+"Expires {{expirationDate}}" = "Expira em {{expirationDate}}";
+"Share {{itemName}}" = "Compartilhe {{itemName}}";
+"Create link" = "Criar link";
+"Invite" = "Convidar";
 "Invite Recipient" = "Convidar Destinatário";
 "Recipients" = "Destinatários";
 "Add email or name" = "Adicionar email ou nome";
@@ -552,6 +614,14 @@
 "Share with user/group" = "Compartilhar com usuário/grupo ";
 "Share link" = "Compartilhar link";
 
+"Shared with me" = "Compartilhou comigo";
+"Shared by me" = "Compartilhado por mim";
+"Shared by link" = "Compartilhado por link";
+
+"Share with" = "Compartilhar com";
+"Add" = "Adicionar";
+"Save changes" = "Salvar alterações";
+
 /* Quick Access view */
 "Quick Access" = "Acesso Rápido";
 "Collection" = "Coleção";
@@ -562,6 +632,10 @@
 "Text" = "Texto";
 "Documents" = "Documentos";
 "Audio" = "Audio";
+
+/* Favorites view */
+"No favorites found" = "Nenhum favorito encontrado";
+"If you make an item a favorite, it will turn up here." = "Se você tornar um item favorito, ele aparecerá aqui.";
 
 /* Media files settings */
 "Media Files" = "Arquivos de Mídia";
@@ -645,10 +719,12 @@
 "Make unavailable offline" = "Tornar offline indisponível";
 
 "Available Offline" = "Disponível Offline";
-"No items have been selected for offline availability." = "Nenhum item foi selecionado para disponibilidade offline.";
 
-"Overview" = "Visão Global";
-"All Files" = "Todos os Arquivos";
+"No files available offline" = "Nenhum arquivo disponível off-line";
+"Files selected and downloaded for offline availability will show up here." = "Os arquivos selecionados e baixados para disponibilidade off-line serão exibidos aqui.";
+
+"Locations" = "Localizações";
+"Downloaded Files" = "Arquivos Baixados";
 
 /* Single Account */
 "You are connected as\n%@" = "Você está conectado como\n%@";
@@ -679,7 +755,7 @@
 "Previous" = "Anterior";
 "Favorite" = "Favorito";
 "Cut" = "Cortar";
-"Paste" = "Paste";
+"Paste" = "Colar";
 "Play/Pause" = "Rodar/Pausar";
 "Skip Back" = "Não Retornar";
 "Skip Ahead" = "Pular À frente ";
@@ -733,7 +809,7 @@
 
 /* Licensing: Settings */
 "In-App Purchases" = "Compras dentro do aplicativo";
-"Purchases" = "Compras";
+"Purchases & Subscriptions" = "Compras & Assinaturas";
 "Error fetching transactions" = "Erro ao obter transações";
 "Document Scanner" = "Scanner de Documentos";
 "Scan documents and photos with your camera." = "Digitalize documentos e fotos com sua câmera.";
@@ -773,7 +849,15 @@
 "Error importing %@" = "Erro importando %@";
 "Error loading item" = "Erro carregando o item";
 "Preparing…" = "Preparando…";
+"Import \"{{itemName}}\"" = "Importar \"{{itemName}}\"";
+"Import {{itemCount}} files" = "Importar {{itemCount}} arquivos";
 "Save here" = "Salvar aqui";
+
+/* FileProvider */
+/* - Disabled */
+"File Provider access has been disabled by the administrator.\n\nPlease use the app to access your files." = "O acesso do provedor de arquivos foi desativado pelo administrador.\n\nPor favor, use o aplicativo para acessar seus arquivos.";
+"File Provider access has been disabled by the administrator. Please use the app to create new folders." = "O acesso do provedor de arquivos foi desativado pelo administrador. Por favor, use o aplicativo para criar novas pastas.";
+"File Provider access has been disabled by the administrator. Please use the share extension to import files." = "O acesso do provedor de arquivos foi desativado pelo administrador. Use a extensão de compartilhamento para importar arquivos.";
 
 /* Disallowed Import Methods */
 /* - Share Extension */
@@ -922,3 +1006,8 @@
 "New settings received from MDM" = "Novas configurações recebidas do MDM ";
 "Tap to quit the app." = "Toque para sair do aplicativo. ";
 "Tap to launch the app." = "Toque para iniciar o aplicativo. ";
+
+/* Beta warning */
+"Beta Warning" = "Aviso Beta";
+"\nThis is a BETA release that may - and likely will - still contain bugs.\n\nYOU SHOULD NOT USE THIS BETA VERSION WITH PRODUCTION SYSTEMS, PRODUCTION DATA OR DATA OF VALUE. YOU'RE USING THIS BETA AT YOUR OWN RISK.\n\nPlease let us know about any issues that come up via the \"Send Feedback\" option in the settings." = "\nEsta é uma versão BETA que pode - e provavelmente ainda conterá - bugs.\n\nVOCÊ NÃO DEVE USAR ESTA VERSÃO BETA COM SISTEMAS DE PRODUÇÃO, DADOS DE PRODUÇÃO OU DADOS DE VALOR. VOCÊ ESTÁ USANDO ESTE BETA POR SUA CONTA E RISCO.\n\nInforme-nos sobre quaisquer problemas que surgirem por meio da opção \"Enviar Feedback\" nas configurações.";
+"Agree" = "Concordar";

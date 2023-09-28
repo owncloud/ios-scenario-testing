@@ -45,10 +45,10 @@
 "Accepted" = "Aceptado";
 "Validation Error" = "Error de validación";
 "Certificate was rejected by user." = "Certificado rechazado por usuario.";
-"Certificate has issues.\nOpen 'Certificate Details' for more informations." = "Problemas con el certificado.\nAbra 'Detalles Certificado' Para más información.";
+"Certificate has issues.\nOpen 'Certificate Details' for more informations." = "Problemas con el certificado.\nAbra 'Detalles Certificado' para más información.";
 "No issues found. Certificate passed validation." = "Sin problemas detectados. El certificado ha pasado la validación.";
-"Certificate may have issues, but was accepted by user.\nOpen 'Certificate Details' for more informations." = "El certificado presenta problemas , pero ha sido aceptado por el suario.\nAbra 'Detalles Certificado' Para más información.";
-"If you 'Continue', you will be prompted to allow the '%@' App to open OAuth2 login where you can enter your credentials." = "Si  'Continua', será requerido para permitir a la App '%@' Abrir el login OAuth2 donde introducir sus credenciales.";
+"Certificate may have issues, but was accepted by user.\nOpen 'Certificate Details' for more informations." = "El certificado presenta problemas , pero ha sido aceptado por el usuario.\nAbra 'Detalles Certificado' para más información.";
+"If you 'Continue', you will be prompted to allow the '{{app.name}}' app to open the {{authmethodName}} login page where you can enter your credentials." = "Si usted continúa, será redirigido para permitir a '{{app.name}}' abrir la pagina de autenticación {{authmethodName}} donde podrá introducir sus credenciales. ";
 
 "Error opening %@" = "Error al abrir %@";
 
@@ -58,7 +58,7 @@
 "Fetching user information…" = "Obteniendo información del usuario...";
 "Updating connection…" = "Actualizando conexión...";
 
-"Preparing account" = "Preparing account";
+"Preparing account" = "Preparando cuenta";
 "Please wait…" = "Por favor espere...";
 "Skip" = "Omitir";
 
@@ -104,10 +104,20 @@
 "kind" = "tipo";
 "size" = "tamaño";
 "date" = "fecha";
+
+"Tree" = "Árbol";
 "Search folder" = "Buscar carpeta";
+"Search tree" = "Buscar en árbol";
+"Search from {{folder.name}}" = "Buscar en {{folder.name}}";
+"Search space" = "Buscar en space";
+"Search {{space.name}}" = "Buscar {{space.name}}";
 "Search account" = "Buscar cuenta";
+"Enter a search term" = "Introduzca un término de búsqueda";
+"Search for users or groups" = "Buscar usuarios o grupos";
+"Enter the user or group you want to invite." = "Introduzca el usuario o grupo que quiera invitar.";
+
 "Pending" = "Pendiente";
-"Show parent paths" = "Mostrar ruta raíz";
+"Show parent paths" = "Mostrar rutas padre";
 "Reveal in folder" = "Revelar en carpeta";
 
 "%@ of %@ used" = "%@ de %@ usados";
@@ -115,18 +125,42 @@
 "%@ item | " = "%@ Elemento I";
 "%@ items | " = "%@Elementos |";
 
+"{{itemCount}} items with {{totalSize}} total ({{fileCount}} files, {{folderCount}} folders)" = "{{itemCount}} elementos con {{totalSize}} en total, ({{fileCount}} ficheros, {{folderCount}} carpetas)";
+"{{remaining}} available" = "{{remaining}} disponible";
+
 "Show more results" = "Mostrar más resultados";
+
+"An error occurred" = "Ocurrió un error";
+
+/* Item Layouts */
+"List" = "Lista";
+"Grid" = "Rejilla";
+"Item grid" = "Rejilla de elementos";
+"Image grid" = "Rejilla de imágenes";
+
+/* Saved searches */
+"Saved searches" = "Búsquedas guardadas.";
+"Saved search templates" = "Plantillas de búsqueda guardadas";
+"Save search" = "Guardar búsqueda";
+"Save as search template" = "Guardar como plantilla de búsqueda";
+
+"Name of saved search" = "Nombre de búsqueda guardada";
+"Saved search" = "Búsqueda guardada";
+"Saved searches" = "Búsquedas guardadas.";
+"Name of template" = "Nombre de plantilla";
+"Search template" = "Buscar plantilla";
+"Search templates" = "Buscar plantillas";
 
 /* Search scope */
 "Search scope" = "Alcance de búsqueda";
-"Toggle Search Scope" = "Toggle alcance de búsqueda";
+"Toggle Search Scope" = "Cambiar alcance de búsqueda";
 
 /* Static Login Setup */
 "Server error" = "Error en servidor";
 "The server doesn't support any allowed authentication method." = "El servidor no soporta ningún método de autenticación";
 "The server doesn't support any known and allowed authentication method found." = "El servidor no soporta ningún método de autenticación conocido o permitido.";
 "Retry detection" = "Reintentar detección";
-"Enter your username and password" = "Ingrese su nombre de usuario y contraseña";
+"Enter your username and password" = "Introduzca su nombre de usuario y contraseña";
 "Please log in to authorize the app." = "Inicie sesión para autorizar la aplicación.";
 "Welcome to %@" = "Bienvenido a %@";
 "Please enter a server URL" = "Ingrese una URL de servidor";
@@ -141,8 +175,10 @@
 "The Profile '%@' does not have a URL configured.\nPlease provide a URL via configuration or MDM." = "El perfil %@no tiene una URL configurada.\nPor favor, introduzca una URL a través de su configuración o MDM.";
 
 /* Client Messages */
-"Empty folder" = "Carpeta vacía";
+"No contents" = "Sin contenido";
 "This folder contains no files or folders." = "Esta carpeta no contiene archivos o carpetas.";
+"This folder is empty." = "Carpeta vacía";
+"This folder is empty. Fill it with content:" = "Carpeta vacía. Añada contenido:";
 
 "Folder removed" = "Carpeta eliminada";
 "This folder no longer exists on the server." = "Esa carpeta ya no existe en el servidor.";
@@ -159,17 +195,20 @@
 "Upload files" = "Subir archivos";
 
 "No matches" = "Sin coincidencias";
+"The search term you entered did not match any item in the selected scope." = "No hay coincidencias entre el término de búsqueda introducido y ningún elemento en el ámbito seleccionado.";
 "There are no results for this search term" = "No hay resultados respecto del término buscado";
+"No items found matching the search criteria." = "No se encontraron elementos coincidentes con el criterio de búsqueda.";
+
 "Status" = "Estado";
 
 "Authorization failed" = "Autorización fallida";
 "The account has been disabled." = "La cuenta ha sido deshabilitada";
 "The server declined access with the credentials stored for this connection." = "El servidor declinó el acceso con estas credenciales guardadas para esta conexión.";
-"Access denied" = "Acceso negado";
+"Access denied" = "Acceso denegado";
 "The connection's access token has expired or become invalid. Sign in again to re-gain access." = "El token de conexión ha expirado o ya no es válido. Vuelva a autenticarse para volver a tener acceso.";
 "No authentication data has been found for this connection." = "No se encontraron datos de autenticación para esta conexión";
 "Authentication with %@ is no longer allowed. Re-authentication needed." = "Autenticación con %@ no permitida. Se necesita reautenticación.";
-"Sign in" = "Registrarse";
+"Sign in" = "Entrar";
 "Continue offline" = "Seguir offline";
 "Media upload in the previous session was incomplete since the application was terminated" = "Hay subidas de ficheros  que no se completaron en su última sesión porque la aplicación fue cerrada.";
 
@@ -239,9 +278,11 @@
 "You need to configure an email account first to be able to send emails." = "Necesita configurar una cuenta de correo electrónico para poder enviar correos.";
 "Do you want to open the following URL?" = "¿Desea abrir la siguiente URL?";
 "Passcode option" = "Opción código";
-"Please choose how many digits you want to use for the passcode lock?" = "Elija cuántos dígitos desea usar para el bloqueo de contraseña.";
-"%ld digit code" = "Código digital %!d";
+"Please choose how many digits you want to use for the passcode lock?" = "Elija cuántos dígitos desea usar para el bloqueo por código.";
+"%ld digit code" = "Código de %!d dígitos";
 "Enter a new code with %ld digits" = "Ingrese un nuevo código %!d";
+"To use the app, you need to create a passcode." = "Para usar la app tiene que crear un código de acceso.";
+"Passcode setup" = "Configuración de código de acceso";
 
 "%@%@ %@ version %@ build %@\n(app: %@, sdk: %@)" = "%@%@%@versión %@ build %@\n(app: %@, sdk: %@)";
 "beta" = "beta";
@@ -254,8 +295,8 @@
 "Theme" = "Tema";
 "User Interface" = "Interfaz de usuario";
 "Dark" = "Oscuro";
-"Dark Blue" = "Dark Blue";
-"Dark Web" = "Dark Web";
+"Dark Blue" = "Azul oscuro";
+"Dark Web" = "Web oscuro";
 "Light" = "Claro";
 "Classic" = "Clásico";
 "System" = "Sistema";
@@ -352,28 +393,37 @@
 
 "Forbidden Characters" = "Caracteres prohibidos";
 "File name cannot contain / or \\" = "El nombre de archivo no puede contener / o \\";
-"Item with same name already exists" = "El artículo con el mismo nombre ya existe";
-"An item with the same name already exists in this location." = "El artículo con el mismo nombre ya existe en esta localización";
+"Item with same name already exists" = "Ya existe un elemento con el mismo nombre";
+"An item with the same name already exists in this location." = "Ya existe un elemento con el mismo nombre en esta localización.";
 "New Folder" = "Nueva carpeta";
 "Folder name" = "Nombre de la carpeta";
 "Rename" ="Cambiar nombre";
 "Create folder" ="Crear carpeta";
 "Duplicate" = "Duplicar";
 "Move" = "Mover";
+"Move {{itemCount}} items" = "Mover {{itemCount}} elementos";
+"Move \"{{itemName}}\"" = "Mover \"{{itemName}}\"";
+"Move here" = "Mover aquí";
+"Select target." = "Seleccionar destino.";
 "Open in" = "Abrir en";
 "Copy" = "Copiar";
+"Copy {{itemCount}} items" = "Copiar {{itemCount}} elementos";
+"Copy \"{{itemName}}\"" = "Copiar \"{{itemName}}\"";
 "Copy here" = "Copiar aqui";
+
 "Cannot connect to " = "No se puede conectar con ";
-" couldn't download file(s)" = "No es posible descargar archivo(s)";
+" couldn't download file(s)" = "No es posible descargar fichero(s)";
 "Actions" = "Acciones";
 "copy" = "Copiar";
 "Close Window" = "Cerrar ventana";
 "Open in a new Window" = "Abrir en nueva ventana";
 "Open in Window" = "Abrir en ventana";
-"Take photo or video" = "Toma foto o video";
+"Take photo or video" = "Tomar foto o video";
 "%ld Item was copied to the clipboard" = "El elemento %!d fue copiado al portapapeles";
-"%ld Items were copied to the clipboard" = "Los elementos %!d fueron copiados al portapapeles";
+"%ld Items were copied to the clipboard" = "%!d elementos fueron copiados al portapapeles";
 "Please note: Folders can only be pasted into the %@ app and the same account." = "Tenga en cuenta que: Las carpetas solo pueden ser pegadas dentro de la aplicación %@ y en la misma cuenta.";
+
+"Processing on server" = "Procesando en el servidor";
 
 "Preparing…" = "Preparando...";
 
@@ -382,15 +432,28 @@
 
 "Close actions menu" = "Cerrar el menú de acciones";
 "Favorited" = "Agregado a Favoritos";
-"Favorite item" = "Artículo favorito";
-"Unfavorite item" = "Artículo no favorito";
+"Favorite item" = "Elemento favorito";
+"Unfavorite item" = "Elemento no favorito";
 "Presentation Mode" = "Modo presentación";
 "Enabling presentation mode will prevent the display from sleep mode until the view is closed." = "Habilitar el modo de presentación evitará que la pantalla pase al modo de suspensión hasta que se cierre la vista.";
 "Enable" = "Activar";
 "Exit Full Screen" = "Salir de pantalla completa";
 
-/* Directory Picker Messages */
-"Move here" = "Mover aquí";
+"Select one or more items." = "Seleccione uno o más elementos.";
+
+"Add item" = "Añadir elemento";
+
+/* App Provider */
+"New document" = "Nuevo documento";
+"Pick a name" = "Coja un nombre";
+"Pick a document type to create:" = "Elige un tipo de documento para crear:";
+"Error creating {{itemName}}" = "Error creando {{itemName}}";
+
+"Opening…" = "Abriendo...";
+
+"Open in {{appName}} (web)" = "Abrir en {{appName}} (web)";
+"Error opening {{itemName}} in {{appName}}" = "Error abriendo {{itemName}} en {{appName}}";
+"Opening documents is not supported by the app provider on this instance." = "Abrir documentos no esta soportado por el proveedor de aplicaciones en esta instancia.";
 
 /* Preview */
 "Open file" = "Abrir archivo";
@@ -398,7 +461,7 @@
 "Error" = "Error";
 "Could not get the picture" = "No se pudo obtener la imagen";
 "Downloading" = "Descargando";
-"File couldn't be opened" = "Archivo no pudo ser abierto";
+"File couldn't be opened" = "Fichero no pudo ser abierto";
 "Connecting..." = "Conectando...";
 
 "File" = "Archivo";
@@ -431,22 +494,10 @@
 "Importing from photo library" = "Importando desde la biblioteca de fotos";
 "Media import" = "importar media";
 "%@ of %@" = "%@ de %@";
-"Selected folder lacks file creation permission" = "La carpeta seleccionada no tiene permisos de creación de archivos";
-"%d Item" = "%d Artículo";
-"%d Items" = "%d Artículos";
-"Select Items" = "Seleccionar artículo";
-
-/* Scan */
-"Scan" = "Escanear";
-"Scans" = "Escaneos";
-"Scan document" = "Escanear documentos";
-"Saving" = "Guardando";
-"File format" = "Formato de fichero";
-"Name" = "Nombre";
-"Save as" = "Salvar como";
-"Options" = "Opciones";
-"Scan additional" = "Escanear otro fichero";
-"Create one file per page" = "Crear un fichero por página";
+"Selected folder lacks file creation permission" = "La carpeta seleccionada no tiene permisos de creación de ficheros";
+"%d Item" = "%d Elemento";
+"%d Items" = "%d Elementos";
+"Select Items" = "Seleccionar elemento";
 
 /* Scan */
 "Scan" = "Escanear";
@@ -461,12 +512,23 @@
 "Create one file per page" = "Crear un fichero por página";
 
 /* Sharing */
+"Sharing requires an active connection." = "Compartir necesita una conexión activa.";
+"No items shared with you" = "No hay elementos compartidos con usted";
+"No items shared by you" = "No hay elementos compartidos.";
+"No items shared by link" = "No hay elementos compartidos por enlace";
+
 "Searching Shares…" = "Buscar Compartidos...";
 "Recipient" = "Destinatario";
 "Recipients" = "Destinatarios";
 "Public Link" = "Enlace público";
 "Public Links" = "Enlaces Públicos";
 "Shared by {{owner}}" = "Compartido por {{owner}}";
+"Shared with {{recipient}}" = "Compartido con {{recipient}}";
+"Shared with {{recipients}}" = "Compartido con {{recipients}}";
+"Expires {{expirationDate}}" = "Expira {{expirationDate}}";
+"Share {{itemName}}" = "Compartir {{itemName}}";
+"Create link" = "Crear enlace";
+"Invite" = "Invitar";
 "Invite Recipient" = "Invitar usuarios";
 "Recipients" = "Destinatarios";
 "Add email or name" = "Agregar correo electrónico o nombre";
@@ -480,8 +542,8 @@
 "Created: %@" = "Creado: %@";
 "Allows the users you share with to re-share" = "Permitir a los usuarios con los que comparte que re-compartan";
 "Allows the users you share with to edit your shared files, and to collaborate" = "Permite editar y colaborar a los usuarios con los que comparte ";
-"Allows the users you share with to create new files and add them to the share" = "Permite a los usuarios con los que comparte crear nuevos archivos y agregarlos al recurso compartido.";
-"Allows uploading a new version of a shared file and replacing it" = "Permite cargar una nueva versión de un archivo compartido y reemplazarlo";
+"Allows the users you share with to create new files and add them to the share" = "Permite a los usuarios con los que comparte crear nuevos ficheros y agregarlos al recurso compartido.";
+"Allows uploading a new version of a shared file and replacing it" = "Permite subir una nueva versión de un fichero compartido y reemplazarlo";
 "Allows the users you share with to delete shared files" = "Permite eliminar a los usuarios con los cuales comparte";
 "Setting permission failed" = "Fallo al establecer permisos";
 "Shared with" = "Compartido con";
@@ -489,8 +551,8 @@
 "Remove Recipient" = "Quitar destinatario";
 "Create" = "Crear";
 "Change" = "Cambiar";
-"Recipients can view or download contents." = "Se puede ver o descargar el contenido";
-"Recipients can view, download, edit, delete and upload contents." = "Se puede ver, descargar, editar, borrar y subir contenido.";
+"Recipients can view or download contents." = "Destinatarios puede ver o descargar el contenido";
+"Recipients can view, download, edit, delete and upload contents." = "Destinatarios pueden ver, descargar, editar, borrar y subir contenido.";
 "Receive files from multiple recipients without revealing the contents of the folder." = "Recibir archivos de multiples origenes sin revelar el contenido de la carpeta.";
 "Download / View" = "Descargar / Ver";
 "Download / View / Upload" = "Descargar / Ver / Subir";
@@ -552,6 +614,14 @@
 "Share with user/group" = "Compartir con usuario/grupo";
 "Share link" = "Compartir enlace";
 
+"Shared with me" = "Compartido conmigo";
+"Shared by me" = "Compartido por mi";
+"Shared by link" = "Compartido por enlace";
+
+"Share with" = "Compartir con";
+"Add" = "Añadir";
+"Save changes" = "Guardar cambios";
+
 /* Quick Access view */
 "Quick Access" = "Acceso rápido";
 "Collection" = "Colección";
@@ -562,6 +632,10 @@
 "Text" = "Texto";
 "Documents" = "Documentos";
 "Audio" = "Audio";
+
+/* Favorites view */
+"No favorites found" = "No se encontraron favoritos";
+"If you make an item a favorite, it will turn up here." = "Si marca un elemento como favorito, aparecerá aquí.";
 
 /* Media files settings */
 "Media Files" = "Archivos multimedia";
@@ -645,10 +719,12 @@
 "Make unavailable offline" = "Deshacer disponible offline";
 
 "Available Offline" = "Disponible offline";
-"No items have been selected for offline availability." = "No se seleccionó ningún item como disponible offline.";
 
-"Overview" = "Visión general";
-"All Files" = "Todos los ficheros";
+"No files available offline" = "No hay ficheros disponibles offline";
+"Files selected and downloaded for offline availability will show up here." = "Ficheros seleccionados y descargados para ser disponibles offline se mostrarán aquí.";
+
+"Locations" = "Localizaciones";
+"Downloaded Files" = "Ficheros descargados";
 
 /* Single Account */
 "You are connected as\n%@" = "Está conectado como \n%@";
@@ -679,7 +755,7 @@
 "Previous" = "Anterior";
 "Favorite" = "Favorito";
 "Cut" = "Cortar";
-"Paste" = "Paste";
+"Paste" = "Pegar";
 "Play/Pause" = "Play/Pausa";
 "Skip Back" = "Ir hacia atrás";
 "Skip Ahead" = "Ir hacia delante";
@@ -733,7 +809,7 @@
 
 /* Licensing: Settings */
 "In-App Purchases" = "Compras dentro de la aplicación";
-"Purchases" = "Compras";
+"Purchases & Subscriptions" = "Compras & Suscripciones";
 "Error fetching transactions" = "Se produjo un error al recuperar las transacciones";
 "Document Scanner" = "Escáner de documentos";
 "Scan documents and photos with your camera." = "Escanée documentos y fotos con la cámara";
@@ -757,7 +833,7 @@
 "trial" = "prueba";
 "purchase" = "compra";
 "subscription" = "suscripción";
-"Photo Pro Features" = "Funciones de Photo Pro";
+"Photo Pro Features" = "Funciones de foto profesional";
 "Image metadata, extended upload options" = "Metadatos de imagen, opciones de carga extendidas";
 "Purchase" = "Compra";
 "Subscribe" = "Subscribirse";
@@ -766,14 +842,22 @@
 "In order to accurately determine your current licensing status, please add one or more accounts first." = "Para determinar con precisión su estado actual de licencia, primero agregue una o más cuentas.";
 
 /* Share Sheet */
-"Save File" = "Guardar archivo";
+"Save File" = "Guardar fichero";
 "Choose an account and folder to import into." = "Elija una cuenta y una carpeta para importar.";
 "No account configured.\nSetup an new account in the app to save to." = "No hay una cuenta configurada. \nConfigure una nueva cuenta en la aplicación para guardar.";
-"Importing item %ld of %ld" = "Importa artículo %Id de %Id";
+"Importing item %ld of %ld" = "Importando elemento %Id de %Id";
 "Error importing %@" = "Error al importar %@";
-"Error loading item" = "Error al cargar artículo.";
+"Error loading item" = "Error al cargar elemento.";
 "Preparing…" = "Preparando...";
+"Import \"{{itemName}}\"" = "Importar \"{{itemName}}\"";
+"Import {{itemCount}} files" = "Importar {{itemCount}} ficheros";
 "Save here" = "Guardar aquí";
+
+/* FileProvider */
+/* - Disabled */
+"File Provider access has been disabled by the administrator.\n\nPlease use the app to access your files." = "El acceso al proveedor de aplicaciones ha sido desactivado por el administrador.\n\nPor favor, use la app para acceder a sus ficheros.";
+"File Provider access has been disabled by the administrator. Please use the app to create new folders." = "El acceso al proveedor de aplicaciones ha sido desactivado por el administrador. Por favor, use la app para crear nuevas carpetas.";
+"File Provider access has been disabled by the administrator. Please use the share extension to import files." = "El acceso al proveedor de aplicaciones ha sido desactivado por el administrador. Por favor, use la extension compartir para importar ficheros.";
 
 /* Disallowed Import Methods */
 /* - Share Extension */
@@ -792,11 +876,11 @@
 "Enter multiple selection" = "Ingresar selección múltiple";
 
 /* Universal Links */
-"Resolving link…" = "Resolviendo vínculo…";
+"Resolving link…" = "Resolviendo enlace…";
 "Link resolution failed" = "Falló la resolución del enlace";
-"Couldn't resolve a private link since you are offline and corresponding item is not cached locally." = "No se pudo resolver un vínculo privado porque no está conectado y el elemento correspondiente no está almacenado en caché localmente.";
-"Couldn't resolve a private link since the item is not known to the server." = "No se pudo resolver un vínculo privado porque el servidor no conoce el elemento.";
-"Link points to an account bookmark which is not configured in the app." = "El enlace apunta a un marcador de cuenta que no está configurado en la aplicación.";
+"Couldn't resolve a private link since you are offline and corresponding item is not cached locally." = "No se pudo resolver un enlace privado porque no está conectado y el elemento correspondiente no está almacenado en caché localmente.";
+"Couldn't resolve a private link since the item is not known to the server." = "No se pudo resolver un enlace privado porque el servidor no conoce el elemento.";
+"Link points to an account bookmark which is not configured in the app." = "El enlace apunta a una cuenta que no está configurada en la aplicación.";
 
 /* Photo meta-data */
 "Image metadata" = "Metadatos de imagen";
@@ -848,7 +932,7 @@
 "Partial" = "Parcial";
 
 /* EXIF: flash mode */
-"Flash" = "Destello";
+"Flash" = "Flash";
 "Fired" = "disparó";
 "Didn't fire" = "No disparó";
 "No strobe return detection" = "Sin detección de retorno de luz estroboscópica";
@@ -900,7 +984,7 @@
 "Altitude" = "Altitud";
 "Place" = "Lugar";
 "E" = "E";
-"W" = "W";
+"W" = "O";
 "N" = "N";
 "S" = "S";
 
@@ -922,3 +1006,8 @@
 "New settings received from MDM" = "Nueva configuración recibida de MDM";
 "Tap to quit the app." = "Toque para salir de la aplicación.";
 "Tap to launch the app." = "Toque para iniciar la aplicación.";
+
+/* Beta warning */
+"Beta Warning" = "Aviso versión Beta";
+"\nThis is a BETA release that may - and likely will - still contain bugs.\n\nYOU SHOULD NOT USE THIS BETA VERSION WITH PRODUCTION SYSTEMS, PRODUCTION DATA OR DATA OF VALUE. YOU'RE USING THIS BETA AT YOUR OWN RISK.\n\nPlease let us know about any issues that come up via the \"Send Feedback\" option in the settings." = "\nEsto es una version BETA y puede - muy probablemente - contener problemas y errores\n\nNO USE ESTA VERSIÓN BETA EN SISTEMAS DE PRODUCCIÓN, DATOS DE PRODUCCIÓN O DATOS DE VALOR. EL USO DE ESTA BETA ES BAJO SU PROPIO RIESGO Y RESPONSABILIDAD\n\nPor favor, háganos saber problemas o errores que sucedan a través de la opción \"Enviar Feedback\" en la Configuración.";
+"Agree" = "Aceptar";
