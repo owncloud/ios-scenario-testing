@@ -4,7 +4,7 @@
  *
  * @author Jesús Recio Rincón (@jesmrec)
  *
- * Last Appium review: v2.0.1
+ * Last Appium review: v2.2.1
  * If posible, execute tests with such version
  */
 
@@ -97,6 +97,9 @@ public class AppiumManager {
 
         capabilities.setCapability("appium:newCommandTimeout", 60);
 
-        //capabilities.setCapability("autoDismissAlerts", true);
+        capabilities.setCapability("platformVersion", "17.0");
+
+        capabilities.setCapability("appium:webDriverAgentUrl", "http://localhost:8100");
+
     }
 }

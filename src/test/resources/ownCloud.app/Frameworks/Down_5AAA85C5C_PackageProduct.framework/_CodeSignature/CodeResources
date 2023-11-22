@@ -38,11 +38,11 @@
 		</data>
 		<key>Down_Down.bundle/Info.plist</key>
 		<data>
-		FExkKrLgD1i9lBFIrXb5XOVd5KU=
+		evN3cMT697TWMKhyw3X0UXuJjEs=
 		</data>
 		<key>Down_Down.bundle/_CodeSignature/CodeDirectory</key>
 		<data>
-		tIEebUBKdMYAy9SFAVW+dKflbFM=
+		BN2UNk3pl5mRR5o94CYZAgTFYWA=
 		</data>
 		<key>Down_Down.bundle/_CodeSignature/CodeRequirements</key>
 		<data>
@@ -50,7 +50,7 @@
 		</data>
 		<key>Down_Down.bundle/_CodeSignature/CodeRequirements-1</key>
 		<data>
-		9jOrXJNUE/XJt2OOnsEY+cfuiE8=
+		jd59s0d1h8n5Kll1vdh3DyV0PZM=
 		</data>
 		<key>Down_Down.bundle/_CodeSignature/CodeResources</key>
 		<data>
@@ -62,7 +62,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		mwdoq5JiqHXnq9nRGK4h+wsYbgE=
+		cekf5Jy65IIdPcHEMuQwJcLHBL0=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -127,14 +127,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			QTY/SLRvjkOXwCArOoGGRuQ6/0dWmNz/VgVfquzPXK4=
+			alngctTMRE73u9tmj7gPSUkyh9I+kij4+LN095GRPQQ=
 			</data>
 		</dict>
 		<key>Down_Down.bundle/_CodeSignature/CodeDirectory</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			8KQ6OEqBK+LsYQgifKmPCAOhUWFBDF3/qV4SH0TdgLc=
+			jvkMvIhMgNWiHhr0a+KpAdJX2MQQ2W+YxeLYGjtLFog=
 			</data>
 		</dict>
 		<key>Down_Down.bundle/_CodeSignature/CodeRequirements</key>
@@ -148,7 +148,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			p6/oTSNqnImSn5ak3yeNzSPKEQqk9uckPHI7EJwaNbU=
+			ZKKlblHTgYkvsJTaG+dtWtfqG1VGr3u7xOuFFPRdgEk=
 			</data>
 		</dict>
 		<key>Down_Down.bundle/_CodeSignature/CodeResources</key>

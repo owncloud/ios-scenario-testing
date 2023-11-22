@@ -8,7 +8,6 @@ Feature: Set items as available offline (downloaded and synced)
   Background: User is logged in
     Given user Alice is logged in
 
-    @ignore
     Scenario Outline: Set a file as available offline using the Actions menu
       Given the following items have been created in the account
         | <type> | <item> |
@@ -27,7 +26,8 @@ Feature: Set items as available offline (downloaded and synced)
       When Alice selects to make available offline the folder folderTest using the Contextual menu
       And Alice selects to move the file file3.pdf using the Actions menu
       And Alice selects folderTest as target folder of the move operation
-      Then Alice should see the item folderTest/file3.pdf as av.offline
+      Then Alice should see the item folderTest as av.offline
+      And Av. offline option is not available for item folderTest/file3.pdf
 
     Scenario: Moving a file inside an av.offline folder to a non av.offline folder, it turns not av.offline
       Given the following items have been created in the account

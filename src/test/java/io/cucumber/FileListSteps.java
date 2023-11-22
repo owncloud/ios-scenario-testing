@@ -283,14 +283,22 @@ public class FileListSteps {
     public void item_as_avoffline(String itemName) {
         String stepName = new Object(){}.getClass().getEnclosingMethod().getName().toUpperCase();
         Log.log(Level.FINE, "----STEP----: " + stepName);
-        assertTrue(world.getFileListPage().fileIsMarkedAsAvOffline(itemName));
+        assertTrue(world.getFileListPage().isMarkedAsAvOffline(itemName));
+        close_actions_menu("Actions");
     }
 
     @Then("Alice should not see the item {word} as av.offline")
     public void item_not_avoffline(String itemName) {
         String stepName = new Object(){}.getClass().getEnclosingMethod().getName().toUpperCase();
         Log.log(Level.FINE, "----STEP----: " + stepName);
-        assertFalse(world.getFileListPage().fileIsMarkedAsAvOffline(itemName));
+        assertFalse(world.getFileListPage().isMarkedAsAvOffline(itemName));
+    }
+
+    @Then("Av. offline option is not available for item {word}")
+    public void avoffline_not_available(String itemName) {
+        String stepName = new Object(){}.getClass().getEnclosingMethod().getName().toUpperCase();
+        Log.log(Level.FINE, "----STEP----: " + stepName);
+        assertFalse(world.getFileListPage().isAvOfflineAvailable(itemName));
     }
 
     @Then("the list of files in {word} folder should match with the server")

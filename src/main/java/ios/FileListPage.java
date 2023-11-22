@@ -49,7 +49,7 @@ public class FileListPage extends CommonPage {
     @iOSXCUITFindBy(id="Personal")
     private MobileElement personal;
 
-    @iOSXCUITFindBy(xpath = "(//XCUIElementTypeButton[@name=\"sidebar.leading\"])[2]")
+    @iOSXCUITFindBy(xpath = "(//XCUIElementTypeButton[@name=\"Toggle sidebar\"])[2]")
     private MobileElement sideMenuOpener;
 
     @iOSXCUITFindBy(xpath="//XCUIElementTypeStaticText[@name=\"Quick Access\"]")
@@ -70,7 +70,7 @@ public class FileListPage extends CommonPage {
     private final String xpath_cut = "//XCUIElementTypeCell[@name=\"com.owncloud.action.cutpasteboard\"]";
     private final String xpath_paste = "//XCUIElementTypeCell[@name=\"com.owncloud.action.importpasteboard\"]";
     private final String xpath_duplicate = "//XCUIElementTypeCell[@name=\"com.owncloud.action.duplicate\"]";
-    private final String xpath_avoffline = "//XCUIElementTypeCell[@name=\"com.owncloud.action.makeAvailableOffline\"]";
+    private final String xpath_avoffline = "//XCUIElementTypeCell[@name=\"com.owncloud.action.availableOffline\"]";
     private final String xpath_copydirectory = "//XCUIElementTypeButton[@name=\"Choose destination directory…\"]";
 
     //Actions in contextual menu menu
@@ -120,13 +120,11 @@ public class FileListPage extends CommonPage {
 
     public void uploadFromGallery() {
         Log.log(Level.FINE, "Starts: Upload file from Gallery");
-        String xpathOptionGallery = "//XCUIElementTypeAlert[@name=\"“ownCloud” Would Like to Access Your Photos\"]" +
-                "/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeScrollView[2]" +
-                "/XCUIElementTypeOther[1]/XCUIElementTypeOther/XCUIElementTypeOther[3]";
+        String idPermission = "Allow Full Access";
         openPlusButton();
         uploadFile.click();
-        if (!findListXpath(xpathOptionGallery).isEmpty()){
-            findXpath(xpathOptionGallery).click();
+        if (!findListId(idPermission).isEmpty()){
+            findId(idPermission).click();
         }
         //Wait till gallery loads. When the "Cancel" button is present
         waitById(5, "Cancel");
@@ -307,7 +305,7 @@ public class FileListPage extends CommonPage {
                 operation = (MobileElement) findXpath(xpath_duplicate);
                 break;
             case "make available offline":
-                operation = (MobileElement) findXpath(xpath_avoffline);
+                operation = (MobileElement) findId(id_avoffline);
                 //The file take some to download
                 break;
             case "cut":
@@ -408,15 +406,25 @@ public class FileListPage extends CommonPage {
         findId("More").click();
     }
 
-    public boolean fileIsMarkedAsAvOffline(String itemName) {
+    public boolean isMarkedAsAvOffline(String itemName) {
         Log.log(Level.FINE, "Starts: Check if file is av. offline");
-        boolean menuAvoffline = false;
         String finalName = browseTo(itemName);
         Log.log(Level.FINE, "Final file name: " + finalName);
+        refreshBySwipe();
         openCard(finalName);
-        menuAvoffline = findListId(id_avoffline).isEmpty();
-        Log.log(Level.FINE, "Av. Offline conditions: " + menuAvoffline);
-        return menuAvoffline;
+        String switchAvOff = "//XCUIElementTypeSwitch[@name=\"Make available offline\"]";
+        boolean switchStatus = findXpath(switchAvOff).getAttribute("value").equals("1");
+        Log.log(Level.FINE, "Av. Offline status: " + switchStatus);
+        return switchStatus;
+    }
+
+    public boolean isAvOfflineAvailable(String itemName) {
+        Log.log(Level.FINE, "Starts: Check if av. offline is available");
+        String finalName = browseTo(itemName);
+        Log.log(Level.FINE, "Final file name: " + finalName);
+        refreshBySwipe();
+        openCard(finalName);
+        return !findListId(id_avoffline).isEmpty();
     }
 
     public boolean itemIsFavorite(String itemName){
