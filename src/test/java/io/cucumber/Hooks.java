@@ -13,6 +13,7 @@ import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
 import ios.AppiumManager;
+import utils.LocProperties;
 import utils.api.FilesAPI;
 import utils.api.TrashbinAPI;
 import utils.entities.OCFile;
@@ -20,7 +21,8 @@ import utils.log.Log;
 
 public class Hooks {
 
-    private World world;
+    private final World world;
+    private final String bundleId = LocProperties.getProperties().getProperty("appPackage");
 
     public Hooks (World world){
         this.world = world;
@@ -30,7 +32,7 @@ public class Hooks {
     @Before
     public void setup(Scenario scenario){
         Log.log(Level.FINE, "START SCENARIO EXECUTION: " + scenario.getName());
-        AppiumManager.getManager().getDriver().launchApp();
+        AppiumManager.getManager().getDriver().activateApp(bundleId);
     }
 
     //After every scenario
@@ -38,7 +40,7 @@ public class Hooks {
     public void tearDown(Scenario scenario) throws Throwable {
         cleanUp();
         Log.log(Level.FINE, "END SCENARIO EXECUTION: " + scenario.getName() + "\n\n");
-        AppiumManager.getManager().getDriver().terminateApp("com.owncloud.ios-app");
+        AppiumManager.getManager().getDriver().terminateApp(bundleId);
     }
 
     private void cleanUp() throws Throwable {

@@ -29,6 +29,7 @@ Feature: Set items as available offline (downloaded and synced)
       Then Alice should see the item folderTest as av.offline
       And Av. offline option is not available for item folderTest/file3.pdf
 
+  @porque
     Scenario: Moving a file inside an av.offline folder to a non av.offline folder, it turns not av.offline
       Given the following items have been created in the account
         | folder | folderTest2             |

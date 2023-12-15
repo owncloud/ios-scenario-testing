@@ -47,7 +47,7 @@ public class SharesSteps {
         String stepName = new Object(){}.getClass().getEnclosingMethod().getName().toUpperCase();
         Log.log(Level.FINE, "----STEP----: " + stepName);
         world.getShareAPI().createShare(sharingUser, itemName, recipientUser, "0",
-                world.getSharePage().translatePermissionsToInt(permissions), "", sharelevel);
+                world.getSharePage().translatePermissionsToInt(permissions), "", "", sharelevel);
         //Sharee is not detected at the moment.
         Thread.sleep(2000);
         world.getShareAPI().acceptAllShares(userType, recipientUser);

@@ -54,7 +54,7 @@ public class SharePage extends CommonPage {
 
     public void openPublicLink() {
         Log.log(Level.FINE, "Starts: open public link with default name");
-        final String linkOpener = "Link";
+        final String linkOpener = "link";
         findId(linkOpener).click();
     }
 

@@ -79,7 +79,7 @@ public class AppiumManager {
         if (System.getProperty("device") != null && !System.getProperty("device").isEmpty()) {
             capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, System.getProperty("device"));
         } else {
-            capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "iPhone 14");
+            capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "iPhone 15");
         }
 
         capabilities.setCapability("udid", System.getProperty("udid"));
@@ -93,13 +93,11 @@ public class AppiumManager {
         //The following capabilities prevents reinstalling the app every test.
         capabilities.setCapability(MobileCapabilityType.FULL_RESET, false);
 
-        capabilities.setCapability(MobileCapabilityType.NO_RESET, true);
+        capabilities.setCapability(MobileCapabilityType.NO_RESET, false);
 
         capabilities.setCapability("appium:newCommandTimeout", 60);
 
         capabilities.setCapability("platformVersion", "17.0");
-
-        capabilities.setCapability("appium:webDriverAgentUrl", "http://localhost:8100");
 
     }
 }

@@ -33,13 +33,13 @@ public class ShareAPI extends CommonAPI {
     }
 
     public void createShare(String sharingUser, String itemPath, String sharee, String type,
-                            String permissions, String name, int sharelevel)
+                            String permissions, String name, String password, int sharelevel)
             throws IOException {
         Log.log(Level.FINE, "Starts: Create Share - " + sharingUser + " " + sharee + " "
                 + itemPath + " " + type);
         String url = urlServer + sharingEndpoint;
         Log.log(Level.FINE, "URL: " + url);
-        Request request = postRequest(url, createBodyShare(itemPath, sharee, type, permissions, name, sharelevel), sharingUser);
+        Request request = postRequest(url, createBodyShare(itemPath, sharee, type, permissions, name, password, sharelevel), sharingUser);
         Response response = httpClient.newCall(request).execute();
         Log.log(Level.FINE, String.valueOf(response.code()));
         Log.log(Level.FINE, response.body().string());
@@ -134,11 +134,11 @@ public class ShareAPI extends CommonAPI {
     }
 
     private RequestBody createBodyShare(String itemPath, String sharee, String type,
-                                        String permissions, String name, int isReshare)
+                                        String permissions, String name, String password, int isReshare)
             throws IOException {
         Log.log(Level.FINE, "Starts: Create body share");
         Log.log(Level.FINE, "BODY SHARE: path " + itemPath+ " sharee: " + sharee + " type: "
-                + type + " permi: " + permissions + " name:" + name);
+                + type + " permi: " + permissions + " name:" + name + " pwd: " + password);
         FormBody.Builder body = new FormBody.Builder();
         if (isReshare == 1 && authAPI.isOidc(urlServer)) {
             body.add("path", "/Shares/" + itemPath);
@@ -149,6 +149,7 @@ public class ShareAPI extends CommonAPI {
         body.add("shareWith", sharee);
         body.add("permissions", permissions);
         body.add("name", name);
+        body.add("password", password);
         return body.build();
     }
 

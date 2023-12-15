@@ -90,7 +90,7 @@ public class PublicLinkPage extends CommonPage {
     public void setPassword (String password) {
         Log.log(Level.FINE, "Starts: Add link password: " + password);
         passwordButton.click();
-        passwordField.sendKeys("a");
+        passwordField.sendKeys(password);
         OKButton.click();
     }
 

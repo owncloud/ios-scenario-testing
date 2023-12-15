@@ -27,7 +27,7 @@ public class PublicLinkSteps {
         String stepName = new Object(){}.getClass().getEnclosingMethod().getName();
         Log.log(Level.FINE, "----STEP----: " + stepName);
         world.getShareAPI().createShare("Alice", itemName, "", "3", "1"
-                , "", 0);
+                , "", "aa55AA.." ,0);
     }
 
     @When("Alice creates link on {itemtype} {word} with the following fields")

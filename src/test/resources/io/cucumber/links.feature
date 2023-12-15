@@ -18,13 +18,14 @@ Feature: Public Links
         When Alice selects to share the <type> <item> using the <menu> menu
         And Alice creates link on <type> <item> with the following fields
           | permission | <permission> |
+          | password   | <password>   |
         Then link should be created on <item> with the following fields
           | permission | <permission> |
 
         Examples:
-          | type   | item       | permission | menu       |
-          | folder | Links1     | Viewer     | Actions    |
-          | file   | Links2.txt | Viewer     | Contextual |
+          | type   | item       | permission | menu       | password |
+          | folder | Links1     | Viewer     | Actions    | aa55AA.. |
+          | file   | Links2.txt | Viewer     | Contextual | aa55AA.. |
 
       Scenario Outline: Create a public link with password
         Given the following items have been created in the account
@@ -38,8 +39,8 @@ Feature: Public Links
 
         Examples:
           | type   | item       | password |
-          | folder | Links3     | a        |
-          | file   | Links4.txt | a        |
+          | folder | Links3     | aa55AA.. |
+          | file   | Links4.txt | aa55AA.. |
 
       @expiration @ignore
       Scenario Outline: Create a public link with expiration date
@@ -49,27 +50,29 @@ Feature: Public Links
         And Alice creates link on <type> <item> with the following fields
           | permission | Viewer       |
           | expiration | <expiration> |
+          | password   | <password>   |
         Then link should be created on <item> with the following fields
           | expiration | <expiration> |
 
         Examples:
-          | type   | item   | expiration |
-          | folder | Links5 | 1          |
+          | type   | item   | expiration | password |
+          | folder | Links5 | 1          | aa55AA.. |
 
-      Scenario Outline: Create a public link with permissions on a folder
+  Scenario Outline: Create a public link with permissions on a folder
         Given the following items have been created in the account
           | folder  | <item>  |
         When Alice selects to share the folder <item> using the Actions menu
         And Alice creates link on folder <item> with the following fields
           | permission | <permissions> |
+          | password   | <password>   |
         Then link should be created on <item> with the following fields
           | permission | <permissions> |
 
         Examples:
-          | item   | permissions |
-          | Links6 | Uploader    |
-          | Links7 | Contributor |
-          | Links8 | Editor      |
+          | item   | permissions | password |
+          | Links6 | Uploader    | aa55AA.. |
+          | Links7 | Contributor | aa55AA.. |
+          | Links8 | Editor      | aa55AA.. |
 
     @editlink
     Rule: Edit an existing public link
