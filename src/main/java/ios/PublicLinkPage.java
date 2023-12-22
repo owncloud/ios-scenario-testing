@@ -12,6 +12,9 @@ import utils.log.Log;
 
 public class PublicLinkPage extends CommonPage {
 
+    @iOSXCUITFindBy(id="Name")
+    private MobileElement linkName;
+
     @iOSXCUITFindBy(id="Viewer")
     private MobileElement viewer;
 
@@ -94,6 +97,11 @@ public class PublicLinkPage extends CommonPage {
         OKButton.click();
     }
 
+    public void setName (String name) {
+        Log.log(Level.FINE, "Starts: Add link name: " + name);
+        linkName.sendKeys(name);
+    }
+
     public boolean isPasswordEnabled(String itemName) {
         return passwordEnabled.isDisplayed();
     }
@@ -117,6 +125,11 @@ public class PublicLinkPage extends CommonPage {
         String dateInPicker = datePicker.getAttribute("value");
         Log.log(Level.FINE, "Date to check in the screen: " + dateInPicker);
         return dateInPicker.equals(displayedDate);
+    }
+
+    public boolean isNameCorrect(String name){
+        Log.log(Level.FINE, "Starts: Check link name: " + name);
+        return linkName.getAttribute("value").equals(name);
     }
 
     public void submitLink(){

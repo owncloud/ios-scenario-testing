@@ -19,17 +19,16 @@ Feature: Set items as available offline (downloaded and synced)
         | file | file1.pdf | Actions    |
         | file | file2.txt | Contextual |
 
-  Scenario: Inserting a file inside an av.offline folder, turns the file av.offline
-      Given the following items have been created in the account
-        | file   | file3.pdf  |
-        | folder | folderTest |
-      When Alice selects to make available offline the folder folderTest using the Contextual menu
-      And Alice selects to move the file file3.pdf using the Actions menu
-      And Alice selects folderTest as target folder of the move operation
-      Then Alice should see the item folderTest as av.offline
-      And Av. offline option is not available for item folderTest/file3.pdf
+    Scenario: Inserting a file inside an av.offline folder, turns the file av.offline
+        Given the following items have been created in the account
+          | file   | file3.pdf  |
+          | folder | folderTest |
+        When Alice selects to make available offline the folder folderTest using the Contextual menu
+        And Alice selects to move the file file3.pdf using the Actions menu
+        And Alice selects folderTest as target folder of the move operation
+        Then Alice should see the item folderTest as av.offline
+        And Av. offline option is not available for item folderTest/file3.pdf
 
-  @porque
     Scenario: Moving a file inside an av.offline folder to a non av.offline folder, it turns not av.offline
       Given the following items have been created in the account
         | folder | folderTest2             |

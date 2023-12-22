@@ -12,22 +12,24 @@ Feature: Public Links
     Rule: Create a public link
 
       @smoke
-      Scenario Outline: Create a public link
+      Scenario Outline: Create a public link with name
         Given the following items have been created in the account
           | <type>  | <item>  |
         When Alice selects to share the <type> <item> using the <menu> menu
         And Alice creates link on <type> <item> with the following fields
           | permission | <permission> |
           | password   | <password>   |
+          | name       | <name>       |
         Then link should be created on <item> with the following fields
           | permission | <permission> |
+          | name       | <name>       |
 
         Examples:
-          | type   | item       | permission | menu       | password |
-          | folder | Links1     | Viewer     | Actions    | aa55AA.. |
-          | file   | Links2.txt | Viewer     | Contextual | aa55AA.. |
+          | type   | item       | permission | menu       | password | name       |
+          | folder | Links1     | Viewer     | Actions    | aa55AA.. | folderName |
+          | file   | Links2.txt | Viewer     | Contextual | aa55AA.. | fileName   |
 
-      Scenario Outline: Create a public link with password
+  Scenario Outline: Create a public link with password
         Given the following items have been created in the account
             | <type>  | <item>  |
         When Alice selects to share the <type> <item> using the Actions menu

@@ -50,6 +50,10 @@ public class PublicLinkSteps {
                     world.getPublicLinkPage().setExpiration(rows.get(1));
                     break;
                 }
+                case "name": {
+                    world.getPublicLinkPage().setName(rows.get(1));
+                    break;
+                }
                 default:
                     break;
             }
@@ -108,6 +112,10 @@ public class PublicLinkSteps {
                 }
                 case "expiration": {
                     assertTrue(world.getPublicLinkPage().isExpirationCorrect(rows.get(1)));
+                    break;
+                }
+                case "name": {
+                    assertTrue(world.getPublicLinkPage().isNameCorrect(rows.get(1)));
                     break;
                 }
                 default:

@@ -44,6 +44,7 @@ public class SpacesSteps {
         String stepName = new Object(){}.getClass().getEnclosingMethod().getName().toUpperCase();
         Log.log(Level.FINE, "----STEP----: " + stepName);
         world.getFileListPage().openSpacesList();
+        Thread.sleep(5000);
     }
 
     @When("following space is disabled in server")
