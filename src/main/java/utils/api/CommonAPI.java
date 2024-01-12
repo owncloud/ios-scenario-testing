@@ -22,8 +22,8 @@ public class CommonAPI {
     protected String userAgent = LocProperties.getProperties().getProperty("userAgent");
     protected String host = urlServer.split("//")[1];
 
-    protected String user = LocProperties.getProperties().getProperty("userName1");
-    protected String password = LocProperties.getProperties().getProperty("passw1");
+    protected String user = LocProperties.getProperties().getProperty("userNameDefault");
+    protected String password = LocProperties.getProperties().getProperty("pwdDefault");
     protected String credentialsB64 = Base64.getEncoder().encodeToString((user+":"+password).getBytes());
 
     protected final String webdavEndpoint = "/remote.php/dav/files";
@@ -81,38 +81,24 @@ public class CommonAPI {
         return davEndpoint;
     }
 
-    public String getSpace() {
-        return space;
+    public String getSharedEndpoint() throws IOException {
+        Log.log(Level.FINE, "Starts: Get Shared Space Endpoint");
+        String sharesSpaceId = getSharesDrives(urlServer);
+        String endpoint = spacesEndpoint + sharesSpaceId;
+        Log.log(Level.FINE, "Endpoint: " + endpoint);
+        return endpoint;
     }
 
-    public void setSpace(String space) {
-        this.space = space;
-    }
-
-    protected Request davRequest(String url, String method, RequestBody body) {
-        Log.log(Level.FINE, "Starts: DAV Request");
+    protected Request davRequest(String url, String method, RequestBody body, String userName) {
+        Log.log(Level.FINE, "Starts: DAV Request against account: " + userName);
         Request request = new Request.Builder()
                 .url(url)
                 .addHeader("OCS-APIREQUEST", "true")
                 .addHeader("User-Agent", userAgent)
-                .addHeader("Authorization", "Basic "+ credentialsB64)
+                .addHeader("Authorization", "Basic " + credentialsBuilder(userName))
                 .addHeader("Host", host)
                 .method(method, body)
                 .build();
-        return request;
-    }
-
-    protected Request postRequest(String url, RequestBody body) {
-        Log.log(Level.FINE, "Starts: POST Request without username");
-        Request request = new Request.Builder()
-                .url(url)
-                .addHeader("OCS-APIREQUEST", "true")
-                .addHeader("User-Agent", userAgent)
-                .addHeader("Authorization", "Basic "+ credentialsB64)
-                .addHeader("Host", host)
-                .post(body)
-                .build();
-        Log.log(Level.FINE, "RE: " + request.toString());
         return request;
     }
 
@@ -122,8 +108,7 @@ public class CommonAPI {
                 .url(url)
                 .addHeader("OCS-APIREQUEST", "true")
                 .addHeader("User-Agent", userAgent)
-                .addHeader("Authorization", "Basic " +
-                        Base64.getEncoder().encodeToString((userName.toLowerCase()+":"+password).getBytes()))
+                .addHeader("Authorization", "Basic " + credentialsBuilder(userName))
                 .addHeader("Host", host)
                 .post(body)
                 .build();
@@ -144,7 +129,7 @@ public class CommonAPI {
         return request;
     }
 
-    protected Request getRequest(String url) {
+    /*protected Request getRequest(String url) {
         Log.log(Level.FINE, "Starts: GET Request without username: " + url);
         Request request = new Request.Builder()
                 .url(url)
@@ -155,18 +140,17 @@ public class CommonAPI {
                 .get()
                 .build();
         return request;
-    }
+    }*/
 
     //overloaded, to use with specific credentials
     protected Request getRequest(String url, String userName) {
         Log.log(Level.FINE, "Starts: GET Request with username " + userName + ": " + url );
-        String password = LocProperties.getProperties().getProperty("passw1");
+        String password = LocProperties.getProperties().getProperty("pwdDefault");
         Request request = new Request.Builder()
                 .url(url)
                 .addHeader("OCS-APIREQUEST", "true")
                 .addHeader("User-Agent", userAgent)
-                .addHeader("Authorization", "Basic " +
-                        Base64.getEncoder().encodeToString((userName+":"+password).getBytes()))
+                .addHeader("Authorization", "Basic " + credentialsBuilder(userName))
                 .addHeader("Host", host)
                 .get()
                 .build();
@@ -176,12 +160,28 @@ public class CommonAPI {
     private String getPersonalDrives(String url)
             throws IOException {
         Log.log(Level.FINE, "Starts: GET personal drives: " + url );
-        Request request = getRequest(url + graphDrivesEndpoint);
+        Request request = getRequest(url + graphDrivesEndpoint, user);
         Response response = httpClient.newCall(request).execute();
         String body = response.body().string();
         response.close();
         String personalId = DrivesJSONHandler.getPersonalDriveId(body);
         Log.log(Level.FINE, "Personal Drive ID: " + personalId);
         return personalId;
+    }
+
+    private String getSharesDrives(String url)
+            throws IOException {
+        Log.log(Level.FINE, "Starts: GET personal drives: " + url );
+        Request request = getRequest(url + graphDrivesEndpoint, user);
+        Response response = httpClient.newCall(request).execute();
+        String body = response.body().string();
+        response.close();
+        String sharesId = DrivesJSONHandler.getSharesDriveId(body);
+        Log.log(Level.FINE, "Shares Drive ID: " + sharesId);
+        return sharesId;
+    }
+
+    private String credentialsBuilder (String userName) {
+        return Base64.getEncoder().encodeToString((userName.toLowerCase()+":"+password).getBytes());
     }
 }

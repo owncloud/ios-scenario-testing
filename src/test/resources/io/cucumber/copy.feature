@@ -10,7 +10,7 @@ Feature: Copy item
 
     @smoke
     Scenario Outline: Copy an existent folder to another location using the Actions menu
-      Given the following items have been created in the account
+      Given the following items have been created in Alice account
         | <type> | <item>   |
         | folder | <target> |
       When Alice selects to copy the <type> <item> using the <menu> menu
@@ -24,7 +24,7 @@ Feature: Copy item
         | file   | copy2.txt | copy2target | Contextual |
 
     Scenario Outline: Copy an existent item to a new created folder in the picker
-      Given the following items have been created in the account
+      Given the following items have been created in Alice account
         | <type> | <item> |
       When Alice selects to copy the <type> <item> using the <menu> menu
       And Alice creates new folder <target> in the folder picker to copy inside
@@ -35,7 +35,7 @@ Feature: Copy item
         | file | copy3.txt | copy3target | Actions |
 
     Scenario: Copy a folder to another place with same item name
-      Given the following items have been created in the account
+      Given the following items have been created in Alice account
         | folder | copy4             |
         | folder | copy4target       |
         | folder | copy4target/copy4 |
@@ -46,7 +46,7 @@ Feature: Copy item
 
     @nooc10
     Scenario Outline: Copy an existent item to same location is not allowed
-      Given the following items have been created in the account
+      Given the following items have been created in Alice account
         | <type> | <item> |
       When Alice selects to copy the <type> <item> using the <menu> menu
       And Alice selects <target> as target folder of the copy operation

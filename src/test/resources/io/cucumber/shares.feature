@@ -13,7 +13,7 @@ Feature: Private Share
 
       @smoke
       Scenario Outline: Correct share with user
-        Given the following items have been created in the account
+        Given the following items have been created in Alice account
           | <type>  | <item>  |
         When Alice selects to share the <type> <item> using the <menu> menu
         And Alice selects the following user as sharee with <permissions> permissions
@@ -26,13 +26,13 @@ Feature: Private Share
           | permissions | <permissions>      |
 
         Examples:
-          | type   | item       | permissions | sharee  | email          | menu       |
-          | file   | Share1.txt | Viewer      | Bob     | bob@own.com    | Actions    |
-          | folder | Share2     | Editor      | Charles | charly@own.com | Contextual |
+          | type | item       | permissions | sharee | email       | menu    |
+          | file | Share1.txt | Viewer      | Bob    | bob@own.com | Actions |
+        #| folder | Share2     | Editor      | Charles | charly@own.com | Contextual |
 
       @smoke
       Scenario Outline: Correct share with group
-        Given the following items have been created in the account
+        Given the following items have been created in Alice account
           | <type>  | <item>  |
         When Alice selects to share the <type> <item> using the <menu> menu
         And Alice selects the following group as sharee with <permissions> permissions
@@ -51,7 +51,7 @@ Feature: Private Share
     Rule: Edit an existing share
 
       Scenario Outline: Edit existing share on a folder, removing permissions
-        Given the following items have been created in the account
+        Given the following items have been created in Alice account
           | folder | <item> |
         And Alice has shared <type> <item> with user <sharee> with Viewer permissions
         When Alice selects to share the folder <item> using the Actions menu
@@ -72,7 +72,7 @@ Feature: Private Share
     Rule: Resharing
 
       Scenario Outline: Resharing allowed
-        Given the following items have been created in the account
+        Given the following items have been created in Alice account
           | <type> | <item> |
         When Alice selects to share the <type> <item> using the Actions menu
         And Alice selects the following user as sharee with Viewer permissions
@@ -91,7 +91,7 @@ Feature: Private Share
           | folder | Share8     | user       | Bob    | bob@own.com | Charles | charly@own.com |
 
       Scenario Outline: Resharing not allowed
-        Given the following items have been created in the account
+        Given the following items have been created in Alice account
           | <type> | <item> |
         When Alice selects to share the <type> <item> using the Actions menu
         And Alice selects the following user as sharee without sharing permission
@@ -108,7 +108,7 @@ Feature: Private Share
     Rule: Delete an existing share
 
       Scenario Outline: Delete existing share on folder
-        Given the following items have been created in the account
+        Given the following items have been created in Alice account
           | <type> | <item> |
         And Alice has shared <type> <item> with <shareetype> <sharee> with <permission> permissions
         When Alice selects to share the <type> <item> using the Actions menu

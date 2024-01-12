@@ -19,7 +19,7 @@ Feature: Create a new folder
           | FolderTest |
 
     Scenario Outline: Create a new folder with an incorrect name
-      And the following items have been created in the account
+      And the following items have been created in Alice account
         | folder | <newName> |
       When Alice selects the option Create Folder
       And Alice sets <newName> as new name

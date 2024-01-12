@@ -12,7 +12,7 @@ Feature: Spaces
 
       @smoke
       Scenario: Create a new space with correct name and subtitle
-        Given the following spaces have been created in the account
+        Given the following spaces have been created in Alice account
           | Space1    | First space    |
           | Space2    | Second space   |
         When Alice selects the spaces view
@@ -22,10 +22,10 @@ Feature: Spaces
 
       @ignore
       Scenario: Add a new space with correct name and subtitle
-        Given the following spaces have been created in the account
+        Given the following spaces have been created in Alice account
           | Space3    | Third space     |
         And Alice selects the spaces view
-        When the following spaces have been created in the account
+        When the following spaces have been created in Alice account
           | Space4 | Fourth space |
         Then Alice should see the following spaces
           | Space3    | Third space    |
@@ -33,7 +33,7 @@ Feature: Spaces
 
       @ignore
       Scenario: Disable a space
-        Given the following spaces have been created in the account
+        Given the following spaces have been created in Alice account
           | Space5    | Fifth space     |
           | Space6    | Sixth space     |
         And Alice selects the spaces view

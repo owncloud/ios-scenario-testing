@@ -27,15 +27,15 @@ public class SpacesSteps {
         this.world = world;
     }
 
-    @Given("the following spaces have been created in the account")
-    public void spaces_have_been_created(DataTable table) throws IOException {
+    @Given("the following spaces have been created in {word} account")
+    public void spaces_have_been_created(String userName, DataTable table) throws IOException {
         String stepName = new Object(){}.getClass().getEnclosingMethod().getName().toUpperCase();
         Log.log(Level.FINE, "----STEP----: " + stepName);
         List<List<String>> listItems = table.asLists();
         for (List<String> rows : listItems) {
             String name = rows.get(0);
             String description = rows.get(1);
-            world.getGraphAPI().createSpace(name, description);
+            world.getGraphAPI().createSpace(name, description, userName);
         }
     }
 

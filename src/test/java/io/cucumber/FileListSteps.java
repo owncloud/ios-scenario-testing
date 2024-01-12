@@ -13,6 +13,7 @@ import io.cucumber.java.ParameterType;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import utils.LocProperties;
 import utils.entities.OCFile;
 import utils.log.Log;
 
@@ -23,6 +24,7 @@ public class FileListSteps {
     public FileListSteps(World world) {
         this.world = world;
     }
+    protected String user = LocProperties.getProperties().getProperty("userNameDefault");
 
     @ParameterType("item|file|folder")
     public String itemtype(String type){
@@ -39,19 +41,19 @@ public class FileListSteps {
         return type;
     }
 
-    @Given("the following items have been created in the account")
-    public void items_created_in_account(DataTable table) throws Throwable {
+    @Given("the following items have been created in {word} account")
+    public void items_created_in_account(String userName, DataTable table) throws Throwable {
         String stepName = new Object(){}.getClass().getEnclosingMethod().getName().toUpperCase();
         Log.log(Level.FINE, "----STEP----: " + stepName);
         List<List<String>> listItems = table.asLists();
         for (List<String> rows : listItems) {
             String type = rows.get(0);
-            String name = rows.get(1);
-            if (!world.getFilesAPI().itemExist(name)) {
+            String itemName = rows.get(1);
+            if (!world.getFilesAPI().itemExist(itemName, userName)) {
                 if (type.equals("folder") || type.equals("item")) {
-                    world.getFilesAPI().createFolder(name);
+                    world.getFilesAPI().createFolder(itemName, userName);
                 } else if (type.equals("file")) {
-                    world.getFilesAPI().pushFile(name);
+                    world.getFilesAPI().pushFile(itemName, userName);
                 }
             }
         }
@@ -62,11 +64,11 @@ public class FileListSteps {
             throws Throwable {
         String stepName = new Object(){}.getClass().getEnclosingMethod().getName().toUpperCase();
         Log.log(Level.FINE, "----STEP----: " + stepName);
-        if (!world.getFilesAPI().itemExist(folderName)) {
-            world.getFilesAPI().createFolder(folderName);
+        if (!world.getFilesAPI().itemExist(folderName, user)) {
+            world.getFilesAPI().createFolder(folderName, user);
         }
         for (int i=0; i<files; i++){
-            world.getFilesAPI().pushFile(folderName+"/file_"+i+".txt");
+            world.getFilesAPI().pushFile(folderName+"/file_"+i+".txt", user);
         }
     }
 
@@ -84,6 +86,22 @@ public class FileListSteps {
         String stepName = new Object(){}.getClass().getEnclosingMethod().getName().toUpperCase();
         Log.log(Level.FINE, "----STEP----: " + stepName);
         OCFile item = world.getFilesAPI().listItems(filePath).get(0);
+        String privateLink = world.getFileListPage().getPrivateLink(scheme, item.getPrivateLink());
+        world.getFileListPage().openPrivateLink(privateLink);
+    }
+
+    @When("Alice opens a private link pointing to shared {word} with scheme {word}")
+    public void open_private_link_shared(String fileName, String scheme)
+            throws Throwable {
+        String stepName = new Object(){}.getClass().getEnclosingMethod().getName().toUpperCase();
+        Log.log(Level.FINE, "----STEP----: " + stepName);
+        ArrayList<OCFile> listShared = world.getFilesAPI().listShared();
+        OCFile item = null;
+        for (OCFile ocFile: listShared){
+            if (ocFile.getName().equals(fileName)){
+                item = ocFile;
+            }
+        }
         String privateLink = world.getFileListPage().getPrivateLink(scheme, item.getPrivateLink());
         world.getFileListPage().openPrivateLink(privateLink);
     }
@@ -156,7 +174,7 @@ public class FileListSteps {
     }
 
     @When("Alice opens the Actions menu of {word}")
-    public void open_actions_menu(String itemName) throws InterruptedException{
+    public void open_actions_menu(String itemName) {
         String stepName = new Object(){}.getClass().getEnclosingMethod().getName().toUpperCase();
         Log.log(Level.FINE, "----STEP----: " + stepName);
         world.getFileListPage().selectItemListActions(itemName);
@@ -209,7 +227,7 @@ public class FileListSteps {
         String stepName = new Object(){}.getClass().getEnclosingMethod().getName().toUpperCase();
         Log.log(Level.FINE, "----STEP----: " + stepName);
         assertTrue(world.getFileListPage().isItemInList(itemName));
-        assertTrue(world.getFilesAPI().itemExist(itemName));
+        assertTrue(world.getFilesAPI().itemExist(itemName, user));
     }
 
     @Then("Alice should not see {word} in the filelist anymore")
@@ -218,7 +236,7 @@ public class FileListSteps {
         Log.log(Level.FINE, "----STEP----: " + stepName);
         world.getFileListPage().browseRoot();
         assertTrue(world.getFileListPage().isNotItemInList(itemName));
-        assertFalse(world.getFilesAPI().itemExist(itemName));
+        assertFalse(world.getFilesAPI().itemExist(itemName, user));
     }
 
     @Then("Alice should see {word} in Quick Access")
@@ -253,7 +271,7 @@ public class FileListSteps {
         String stepName = new Object(){}.getClass().getEnclosingMethod().getName().toUpperCase();
         Log.log(Level.FINE, "----STEP----: " + stepName);
         assertTrue(world.getFileListPage().isItemInList(itemName + " 2"));
-        assertTrue(world.getFilesAPI().itemExist(itemName+ " 2"));
+        assertTrue(world.getFilesAPI().itemExist(itemName+ " 2", user));
     }
 
     @Then("Alice should see {word} inside the folder {word}")
@@ -262,7 +280,7 @@ public class FileListSteps {
         Log.log(Level.FINE, "----STEP----: " + stepName);
         world.getFileListPage().browse(targetFolder);
         assertTrue(world.getFileListPage().isItemInList(itemName));
-        assertTrue(world.getFilesAPI().itemExist(targetFolder+"/"+itemName));
+        assertTrue(world.getFilesAPI().itemExist(targetFolder+"/"+itemName, user));
     }
 
     @Then("Alice should see an empty list of files")

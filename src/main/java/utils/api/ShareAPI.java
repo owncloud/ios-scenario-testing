@@ -23,7 +23,7 @@ import utils.parser.ShareSAXHandler;
 
 public class ShareAPI extends CommonAPI {
 
-    private String sharingEndpoint = "/ocs/v1.php/apps/files_sharing/api/v1/shares";
+    private String sharingEndpoint = "/ocs/v2.php/apps/files_sharing/api/v1/shares";
     private String pendingEndpoint = "/pending";
     private final String shareeU = LocProperties.getProperties().getProperty("userToShare");
     private AuthAPI authAPI = new AuthAPI();
@@ -39,7 +39,8 @@ public class ShareAPI extends CommonAPI {
                 + itemPath + " " + type);
         String url = urlServer + sharingEndpoint;
         Log.log(Level.FINE, "URL: " + url);
-        Request request = postRequest(url, createBodyShare(itemPath, sharee, type, permissions, name, password, sharelevel), sharingUser);
+        Request request = postRequest(url, createBodyShare(itemPath, sharee, type, permissions, name,
+                password, sharelevel), sharingUser);
         Response response = httpClient.newCall(request).execute();
         Log.log(Level.FINE, String.valueOf(response.code()));
         Log.log(Level.FINE, response.body().string());
@@ -51,7 +52,7 @@ public class ShareAPI extends CommonAPI {
         Log.log(Level.FINE, "Starts: Request Share from server - " + itemPath);
         String url = urlServer + sharingEndpoint + "?path=/" + itemPath;
         Log.log(Level.FINE, "URL: " + url);
-        Request request = getRequest(url);
+        Request request = getRequest(url, user);
         Response response = httpClient.newCall(request).execute();
         OCShare share = getId(response);
         response.close();
@@ -64,7 +65,7 @@ public class ShareAPI extends CommonAPI {
         String url = urlServer + sharingEndpoint + "?state=all&shared_with_me=true";
         Log.log(Level.FINE, "URL get shares by user: " + url);
         if (userName.isEmpty()){
-            userName = "alice"; //Fallback option and default user
+            userName = user; //Fallback option and default user
         }
         Request request = getRequest(url, userName.toLowerCase());
         Response response = httpClient.newCall(request).execute();
@@ -72,7 +73,24 @@ public class ShareAPI extends CommonAPI {
         Log.log(Level.FINE, "Response code: " + response.code());
         Log.log(Level.FINE, "Response body: " + responseBody);
         ArrayList<OCShare> shares = getSharesFromRequest(responseBody);
-        Log.log(Level.FINE, "Shares from user " + userName+ ": " + shares.size());
+        response.close();
+        return shares;
+    }
+
+    public ArrayList<OCShare> getLinksByUser(String userName)
+            throws IOException, SAXException, ParserConfigurationException {
+        Log.log(Level.FINE, "Starts: Request Links by user - " + userName);
+        String url = urlServer + sharingEndpoint + "?state=all";
+        Log.log(Level.FINE, "URL get Links by user: " + url);
+        if (userName.isEmpty()){
+            userName = user; //Fallback option and default user
+        }
+        Request request = getRequest(url, userName.toLowerCase());
+        Response response = httpClient.newCall(request).execute();
+        String responseBody = response.body().string();
+        Log.log(Level.FINE, "Response code: " + response.code());
+        Log.log(Level.FINE, "Response body: " + responseBody);
+        ArrayList<OCShare> shares = getSharesFromRequest(responseBody);
         response.close();
         return shares;
     }
@@ -104,32 +122,15 @@ public class ShareAPI extends CommonAPI {
         return false;
     }
 
-    public void removeShare(String id)
-            throws IOException {
-        Log.log(Level.FINE, "Starts: Remove Share from server");
-        String url = urlServer + sharingEndpoint + "/" + id;
-        Log.log(Level.FINE, "URL: " + url);
-        Request request = deleteRequest(url);
-        httpClient.newCall(request).execute();
-    }
-
-    public void acceptAllShares(String type, String userName)
+    public void removeAllShares(String userName)
             throws IOException, ParserConfigurationException, SAXException {
-        Log.log(Level.FINE, "Starts: Accept all shares from "+ type + " - " + userName);
-        String userToShare = userName;
-        if (type.equals("group")){
-            userToShare = "bob"; //Using Bob as default user inside group to test.
-        }
-        Log.log(Level.FINE, "User to share: " + userToShare);
-        ArrayList<OCShare> sharesToAccept = getSharesByUser(userToShare);
-        Log.log(Level.FINE, "Shares to accept: "+ sharesToAccept.size());
-        for (OCShare share: sharesToAccept) {
+        Log.log(Level.FINE, "Starts: Remove shares from a username: " + userName);
+        ArrayList<OCShare> allShares = getSharesByUser(userName);
+        for (OCShare share: allShares) {
             String url = urlServer + sharingEndpoint + pendingEndpoint + "/" + share.getId();
-            Log.log(Level.FINE, "URL to accept shares: " + url);
-            Request request = postRequest(url, acceptPendingShare(share.getId()), userToShare);
-            Response response = httpClient.newCall(request).execute();
-            Log.log(Level.FINE, "Response Body: " + response.body().string());
-            response.close();
+            Log.log(Level.FINE, "URL: " + url);
+            Request request = deleteRequest(url);
+            httpClient.newCall(request).execute();
         }
     }
 
@@ -150,13 +151,6 @@ public class ShareAPI extends CommonAPI {
         body.add("permissions", permissions);
         body.add("name", name);
         body.add("password", password);
-        return body.build();
-    }
-
-    private RequestBody acceptPendingShare(String shareId) {
-        Log.log(Level.FINE, "Starts: Accept pending share");
-        FormBody.Builder body = new FormBody.Builder();
-        body.add("share_id", shareId);
         return body.build();
     }
 

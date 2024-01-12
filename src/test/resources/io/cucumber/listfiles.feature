@@ -20,7 +20,7 @@ Feature: List of files is correctly retrieved from server.
 
       @smoke
       Scenario: Check items in the list of files of an created folder
-        Given the following items have been created in the account
+        Given the following items have been created in Alice account
           | folder  | Many   |
         And the folder Many contains 10 files
         Then the list of files in /Many folder should match with the server

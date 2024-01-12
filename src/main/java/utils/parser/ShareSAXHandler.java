@@ -5,8 +5,10 @@ import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler;
 
 import java.util.ArrayList;
+import java.util.logging.Level;
 
 import utils.entities.OCShare;
+import utils.log.Log;
 
 public class ShareSAXHandler extends DefaultHandler {
 
@@ -18,8 +20,8 @@ public class ShareSAXHandler extends DefaultHandler {
     @Override
     public void startElement(String uri, String localName, String node, Attributes attributes){
         switch (node) {
-            case ("data"): {
-                allShares = new ArrayList<OCShare>();
+            case ("ocs"): {
+                allShares = new ArrayList<>();
             }
             case ("element"): {
                 share = new OCShare();

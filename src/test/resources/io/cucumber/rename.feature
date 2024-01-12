@@ -9,7 +9,7 @@ Feature: Rename an item
 
     @smoke
     Scenario Outline: Rename an item
-      Given the following items have been created in the account
+      Given the following items have been created in Alice account
         | <type> | <originalName> |
       When Alice selects to rename the <type> <originalName> using the <menu> menu
       And Alice sets <newName> as new name
@@ -23,7 +23,7 @@ Feature: Rename an item
 
     #Check notifications fix
     Scenario Outline: Rename an item using the Actions menu with an existing name
-      Given the following items have been created in the account
+      Given the following items have been created in Alice account
         | <type> | <originalName> |
         | <type> | <newName>      |
       When Alice selects to rename the <type> <originalName> using the Actions menu

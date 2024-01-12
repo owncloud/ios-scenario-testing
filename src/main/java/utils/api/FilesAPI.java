@@ -38,17 +38,17 @@ public class FilesAPI extends CommonAPI {
         response.close();
     }
 
-    public void createFolder(String folderName)
+    public void createFolder(String folderName, String userName)
             throws IOException {
         Log.log(Level.FINE, "Starts: Request create folder: " + folderName);
         String url = urlServer + getEndpoint() + "/"+folderName+"/";
         Log.log(Level.FINE, "URL: " + url);
-        Request request = davRequest(url, "MKCOL", null);
+        Request request = davRequest(url, "MKCOL", null, userName);
         Response response = httpClient.newCall(request).execute();
         response.close();
     }
 
-    public void pushFile(String fileName)
+    public void pushFile(String fileName, String userName)
             throws IOException {
         Log.log(Level.FINE, "Starts: Push file: " + fileName);
         String url = urlServer + getEndpoint() + "/"+fileName+"/";
@@ -56,18 +56,18 @@ public class FilesAPI extends CommonAPI {
         Log.log(Level.FINE, "URL: " + url);
         RequestBody body = RequestBody.create(MediaType.parse("text/plain"),
                 "text Example");
-        Request request = davRequest(url, "PUT", body);
+        Request request = davRequest(url, "PUT", body, userName);
         Response response = httpClient.newCall(request).execute();
         response.close();
     }
 
-    public boolean itemExist(String itemName)
+    public boolean itemExist(String itemName, String userName)
             throws IOException {
         Log.log(Level.FINE, "Starts: Item exists: " + itemName);
         String url = urlServer + getEndpoint() + "/" + itemName;
         Log.log(Level.FINE, "URL: " + url);
         Response response;
-        Request request = davRequest(url, "PROPFIND", null);
+        Request request = davRequest(url, "PROPFIND", null, userName);
         response = httpClient.newCall(request).execute();
         response.close();
         switch (response.code()/100){
@@ -94,7 +94,7 @@ public class FilesAPI extends CommonAPI {
         String url = urlServer + getEndpoint() + user + "/" + itemName;
         Log.log(Level.FINE, "URL: " + url);
         Response response;
-        Request request = davRequest(url, "PROPFIND", null);
+        Request request = davRequest(url, "PROPFIND", null, user);
         response = httpClient.newCall(request).execute();
         boolean isFolder = getList(response).get(0).getType() == null;
         response.close();
@@ -109,7 +109,7 @@ public class FilesAPI extends CommonAPI {
         Response response;
         RequestBody body = RequestBody.create(MediaType.parse("application/xml; charset=utf-8"),
                 basicPropfindBody);
-        Request request = davRequest(url, "PROPFIND", body);
+        Request request = davRequest(url, "PROPFIND", body, user);
         response = httpClient.newCall(request).execute();
         boolean isFavorite = getList(response).get(0).getFavorite().equals("1");
         response.close();
@@ -124,7 +124,7 @@ public class FilesAPI extends CommonAPI {
         Response response;
         RequestBody body = RequestBody.create(MediaType.parse("application/xml; charset=utf-8"),
                 setFavoriteBody);
-        Request request = davRequest(url, "PROPPATCH", body);
+        Request request = davRequest(url, "PROPPATCH", body, user);
         response = httpClient.newCall(request).execute();
         response.close();
     }
@@ -137,10 +137,26 @@ public class FilesAPI extends CommonAPI {
         Log.log(Level.FINE, "URL: " + url);
         RequestBody body = RequestBody.create(MediaType.parse("application/xml; charset=utf-8"),
                 basicPropfindBody);
-        Request request = davRequest(url, "PROPFIND", body);
+        Request request = davRequest(url, "PROPFIND", body, user);
         response = httpClient.newCall(request).execute();
         ArrayList<OCFile> listItems = getList(response);
         response.close();
+        return listItems;
+    }
+
+    public ArrayList<OCFile> listShared()
+            throws IOException, SAXException, ParserConfigurationException {
+        Log.log(Level.FINE, "Starts: Request to fetch list of shared items from oCIS");
+        Response response;
+        String url = urlServer + getSharedEndpoint();
+        Log.log(Level.FINE, "URL: " + url);
+        RequestBody body = RequestBody.create(MediaType.parse("application/xml; charset=utf-8"),
+                basicPropfindBody);
+        Request request = davRequest(url, "PROPFIND", body, user);
+        response = httpClient.newCall(request).execute();
+        ArrayList<OCFile> listItems = getList(response);
+        response.close();
+        Log.log(Level.FINE, "ITEMS: " + listItems.size());
         return listItems;
     }
 

@@ -16,6 +16,7 @@ import utils.api.AuthAPI;
 import utils.api.FilesAPI;
 import utils.api.GraphAPI;
 import utils.api.ShareAPI;
+import utils.api.TrashbinAPI;
 
 public class World {
 
@@ -35,6 +36,7 @@ public class World {
     private ShareAPI shareAPI;
     private FilesAPI filesAPI;
     private GraphAPI graphAPI;
+    private TrashbinAPI trashbinAPI;
 
     public World() throws IOException {
     }
@@ -118,5 +120,12 @@ public class World {
         if (graphAPI == null)
             graphAPI = new GraphAPI();
         return graphAPI;
+    }
+
+    public TrashbinAPI getTrashbinAPI()
+            throws IOException{
+        if (trashbinAPI == null)
+            trashbinAPI = new TrashbinAPI();
+        return trashbinAPI;
     }
 }

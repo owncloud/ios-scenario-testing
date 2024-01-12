@@ -50,7 +50,6 @@ public class SharesSteps {
                 world.getSharePage().translatePermissionsToInt(permissions), "", "", sharelevel);
         //Sharee is not detected at the moment.
         Thread.sleep(2000);
-        world.getShareAPI().acceptAllShares(userType, recipientUser);
     }
 
     @When("Alice selects the following {usertype} as sharee with {word} permissions")
@@ -66,7 +65,6 @@ public class SharesSteps {
         world.getPrivateSharePage().savePermissions();
         //Sharee is not detected at the moment.
         Thread.sleep(2000);
-        world.getShareAPI().acceptAllShares(type,sharee);
     }
 
     @When("Alice selects the following {usertype} as sharee without {word} permission")
@@ -82,7 +80,6 @@ public class SharesSteps {
         world.getPrivateSharePage().invite();
         //Sharee is not detected at the moment.
         Thread.sleep(2000);
-        world.getShareAPI().acceptAllShares(type,sharee);
     }
 
     @When("Alice edits the share with the following fields")

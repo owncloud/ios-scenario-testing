@@ -3,6 +3,7 @@ package io.cucumber;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
 
@@ -133,6 +134,7 @@ public class PublicLinkSteps {
         String stepName = new Object(){}.getClass().getEnclosingMethod().getName().toUpperCase();;
         Log.log(Level.FINE, "----STEP----: " + stepName);
         assertFalse(world.getSharePage().isItemInListLinks());
-        assertTrue(world.getShareAPI().getSharesByUser("").isEmpty());
+        ArrayList<OCShare> shares = world.getShareAPI().getLinksByUser("");
+        assertTrue(shares.isEmpty());
     }
 }

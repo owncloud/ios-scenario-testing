@@ -20,7 +20,7 @@ public class LoginSteps {
         String stepName = new Object() {}.getClass().getEnclosingMethod().getName().toUpperCase();
         Log.log(Level.FINE, "----STEP----: " + stepName);
         if (!world.getLoginPage().loggedIn()) {
-            String password = LocProperties.getProperties().getProperty("passw1");
+            String password = LocProperties.getProperties().getProperty("pwdDefault");
             world.getLoginPage().addAccount();
             world.getLoginPage().typeURL();
             world.getLoginPage().typeCredentials(userName, password);

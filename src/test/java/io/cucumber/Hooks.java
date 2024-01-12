@@ -31,7 +31,7 @@ public class Hooks {
     //Before every scenario
     @Before
     public void setup(Scenario scenario){
-        Log.log(Level.FINE, "START SCENARIO EXECUTION: " + scenario.getName());
+        Log.log(Level.FINE, "======= START SCENARIO EXECUTION: " + scenario.getName() + "=======");
         AppiumManager.getManager().getDriver().activateApp(bundleId);
     }
 
@@ -39,18 +39,18 @@ public class Hooks {
     @After
     public void tearDown(Scenario scenario) throws Throwable {
         cleanUp();
-        Log.log(Level.FINE, "END SCENARIO EXECUTION: " + scenario.getName() + "\n\n");
+        Log.log(Level.FINE, "======= END SCENARIO EXECUTION: " + scenario.getName() + "========\n\n");
         AppiumManager.getManager().getDriver().terminateApp(bundleId);
     }
 
     private void cleanUp() throws Throwable {
-        FilesAPI filesAPI = new FilesAPI();
-        TrashbinAPI trashbinAPI = new TrashbinAPI();
-        ArrayList<OCFile> filesRoot = filesAPI.listItems("");
+        ArrayList<OCFile> filesRoot = world.getFilesAPI().listItems("");
+        //To remove everything shared with Alice
+        world.getShareAPI().removeAllShares("bob");
         for (OCFile iterator: filesRoot){
-            filesAPI.removeItem(iterator.getName());
+            world.getFilesAPI().removeItem(iterator.getName());
         }
-        trashbinAPI.emptyTrashbin();
+        world.getTrashbinAPI().emptyTrashbin();
         if (world.getAuthAPI().checkAuthMethod().equals("OIDC")){ //remove spaces
             world.getGraphAPI().removeSpacesOfUser();
         }

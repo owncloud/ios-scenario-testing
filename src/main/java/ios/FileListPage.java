@@ -3,7 +3,6 @@ package ios;
 import org.openqa.selenium.support.PageFactory;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.logging.Level;
 import java.util.regex.Pattern;
 
@@ -70,7 +69,6 @@ public class FileListPage extends CommonPage {
     private final String xpath_cut = "//XCUIElementTypeCell[@name=\"com.owncloud.action.cutpasteboard\"]";
     private final String xpath_paste = "//XCUIElementTypeCell[@name=\"com.owncloud.action.importpasteboard\"]";
     private final String xpath_duplicate = "//XCUIElementTypeCell[@name=\"com.owncloud.action.duplicate\"]";
-    private final String xpath_avoffline = "//XCUIElementTypeCell[@name=\"com.owncloud.action.availableOffline\"]";
     private final String xpath_copydirectory = "//XCUIElementTypeButton[@name=\"Choose destination directory…\"]";
 
     //Actions in contextual menu menu
@@ -150,21 +148,16 @@ public class FileListPage extends CommonPage {
         switch (menu) {
             case "Actions":
                 selectItemListActions(itemName);
-                selectOperationFromActions(itemName, operation, typeItem);
+                selectOperationFromActions(operation);
                 break;
             case "Contextual":
                 selectItemListContextual(itemName);
-                selectOperationFromContextual(itemName, operation, typeItem);
+                selectOperationFromContextual(operation);
                 break;
             case "Swipe":
                 selectItemListSwipe(itemName);
                 break;
         }
-    }
-
-    public void downloadAction(String itemName) {
-        Log.log(Level.FINE, "Starts: download action: " + itemName);
-        findId(itemName).click();
     }
 
     public boolean isItemInList(String itemName) {
@@ -191,11 +184,6 @@ public class FileListPage extends CommonPage {
             dontAllow.get(0).click();
         }
         return !findListId(itemName).isEmpty();
-    }
-
-    public void itemInScreen(String itemName) {
-        Log.log(Level.FINE, "Starts: Check if item is in screen: " + itemName);
-        findListId(itemName).isEmpty();
     }
 
     public void selectItemListActions(String itemName) {
@@ -250,11 +238,10 @@ public class FileListPage extends CommonPage {
         Log.log(Level.FINE, "Starts: checking if item is opened: " + itemType + " " + itemName);
         if (itemType.equals("file")) {
             Log.log(Level.FINE, "Opening file");
-            return findXpath("//XCUIElementTypeStaticText[@name=\"" + itemName + "\"]").isDisplayed();
+            return findId(itemName).isDisplayed();
         } else if (itemType.equals("folder")) {
             Log.log(Level.FINE, "Opening folder");
-            return findXpath("//XCUIElementTypeStaticText[@name=\"" + itemName + "\"]").isDisplayed();
-            //return findId("show-paths-button").isDisplayed();
+            return findId(itemName).isDisplayed();
         }
         return false;
     }
@@ -263,7 +250,7 @@ public class FileListPage extends CommonPage {
         Log.log(Level.FINE, "Browse to path: " + path);
         String completePath = Pattern.quote("/");
         String[] route = path.split(completePath);
-        Log.log(Level.FINE, "Route lenght: " + route.length);
+        Log.log(Level.FINE, "Route length: " + route.length);
         for (int j = 0 ; j < route.length ; j++) {
             Log.log(Level.FINE, "Chunk: " + j + ": " + route[j]);
         }
@@ -285,37 +272,37 @@ public class FileListPage extends CommonPage {
         swipeElementIOS(listCell, "LEFT");
     }
 
-    public void selectOperationFromActions(String itemName, String operationName, String typeItem) {
+    public void selectOperationFromActions(String operationName) {
         MobileElement operation = null;
         Log.log(Level.FINE, "Starts actions: " + operationName);
         switch (operationName){
             case "delete":
-                operation = (MobileElement) findXpath(xpath_delete);
+                operation = findXpath(xpath_delete);
                 break;
             case "rename":
-                operation = (MobileElement) findXpath(xpath_rename);
+                operation = findXpath(xpath_rename);
                 break;
             case "move":
-                operation = (MobileElement) findXpath(xpath_move);
+                operation = findXpath(xpath_move);
                 break;
             case "copy":
-                operation = (MobileElement) findXpath(xpath_copy);
+                operation = findXpath(xpath_copy);
                 break;
             case "duplicate":
-                operation = (MobileElement) findXpath(xpath_duplicate);
+                operation = findXpath(xpath_duplicate);
                 break;
             case "make available offline":
-                operation = (MobileElement) findId(id_avoffline);
+                operation = findId(id_avoffline);
                 //The file take some to download
                 break;
             case "cut":
-                operation = (MobileElement) findXpath(xpath_cut);
+                operation = findXpath(xpath_cut);
                 break;
             case "paste":
-                operation = (MobileElement) findXpath(xpath_paste);
+                operation = findXpath(xpath_paste);
                 break;
             case "share":
-                operation = (MobileElement) findId(id_sharing);
+                operation = findId(id_sharing);
                 break;
             case "favorite":
                 operation = findId(id_favorite);
@@ -337,7 +324,7 @@ public class FileListPage extends CommonPage {
         }
     }
 
-    public void selectOperationFromContextual(String itemName, String operationName, String typeItem) {
+    public void selectOperationFromContextual(String operationName) {
         MobileElement operation = null;
         Log.log(Level.FINE, "Starts contextual: " + operationName);
         switch (operationName){
@@ -435,14 +422,12 @@ public class FileListPage extends CommonPage {
     public boolean displayedList(String path, ArrayList<OCFile> listServer){
         boolean found = true;
         browseToFolder(path); //moving to the folder
-        Iterator iterator = listServer.iterator();
-        while (iterator.hasNext()){
-            OCFile ocfile = (OCFile) iterator.next();
+        for (OCFile ocfile : listServer) {
             Log.log(Level.FINE, "Checking item in list: " + ocfile.getName());
             //Server returns the username as value. Here, we skip it.
             //in oCIS, id is returned instead of name in reference.
             //Shortcut: username > 15 = id (check a best method)
-            if (ocfile.getName().equalsIgnoreCase(LocProperties.getProperties().getProperty("userName1")) ||
+            if (ocfile.getName().equalsIgnoreCase(LocProperties.getProperties().getProperty("userNameDefault")) ||
                     ocfile.getName().length() > 15) {
                 continue;
             }

@@ -21,16 +21,16 @@ public class GraphAPI extends CommonAPI {
     private final String graphPath = "/graph/v1.0/";
     private final String drives = "drives/";
     private final String myDrives = "me/drives/";
-    private final String owner = LocProperties.getProperties().getProperty("userName1");
+    private final String owner = LocProperties.getProperties().getProperty("userNameDefault");
 
     public GraphAPI() throws IOException {
     }
 
-    public void createSpace (String name, String description) throws IOException {
+    public void createSpace (String name, String description, String userName) throws IOException {
         Log.log(Level.FINE, "CREATE SPACE: " + name + " " + description);
         String url = urlServer + graphPath + drives;
         Log.log(Level.FINE, "URL: " + url);
-        Request request = postRequest(url, createBodySpace(name, description), "alice");
+        Request request = postRequest(url, createBodySpace(name, description), userName);
         Response response = httpClient.newCall(request).execute();
         Log.log(Level.FINE, "Response Code: " + response.code());
         Log.log(Level.FINE, "Response Body: " + response.body().string());
@@ -48,12 +48,11 @@ public class GraphAPI extends CommonAPI {
     private List<OCSpace> geyMySpaces() throws IOException {
         Log.log(Level.FINE, "GET my SPACES");
         String url = urlServer + graphPath + myDrives;
-        Request request = getRequest(url);
+        Request request = getRequest(url, user);
         Response response = httpClient.newCall(request).execute();
         return getSpacesFromResponse(response);
     }
 
-    //User "alice" by default
     public void removeSpacesOfUser() throws IOException {
         Log.log(Level.FINE, "REMOVE custom SPACES of: " + user);
         List<OCSpace> spacesOfUser = geyMySpaces();
@@ -94,10 +93,10 @@ public class GraphAPI extends CommonAPI {
         return request;
     }
 
-    private String getUserId (String user) throws IOException {
+    private String getUserId (String userName) throws IOException {
         Log.log(Level.FINE, "GET id OF: " + user);
         String url = urlServer + graphPath + "me";
-        Request request = getRequest(url);
+        Request request = getRequest(url, userName);
         Response response = httpClient.newCall(request).execute();
         return getIdFromResponse(response);
     }
