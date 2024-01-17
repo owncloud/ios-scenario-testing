@@ -26,9 +26,9 @@ Feature: Private Share
           | permissions | <permissions>      |
 
         Examples:
-          | type | item       | permissions | sharee | email       | menu    |
-          | file | Share1.txt | Viewer      | Bob    | bob@own.com | Actions |
-        #| folder | Share2     | Editor      | Charles | charly@own.com | Contextual |
+          | type   | item       | permissions | sharee  | email          | menu       |
+          | file   | Share1.txt | Viewer      | Bob     | bob@own.com    | Actions    |
+          | folder | Share2     | Editor      | Charles | charly@own.com | Contextual |
 
       @smoke
       Scenario Outline: Correct share with group

@@ -50,7 +50,9 @@ public class GraphAPI extends CommonAPI {
         String url = urlServer + graphPath + myDrives;
         Request request = getRequest(url, user);
         Response response = httpClient.newCall(request).execute();
-        return getSpacesFromResponse(response);
+        List<OCSpace> mySpaces = getSpacesFromResponse(response);
+        response.close();
+        return mySpaces;
     }
 
     public void removeSpacesOfUser() throws IOException {
@@ -98,7 +100,9 @@ public class GraphAPI extends CommonAPI {
         String url = urlServer + graphPath + "me";
         Request request = getRequest(url, userName);
         Response response = httpClient.newCall(request).execute();
-        return getIdFromResponse(response);
+        String userId = getIdFromResponse(response);
+        response.close();
+        return userId;
     }
 
     private String getIdFromResponse (Response httpResponse) throws IOException {
