@@ -265,13 +265,15 @@ public class FileListSteps {
         assertEquals(photosUploaded, photos);
     }
 
-    @Then("Alice should see {word} 2 in the filelist")
+    @Then("Alice should see {string} in the filelist")
     public void original_item_filelist_string(String itemName)
             throws Throwable {
         String stepName = new Object(){}.getClass().getEnclosingMethod().getName().toUpperCase();
         Log.log(Level.FINE, "----STEP----: " + stepName);
-        assertTrue(world.getFileListPage().isItemInList(itemName + " 2"));
-        assertTrue(world.getFilesAPI().itemExist(itemName+ " 2", user));
+        //assertTrue(world.getFileListPage().isItemInList(itemName + " 2"));
+        //assertTrue(world.getFilesAPI().itemExist(itemName+ " 2", user));
+        assertTrue(world.getFileListPage().isItemInList(itemName));
+        assertTrue(world.getFilesAPI().itemExist(itemName, user));
     }
 
     @Then("Alice should see {word} inside the folder {word}")
