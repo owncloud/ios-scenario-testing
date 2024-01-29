@@ -129,19 +129,6 @@ public class CommonAPI {
         return request;
     }
 
-    /*protected Request getRequest(String url) {
-        Log.log(Level.FINE, "Starts: GET Request without username: " + url);
-        Request request = new Request.Builder()
-                .url(url)
-                .addHeader("OCS-APIREQUEST", "true")
-                .addHeader("User-Agent", userAgent)
-                .addHeader("Authorization", "Basic " + credentialsB64)
-                .addHeader("Host", host)
-                .get()
-                .build();
-        return request;
-    }*/
-
     //overloaded, to use with specific credentials
     protected Request getRequest(String url, String userName) {
         Log.log(Level.FINE, "Starts: GET Request with username " + userName + ": " + url );

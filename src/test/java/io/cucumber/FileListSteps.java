@@ -248,8 +248,7 @@ public class FileListSteps {
     }
 
     @Then("{itemtype} {word} is opened in the app")
-    public void original_is_opened(String itemType, String itemName)
-            throws Throwable {
+    public void original_is_opened(String itemType, String itemName) {
         String stepName = new Object(){}.getClass().getEnclosingMethod().getName().toUpperCase();
         Log.log(Level.FINE, "----STEP----: " + stepName);
         assertTrue(world.getFileListPage().itemOpened(itemType, itemName));
