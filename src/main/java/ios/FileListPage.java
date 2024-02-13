@@ -1,12 +1,12 @@
 package ios;
 
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
 import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.regex.Pattern;
 
-import io.appium.java_client.MobileElement;
 import io.appium.java_client.TouchAction;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import io.appium.java_client.pagefactory.iOSXCUITFindBy;
@@ -18,47 +18,47 @@ import utils.log.Log;
 
 public class FileListPage extends CommonPage {
 
-    @iOSXCUITFindBy(id="client.file-add")
-    private MobileElement plusButton;
+    @iOSXCUITFindBy(id = "client.file-add")
+    private WebElement plusButton;
 
-    @iOSXCUITFindBy(xpath="//XCUIElementTypeButton[@name=\"Create folder\"]")
-    private MobileElement createFolder;
+    @iOSXCUITFindBy(xpath = "//XCUIElementTypeButton[@name=\"Create folder\"]")
+    private WebElement createFolder;
 
-    @iOSXCUITFindBy(xpath="//XCUIElementTypeButton[@name=\"Upload from your photo library\"]")
-    private MobileElement uploadFile;
+    @iOSXCUITFindBy(xpath = "//XCUIElementTypeButton[@name=\"Upload from your photo library\"]")
+    private WebElement uploadFile;
 
-    @iOSXCUITFindBy(xpath="//XCUIElementTypeTabBar[@name=\"Tab Bar\"]")
-    private MobileElement bottomBar;
+    @iOSXCUITFindBy(xpath = "//XCUIElementTypeTabBar[@name=\"Tab Bar\"]")
+    private WebElement bottomBar;
 
-    @iOSXCUITFindBy(id="share-add-group")
-    private MobileElement share;
+    @iOSXCUITFindBy(id = "share-add-group")
+    private WebElement share;
 
-    @iOSXCUITFindBy(id="Files")
-    private MobileElement browseRoot;
+    @iOSXCUITFindBy(id = "Files")
+    private WebElement browseRoot;
 
-    @iOSXCUITFindBy(id="Back")
-    private MobileElement backArrow;
+    @iOSXCUITFindBy(id = "Back")
+    private WebElement backArrow;
 
-    @iOSXCUITFindBy(id="Close actions menu")
-    private MobileElement closeActions;
+    @iOSXCUITFindBy(id = "Close actions menu")
+    private WebElement closeActions;
 
-    @iOSXCUITFindBy(id="client.folder-action")
-    private MobileElement threeDotButton;
+    @iOSXCUITFindBy(id = "client.folder-action")
+    private WebElement threeDotButton;
 
-    @iOSXCUITFindBy(id="Personal")
-    private MobileElement personal;
+    @iOSXCUITFindBy(id = "Personal")
+    private WebElement personal;
 
     @iOSXCUITFindBy(xpath = "(//XCUIElementTypeButton[@name=\"Toggle sidebar\"])[2]")
-    private MobileElement sideMenuOpener;
+    private WebElement sideMenuOpener;
 
-    @iOSXCUITFindBy(xpath="//XCUIElementTypeStaticText[@name=\"Quick Access\"]")
-    private MobileElement quickAccess;
+    @iOSXCUITFindBy(xpath = "//XCUIElementTypeStaticText[@name=\"Quick Access\"]")
+    private WebElement quickAccess;
 
-    @iOSXCUITFindBy(xpath="//XCUIElementTypeStaticText[@name=\"Spaces\"]")
-    private MobileElement spaces;
+    @iOSXCUITFindBy(xpath = "//XCUIElementTypeStaticText[@name=\"Spaces\"]")
+    private WebElement spaces;
 
-    @iOSXCUITFindBy(xpath ="//XCUIElementTypeButton[@name=\"Delete\"]")
-    private MobileElement delete;
+    @iOSXCUITFindBy(xpath = "//XCUIElementTypeButton[@name=\"Delete\"]")
+    private WebElement delete;
 
 
     //Actions in action menu
@@ -111,7 +111,7 @@ public class FileListPage extends CommonPage {
         findXpath(xpath_paste).click();
     }
 
-    public void openPlusButton(){
+    public void openPlusButton() {
         Log.log(Level.FINE, "Starts: Open plus button");
         plusButton.click();
     }
@@ -121,14 +121,14 @@ public class FileListPage extends CommonPage {
         String idPermission = "Allow Full Access";
         openPlusButton();
         uploadFile.click();
-        if (!findListId(idPermission).isEmpty()){
+        if (!findListId(idPermission).isEmpty()) {
             findId(idPermission).click();
         }
         //Wait till gallery loads. When the "Cancel" button is present
         waitById(5, "Cancel");
     }
 
-    public void openCollection(String collection){
+    public void openCollection(String collection) {
         Log.log(Level.FINE, "Starts: Open Quick Access collection: " + collection);
         String collectionXpath = "//XCUIElementTypeStaticText[@name=\"" + collection + "\"]";
         sideMenuOpener.click();
@@ -136,15 +136,15 @@ public class FileListPage extends CommonPage {
         findXpath(collectionXpath).click();
     }
 
-    public void openSpacesList(){
+    public void openSpacesList() {
         Log.log(Level.FINE, "Starts: Open Spces list");
         sideMenuOpener.click();
         spaces.click();
     }
 
-    public void executeOperation(String operation, String itemName, String typeItem, String menu){
+    public void executeOperation(String operation, String itemName, String typeItem, String menu) {
         Log.log(Level.FINE, "Starts: execute operation: " + operation + " " +
-                itemName + " "+ menu);
+                itemName + " " + menu);
         switch (menu) {
             case "Actions":
                 selectItemListActions(itemName);
@@ -162,7 +162,7 @@ public class FileListPage extends CommonPage {
 
     public boolean isItemInList(String itemName) {
         Log.log(Level.FINE, "Starts: Check if item is in list: " + itemName);
-        wait (2);
+        wait(2);
         return findId(itemName).isDisplayed();
     }
 
@@ -180,7 +180,7 @@ public class FileListPage extends CommonPage {
         Log.log(Level.FINE, "Starts: Check if item is in screen: " + itemName);
         //A system notification can rise at this point. We refuse it
         //This can be managed via capabilities but affects other test cases.
-        if (dontAllow.size() > 0){
+        if (dontAllow.size() > 0) {
             dontAllow.get(0).click();
         }
         return !findListId(itemName).isEmpty();
@@ -195,7 +195,7 @@ public class FileListPage extends CommonPage {
 
     private void selectItemListContextual(String itemName) {
         Log.log(Level.FINE, "Starts: select contextual item from list: " + itemName);
-        MobileElement listCell = findId(itemName);
+        WebElement listCell = findId(itemName);
         new TouchAction(driver).longPress(LongPressOptions.longPressOptions()
                 .withElement(ElementOption.element(listCell))).release().perform();
     }
@@ -213,7 +213,7 @@ public class FileListPage extends CommonPage {
         Log.log(Level.FINE, "Starts: Open private link: " + privateLink);
         driver.get(privateLink);
         //Let some time to load... did not found a reliable condition to avoid this ugly wait
-        wait (5);
+        wait(5);
     }
 
     public void openFakePrivateLink() {
@@ -223,10 +223,10 @@ public class FileListPage extends CommonPage {
         Log.log(Level.FINE, "Fake URL: " + fakeURL);
         driver.get(fakeURL);
         //Let some time to load... did not found a reliable condition to avoid this ugly wait
-        wait (5);
+        wait(5);
     }
 
-    private String getScheme (String originalURL){
+    private String getScheme(String originalURL) {
         return originalURL.split("://")[0];
     }
 
@@ -234,7 +234,7 @@ public class FileListPage extends CommonPage {
         return findXpath("//XCUIElementTypeStaticText[@name=\"Link resolution failed\"]").isDisplayed();
     }
 
-    public boolean itemOpened (String itemType, String itemName) {
+    public boolean itemOpened(String itemType, String itemName) {
         Log.log(Level.FINE, "Starts: checking if item is opened: " + itemType + " " + itemName);
         if (itemType.equals("file")) {
             Log.log(Level.FINE, "Opening file");
@@ -246,17 +246,17 @@ public class FileListPage extends CommonPage {
         return false;
     }
 
-    protected String browseTo(String path){
+    protected String browseTo(String path) {
         Log.log(Level.FINE, "Browse to path: " + path);
         String completePath = Pattern.quote("/");
         String[] route = path.split(completePath);
         Log.log(Level.FINE, "Route length: " + route.length);
-        for (int j = 0 ; j < route.length ; j++) {
+        for (int j = 0; j < route.length; j++) {
             Log.log(Level.FINE, "Chunk: " + j + ": " + route[j]);
         }
         if (route.length > 0) { //we have to browse
             int i;
-            for (i = 0; i < route.length - 1 ; i++) {
+            for (i = 0; i < route.length - 1; i++) {
                 Log.log(Level.FINE, "Browsing to: " + route[i]);
                 browse(route[i]);
             }
@@ -268,14 +268,14 @@ public class FileListPage extends CommonPage {
 
     private void selectItemListSwipe(String itemName) {
         Log.log(Level.FINE, "Starts: select item from list by swiping: " + itemName);
-        MobileElement listCell = findId(itemName);
+        WebElement listCell = findId(itemName);
         swipeElementIOS(listCell, "LEFT");
     }
 
     public void selectOperationFromActions(String operationName) {
-        MobileElement operation = null;
+        WebElement operation = null;
         Log.log(Level.FINE, "Starts actions: " + operationName);
-        switch (operationName){
+        switch (operationName) {
             case "delete":
                 operation = findXpath(xpath_delete);
                 break;
@@ -314,10 +314,10 @@ public class FileListPage extends CommonPage {
                 break;
         }
         operation.click();
-        if (operationName.equals("copy")){
+        if (operationName.equals("copy")) {
             Log.log(Level.FINE, "Selecting copy to directory");
             findXpath(xpath_copydirectory).click();
-        } else if (operationName.equals("make available offline")){
+        } else if (operationName.equals("make available offline")) {
             Log.log(Level.FINE, "Wait file to be downloaded");
             //Condition to be improved. Check how to verify a file is downlaoded
             wait(3);
@@ -325,9 +325,9 @@ public class FileListPage extends CommonPage {
     }
 
     public void selectOperationFromContextual(String operationName) {
-        MobileElement operation = null;
+        WebElement operation = null;
         Log.log(Level.FINE, "Starts contextual: " + operationName);
-        switch (operationName){
+        switch (operationName) {
             case "delete":
                 operation = findId(id_delete);
                 break;
@@ -362,33 +362,33 @@ public class FileListPage extends CommonPage {
                 break;
         }
         operation.click();
-        if (operationName.equals("copy")){
+        if (operationName.equals("copy")) {
             Log.log(Level.FINE, "Selecting copy to directory");
             findXpath(xpath_copydirectory).click();
-        } else if (operationName.equals("make available offline")){
+        } else if (operationName.equals("make available offline")) {
             Log.log(Level.FINE, "Wait file to be downloaded");
             //Condition to be improved. Check how to verify a file is downlaoded
             wait(3);
         }
     }
 
-    public void closeActions(){
+    public void closeActions() {
         Log.log(Level.FINE, "Starts: Close Actions Menu");
         closeActions.click();
     }
 
-    public void browseRoot(){
+    public void browseRoot() {
         Log.log(Level.FINE, "Starts: browse to root");
         //assuming 1st level... to improve
         backArrow.click();
     }
 
-    public void acceptDeletion(){
+    public void acceptDeletion() {
         Log.log(Level.FINE, "Starts: accept deletion");
         delete.click();
     }
 
-    public void openCard(String itemName){
+    public void openCard(String itemName) {
         Log.log(Level.FINE, "Starts: openCard for " + itemName);
         findId("More").click();
     }
@@ -414,12 +414,12 @@ public class FileListPage extends CommonPage {
         return !findListId(id_avoffline).isEmpty();
     }
 
-    public boolean itemIsFavorite(String itemName){
+    public boolean itemIsFavorite(String itemName) {
         selectItemListActions(itemName);
         return !findListId(id_unfavorite).isEmpty();
     }
 
-    public boolean displayedList(String path, ArrayList<OCFile> listServer){
+    public boolean displayedList(String path, ArrayList<OCFile> listServer) {
         boolean found = true;
         browseToFolder(path); //moving to the folder
         for (OCFile ocfile : listServer) {

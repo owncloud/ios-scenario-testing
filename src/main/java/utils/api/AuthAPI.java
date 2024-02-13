@@ -46,7 +46,7 @@ public class AuthAPI {
         Headers headers = response.headers();
         response.close();
         List<String> allHeaders = headers.values("Www-Authenticate");
-        for (String header : allHeaders){
+        for (String header : allHeaders) {
             Log.log(Level.FINE, "Header to check: " + header);
             if (header.contains("Bearer")) {
                 if (isOidc(urlServer)) {

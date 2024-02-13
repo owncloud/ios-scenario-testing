@@ -26,7 +26,7 @@ public class GraphAPI extends CommonAPI {
     public GraphAPI() throws IOException {
     }
 
-    public void createSpace (String name, String description, String userName) throws IOException {
+    public void createSpace(String name, String description, String userName) throws IOException {
         Log.log(Level.FINE, "CREATE SPACE: " + name + " " + description);
         String url = urlServer + graphPath + drives;
         Log.log(Level.FINE, "URL: " + url);
@@ -39,7 +39,7 @@ public class GraphAPI extends CommonAPI {
 
     private RequestBody createBodySpace(String name, String description) {
         Log.log(Level.FINE, "BODY SPACE: Name: " + name + " . Description: " + description);
-        String json = "{\"Name\":\" " + name +" \",\"driveType\":\"project\", \"description\":\" " + description +" \"}";
+        String json = "{\"Name\":\" " + name + " \",\"driveType\":\"project\", \"description\":\" " + description + " \"}";
         MediaType JSON = MediaType.parse("application/json; charset=utf-8");
         RequestBody body = RequestBody.create(JSON, json);
         return body;
@@ -58,7 +58,7 @@ public class GraphAPI extends CommonAPI {
     public void removeSpacesOfUser() throws IOException {
         Log.log(Level.FINE, "REMOVE custom SPACES of: " + user);
         List<OCSpace> spacesOfUser = geyMySpaces();
-        for (OCSpace space: spacesOfUser){
+        for (OCSpace space : spacesOfUser) {
             String url = urlServer + graphPath + drives + space.getId();
             Log.log(Level.FINE, "URL remove space: " + url);
             //First, disable
@@ -70,7 +70,7 @@ public class GraphAPI extends CommonAPI {
         }
     }
 
-    public void disableSpace (String name, String description) throws IOException {
+    public void disableSpace(String name, String description) throws IOException {
         Log.log(Level.FINE, "DISABLE SPACE: " + name + " " + description);
         String spaceId = getSpaceIdFromName(name, description);
         String url = urlServer + graphPath + drives + spaceId;
@@ -95,7 +95,7 @@ public class GraphAPI extends CommonAPI {
         return request;
     }
 
-    private String getUserId (String userName) throws IOException {
+    private String getUserId(String userName) throws IOException {
         Log.log(Level.FINE, "GET id OF: " + user);
         String url = urlServer + graphPath + "me";
         Request request = getRequest(url, userName);
@@ -105,7 +105,7 @@ public class GraphAPI extends CommonAPI {
         return userId;
     }
 
-    private String getIdFromResponse (Response httpResponse) throws IOException {
+    private String getIdFromResponse(Response httpResponse) throws IOException {
         String json = httpResponse.body().string();
         JSONObject obj = new JSONObject(json);
         String id = obj.getString("id");
@@ -115,15 +115,15 @@ public class GraphAPI extends CommonAPI {
 
     private String getSpaceIdFromName(String name, String description) throws IOException {
         List<OCSpace> mySpaces = geyMySpaces();
-        for (OCSpace space : mySpaces){
-            if (space.getName().trim().equals(name) && space.getDescription().trim().equals(description)){
+        for (OCSpace space : mySpaces) {
+            if (space.getName().trim().equals(name) && space.getDescription().trim().equals(description)) {
                 return space.getId();
             }
         }
         return null;
     }
 
-    private List<OCSpace> getSpacesFromResponse (Response httpResponse) throws IOException {
+    private List<OCSpace> getSpacesFromResponse(Response httpResponse) throws IOException {
         String json = httpResponse.body().string();
         ArrayList<OCSpace> spaces = new ArrayList<>();
         JSONObject obj = new JSONObject(json);

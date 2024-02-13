@@ -18,7 +18,7 @@ public class RunCucumberTest {
 
     // Before the whole execution
     @BeforeClass
-    public static void beforeclass(){
+    public static void beforeclass() {
         Log.init();
         Log.log(Level.FINE, "START EXECUTION\n");
         //Accepting required system permissions
@@ -27,7 +27,7 @@ public class RunCucumberTest {
 
     // After the whole execution
     @AfterClass
-    public static void afterclass(){
+    public static void afterclass() {
         //remove the oC app
         AppiumManager.getManager().getDriver().removeApp("com.owncloud.ios-app");
         AppiumManager.getManager().getDriver().quit();

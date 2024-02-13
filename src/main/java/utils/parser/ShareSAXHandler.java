@@ -5,10 +5,8 @@ import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler;
 
 import java.util.ArrayList;
-import java.util.logging.Level;
 
 import utils.entities.OCShare;
-import utils.log.Log;
 
 public class ShareSAXHandler extends DefaultHandler {
 
@@ -18,7 +16,7 @@ public class ShareSAXHandler extends DefaultHandler {
 
 
     @Override
-    public void startElement(String uri, String localName, String node, Attributes attributes){
+    public void startElement(String uri, String localName, String node, Attributes attributes) {
         switch (node) {
             case ("ocs"): {
                 allShares = new ArrayList<>();
@@ -32,35 +30,35 @@ public class ShareSAXHandler extends DefaultHandler {
     @Override
     public void endElement(String uri, String localName, String node) {
         switch (node) {
-            case ("id"):{
+            case ("id"): {
                 share.setId(text);
                 break;
             }
-            case ("uid_file_owner"):{
+            case ("uid_file_owner"): {
                 share.setOwner(text);
                 break;
             }
-            case ("share_type"):{
+            case ("share_type"): {
                 share.setType(text);
                 break;
             }
-            case ("share_with"):{
+            case ("share_with"): {
                 share.setShareeName(text);
                 break;
             }
-            case ("name"):{
+            case ("name"): {
                 share.setLinkName(text);
                 break;
             }
-            case ("path"):{
+            case ("path"): {
                 share.setItemName(text.substring(1, text.length()));
                 break;
             }
-            case ("permissions"):{
+            case ("permissions"): {
                 share.setPermissions(text);
                 break;
             }
-            case ("expiration"):{
+            case ("expiration"): {
                 share.setExpiration(text);
                 break;
             }
@@ -75,7 +73,7 @@ public class ShareSAXHandler extends DefaultHandler {
         text = String.copyValueOf(ch, start, length).trim();
     }
 
-    public OCShare getShare(){
+    public OCShare getShare() {
         return share;
     }
 

@@ -64,7 +64,7 @@ public class ShareAPI extends CommonAPI {
         Log.log(Level.FINE, "Starts: Request Shares by user - " + userName);
         String url = urlServer + sharingEndpoint + "?state=all&shared_with_me=true";
         Log.log(Level.FINE, "URL get shares by user: " + url);
-        if (userName.isEmpty()){
+        if (userName.isEmpty()) {
             userName = user; //Fallback option and default user
         }
         Request request = getRequest(url, userName.toLowerCase());
@@ -82,7 +82,7 @@ public class ShareAPI extends CommonAPI {
         Log.log(Level.FINE, "Starts: Request Links by user - " + userName);
         String url = urlServer + sharingEndpoint + "?state=all";
         Log.log(Level.FINE, "URL get Links by user: " + url);
-        if (userName.isEmpty()){
+        if (userName.isEmpty()) {
             userName = user; //Fallback option and default user
         }
         Request request = getRequest(url, userName.toLowerCase());
@@ -91,8 +91,14 @@ public class ShareAPI extends CommonAPI {
         Log.log(Level.FINE, "Response code: " + response.code());
         Log.log(Level.FINE, "Response body: " + responseBody);
         ArrayList<OCShare> shares = getSharesFromRequest(responseBody);
+        ArrayList<OCShare> linksInShares = new ArrayList<>();
+        for (OCShare linkInShares : shares) {
+            if (linkInShares.getType().equals("3")) {
+                linksInShares.add(linkInShares);
+            }
+        }
         response.close();
-        return shares;
+        return linksInShares;
     }
 
     public boolean isSharedWithMe(String itemName, String userName, boolean isGroup)
@@ -102,7 +108,7 @@ public class ShareAPI extends CommonAPI {
         Log.log(Level.FINE, "URL: " + url);
         Request request;
         //if it is a group, we use a predefined sharee inside the group (Bob)
-        if (isGroup){
+        if (isGroup) {
             request = getRequest(url, shareeU);
         } else {
             request = getRequest(url, userName);
@@ -112,9 +118,9 @@ public class ShareAPI extends CommonAPI {
         ArrayList<OCShare> myShares = getSharesFromRequest(responseString);
         Log.log(Level.FINE, myShares.size() + " shares found");
         response.close();
-        for (OCShare share: myShares) {
+        for (OCShare share : myShares) {
             Log.log(Level.FINE, "ItemName: " + itemName + " ShareName: " + share.getItemName());
-            if (share.getItemName().contains(itemName)){ //Current item found
+            if (share.getItemName().contains(itemName)) { //Current item found
                 Log.log(Level.FINE, "Sharee: " + share.getShareeName() + " userName: " + userName);
                 return share.getShareeName().equalsIgnoreCase(userName);
             }
@@ -126,7 +132,7 @@ public class ShareAPI extends CommonAPI {
             throws IOException, ParserConfigurationException, SAXException {
         Log.log(Level.FINE, "Starts: Remove shares from a username: " + userName);
         ArrayList<OCShare> allShares = getSharesByUser(userName);
-        for (OCShare share: allShares) {
+        for (OCShare share : allShares) {
             String url = urlServer + sharingEndpoint + pendingEndpoint + "/" + share.getId();
             Log.log(Level.FINE, "URL: " + url);
             Request request = deleteRequest(url);
@@ -138,7 +144,7 @@ public class ShareAPI extends CommonAPI {
                                         String permissions, String name, String password, int isReshare)
             throws IOException {
         Log.log(Level.FINE, "Starts: Create body share");
-        Log.log(Level.FINE, "BODY SHARE: path " + itemPath+ " sharee: " + sharee + " type: "
+        Log.log(Level.FINE, "BODY SHARE: path " + itemPath + " sharee: " + sharee + " type: "
                 + type + " permi: " + permissions + " name:" + name + " pwd: " + password);
         FormBody.Builder body = new FormBody.Builder();
         if (isReshare == 1 && authAPI.isOidc(urlServer)) {

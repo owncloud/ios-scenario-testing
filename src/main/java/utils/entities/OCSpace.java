@@ -8,8 +8,9 @@ public class OCSpace {
     private String description;
     private String owner;
 
-    public OCSpace(){
-    };
+    public OCSpace() {
+    }
+
 
     public String getType() {
         return type;

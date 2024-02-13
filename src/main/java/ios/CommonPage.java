@@ -7,6 +7,7 @@ import org.openqa.selenium.Dimension;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.Rectangle;
 import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -23,8 +24,7 @@ import java.util.List;
 import java.util.logging.Level;
 import java.util.regex.Pattern;
 
-import io.appium.java_client.MobileBy;
-import io.appium.java_client.MobileElement;
+import io.appium.java_client.AppiumBy;
 import io.appium.java_client.TouchAction;
 import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.ios.IOSStartScreenRecordingOptions;
@@ -38,11 +38,11 @@ import utils.log.Log;
 
 public class CommonPage {
 
-    @iOSXCUITFindBy(id="Don’t Allow")
-    protected List<MobileElement> dontAllow;
+    @iOSXCUITFindBy(id = "Don’t Allow")
+    protected List<WebElement> dontAllow;
 
-    @iOSXCUITFindBy(id="Allow")
-    protected List<MobileElement> allow;
+    @iOSXCUITFindBy(id = "Allow")
+    protected List<WebElement> allow;
 
     protected static IOSDriver driver = AppiumManager.getManager().getDriver();
     protected static Actions actions;
@@ -58,33 +58,33 @@ public class CommonPage {
             if (authType.equals("")) { //Check auth type onlyonce
                 authType = authAPI.checkAuthMethod();
             }
-        } catch (IOException e){
+        } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
-    public static void waitByXpath(int timeToWait, String resourceXpath){
-        WebDriverWait wait = new WebDriverWait(driver, timeToWait);
-        wait.until(ExpectedConditions.visibilityOfElementLocated(MobileBy.xpath(resourceXpath)));
+    public static void waitByXpath(int timeToWait, String resourceXpath) {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeToWait));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(AppiumBy.xpath(resourceXpath)));
     }
 
-    public static void waitById(int timeToWait, String resourceId){
-        WebDriverWait wait = new WebDriverWait(driver, timeToWait);
+    public static void waitById(int timeToWait, String resourceId) {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeToWait));
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.id(resourceId)));
     }
 
-    public static void waitById(int timeToWait, MobileElement mobileElement){
-        WebDriverWait wait = new WebDriverWait(driver, timeToWait);
+    public static void waitById(int timeToWait, WebElement mobileElement) {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeToWait));
         wait.until(ExpectedConditions.visibilityOf(mobileElement));
     }
 
-    public static void waitByIdInvisible(int timeToWait, String resourceId){
-        WebDriverWait wait = new WebDriverWait(driver, timeToWait);
+    public static void waitByIdInvisible(int timeToWait, String resourceId) {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeToWait));
         wait.until(ExpectedConditions.invisibilityOfElementLocated(By.id(resourceId)));
     }
 
-    public static void waitByIdInvisible(int timeToWait, MobileElement mobileElement){
-        WebDriverWait wait = new WebDriverWait(driver, timeToWait);
+    public static void waitByIdInvisible(int timeToWait, WebElement mobileElement) {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeToWait));
         wait.until(ExpectedConditions.invisibilityOf(mobileElement));
     }
 
@@ -92,57 +92,57 @@ public class CommonPage {
     // scenario. Blocking the thread is not desirable and using it is not a good solution.
     public static void wait(int seconds) {
         try {
-            Thread.sleep(seconds*1000);
+            Thread.sleep(seconds * 1000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
     }
 
-    public MobileElement findXpath(String xpath){
-        return (MobileElement) driver.findElement(MobileBy.xpath(xpath));
+    public WebElement findXpath(String xpath) {
+        return (WebElement) driver.findElement(AppiumBy.xpath(xpath));
     }
 
-    public List<MobileElement> findListXpath(String xpath){
-        return (List<MobileElement>) driver.findElements(MobileBy.xpath(xpath));
+    public List<WebElement> findListXpath(String xpath) {
+        return (List<WebElement>) driver.findElements(AppiumBy.xpath(xpath));
     }
 
-    public MobileElement findId(String id){
-        return (MobileElement) driver.findElement(MobileBy.id(id));
+    public WebElement findId(String id) {
+        return (WebElement) driver.findElement(AppiumBy.id(id));
     }
 
-    public List<MobileElement> findListId(String id){
-        return (List<MobileElement>) driver.findElements(MobileBy.id(id));
+    public List<WebElement> findListId(String id) {
+        return (List<WebElement>) driver.findElements(AppiumBy.id(id));
     }
 
-    public static void swipe (double startx, double starty, double endx, double endy) {
+    public static void swipe(double startx, double starty, double endx, double endy) {
         Dimension size = driver.manage().window().getSize();
-        int startX=(int)(size.width * startx);
-        int startY=(int)(size.height * starty);
-        int endX=(int)(size.width * endx);
-        int endY=(int)(size.height * endy);
+        int startX = (int) (size.width * startx);
+        int startY = (int) (size.height * starty);
+        int endX = (int) (size.width * endx);
+        int endY = (int) (size.height * endy);
         TouchAction touchAction = new TouchAction(driver);
         touchAction.longPress(PointOption.point(startX, startY))
                 .moveTo(PointOption.point(startX, endY)).perform().release();
     }
 
-    public void browse(String folderName){
+    public void browse(String folderName) {
         Log.log(Level.FINE, "Starts: browse to " + folderName);
         //Need a waiter till notification gones. To improve
         wait(5);
         findId(folderName).click();
     }
 
-    protected void browseToFolder(String path){
+    protected void browseToFolder(String path) {
         Log.log(Level.FINE, "Browse to folder: " + path);
         String completePath = Pattern.quote("/");
         String[] route = path.split(completePath);
         Log.log(Level.FINE, "Route lenght: " + route.length);
-        for (int j = 0 ; j < route.length ; j++) {
+        for (int j = 0; j < route.length; j++) {
             Log.log(Level.FINE, "Chunk: " + j + ": " + route[j]);
         }
         if (route.length > 0) { //browse
             int i;
-            for (i = 1 ; i < route.length ; i++) {
+            for (i = 1; i < route.length; i++) {
                 Log.log(Level.FINE, "Browsing towards: " + route[i]);
                 browse(route[i]);
             }
@@ -151,7 +151,7 @@ public class CommonPage {
 
     // This code comes from the Appium official docu
     // http://appium.io/docs/en/writing-running-appium/tutorial/swipe/simple-element/
-    public void swipeElementIOS(MobileElement el, String dir) {
+    public void swipeElementIOS(WebElement el, String dir) {
         System.out.println("swipeElementIOS(): dir: '" + dir + "'"); // always log your actions
 
         // Animation default time:
@@ -236,48 +236,37 @@ public class CommonPage {
         }
 
         // always allow swipe action to complete
-        wait(ANIMATION_TIME/1000);
+        wait(ANIMATION_TIME / 1000);
     }
 
-    public static void takeScreenshot (String name) {
+    public static void takeScreenshot(String name) {
         try {
             String sd = sdf.format(new Timestamp(System.currentTimeMillis()).getTime());
             File screenShotFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-            FileUtils.copyFile(screenShotFile, new File("screenshots/"+name+"_"+sd+".png"));
-            Log.log(Level.FINE,"Take screenshot " + name + " at: " + sd);
+            FileUtils.copyFile(screenShotFile, new File("screenshots/" + name + "_" + sd + ".png"));
+            Log.log(Level.FINE, "Take screenshot " + name + " at: " + sd);
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
-    public static void startRecording (){
+    public static void startRecording() {
         IOSStartScreenRecordingOptions iOSStartScreenRecordingOptions =
                 new IOSStartScreenRecordingOptions()
                         .withVideoQuality(VideoQuality.MEDIUM);
         driver.startRecordingScreen(iOSStartScreenRecordingOptions);
     }
 
-    public static void stopRecording (String filename){
+    public static void stopRecording(String filename) {
         String base64String = driver.stopRecordingScreen();
         byte[] data = Base64.decodeBase64(base64String);
-        String destinationPath="video/" + filename + "_" +
+        String destinationPath = "video/" + filename + "_" +
                 sdf.format(new Timestamp(System.currentTimeMillis()).getTime()) + ".mp4";
         Path path = Paths.get(destinationPath);
         try {
             Files.write(path, data);
         } catch (IOException e) {
             e.printStackTrace();
-        }
-    }
-
-    public void removeApp(){
-        driver.removeApp(packag);
-    }
-
-    public void reinstallApp(){
-        if (driver.isAppInstalled(packag)) {
-            driver.removeApp(packag);
-            driver.launchApp();
         }
     }
 }

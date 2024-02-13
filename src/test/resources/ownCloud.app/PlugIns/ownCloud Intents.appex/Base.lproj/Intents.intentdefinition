@@ -128,9 +128,9 @@
 	<key>INIntentDefinitionSystemVersion</key>
 	<string>22G91</string>
 	<key>INIntentDefinitionToolsBuildVersion</key>
-	<string>15C65</string>
+	<string>15C500b</string>
 	<key>INIntentDefinitionToolsVersion</key>
-	<string>15.1</string>
+	<string>15.2</string>
 	<key>INIntents</key>
 	<array>
 		<dict>

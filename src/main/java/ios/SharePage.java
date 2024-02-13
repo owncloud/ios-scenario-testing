@@ -1,5 +1,6 @@
 package ios;
 
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
 import java.util.HashMap;
@@ -7,7 +8,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.logging.Level;
 
-import io.appium.java_client.MobileElement;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import io.appium.java_client.pagefactory.iOSXCUITFindBy;
 import utils.date.DateUtils;
@@ -16,28 +16,28 @@ import utils.log.Log;
 
 public class SharePage extends CommonPage {
 
-    @iOSXCUITFindBy(id="Invite")
-    private MobileElement inviteButton;
+    @iOSXCUITFindBy(id = "Invite")
+    private WebElement inviteButton;
 
-    @iOSXCUITFindBy(id="Create link")
-    private MobileElement createLinkButton;
+    @iOSXCUITFindBy(id = "Create link")
+    private WebElement createLinkButton;
 
     @iOSXCUITFindBy(id = "Copy Private Link")
-    private MobileElement copyPrivateLink;
+    private WebElement copyPrivateLink;
 
-    @iOSXCUITFindBy(id="Viewer (Download, preview and share)")
-    private MobileElement viewerPermission;
+    @iOSXCUITFindBy(id = "Viewer (Download, preview and share)")
+    private WebElement viewerPermission;
 
-    @iOSXCUITFindBy(id="Editor (Upload, edit, delete, download, preview and share)")
-    private MobileElement editorPermission;
+    @iOSXCUITFindBy(id = "Editor (Upload, edit, delete, download, preview and share)")
+    private WebElement editorPermission;
 
-    @iOSXCUITFindBy(id="Custom (Set detailed permissions)")
-    private MobileElement customPermission;
+    @iOSXCUITFindBy(id = "Custom (Set detailed permissions)")
+    private WebElement customPermission;
 
-    @iOSXCUITFindBy(id="Done")
-    private MobileElement doneButton;
+    @iOSXCUITFindBy(id = "Done")
+    private WebElement doneButton;
 
-    public SharePage(){
+    public SharePage() {
         super();
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
     }
@@ -63,25 +63,25 @@ public class SharePage extends CommonPage {
         findId(sharee).click();
     }
 
-    public void createLink () {
+    public void createLink() {
         createLinkButton.click();
     }
 
-    public boolean checkCorrectShare(OCShare remoteShare, List<List<String>> dataList ){
+    public boolean checkCorrectShare(OCShare remoteShare, List<List<String>> dataList) {
         Log.log(Level.FINE, "Starts: Check correct share");
         HashMap<String, String> mapFields = turnListToHashmap(dataList);
         for (Map.Entry<String, String> entry : mapFields.entrySet()) {
             Log.log(Level.FINE, "Entry KEY: " + entry.getKey() + " - VALUE: " + entry.getValue());
-            switch (entry.getKey()){
-                case "id":{
-                    if (!remoteShare.getId().equalsIgnoreCase(entry.getValue())){
+            switch (entry.getKey()) {
+                case "id": {
+                    if (!remoteShare.getId().equalsIgnoreCase(entry.getValue())) {
                         Log.log(Level.FINE, "ID does not match - Remote: " + remoteShare.getId()
                                 + " - Expected: " + entry.getValue());
                         return false;
                     }
                     break;
                 }
-                case "user":{
+                case "user": {
                     if (remoteShare.getType().equals("0")) { // private share
                         if (!remoteShare.getShareeName().equalsIgnoreCase(entry.getValue())) {
                             Log.log(Level.FINE, "Sharee does not match - Remote: " + remoteShare.getShareeName()
@@ -91,39 +91,39 @@ public class SharePage extends CommonPage {
                     }
                     break;
                 }
-                case "password":{
+                case "password": {
                     if (!(remoteShare.getType().equals("3") && remoteShare.hasPassword())) {
                         Log.log(Level.FINE, "Password not present");
                         return false;
                     }
                     break;
                 }
-                case "name":{
-                    if (!remoteShare.getLinkName().equals(entry.getValue())){
+                case "name": {
+                    if (!remoteShare.getLinkName().equals(entry.getValue())) {
                         Log.log(Level.FINE, "Item name does not match - Remote: " + remoteShare.getLinkName()
                                 + " - Expected: " + entry.getValue());
                         return false;
                     }
                     break;
                 }
-                case "path":{
-                    if (!remoteShare.getItemName().equals(entry.getValue())){
+                case "path": {
+                    if (!remoteShare.getItemName().equals(entry.getValue())) {
                         Log.log(Level.FINE, "Item path does not match - Remote: " + remoteShare.getItemName()
                                 + " - Expected: " + entry.getValue());
                         return false;
                     }
                     break;
                 }
-                case "uid_owner":{
-                    if (!remoteShare.getOwner().equalsIgnoreCase(entry.getValue())){
+                case "uid_owner": {
+                    if (!remoteShare.getOwner().equalsIgnoreCase(entry.getValue())) {
                         Log.log(Level.FINE, "Owner name does not match - Remote: " + remoteShare.getOwner()
                                 + " - Expected: " + entry.getValue());
                         return false;
                     }
                     break;
                 }
-                case "permission":{
-                    if (!translatePermissionstoString(remoteShare.getPermissions()).equals(entry.getValue())){
+                case "permission": {
+                    if (!translatePermissionstoString(remoteShare.getPermissions()).equals(entry.getValue())) {
                         Log.log(Level.FINE, translatePermissionstoString(remoteShare.getPermissions()) + " " + entry.getValue());
                         Log.log(Level.FINE, "Permissions do not match - Remote: " + translatePermissionstoString(remoteShare.getPermissions())
                                 + " - Expected: " + entry.getValue());
@@ -131,13 +131,13 @@ public class SharePage extends CommonPage {
                     }
                     break;
                 }
-                case "expiration":{
+                case "expiration": {
                     //Get only month-day-year
                     String remoteDate = remoteShare.getExpiration().substring(0, 10);
                     String expDate = DateUtils.dateInDaysWithServerFormat(Integer.valueOf(entry.getValue()));
                     Log.log(Level.FINE, "Expiration dates: Remote: " + remoteDate
                             + " - Expected: " + expDate);
-                    if (!remoteDate.equals(expDate)){
+                    if (!remoteDate.equals(expDate)) {
                         Log.log(Level.FINE, "Expiration dates do not match");
                         return false;
                     }
@@ -158,15 +158,15 @@ public class SharePage extends CommonPage {
         return !findListId(sharee).isEmpty();
     }
 
-    public boolean displayedPermission(String permissionName){
-        switch (permissionName){
-            case "Viewer":{
+    public boolean displayedPermission(String permissionName) {
+        switch (permissionName) {
+            case "Viewer": {
                 return viewerPermission.isDisplayed();
             }
-            case "Editor":{
+            case "Editor": {
                 return editorPermission.isDisplayed();
             }
-            case "Custom":{
+            case "Custom": {
                 return customPermission.isDisplayed();
             }
             default:
@@ -203,10 +203,10 @@ public class SharePage extends CommonPage {
         return "";
     }
 
-    private HashMap<String, String> turnListToHashmap(List<List<String>> dataList){
+    private HashMap<String, String> turnListToHashmap(List<List<String>> dataList) {
         HashMap<String, String> mapFields = new HashMap<String, String>();
         for (List<String> rows : dataList) {
-            mapFields.put(rows.get(0),rows.get(1));
+            mapFields.put(rows.get(0), rows.get(1));
         }
         return mapFields;
     }

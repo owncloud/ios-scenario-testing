@@ -8,6 +8,7 @@ Feature: Private Links
   Background: User is logged in
     Given user Alice is logged in
 
+    @smoke
     Scenario Outline: Item in root folder
       Given the following items have been created in Alice account
         | folder | privlink |

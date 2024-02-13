@@ -12,7 +12,8 @@ public class OCShare {
 
     private String expiration;
 
-    public OCShare(){}
+    public OCShare() {
+    }
 
     public String getId() {
         return id;
@@ -30,7 +31,7 @@ public class OCShare {
         this.owner = owner;
     }
 
-    public String getType(){
+    public String getType() {
         return type;
     }
 

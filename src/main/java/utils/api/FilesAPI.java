@@ -30,7 +30,7 @@ public class FilesAPI extends CommonAPI {
             throws IOException {
         Log.log(Level.FINE, "Starts: Remove Item: " + itemName);
         String chunks[] = itemName.split("/");
-        String url = urlServer + getEndpoint() + "/"+chunks[0]+"/";
+        String url = urlServer + getEndpoint() + "/" + chunks[0] + "/";
         Log.log(Level.FINE, "Starts: Request remove item from server");
         Log.log(Level.FINE, "URL: " + url);
         Request request = deleteRequest(url);
@@ -41,7 +41,7 @@ public class FilesAPI extends CommonAPI {
     public void createFolder(String folderName, String userName)
             throws IOException {
         Log.log(Level.FINE, "Starts: Request create folder: " + folderName);
-        String url = urlServer + getEndpoint() + "/"+folderName+"/";
+        String url = urlServer + getEndpoint() + "/" + folderName + "/";
         Log.log(Level.FINE, "URL: " + url);
         Request request = davRequest(url, "MKCOL", null, userName);
         Response response = httpClient.newCall(request).execute();
@@ -51,7 +51,7 @@ public class FilesAPI extends CommonAPI {
     public void pushFile(String fileName, String userName)
             throws IOException {
         Log.log(Level.FINE, "Starts: Push file: " + fileName);
-        String url = urlServer + getEndpoint() + "/"+fileName+"/";
+        String url = urlServer + getEndpoint() + "/" + fileName + "/";
         Log.log(Level.FINE, "Starts: Request create file");
         Log.log(Level.FINE, "URL: " + url);
         RequestBody body = RequestBody.create(MediaType.parse("text/plain"),
@@ -70,14 +70,14 @@ public class FilesAPI extends CommonAPI {
         Request request = davRequest(url, "PROPFIND", null, userName);
         response = httpClient.newCall(request).execute();
         response.close();
-        switch (response.code()/100){
-            case(2): {
-                Log.log(Level.FINE, "Response "+response.code()+". Item exists");
+        switch (response.code() / 100) {
+            case (2): {
+                Log.log(Level.FINE, "Response " + response.code() + ". Item exists");
                 return true;
             }
-            case(4): {
-                Log.log(Level.FINE, "Response "+response.code()+" "
-                        +response.message()+". Item does not exist");
+            case (4): {
+                Log.log(Level.FINE, "Response " + response.code() + " "
+                        + response.message() + ". Item does not exist");
                 return false;
             }
             default: {

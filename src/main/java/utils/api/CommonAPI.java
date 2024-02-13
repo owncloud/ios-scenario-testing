@@ -16,7 +16,7 @@ import utils.parser.DrivesJSONHandler;
 
 public class CommonAPI {
 
-    protected OkHttpClient httpClient =  oCHttpClient.getUnsafeOkHttpClient();
+    protected OkHttpClient httpClient = oCHttpClient.getUnsafeOkHttpClient();
 
     protected String urlServer = System.getProperty("server");
     protected String userAgent = LocProperties.getProperties().getProperty("userAgent");
@@ -24,7 +24,7 @@ public class CommonAPI {
 
     protected String user = LocProperties.getProperties().getProperty("userNameDefault");
     protected String password = LocProperties.getProperties().getProperty("pwdDefault");
-    protected String credentialsB64 = Base64.getEncoder().encodeToString((user+":"+password).getBytes());
+    protected String credentialsB64 = Base64.getEncoder().encodeToString((user + ":" + password).getBytes());
 
     protected final String webdavEndpoint = "/remote.php/dav/files";
     protected final String spacesEndpoint = "/dav/spaces/";
@@ -68,16 +68,16 @@ public class CommonAPI {
             throws IOException {
         AuthAPI authAPI = new AuthAPI();
         //ftm, OIDC == oCIS. Bad.
-        if (authAPI.checkAuthMethod().equals("OIDC")){
+        if (authAPI.checkAuthMethod().equals("OIDC")) {
             space = getPersonalDrives(urlServer);
             davEndpoint = spacesEndpoint + space;
         } else {
-            davEndpoint = webdavEndpoint+"/"+user;
+            davEndpoint = webdavEndpoint + "/" + user;
         }
         Log.log(Level.FINE, "Endpoint: " + davEndpoint);
     }
 
-    public String getEndpoint(){
+    public String getEndpoint() {
         return davEndpoint;
     }
 
@@ -116,13 +116,13 @@ public class CommonAPI {
         return request;
     }
 
-    protected Request deleteRequest(String url){
+    protected Request deleteRequest(String url) {
         Log.log(Level.FINE, "Starts: DELETE Request: " + url);
         Request request = new Request.Builder()
                 .url(url)
                 .addHeader("OCS-APIREQUEST", "true")
                 .addHeader("User-Agent", userAgent)
-                .addHeader("Authorization", "Basic "+credentialsB64)
+                .addHeader("Authorization", "Basic " + credentialsB64)
                 .addHeader("Host", host)
                 .delete()
                 .build();
@@ -131,7 +131,7 @@ public class CommonAPI {
 
     //overloaded, to use with specific credentials
     protected Request getRequest(String url, String userName) {
-        Log.log(Level.FINE, "Starts: GET Request with username " + userName + ": " + url );
+        Log.log(Level.FINE, "Starts: GET Request with username " + userName + ": " + url);
         String password = LocProperties.getProperties().getProperty("pwdDefault");
         Request request = new Request.Builder()
                 .url(url)
@@ -146,8 +146,20 @@ public class CommonAPI {
 
     private String getPersonalDrives(String url)
             throws IOException {
-        Log.log(Level.FINE, "Starts: GET personal drives: " + url );
+        Log.log(Level.FINE, "Starts: GET personal drives: " + url);
         Request request = getRequest(url + graphDrivesEndpoint, user);
+        Response response = httpClient.newCall(request).execute();
+        String body = response.body().string();
+        response.close();
+        String personalId = DrivesJSONHandler.getPersonalDriveId(body);
+        Log.log(Level.FINE, "Personal Drive ID: " + personalId);
+        return personalId;
+    }
+
+    private String getPersonalDrives(String url, String userName)
+            throws IOException {
+        Log.log(Level.FINE, "Starts: GET personal drives: " + url);
+        Request request = getRequest(url + graphDrivesEndpoint, userName);
         Response response = httpClient.newCall(request).execute();
         String body = response.body().string();
         response.close();
@@ -158,7 +170,7 @@ public class CommonAPI {
 
     private String getSharesDrives(String url)
             throws IOException {
-        Log.log(Level.FINE, "Starts: GET personal drives: " + url );
+        Log.log(Level.FINE, "Starts: GET personal drives: " + url);
         Request request = getRequest(url + graphDrivesEndpoint, user);
         Response response = httpClient.newCall(request).execute();
         String body = response.body().string();
@@ -168,7 +180,7 @@ public class CommonAPI {
         return sharesId;
     }
 
-    private String credentialsBuilder (String userName) {
-        return Base64.getEncoder().encodeToString((userName.toLowerCase()+":"+password).getBytes());
+    private String credentialsBuilder(String userName) {
+        return Base64.getEncoder().encodeToString((userName.toLowerCase() + ":" + password).getBytes());
     }
 }

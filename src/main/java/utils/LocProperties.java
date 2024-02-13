@@ -16,7 +16,7 @@ public class LocProperties {
             properties = new Properties();
             FileInputStream inputStream = new FileInputStream("local.properties");
             properties.load(inputStream);
-        } catch (IOException e){
+        } catch (IOException e) {
             Log.log(Level.SEVERE, "IO Exception: " + e.getMessage());
             e.printStackTrace();
         }
@@ -24,7 +24,7 @@ public class LocProperties {
 
     public static Properties getProperties() {
         if (properties == null) {
-                new LocProperties();
+            new LocProperties();
         }
         return properties;
     }

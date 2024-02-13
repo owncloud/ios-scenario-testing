@@ -1,10 +1,10 @@
 package ios;
 
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
 import java.util.logging.Level;
 
-import io.appium.java_client.MobileElement;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import io.appium.java_client.pagefactory.iOSXCUITFindBy;
 import utils.date.DateUtils;
@@ -12,92 +12,92 @@ import utils.log.Log;
 
 public class PublicLinkPage extends CommonPage {
 
-    @iOSXCUITFindBy(id="Name")
-    private MobileElement linkName;
+    @iOSXCUITFindBy(id = "Name")
+    private WebElement linkName;
 
-    @iOSXCUITFindBy(id="Viewer")
-    private MobileElement viewer;
+    @iOSXCUITFindBy(id = "Viewer")
+    private WebElement viewer;
 
-    @iOSXCUITFindBy(id="Editor")
-    private MobileElement editor;
+    @iOSXCUITFindBy(id = "Editor")
+    private WebElement editor;
 
-    @iOSXCUITFindBy(id="Uploader")
-    private MobileElement uploader;
+    @iOSXCUITFindBy(id = "Uploader")
+    private WebElement uploader;
 
-    @iOSXCUITFindBy(id="Contributor")
-    private MobileElement contributor;
+    @iOSXCUITFindBy(id = "Contributor")
+    private WebElement contributor;
 
     @iOSXCUITFindBy(xpath = "(//XCUIElementTypeStaticText[@name=\"Add\"])[1]")
-    private MobileElement passwordButton;
+    private WebElement passwordButton;
 
     @iOSXCUITFindBy(id = "******")
-    private MobileElement passwordEnabled;
+    private WebElement passwordEnabled;
 
     @iOSXCUITFindBy(className = "XCUIElementTypeSecureTextField")
-    private MobileElement passwordField;
+    private WebElement passwordField;
 
     @iOSXCUITFindBy(id = "OK")
-    private MobileElement OKButton;
+    private WebElement OKButton;
 
     @iOSXCUITFindBy(xpath = "(//XCUIElementTypeStaticText[@name=\"Add\"])[2]")
-    private MobileElement expirationButton;
+    private WebElement expirationButton;
 
     @iOSXCUITFindBy(id = "Date Picker")
-    private MobileElement datePicker;
+    private WebElement datePicker;
 
     @iOSXCUITFindBy(id = "Month")
-    private MobileElement monthPicker;
+    private WebElement monthPicker;
 
     @iOSXCUITFindBy(xpath = "//XCUIElementTypeApplication[@name=\"ownCloud\"]/XCUIElementTypeWindow[1]" +
             "/XCUIElementTypeOther[5]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther" +
             "/XCUIElementTypeOther[2]/XCUIElementTypeDatePicker/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]" +
             "/XCUIElementTypeDatePicker/XCUIElementTypePicker/XCUIElementTypePickerWheel[1]")
-    private MobileElement monthWheel;
+    private WebElement monthWheel;
 
     @iOSXCUITFindBy(xpath = "//XCUIElementTypeButton[@name=\"Create link\"]")
-    private MobileElement createLink;
+    private WebElement createLink;
 
     @iOSXCUITFindBy(xpath = "//XCUIElementTypeButton[@name=\"Save changes\"]")
-    private MobileElement saveChanges;
+    private WebElement saveChanges;
 
     @iOSXCUITFindBy(xpath = "//XCUIElementTypeButton[@name=\"Unshare\"]")
-    private MobileElement unshareLink;
+    private WebElement unshareLink;
 
-    public PublicLinkPage(){
+    public PublicLinkPage() {
         super();
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
     }
 
-    public void setPermission (String permission) {
+    public void setPermission(String permission) {
         Log.log(Level.FINE, "Starts: Set link permission: " + permission);
-        switch (permission){
-            case("Viewer"):{
+        switch (permission) {
+            case ("Viewer"): {
                 viewer.click();
                 break;
             }
-            case("Editor"):{
+            case ("Editor"): {
                 editor.click();
                 break;
             }
-            case("Uploader"):{
+            case ("Uploader"): {
                 uploader.click();
                 break;
             }
-            case("Contributor"):{
+            case ("Contributor"): {
                 contributor.click();
                 break;
             }
         }
     }
 
-    public void setPassword (String password) {
+    public void setPassword(String password) {
         Log.log(Level.FINE, "Starts: Add link password: " + password);
         passwordButton.click();
         passwordField.sendKeys(password);
         OKButton.click();
     }
 
-    public void setName (String name) {
+    public void setName(String name) {
         Log.log(Level.FINE, "Starts: Add link name: " + name);
         linkName.sendKeys(name);
     }
@@ -107,7 +107,7 @@ public class PublicLinkPage extends CommonPage {
     }
 
     //Day to set: given day of the following month
-    public void setExpiration (String day){
+    public void setExpiration(String day) {
         Log.log(Level.FINE, "Starts: Set Expiration date: " + day);
         expirationButton.click();
         datePicker.click();
@@ -118,7 +118,7 @@ public class PublicLinkPage extends CommonPage {
         findId(day).click();
     }
 
-    public boolean isExpirationCorrect(String day){
+    public boolean isExpirationCorrect(String day) {
         Log.log(Level.FINE, "Starts: Check expiration day: " + day);
         String displayedDate = DateUtils.displayedDate(day);
         Log.log(Level.FINE, "Date to compare: " + displayedDate);
@@ -127,20 +127,20 @@ public class PublicLinkPage extends CommonPage {
         return dateInPicker.equals(displayedDate);
     }
 
-    public boolean isNameCorrect(String name){
+    public boolean isNameCorrect(String name) {
         Log.log(Level.FINE, "Starts: Check link name: " + name);
         return linkName.getAttribute("value").equals(name);
     }
 
-    public void submitLink(){
+    public void submitLink() {
         createLink.click();
     }
 
-    public void saveChanges(){
+    public void saveChanges() {
         saveChanges.click();
     }
 
-    public void deleteLink(){
+    public void deleteLink() {
         unshareLink.click();
     }
 }

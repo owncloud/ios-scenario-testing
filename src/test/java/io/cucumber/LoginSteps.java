@@ -17,7 +17,8 @@ public class LoginSteps {
     @Given("user {word} is logged in")
     public void logged(String userName)
             throws Throwable {
-        String stepName = new Object() {}.getClass().getEnclosingMethod().getName().toUpperCase();
+        String stepName = new Object() {
+        }.getClass().getEnclosingMethod().getName().toUpperCase();
         Log.log(Level.FINE, "----STEP----: " + stepName);
         if (!world.getLoginPage().loggedIn()) {
             String password = LocProperties.getProperties().getProperty("pwdDefault");

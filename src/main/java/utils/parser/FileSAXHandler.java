@@ -21,7 +21,7 @@ public class FileSAXHandler extends DefaultHandler {
     @Override
     public void startElement(String uri, String localName, String node, Attributes attributes)
             throws SAXException {
-        if (node.equals("d:response")){
+        if (node.equals("d:response")) {
             file = new OCFile();
         }
     }
@@ -73,24 +73,24 @@ public class FileSAXHandler extends DefaultHandler {
         text = String.copyValueOf(ch, start, length).trim();
     }
 
-    public ArrayList<OCFile> getListFiles(){
+    public ArrayList<OCFile> getListFiles() {
         return listFiles;
     }
 
-    public OCFile getItemByname(String itemName){
-        for (OCFile file: listFiles){
-            if (file.getName().equals(itemName)){
+    public OCFile getItemByname(String itemName) {
+        for (OCFile file : listFiles) {
+            if (file.getName().equals(itemName)) {
                 return file;
             }
         }
         return null;
     }
 
-    private String getFileNameFromPath(String path){
+    private String getFileNameFromPath(String path) {
         try {
             String[] pathSplitted = path.split("/");
             return URLDecoder.decode(pathSplitted[pathSplitted.length - 1], "UTF-8");
-        } catch (UnsupportedEncodingException e){
+        } catch (UnsupportedEncodingException e) {
             Log.log(Level.SEVERE, "Unsupported Encoding Exception: " + e.getMessage());
             e.printStackTrace();
         }

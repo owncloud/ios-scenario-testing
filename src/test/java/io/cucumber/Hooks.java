@@ -14,8 +14,6 @@ import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
 import ios.AppiumManager;
 import utils.LocProperties;
-import utils.api.FilesAPI;
-import utils.api.TrashbinAPI;
 import utils.entities.OCFile;
 import utils.log.Log;
 
@@ -47,7 +45,7 @@ public class Hooks {
         ArrayList<OCFile> filesRoot = world.getFilesAPI().listItems("");
         //To remove everything shared with Alice
         world.getShareAPI().removeAllShares("bob");
-        for (OCFile iterator: filesRoot){
+        for (OCFile iterator : filesRoot) {
             world.getFilesAPI().removeItem(iterator.getName());
         }
         world.getTrashbinAPI().emptyTrashbin();
