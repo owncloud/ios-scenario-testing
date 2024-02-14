@@ -77,26 +77,22 @@ public class ShareAPI extends CommonAPI {
         return shares;
     }
 
-    public ArrayList<OCShare> getLinksByUser(String userName)
+    public ArrayList<OCShare> getLinksByDefault()
             throws IOException, SAXException, ParserConfigurationException {
-        Log.log(Level.FINE, "Starts: Request Links by user - " + userName);
-        String url = urlServer + sharingEndpoint + "?state=all";
-        Log.log(Level.FINE, "URL get Links by user: " + url);
-        if (userName.isEmpty()) {
-            userName = user; //Fallback option and default user
-        }
-        Request request = getRequest(url, userName.toLowerCase());
+        String url = urlServer + sharingEndpoint + "?state=all&shared_with_me=true";
+        Log.log(Level.FINE, "Starts: Request Links by user - Alice");
+        Log.log(Level.FINE, "URL: " + url);
+        Request request = getRequest(url, "alice");
         Response response = httpClient.newCall(request).execute();
-        String responseBody = response.body().string();
         Log.log(Level.FINE, "Response code: " + response.code());
-        Log.log(Level.FINE, "Response body: " + responseBody);
-        ArrayList<OCShare> shares = getSharesFromRequest(responseBody);
+        ArrayList<OCShare> shares = getSharesFromRequest(response.body().string());
         ArrayList<OCShare> linksInShares = new ArrayList<>();
-        for (OCShare linkInShares : shares) {
-            if (linkInShares.getType().equals("3")) {
-                linksInShares.add(linkInShares);
+        for (OCShare linkInShare : shares) {
+            if (linkInShare.getType().equals("3")) {
+                linksInShares.add(linkInShare);
             }
         }
+        Log.log(Level.FINE, "Links from user Alice: " + linksInShares.size());
         response.close();
         return linksInShares;
     }

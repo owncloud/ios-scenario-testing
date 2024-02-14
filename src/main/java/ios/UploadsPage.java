@@ -26,7 +26,6 @@ public class UploadsPage extends CommonPage {
     public void selectPhotoGallery(int selection) {
         Log.log(Level.FINE, "Starts: Select Photo Gallery");
         List<WebElement> images = (List<WebElement>) driver.findElements(By.className("XCUIElementTypeImage"));
-        int imagesAvailable = images.size();
         int j = 0;
         for (int i = 0; i < images.size() && j < selection; i++) {
             WebElement image = images.get(i);

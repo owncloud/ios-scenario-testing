@@ -144,7 +144,7 @@ public class PublicLinkSteps {
         ;
         Log.log(Level.FINE, "----STEP----: " + stepName);
         assertFalse(world.getSharePage().isItemInListLinks());
-        ArrayList<OCShare> shares = world.getShareAPI().getLinksByUser("");
+        ArrayList<OCShare> shares = world.getShareAPI().getLinksByDefault();
         assertTrue(shares.isEmpty());
     }
 }
