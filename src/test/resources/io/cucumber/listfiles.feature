@@ -8,19 +8,19 @@ Feature: List of files is correctly retrieved from server.
   Background: User is logged in
     Given user Alice is logged in
 
-    Rule: Listing existing files
+  Rule: Listing existing files
 
-      @smoke
-      Scenario Outline: Check items in the list of files of an specific folder
-        Then the list of files in <path> folder should match with the server
+    @smoke
+    Scenario Outline: Check items in the list of files of an specific folder
+      Then the list of files in <path> folder should match with the server
 
-        Examples:
-          | path       |
-          | /          |
+      Examples:
+        | path |
+        | /    |
 
-      @smoke
-      Scenario: Check items in the list of files of an created folder
-        Given the following items have been created in Alice account
-          | folder  | Many   |
-        And the folder Many contains 10 files
-        Then the list of files in /Many folder should match with the server
+    @smoke
+    Scenario: Check items in the list of files of an created folder
+      Given the following items have been created in Alice account
+        | folder | Many |
+      And the folder Many contains 10 files
+      Then the list of files in /Many folder should match with the server

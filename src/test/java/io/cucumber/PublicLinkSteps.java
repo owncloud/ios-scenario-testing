@@ -45,6 +45,10 @@ public class PublicLinkSteps {
                     world.getPublicLinkPage().setPassword(rows.get(1));
                     break;
                 }
+                case "password-auto": {
+                    world.getPublicLinkPage().setPasswordAuto();
+                    break;
+                }
                 case "permission": {
                     world.getPublicLinkPage().setPermission(rows.get(1));
                     break;

@@ -70,7 +70,7 @@ public class LoginPage extends CommonPage {
         Log.log(Level.FINE, "Starts: Type URL.");
         urlServer.get(0).sendKeys(server);
         proceed.click();
-        if (approveButton.size() > 0) {
+        if (!approveButton.isEmpty()) {
             approveIssue();
         }
     }

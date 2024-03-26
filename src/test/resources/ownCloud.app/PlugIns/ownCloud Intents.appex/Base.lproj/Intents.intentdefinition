@@ -126,11 +126,11 @@
 	<key>INIntentDefinitionNamespace</key>
 	<string>K5U8aR</string>
 	<key>INIntentDefinitionSystemVersion</key>
-	<string>22G91</string>
+	<string>23D60</string>
 	<key>INIntentDefinitionToolsBuildVersion</key>
-	<string>15C500b</string>
+	<string>15E204a</string>
 	<key>INIntentDefinitionToolsVersion</key>
-	<string>15.2</string>
+	<string>15.3</string>
 	<key>INIntents</key>
 	<array>
 		<dict>

@@ -27,8 +27,11 @@ public class PublicLinkPage extends CommonPage {
     @iOSXCUITFindBy(id = "Contributor")
     private WebElement contributor;
 
-    @iOSXCUITFindBy(xpath = "(//XCUIElementTypeStaticText[@name=\"Add\"])[1]")
-    private WebElement passwordButton;
+    @iOSXCUITFindBy(id = "Set")
+    private WebElement setPasswordButton;
+
+    @iOSXCUITFindBy(id = "Generate")
+    private WebElement generatePassword;
 
     @iOSXCUITFindBy(id = "******")
     private WebElement passwordEnabled;
@@ -36,8 +39,8 @@ public class PublicLinkPage extends CommonPage {
     @iOSXCUITFindBy(className = "XCUIElementTypeSecureTextField")
     private WebElement passwordField;
 
-    @iOSXCUITFindBy(id = "OK")
-    private WebElement OKButton;
+    @iOSXCUITFindBy(xpath = "(//XCUIElementTypeButton[@name=\"Set\"])[2]")
+    private WebElement submitPassword;
 
     @iOSXCUITFindBy(xpath = "(//XCUIElementTypeStaticText[@name=\"Add\"])[2]")
     private WebElement expirationButton;
@@ -54,8 +57,11 @@ public class PublicLinkPage extends CommonPage {
             "/XCUIElementTypeDatePicker/XCUIElementTypePicker/XCUIElementTypePickerWheel[1]")
     private WebElement monthWheel;
 
-    @iOSXCUITFindBy(xpath = "//XCUIElementTypeButton[@name=\"Create link\"]")
+    @iOSXCUITFindBy(id = "Create")
     private WebElement createLink;
+
+    @iOSXCUITFindBy(xpath = "//XCUIElementTypeStaticText[@name=\"Create\"]")
+    private WebElement createButton;
 
     @iOSXCUITFindBy(xpath = "//XCUIElementTypeButton[@name=\"Save changes\"]")
     private WebElement saveChanges;
@@ -92,9 +98,14 @@ public class PublicLinkPage extends CommonPage {
 
     public void setPassword(String password) {
         Log.log(Level.FINE, "Starts: Add link password: " + password);
-        passwordButton.click();
+        setPasswordButton.click();
         passwordField.sendKeys(password);
-        OKButton.click();
+        setPasswordButton.click();
+    }
+
+    public void setPasswordAuto() {
+        Log.log(Level.FINE, "Starts: Add link password automatically");
+        generatePassword.click();
     }
 
     public void setName(String name) {
@@ -133,7 +144,7 @@ public class PublicLinkPage extends CommonPage {
     }
 
     public void submitLink() {
-        createLink.click();
+        createButton.click();
     }
 
     public void saveChanges() {
