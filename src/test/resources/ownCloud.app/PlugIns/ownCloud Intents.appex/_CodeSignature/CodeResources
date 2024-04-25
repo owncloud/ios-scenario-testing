@@ -66,7 +66,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		DTphCHseMwqcC902rT/FzYGHzeY=
+		gsuBrVjmkcnTw+JvB2j4pmGgHOY=
 		</data>
 		<key>PocketSVG_PocketSVG.bundle/Info.plist</key>
 		<data>
@@ -95,6 +95,10 @@
 		<key>PocketSVG_PocketSVG.bundle/_CodeSignature/CodeSignature</key>
 		<data>
 		2jmj7l5rSw0yVb/vlWAYkK/YBwk=
+		</data>
+		<key>PrivacyInfo.xcprivacy</key>
+		<data>
+		wzHz0OyfjHinRACCIltd56fSNBg=
 		</data>
 		<key>ar.lproj/Intents.strings</key>
 		<dict>
@@ -413,6 +417,13 @@
 			<key>hash2</key>
 			<data>
 			47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=
+			</data>
+		</dict>
+		<key>PrivacyInfo.xcprivacy</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			j2BqlkvLHb0pJPxsPpF5+VS6lmlHdvyzlTgzLUyg6rw=
 			</data>
 		</dict>
 		<key>ar.lproj/Intents.strings</key>

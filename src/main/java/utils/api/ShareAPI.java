@@ -132,7 +132,8 @@ public class ShareAPI extends CommonAPI {
             String url = urlServer + sharingEndpoint + pendingEndpoint + "/" + share.getId();
             Log.log(Level.FINE, "URL: " + url);
             Request request = deleteRequest(url);
-            httpClient.newCall(request).execute();
+            Response response = httpClient.newCall(request).execute();
+            response.close();
         }
     }
 

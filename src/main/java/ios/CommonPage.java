@@ -9,6 +9,8 @@ import org.openqa.selenium.Rectangle;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.interactions.PointerInput;
+import org.openqa.selenium.interactions.Sequence;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -20,6 +22,7 @@ import java.nio.file.Paths;
 import java.sql.Timestamp;
 import java.text.SimpleDateFormat;
 import java.time.Duration;
+import java.util.Arrays;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.regex.Pattern;
@@ -120,9 +123,15 @@ public class CommonPage {
         int startY = (int) (size.height * starty);
         int endX = (int) (size.width * endx);
         int endY = (int) (size.height * endy);
-        TouchAction touchAction = new TouchAction(driver);
-        touchAction.longPress(PointOption.point(startX, startY))
-                .moveTo(PointOption.point(startX, endY)).perform().release();
+        PointerInput finger = new PointerInput(PointerInput.Kind.TOUCH, "finger");
+        Sequence swipe = new Sequence(finger, 1);
+        swipe.addAction(finger.createPointerMove(Duration.ofMillis(0),
+                PointerInput.Origin.viewport(), startX, startY));
+        swipe.addAction(finger.createPointerDown(PointerInput.MouseButton.LEFT.asArg()));
+        swipe.addAction(finger.createPointerMove(Duration.ofMillis(700),
+                PointerInput.Origin.viewport(), endX, endY));
+        swipe.addAction(finger.createPointerUp(PointerInput.MouseButton.LEFT.asArg()));
+        driver.perform(Arrays.asList(swipe));
     }
 
     public void browse(String folderName) {

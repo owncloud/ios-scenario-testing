@@ -15,6 +15,7 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import java.io.File;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 import java.util.logging.Level;
 
@@ -56,7 +57,7 @@ public class AppiumManager {
             Log.log(Level.SEVERE, "Driver could not be created: " + e.getMessage());
             e.printStackTrace();
         }
-        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
     }
 
     public static AppiumManager getManager() {
@@ -70,7 +71,7 @@ public class AppiumManager {
         return driver;
     }
 
-    //Check https://appium.io/docs/en/writing-running-appium/caps/
+    //Check https://appium.io/docs/en/2.5/guides/caps/
     private static void setCapabilities(DesiredCapabilities capabilities) {
 
         capabilities.setCapability("appium:platformName", "iOS");

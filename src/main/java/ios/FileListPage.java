@@ -51,9 +51,6 @@ public class FileListPage extends CommonPage {
     @iOSXCUITFindBy(xpath = "(//XCUIElementTypeButton[@name=\"Toggle sidebar\"])[2]")
     private WebElement sideMenuOpener;
 
-    @iOSXCUITFindBy(xpath = "//XCUIElementTypeStaticText[@name=\"Quick Access\"]")
-    private WebElement quickAccess;
-
     @iOSXCUITFindBy(xpath = "//XCUIElementTypeStaticText[@name=\"Spaces\"]")
     private WebElement spaces;
 
@@ -132,7 +129,6 @@ public class FileListPage extends CommonPage {
         Log.log(Level.FINE, "Starts: Open Quick Access collection: " + collection);
         String collectionXpath = "//XCUIElementTypeStaticText[@name=\"" + collection + "\"]";
         sideMenuOpener.click();
-        quickAccess.click();
         findXpath(collectionXpath).click();
     }
 

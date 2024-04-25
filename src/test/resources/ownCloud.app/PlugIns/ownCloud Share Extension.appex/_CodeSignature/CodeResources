@@ -6,7 +6,7 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		2jdAo10vXj9DgoD2Fla6B5u3sAM=
+		OeleJLjcoHXiyH85NMmjYDZ2CwY=
 		</data>
 		<key>Down_Down.bundle/DownView (macOS).bundle/css/down.min.css</key>
 		<data>
@@ -66,7 +66,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		ryWQpiH0d1gByW5cMiksF8PCTxo=
+		rGWzeGXQANcPQuO+MCrblWJ/Rb8=
 		</data>
 		<key>PocketSVG_PocketSVG.bundle/Info.plist</key>
 		<data>
@@ -95,6 +95,10 @@
 		<key>PocketSVG_PocketSVG.bundle/_CodeSignature/CodeSignature</key>
 		<data>
 		2jmj7l5rSw0yVb/vlWAYkK/YBwk=
+		</data>
+		<key>PrivacyInfo.xcprivacy</key>
+		<data>
+		wzHz0OyfjHinRACCIltd56fSNBg=
 		</data>
 		<key>ar.lproj/InfoPlist.strings</key>
 		<dict>
@@ -145,7 +149,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			Xu6MjJR7ecdIdqWO6HnPRykjvNQ=
+			/bWLXeNgJrOv7fAhfdVMPjaFkZo=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -181,7 +185,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			YVfaAGzrbXksBYNCqL8jo2yjvdQ=
+			Xnj0WKGF6Kgoyp88HigljsLCwjU=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -427,7 +431,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			eK+XK6l018dUxobJA5fdTBD6ACJ71g+nvu10s3UcKM4=
+			VZTlRub3ZH9hTBbdROR7gle0BRIqhE6Lk/YckS86Fz8=
 			</data>
 		</dict>
 		<key>Down_Down.bundle/DownView (macOS).bundle/css/down.min.css</key>
@@ -577,6 +581,13 @@
 			47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=
 			</data>
 		</dict>
+		<key>PrivacyInfo.xcprivacy</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			j2BqlkvLHb0pJPxsPpF5+VS6lmlHdvyzlTgzLUyg6rw=
+			</data>
+		</dict>
 		<key>ar.lproj/InfoPlist.strings</key>
 		<dict>
 			<key>hash2</key>
@@ -626,7 +637,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			FjWKDF/B3mY+k3Y+PPvHZ+bHZBLo5bNwCZ7ZgxaoKCg=
+			84sFiRj/0G2D+1a6eNTubIP90hpJ/tj4fBcNnckNQE8=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -662,7 +673,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			jNs6h1z8ebCc8x6KkIpwGqXFxaPrg9I3x9NX8IYlsJE=
+			3DFNie69zFCwCHHlPGSvyJTmPeQQ7fJHy1gdoThDyFc=
 			</data>
 			<key>optional</key>
 			<true/>

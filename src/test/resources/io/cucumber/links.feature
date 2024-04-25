@@ -40,9 +40,9 @@ Feature: Public Links
       | password | <password> |
 
     Examples:
-      | type   | item       | password |
-      | folder | Links3     | aa55AA.. |
-      | file   | Links4.txt | aa55AA.. |
+      | type   | item       | password     |
+      | folder | Links3     | aa55AA..1111 |
+      | file   | Links4.txt | aa55AA..1111    |
 
   Scenario Outline: Create a public link with password generated automatically
     Given the following items have been created in Alice account
@@ -86,9 +86,9 @@ Feature: Public Links
       | permission | <permissions> |
 
     Examples:
-      | item   | permissions |
-      | Links8 | Uploader    |
-      | Links9 | Contributor |
+      | item    | permissions |
+      | Links8  | Uploader    |
+      | Links9  | Contributor |
       | Links10 | Editor      |
 
   @editlink

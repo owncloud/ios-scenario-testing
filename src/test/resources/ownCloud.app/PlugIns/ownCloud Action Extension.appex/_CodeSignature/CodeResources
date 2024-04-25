@@ -62,7 +62,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		lw4r0EruflMxHzUwOL+HsHMOFpk=
+		WTpWvtOxB7cbohCd+IggXhJ8hAM=
 		</data>
 		<key>PocketSVG_PocketSVG.bundle/Info.plist</key>
 		<data>
@@ -91,6 +91,10 @@
 		<key>PocketSVG_PocketSVG.bundle/_CodeSignature/CodeSignature</key>
 		<data>
 		2jmj7l5rSw0yVb/vlWAYkK/YBwk=
+		</data>
+		<key>PrivacyInfo.xcprivacy</key>
+		<data>
+		wzHz0OyfjHinRACCIltd56fSNBg=
 		</data>
 		<key>de.lproj/InfoPlist.strings</key>
 		<dict>
@@ -258,6 +262,13 @@
 			<key>hash2</key>
 			<data>
 			47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=
+			</data>
+		</dict>
+		<key>PrivacyInfo.xcprivacy</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			j2BqlkvLHb0pJPxsPpF5+VS6lmlHdvyzlTgzLUyg6rw=
 			</data>
 		</dict>
 		<key>de.lproj/InfoPlist.strings</key>
