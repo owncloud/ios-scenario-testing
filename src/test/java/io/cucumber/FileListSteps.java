@@ -32,7 +32,8 @@ public class FileListSteps {
         return type;
     }
 
-    @ParameterType("make available offline|move|copy|delete|duplicate|share by link|edit link|rename|share|edit share|favorite|cut|unfavorite")
+    @ParameterType("make available offline|move|copy|delete|duplicate|share by link|edit link|rename|" +
+            "share|edit share|favorite|cut|unfavorite|add to the sidebar|remove from the sidebar")
     public String operation(String operation) {
         return operation;
     }
@@ -41,6 +42,12 @@ public class FileListSteps {
     public String collection(String type) {
         return type;
     }
+
+    @ParameterType("Quick Access|filelist")
+    public String typeOfList(String type) {
+        return type;
+    }
+
 
     @Given("the following items have been created in {word} account")
     public void items_created_in_account(String userName, DataTable table) throws Throwable {
@@ -222,12 +229,28 @@ public class FileListSteps {
         world.getFileListPage().browseRoot();
     }
 
+    @When("Alice opens the sidebar")
+    public void open_sidebar() {
+        String stepName = new Object() {
+        }.getClass().getEnclosingMethod().getName().toUpperCase();
+        Log.log(Level.FINE, "----STEP----: " + stepName);
+        world.getFileListPage().openSidebar();
+    }
+
     @When("Alice opens the {collection} collection of Quick Access")
     public void open_collection_quick_access(String collection) {
         String stepName = new Object() {
         }.getClass().getEnclosingMethod().getName().toUpperCase();
         Log.log(Level.FINE, "----STEP----: " + stepName);
         world.getFileListPage().openCollection(collection);
+    }
+
+    @When("Alice opens the {itemtype} {word} in the sidebar")
+    public void open_item_in_sidebar(String itemType, String itemName) {
+        String stepName = new Object() {
+        }.getClass().getEnclosingMethod().getName().toUpperCase();
+        Log.log(Level.FINE, "----STEP----: " + stepName);
+        world.getFileListPage().openItemSidebar(itemName);
     }
 
     @When("Alice creates new folder {word} in the folder picker to {word} inside")
@@ -262,13 +285,36 @@ public class FileListSteps {
         assertFalse(world.getFilesAPI().itemExist(itemName, user));
     }
 
-    @Then("Alice should see {word} in Quick Access")
-    public void item_in_quickaccess(String itemName)
-            throws Throwable {
+    @Then("Alice should see {word} in {typeOfList}")
+    public void item_in_quickaccess(String itemName, String itemSidebar) {
         String stepName = new Object() {
         }.getClass().getEnclosingMethod().getName().toUpperCase();
         Log.log(Level.FINE, "----STEP----: " + stepName);
         assertTrue(world.getFileListPage().isItemInScreen(itemName));
+    }
+
+    @Then("Alice should not see {word} in {typeOfList}")
+    public void item_not_in_quickaccess(String itemName, String typeView) {
+        String stepName = new Object() {
+        }.getClass().getEnclosingMethod().getName().toUpperCase();
+        Log.log(Level.FINE, "----STEP----: " + stepName);
+        assertFalse(world.getFileListPage().isItemInScreen(itemName));
+    }
+
+    @Then("Alice should see {word} in sidebar")
+    public void item_in_sidebar(String itemName) {
+        String stepName = new Object() {
+        }.getClass().getEnclosingMethod().getName().toUpperCase();
+        Log.log(Level.FINE, "----STEP----: " + stepName);
+        assertTrue(world.getFileListPage().isItemInSidebar(itemName));
+    }
+
+    @Then("Alice should not see {word} in sidebar")
+    public void item_not_in_sidebar(String itemName) {
+        String stepName = new Object() {
+        }.getClass().getEnclosingMethod().getName().toUpperCase();
+        Log.log(Level.FINE, "----STEP----: " + stepName);
+        assertFalse(world.getFileListPage().isItemInSidebar(itemName));
     }
 
     @Then("{itemtype} {word} is opened in the app")
@@ -296,8 +342,6 @@ public class FileListSteps {
         String stepName = new Object() {
         }.getClass().getEnclosingMethod().getName().toUpperCase();
         Log.log(Level.FINE, "----STEP----: " + stepName);
-        //assertTrue(world.getFileListPage().isItemInList(itemName + " 2"));
-        //assertTrue(world.getFilesAPI().itemExist(itemName+ " 2", user));
         assertTrue(world.getFileListPage().isItemInList(itemName));
         assertTrue(world.getFilesAPI().itemExist(itemName, user));
     }

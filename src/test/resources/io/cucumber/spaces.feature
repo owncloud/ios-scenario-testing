@@ -15,7 +15,8 @@ Feature: Spaces
       Given the following spaces have been created in Alice account
         | Space1 | First space  |
         | Space2 | Second space |
-      When Alice selects the spaces view
+      When Alice opens the sidebar
+      And Alice selects the spaces view
       Then Alice should see the following spaces
         | Space1 | First space  |
         | Space2 | Second space |
@@ -24,6 +25,7 @@ Feature: Spaces
     Scenario: Add a new space with correct name and subtitle
       Given the following spaces have been created in Alice account
         | Space3 | Third space |
+      And Alice opens the sidebar
       And Alice selects the spaces view
       When the following spaces have been created in Alice account
         | Space4 | Fourth space |
@@ -36,6 +38,7 @@ Feature: Spaces
       Given the following spaces have been created in Alice account
         | Space5 | Fifth space |
         | Space6 | Sixth space |
+      And Alice opens the sidebar
       And Alice selects the spaces view
       When following space is disabled in server
         | Space5 | Fifth space |

@@ -80,6 +80,8 @@ public class FileListPage extends CommonPage {
     private final String id_unfavorite = "Unfavorite item";
     private final String id_sharing = "com.owncloud.action.collaborate";
     private final String id_sharing_c = "Sharing";
+    private final String id_addSidebar = "Add to sidebar";
+    private final String id_removeSidebar = "Remove from sidebar";
 
     public FileListPage() {
         super();
@@ -125,17 +127,27 @@ public class FileListPage extends CommonPage {
         waitById(5, "Cancel");
     }
 
+    public void openSidebar(){
+        Log.log(Level.FINE, "Starts: Open sidebar");
+        sideMenuOpener.click();
+    }
+
     public void openCollection(String collection) {
         Log.log(Level.FINE, "Starts: Open Quick Access collection: " + collection);
         String collectionXpath = "//XCUIElementTypeStaticText[@name=\"" + collection + "\"]";
-        sideMenuOpener.click();
         findXpath(collectionXpath).click();
     }
 
     public void openSpacesList() {
         Log.log(Level.FINE, "Starts: Open Spces list");
-        sideMenuOpener.click();
         spaces.click();
+    }
+
+    public void openItemSidebar(String itemName) {
+        Log.log(Level.FINE, "Starts: Open Item in sidebar: " + itemName);
+        String collectionXpath = "(//XCUIElementTypeStaticText[@name=\"" + itemName + "\"])[2]";
+        openSidebar();
+        findXpath(collectionXpath).click();
     }
 
     public void executeOperation(String operation, String itemName, String typeItem, String menu) {
@@ -179,7 +191,13 @@ public class FileListPage extends CommonPage {
         if (dontAllow.size() > 0) {
             dontAllow.get(0).click();
         }
-        return !findListId(itemName).isEmpty();
+        return findListId(itemName).size() > 0;
+    }
+
+    public boolean isItemInSidebar(String itemName) {
+        Log.log(Level.FINE, "Starts: Check if item is in sidebar: " + itemName);
+        Log.log(Level.FINE, "Elements: "+  findListId(itemName).size());
+        return findListXpath("//XCUIElementTypeCell[@name=\"" + itemName + "\"]").size() > 0;
     }
 
     public void selectItemListActions(String itemName) {
@@ -306,6 +324,12 @@ public class FileListPage extends CommonPage {
             case "unfavorite":
                 operation = findId(id_unfavorite);
                 break;
+            case "add to the sidebar":
+                operation = findId(id_addSidebar);
+                break;
+            case "remove from the sidebar":
+                operation = findId(id_removeSidebar);
+                break;
             default:
                 break;
         }
@@ -353,6 +377,12 @@ public class FileListPage extends CommonPage {
                 break;
             case "unfavorite":
                 operation = findId(id_unfavorite);
+                break;
+            case "add to the sidebar":
+                operation = findId(id_addSidebar);
+                break;
+            case "remove from the sidebar":
+                operation = findId(id_removeSidebar);
                 break;
             default:
                 break;
