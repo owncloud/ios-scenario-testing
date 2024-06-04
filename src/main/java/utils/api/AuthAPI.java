@@ -49,7 +49,7 @@ public class AuthAPI {
         for (String header : allHeaders) {
             Log.log(Level.FINE, "Header to check: " + header);
             if (header.contains("Bearer")) {
-                if (isOidc(urlServer)) {
+                if (isOidc()) {
                     Log.log(Level.FINE, "Auth method: OIDC");
                     return "OIDC";
                 }
@@ -61,10 +61,10 @@ public class AuthAPI {
         return "Basic";
     }
 
-    public boolean isOidc(String url)
+    public boolean isOidc()
             throws IOException {
-        Log.log(Level.FINE, "Starts: is OIDC? " + url);
-        String urlCheck = url + wellKnown;
+        Log.log(Level.FINE, "Starts: is OIDC? " + urlServer);
+        String urlCheck = urlServer + wellKnown;
         Log.log(Level.FINE, "is OIDC?: " + urlCheck);
         Request request = davRequestUnauth(urlCheck);
         Response response = httpClient.newCall(request).execute();

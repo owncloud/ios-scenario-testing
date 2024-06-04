@@ -27,7 +27,7 @@ public class FileListSteps {
 
     protected String user = LocProperties.getProperties().getProperty("userNameDefault");
 
-    @ParameterType("item|file|folder")
+    @ParameterType("item|file|folder|option")
     public String itemtype(String type) {
         return type;
     }
@@ -38,12 +38,12 @@ public class FileListSteps {
         return operation;
     }
 
-    @ParameterType("Favorites|Available Offline|Public Links|Shared with you")
+    @ParameterType("Favorites|Available Offline|Public Links|Shared with you|Shared with me")
     public String collection(String type) {
         return type;
     }
 
-    @ParameterType("Quick Access|filelist")
+    @ParameterType("Quick Access|filelist|shared with me")
     public String typeOfList(String type) {
         return type;
     }
@@ -97,7 +97,7 @@ public class FileListSteps {
         String stepName = new Object() {
         }.getClass().getEnclosingMethod().getName().toUpperCase();
         Log.log(Level.FINE, "----STEP----: " + stepName);
-        OCFile item = world.getFilesAPI().listItems(filePath).get(0);
+        OCFile item = world.getFilesAPI().listItems(filePath, "Alice").get(0);
         String privateLink = world.getFileListPage().getPrivateLink(scheme, item.getPrivateLink());
         world.getFileListPage().openPrivateLink(privateLink);
     }
@@ -245,8 +245,16 @@ public class FileListSteps {
         world.getFileListPage().openCollection(collection);
     }
 
-    @When("Alice opens the {itemtype} {word} in the sidebar")
-    public void open_item_in_sidebar(String itemType, String itemName) {
+    @When("Alice opens the {itemtype} {typeOfList} in sidebar")
+    public void open_item_in_sidebar_type(String itemType, String itemName) {
+        String stepName = new Object() {
+        }.getClass().getEnclosingMethod().getName().toUpperCase();
+        Log.log(Level.FINE, "----STEP----: " + stepName);
+        world.getFileListPage().openItemSidebar(itemName);
+    }
+
+    @When("Alice opens the {itemtype} {word} in sidebar")
+    public void open_item_in_sidebar_word(String itemType, String itemName) {
         String stepName = new Object() {
         }.getClass().getEnclosingMethod().getName().toUpperCase();
         Log.log(Level.FINE, "----STEP----: " + stepName);
@@ -290,7 +298,7 @@ public class FileListSteps {
         String stepName = new Object() {
         }.getClass().getEnclosingMethod().getName().toUpperCase();
         Log.log(Level.FINE, "----STEP----: " + stepName);
-        assertTrue(world.getFileListPage().isItemInScreen(itemName));
+        assertTrue(world.getFileListPage().isItemInList(itemName));
     }
 
     @Then("Alice should not see {word} in {typeOfList}")
@@ -331,7 +339,7 @@ public class FileListSteps {
         String stepName = new Object() {
         }.getClass().getEnclosingMethod().getName().toUpperCase();
         Log.log(Level.FINE, "----STEP----: " + stepName);
-        ArrayList<OCFile> list = world.getFilesAPI().listItems("");
+        ArrayList<OCFile> list = world.getFilesAPI().listItems("", "Alice");
         int photosUploaded = world.getUploadsPage().photoUploaded(list);
         assertEquals(photosUploaded, photos);
     }
@@ -404,7 +412,7 @@ public class FileListSteps {
         }.getClass().getEnclosingMethod().getName().toUpperCase();
         Log.log(Level.FINE, "----STEP----: " + stepName);
         world.getFileListPage().refreshBySwipe();
-        ArrayList<OCFile> listServer = world.getFilesAPI().listItems(path);
+        ArrayList<OCFile> listServer = world.getFilesAPI().listItems(path, "Alice");
         assertTrue(world.getFileListPage().displayedList(path, listServer));
     }
 

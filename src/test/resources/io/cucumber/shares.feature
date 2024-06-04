@@ -122,3 +122,15 @@ Feature: Private Share
       | type   | item    | shareetype | sharee | email       | permission |
       | folder | Share10 | user       | Bob    | bob@own.com | Viewer     |
 
+  @sharesortcut @smoke
+    Scenario Outline: Check shared file in list
+    Given the following items have been created in Bob account
+      | <type> | <item> |
+    And Bob has shared <type> <item> with user Alice with Viewer permissions
+    When Alice opens the sidebar
+    And Alice opens the option shared with me in sidebar
+    Then Alice should see <item> in shared with me
+
+    Examples:
+      | type | item        |
+      | file | Share11.txt |

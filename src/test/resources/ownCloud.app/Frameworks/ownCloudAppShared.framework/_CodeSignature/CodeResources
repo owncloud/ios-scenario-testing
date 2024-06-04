@@ -6,7 +6,7 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		Qaz7v2zLQbvYDyChnhOq4/QmlH4=
+		xs1ptriF7YSffUsvpehE/fn3Nio=
 		</data>
 		<key>Down.LICENSE</key>
 		<data>
@@ -14,7 +14,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		nUU785oZ4XRzN38oMIyMvSQhdPs=
+		8hBJgkvouUGLMuUl5hTPkXEKiwg=
 		</data>
 		<key>PasscodeViewController.nib</key>
 		<data>
@@ -58,7 +58,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			/bWLXeNgJrOv7fAhfdVMPjaFkZo=
+			DcCBRCevPUUnv1aK1yyHptgLT7Y=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -76,7 +76,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			Xnj0WKGF6Kgoyp88HigljsLCwjU=
+			Eh5VzvMnV1Ogpj7KfgA5bl1rF8M=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -256,6 +256,10 @@
 		<data>
 		jmlyrinlluezrP6psDxOs1wHzI0=
 		</data>
+		<key>text-uri-list.tvg</key>
+		<data>
+		eoORS1FinfS0s1oZdGJPIBLLDmo=
+		</data>
 		<key>text-vcard.tvg</key>
 		<data>
 		HdOwjobFxg36+jAV1n3PuG9Mvzo=
@@ -305,7 +309,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			1mdKBxOijUe1B8Uut+ZWfCRU9uA9X8xq93Ses1tRNDE=
+			/opMHWvWNC94K0sGSih+qW7Ehydpc7Fa7Jo2diJifJA=
 			</data>
 		</dict>
 		<key>Down.LICENSE</key>
@@ -372,7 +376,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			84sFiRj/0G2D+1a6eNTubIP90hpJ/tj4fBcNnckNQE8=
+			C3vZ8VdrJrqVq4M+O30VjATAcp6rgVthLrZtOzeOw+0=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -390,7 +394,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			3DFNie69zFCwCHHlPGSvyJTmPeQQ7fJHy1gdoThDyFc=
+			VKuedqP1y7aGKcwaDCMULwq2fa12mirYW/bqzLgp0C8=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -625,6 +629,13 @@
 			<key>hash2</key>
 			<data>
 			QL5UolH2T4+Cy2ePewAK3XfLOdMhXvNSLKXM2fdS64c=
+			</data>
+		</dict>
+		<key>text-uri-list.tvg</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			2gWoKwHlDYF9qL5e8MOclahBY7t6n7gpzBLBLJWCEJE=
 			</data>
 		</dict>
 		<key>text-vcard.tvg</key>

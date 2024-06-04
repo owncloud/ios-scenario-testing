@@ -42,8 +42,8 @@ public class ShareAPI extends CommonAPI {
         Request request = postRequest(url, createBodyShare(itemPath, sharee, type, permissions, name,
                 password, sharelevel), sharingUser);
         Response response = httpClient.newCall(request).execute();
-        Log.log(Level.FINE, String.valueOf(response.code()));
-        Log.log(Level.FINE, response.body().string());
+        Log.log(Level.FINE, "Response Code: " + response.code());
+        Log.log(Level.FINE, "Response Body: " + response.body().string());
         response.close();
     }
 
@@ -131,7 +131,7 @@ public class ShareAPI extends CommonAPI {
         for (OCShare share : allShares) {
             String url = urlServer + sharingEndpoint + pendingEndpoint + "/" + share.getId();
             Log.log(Level.FINE, "URL: " + url);
-            Request request = deleteRequest(url);
+            Request request = deleteRequest(url, userName);
             Response response = httpClient.newCall(request).execute();
             response.close();
         }
@@ -144,7 +144,7 @@ public class ShareAPI extends CommonAPI {
         Log.log(Level.FINE, "BODY SHARE: path " + itemPath + " sharee: " + sharee + " type: "
                 + type + " permi: " + permissions + " name:" + name + " pwd: " + password);
         FormBody.Builder body = new FormBody.Builder();
-        if (isReshare == 1 && authAPI.isOidc(urlServer)) {
+        if (isReshare == 1 && authAPI.isOidc()) {
             body.add("path", "/Shares/" + itemPath);
         } else {
             body.add("path", itemPath);

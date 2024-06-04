@@ -1,7 +1,7 @@
 defaultTasks 'clean','test'
 
 project.ext {
-    cucumberVersion = '7.11.1'
+    cucumberVersion = '7.18.0'
     apacheCommonsExecVersion = '1.3'
     apacheCommonsLangVersion = '3.9'
     apacheCommonsTextVersion = '1.9'
@@ -9,7 +9,7 @@ project.ext {
     apacheCommonsIo = '2.6'
     byteBuddyVersion = '1.10.5'
     guavaVersion = '30.1-jre'
-    javaClientVersion = '9.1.0'
+    javaClientVersion = '9.2.2'
     okhttpVersion= '3.12.13'
     okioVersion = '1.14.0'
     jsonVersion = '20200518'

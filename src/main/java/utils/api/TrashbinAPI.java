@@ -9,18 +9,27 @@ import utils.log.Log;
 
 public class TrashbinAPI extends CommonAPI {
 
-    private String trashEndpoint = "/remote.php/dav/trash-bin/";
+    private final String trashEndpointOCIS = "/remote.php/dav/spaces/trash-bin/";
+    private final String trashEndpointOC10 = "/remote.php/dav/trash-bin/";
 
     public TrashbinAPI() throws IOException {
         super();
     }
 
-    public void emptyTrashbin() throws IOException {
-        Log.log(Level.FINE, "Starts: Empty Trashbin");
-        String url = urlServer + trashEndpoint + user + "/";
+    public void emptyTrashbin(String userName) throws IOException {
+        Log.log(Level.FINE, "Starts: Empty trashbin");
+        String url = urlServer + getTrashEndpoint(userName);
         Log.log(Level.FINE, url);
-        Request request = deleteRequest(url);
+        Request request = deleteRequest(url, userName);
         Response response = httpClient.newCall(request).execute();
         response.close();
+    }
+
+    private String getTrashEndpoint(String userName) {
+        if (isOidc) {
+            return trashEndpointOCIS + personalSpaces.get(userName);
+        } else {
+            return trashEndpointOC10 + userName + "/";
+        }
     }
 }

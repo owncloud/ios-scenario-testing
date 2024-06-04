@@ -639,8 +639,27 @@
 "{{itemName}} ({{link}}) | password: {{password}}" = "{{itemName}} ({{link}}) | Passwort: {{password}}";
 "{{link}} | password: {{password}}" = "{{link}} | Passwort: {{password}}";
 
+/* .url viewer / creation */
+"Shortcut" = "Verknüpfung";
+"Open link" = "Link öffnen";
+"Opening link failed" = "Öffnen des Links fehlgeschlagen";
+"Open shortcut" = "Verknüpfung öffnen";
+"Shortcut to '{{hostname}}'" = "Verknüpfung zu '{{hostname}}'";
+"This shortcut points to:\n{{url}}" = "Diese Verknüpfung verweist auf:\n{{url}}";
+"The destination this shortcut points to could not be found. It may have been deleted or you may not have access to it." = "Das Ziel, auf das diese Verknüpfung verweist, konnte nicht gefunden werden. Möglicherweise wurde es gelöscht oder Sie haben keinen Zugriff darauf.";
+
+"The shortcut points to a URL, but the configuration of this app prohibits opening it." = "Die Verknüpfung verweist auf eine URL, aber die Konfiguration dieser App untersagt das Öffnen.";
+"The shortcut points to another item, but the configuration of this app prohibits opening it." = "Die Verknüpfung verweist auf ein anderes Element, aber die Konfiguration dieser App untersagt das Öffnen.";
+
+"Create shortcut" = "Verknüpfung erstellen";
+"URL of webpage or item" = "URL der Webseite oder Datei";
+
+"Pick file or folder" = "Datei oder Ordner wählen";
+
 /* Quick Access view */
 "Quick Access" = "Schnellzugriff";
+"Add to sidebar" = "Zur Seitenleiste hinzufügen";
+"Remove from sidebar" = "Aus Seitenleiste entfernen";
 "Collection" = "Sammlung";
 "Recents" = "Kürzlich";
 "Favorites"= "Favoriten";

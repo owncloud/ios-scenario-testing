@@ -2,6 +2,7 @@ package utils.api;
 
 import java.io.IOException;
 import java.util.Base64;
+import java.util.HashMap;
 import java.util.logging.Level;
 
 import okhttp3.OkHttpClient;
@@ -12,7 +13,6 @@ import utils.LocProperties;
 import utils.log.Log;
 import utils.network.oCHttpClient;
 import utils.parser.DrivesJSONHandler;
-
 
 public class CommonAPI {
 
@@ -31,6 +31,8 @@ public class CommonAPI {
     protected final String graphDrivesEndpoint = "/graph/v1.0/me/drives";
     protected String davEndpoint = "";
     protected String space = "";
+    boolean isOidc;
+    protected HashMap<String, String> personalSpaces;
 
     protected String basicPropfindBody = "<?xml version='1.0' encoding='UTF-8' ?>\n" +
             "<propfind xmlns=\"DAV:\" xmlns:CAL=\"urn:ietf:params:xml:ns:caldav\"" +
@@ -67,18 +69,35 @@ public class CommonAPI {
     public CommonAPI()
             throws IOException {
         AuthAPI authAPI = new AuthAPI();
+        isOidc = authAPI.isOidc();
         //ftm, OIDC == oCIS. Bad.
-        if (authAPI.checkAuthMethod().equals("OIDC")) {
-            space = getPersonalDrives(urlServer);
-            davEndpoint = spacesEndpoint + space;
+        if (isOidc) {
+            personalSpaces = new HashMap<>();
+            personalSpaces.put("Alice", getPersonalDrives(urlServer, "Alice"));
+            personalSpaces.put("Bob", getPersonalDrives(urlServer, "Bob"));
+            personalSpaces.put("Charles", getPersonalDrives(urlServer, "Charles"));
         } else {
             davEndpoint = webdavEndpoint + "/" + user;
         }
         Log.log(Level.FINE, "Endpoint: " + davEndpoint);
     }
 
+    public String getEndpoint(String userName) {
+        String endpoint;
+        if (isOidc) {
+            endpoint = spacesEndpoint + personalSpaces.get(userName);
+        } else {
+            endpoint = davEndpoint = webdavEndpoint + "/" + user;
+        }
+        return endpoint;
+    }
+
     public String getEndpoint() {
-        return davEndpoint;
+        if (isOidc) {
+            return spacesEndpoint + personalSpaces.get("Alice");
+        } else {
+            return davEndpoint = webdavEndpoint + "/" + user;
+        }
     }
 
     public String getSharedEndpoint() throws IOException {
@@ -116,13 +135,13 @@ public class CommonAPI {
         return request;
     }
 
-    protected Request deleteRequest(String url) {
+    protected Request deleteRequest(String url, String userName) {
         Log.log(Level.FINE, "Starts: DELETE Request: " + url);
         Request request = new Request.Builder()
                 .url(url)
                 .addHeader("OCS-APIREQUEST", "true")
                 .addHeader("User-Agent", userAgent)
-                .addHeader("Authorization", "Basic " + credentialsB64)
+                .addHeader("Authorization", "Basic " + credentialsBuilder(userName))
                 .addHeader("Host", host)
                 .delete()
                 .build();

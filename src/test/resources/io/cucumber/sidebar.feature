@@ -15,7 +15,7 @@ Feature: Sidebar
       | file   | sidebar1/sidebar1.txt |
     When Alice selects to add to the sidebar the folder sidebar1 using the Actions menu
     And Alice opens the sidebar
-    And Alice opens the folder sidebar1 in the sidebar
+    And Alice opens the folder sidebar1 in sidebar
     Then Alice should see sidebar1.txt in filelist
 
   Scenario: Remove file from sidebar

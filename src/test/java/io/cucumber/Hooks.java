@@ -7,6 +7,7 @@
 package io.cucumber;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.logging.Level;
 
 import io.cucumber.java.After;
@@ -42,13 +43,16 @@ public class Hooks {
     }
 
     private void cleanUp() throws Throwable {
-        ArrayList<OCFile> filesRoot = world.getFilesAPI().listItems("");
-        //To remove everything shared with Alice
-        world.getShareAPI().removeAllShares("bob");
-        for (OCFile iterator : filesRoot) {
-            world.getFilesAPI().removeItem(iterator.getName());
+        //First, remove leftovers in root folder for every user
+        ArrayList<String> userNames = new ArrayList<>(Arrays.asList("Alice", "Bob"));
+        for (String userToClean: userNames) {
+            ArrayList<OCFile> filesRoot = world.getFilesAPI().listItems("", userToClean);
+            for (OCFile iterator : filesRoot) {
+                world.getFilesAPI().removeItem(iterator.getName(), userToClean);
+            }
+            //Empty trashbin
+            world.getTrashbinAPI().emptyTrashbin(userToClean);
         }
-        world.getTrashbinAPI().emptyTrashbin();
         if (world.getAuthAPI().checkAuthMethod().equals("OIDC")){ //remove spaces
             world.getGraphAPI().removeSpacesOfUser();
         }

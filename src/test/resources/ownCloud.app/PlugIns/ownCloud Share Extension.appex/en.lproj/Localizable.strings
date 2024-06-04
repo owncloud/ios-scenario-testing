@@ -638,9 +638,28 @@
 "{{itemName}} ({{link}}) | password: {{password}}" = "{{itemName}} ({{link}}) | password: {{password}}";
 "{{link}} | password: {{password}}" = "{{link}} | password: {{password}}";
 
+/* .url viewer / creation */
+"Shortcut" = "Shortcut";
+"Open link" = "Open link";
+"Opening link failed" = "Opening link failed";
+"Open shortcut" = "Open shortcut";
+"Shortcut to '{{hostname}}'" = "Shortcut to '{{hostname}}'";
+"This shortcut points to:\n{{url}}" = "This shortcut points to:\n{{url}}";
+"The destination this shortcut points to could not be found. It may have been deleted or you may not have access to it." = "The destination this shortcut points to could not be found. It may have been deleted or you may not have access to it.";
+
+"The shortcut points to a URL, but the configuration of this app prohibits opening it." = "The shortcut points to a URL, but the configuration of this app prohibits opening it.";
+"The shortcut points to another item, but the configuration of this app prohibits opening it." = "The shortcut points to a URL, but the configuration of this app prohibits opening it.";
+
+"Create shortcut" = "Create shortcut";
+"URL of webpage or item" = "URL of webpage or item";
+
+"Pick file or folder" = "Pick file or folder";
+
 /* Quick Access search suggestions */
 "Quick Access" = "Quick Access";
 "Add to sidebar" = "Add to sidebar";
+"Remove from sidebar" = "Remove from sidebar";
+"Collection" = "Collection";
 "Recents" = "Recents";
 "Favorites"= "Favorites";
 "Images" = "Images";

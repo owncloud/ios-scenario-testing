@@ -127,7 +127,7 @@ public class FileListPage extends CommonPage {
         waitById(5, "Cancel");
     }
 
-    public void openSidebar(){
+    public void openSidebar() {
         Log.log(Level.FINE, "Starts: Open sidebar");
         sideMenuOpener.click();
     }
@@ -145,9 +145,26 @@ public class FileListPage extends CommonPage {
 
     public void openItemSidebar(String itemName) {
         Log.log(Level.FINE, "Starts: Open Item in sidebar: " + itemName);
-        String collectionXpath = "(//XCUIElementTypeStaticText[@name=\"" + itemName + "\"])[2]";
-        openSidebar();
-        findXpath(collectionXpath).click();
+        switch (itemName) {
+            case "shared with me": {
+                findXpath("//XCUIElementTypeStaticText[@name=\"Shares\"]").click();
+                findXpath("//XCUIElementTypeStaticText[@name=\"Shared with me\"]").click();
+                break;
+            }
+            case "shared by me": {
+                findXpath("//XCUIElementTypeStaticText[@name=\"Shares\"]").click();
+                findXpath("//XCUIElementTypeStaticText[@name=\"Shared by me\"]").click();
+                break;
+            }
+            case "shared by link": {
+                findXpath("//XCUIElementTypeStaticText[@name=\"Shares\"]").click();
+                findXpath("//XCUIElementTypeStaticText[@name=\"Shared by link\"]").click();
+                break;
+            }
+            default:
+                findXpath("(//XCUIElementTypeStaticText[@name=\"" + itemName + "\"])[2]").click();
+                break;
+        }
     }
 
     public void executeOperation(String operation, String itemName, String typeItem, String menu) {
@@ -162,15 +179,11 @@ public class FileListPage extends CommonPage {
                 selectItemListContextual(itemName);
                 selectOperationFromContextual(operation);
                 break;
-            case "Swipe":
-                selectItemListSwipe(itemName);
-                break;
         }
     }
 
     public boolean isItemInList(String itemName) {
         Log.log(Level.FINE, "Starts: Check if item is in list: " + itemName);
-        wait(2);
         return findId(itemName).isDisplayed();
     }
 
@@ -196,7 +209,7 @@ public class FileListPage extends CommonPage {
 
     public boolean isItemInSidebar(String itemName) {
         Log.log(Level.FINE, "Starts: Check if item is in sidebar: " + itemName);
-        Log.log(Level.FINE, "Elements: "+  findListId(itemName).size());
+        Log.log(Level.FINE, "Elements: " + findListId(itemName).size());
         return findListXpath("//XCUIElementTypeCell[@name=\"" + itemName + "\"]").size() > 0;
     }
 
@@ -278,12 +291,6 @@ public class FileListPage extends CommonPage {
         } else { //root folder, nothing to do
             return path;
         }
-    }
-
-    private void selectItemListSwipe(String itemName) {
-        Log.log(Level.FINE, "Starts: select item from list by swiping: " + itemName);
-        WebElement listCell = findId(itemName);
-        swipeElementIOS(listCell, "LEFT");
     }
 
     public void selectOperationFromActions(String operationName) {
