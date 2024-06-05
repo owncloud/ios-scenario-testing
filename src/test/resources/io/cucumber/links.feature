@@ -42,7 +42,7 @@ Feature: Public Links
     Examples:
       | type   | item       | password     |
       | folder | Links3     | aa55AA..1111 |
-      | file   | Links4.txt | aa55AA..1111    |
+      | file   | Links4.txt | aa55AA..1111 |
 
   Scenario Outline: Create a public link with password generated automatically
     Given the following items have been created in Alice account

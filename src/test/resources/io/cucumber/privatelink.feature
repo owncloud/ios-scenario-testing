@@ -23,12 +23,14 @@ Feature: Private Links
 
   @nooc10 @sharedlink
   Scenario Outline: Item in shared jail
-    Given Bob has shared <type> <name> with user Alice with Viewer permissions
-    When Alice opens a private link pointing to shared <name> with scheme owncloud
-    Then <type> <name> is opened in the app
+    Given the following items have been created in Bob account
+      | <type> | <item> |
+    Given Bob has shared <type> <item> with user Alice with Viewer permissions
+    When Alice opens a private link pointing to shared <item> with scheme owncloud
+    Then <type> <item> is opened in the app
 
     Examples:
-      | type | name             |
+      | type | item             |
       | file | privateLink3.txt |
 
   Scenario: Item not existing
