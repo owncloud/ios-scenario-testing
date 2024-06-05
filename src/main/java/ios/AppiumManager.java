@@ -97,7 +97,7 @@ public class AppiumManager {
 
         capabilities.setCapability("appium:newCommandTimeout", 60);
 
-        capabilities.setCapability("platformVersion", "17.2");
+        capabilities.setCapability("platformVersion", "17.5");
 
     }
 }

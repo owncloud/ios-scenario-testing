@@ -7,11 +7,8 @@ import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.regex.Pattern;
 
-import io.appium.java_client.TouchAction;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import io.appium.java_client.pagefactory.iOSXCUITFindBy;
-import io.appium.java_client.touch.LongPressOptions;
-import io.appium.java_client.touch.offset.ElementOption;
 import utils.LocProperties;
 import utils.entities.OCFile;
 import utils.log.Log;
@@ -199,16 +196,16 @@ public class FileListPage extends CommonPage {
         Log.log(Level.FINE, "Starts: Check if item is in screen: " + itemName);
         //A system notification can rise at this point. We refuse it
         //This can be managed via capabilities but affects other test cases.
-        if (dontAllow.size() > 0) {
+        if (!dontAllow.isEmpty()) {
             dontAllow.get(0).click();
         }
-        return findListId(itemName).size() > 0;
+        return !findListId(itemName).isEmpty();
     }
 
     public boolean isItemInSidebar(String itemName) {
         Log.log(Level.FINE, "Starts: Check if item is in sidebar: " + itemName);
         Log.log(Level.FINE, "Elements: " + findListId(itemName).size());
-        return findListXpath("//XCUIElementTypeCell[@name=\"" + itemName + "\"]").size() > 0;
+        return !findListXpath("//XCUIElementTypeCell[@name=\"" + itemName + "\"]").isEmpty();
     }
 
     public void selectItemListActions(String itemName) {
@@ -221,8 +218,7 @@ public class FileListPage extends CommonPage {
     private void selectItemListContextual(String itemName) {
         Log.log(Level.FINE, "Starts: select contextual item from list: " + itemName);
         WebElement listCell = findId(itemName);
-        new TouchAction(driver).longPress(LongPressOptions.longPressOptions()
-                .withElement(ElementOption.element(listCell))).release().perform();
+        longPress(listCell);
     }
 
     public String getPrivateLink(String scheme, String linkOriginal) {
@@ -236,6 +232,10 @@ public class FileListPage extends CommonPage {
 
     public void openPrivateLink(String privateLink) {
         Log.log(Level.FINE, "Starts: Open private link: " + privateLink);
+        //Accept opening files in oC. Just one time...
+        if (!findListId("Open").isEmpty()) {
+            findId("Open").click();
+        }
         driver.get(privateLink);
     }
 

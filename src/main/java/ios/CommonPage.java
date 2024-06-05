@@ -1,10 +1,13 @@
 package ios;
 
+import com.google.common.collect.ImmutableList;
+
 import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.OutputType;
+import org.openqa.selenium.Point;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -31,7 +34,6 @@ import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.ios.IOSStartScreenRecordingOptions;
 import io.appium.java_client.ios.IOSStartScreenRecordingOptions.VideoQuality;
 import io.appium.java_client.pagefactory.iOSXCUITFindBy;
-import utils.LocProperties;
 import utils.api.AuthAPI;
 import utils.log.Log;
 
@@ -46,7 +48,6 @@ public class CommonPage {
     protected static IOSDriver driver = AppiumManager.getManager().getDriver();
     protected static Actions actions;
     private static final SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMdd_HHmmss");
-    protected final String packag = LocProperties.getProperties().getProperty("appPackage");
     protected String authType = "";
 
     public CommonPage() {
@@ -118,6 +119,20 @@ public class CommonPage {
                 PointerInput.Origin.viewport(), endX, endY));
         swipe.addAction(finger.createPointerUp(PointerInput.MouseButton.LEFT.asArg()));
         driver.perform(Arrays.asList(swipe));
+    }
+
+    public void longPress(WebElement element) {
+        Point location = element.getLocation();
+        PointerInput pointerInput = new PointerInput(PointerInput.Kind.TOUCH, "longp");
+        Sequence longPress = new Sequence(pointerInput, 0);
+        longPress.addAction(pointerInput.createPointerMove(Duration.ZERO,
+                PointerInput.Origin.viewport(), location.x, location.y));
+        longPress.addAction(pointerInput.createPointerDown(PointerInput.MouseButton.LEFT.asArg()));
+        longPress.addAction(pointerInput.createPointerMove(Duration.ofSeconds(1),
+                PointerInput.Origin.viewport(), location.x, location.y));
+        longPress.addAction(pointerInput.createPointerUp(PointerInput.MouseButton.LEFT.asArg()));
+        driver.perform(ImmutableList.of(longPress));
+
     }
 
     public void browse(String folderName) {
