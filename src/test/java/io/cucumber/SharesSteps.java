@@ -49,8 +49,6 @@ public class SharesSteps {
         Log.log(Level.FINE, "----STEP----: " + stepName);
         world.getShareAPI().createShare(sharingUser, itemName, recipientUser, "0",
                 world.getSharePage().translatePermissionsToInt(permissions), "", "", sharelevel);
-        //Sharee is not detected at the moment.
-        Thread.sleep(2000);
     }
 
     @When("Alice selects the following {usertype} as sharee with {word} permissions")
@@ -66,8 +64,6 @@ public class SharesSteps {
         world.getPrivateSharePage().searchSharee(sharee, type);
         world.getPrivateSharePage().setPermissions(permissions);
         world.getPrivateSharePage().savePermissions();
-        //Sharee is not detected at the moment.
-        Thread.sleep(2000);
     }
 
     @When("Alice selects the following {usertype} as sharee without {word} permission")
@@ -82,8 +78,6 @@ public class SharesSteps {
         world.getPrivateSharePage().searchSharee(sharee, type);
         world.getPrivateSharePage().removeSharingPermission();
         world.getPrivateSharePage().invite();
-        //Sharee is not detected at the moment.
-        Thread.sleep(2000);
     }
 
     @When("Alice edits the share with the following fields")
@@ -111,8 +105,6 @@ public class SharesSteps {
         String sharee = list.get(0).get(0);
         world.getSharePage().openPrivateShare(sharee);
         world.getPrivateSharePage().deletePrivateShare();
-        //Need to wait a little bit till share is deleted. Improvable.
-        Thread.sleep(2000);
     }
 
     @Then("share should be created on {word} with the following fields")

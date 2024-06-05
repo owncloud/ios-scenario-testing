@@ -87,16 +87,6 @@ public class CommonPage {
         wait.until(ExpectedConditions.invisibilityOf(mobileElement));
     }
 
-    // The following method should be used only in case implicit/explicit waits are not valid for the
-    // scenario. Blocking the thread is not desirable and using it is not a good solution.
-    public static void wait(int seconds) {
-        try {
-            Thread.sleep(seconds * 1000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-    }
-
     public WebElement findXpath(String xpath) {
         return (WebElement) driver.findElement(AppiumBy.xpath(xpath));
     }
@@ -132,8 +122,6 @@ public class CommonPage {
 
     public void browse(String folderName) {
         Log.log(Level.FINE, "Starts: browse to " + folderName);
-        //Need a waiter till notification gones. To improve
-        wait(5);
         findId(folderName).click();
     }
 

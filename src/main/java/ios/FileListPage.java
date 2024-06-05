@@ -94,8 +94,6 @@ public class FileListPage extends CommonPage {
 
     public void createFolder() {
         Log.log(Level.FINE, "Starts: create folder");
-        //Needed a short wait, to improve
-        wait(1);
         openPlusButton();
         createFolder.click();
     }
@@ -239,8 +237,6 @@ public class FileListPage extends CommonPage {
     public void openPrivateLink(String privateLink) {
         Log.log(Level.FINE, "Starts: Open private link: " + privateLink);
         driver.get(privateLink);
-        //Let some time to load... did not found a reliable condition to avoid this ugly wait
-        wait(5);
     }
 
     public void openFakePrivateLink() {
@@ -249,8 +245,6 @@ public class FileListPage extends CommonPage {
         String fakeURL = System.getProperty("server").replace(originalScheme, "owncloud") + "/f/11111111111";
         Log.log(Level.FINE, "Fake URL: " + fakeURL);
         driver.get(fakeURL);
-        //Let some time to load... did not found a reliable condition to avoid this ugly wait
-        wait(5);
     }
 
     private String getScheme(String originalURL) {
@@ -346,8 +340,6 @@ public class FileListPage extends CommonPage {
             findXpath(xpath_copydirectory).click();
         } else if (operationName.equals("make available offline")) {
             Log.log(Level.FINE, "Wait file to be downloaded");
-            //Condition to be improved. Check how to verify a file is downlaoded
-            wait(3);
         }
     }
 
@@ -400,8 +392,6 @@ public class FileListPage extends CommonPage {
             findXpath(xpath_copydirectory).click();
         } else if (operationName.equals("make available offline")) {
             Log.log(Level.FINE, "Wait file to be downloaded");
-            //Condition to be improved. Check how to verify a file is downlaoded
-            wait(3);
         }
     }
 

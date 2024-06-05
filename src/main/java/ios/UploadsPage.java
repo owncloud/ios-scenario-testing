@@ -36,8 +36,6 @@ public class UploadsPage extends CommonPage {
             }
         }
         add.click();
-        //Wait till upload finishes before asserting
-        wait(5);
     }
 
     public int photoUploaded(ArrayList<OCFile> listFiles) {
