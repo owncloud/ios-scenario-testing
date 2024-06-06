@@ -27,7 +27,7 @@ public class FileListSteps {
 
     protected String user = LocProperties.getProperties().getProperty("userNameDefault");
 
-    @ParameterType("item|file|folder|option")
+    @ParameterType("item|file|folder|shortcut|option")
     public String itemtype(String type) {
         return type;
     }
@@ -48,6 +48,11 @@ public class FileListSteps {
         return type;
     }
 
+    @ParameterType("web|file")
+    public String shortcutType(String type) {
+        return type;
+    }
+
 
     @Given("the following items have been created in {word} account")
     public void items_created_in_account(String userName, DataTable table) throws Throwable {
@@ -59,10 +64,20 @@ public class FileListSteps {
             String type = rows.get(0);
             String itemName = rows.get(1);
             if (!world.getFilesAPI().itemExist(itemName, userName)) {
-                if (type.equals("folder") || type.equals("item")) {
-                    world.getFilesAPI().createFolder(itemName, userName);
-                } else if (type.equals("file")) {
-                    world.getFilesAPI().pushFile(itemName, userName);
+                switch (type) {
+                    case ("folder"):
+                    case ("item"): {
+                        world.getFilesAPI().createFolder(itemName, userName);
+                        break;
+                    }
+                    case ("file"): {
+                        world.getFilesAPI().pushFile(itemName, userName);
+                        break;
+                    }
+                    case ("shortcut"): {
+                        world.getFilesAPI().pushShortcut(itemName, userName);
+                        break;
+                    }
                 }
             }
         }
@@ -89,6 +104,15 @@ public class FileListSteps {
         }.getClass().getEnclosingMethod().getName().toUpperCase();
         Log.log(Level.FINE, "----STEP----: " + stepName);
         world.getFilesAPI().setFavorite(itemName);
+    }
+
+    @When("Alice opens the {itemtype} {word}")
+    public void open_item_list(String itemType, String itemName) {
+        String stepName = new Object() {
+        }.getClass().getEnclosingMethod().getName().toUpperCase();
+        Log.log(Level.FINE, "----STEP----: " + stepName);
+        world.getFileListPage().refreshBySwipe();
+        world.getFileListPage().openItemInList(itemName);
     }
 
     @When("Alice opens a private link pointing to {word} with scheme {word}")
@@ -133,6 +157,14 @@ public class FileListSteps {
         }.getClass().getEnclosingMethod().getName().toUpperCase();
         Log.log(Level.FINE, "----STEP----: " + stepName);
         world.getFileListPage().createFolder();
+    }
+
+    @When("Alice selects the option Create Shortcut")
+    public void create_shortcut() {
+        String stepName = new Object() {
+        }.getClass().getEnclosingMethod().getName().toUpperCase();
+        Log.log(Level.FINE, "----STEP----: " + stepName);
+        world.getFileListPage().createShortcut();
     }
 
     @When("Alice selects the option upload from photo gallery")
@@ -273,6 +305,31 @@ public class FileListSteps {
         world.getFolderPickerPage().accept(operation);
     }
 
+    @When("Alice creates a {shortcutType} shortcut with the following fields")
+    public void user_creates_shortcut_url(String shortcutType, DataTable table){
+        String stepName = new Object() {
+        }.getClass().getEnclosingMethod().getName().toUpperCase();
+        Log.log(Level.FINE, "----STEP----: " + stepName);
+        List<List<String>> listItems = table.asLists();
+        for (List<String> rows : listItems) {
+            String target = rows.get(0);
+            String shortcutName = rows.get(1);
+            if (shortcutType.equals("web")) {
+                world.getShortcutPage().createShortcutWeb(target, shortcutName);
+            } else {
+                world.getShortcutPage().createShortcutFile(target, shortcutName);
+            }
+        }
+    }
+
+    @When("Alice opens the link")
+    public void user_opens_link(){
+        String stepName = new Object() {
+        }.getClass().getEnclosingMethod().getName().toUpperCase();
+        Log.log(Level.FINE, "----STEP----: " + stepName);
+        world.getFileListPage().openShortcutLink();
+    }
+
     @Then("Alice should see {word} in the filelist")
     public void original_item_filelist(String itemName)
             throws Throwable {
@@ -330,7 +387,7 @@ public class FileListSteps {
         String stepName = new Object() {
         }.getClass().getEnclosingMethod().getName().toUpperCase();
         Log.log(Level.FINE, "----STEP----: " + stepName);
-        assertTrue(world.getFileListPage().itemOpened(itemType, itemName));
+        assertTrue(world.getFileListPage().isItemOpened(itemType, itemName));
     }
 
     @Then("Alice should see {int} photo in the filelist")
@@ -481,5 +538,22 @@ public class FileListSteps {
         String error = listItems.get(0).get(0);
         Log.log(Level.FINE, "Error message to check: " + error);
         assertTrue(world.getFileListPage().isItemInScreen(error));
+    }
+
+    @Then("Alice should see the browser")
+    public void user_sees_browser() {
+        String stepName = new Object() {
+        }.getClass().getEnclosingMethod().getName().toUpperCase();
+        Log.log(Level.FINE, "----STEP----: " + stepName);
+        assertTrue(world.getShortcutPage().isBrowserVisible());
+    }
+
+    @Then("Alice should see the file {word} with {word}")
+    public void user_sees_file_and_content(String itemName, String content) {
+        String stepName = new Object() {
+        }.getClass().getEnclosingMethod().getName().toUpperCase();
+        Log.log(Level.FINE, "----STEP----: " + stepName);
+        assertTrue(world.getPreviewPage().isFilePreviewed(itemName) &&
+                world.getPreviewPage().isTextPreviewed(content));
     }
 }

@@ -99,5 +99,7 @@ public class AppiumManager {
 
         capabilities.setCapability("platformVersion", "17.5");
 
+        capabilities.setCapability("appium:useNewWDA", false);
+
     }
 }

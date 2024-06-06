@@ -6,9 +6,11 @@ import ios.FileListPage;
 import ios.FolderPickerPage;
 import ios.InputNamePage;
 import ios.LoginPage;
+import ios.PreviewPage;
 import ios.PrivateSharePage;
 import ios.PublicLinkPage;
 import ios.SharePage;
+import ios.ShortcutPage;
 import ios.SpacesPage;
 import ios.UploadsPage;
 import utils.api.AuthAPI;
@@ -29,6 +31,8 @@ public class World {
     private SharePage sharePage;
     private SpacesPage spacesPage;
     private UploadsPage uploadsPage;
+    private ShortcutPage shortcutPage;
+    private PreviewPage previewPage;
 
     //APIs to call
     private AuthAPI authAPI;
@@ -92,6 +96,18 @@ public class World {
         if (uploadsPage == null)
             uploadsPage = new UploadsPage();
         return uploadsPage;
+    }
+
+    public ShortcutPage getShortcutPage() {
+        if (shortcutPage == null)
+            shortcutPage = new ShortcutPage();
+        return shortcutPage;
+    }
+
+    public PreviewPage getPreviewPage() {
+        if (previewPage == null)
+            previewPage = new PreviewPage();
+        return previewPage;
     }
 
     public AuthAPI getAuthAPI() {

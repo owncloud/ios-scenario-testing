@@ -122,7 +122,7 @@ Feature: Private Share
       | type   | item    | shareetype | sharee | email       | permission |
       | folder | Share10 | user       | Bob    | bob@own.com | Viewer     |
 
-  @sharesortcut @smoke
+    @sharesortcut @smoke
     Scenario Outline: Check shared file in list
     Given the following items have been created in Bob account
       | <type> | <item> |

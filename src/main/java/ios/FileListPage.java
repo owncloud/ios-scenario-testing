@@ -24,6 +24,12 @@ public class FileListPage extends CommonPage {
     @iOSXCUITFindBy(xpath = "//XCUIElementTypeButton[@name=\"Upload from your photo library\"]")
     private WebElement uploadFile;
 
+    @iOSXCUITFindBy(xpath = "//XCUIElementTypeButton[@name=\"Create shortcut\"]")
+    private WebElement createShortcut;
+
+    @iOSXCUITFindBy(id = "Open link")
+    private WebElement openLink;
+
     @iOSXCUITFindBy(xpath = "//XCUIElementTypeTabBar[@name=\"Tab Bar\"]")
     private WebElement bottomBar;
 
@@ -85,6 +91,11 @@ public class FileListPage extends CommonPage {
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
     }
 
+    public void openItemInList(String itemName) {
+        Log.log(Level.FINE, "Starts: Open item in list");
+        findId(itemName).click();
+    }
+
     public void refreshBySwipe() {
         swipe(0.50, 0.40, 0.50, 0.90);
     }
@@ -93,6 +104,17 @@ public class FileListPage extends CommonPage {
         Log.log(Level.FINE, "Starts: create folder");
         openPlusButton();
         createFolder.click();
+    }
+
+    public void createShortcut() {
+        Log.log(Level.FINE, "Starts: create shortcut");
+        openPlusButton();
+        createShortcut.click();
+    }
+
+    public void openShortcutLink() {
+        Log.log(Level.FINE, "Starts: open shortcut link");
+        openLink.click();
     }
 
     public void openThreeDotButton() {
@@ -255,7 +277,7 @@ public class FileListPage extends CommonPage {
         return findXpath("//XCUIElementTypeStaticText[@name=\"Link resolution failed\"]").isDisplayed();
     }
 
-    public boolean itemOpened(String itemType, String itemName) {
+    public boolean isItemOpened(String itemType, String itemName) {
         Log.log(Level.FINE, "Starts: checking if item is opened: " + itemType + " " + itemName);
         if (itemType.equals("file")) {
             Log.log(Level.FINE, "Opening file");

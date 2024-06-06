@@ -144,7 +144,7 @@ public class CommonPage {
         Log.log(Level.FINE, "Browse to folder: " + path);
         String completePath = Pattern.quote("/");
         String[] route = path.split(completePath);
-        Log.log(Level.FINE, "Route lenght: " + route.length);
+        Log.log(Level.FINE, "Route length: " + route.length);
         for (int j = 0; j < route.length; j++) {
             Log.log(Level.FINE, "Chunk: " + j + ": " + route[j]);
         }
