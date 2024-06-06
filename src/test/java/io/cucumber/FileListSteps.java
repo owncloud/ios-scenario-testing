@@ -53,6 +53,11 @@ public class FileListSteps {
         return type;
     }
 
+    @ParameterType("file|pdf|image")
+    public String fileType(String type) {
+        return type;
+    }
+
 
     @Given("the following items have been created in {word} account")
     public void items_created_in_account(String userName, DataTable table) throws Throwable {
@@ -76,6 +81,14 @@ public class FileListSteps {
                     }
                     case ("shortcut"): {
                         world.getFilesAPI().pushShortcut(itemName, userName);
+                        break;
+                    }
+                    case ("image"): {
+                        world.getFilesAPI().pushPic(itemName);
+                        break;
+                    }
+                    case ("pdf"): {
+                        world.getFilesAPI().pushPdf(itemName);
                         break;
                     }
                 }
@@ -553,7 +566,27 @@ public class FileListSteps {
         String stepName = new Object() {
         }.getClass().getEnclosingMethod().getName().toUpperCase();
         Log.log(Level.FINE, "----STEP----: " + stepName);
-        assertTrue(world.getPreviewPage().isFilePreviewed(itemName) &&
+        assertTrue(world.getPreviewPage().isTextFilePreviewed(itemName) &&
                 world.getPreviewPage().isTextPreviewed(content));
+    }
+
+    @Then("the {fileType} {word} should be opened and previewed")
+    public void file_should_be_opened_and_previewed(String type, String itemName) {
+        String stepName = new Object() {}.getClass().getEnclosingMethod().getName().toUpperCase();
+        Log.log(Level.FINE, "----STEP----: " + stepName);
+        switch (type) {
+            case ("file"): {
+                assertTrue(world.getPreviewPage().isTextFilePreviewed(itemName));
+                break;
+            }
+            case ("image"): {
+                assertTrue(world.getPreviewPage().isImagePreviewed(itemName));
+                break;
+            }
+            case ("pdf"): {
+                assertTrue(world.getPreviewPage().isPdfPreviewed(itemName));
+                break;
+            }
+        }
     }
 }
