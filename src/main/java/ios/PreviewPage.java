@@ -14,7 +14,9 @@ public class PreviewPage extends CommonPage {
     @iOSXCUITFindBy(id = "QLPreviewControllerView")
     private WebElement textPreview;
 
-    @iOSXCUITFindBy(id = "loaded-image-gallery")
+    @iOSXCUITFindBy(xpath = "//XCUIElementTypeApplication[@name=\"ownCloud\"]/XCUIElementTypeWindow[1]/" +
+            "XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/" +
+            "XCUIElementTypeOther[3]/XCUIElementTypeOther")
     private WebElement imageGallery;
 
     @iOSXCUITFindBy(id = "Outline")

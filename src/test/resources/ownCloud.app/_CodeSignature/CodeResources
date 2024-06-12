@@ -342,7 +342,7 @@
 		</dict>
 		<key>Frameworks/ownCloudApp.framework/ownCloudApp</key>
 		<data>
-		zXYsj4L1K5N1swLVHLnnD46f+/4=
+		AulsZ0MjlXT0EiaKGI+jsHmVNxQ=
 		</data>
 		<key>Frameworks/ownCloudApp.framework/pt-BR.lproj/Localizable.strings</key>
 		<dict>
@@ -420,7 +420,7 @@
 		</data>
 		<key>Frameworks/ownCloudAppShared.framework/_CodeSignature/CodeResources</key>
 		<data>
-		S0wFc9lJMIBxkm2zcq+ibgh23S8=
+		YGoJy4Zc2KOFg7DG9cQHfEf40wQ=
 		</data>
 		<key>Frameworks/ownCloudAppShared.framework/application-pdf.tvg</key>
 		<data>
@@ -456,7 +456,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			DcCBRCevPUUnv1aK1yyHptgLT7Y=
+			Zfkxh9g1rd8jW0c2iorKPfFguts=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -474,7 +474,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			Eh5VzvMnV1Ogpj7KfgA5bl1rF8M=
+			ug248sn9B8eyBZnriQ/hViBgrK8=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -596,7 +596,7 @@
 		</dict>
 		<key>Frameworks/ownCloudAppShared.framework/ownCloudAppShared</key>
 		<data>
-		yxRNkduYeUJ8gOe+AjwtJGOcxFQ=
+		E6F4dxydUnL/qvKiz8CAT5ZyVew=
 		</data>
 		<key>Frameworks/ownCloudAppShared.framework/owncloud-logo.tvg</key>
 		<data>
@@ -972,7 +972,7 @@
 		</dict>
 		<key>Frameworks/ownCloudUI.framework/ownCloudUI</key>
 		<data>
-		LS5XcXMmNyzTwYkLAktJv1Hgv4M=
+		cuUykTERL1kVvofpLM0lgmvIzsM=
 		</data>
 		<key>Frameworks/ownCloudUI.framework/pt-BR.lproj/Localizable.strings</key>
 		<dict>
@@ -1030,7 +1030,7 @@
 		</dict>
 		<key>Info.plist</key>
 		<data>
-		pQI4mfZ8nmT8HEg5DDtgRmjugQQ=
+		YyC45xjVs0UA5kuVy+Rk5zmQGAw=
 		</data>
 		<key>LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib</key>
 		<data>
@@ -1746,7 +1746,7 @@
 		</data>
 		<key>PlugIns/ownCloud Share Extension.appex/_CodeSignature/CodeResources</key>
 		<data>
-		p+hUYP7AN4uIC3ubPZmbu9k+etA=
+		P1YgrzLMlklpHx2OiOPt9Gpc4/w=
 		</data>
 		<key>PlugIns/ownCloud Share Extension.appex/ar.lproj/InfoPlist.strings</key>
 		<dict>
@@ -1797,7 +1797,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			DcCBRCevPUUnv1aK1yyHptgLT7Y=
+			Zfkxh9g1rd8jW0c2iorKPfFguts=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -1833,7 +1833,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			Eh5VzvMnV1Ogpj7KfgA5bl1rF8M=
+			ug248sn9B8eyBZnriQ/hViBgrK8=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -1966,7 +1966,7 @@
 		</dict>
 		<key>PlugIns/ownCloud Share Extension.appex/ownCloud Share Extension</key>
 		<data>
-		AF0bnKLje4CfTgZ+QtrQ3rWHFM8=
+		ljsmuCri/yFEVpBWU9GbvDqRmHg=
 		</data>
 		<key>PlugIns/ownCloud Share Extension.appex/pt-BR.lproj/InfoPlist.strings</key>
 		<dict>
@@ -2208,7 +2208,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			GyGjG4PjnITtXPsSC5SZnEO9t+c=
+			xUJ640ahfk9DCwhK0mvFTx1W8WQ=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -3002,7 +3002,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			vsG9NfIzqKWpuwqMd/TBQtcHmjI=
+			OJF8MEnWQHIqB7jMKCxAlXjt4A0=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -3876,7 +3876,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			xy5aut2Lscv3FL8NJL9hm1qpbcd8end81hqFUeq6aTs=
+			CINpzzMjepKM7D1ovuGxne3GnOmDyljHzEaXwI3NNP8=
 			</data>
 		</dict>
 		<key>Frameworks/ownCloudApp.framework/pt-BR.lproj/Localizable.strings</key>
@@ -3972,7 +3972,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			BKN6sR3UW/4mFT0sB/29fPXq0Nevrz0Zcsallw9MnEA=
+			6M1jx/2wp11tE5twvTJdMmAcKfN/D4Vm0hdF/sg39yo=
 			</data>
 		</dict>
 		<key>Frameworks/ownCloudAppShared.framework/application-pdf.tvg</key>
@@ -4018,7 +4018,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			C3vZ8VdrJrqVq4M+O30VjATAcp6rgVthLrZtOzeOw+0=
+			aRZ4+ERnc/Hit525TMHWRipm6bD4kFw67R6tgQsPPZk=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -4036,7 +4036,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			VKuedqP1y7aGKcwaDCMULwq2fa12mirYW/bqzLgp0C8=
+			pmnFiWoppVuKhm1rBz+CNK6vZiKGHGc/wSzNJttVSpY=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -4199,7 +4199,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			8Y6ypUrS6YJeQtjJlQYL2AisR7jUkZbT13ZGtIF8AwA=
+			ec31QhZhROf0N3aPoZVU8JlrF0ka6SmWiA58ZsI3Wac=
 			</data>
 		</dict>
 		<key>Frameworks/ownCloudAppShared.framework/owncloud-logo.tvg</key>
@@ -4641,7 +4641,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			KqRmQ1azYxFYBH1at+ZLFoMCJ3bCeseJ4CcOsMK4LDE=
+			VaFUMJtb1k4NYnltma5iKaJ5hRhr+tI0FbXTJZFrXPA=
 			</data>
 		</dict>
 		<key>Frameworks/ownCloudUI.framework/pt-BR.lproj/Localizable.strings</key>
@@ -5752,7 +5752,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			SdadhLb65FkocCgKW0jIEVmwSUR4YsciX2BcfpfJn2c=
+			ijcLoW4ymFA7TzVYPY7CYMz5n3hoJvnLT/Dbt5LyL7U=
 			</data>
 		</dict>
 		<key>PlugIns/ownCloud Share Extension.appex/ar.lproj/InfoPlist.strings</key>
@@ -5804,7 +5804,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			C3vZ8VdrJrqVq4M+O30VjATAcp6rgVthLrZtOzeOw+0=
+			aRZ4+ERnc/Hit525TMHWRipm6bD4kFw67R6tgQsPPZk=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -5840,7 +5840,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			VKuedqP1y7aGKcwaDCMULwq2fa12mirYW/bqzLgp0C8=
+			pmnFiWoppVuKhm1rBz+CNK6vZiKGHGc/wSzNJttVSpY=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -5975,7 +5975,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			o+HocB/OnLkcHYXcQaOh1ESkUU6T+2S/tk7t3FUc3pA=
+			+5guDZyqsqNKUofn3MvSh5hyxqImuEmlnc7aDBYDpZ8=
 			</data>
 		</dict>
 		<key>PlugIns/ownCloud Share Extension.appex/pt-BR.lproj/InfoPlist.strings</key>
@@ -6260,7 +6260,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			P1KuQH7DaZOzCsDK0vj1OEqk3EsP04V4Vy844lfu/bs=
+			QH8EvvHW4cBceFJoe2LRE1q1pKah4tEguN2OpDb1CUw=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -7609,7 +7609,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			N8vaPixbbRAJC3DsygUqLTP2tZ8f+7gc+IKk9PWE3A4=
+			zFLjs5VpxeAp/lLn0mxp/aTiZFtGrMSf/4zgAA6/pK4=
 			</data>
 			<key>optional</key>
 			<true/>

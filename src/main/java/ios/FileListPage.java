@@ -51,7 +51,7 @@ public class FileListPage extends CommonPage {
     @iOSXCUITFindBy(id = "Personal")
     private WebElement personal;
 
-    @iOSXCUITFindBy(xpath = "(//XCUIElementTypeButton[@name=\"Toggle sidebar\"])[2]")
+    @iOSXCUITFindBy(xpath = "(//XCUIElementTypeButton[@name=\"Show/Hide sidebar\"])[2]")
     private WebElement sideMenuOpener;
 
     @iOSXCUITFindBy(xpath = "//XCUIElementTypeStaticText[@name=\"Spaces\"]")
@@ -435,7 +435,7 @@ public class FileListPage extends CommonPage {
 
     public void openCard(String itemName) {
         Log.log(Level.FINE, "Starts: openCard for " + itemName);
-        findId("More").click();
+        findId("More for " + itemName).click();
     }
 
     public boolean isMarkedAsAvOffline(String itemName) {
