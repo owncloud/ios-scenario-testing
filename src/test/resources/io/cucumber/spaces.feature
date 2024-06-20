@@ -3,7 +3,7 @@ Feature: Spaces
 
   As a user
   I want to be able to check my available spaces
-  so that i can browse through and add share my content with other members
+  so that i can browse through and share my content with other members
 
   Background: User is logged in
     Given user Alice is logged in

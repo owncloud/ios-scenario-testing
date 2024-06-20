@@ -109,7 +109,7 @@ public class CommonPage {
         int startX = (int) (size.width * startx);
         int startY = (int) (size.height * starty);
         int endX = (int) (size.width * endx);
-        int endY = (int) (size.height * endy);
+        int endY = (int) (size.width * endy);
         PointerInput finger = new PointerInput(PointerInput.Kind.TOUCH, "finger");
         Sequence swipe = new Sequence(finger, 1);
         swipe.addAction(finger.createPointerMove(Duration.ofMillis(0),
