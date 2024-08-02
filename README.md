@@ -36,7 +36,7 @@ file](https://github.com/owncloud/ios-scenario-testing/archive/master.zip)
 
 Different requirements:
 
-* `Appium` instance running and reachable. Last Appium review: v2.0.0-beta.66
+* `Appium` instance running and reachable. Last Appium review: v2.11.2
 
 * At least, one iOS simulator attached and reachable.
 
@@ -93,7 +93,7 @@ To execute all tests but the ignored ones (or any other tagged ones):
 
 	export UDID_DEVICE=F10FFCD4-CE92-4F40-B246-9709A4D4086A
 	export OC_SERVER_URL=https://my.owncloud.server
-	export APPIUM_URL=localhost:4723/wd/hub
+	export APPIUM_URL=localhost:4723
 	./executeTests -t "not @ignore"
 
 The execution will display step by step how the scenario is being executed.
@@ -133,11 +133,11 @@ repository, which contains the base skeleton to start working.
 
 ## Versioning
 
-Up to date: 15/Feb/2024
+Up to date: 02/Aug/2024
 
 |||
 |:-- |:-: |
-| [Cucumber version](https://cucumber.io/docs/installation/java/) | 7.14.0 |
-| [Appium version](https://github.com/appium/appium/releases)| 2.5.1|
+| [Cucumber version](https://cucumber.io/docs/installation/java/) | 7.18.0 |
+| [Appium version](https://github.com/appium/appium/releases)| 2.11.2|
 | [Appium xcuitest driver version](https://github.com/appium/appium-xcuitest-driver/releases)| 5.16.1|
-| [Java client version](https://github.com/appium/java-client/releases) | 9.1.0 |
+| [Java client version](https://github.com/appium/java-client/releases) | 9.2.2 |
