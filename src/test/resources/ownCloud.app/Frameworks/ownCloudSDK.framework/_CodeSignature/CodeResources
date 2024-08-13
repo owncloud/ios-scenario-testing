@@ -10,11 +10,15 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		ohYu7ag6/mJbNNXsNYW8BMTFfy4=
+		zQchB++S/JGdAXBIYWQkOimXa3w=
 		</data>
 		<key>LICENSE</key>
 		<data>
 		hiS82uVbru8AzRHV38+mD2hxCgI=
+		</data>
+		<key>Signal Handling.md</key>
+		<data>
+		aCRf7U0n+/Ek683eGgMUuVd80IE=
 		</data>
 		<key>cs.lproj/Localizable.strings</key>
 		<dict>
@@ -175,6 +179,13 @@
 			<key>hash2</key>
 			<data>
 			jOtLnuWt7d5Hsx6XXB2QxzrSe2sWWh3NgMfFRetluQM=
+			</data>
+		</dict>
+		<key>Signal Handling.md</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			pKLyQYGdmMAMP31Q1282BeET9AuqQGjpF6Wqg7M+pHY=
 			</data>
 		</dict>
 		<key>cs.lproj/Localizable.strings</key>

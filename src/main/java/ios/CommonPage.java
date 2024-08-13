@@ -49,6 +49,7 @@ public class CommonPage {
     protected static Actions actions;
     private static final SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMdd_HHmmss");
     protected String authType = "";
+    protected static final int WAIT_TIME = 7;
 
     public CommonPage() {
         actions = new Actions(driver);

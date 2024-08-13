@@ -141,7 +141,7 @@ public class FileListPage extends CommonPage {
             findId(idPermission).click();
         }
         //Wait till gallery loads. When the "Cancel" button is present
-        waitById(5, "Cancel");
+        waitById(WAIT_TIME, "Cancel");
     }
 
     public void openSidebar() {
