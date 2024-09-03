@@ -71,7 +71,7 @@ public class AppiumManager {
         return driver;
     }
 
-    //Check https://appium.io/docs/en/2.5/guides/caps/
+    //Check https://appium.github.io/appium-xcuitest-driver/latest/reference/capabilities/
     private static void setCapabilities(DesiredCapabilities capabilities) {
 
         capabilities.setCapability("appium:platformName", "iOS");

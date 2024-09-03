@@ -150,11 +150,11 @@
 		</data>
 		<key>Frameworks/OpenSSL.framework/Info.plist</key>
 		<data>
-		T3R8k6GWQ2EGOBANRqGhYFtBhtE=
+		1fmnrzc1+fTlJCB5QahopmxgsCE=
 		</data>
 		<key>Frameworks/OpenSSL.framework/OpenSSL</key>
 		<data>
-		48vhEKGthLq0auQxLGw56jng7mg=
+		ogTfys0y4RmNnEpQvHUep8gOXoA=
 		</data>
 		<key>Frameworks/OpenSSL.framework/PrivacyInfo.xcprivacy</key>
 		<data>
@@ -162,7 +162,7 @@
 		</data>
 		<key>Frameworks/OpenSSL.framework/_CodeSignature/CodeResources</key>
 		<data>
-		Kaf3/Nk2xd0i54VVVweC+/PyEuY=
+		FuakLX8gxD4MdSc2Z3jrdeomQZg=
 		</data>
 		<key>Frameworks/PocketSVG_-31497440E1660FA1_PackageProduct.framework/Info.plist</key>
 		<data>
@@ -342,7 +342,7 @@
 		</dict>
 		<key>Frameworks/ownCloudApp.framework/ownCloudApp</key>
 		<data>
-		O/28kVr+JJ0vl7lonHipYdS+dLk=
+		sE1mycGYbiRQ5sBgYcZU3L/rks0=
 		</data>
 		<key>Frameworks/ownCloudApp.framework/pt-BR.lproj/Localizable.strings</key>
 		<dict>
@@ -710,7 +710,7 @@
 		</data>
 		<key>Frameworks/ownCloudSDK.framework/Info.plist</key>
 		<data>
-		zQchB++S/JGdAXBIYWQkOimXa3w=
+		+TmN4YvDENxHUsNDbDg+zvHt2DI=
 		</data>
 		<key>Frameworks/ownCloudSDK.framework/LICENSE</key>
 		<data>
@@ -722,7 +722,7 @@
 		</data>
 		<key>Frameworks/ownCloudSDK.framework/_CodeSignature/CodeResources</key>
 		<data>
-		dMfKIELHvrTk7iQtlbMXQCKtVXA=
+		KyPWWTWNT1/fJnpIHyCmR4ZvYj0=
 		</data>
 		<key>Frameworks/ownCloudSDK.framework/cs.lproj/Localizable.strings</key>
 		<dict>
@@ -816,7 +816,7 @@
 		</dict>
 		<key>Frameworks/ownCloudSDK.framework/ownCloudSDK</key>
 		<data>
-		Sa9QgQXzq4KxVGfTWPVAEn642Bo=
+		1ex9omBYl6octhrynKC865ZbT4M=
 		</data>
 		<key>Frameworks/ownCloudSDK.framework/pt-BR.lproj/Localizable.strings</key>
 		<dict>
@@ -976,7 +976,7 @@
 		</dict>
 		<key>Frameworks/ownCloudUI.framework/ownCloudUI</key>
 		<data>
-		FWfI02gakKB6ZDB0DJ9tWn3nDnA=
+		d7odiMbOgqu6Wqnu06ZPekmvZq8=
 		</data>
 		<key>Frameworks/ownCloudUI.framework/pt-BR.lproj/Localizable.strings</key>
 		<dict>
@@ -1034,7 +1034,7 @@
 		</dict>
 		<key>Info.plist</key>
 		<data>
-		59lRIeUjRZCXldbO+fOuasp83Ck=
+		Uc/w4Y3XQGZR+0SMfJWzHSMMGDU=
 		</data>
 		<key>LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib</key>
 		<data>
@@ -3625,14 +3625,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			YKu2bDyWCSetUbEiMpjc43nQ8Ca8mUo5Pt6shpMDF0I=
+			7mT/E2SEVXk9Nz1Xg2U3zxgBoN+OyFP6CFfxseYCugA=
 			</data>
 		</dict>
 		<key>Frameworks/OpenSSL.framework/OpenSSL</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			NY0KhBbQ0X3xeFno2a7j6eujiH/iUJbNs8nXTs2+9x8=
+			sZee7nBGEDXodw5FZbejDcPAXZdoM4YB8ElCHvPc2rA=
 			</data>
 		</dict>
 		<key>Frameworks/OpenSSL.framework/PrivacyInfo.xcprivacy</key>
@@ -3646,7 +3646,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			q/pih0nqLRZ/JovEEkSkyr9J9QHlpoMjXCqxgNeqT6E=
+			aD61XtHXfg6NhJ8Z8yAnGkVIjYyPCW4J0GAKgdr2GnA=
 			</data>
 		</dict>
 		<key>Frameworks/PocketSVG_-31497440E1660FA1_PackageProduct.framework/Info.plist</key>
@@ -3880,7 +3880,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			CN9xfv80kdYSSZpJ59jksTMu7UEznqI/cCShP2QLw9U=
+			0erunigU/5rFWXFQH0N7mN/UAW/mMLyzV5ym00m+6cM=
 			</data>
 		</dict>
 		<key>Frameworks/ownCloudApp.framework/pt-BR.lproj/Localizable.strings</key>
@@ -4362,7 +4362,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			rz3ZNvJ3keE2E+2N72oOC+u6SVur7rMnngGCj/0vN80=
+			rxJBtllMMaEr/rAKqZfVF7U5mpZ0nRrxfbctyi6NGqI=
 			</data>
 		</dict>
 		<key>Frameworks/ownCloudSDK.framework/LICENSE</key>
@@ -4383,7 +4383,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			tz9L+IpPo2iPCrwyblECE1oeBPCuWoShoha5wEnLuwU=
+			ZeXH7Jm15bC+Fpfr21EGg4DSVZQvwWfKFs6bb8RtEpQ=
 			</data>
 		</dict>
 		<key>Frameworks/ownCloudSDK.framework/cs.lproj/Localizable.strings</key>
@@ -4480,7 +4480,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			JHb03PeHn8oHV3z4OasdBenSX7GSOVRQLGg6ynWmuCQ=
+			pwGiz2k/vx+zb/y2IVtjUPtF4F+oJDIwHiWGS9BuX7Y=
 			</data>
 		</dict>
 		<key>Frameworks/ownCloudSDK.framework/pt-BR.lproj/Localizable.strings</key>
@@ -4652,7 +4652,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Kb3Vu1qA2rMnkhntLLmiC6tGMOO+taXurj4uBTbBo6E=
+			Bc5Mvhj1/h6LGY/SvsLAfIeaWQKlk1LbxhnSs9jEa78=
 			</data>
 		</dict>
 		<key>Frameworks/ownCloudUI.framework/pt-BR.lproj/Localizable.strings</key>

@@ -134,12 +134,10 @@ public class FileListPage extends CommonPage {
 
     public void uploadFromGallery() {
         Log.log(Level.FINE, "Starts: Upload file from Gallery");
-        String idPermission = "Allow Full Access";
         openPlusButton();
         uploadFile.click();
-        if (!findListId(idPermission).isEmpty()) {
-            findId(idPermission).click();
-        }
+        // Driver doesn't recognize the dialog. Not in DOM. Solution: clicking coordinates
+        tap(190,590);
         //Wait till gallery loads. When the "Cancel" button is present
         waitById(WAIT_TIME, "Cancel");
     }

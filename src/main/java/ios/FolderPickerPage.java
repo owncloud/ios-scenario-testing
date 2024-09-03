@@ -73,9 +73,8 @@ public class FolderPickerPage extends CommonPage {
         } else if (operation.equals("copy")) {
             findXpath(xpath_copy).click();
         }
-        if (dontAllow.size() > 0) {
-            dontAllow.get(0).click();
-        }
+        // Driver doesn't recognize the dialog. Not in DOM. Solution: clicking coordinates
+        tap (150,500);
     }
 
     public void cancel() {

@@ -136,6 +136,16 @@ public class CommonPage {
 
     }
 
+    public void tap(int X, int Y) {
+        Log.log(Level.FINE, "Starts: tap on X: " + X + ", Y: " + Y);
+        PointerInput finger = new PointerInput(PointerInput.Kind.TOUCH, "finger");
+        Sequence tapSeq = new Sequence(finger, 1);
+        tapSeq.addAction(finger.createPointerMove(Duration.ofSeconds(4), PointerInput.Origin.viewport(), X, Y))
+                .addAction(finger.createPointerDown(PointerInput.MouseButton.LEFT.asArg()))
+                .addAction(finger.createPointerUp(PointerInput.MouseButton.LEFT.asArg()));
+        driver.perform(Arrays.asList(tapSeq));
+    }
+
     public void browse(String folderName) {
         Log.log(Level.FINE, "Starts: browse to " + folderName);
         findId(folderName).click();

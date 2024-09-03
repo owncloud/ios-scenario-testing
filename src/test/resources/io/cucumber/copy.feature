@@ -34,6 +34,7 @@ Feature: Copy item
       | type | item      | target      | menu    |
       | file | copy3.txt | copy3target | Actions |
 
+  @copy4
   Scenario: Copy a folder to another place with same item name
     Given the following items have been created in Alice account
       | folder | copy4             |

@@ -52,7 +52,7 @@ public class ShortcutPage extends CommonPage {
     }
 
     public boolean isBrowserVisible() {
-        return safariBrowser.isDisplayed();
+        return safariBrowser.isEnabled();
     }
 
 }
