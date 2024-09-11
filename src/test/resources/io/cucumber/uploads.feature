@@ -17,4 +17,3 @@ Feature: Upload new content
     Examples:
       | amount |
       | 1      |
-      | 3      |

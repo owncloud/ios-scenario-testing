@@ -37,12 +37,13 @@ Feature: Shortcuts
   @openshortcut
   Rule: Open shortcut
 
-  @smoke
+  @smoke @ignore
   Scenario Outline: Open shortcut over URL
     Given the following items have been created in Alice account
       | <type> | <name>.url |
     When Alice opens the shortcut <name>.url
     And Alice opens the link
+    # Browser not matchable for latest versions of xcuitest driver
     Then Alice should see the browser
 
     Examples:

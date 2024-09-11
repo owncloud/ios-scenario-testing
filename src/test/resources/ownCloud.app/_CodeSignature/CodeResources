@@ -18,7 +18,7 @@
 		</data>
 		<key>Base.lproj/Intents.intentdefinition</key>
 		<data>
-		Kja3huGEmXYvPtbZMHjswkvFLp4=
+		JIHlJcLiNs3u++yzLOahCYSAwMg=
 		</data>
 		<key>Branding.plist</key>
 		<data>
@@ -342,7 +342,7 @@
 		</dict>
 		<key>Frameworks/ownCloudApp.framework/ownCloudApp</key>
 		<data>
-		sE1mycGYbiRQ5sBgYcZU3L/rks0=
+		qWcKFra6IhT17eV9xNobYnaoKu8=
 		</data>
 		<key>Frameworks/ownCloudApp.framework/pt-BR.lproj/Localizable.strings</key>
 		<dict>
@@ -596,7 +596,7 @@
 		</dict>
 		<key>Frameworks/ownCloudAppShared.framework/ownCloudAppShared</key>
 		<data>
-		ZPWLUt60l+FAFf7xfPdzu/cZxTc=
+		AqMFa5a3avq+lerZnOcNbdvKqRQ=
 		</data>
 		<key>Frameworks/ownCloudAppShared.framework/owncloud-logo.tvg</key>
 		<data>
@@ -710,7 +710,7 @@
 		</data>
 		<key>Frameworks/ownCloudSDK.framework/Info.plist</key>
 		<data>
-		+TmN4YvDENxHUsNDbDg+zvHt2DI=
+		dOvB5/M8yKw70DxmgBvslKl4u1M=
 		</data>
 		<key>Frameworks/ownCloudSDK.framework/LICENSE</key>
 		<data>
@@ -722,7 +722,7 @@
 		</data>
 		<key>Frameworks/ownCloudSDK.framework/_CodeSignature/CodeResources</key>
 		<data>
-		KyPWWTWNT1/fJnpIHyCmR4ZvYj0=
+		NNJn6JVawFORl0Q98MOHxlvU2rI=
 		</data>
 		<key>Frameworks/ownCloudSDK.framework/cs.lproj/Localizable.strings</key>
 		<dict>
@@ -816,7 +816,7 @@
 		</dict>
 		<key>Frameworks/ownCloudSDK.framework/ownCloudSDK</key>
 		<data>
-		1ex9omBYl6octhrynKC865ZbT4M=
+		qzygr5u2f6J7Ks7BWUD7J/5ZxW4=
 		</data>
 		<key>Frameworks/ownCloudSDK.framework/pt-BR.lproj/Localizable.strings</key>
 		<dict>
@@ -976,7 +976,7 @@
 		</dict>
 		<key>Frameworks/ownCloudUI.framework/ownCloudUI</key>
 		<data>
-		d7odiMbOgqu6Wqnu06ZPekmvZq8=
+		7gmfhjDJIQd+fimMfdxjUV6Ipwc=
 		</data>
 		<key>Frameworks/ownCloudUI.framework/pt-BR.lproj/Localizable.strings</key>
 		<dict>
@@ -1034,7 +1034,7 @@
 		</dict>
 		<key>Info.plist</key>
 		<data>
-		Uc/w4Y3XQGZR+0SMfJWzHSMMGDU=
+		lPVQFpPV8EtU9IClvXbTu077kjA=
 		</data>
 		<key>LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib</key>
 		<data>
@@ -1172,7 +1172,7 @@
 		</dict>
 		<key>PlugIns/ownCloud Action Extension.appex/ownCloud Action Extension</key>
 		<data>
-		pkfNXgSbw5tBEmnO00u0tRBXl9E=
+		t/B4F64/tD7uDpRiHSXZ3YghD68=
 		</data>
 		<key>PlugIns/ownCloud File Provider UI.appex/Base.lproj/MainInterface.storyboardc/CancelLabelViewController.nib</key>
 		<dict>
@@ -1323,41 +1323,13 @@
 		<data>
 		zOR5FX9md3EQcmCiasa30U+JKE4=
 		</data>
-		<key>PlugIns/ownCloud File Provider.appex/PocketSVG_PocketSVG.bundle/Info.plist</key>
-		<data>
-		ezCo70GM7gh7KJZhTBXa93MiR4M=
-		</data>
-		<key>PlugIns/ownCloud File Provider.appex/PocketSVG_PocketSVG.bundle/SVGColors.plist</key>
-		<data>
-		x9psQztRRBIpueBYLYfeo/fOfoo=
-		</data>
-		<key>PlugIns/ownCloud File Provider.appex/PocketSVG_PocketSVG.bundle/_CodeSignature/CodeDirectory</key>
-		<data>
-		4GvK18IKXTanpgKm4+isUpav7XQ=
-		</data>
-		<key>PlugIns/ownCloud File Provider.appex/PocketSVG_PocketSVG.bundle/_CodeSignature/CodeRequirements</key>
-		<data>
-		OnX22wWFKRSOFN1+obRynMCeyXM=
-		</data>
-		<key>PlugIns/ownCloud File Provider.appex/PocketSVG_PocketSVG.bundle/_CodeSignature/CodeRequirements-1</key>
-		<data>
-		Wl9nMu1SMObFjSD/oEwr3rgajjU=
-		</data>
-		<key>PlugIns/ownCloud File Provider.appex/PocketSVG_PocketSVG.bundle/_CodeSignature/CodeResources</key>
-		<data>
-		E2rDJx1Y/TvBcVe+GTVw0br2EZk=
-		</data>
-		<key>PlugIns/ownCloud File Provider.appex/PocketSVG_PocketSVG.bundle/_CodeSignature/CodeSignature</key>
-		<data>
-		2jmj7l5rSw0yVb/vlWAYkK/YBwk=
-		</data>
 		<key>PlugIns/ownCloud File Provider.appex/PrivacyInfo.xcprivacy</key>
 		<data>
 		apH8VatkxzeYJC/UN4aujlBCyi4=
 		</data>
 		<key>PlugIns/ownCloud File Provider.appex/_CodeSignature/CodeResources</key>
 		<data>
-		1rz4/A1womqMGfoCIA2up3cRw7c=
+		TeAkAz140nA8hRxhsl2+FZ9Y5ps=
 		</data>
 		<key>PlugIns/ownCloud File Provider.appex/en.lproj/Localizable.strings</key>
 		<dict>
@@ -1379,13 +1351,13 @@
 		</dict>
 		<key>PlugIns/ownCloud File Provider.appex/ownCloud File Provider</key>
 		<data>
-		tW3Qt+5/a4XJAA+ypna6DAUIBQ8=
+		u8bMvLhJQ1Paw2wr7qNI1005RgU=
 		</data>
 		<key>PlugIns/ownCloud Intents.appex/Base.lproj/Intents.intentdefinition</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			Kja3huGEmXYvPtbZMHjswkvFLp4=
+			JIHlJcLiNs3u++yzLOahCYSAwMg=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -1484,7 +1456,7 @@
 		</data>
 		<key>PlugIns/ownCloud Intents.appex/_CodeSignature/CodeResources</key>
 		<data>
-		SAgnHCijZGxb6Kea1LKzqixehgU=
+		lfhl4q8QCU3nFMtdBs4UEgWKbGE=
 		</data>
 		<key>PlugIns/ownCloud Intents.appex/ar.lproj/Intents.strings</key>
 		<dict>
@@ -1596,7 +1568,7 @@
 		</dict>
 		<key>PlugIns/ownCloud Intents.appex/ownCloud Intents</key>
 		<data>
-		HVp2giEUnU6f5lGvLsQ9sFKm7iw=
+		uXCog1IX5/q/ZZcoIyeqM6ehT9M=
 		</data>
 		<key>PlugIns/ownCloud Intents.appex/pt-BR.lproj/Intents.strings</key>
 		<dict>
@@ -1970,7 +1942,7 @@
 		</dict>
 		<key>PlugIns/ownCloud Share Extension.appex/ownCloud Share Extension</key>
 		<data>
-		EEaB+Si1zVzGS39GDsOkJGhinvk=
+		r6R+pWEjp89cxP1BAtKPxgNxZk8=
 		</data>
 		<key>PlugIns/ownCloud Share Extension.appex/pt-BR.lproj/InfoPlist.strings</key>
 		<dict>
@@ -3394,7 +3366,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			YvTg1zq3vOEFpPXoq+HezCCP1pHABH7DdT0Nu3H/+tA=
+			/yuxR97s19C9g8F+ElIZkXRLE0acCSjid81UYIQqnqs=
 			</data>
 		</dict>
 		<key>Branding.plist</key>
@@ -3880,7 +3852,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			0erunigU/5rFWXFQH0N7mN/UAW/mMLyzV5ym00m+6cM=
+			702BXqFBNT7bLevCuUSM/aG3u8H7qzRwr4mfYPQk0U4=
 			</data>
 		</dict>
 		<key>Frameworks/ownCloudApp.framework/pt-BR.lproj/Localizable.strings</key>
@@ -4203,7 +4175,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			FOTZ6XDSKWAI7uDWwkjZZtnsxtr08nDmCCjIXVDQ4Lc=
+			cmYphikoiK/vW0e/94NrQvTr9V6u8+tqPwTiLaVQB9E=
 			</data>
 		</dict>
 		<key>Frameworks/ownCloudAppShared.framework/owncloud-logo.tvg</key>
@@ -4362,7 +4334,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			rxJBtllMMaEr/rAKqZfVF7U5mpZ0nRrxfbctyi6NGqI=
+			cXlP8gkUonQkFpTwCAc3LsK+akKpLAxrUHKrQkPLtRs=
 			</data>
 		</dict>
 		<key>Frameworks/ownCloudSDK.framework/LICENSE</key>
@@ -4383,7 +4355,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			ZeXH7Jm15bC+Fpfr21EGg4DSVZQvwWfKFs6bb8RtEpQ=
+			rFUYTTm4LizOzbIqppWMzOFYKLDQ2iimH6oOYW7VVwA=
 			</data>
 		</dict>
 		<key>Frameworks/ownCloudSDK.framework/cs.lproj/Localizable.strings</key>
@@ -4480,7 +4452,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			pwGiz2k/vx+zb/y2IVtjUPtF4F+oJDIwHiWGS9BuX7Y=
+			LieyVw9reJaztSPmLLGZjcOmP6WW3vrCJtx5NAecJ8k=
 			</data>
 		</dict>
 		<key>Frameworks/ownCloudSDK.framework/pt-BR.lproj/Localizable.strings</key>
@@ -4652,7 +4624,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Bc5Mvhj1/h6LGY/SvsLAfIeaWQKlk1LbxhnSs9jEa78=
+			gTJvlKWOPKODDKShwI5KgnmbUmpaFF1zFdbbJCGiCzI=
 			</data>
 		</dict>
 		<key>Frameworks/ownCloudUI.framework/pt-BR.lproj/Localizable.strings</key>
@@ -4927,7 +4899,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			1xfyhwVjluaCB6NKMxBvp9gkyRWxz97KbZk9x4ZYzd4=
+			znPsXI8z1lQUy2McmbeUyA7RCIbdHpZXtROaRnMqN1U=
 			</data>
 		</dict>
 		<key>PlugIns/ownCloud File Provider UI.appex/Base.lproj/MainInterface.storyboardc/CancelLabelViewController.nib</key>
@@ -5157,55 +5129,6 @@
 			rycekCeGe+ppHCFERqrVc02sdSac6XqE0bKAMBB7+6U=
 			</data>
 		</dict>
-		<key>PlugIns/ownCloud File Provider.appex/PocketSVG_PocketSVG.bundle/Info.plist</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			WeNLLiEPwCne3gZHtKHt6JGDqSSENcN+Z4/YTjsuU7M=
-			</data>
-		</dict>
-		<key>PlugIns/ownCloud File Provider.appex/PocketSVG_PocketSVG.bundle/SVGColors.plist</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			PfeuGHe81onN24sPHmMSmvyV8BY3terIbdYaoK4Wgxk=
-			</data>
-		</dict>
-		<key>PlugIns/ownCloud File Provider.appex/PocketSVG_PocketSVG.bundle/_CodeSignature/CodeDirectory</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			qtNCYFyYHAMvr7etWGbKcXMhAJWs704p4PQMNlD2M1A=
-			</data>
-		</dict>
-		<key>PlugIns/ownCloud File Provider.appex/PocketSVG_PocketSVG.bundle/_CodeSignature/CodeRequirements</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			mHkgkE6rZQ51eIwFSqCwUk5qgL/HGqMt+NI3phdD+YY=
-			</data>
-		</dict>
-		<key>PlugIns/ownCloud File Provider.appex/PocketSVG_PocketSVG.bundle/_CodeSignature/CodeRequirements-1</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			1y9F4u91Ga21HHl/e0H+t5FStJVjbpBy4REjqsb0fZk=
-			</data>
-		</dict>
-		<key>PlugIns/ownCloud File Provider.appex/PocketSVG_PocketSVG.bundle/_CodeSignature/CodeResources</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			NHsEv7EHSjKjtgTzenoMJux6+cgbABclVQHpfJwYZG4=
-			</data>
-		</dict>
-		<key>PlugIns/ownCloud File Provider.appex/PocketSVG_PocketSVG.bundle/_CodeSignature/CodeSignature</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=
-			</data>
-		</dict>
 		<key>PlugIns/ownCloud File Provider.appex/PrivacyInfo.xcprivacy</key>
 		<dict>
 			<key>hash2</key>
@@ -5217,7 +5140,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			eWkfjCz53iBiR3p18cW9JZw/u0cLkapn4o/aU41uQxA=
+			xS6u/4jjtPCQwseoPqz4ejO1q0huvTGrfVqCC4YpA5Q=
 			</data>
 		</dict>
 		<key>PlugIns/ownCloud File Provider.appex/en.lproj/Localizable.strings</key>
@@ -5242,14 +5165,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Uzrkpu0A/xWuAKoILA2w+yTDwGJHO/09bzcxYNOG4Ho=
+			MgyVt1xqi2lQP979432qgLrFJeZnYuBOJmaDmizSuoA=
 			</data>
 		</dict>
 		<key>PlugIns/ownCloud Intents.appex/Base.lproj/Intents.intentdefinition</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			YvTg1zq3vOEFpPXoq+HezCCP1pHABH7DdT0Nu3H/+tA=
+			/yuxR97s19C9g8F+ElIZkXRLE0acCSjid81UYIQqnqs=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -5419,7 +5342,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			hUNRDBtLUUdeuzlVScD+b9RSGgTO5i04ntUiw9MoI7c=
+			MYvwBlU/+pY3nEzdetkO+2+FfJfYlT3R/s46QaeSU9M=
 			</data>
 		</dict>
 		<key>PlugIns/ownCloud Intents.appex/ar.lproj/Intents.strings</key>
@@ -5534,7 +5457,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			k5ZkCAyNMJrFiEo8rZP653OvqzkyRt8nklJ8lZprUHw=
+			yF4K7LlN5ELnA69nZOIXj95ERZHDMxCxS082ysZ15AQ=
 			</data>
 		</dict>
 		<key>PlugIns/ownCloud Intents.appex/pt-BR.lproj/Intents.strings</key>
@@ -5986,7 +5909,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			d8Jq136JJJGGOynTa2zvMswAjPd1zIc4qzy4OAnE7r8=
+			V0bq5bxVwahNUQao9YTE4MnPOZmxBgPkP50ZHOgkwxg=
 			</data>
 		</dict>
 		<key>PlugIns/ownCloud Share Extension.appex/pt-BR.lproj/InfoPlist.strings</key>

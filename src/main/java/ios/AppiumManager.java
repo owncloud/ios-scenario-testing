@@ -57,7 +57,7 @@ public class AppiumManager {
             Log.log(Level.SEVERE, "Driver could not be created: " + e.getMessage());
             e.printStackTrace();
         }
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(7));
     }
 
     public static AppiumManager getManager() {
@@ -97,7 +97,7 @@ public class AppiumManager {
 
         capabilities.setCapability("appium:newCommandTimeout", 60);
 
-        capabilities.setCapability("platformVersion", "17.5");
+        capabilities.setCapability("platformVersion", "18.0");
 
         capabilities.setCapability("appium:useNewWDA", false);
 

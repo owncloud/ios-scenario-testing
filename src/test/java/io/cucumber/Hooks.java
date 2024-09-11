@@ -43,6 +43,7 @@ public class Hooks {
     }
 
     private void cleanUp() throws Throwable {
+        Log.log(Level.FINE, "CLEAN UP STARTS");
         //First, remove leftovers in root folder for every user
         ArrayList<String> userNames = new ArrayList<>(Arrays.asList("Alice", "Bob"));
         for (String userToClean: userNames) {
@@ -56,5 +57,6 @@ public class Hooks {
         if (world.getAuthAPI().checkAuthMethod().equals("OIDC")){ //remove spaces
             world.getGraphAPI().removeSpacesOfUser();
         }
+        Log.log(Level.FINE, "CLEAN UP ENDS");
     }
 }

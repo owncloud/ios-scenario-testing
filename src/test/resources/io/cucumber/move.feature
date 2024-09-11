@@ -59,6 +59,8 @@ Feature: Move item
       | itemType | itemName  | targetFolder | menu    |
       | file     | move6.txt | /            | Actions |
 
+  @ignore
+  #Ignored till problem with dialogs in DOM si fixed
   Scenario: Move a folder to another place with same item name
     Given the following items have been created in Alice account
       | folder | move7       |

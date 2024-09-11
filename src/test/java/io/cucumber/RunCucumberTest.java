@@ -21,8 +21,6 @@ public class RunCucumberTest {
     public static void beforeclass() {
         Log.init();
         Log.log(Level.FINE, "START EXECUTION\n");
-        //Accepting required system permissions
-        //AppiumManager.getManager().getDriver().switchTo().alert().accept();
     }
 
     // After the whole execution

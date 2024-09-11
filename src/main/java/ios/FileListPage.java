@@ -134,6 +134,7 @@ public class FileListPage extends CommonPage {
 
     public void uploadFromGallery() {
         Log.log(Level.FINE, "Starts: Upload file from Gallery");
+        refreshBySwipe();
         openPlusButton();
         uploadFile.click();
         // Driver doesn't recognize the dialog. Not in DOM. Solution: clicking coordinates

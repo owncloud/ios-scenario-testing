@@ -8,34 +8,6 @@
 		<data>
 		zOR5FX9md3EQcmCiasa30U+JKE4=
 		</data>
-		<key>PocketSVG_PocketSVG.bundle/Info.plist</key>
-		<data>
-		ezCo70GM7gh7KJZhTBXa93MiR4M=
-		</data>
-		<key>PocketSVG_PocketSVG.bundle/SVGColors.plist</key>
-		<data>
-		x9psQztRRBIpueBYLYfeo/fOfoo=
-		</data>
-		<key>PocketSVG_PocketSVG.bundle/_CodeSignature/CodeDirectory</key>
-		<data>
-		4GvK18IKXTanpgKm4+isUpav7XQ=
-		</data>
-		<key>PocketSVG_PocketSVG.bundle/_CodeSignature/CodeRequirements</key>
-		<data>
-		OnX22wWFKRSOFN1+obRynMCeyXM=
-		</data>
-		<key>PocketSVG_PocketSVG.bundle/_CodeSignature/CodeRequirements-1</key>
-		<data>
-		Wl9nMu1SMObFjSD/oEwr3rgajjU=
-		</data>
-		<key>PocketSVG_PocketSVG.bundle/_CodeSignature/CodeResources</key>
-		<data>
-		E2rDJx1Y/TvBcVe+GTVw0br2EZk=
-		</data>
-		<key>PocketSVG_PocketSVG.bundle/_CodeSignature/CodeSignature</key>
-		<data>
-		2jmj7l5rSw0yVb/vlWAYkK/YBwk=
-		</data>
 		<key>PrivacyInfo.xcprivacy</key>
 		<data>
 		apH8VatkxzeYJC/UN4aujlBCyi4=
@@ -61,55 +33,6 @@
 	</dict>
 	<key>files2</key>
 	<dict>
-		<key>PocketSVG_PocketSVG.bundle/Info.plist</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			WeNLLiEPwCne3gZHtKHt6JGDqSSENcN+Z4/YTjsuU7M=
-			</data>
-		</dict>
-		<key>PocketSVG_PocketSVG.bundle/SVGColors.plist</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			PfeuGHe81onN24sPHmMSmvyV8BY3terIbdYaoK4Wgxk=
-			</data>
-		</dict>
-		<key>PocketSVG_PocketSVG.bundle/_CodeSignature/CodeDirectory</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			qtNCYFyYHAMvr7etWGbKcXMhAJWs704p4PQMNlD2M1A=
-			</data>
-		</dict>
-		<key>PocketSVG_PocketSVG.bundle/_CodeSignature/CodeRequirements</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			mHkgkE6rZQ51eIwFSqCwUk5qgL/HGqMt+NI3phdD+YY=
-			</data>
-		</dict>
-		<key>PocketSVG_PocketSVG.bundle/_CodeSignature/CodeRequirements-1</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			1y9F4u91Ga21HHl/e0H+t5FStJVjbpBy4REjqsb0fZk=
-			</data>
-		</dict>
-		<key>PocketSVG_PocketSVG.bundle/_CodeSignature/CodeResources</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			NHsEv7EHSjKjtgTzenoMJux6+cgbABclVQHpfJwYZG4=
-			</data>
-		</dict>
-		<key>PocketSVG_PocketSVG.bundle/_CodeSignature/CodeSignature</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=
-			</data>
-		</dict>
 		<key>PrivacyInfo.xcprivacy</key>
 		<dict>
 			<key>hash2</key>

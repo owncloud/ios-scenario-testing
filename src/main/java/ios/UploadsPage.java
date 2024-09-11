@@ -42,7 +42,7 @@ public class UploadsPage extends CommonPage {
         Log.log(Level.FINE, "Items: " + listFiles.size());
         int mediaUploaded = 0;
         for (OCFile ocfile : listFiles) {
-            Log.log(Level.FINE, "Item: " + ocfile.getName());
+            Log.log(Level.FINE, "Item name: " + ocfile.getName());
             if ((ocfile.getName().contains("Photo-")) || (ocfile.getName().contains("Video-"))) {
                 mediaUploaded++;
             }
