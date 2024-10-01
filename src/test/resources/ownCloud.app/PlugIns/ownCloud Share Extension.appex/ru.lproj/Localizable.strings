@@ -1,1028 +1,1480 @@
-/*
-  Localizable.strings
-  ownCloud
-
-  Created by Pablo Carrascal on 13/03/2018.
-  Copyright © 2018 ownCloud GmbH. All rights reserved.
-*/
-
-/*
- * Copyright (C) 2018, ownCloud GmbH.
- *
- * This code is covered by the GNU Public License Version 3.
- *
- * For distribution utilizing Apple mechanisms please see https://owncloud.org/contribute/iOS-license-exception/
- * You should have received a copy of this license along with this program. If not, see <http://www.gnu.org/licenses/gpl-3.0.en.html>.
- *
- */
-
-/* Add / Edit Bookmark */
-"Edit account" = "Изменить учётную запись";
-"Add account" = "Добавить учетную запись";
-"Server URL" = "URL сервера";
-"https://example.com" = "https://example.com";
-"Continue" = "Продолжить";
-"Name" = "Название";
-"Example Server" = "Сервер для примера";
-"Show Certificate Details" = "Показать детали сертификата";
-"Connect" = "Подключиться";
-"Delete Authentication Data" = "Удалить данные аутентификации";
-"Authentication" = "Авторизация";
-"Username" = "Имя пользователя";
-"Password" = "Пароль";
-"Certificate Details" = "Детали сертификата";
-"Cancel" = "Отмена";
-"Approve" = "Подтвердить";
-"Error" = "Ошибка";
-"Issues" = "Проблемы";
-"Review Connection" = "Обзор соединения";
-"Authenticated via" = "Аутентифицрован через";
-"Authenticated as %@ via %@" = "Аутентификация как %@ через %@";
-"Edit" = "Редактировать";
-"Credentials" = "Учётные данные";
-"Rejected" = "Отклонено";
-"Passed" = "Прошло";
-"Accepted" = "Принято";
-"Validation Error" = "Ошибка проверки";
-"Certificate was rejected by user." = "Сертификат был отклонён пользователем.";
-"Certificate has issues.\nOpen 'Certificate Details' for more informations." = "Есть проблемы с сертификатом. Для получения подробностей откройте ‘Детали сертификата'.";
-"No issues found. Certificate passed validation." = "Не выявлено проблем. Сертификат прошёл проверку.";
-"Certificate may have issues, but was accepted by user.\nOpen 'Certificate Details' for more informations." = "С сертификатом возможно есть проблемы, но он был принят пользователем\nДля получения подробностей откройте 'Детали сертификата'.";
-"If you 'Continue', you will be prompted to allow the '{{app.name}}' app to open the {{authmethodName}} login page where you can enter your credentials." = "При нажатии кнопки «Продолжить» вам будет предложено разрешить приложению  \"{{app.name}}\" открыть страницу входа {{authmethodName}}, на которой вы сможете ввести свои учетные данные.";
-
-"Error opening %@" = "Ошибка при открытии %@";
-
-"Contacting server…" = "Соединение с сервером…";
-"Authenticating…" = "Авторизация…";
-
-"Fetching user information…" = "Получение информации о пользователе…";
-"Updating connection…" = "Соединение обновляется…";
-
-"Preparing account" = "Создать учётную запись";
-"Please wait…" = "Пожалуйста, ждите…";
-"Skip" = "Пропустить";
-
-"Missing hostname" = "Отсутствует имя сервера";
-"The entered URL does not include a hostname." = "Введённый адрес URL не содержит в себе имя сервера.";
-"Add account" = "Добавить учетную запись";
-"Server name" = "Имя сервера";
-"Server Password" = "Пароль сервера";
-"Server Username" = "Имя пользователя на сервере";
-"Show accounts" = "Показать учётные записи";
-"Setup complete" = "Настройка завершена";
-"Edit Login" = "Править логин";
-"Manage Storage" = "Управлять хранилищем";
-"Access Files" = "Доступ к файлам";
-"Log out" = "Выйти";
-"Retry" = "Повторить";
-
-/* Bookmark Info */
-"Bookmark Metadata" = "Описание закладки";
-
-/* Client */
-"Browse" = "Просмотр";
-"Files" = "Файлы";
-"Disconnect" = "Отключить";
-"Connecting…" = "Соединение…\n";
-"Connected." = "Соединено.";
-"Select" = "Выбрать";
-"Done" = "Выполнено";
-
-"Folder" = "Папка";
-
-"Stopped" = "Остановлено";
-"Started…" = "Запущено…";
-"Contents from cache." = "Содержимое из кэша.";
-"Waiting for server response…" = "Жду ответа сервера…";
-"This folder no longer exists." = "Эта папка больше не существует.";
-"Everything up-to-date." = "Всё обновлено.";
-"Please wait…" = "Пожалуйста, ждите…";
-"Sort by %@" = "Сортировка по %@";
-"Sort by" = "Упорядочить по";
-
-"name" = "имя";
-"kind" = "добрый";
-"size" = "размеру";
-"date" = "дате";
-"last used" = "последний используемый";
-
-"Tree" = "дерево";
-"Search folder" = "Поиск в папке";
-"Search tree" = "Дерево поиска";
-"Search from {{folder.name}}" = "Поиск по {{folder.name}}";
-"Search space" = "Поиск в пространстве";
-"Search {{space.name}}" = "Поиск {{space.name}}";
-"Search account" = "Поиск в учётной записи";
-"Enter a search term" = "Введите слово для поиска";
-"Search for users or groups" = "Поиск пользователей или групп";
-"Enter the user or group you want to invite." = "Введите пользователя или группу, которую вы хотите пригласить.";
-
-"Pending" = "Ожидается";
-"Show parent paths" = "Показать вышестоящие пути";
-"Reveal in folder" = "Показать в папке";
-
-"%@ of %@ used" = "Использовано %@ из %@";
-"Total: %@" = "Всего: %@";
-"%@ item | " = "%@ элемент | ";
-"%@ items | " = "%@ элементов | ";
-
-"{{itemCount}} items with {{totalSize}} total ({{fileCount}} files, {{folderCount}} folders)" = "{{itemCount}} элементов с {{totalSize}} общим размером ({{fileCount}} файлов, {{folderCount}} папок)";
-"{{remaining}} available" = "{{remaining}} доступно";
-
-"Loading…" = "Загрузка...";
-
-"Show more results" = "Показать больше результатов";
-
-"An error occurred" = "Произошла ошибка";
-
-/* Item Layouts */
-"List" = "Список";
-"Grid" = "Сетка";
-"Item grid" = "Сетка предметов";
-"Image grid" = "Сетка изображений";
-
-/* Saved searches */
-"Saved searches" = "Сохраненные поиски";
-"Saved search templates" = "Сохраненные шаблоны поиска";
-"Save search" = "Сохранить поиск";
-"Save as search template" = "Сохранить как шаблон поиска";
-
-"Name of saved search" = "Название сохраненного поиска";
-"Saved search" = "Сохраненный поиск";
-"Saved searches" = "Сохраненные поиски";
-"Name of template" = "Имя шаблона";
-"Search template" = "Шаблон поиска";
-"Search templates" = "Шаблоны поиска";
-
-/* Search scope */
-"Search scope" = "Область поиска";
-"Toggle Search Scope" = "Переключить область поиска";
-
-/* Static Login Setup */
-"Server error" = "Ошибка сервера";
-"The server doesn't support any allowed authentication method." = "Сервер не поддерживает ни один из допустимых методов аутентификации.";
-"The server doesn't support any known and allowed authentication method found." = "Сервер не поддерживает ни один из известных и разрешённых методов аутентификации.";
-"Retry detection" = "Обнаружение повторных попыток";
-"Enter your username and password" = "Введите ваше имя пользователя и пароль";
-"Please log in to authorize the app." = "Пожалуйста, войдите, чтобы авторизовать приложение.";
-"Welcome to %@" = "Добро пожаловать в %@";
-"Please enter a server URL" = "Пожалуйста введите адресную строку сервера";
-"Please pick a profile to begin setup" = "Пожалуйста, выберите профиль, чтобы начать установку";
-"The following steps will guide you through the setup process." = "Следующие шаги помогут вам в процессе настройки.";
-"Start setup" = "Начать настройку";
-"Open login page" = "Откройте страницу входа в систему";
-"If you 'Continue', you will be prompted to allow the '{{app.name}}' app to open the login page where you can enter your credentials." = "Если вы \"Продолжите\", вам будет предложено разрешить приложению \"{{app.name }}\" открыть страницу входа в систему, где вы сможете ввести свои учетные данные.";
-"Account setup complete" = "Настройка учетной записи завершена";
-"If you'd like to give the account a custom name, please enter it below:" = "Если вы хотите присвоить учетной записи собственное имя, пожалуйста, введите его ниже:";
-
-/* Single Account */
-"You are connected as\n%@" = "Вы подключены, как\n%@";
-"Login" = "Логин";
-"Wrong URL" = "Неверная ссылка";
-"Please enter a valid URL" = "Пожалуйста, введите правильную ссылку";
-"Missing Profile URL" = "Не хватает ссылки профиля";
-"The Profile '%@' does not have a URL configured.\nPlease provide a URL via configuration or MDM." = "Для профиля '%@' не настроена ссылка.\nПожалуйста, задайте URL через конфигурацию или MDM.";
-
-/* Client Messages */
-"No contents" = "нет содержимого";
-"This folder contains no files or folders." = "В этой папке нет ни файлов, ни подпапок.";
-"This folder is empty." = "Папка пуста.";
-"This folder is empty. Fill it with content:" = "Эта папка пуста. Заполните ее содержимым:";
-
-"Folder removed" = "Папка удалена";
-"This folder no longer exists on the server." = "Эта папка больше не существует на сервере.";
-"Are you sure you want to delete this item from the server?" = "Вы уверены, что хотите удалить этот элемент с сервера?";
-"Are you sure you want to delete these items from the server?" = "Вы уверены, что хотите удалить эти элементы с сервера?";
-"Multiple items" = "Несколько элементов";
-"Deleting '%@'" = "Удаление '%@'";
-"Renaming to %@" = "Переименование в %@";
-"Upload from your photo library" = "Загрзука из вашей фото-библиотеки";
-"Missing permissions" = "Не хватает разрешений";
-"This permission is needed to upload photos and videos from your photo library." = "Это разрешение необходимо для загрузки фото и видео из вашей библиотеки.";
-"Not now" = "Не сейчас";
-"Upload file" = "Загрузить файл";
-"Upload files" = "Закачать файлы";
-
-"No matches" = "Нет соответствий";
-"The search term you entered did not match any item in the selected scope." = "Введенный вами термин поиска не соответствует ни одному элементу в выбранной области видимости.";
-"There are no results for this search term" = "По данному запросу ничего не найдено";
-"No items found matching the search criteria." = "No items found matching the search criteria.";
-
-"Status" = "Статус";
-
-"Authorization failed" = "Авторизация не прошла";
-"The account has been disabled." = "Учётная запись была отключена.";
-"The server declined access with the credentials stored for this connection." = "Сервер отказал в доступе с учётными данными, сохранёнными для данного соединения.";
-"Access denied" = "Доступ запрещен";
-"The connection's access token has expired or become invalid. Sign in again to re-gain access." = "Токен доступа данного соединения устарел или стал недействительным. Перевойдите, чтобы восстановить доступ.";
-"No authentication data has been found for this connection." = "Для данного соединения не найдены данные аутентификации.";
-"Authentication with %@ is no longer allowed. Re-authentication needed." = "Аутентификация через %@ больше не допустима. Нужно перевойти.";
-"Sign in" = "Войти";
-"Continue offline" = "Продолжить без сети";
-"Media upload in the previous session was incomplete since the application was terminated" = "Загрузка данных в прошлом сеансе не была завершена, так как приложение было завершено";
-
-"Waiting for response from login session in external browser…" = "Жду ответа от сеанса, вошедшего во внешнем браузере…";
-
-"All done" = "Всё выполнено";
-"No pending messages or ongoing actions." = "Нет ожидаемых сообщений или продолжающихся действий.";
-
-"Show all" = "Показать всё";
-"+ %ld more" = "+ %ld ещё";
-"Apply choice to all similar issues" = "Применить выбор ко всем похожим случаям";
-"Apply to all" = "Применить ко всем";
-
-/* Server List*/
-"Cancel" = "Отмена";
-"OK" = "ОК";
-
-"'%@' is currently locked" = "'%@' сейчас заблокирована";
-"An operation is currently performed that prevents connecting to '%@'. Please try again later." = "Сейчас выполняется операция, препятствующая обращению к '%@'. Пожалуйста, попробуйте снова позже.";
-"Do you really want to disconnect from your '%@' account?" = "Вы действительно хотите отключиться от вашей учётной записи '%@'?";
-"This will remove all locally stored file copies from your device." = "Это удалит все локально сохранённые копии файлов с вашего устройства.";
-"Really delete '%@'?" = "Действительно удалить '%@'?";
-"Do you want to log out from '%@'?" = "Do you want to log out from '%@'?";
-"This will also delete all locally stored file copies." = "Это так же удалит все локально сохранённые копии файла.";
-"Delete" = "Удалить";
-"Remove" = "Удалить";
-"Removing of '%@' failed" = "Не удалось удалить '%@'";
-"Accounts" = "Учётные записи";
-
-"Help" = "Помощь";
-"Feedback" = "Обратная связь";
-"Welcome" = "Добро пожаловать";
-"Thanks for choosing %@! \n Start by adding your account." = "Спасибо, что выбрали %@! \n Начните с добавления своей учётной записи.";
-
-/* Settings Messages */
-
-"Security" = "Безопасность";
-"Passcode Lock" = "Блокировка кодом доступа";
-"Face ID" = "Идентификатор лица";
-"Touch ID" = "Touch ID";
-"Unlock using %@?" = "Unlock using %@?";
-"Videos" = "Видео";
-"Photos" = "Фото";
-"Wifi only" = "Только через WiFi";
-"Settings" = "Настройки";
-"Lock application" = "Блокировка приложения";
-"Upload videos via WiFi only" = "Загрузка видео только через WiFi";
-"Upload pictures via WiFi only" = "Загрузка изображений только через Wi-Fi";
-"More" = "Больше";
-"Documentation" = "Документация";
-"Send feedback" = "Отправить свой отзыв";
-"Recommend to a friend" = "Рекомендовать другу";
-"Privacy Policy" = "Политика конфиденциальности";
-"Terms Of Use" = "Условия использования";
-"Acknowledgements" = "Благодарности";
-"license" = "license";
-"Portions of this app may utilize the following copyrighted material, the use of which is hereby acknowledged." = "Части этого приложения могут использовать нижеперечисленный материал, защищённый авторским правом, и здесь подтверждается его использование.";
-"Video upload path" = "Путь загрузки видео";
-"Photo upload path" = "Путь загрузки фото";
-"Immediately" = "Немедленно";
-"After 1 minute" = "Через 1 минуту";
-"After 5 minutes" = "Через 5 минут";
-"After 30 minutes" = "Через 30 минут";
-"After %ld seconds" = "After %ld seconds";
-"If you choose \"Immediately\" the App will be locked, when it is no longer in foreground." = "Если вы выберете «немедленно», то приложение будет заблокировано, как только перестанет быть на переднем плане.";
-"Please configure an email account" = "Пожалуйста, настройте учётную запись почты";
-"You need to configure an email account first to be able to send emails." = "Чтобы иметь возможность отправлять сообщения, вам нужно сначала настроить учётную запись почты.";
-"Do you want to open the following URL?" = "Вы хотите открыть следующую ссылку?";
-"Passcode option" = "Passcode option";
-"Please choose how many digits you want to use for the passcode lock?" = "Please choose how many digits you want to use for the passcode lock?";
-"%ld digit code" = "%ld digit code";
-"Enter a new code with %ld digits" = "Enter a new code with %ld digits";
-"To use the app, you need to create a passcode." = "To use the app, you need to create a passcode.";
-"Passcode setup" = "Passcode setup";
-
-"%@%@ %@ version %@ build %@\n(app: %@, sdk: %@)" = "%@%@ %@ версия %@ сборка %@\n(приложение: %@, sdk: %@)";
-"beta" = "бета";
-"release" = "выпуск";
-"App Version" = "Версия приложения";
-"Version information were copied to the clipboard" = "Информация о версии скопирована в буфер обмена";
-
-
-/* User Interface Settings */
-"Theme" = "Тема";
-"User Interface" = "Интерфейс пользователя";
-"Dark" = "Тёмная";
-"Dark Blue" = "Dark Blue";
-"Dark Web" = "Dark Web";
-"Light" = "Светлая";
-"Classic" = "Классическая";
-"System" = "Система";
-"System Appeareance" = "Внешний вид системы";
-
-/* Log settings */
-"Log Files" = "Лог-файлы";
-"Browse log files" = "Просмотр лог файлов";
-"Share" = "Общий доступ";
-"Delete all log files?" = "Удалить все лог-файлы?";
-"Delete all" = "Удалить все";
-
-"Log Level" = "Уровень журнала";
-"Log Destinations" = "Направления журнала";
-"Privacy" = "Конфиденциальность";
-
-"Logging" = "Журналирование";
-"Enable logging" = "Включить журналирование";
-"Options" = "Опции";
-
-"Off" = "Выключено";
-"Info" = "Инфо";
-"Default" = "По умолчанию";
-"Warning" = "Предупреждение";
-"Error" = "Ошибка";
-
-"Share log file" = "Поделиться файлом журнала";
-"Reset log file" = "Сброс файла журнала";
-
-"When activated, logs may impact performance and include sensitive information. However the logs are not subject to automatic submission to %@ servers. Sharing logs with others is sole user responsibility." = "Если включить, то журналы могут ухудшить производительность и включать критичную информацию. Однако журналы не отправляются автоматически на сервера %@. Предоставление доступа к журналу другим — это целиком ответственность пользователя.";
-
-"The last 10 archived logs are kept on the device - with each log covering up to 24 hours of usage. When sharing please bear in mind that logs may contain sensitive information such as server URLs and user-specific information." = "В памяти устройства архивируются последние 10 лог-файлов. Каждый из них может содержать до 24 часов информации о использовании приложения. При обмене лог-файлами, помните, что они могут содержать конфиденциальную информацию, такую как URL серверов или данные о пользователе.";
-
-"Mask private data" = "Замаскировать конфиденциальные данные";
-"Enabling this option will attempt to mask private data, so it does not become part of any log. Since logging is a development and debugging feature, though, we can't guarantee that the log file will be free of any private data even with this option enabled. Therefore, please look through any log file and verify its free of any data you're not comfortable sharing before sharing it with anybody." = "Включение этой настройки приведёт к попытке замаскировать конфиденциальные данные, чтобы они не попали ни в один журнал. Однако поскольку журналирование — это средство для разработки и отладки, мы не можем гарантировать, что  включение этой настройки исключит любое появление конфиденциальной информации в файле журнала. Таким образом, если вы сомневаетесь, то прежде чем делиться файлом с кем-либо, просмотрите его и убедитесь, что в нём нет данных, которые вам не хотелось бы распространять.";
-
-"No log file found" = "Файл журнала не найден";
-"The log file can't be shared because no log file could be found or the log file is empty." = "Невозможно поделиться файлом журнала, так как не найдено ни одного файла журнала или файл пуст.";
-"Enable log file" = "Включить файл журнала";
-
-"Really reset log file?" = "Действительно сбросить файл журнала?";
-"This action can't be undone." = "Это действие невозможно отменить.";
-
-/* Data usage settings */
-"Data usage" = "Использование данных";
-"Delete unused local copies" = "Удалить неиспользуемые локальные копии";
-"Time measured since uploading, editing, downloading or viewing the respective file through this device. Does not apply to files downloaded via the Available Offline feature. Local copies may be deleted before the given period of time has passed, f.ex. because there's a newer version of a file on the server - or through the manual deletion of offline copies. Also, local copies may not be deleted after the given period of time has passed, f.ex. if an action is performed on it, the file is still in use - or the account holding the file hasn't been used in the app." = "Время, измеренное с момента закачки, правки, скачивания или просмотра соответствующего файла с помощью этого устройства. Не применяется к файлам, скачанным через возможность доступа без сети. Локальные копии могут удаляться до наступления заданного периода времени, например из-за более свежей версии файла на сервере, или через ручное удаление локальных копий. С другой стороны, локальные копии могут быть не удалены по истечении заданного времени, например из-за выполняемых над ними действий удерживающих файл, или учётная запись, в которой числится файл, не используется в приложении.";
-"never" = "никогда";
-"after %@" = "после %@";
-"Decrease Slider Value" = "Увеличить значение слайдера";
-"Increase Slider Value" = "Уменьшить значение слайдера";
-
-"Cellular Data Usage" = "Cellular Data Usage";
-"Some cellular data may still be used. To completely avoid the usage of cellular data, please turn off access to cellular for the entire app in the Settings app." = "Будет использовано некоторое количество сотового трафика. Чтобы полностью избежать его использования, пожалуйста отключите доступ к сотовой сети для всего приложения в приложении Настроек.";
-"Cellular Data Usage have been disabled via MDM configuration. Please contact your administrator for more information." = "Cellular Data Usage have been disabled via MDM configuration. Please contact your administrator for more information.";
-"General" = "Основные";
-"By feature" = "По возможностям";
-
-"off" = "выкл";
-"enabled" = "включен";
-
-/* Display settings */
-"Advanced settings" = "Расширенные настройки";
-"Show hidden files and folders" = "Показывать скрытые файлы и папки";
-"Show folders on top" = "Показывать папки в начале";
-"Disable gestures" = "Disable gestures";
-"Prevent dragging of files and folders and multiselection using system defined gestures" = "Предотвратить перетаскивание файлов и папок, а так же множественный выбор, с помощью заданных в системе жестов";
-
-/* Advanced settings */
-"Enable diagnostics" = "Включить диагностику";
-
-/* Passcode Messages */
-
-"Enter code" = "Введите код";
-"Repeat code" = "Повторите код";
-"Delete code" = "Удалить код";
-"The entered codes are different" = "Введённые коды отличаются";
-"Incorrect code" = "Неверный код";
-"Please try again in %@" = "Пожалуйста, попробуйте ещё раз через %@";
-"Unlock %@" = "Разблокировать %@";
-"Biometric authentication failed" = "Биометрическая аутентификация не удалась";
-"You are required to set the passcode" = "Вам следует ввести код доступа";
-
-/* Certificate management */
-
-"Certificates" = "Сертификаты";
-"User-approved certificates" = "Сертификаты, подтверждённые пользователем";
-
-"Approved" = "Подтвержденное";
-"Auto-approved" = "Подтверждено автоматически";
-"Revoke approval" =  "Отменить подтверждение";
-
-/* Actions */
-
-"Forbidden Characters" = "Запрещённые символы";
-"File name cannot contain / or \\" = "Имя файла не может содержать / или \\";
-"Item with same name already exists" = "Элемент с тем же именем уже существует";
-"An item with the same name already exists in this location." = "В этом месте уже существует элемент с тем же именем.";
-"New Folder" = "Новая папка";
-"Folder name" = "Имя папки";
-"Rename" ="Переименовать";
-"Create folder" ="Создать папку";
-"Duplicate" = "Дублирование";
-"Move" = "Переместить";
-"Move {{itemCount}} items" = "Move {{itemCount}} items";
-"Move \"{{itemName}}\"" = "Move \"{{itemName}}\"";
-"Move here" = "Поместить сюда";
-"Select target." = "Select target.";
-"Open in" = "Открыть в";
-"Copy" = "Копировать";
-"Copy {{itemCount}} items" = "Copy {{itemCount}} items";
-"Copy \"{{itemName}}\"" = "Copy \"{{itemName}}\"";
-"Copy here" = "Копировать сюда";
-
-"Cannot connect to " = "Не удалось подключиться к ";
-" couldn't download file(s)" = "не удалось скачать файл(ы)";
-"Actions" = "Действия";
-"copy" = "копия";
-"Close Window" = "Закрыть окно";
-"Open in a new Window" = "Открыть в новом окне";
-"Open in Window" = "Открыть в окне";
-"Take photo or video" = "Снять фото или видео";
-"%ld Item was copied to the clipboard" = "%ld Item was copied to the clipboard";
-"%ld Items were copied to the clipboard" = "%ld Items were copied to the clipboard";
-"Please note: Folders can only be pasted into the %@ app and the same account." = "Please note: Folders can only be pasted into the %@ app and the same account.";
-
-"Processing on server" = "Processing on server";
-
-"Preparing…" = "Подготовка";
-
-"No actions available" = "Нет доступных действий";
-"No actions are available for this folder, possibly because of missing permissions." = "Для этой папки нет доступных действий, возможно из-за отсутствия разрешений.";
-
-"Close actions menu" = "Закрыть меню действий";
-"Favorited" = "Избранное";
-"Favorite item" = "Добавить элемент в избранное";
-"Unfavorite item" = "Убрать элемент из избранного";
-"Presentation Mode" = "Режим презентации";
-"Enabling presentation mode will prevent the display from sleep mode until the view is closed." = "Включение режима презентации не даст экрану уйти в спящий режим, пока просмотр не будет закрыт.";
-"Enable" = "Включить";
-"Exit Full Screen" = "Выйти из полноэкранного режима";
-
-"Select one or more items." = "Select one or more items.";
-
-"Add item" = "Добавить элемент";
-
-/* App Provider */
-"New document" = "Новый документ";
-"Pick a name" = "Pick a name";
-"Pick a document type to create:" = "Выберите тип документа для создания:";
-"Error creating {{itemName}}" = "Error creating {{itemName}}";
-
-"Opening…" = "Opening…";
-
-"Open in {{appName}} (web)" = "Open in {{appName}} (web)";
-"Error opening {{itemName}} in {{appName}}" = "Error opening {{itemName}} in {{appName}}";
-"Opening documents is not supported by the app provider on this instance." = "Opening documents is not supported by the app provider on this instance.";
-
-/* Preview */
-"Open file" = "Открыть файл";
-"Network unavailable" = "Сеть недоступна";
-"Error" = "Ошибка";
-"Could not get the picture" = "Не удалось получить изображение";
-"Downloading" = "Скачивание";
-"File couldn't be opened" = "Не удалось открыть файл";
-"Connecting..." = "Соединение…";
-
-"File" = "Файл";
-"%@ was updated" = "%@ обновлено";
-"Would you like to view the updated version?" = "Хотите посмотреть обновлённую версию?";
-"Show new version" = "Показать новую версию";
-"Refresh without asking" = "Обновлять не спрашивая";
-"Ignore updates" = "Игнорировать обновления";
-
-/* PDF Viewer */
-"Resume" = "Возобновить";
-"Go to page" = "Переход к странице";
-"Page" = "Страница";
-"This document has %@ pages" = "В этом документе %@ страниц";
-"%@ of %@" = "%@ из %@";
-"Invalid Page" = "Неверная страница";
-"The entered page number doesn't exist" = "Введённый номер страницы не существует";
-"Search PDF" = "Поиск PDF";
-"Outline" = "Оглавление";
-"Find Next" = "Найти следующее";
-"Find Previous" = "Найти предыдущее";
-"Close Search" = "Закрыть поиск";
-
-/* Photo Upload */
-"Upload" = "Загрузить";
-"Select All" = "Выбрать всё";
-"Deselect All" = "Снять весь выбор";
-"All Photos" = "Все фотографии";
-"Albums" = "Альбомы";
-"Importing from photo library" = "Импорт из фото-библиотеки";
-"Media import" = "Импорт фото и видео";
-"%@ of %@" = "%@ из %@";
-"Selected folder lacks file creation permission" = "У выбранной папки нет разрешения на создание файлов.";
-"%d Item" = "%d элемент";
-"%d Items" = "%d элементов";
-"Select Items" = "Выбор элементов";
-
-/* Scan */
-"Scan" = "Cканировать";
-"Scans" = "Сканы";
-"Scan document" = "Сканировать документ";
-"Saving" = "Сохраняется";
-"File format" = "Формат файла";
-"Name" = "Название";
-"Save as" = "Сохранить как";
-"Options" = "Опции";
-"Scan additional" = "Сканировать дополнительно";
-"Create one file per page" = "Создавать по файлу на каждую страницу";
-
-/* Sharing */
-"Sharing requires an active connection." = "Sharing requires an active connection.";
-"No items shared with you" = "No items shared with you";
-"No items shared by you" = "No items shared by you";
-"No items shared by link" = "No items shared by link";
-
-"Searching Shares…" = "Поиск по общим ресурсам";
-"Recipient" = "Получатель";
-"Recipients" = "Получатели";
-"Public Link" = "Общедоступная ссылка";
-"Public Links" = "Общедоступные ссылки";
-"Shared by {{owner}}" = "Shared by {{owner}}";
-"Shared with {{recipient}}" = "Shared with {{recipient}}";
-"Shared with {{recipients}}" = "Shared with {{recipients}}";
-"Expires {{expirationDate}}" = "Expires {{expirationDate}}";
-"Share {{itemName}}" = "Share {{itemName}}";
-"Create link" = "Create link";
-"Invite" = "Пригласить";
-"Invite Recipient" = "Пригласить получателя";
-"Recipients" = "Получатели";
-"Add email or name" = "Добавьте e-mail или имя";
-"Users" = "Пользователи";
-"Groups" = "Группы";
-"Start typing to search users, groups and remote users." = "Начните ввод для начала поиска пользователей, групп и удаленных пользователей";
-"(Group)" = "(Группа)";
-"Adding User to Share failed" = "Ошибка добавления пользователя к ресурсу";
-"Permissions" = "Права доступа";
-"Invited: %@" = "Приглашены: %@";
-"Created: %@" = "Созданы: %@";
-"Allows the users you share with to re-share" = "Разрешить пользователям в совместном доступе, открывать доступ другим пользователям";
-"Allows the users you share with to edit your shared files, and to collaborate" = "Разрешить пользователям в совместном доступе редактировать опубликованные файлы и совместно над ними работать";
-"Allows the users you share with to create new files and add them to the share" = "Разрешить пользователям в совместном доступе создавать новые файлы и добавлять их к общему ресурсу";
-"Allows uploading a new version of a shared file and replacing it" = "Разрешить обновление и замещение новой версии файла, находящегося в совместном доступе";
-"Allows the users you share with to delete shared files" = "Разрешить пользователям в совместном доступе удалять находящиеся в нем файлы";
-"Setting permission failed" = "Ошибка установки прав доступа";
-"Shared with" = "Опубликован для";
-"Remove Recipient failed" = "Ошибка удаления получателя";
-"Remove Recipient" = "Удалить получателя";
-"Create" = "Создать";
-"Change" = "Изменения";
-"Recipients can view or download contents." = "Получатели могут просматривать или скачивать содержимое.";
-"Recipients can view, download, edit, delete and upload contents." = "Получатели могут просматривать, скачивать, править, удалять и закачивать содержимое.";
-"Receive files from multiple recipients without revealing the contents of the folder." = "Получение файлов от многих получателей без раскрытия содержимого каталога.";
-"Download / View" = "Скачивание / Просмотр";
-"Download / View / Upload" = "Скачивание / Просмотр / Закачка";
-"Upload only (File Drop)" = "Только закачка (закинуть файл)";
-"Creating public link failed" = "Ошибка создание общедоступной ссылки";
-"Create Public Link" = "Создать общедоступную ссылку";
-"Links" = "Ссылки";
-"Link" = "Ссылка";
-"Setting expiration date failed" = "Ошибка установки срока действия";
-"Expiration date" = "Дата окончания";
-"Copy Public Link" = "Скопировать общедоступную ссылку";
-"Delete Public Link" = "Удалить общедоступную ссылку";
-"Deleting Public Link failed" = "Ошибка удаления общедоступной ссылки";
-"Deleting password failed" = "Ошибка удаления пароля";
-"Setting password failed" = "Ошибка установки пароля";
-"Type to update password" = "Начните ввод для обновления пароля";
-"Cannot change permission" = "Невозможно изменить права";
-"Before you can set the permission\n%@,\n you must enter a password." = "Чтобы изменить права доступа\n%@,\nвведите пароль";
-"Password Protected" = "Защищено Паролем";
-"Pending Federated Invites" = "Неподтвержденные федеративные приглашения";
-"Pending Invites" = "Неподтвержденные приглашения";
-"Shared with you" = "Поделились с вами";
-"Shared with others" = "Доступные для других";
-"Shares" = "События обмена файлами";
-"Copy Private Link" = "Копировать приватную ссылку";
-"Only people who have access to the file/folder can use it. Use it as a permanent link for yourself or to point others to files within shares." = "Only people who have access to the file/folder can use it. Use it as a permanent link for yourself or to point others to files within shares.";
-"Accept Share failed" = "Ошибка подтверждения совместного доступа";
-"Decline Share failed" = "Ошибка отклонения совместного доступа";
-"Accept" = "Принять";
-"Decline" = "Отклонить";
-"Declined" = "Отклонено";
-"Decline Share" = "Отклонить совместный доступ";
-"Unshare" = "Закрыть доступ";
-"Unshare failed" = "Ошибка отмены совместного доступа";
-"Are you sure you want to unshare these items?" = "Вы уверены, что больше не хотите предоставлять доступ к данным элементам?";
-"Are you sure you want to unshare this item?" = "Вы уверены, что больше не хотите предоставлять доступ к этому элементу?";
-"Share" = "Общий доступ";
-"Read" = "Читать";
-"Can Share" = "Может делиться";
-"Can Edit" = "Может редактировать";
-"Can Edit and Change" = "Может изменять и редактировать";
-"Can Create" = "Может создавать";
-"Can Change" = "Может изменять";
-"Can Delete" = "Может удалять";
-"Accept Invite %@" = "Принять приглашение %@";
-"Decline Invite %@" = "Отклонить приглашение %@";
-"Decline cannot be undone." = "Отклонение не может быть отменено";
-"Sharing" = "Общий доступ";
-"You" = "Вы";
-"Share this file" = "Поделиться файлом";
-"Share this folder" = "Поделиться папкой";
-"shared" = "поделился";
-"Owner" = "Владелец";
-"Private Link" = "Личная ссылка";
-"Created Public Link" = "Созданная публичная ссылка";
-"URL was copied to the clipboard" = "URL была скопирована в буфер обмена";
-"%@ is not available, when this account is offline. Please open the app and log into your account before you can do this action." = "%@ не доступно, когда учётная запись отключена. Пожалуйста, откройте приложение и войдите под вашей учётной записью, чтобы выполнить это действие.";
-"%@ is not available for this item." = "%@ не доступно для этого элемента.";
-"Share with user/group" = "Поделиться с пользователем или группой";
-"Share link" = "Поделиться ссылкой";
-
-"Shared with me" = "Shared with me";
-"Shared by me" = "Shared by me";
-"Shared by link" = "Доступные по ссылке";
-
-"Share with" = "Поделиться с";
-"Add" = "Добавить";
-"Save changes" = "Сохранить изменения";
-
-"Enter password" = "Enter password";
-
-/* Quick Access view */
-"Quick Access" = "Быстрый доступ";
-"Collection" = "Коллекция";
-"Recents" = "Недавно";
-"Favorites"= "Избранное";
-"Images" = "Изображения";
-"PDF Documents" = "Документы PDF";
-"Text" = "Текст";
-"Documents" = "Документы";
-"Audio" = "Аудио";
-
-/* Favorites view */
-"No favorites found" = "No favorites found";
-"If you make an item a favorite, it will turn up here." = "If you make an item a favorite, it will turn up here.";
-
-/* Media files settings */
-"Media Files" = "Мультимедийные файлы";
-"Download instead of streaming" = "Скачать вместо просмотра";
-
-/* Photo upload settings */
-"Media Upload" = "Загрузка фото и видео";
-"Media Export" = "Экспорт мультимедиа";
-"Auto Upload" = "Автоматическая закачка";
-"Convert HEIC to JPEG" = "Преобразовать HEIC в JPEG";
-"Convert videos to MP4" = "Преобразовать видео в MP4";
-"Preserve original media file names" = "Сохранить исходные имена файлов мультимедиа";
-"Auto Upload Photos" = "Автоматически закачать изображения";
-"Auto Upload Videos" = "Автоматически закачать видеоролики";
-"Account" = "Уч.запись";
-"Accounts" = "Учётные записи";
-"Select account" = "Выберите учётную запись";
-"Photo upload path" = "Путь загрузки фото";
-"Video upload path" = "Путь загрузки видео";
-"Select Upload Path" = "Выберите путь для загрузки";
-"Auto upload of media was disabled since configured account / folder was not found" = "Автоматическая закачка фото и видео отключена, так как настроенная учётная запись или папка не были найдены";
-"Importing %@ media files for upload" = "Импортируются мультимедийные файлы %@ для закачки";
-"Photo upload" = "Закачка фото";
-"Video upload" = "Закачка видео";
-
-/* Background media uploads */
-"Background uploads (Lab Version)" = "Background uploads (Lab Version)";
-"Background uploads" = "Фоновые загрузки";
-"Use background refresh" = "Использовать фоновое обновление";
-"Allow this app to refresh the content when on Wi-Fi or mobile network in background." = "Allow this app to refresh the content when on Wi-Fi or mobile network in background.";
-"Enable background uploads" = "Разрешить фоновые закачки";
-"Use background location updates" = "Использовать фоновое обновление местоположения";
-"Background upload notifications" = "Уведомления о фоновых закачках";
-"If you would like background media uploads to be more reliable, you should enable background location updates." = "If you would like background media uploads to be more reliable, you should enable background location updates.";
-"Background media uploads rely on location updates and will stop working if location acquisition permissions are revoked." = "Фоновые закачки мультимедиа полагаются на обновления местоположения и перестанут работать, если отобрать разрешение на получение местоположения.";
-"Otherwise background media uploads using background refresh technology would depend on how frequently you use the app." = "Иначе фоновые закачки мультимедиа, использующие технологию обновления, будут зависеть от того, насколько часто вы используете приложение.";
-"Location permission denied" = "Отказано в разрешении определить местоположение.";
-"Please re-enable location acquisition in system settings" = "Пожалуйста, включите обратно разрешение на получение местоположения в настройках системы";
-"Scheduled upload of %ld media assets" = "Запланирована закачка %ld элементов мультимедиа";
-
-/* Progress summarizer */
-"Creating %ld folders…" = "Создание %ld папок…";
-"Moving %ld items…" = "Перемещение %ld элементов…";
-"Copying %ld items…" = "Копирование %ld элементов…";
-"Deleting %ld items…" = "Удаление %ld элементов…";
-"Uploading %ld files…" = "Загрузка %ld файлов…";
-"Downloading %ld files…" = "Скачивание %ld файлов…";
-"Updating %ld items…" = "Обновление %ld элементов…";
-
-/* Offline storage management */
-"Free on %@" = "Свободно на %@";
-"unknown" = "неизвестно";
-"Offline files use" = "Использование автономных файлов";
-"Compacting of '%@' failed" = "Сжатие '%@' не удалось";
-"Include available offline files" = "Включить доступные автономные файлы";
-"Delete all Offline Files" = "Удалить все оффлайн-файлы";
-"Manage" = "Управление";
-"Storage" = "Хранилище";
-"Compacting" = "Сжатие";
-
-"Really include available offline files?" = "Действительно включить доступные автономные файлы?";
-"Files and folders marked as Available Offline will become unavailable. They will be re-downloaded next time you log into your account (connectivity required)." = "Файлы и папки, помеченные как доступные без сети, станут недоступными. При следующем входе в учётную запись они будут скачаны повторно (нужна связь).";
-"Removes downloaded files and local copies of items marked as Available Offline. The latter will be re-downloaded next time you log into your account (connectivity required)." = "Удаляет скачанные файлы и локальные копии элементов, помеченных как Доступные офлайн. Последние будут снова скачаны при следующем входе в вашу учетную запись (требуется подключение).";
-
-/* Diagnostic */
-"Diagnostic Overview" = "Диагностический обзор";
-"Diagnostics" = "Диагностика";
-"Share Diagnostics" = "Диагностика общего доступа";
-"Action executed" = "Действие выполнено";
-
-"Update Status" = "Статус обновления";
-"Completed update scans" = "Выполнено сканов обновлений";
-"Total update scans" = "Всего сканов обновлений";
-
-/* Available offline */
-"Root folder" = "Корневая папка";
-"at" = "в";
-"(no match)" = "(нет соответствия)";
-
-"Make available offline" = "Сделать доступными без сети (автономно)";
-"Make unavailable offline" = "Сделать недоступными без сети";
-
-"Available Offline" = "Доступно без сети";
-
-"No files available offline" = "Нет файлов доступных офлайн";
-"Files selected and downloaded for offline availability will show up here." = "Файлы, выбранные и скачанные для офлайн-доступа, будут отображаться здесь.";
-
-"Locations" = "Места";
-"Downloaded Files" = "Скачанные файлы";
-
-/* Single Account */
-"You are connected as\n%@" = "Вы подключены, как\n%@";
-
-/* Release Notes */
-"Proceed" = "Продолжить";
-"New in %@" = "Новое в %@";
-"Thank you for using %@.\nIf you like our App, please leave an AppStore review.\n❤️" = "Спасибо, что используете %@.\nЕсли вам нравится наше приложение, оставьте отзыв в AppStore.\n❤️";
-"Thank you for using %@.\n" = "Спасибо за использование %@.\n";
-
-/* Key Commands */
-"Select Next" = "Выбрать следующее";
-"Select Previous" = "Выбрать предыдущее";
-"Open Selected" = "Открыть выбранное";
-"Change Sort Order" = "Изменить порядок сортировки";
-"Search" = "Найти";
-"Back" = "Назад";
-"Save" = "Сохранить";
-"Sort by %@" = "Сортировка по %@";
-"Tab %@" = "Вкладка %@";
-"Select Last Item on Page" = "Выбрать последний элемент на странице";
-"Scroll to Top" = "Прокрутить в начало";
-"Scroll to Bottom" = "Прокрутить в конец";
-"Copy to Clipboard" = "Скопировать в буфер обмена";
-"Import from Clipboard" = "Импортировать из буфера обмена";
-"Choose destination directory…" = "Выберите целевую директорию...";
-"Next" = "Следующий";
-"Previous" = "Предыдущий";
-"Favorite" = "В избранное";
-"Cut" = "Вырезать";
-"Paste" = "Вставить";
-"Play/Pause" = "Проигрывание/Пауза";
-"Skip Back" = "Пропустить назад";
-"Skip Ahead" = "Пропустить вперёд";
-"Go to Beginning" = "Перейти в начало";
-"Mute/Unmute" = "Выключить/включить звук";
-"Full Screen" = "Полный экран";
-"Switch Theme Style" = "Переключить стиль темы";
-
-/* Markup */
-"How should this file be saved?" = "Как следует сохранять этот файл?";
-"Overwrite original" = "Переписать оригинал";
-"Save as copy" = "Сохранить как копию";
-"Discard changes" = "Выбросить изменения";
-"Markup" = "Разметка";
-"Crop or Rotate" = "Обрезка или поворот";
-"Saving edited file failed" = "Не удалось сохранить редактируемый файл";
-"File no longer exists" = "Файл больше не существует";
-
-/* Licensing */
-"Unlocked" = "Разблокировано";
-"Unlock" = "Разблокировать";
-
-"Subscribe Now" = "Подпишитесь сейчас";
-"Free" = "Свободно";
-
-"%@ / %@" = "1%@/1%@";
-"after free %@ trial" = "после бесплатного 1%@ период";
-
-/* Example usage: "Try [14 days] for free." */
-"Try %@ for free." = "Попробуйте %@ бесплатно.";
-
-/* Example usage: "Then [1,99 €] / [year]." */
-"Then %@ / %@." = "Затем %@ / %@.";
-
-/* Example usage: "[1,99 €] / [year] - starting immediately." */
-"%@ / %@ – starting immediately" = "%@ / %@ – запуск немедленно";
-
-/* Licensing: Pro Features */
-"Pro Features" = "Профессиональные возможности";
-
-/* Licensing: App Store */
-"Restore purchases" = "Восстановить покупки";
-"Restoring purchases…" = "Восстановление покупок…";
-"Error restoring purchases" = "Ошибка восстановления покупок";
-"Error loading product info from App Store"= "Ошибка загрузки информации о продукте из App Store";
-"Purchase failed" = "Покупка не удалась";
-"More information" = "Больше информации";
-
-/* Licensing: Enterprise */
-"Enterprise" = "Предприятие";
-
-/* Licensing: Settings */
-"In-App Purchases" = "Покупки в приложении";
-"Purchases & Subscriptions" = "Покупки и подписки";
-"Error fetching transactions" = "Ошибка считывания транзакций";
-"Document Scanner" = "Сканер документов";
-"Scan documents and photos with your camera." = "Сканировать документы и фотографии с помощью вашей камеры.";
-"Shortcuts Actions" = "Сокращения для действий";
-"Use ownCloud actions in Shortcuts." = "Использовать действия ownCloud в сокращениях.";
-"Markup Documents" = "Разметка документов";
-"Markup photos and PDF files." = "Разметка фотографий и файлов PDF.";
-"Unlock all Pro Features." = "Разблокировать все профессиональные возможности.";
-
-"Purchased App Version" = "Приобретённая версия приложения";
-"Receipt Date" = "Дата подтверждения";
-"Manage subscription" = "Управление подпиской";
-"Purchases are not allowed on this device." = "На этом устройстве покупки не разрешены.";
-"Type" = "Тип";
-"Quantity" = "Количество";
-"Product" = "Продукт";
-"Date" = "Дата";
-"Cancelled" = "Отменено";
-"Ends" = "Концы";
-"none" = "пусто";
-"trial" = "пробный период";
-"purchase" = "покупка";
-"subscription" = "подписка";
-"Photo Pro Features" = "Возможности Photo Pro";
-"Image metadata, extended upload options" = "Метаданные изображения. расширенные возможности загрузки";
-"Purchase" = "Приобретение";
-"Subscribe" = "Подписаться";
-
-"No accounts found" = "Учётные записи не найдены";
-"In order to accurately determine your current licensing status, please add one or more accounts first." = "Чтобы точно определить состояние ваших лицензий, пожалуйста добавьте сначала одну или несколько учётных записей.";
-
-/* Share Sheet */
-"Save File" = "Сохранить файл";
-"Choose an account and folder to import into." = "Выберите учётную запись и папку, куда импортировать.";
-"No account configured.\nSetup an new account in the app to save to." = "Учётная запись не настроена.\nНастройте учётную запись в приложении, чтобы сохраняться.";
-"Importing item %ld of %ld" = "Импортирую элемент %ld из %ld";
-"Error importing %@" = "Ошибка при импорте %@";
-"Error loading item" = "Ошибка при загрузке элемента";
-"Preparing…" = "Подготовка";
-"Import \"{{itemName}}\"" = "Импортировать \"{{itemName}}\"";
-"Import {{itemCount}} files" = "Импортировать {{itemCount}} файлов";
-"Save here" = "Сохранить здесь";
-
-/* FileProvider */
-/* - Disabled */
-"File Provider access has been disabled by the administrator.\n\nPlease use the app to access your files." = "File Provider access has been disabled by the administrator.\n\nPlease use the app to access your files.";
-"File Provider access has been disabled by the administrator. Please use the app to create new folders." = "File Provider access has been disabled by the administrator. Please use the app to create new folders.";
-"File Provider access has been disabled by the administrator. Please use the share extension to import files." = "File Provider access has been disabled by the administrator. Please use the share extension to import files.";
-
-/* - No account */
-"No account has been set up in the {{app.name}} app yet." = "В приложении {{app.name}} еще не создана учетная запись.";
-"Open app" = "Открыть приложение";
-
-/* Disallowed Import Methods */
-/* - Share Extension */
-"Share Extension disabled" = "Отключение расширения общего доступа";
-"Importing files through the Share Extension is not allowed on this device." = "Импортирование файлов через Share Extension не разрешено на этом устройстве.";
-
-/* - Open with */
-"Opening not allowed" = "Открытие не разрешено";
-"Importing files through opening is not allowed on this device." = "Импортирование файлов через открытие на этом устройстве не разрешено.";
-
-/* - Files.app */
-"Import not allowed" = "импорт не разрешен";
-"Importing files through the File Provider is not allowed on this device." = "Импортирование файлов через File Provider не разрешено на этом устройстве.";
-
-/* Misc. accessibility */
-"Enter multiple selection" = "Введите множественный выбор";
-
-/* Universal Links */
-"Resolving link…" = "Раскрытие ссылки…";
-"Link resolution failed" = "Раскрытие ссылки не удалось";
-"Couldn't resolve a private link since you are offline and corresponding item is not cached locally." = "Не удалось раскрыть личную ссылку, так как вы без сети и соответствующий элемент не закэширован локально.";
-"Couldn't resolve a private link since the item is not known to the server." = "Не удалось раскрыть личную ссылку, так как элемент не известен серверу.";
-"Link points to an account bookmark which is not configured in the app." = "Ссылка указывает на закладку учётной записи, которые не настроена в приложении.";
-
-/* Photo meta-data */
-"Image metadata" = "Метаданные изображения";
-"Image details" = "Подробности изображения";
-"Profile" = "Профиль";
-"Size" = "Размер";
-"Density" = "Плотность";
-"Color model" = "Цветовая модель";
-"%@ (%d bits/channel)" = "%@ (%d бит на канал)";
-"Histogram" = "Гистограмма";
-
-"Camera details" = "Подробности камеры";
-"Capture settings" = "Настройки съёмки";
-"Time" = "Время";
-"EXIF aux info" = "Дополнительная информация EXIF";
-"Authoring" =  "Авторство";
-"TIFF" = "TIFF";
-
-"Lens make" = "Производитель объектива";
-"Lens model" = "Модель объектива";
-"Lens info" = "Информация об объективе";
-"Focal length" = "Фокусное расстояние";
-"Focal length @ 35 mm" = "Фокусное расстояние в пересчёте на 35 мм";
-
-"Shutter speed" = "Выдержка";
-"Aperture" = "Диафрагма";
-"ISO" = "Чувствительность";
-
-/* EXIF: exposure program */
-"Program" = "Программа";
-"Not defined" = "Не задано";
-"Manual" = "Вручную";
-"Normal" = "Нормальный";
-"Aperture priority" = "Приоритет диафрагмы";
-"Shutter priority" = "Приоритет выдержки";
-"Creative" = "Творческий";
-"Action" = "Действие";
-"Portrait" = "Портрет";
-"Landscape" = "Пейзаж";
-
-/* EXIF: exposure metering mode */
-"Metering" = "Измерение";
-"unknown" = "неизвестно";
-"Average" = "Среднее";
-"CenterWeightedAverage" = "Центрально-взвешенное среднее";
-"Spot" = "Пятно";
-"MultiSpot" = "Несколько пятен";
-"Pattern" = "Шаблон";
-"Partial" = "Частично";
-
-/* EXIF: flash mode */
-"Flash" = "Вспышка";
-"Fired" = "Сработала";
-"Didn't fire" = "Не сработала";
-"No strobe return detection" = "Встречный строб не определяется";
-"Strobe return light not detected" = "Встречный строб-свет не обнаружен";
-"Strobe return light detected" = "Встречный строб-свет обнаружен";
-"Compulsory flash firing" = "Принудительная вспышка сработала";
-"Compulsory flash supression" = "Принудительная вспышка подавлена";
-"Auto mode" = "Автоматический режим";
-"Red eye detection supported" = "Подавление красных глаз поддерживается";
-"not present" = "не присутствует";
-
-/* EXIF: white balance */
-"White balance" = "Баланс белого";
-"Auto" = "Авто";
-"Manual" = "Вручную";
-
-"Exposure bias" = "Сдвиг экспозиции";
-"Uncalibrated" = "Неоткалибровано";
-"Original date" = "Исходная дата";
-"Digitized date" = "Дата оцифровки";
-
-"Color space" = "Цветовое пространство";
-
-/* EXIF: aux info */
-"Lens ID" = "Идентификатор объектива";
-"Lens serial" = "Серийный номер объектива";
-"Serial number" = "Серийный номер";
-"Flash compensation" = "компенсация вспышки";
-"Owner" = "Владелец";
-"Firmware" = "Прошивка";
-"Keywords" = "Ключевые слова";
-"Copyright" = "Авторские права защищены";
-
-/* IPTC meta data */
-"Contact info" = "Контактная информация";
-"Usage terms" = "Условия использования";
-"Scene" = "Сцена";
-"Description" = "Описание";
-
-/* IPTC photometric interpretation */
-"Photometric interpretation" = "Фотометрическая интерпретация";
-"none" = "пусто";
-"RGB" = "RGB";
-"YCbCr" = "YCbCr";
-
-/* EXIF: gps position data */
-"GPS Location" = "Местоположение GPS";
-"Coordinates" = "Координаты";
-"Altitude" = "Высота";
-"Place" = "Место";
-"E" = "в.д.";
-"W" = "з.д.";
-"N" = "с.ш.";
-"S" = "ю.ш.";
-
-/* Pro photo upload settings */
-"Extended upload settings" = "Расширенные настройки закачки";
-"Prefer unedited photos" = "Предпочитать неотредактированные фото";
-"Prefer RAW photos" = "Предпочитать формат RAW";
-"Prefer original videos" = "Предпочитать исходные видео";
-
-/* Limited photo library access */
-"Limited Photo Access" = "Ограниченный доступ к фото";
-"Access for the media selected for upload is limited" = "Доступ к материалам, выбранным для закачки, ограничен";
-"No Access to the media selected for upload" = "Нет доступа к материалам, выбранным для закачки";
-
-/* macOS support */
-"Passcode protection is not supported on this device.\nPlease disable passcode lock in the app settings." = "Блокировка кодом доступа не поддерживается на этом устройстве.\nПожалуйста, отключите блокировку кодом доступа в настройках приложения.";
-
-/* MDM settings push */
-"New settings received from MDM" = "Через MDM получены новые настройки";
-"Tap to quit the app." = "Нажмите, чтобы выйти из приложения.";
-"Tap to launch the app." = "Нажмите, чтобы запустить приложение.";
-
-/* Beta warning */
-"Beta Warning" = "Beta Warning";
-"\nThis is a BETA release that may - and likely will - still contain bugs.\n\nYOU SHOULD NOT USE THIS BETA VERSION WITH PRODUCTION SYSTEMS, PRODUCTION DATA OR DATA OF VALUE. YOU'RE USING THIS BETA AT YOUR OWN RISK.\n\nPlease let us know about any issues that come up via the \"Send Feedback\" option in the settings." = "\nThis is a BETA release that may - and likely will - still contain bugs.\n\nYOU SHOULD NOT USE THIS BETA VERSION WITH PRODUCTION SYSTEMS, PRODUCTION DATA OR DATA OF VALUE. YOU'RE USING THIS BETA AT YOUR OWN RISK.\n\nPlease let us know about any issues that come up via the \"Send Feedback\" option in the settings.";
-"Agree" = "Agree";
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>
+This is a BETA release that may - and likely will - still contain bugs.
+
+YOU SHOULD NOT USE THIS BETA VERSION WITH PRODUCTION SYSTEMS, PRODUCTION DATA OR DATA OF VALUE. YOU'RE USING THIS BETA AT YOUR OWN RISK.
+
+Please let us know about any issues that come up via the "Send Feedback" option in the settings.</key>
+	<string>
+This is a BETA release that may - and likely will - still contain bugs.
+
+YOU SHOULD NOT USE THIS BETA VERSION WITH PRODUCTION SYSTEMS, PRODUCTION DATA OR DATA OF VALUE. YOU'RE USING THIS BETA AT YOUR OWN RISK.
+
+Please let us know about any issues that come up via the "Send Feedback" option in the settings.</string>
+	<key> couldn't download file(s)</key>
+	<string>не удалось скачать файл(ы)</string>
+	<key>%@ (%d bits/channel)</key>
+	<string>%@ (%d бит на канал)</string>
+	<key>%@ / %@</key>
+	<string>1%@/1%@</string>
+	<key>%@ / %@ – starting immediately</key>
+	<string>%@ / %@ – запуск немедленно</string>
+	<key>%@ is not available for this item.</key>
+	<string>%@ не доступно для этого элемента.</string>
+	<key>%@ is not available, when this account is offline. Please open the app and log into your account before you can do this action.</key>
+	<string>%@ не доступно, когда учётная запись отключена. Пожалуйста, откройте приложение и войдите под вашей учётной записью, чтобы выполнить это действие.</string>
+	<key>%@ of %@</key>
+	<string>%@ из %@</string>
+	<key>%@ was updated</key>
+	<string>%@ обновлено</string>
+	<key>%@%@ %@ version %@ build %@
+(app: %@, sdk: %@)</key>
+	<string>%@%@ %@ версия %@ сборка %@
+(приложение: %@, sdk: %@)</string>
+	<key>%ld Item was copied to the clipboard</key>
+	<string>%ld Item was copied to the clipboard</string>
+	<key>%ld Items were copied to the clipboard</key>
+	<string>%ld Items were copied to the clipboard</string>
+	<key>%ld digit code</key>
+	<string>%ld digit code</string>
+	<key>'%@' is currently locked</key>
+	<string>'%@' сейчас заблокирована</string>
+	<key>+ %ld more</key>
+	<string>+ %ld ещё</string>
+	<key>Accept</key>
+	<string>Принять</string>
+	<key>Accept Share failed</key>
+	<string>Ошибка подтверждения совместного доступа</string>
+	<key>Accept or decline</key>
+	<string>Accept or decline</string>
+	<key>Accept share</key>
+	<string>Accept share</string>
+	<key>Accepted</key>
+	<string>Принято</string>
+	<key>Access denied</key>
+	<string>Доступ запрещен</string>
+	<key>Access for the media selected for upload is limited</key>
+	<string>Доступ к материалам, выбранным для закачки, ограничен</string>
+	<key>Account</key>
+	<string>Уч.запись</string>
+	<key>Account setup complete</key>
+	<string>Настройка учетной записи завершена</string>
+	<key>Accounts</key>
+	<string>Учётные записи</string>
+	<key>Acknowledgements</key>
+	<string>Благодарности</string>
+	<key>Action</key>
+	<string>Действие</string>
+	<key>Action executed</key>
+	<string>Действие выполнено</string>
+	<key>Actions</key>
+	<string>Действия</string>
+	<key>Add</key>
+	<string>Добавить</string>
+	<key>Add account</key>
+	<string>Добавить учетную запись</string>
+	<key>Add item</key>
+	<string>Добавить элемент</string>
+	<key>Add to sidebar</key>
+	<string>Add to sidebar</string>
+	<key>Advanced settings</key>
+	<string>Расширенные настройки</string>
+	<key>After %ld seconds</key>
+	<string>After %ld seconds</string>
+	<key>After 1 minute</key>
+	<string>Через 1 минуту</string>
+	<key>After 30 minutes</key>
+	<string>Через 30 минут</string>
+	<key>After 5 minutes</key>
+	<string>Через 5 минут</string>
+	<key>Agree</key>
+	<string>Agree</string>
+	<key>Albums</key>
+	<string>Альбомы</string>
+	<key>All Photos</key>
+	<string>Все фотографии</string>
+	<key>All done</key>
+	<string>Всё выполнено</string>
+	<key>Allow this app to refresh the content when on Wi-Fi or mobile network in background.</key>
+	<string>Allow this app to refresh the content when on Wi-Fi or mobile network in background.</string>
+	<key>Altitude</key>
+	<string>Высота</string>
+	<key>An error occurred</key>
+	<string>Произошла ошибка</string>
+	<key>An item with the same name already exists in this location.</key>
+	<string>В этом месте уже существует элемент с тем же именем.</string>
+	<key>An operation is currently performed that prevents connecting to '%@'. Please try again later.</key>
+	<string>Сейчас выполняется операция, препятствующая обращению к '%@'. Пожалуйста, попробуйте снова позже.</string>
+	<key>Aperture</key>
+	<string>Диафрагма</string>
+	<key>Aperture priority</key>
+	<string>Приоритет диафрагмы</string>
+	<key>App Version</key>
+	<string>Версия приложения</string>
+	<key>Apply choice to all similar issues</key>
+	<string>Применить выбор ко всем похожим случаям</string>
+	<key>Apply to all</key>
+	<string>Применить ко всем</string>
+	<key>Approve</key>
+	<string>Подтвердить</string>
+	<key>Approved</key>
+	<string>Подтвержденное</string>
+	<key>Are you sure you want to delete these items from the server?</key>
+	<string>Вы уверены, что хотите удалить эти элементы с сервера?</string>
+	<key>Are you sure you want to delete this item from the server?</key>
+	<string>Вы уверены, что хотите удалить этот элемент с сервера?</string>
+	<key>Are you sure you want to unshare these items?</key>
+	<string>Вы уверены, что больше не хотите предоставлять доступ к данным элементам?</string>
+	<key>Are you sure you want to unshare this item?</key>
+	<string>Вы уверены, что больше не хотите предоставлять доступ к этому элементу?</string>
+	<key>Audio</key>
+	<string>Аудио</string>
+	<key>Audios</key>
+	<string>Audios</string>
+	<key>Authenticated as %@ via %@</key>
+	<string>Аутентификация как %@ через %@</string>
+	<key>Authenticated via</key>
+	<string>Аутентифицрован через</string>
+	<key>Authenticating…</key>
+	<string>Авторизация…</string>
+	<key>Authentication error</key>
+	<string>Authentication error</string>
+	<key>Authentication failed</key>
+	<string>Authentication failed</string>
+	<key>Authentication with %@ is no longer allowed. Re-authentication needed.</key>
+	<string>Аутентификация через %@ больше не допустима. Нужно перевойти.</string>
+	<key>Authoring</key>
+	<string>Авторство</string>
+	<key>Authorization failed</key>
+	<string>Авторизация не прошла</string>
+	<key>Auto</key>
+	<string>Авто</string>
+	<key>Auto Upload</key>
+	<string>Автоматическая закачка</string>
+	<key>Auto Upload Photos</key>
+	<string>Автоматически закачать изображения</string>
+	<key>Auto Upload Videos</key>
+	<string>Автоматически закачать видеоролики</string>
+	<key>Auto mode</key>
+	<string>Автоматический режим</string>
+	<key>Auto upload disabled</key>
+	<string>Auto upload disabled</string>
+	<key>Auto upload of media was disabled since configured account / folder was not found</key>
+	<string>Автоматическая закачка фото и видео отключена, так как настроенная учётная запись или папка не были найдены</string>
+	<key>Auto-approved</key>
+	<string>Подтверждено автоматически</string>
+	<key>Available Offline</key>
+	<string>Доступно без сети</string>
+	<key>Available offline</key>
+	<string>Available offline</string>
+	<key>Average</key>
+	<string>Среднее</string>
+	<key>Back</key>
+	<string>Назад</string>
+	<key>Background upload notifications</key>
+	<string>Уведомления о фоновых закачках</string>
+	<key>Background uploads (Lab Version)</key>
+	<string>Background uploads (Lab Version)</string>
+	<key>Beta Warning</key>
+	<string>Beta Warning</string>
+	<key>Biometric authentication failed</key>
+	<string>Биометрическая аутентификация не удалась</string>
+	<key>Bookmark Metadata</key>
+	<string>Описание закладки</string>
+	<key>Browse</key>
+	<string>Просмотр</string>
+	<key>Busy</key>
+	<string>Busy</string>
+	<key>By feature</key>
+	<string>По возможностям</string>
+	<key>Camera details</key>
+	<string>Подробности камеры</string>
+	<key>Cancel</key>
+	<string>Отмена</string>
+	<key>Cannot connect to </key>
+	<string>Не удалось подключиться к </string>
+	<key>Capture settings</key>
+	<string>Настройки съёмки</string>
+	<key>Cellular Data Usage</key>
+	<string>Cellular Data Usage</string>
+	<key>Cellular Data Usage have been disabled via MDM configuration. Please contact your administrator for more information.</key>
+	<string>Cellular Data Usage have been disabled via MDM configuration. Please contact your administrator for more information.</string>
+	<key>CenterWeightedAverage</key>
+	<string>Центрально-взвешенное среднее</string>
+	<key>Certificate Details</key>
+	<string>Детали сертификата</string>
+	<key>Certificate has issues.
+Open 'Certificate Details' for more informations.</key>
+	<string>Есть проблемы с сертификатом. Для получения подробностей откройте ‘Детали сертификата'.</string>
+	<key>Certificate may have issues, but was accepted by user.
+Open 'Certificate Details' for more informations.</key>
+	<string>С сертификатом возможно есть проблемы, но он был принят пользователем
+Для получения подробностей откройте 'Детали сертификата'.</string>
+	<key>Certificate was rejected by user.</key>
+	<string>Сертификат был отклонён пользователем.</string>
+	<key>Certificates</key>
+	<string>Сертификаты</string>
+	<key>Change</key>
+	<string>Изменения</string>
+	<key>Change Sort Order</key>
+	<string>Изменить порядок сортировки</string>
+	<key>Change password</key>
+	<string>Change password</string>
+	<key>Changed {{settingID}} to {{newValue}}.</key>
+	<string>Changed {{settingID}} to {{newValue}}.</string>
+	<key>Choose destination directory…</key>
+	<string>Выберите целевую директорию...</string>
+	<key>Clear</key>
+	<string>Clear</string>
+	<key>Cleared all.</key>
+	<string>Cleared all.</string>
+	<key>Cleared {{settingID}}.</key>
+	<string>Cleared {{settingID}}.</string>
+	<key>Close Search</key>
+	<string>Закрыть поиск</string>
+	<key>Close Window</key>
+	<string>Закрыть окно</string>
+	<key>Close actions menu</key>
+	<string>Закрыть меню действий</string>
+	<key>Color model</key>
+	<string>Цветовая модель</string>
+	<key>Color space</key>
+	<string>Цветовое пространство</string>
+	<key>Compacting</key>
+	<string>Сжатие</string>
+	<key>Compacting of '%@' failed</key>
+	<string>Сжатие '%@' не удалось</string>
+	<key>Completed update scans</key>
+	<string>Выполнено сканов обновлений</string>
+	<key>Compulsory flash firing</key>
+	<string>Принудительная вспышка сработала</string>
+	<key>Compulsory flash supression</key>
+	<string>Принудительная вспышка подавлена</string>
+	<key>Connecting</key>
+	<string>Connecting</string>
+	<key>Connecting...</key>
+	<string>Соединение…</string>
+	<key>Connecting…</key>
+	<string>Соединение…
+</string>
+	<key>Contact info</key>
+	<string>Контактная информация</string>
+	<key>Contacting server…</key>
+	<string>Соединение с сервером…</string>
+	<key>Contents from cache.</key>
+	<string>Содержимое из кэша.</string>
+	<key>Continue</key>
+	<string>Продолжить</string>
+	<key>Continue offline</key>
+	<string>Продолжить без сети</string>
+	<key>Convert HEIC to JPEG</key>
+	<string>Преобразовать HEIC в JPEG</string>
+	<key>Convert videos to MP4</key>
+	<string>Преобразовать видео в MP4</string>
+	<key>Coordinates</key>
+	<string>Координаты</string>
+	<key>Copy</key>
+	<string>Копировать</string>
+	<key>Copy "{{itemName}}"</key>
+	<string>Copy "{{itemName}}"</string>
+	<key>Copy Private Link</key>
+	<string>Копировать приватную ссылку</string>
+	<key>Copy here</key>
+	<string>Копировать сюда</string>
+	<key>Copy to clipboard</key>
+	<string>Copy to clipboard</string>
+	<key>Copy {{itemCount}} items</key>
+	<string>Copy {{itemCount}} items</string>
+	<key>Copying %ld items…</key>
+	<string>Копирование %ld элементов…</string>
+	<key>Copyright</key>
+	<string>Авторские права защищены</string>
+	<key>Could not get the picture</key>
+	<string>Не удалось получить изображение</string>
+	<key>Couldn't resolve a private link since the item is not known to the server.</key>
+	<string>Не удалось раскрыть личную ссылку, так как элемент не известен серверу.</string>
+	<key>Couldn't resolve a private link since you are offline and corresponding item is not cached locally.</key>
+	<string>Не удалось раскрыть личную ссылку, так как вы без сети и соответствующий элемент не закэширован локально.</string>
+	<key>Create</key>
+	<string>Создать</string>
+	<key>Create folder</key>
+	<string>Создать папку</string>
+	<key>Create link</key>
+	<string>Create link</string>
+	<key>Create one file per page</key>
+	<string>Создавать по файлу на каждую страницу</string>
+	<key>Create shortcut</key>
+	<string>Create shortcut</string>
+	<key>Creating %ld folders…</key>
+	<string>Создание %ld папок…</string>
+	<key>Creative</key>
+	<string>Творческий</string>
+	<key>Credentials</key>
+	<string>Учётные данные</string>
+	<key>Cut</key>
+	<string>Вырезать</string>
+	<key>Dark</key>
+	<string>Тёмная</string>
+	<key>Data usage</key>
+	<string>Использование данных</string>
+	<key>Date</key>
+	<string>Дата</string>
+	<key>Debug</key>
+	<string>Debug</string>
+	<key>Decline</key>
+	<string>Отклонить</string>
+	<key>Decline Share failed</key>
+	<string>Ошибка отклонения совместного доступа</string>
+	<key>Decline share</key>
+	<string>Decline share</string>
+	<key>Declined</key>
+	<string>Отклонено</string>
+	<key>Decrease Slider Value</key>
+	<string>Увеличить значение слайдера</string>
+	<key>Delete</key>
+	<string>Удалить</string>
+	<key>Delete Authentication Data</key>
+	<string>Удалить данные аутентификации</string>
+	<key>Delete all</key>
+	<string>Удалить все</string>
+	<key>Delete all Offline Files</key>
+	<string>Удалить все оффлайн-файлы</string>
+	<key>Delete all log files?</key>
+	<string>Удалить все лог-файлы?</string>
+	<key>Delete code</key>
+	<string>Удалить код</string>
+	<key>Delete unused local copies</key>
+	<string>Удалить неиспользуемые локальные копии</string>
+	<key>Deleting %ld items…</key>
+	<string>Удаление %ld элементов…</string>
+	<key>Deletion of '%@' failed</key>
+	<string>Deletion of '%@' failed</string>
+	<key>Density</key>
+	<string>Плотность</string>
+	<key>Description</key>
+	<string>Описание</string>
+	<key>Deselect All</key>
+	<string>Снять весь выбор</string>
+	<key>Diagnostic Overview</key>
+	<string>Диагностический обзор</string>
+	<key>Diagnostics</key>
+	<string>Диагностика</string>
+	<key>Didn't fire</key>
+	<string>Не сработала</string>
+	<key>Digitized date</key>
+	<string>Дата оцифровки</string>
+	<key>Disable</key>
+	<string>Disable</string>
+	<key>Disable gestures</key>
+	<string>Disable gestures</string>
+	<key>Discard changes</key>
+	<string>Выбросить изменения</string>
+	<key>Disconnect</key>
+	<string>Отключить</string>
+	<key>Do you want to log out from '%@'?</key>
+	<string>Do you want to log out from '%@'?</string>
+	<key>Do you want to open the following URL?</key>
+	<string>Вы хотите открыть следующую ссылку?</string>
+	<key>Document Scanner</key>
+	<string>Сканер документов</string>
+	<key>Documentation</key>
+	<string>Документация</string>
+	<key>Documents</key>
+	<string>Документы</string>
+	<key>Done</key>
+	<string>Выполнено</string>
+	<key>Download</key>
+	<string>Download</string>
+	<key>Download / View</key>
+	<string>Скачивание / Просмотр</string>
+	<key>Download / View / Upload</key>
+	<string>Скачивание / Просмотр / Закачка</string>
+	<key>Download instead of streaming</key>
+	<string>Скачать вместо просмотра</string>
+	<key>Downloaded Files</key>
+	<string>Скачанные файлы</string>
+	<key>Downloading %ld files…</key>
+	<string>Скачивание %ld файлов…</string>
+	<key>Duplicate</key>
+	<string>Дублирование</string>
+	<key>E</key>
+	<string>в.д.</string>
+	<key>EXIF aux info</key>
+	<string>Дополнительная информация EXIF</string>
+	<key>Edit</key>
+	<string>Редактировать</string>
+	<key>Edit account</key>
+	<string>Изменить учётную запись</string>
+	<key>Enable</key>
+	<string>Включить</string>
+	<key>Enable Pro Features (QA)</key>
+	<string>Enable Pro Features (QA)</string>
+	<key>Enable diagnostics</key>
+	<string>Включить диагностику</string>
+	<key>Enable logging</key>
+	<string>Включить журналирование</string>
+	<key>Enabling presentation mode will prevent the display from sleep mode until the view is closed.</key>
+	<string>Включение режима презентации не даст экрану уйти в спящий режим, пока просмотр не будет закрыт.</string>
+	<key>Enabling this option will attempt to mask private data, so it does not become part of any log. Since logging is a development and debugging feature, though, we can't guarantee that the log file will be free of any private data even with this option enabled. Therefore, please look through any log file and verify its free of any data you're not comfortable sharing before sharing it with anybody.</key>
+	<string>Включение этой настройки приведёт к попытке замаскировать конфиденциальные данные, чтобы они не попали ни в один журнал. Однако поскольку журналирование — это средство для разработки и отладки, мы не можем гарантировать, что  включение этой настройки исключит любое появление конфиденциальной информации в файле журнала. Таким образом, если вы сомневаетесь, то прежде чем делиться файлом с кем-либо, просмотрите его и убедитесь, что в нём нет данных, которые вам не хотелось бы распространять.</string>
+	<key>Enter a new code with %ld digits</key>
+	<string>Enter a new code with %ld digits</string>
+	<key>Enter a search term</key>
+	<string>Введите слово для поиска</string>
+	<key>Enter code</key>
+	<string>Введите код</string>
+	<key>Enter multiple selection</key>
+	<string>Введите множественный выбор</string>
+	<key>Enter the user or group you want to invite.</key>
+	<string>Введите пользователя или группу, которую вы хотите пригласить.</string>
+	<key>Error</key>
+	<string>Ошибка</string>
+	<key>Error creating {{itemName}}</key>
+	<string>Error creating {{itemName}}</string>
+	<key>Error fetching transactions</key>
+	<string>Ошибка считывания транзакций</string>
+	<key>Error importing %@</key>
+	<string>Ошибка при импорте %@</string>
+	<key>Error loading item</key>
+	<string>Ошибка при загрузке элемента</string>
+	<key>Error loading product info from App Store</key>
+	<string>Ошибка загрузки информации о продукте из App Store</string>
+	<key>Error opening %@</key>
+	<string>Ошибка при открытии %@</string>
+	<key>Error opening {{itemName}} in {{appName}}</key>
+	<string>Error opening {{itemName}} in {{appName}}</string>
+	<key>Error restoring purchases</key>
+	<string>Ошибка восстановления покупок</string>
+	<key>Exit Full Screen</key>
+	<string>Выйти из полноэкранного режима</string>
+	<key>Exit multiple selection</key>
+	<string>Exit multiple selection</string>
+	<key>Expiration date</key>
+	<string>Дата окончания</string>
+	<key>Expires {{expirationDate}}</key>
+	<string>Expires {{expirationDate}}</string>
+	<key>Exposure bias</key>
+	<string>Сдвиг экспозиции</string>
+	<key>Extend by one week</key>
+	<string>Extend by one week</string>
+	<key>Extended upload settings</key>
+	<string>Расширенные настройки закачки</string>
+	<key>Face ID</key>
+	<string>Идентификатор лица</string>
+	<key>Favorite item</key>
+	<string>Добавить элемент в избранное</string>
+	<key>Favorites</key>
+	<string>Избранное</string>
+	<key>Feedback</key>
+	<string>Обратная связь</string>
+	<key>Fetching server information…</key>
+	<string>Fetching server information…</string>
+	<key>Fetching user information…</key>
+	<string>Получение информации о пользователе…</string>
+	<key>File</key>
+	<string>Файл</string>
+	<key>File Provider access has been disabled by the administrator.
+
+Please use the app to access your files.</key>
+	<string>File Provider access has been disabled by the administrator.
+
+Please use the app to access your files.</string>
+	<key>File Provider access has been disabled by the administrator. Please use the app to create new folders.</key>
+	<string>File Provider access has been disabled by the administrator. Please use the app to create new folders.</string>
+	<key>File Provider access has been disabled by the administrator. Please use the share extension to import files.</key>
+	<string>File Provider access has been disabled by the administrator. Please use the share extension to import files.</string>
+	<key>File an issue</key>
+	<string>File an issue</string>
+	<key>File couldn't be opened</key>
+	<string>Не удалось открыть файл</string>
+	<key>File format</key>
+	<string>Формат файла</string>
+	<key>File name cannot contain / or \</key>
+	<string>Имя файла не может содержать / или \</string>
+	<key>File no longer exists</key>
+	<string>Файл больше не существует</string>
+	<key>Files</key>
+	<string>Файлы</string>
+	<key>Files and folders marked as Available Offline will become unavailable. They will be re-downloaded next time you log into your account (connectivity required).</key>
+	<string>Файлы и папки, помеченные как доступные без сети, станут недоступными. При следующем входе в учётную запись они будут скачаны повторно (нужна связь).</string>
+	<key>Files selected and downloaded for offline availability will show up here.</key>
+	<string>Файлы, выбранные и скачанные для офлайн-доступа, будут отображаться здесь.</string>
+	<key>Find Next</key>
+	<string>Найти следующее</string>
+	<key>Find Previous</key>
+	<string>Найти предыдущее</string>
+	<key>Find information, answers and solutions in the detailed documentation.</key>
+	<string>Find information, answers and solutions in the detailed documentation.</string>
+	<key>Fired</key>
+	<string>Сработала</string>
+	<key>Firmware</key>
+	<string>Прошивка</string>
+	<key>Flash</key>
+	<string>Вспышка</string>
+	<key>Flash compensation</key>
+	<string>компенсация вспышки</string>
+	<key>Focal length</key>
+	<string>Фокусное расстояние</string>
+	<key>Focal length @ 35 mm</key>
+	<string>Фокусное расстояние в пересчёте на 35 мм</string>
+	<key>Folder</key>
+	<string>Папка</string>
+	<key>Folder name</key>
+	<string>Имя папки</string>
+	<key>Folder removed</key>
+	<string>Папка удалена</string>
+	<key>Forbidden Characters</key>
+	<string>Запрещённые символы</string>
+	<key>Free</key>
+	<string>Свободно</string>
+	<key>Free on %@</key>
+	<string>Свободно на %@</string>
+	<key>Full Screen</key>
+	<string>Полный экран</string>
+	<key>GPS Location</key>
+	<string>Местоположение GPS</string>
+	<key>General</key>
+	<string>Основные</string>
+	<key>Generate</key>
+	<string>Generate</string>
+	<key>Get in touch with our community in the forums - or file a GitHub issue to report a bug or request a feature.</key>
+	<string>Get in touch with our community in the forums - or file a GitHub issue to report a bug or request a feature.</string>
+	<key>Go to Beginning</key>
+	<string>Перейти в начало</string>
+	<key>Go to page</key>
+	<string>Переход к странице</string>
+	<key>Grid</key>
+	<string>Сетка</string>
+	<key>Group</key>
+	<string>Group</string>
+	<key>Groups</key>
+	<string>Группы</string>
+	<key>Help</key>
+	<string>Помощь</string>
+	<key>Help &amp; Contact</key>
+	<string>Help &amp; Contact</string>
+	<key>Hide</key>
+	<string>Hide</string>
+	<key>Histogram</key>
+	<string>Гистограмма</string>
+	<key>How should this file be saved?</key>
+	<string>Как следует сохранять этот файл?</string>
+	<key>ISO</key>
+	<string>Чувствительность</string>
+	<key>If you 'Continue', you will be prompted to allow the '{{app.name}}' app to open the login page where you can enter your credentials.</key>
+	<string>Если вы "Продолжите", вам будет предложено разрешить приложению "{{app.name }}" открыть страницу входа в систему, где вы сможете ввести свои учетные данные.</string>
+	<key>If you 'Continue', you will be prompted to allow the '{{app.name}}' app to open the {{authmethodName}} login page where you can enter your credentials.</key>
+	<string>При нажатии кнопки «Продолжить» вам будет предложено разрешить приложению  "{{app.name}}" открыть страницу входа {{authmethodName}}, на которой вы сможете ввести свои учетные данные.</string>
+	<key>If you choose "Immediately" the App will be locked, when it is no longer in foreground.</key>
+	<string>Если вы выберете «немедленно», то приложение будет заблокировано, как только перестанет быть на переднем плане.</string>
+	<key>If you have a moment to give us your feedback, please take our survey.</key>
+	<string>If you have a moment to give us your feedback, please take our survey.</string>
+	<key>If you make an item a favorite, it will turn up here.</key>
+	<string>If you make an item a favorite, it will turn up here.</string>
+	<key>If you would like background media uploads to be more reliable, you should enable background location updates.</key>
+	<string>If you would like background media uploads to be more reliable, you should enable background location updates.</string>
+	<key>If you'd like to give the account a custom name, please enter it below:</key>
+	<string>Если вы хотите присвоить учетной записи собственное имя, пожалуйста, введите его ниже:</string>
+	<key>Ignore updates</key>
+	<string>Игнорировать обновления</string>
+	<key>Image details</key>
+	<string>Подробности изображения</string>
+	<key>Image grid</key>
+	<string>Сетка изображений</string>
+	<key>Image metadata</key>
+	<string>Метаданные изображения</string>
+	<key>Image metadata, extended upload options</key>
+	<string>Метаданные изображения. расширенные возможности загрузки</string>
+	<key>Images</key>
+	<string>Изображения</string>
+	<key>Immediately</key>
+	<string>Немедленно</string>
+	<key>Import "{{itemName}}"</key>
+	<string>Импортировать "{{itemName}}"</string>
+	<key>Import from Clipboard</key>
+	<string>Импортировать из буфера обмена</string>
+	<key>Import not allowed</key>
+	<string>импорт не разрешен</string>
+	<key>Import {{itemCount}} files</key>
+	<string>Импортировать {{itemCount}} файлов</string>
+	<key>Importing %@ media files for upload</key>
+	<string>Импортируются мультимедийные файлы %@ для закачки</string>
+	<key>Importing files through opening is not allowed on this device.</key>
+	<string>Импортирование файлов через открытие на этом устройстве не разрешено.</string>
+	<key>Importing files through the Share Extension is not allowed on this device.</key>
+	<string>Импортирование файлов через Share Extension не разрешено на этом устройстве.</string>
+	<key>Importing item %ld of %ld</key>
+	<string>Импортирую элемент %ld из %ld</string>
+	<key>In order to accurately determine your current licensing status, please add one or more accounts first.</key>
+	<string>Чтобы точно определить состояние ваших лицензий, пожалуйста добавьте сначала одну или несколько учётных записей.</string>
+	<key>In the cloud</key>
+	<string>In the cloud</string>
+	<key>In-App Purchases</key>
+	<string>Покупки в приложении</string>
+	<key>Include available offline files</key>
+	<string>Включить доступные автономные файлы</string>
+	<key>Incorrect code</key>
+	<string>Неверный код</string>
+	<key>Increase Slider Value</key>
+	<string>Уменьшить значение слайдера</string>
+	<key>Info</key>
+	<string>Инфо</string>
+	<key>Invalid Page</key>
+	<string>Неверная страница</string>
+	<key>Invite</key>
+	<string>Пригласить</string>
+	<key>Issues</key>
+	<string>Проблемы</string>
+	<key>Item grid</key>
+	<string>Сетка предметов</string>
+	<key>Item with same name already exists</key>
+	<string>Элемент с тем же именем уже существует</string>
+	<key>Keywords</key>
+	<string>Ключевые слова</string>
+	<key>Landscape</key>
+	<string>Пейзаж</string>
+	<key>Lens ID</key>
+	<string>Идентификатор объектива</string>
+	<key>Lens info</key>
+	<string>Информация об объективе</string>
+	<key>Lens make</key>
+	<string>Производитель объектива</string>
+	<key>Lens model</key>
+	<string>Модель объектива</string>
+	<key>Lens serial</key>
+	<string>Серийный номер объектива</string>
+	<key>Light</key>
+	<string>Светлая</string>
+	<key>Limited Photo Access</key>
+	<string>Ограниченный доступ к фото</string>
+	<key>Link</key>
+	<string>Ссылка</string>
+	<key>Link points to an account bookmark which is not configured in the app.</key>
+	<string>Ссылка указывает на закладку учётной записи, которые не настроена в приложении.</string>
+	<key>Link resolution failed</key>
+	<string>Раскрытие ссылки не удалось</string>
+	<key>Links</key>
+	<string>Ссылки</string>
+	<key>List</key>
+	<string>Список</string>
+	<key>Loading…</key>
+	<string>Загрузка...</string>
+	<key>Local copy</key>
+	<string>Local copy</string>
+	<key>Local version</key>
+	<string>Local version</string>
+	<key>Location permission denied</key>
+	<string>Отказано в разрешении определить местоположение.</string>
+	<key>Locations</key>
+	<string>Места</string>
+	<key>Lock application</key>
+	<string>Блокировка приложения</string>
+	<key>Log Destinations</key>
+	<string>Направления журнала</string>
+	<key>Log Files</key>
+	<string>Лог-файлы</string>
+	<key>Log Level</key>
+	<string>Уровень журнала</string>
+	<key>Log out</key>
+	<string>Выйти</string>
+	<key>Log out of '%@' failed</key>
+	<string>Log out of '%@' failed</string>
+	<key>Logging</key>
+	<string>Журналирование</string>
+	<key>Login</key>
+	<string>Логин</string>
+	<key>Make available offline</key>
+	<string>Сделать доступными без сети (автономно)</string>
+	<key>Make unavailable offline</key>
+	<string>Сделать недоступными без сети</string>
+	<key>Manage</key>
+	<string>Управление</string>
+	<key>Manual</key>
+	<string>Вручную</string>
+	<key>Markup</key>
+	<string>Разметка</string>
+	<key>Markup Documents</key>
+	<string>Разметка документов</string>
+	<key>Markup photos and PDF files.</key>
+	<string>Разметка фотографий и файлов PDF.</string>
+	<key>Mask private data</key>
+	<string>Замаскировать конфиденциальные данные</string>
+	<key>Media Export</key>
+	<string>Экспорт мультимедиа</string>
+	<key>Media Files</key>
+	<string>Мультимедийные файлы</string>
+	<key>Media Upload</key>
+	<string>Загрузка фото и видео</string>
+	<key>Media import</key>
+	<string>Импорт фото и видео</string>
+	<key>Messages</key>
+	<string>Messages</string>
+	<key>Metering</key>
+	<string>Измерение</string>
+	<key>Missing hostname</key>
+	<string>Отсутствует имя сервера</string>
+	<key>Missing permissions</key>
+	<string>Не хватает разрешений</string>
+	<key>More</key>
+	<string>Больше</string>
+	<key>More for {{title}}</key>
+	<string>More for {{title}}</string>
+	<key>More information</key>
+	<string>Больше информации</string>
+	<key>Move</key>
+	<string>Переместить</string>
+	<key>Move "{{itemName}}"</key>
+	<string>Move "{{itemName}}"</string>
+	<key>Move here</key>
+	<string>Поместить сюда</string>
+	<key>Move {{itemCount}} items</key>
+	<string>Move {{itemCount}} items</string>
+	<key>Moving %ld items…</key>
+	<string>Перемещение %ld элементов…</string>
+	<key>MultiSpot</key>
+	<string>Несколько пятен</string>
+	<key>Multiple items</key>
+	<string>Несколько элементов</string>
+	<key>Mute/Unmute</key>
+	<string>Выключить/включить звук</string>
+	<key>N</key>
+	<string>с.ш.</string>
+	<key>Name</key>
+	<string>Название</string>
+	<key>Name of saved search</key>
+	<string>Название сохраненного поиска</string>
+	<key>Name of template</key>
+	<string>Имя шаблона</string>
+	<key>Network unavailable</key>
+	<string>Сеть недоступна</string>
+	<key>New Folder</key>
+	<string>Новая папка</string>
+	<key>New document</key>
+	<string>Новый документ</string>
+	<key>New in %@</key>
+	<string>Новое в %@</string>
+	<key>New settings received from MDM</key>
+	<string>Через MDM получены новые настройки</string>
+	<key>Next</key>
+	<string>Следующий</string>
+	<key>Next item</key>
+	<string>Next item</string>
+	<key>No Access to the media selected for upload</key>
+	<string>Нет доступа к материалам, выбранным для закачки</string>
+	<key>No account configured</key>
+	<string>No account configured</string>
+	<key>No account has been set up in the {{app.name}} app yet.</key>
+	<string>В приложении {{app.name}} еще не создана учетная запись.</string>
+	<key>No accounts found</key>
+	<string>Учётные записи не найдены</string>
+	<key>No actions available</key>
+	<string>Нет доступных действий</string>
+	<key>No authentication data has been found for this connection.</key>
+	<string>Для данного соединения не найдены данные аутентификации.</string>
+	<key>No contents</key>
+	<string>нет содержимого</string>
+	<key>No favorites found</key>
+	<string>No favorites found</string>
+	<key>No files available offline</key>
+	<string>Нет файлов доступных офлайн</string>
+	<key>No issues found. Certificate passed validation.</key>
+	<string>Не выявлено проблем. Сертификат прошёл проверку.</string>
+	<key>No items found matching the search criteria.</key>
+	<string>No items found matching the search criteria.</string>
+	<key>No items shared by link</key>
+	<string>No items shared by link</string>
+	<key>No items shared by you</key>
+	<string>No items shared by you</string>
+	<key>No items shared with you</key>
+	<string>No items shared with you</string>
+	<key>No matches</key>
+	<string>Нет соответствий</string>
+	<key>No pending messages or ongoing actions.</key>
+	<string>Нет ожидаемых сообщений или продолжающихся действий.</string>
+	<key>No spaces</key>
+	<string>No spaces</string>
+	<key>No strobe return detection</key>
+	<string>Встречный строб не определяется</string>
+	<key>No user or group matches your search.</key>
+	<string>No user or group matches your search.</string>
+	<key>Normal</key>
+	<string>Нормальный</string>
+	<key>Not defined</key>
+	<string>Не задано</string>
+	<key>Not now</key>
+	<string>Не сейчас</string>
+	<key>OK</key>
+	<string>ОК</string>
+	<key>Off</key>
+	<string>Выключено</string>
+	<key>Offline</key>
+	<string>Offline</string>
+	<key>Offline files use</key>
+	<string>Использование автономных файлов</string>
+	<key>Online</key>
+	<string>Online</string>
+	<key>Open Selected</key>
+	<string>Открыть выбранное</string>
+	<key>Open app</key>
+	<string>Открыть приложение</string>
+	<key>Open file</key>
+	<string>Открыть файл</string>
+	<key>Open help page</key>
+	<string>Open help page</string>
+	<key>Open in</key>
+	<string>Открыть в</string>
+	<key>Open in a new Window</key>
+	<string>Открыть в новом окне</string>
+	<key>Open in {{appName}} (web)</key>
+	<string>Open in {{appName}} (web)</string>
+	<key>Open link</key>
+	<string>Open link</string>
+	<key>Open login page</key>
+	<string>Откройте страницу входа в систему</string>
+	<key>Open shortcut</key>
+	<string>Open shortcut</string>
+	<key>Opening documents is not supported by the app provider on this instance.</key>
+	<string>Opening documents is not supported by the app provider on this instance.</string>
+	<key>Opening link failed</key>
+	<string>Opening link failed</string>
+	<key>Opening not allowed</key>
+	<string>Открытие не разрешено</string>
+	<key>Opening…</key>
+	<string>Opening…</string>
+	<key>Optic ID</key>
+	<string>Optic ID</string>
+	<key>Options</key>
+	<string>Опции</string>
+	<key>Original date</key>
+	<string>Исходная дата</string>
+	<key>Otherwise background media uploads using background refresh technology would depend on how frequently you use the app.</key>
+	<string>Иначе фоновые закачки мультимедиа, использующие технологию обновления, будут зависеть от того, насколько часто вы используете приложение.</string>
+	<key>Outline</key>
+	<string>Оглавление</string>
+	<key>Overwrite original</key>
+	<string>Переписать оригинал</string>
+	<key>Owner</key>
+	<string>Владелец</string>
+	<key>PDF Documents</key>
+	<string>Документы PDF</string>
+	<key>Page</key>
+	<string>Страница</string>
+	<key>Partial</key>
+	<string>Частично</string>
+	<key>Passcode Lock</key>
+	<string>Блокировка кодом доступа</string>
+	<key>Passcode option</key>
+	<string>Passcode option</string>
+	<key>Passcode protection is not supported on this device.
+Please disable passcode lock in the app settings.</key>
+	<string>Блокировка кодом доступа не поддерживается на этом устройстве.
+Пожалуйста, отключите блокировку кодом доступа в настройках приложения.</string>
+	<key>Passcode setup</key>
+	<string>Passcode setup</string>
+	<key>Passed</key>
+	<string>Прошло</string>
+	<key>Password</key>
+	<string>Пароль</string>
+	<key>Paste</key>
+	<string>Вставить</string>
+	<key>Pattern</key>
+	<string>Шаблон</string>
+	<key>Pending</key>
+	<string>Ожидается</string>
+	<key>Permissions</key>
+	<string>Права доступа</string>
+	<key>Photo Pro Features</key>
+	<string>Возможности Photo Pro</string>
+	<key>Photo upload</key>
+	<string>Закачка фото</string>
+	<key>Photo upload path</key>
+	<string>Путь загрузки фото</string>
+	<key>Photometric interpretation</key>
+	<string>Фотометрическая интерпретация</string>
+	<key>Photos</key>
+	<string>Фото</string>
+	<key>Pick a destination for photo uploads</key>
+	<string>Pick a destination for photo uploads</string>
+	<key>Pick a destination for video uploads</key>
+	<string>Pick a destination for video uploads</string>
+	<key>Pick a document type to create:</key>
+	<string>Выберите тип документа для создания:</string>
+	<key>Pick a name</key>
+	<string>Pick a name</string>
+	<key>Pick file or folder</key>
+	<string>Pick file or folder</string>
+	<key>Place</key>
+	<string>Место</string>
+	<key>Play/Pause</key>
+	<string>Проигрывание/Пауза</string>
+	<key>Please choose how many digits you want to use for the passcode lock?</key>
+	<string>Please choose how many digits you want to use for the passcode lock?</string>
+	<key>Please configure an email account</key>
+	<string>Пожалуйста, настройте учётную запись почты</string>
+	<key>Please note: Folders can only be pasted into the %@ app and the same account.</key>
+	<string>Please note: Folders can only be pasted into the %@ app and the same account.</string>
+	<key>Please open the app and select the account to re-authenticate.</key>
+	<string>Please open the app and select the account to re-authenticate.</string>
+	<key>Please re-enable location acquisition in system settings</key>
+	<string>Пожалуйста, включите обратно разрешение на получение местоположения в настройках системы</string>
+	<key>Please try again in %@</key>
+	<string>Пожалуйста, попробуйте ещё раз через %@</string>
+	<key>Please wait…</key>
+	<string>Пожалуйста, ждите…</string>
+	<key>Portions of this app may utilize the following copyrighted material, the use of which is hereby acknowledged.</key>
+	<string>Части этого приложения могут использовать нижеперечисленный материал, защищённый авторским правом, и здесь подтверждается его использование.</string>
+	<key>Portrait</key>
+	<string>Портрет</string>
+	<key>Prefer RAW photos</key>
+	<string>Предпочитать формат RAW</string>
+	<key>Prefer original videos</key>
+	<string>Предпочитать исходные видео</string>
+	<key>Prefer unedited photos</key>
+	<string>Предпочитать неотредактированные фото</string>
+	<key>Preparing account</key>
+	<string>Создать учётную запись</string>
+	<key>Preparing…</key>
+	<string>Подготовка</string>
+	<key>Presentation Mode</key>
+	<string>Режим презентации</string>
+	<key>Preserve original media file names</key>
+	<string>Сохранить исходные имена файлов мультимедиа</string>
+	<key>Prevent dragging of files and folders and multiselection using system defined gestures</key>
+	<string>Предотвратить перетаскивание файлов и папок, а так же множественный выбор, с помощью заданных в системе жестов</string>
+	<key>Previous</key>
+	<string>Предыдущий</string>
+	<key>Previous item</key>
+	<string>Previous item</string>
+	<key>Privacy</key>
+	<string>Конфиденциальность</string>
+	<key>Privacy Policy</key>
+	<string>Политика конфиденциальности</string>
+	<key>Private Link</key>
+	<string>Личная ссылка</string>
+	<key>Pro Features</key>
+	<string>Профессиональные возможности</string>
+	<key>Proceed</key>
+	<string>Продолжить</string>
+	<key>Processing on server</key>
+	<string>Processing on server</string>
+	<key>Profile</key>
+	<string>Профиль</string>
+	<key>Program</key>
+	<string>Программа</string>
+	<key>Public Link</key>
+	<string>Общедоступная ссылка</string>
+	<key>Purchase</key>
+	<string>Приобретение</string>
+	<key>Purchase failed</key>
+	<string>Покупка не удалась</string>
+	<key>Purchases &amp; Subscriptions</key>
+	<string>Покупки и подписки</string>
+	<key>Quick Access</key>
+	<string>Быстрый доступ</string>
+	<key>RGB</key>
+	<string>RGB</string>
+	<key>Read</key>
+	<string>Читать</string>
+	<key>Really delete '%@'?</key>
+	<string>Действительно удалить '%@'?</string>
+	<key>Really include available offline files?</key>
+	<string>Действительно включить доступные автономные файлы?</string>
+	<key>Recents</key>
+	<string>Недавно</string>
+	<key>Recommend to a friend</key>
+	<string>Рекомендовать другу</string>
+	<key>Red eye detection supported</key>
+	<string>Подавление красных глаз поддерживается</string>
+	<key>Refresh without asking</key>
+	<string>Обновлять не спрашивая</string>
+	<key>Rejected</key>
+	<string>Отклонено</string>
+	<key>Remove</key>
+	<string>Удалить</string>
+	<key>Remove expiration date</key>
+	<string>Remove expiration date</string>
+	<key>Remove from sidebar</key>
+	<string>Remove from sidebar</string>
+	<key>Remove password</key>
+	<string>Remove password</string>
+	<key>Removes downloaded files and local copies of items marked as Available Offline. The latter will be re-downloaded next time you log into your account (connectivity required).</key>
+	<string>Удаляет скачанные файлы и локальные копии элементов, помеченных как Доступные офлайн. Последние будут снова скачаны при следующем входе в вашу учетную запись (требуется подключение).</string>
+	<key>Rename</key>
+	<string>Переименовать</string>
+	<key>Repeat code</key>
+	<string>Повторите код</string>
+	<key>Resolving link…</key>
+	<string>Раскрытие ссылки…</string>
+	<key>Restore purchases</key>
+	<string>Восстановить покупки</string>
+	<key>Restoring purchases…</key>
+	<string>Восстановление покупок…</string>
+	<key>Resume</key>
+	<string>Возобновить</string>
+	<key>Reveal</key>
+	<string>Reveal</string>
+	<key>Reveal in folder</key>
+	<string>Показать в папке</string>
+	<key>Review Connection</key>
+	<string>Обзор соединения</string>
+	<key>Revoke approval</key>
+	<string>Отменить подтверждение</string>
+	<key>S</key>
+	<string>ю.ш.</string>
+	<key>Save</key>
+	<string>Сохранить</string>
+	<key>Save File</key>
+	<string>Сохранить файл</string>
+	<key>Save as</key>
+	<string>Сохранить как</string>
+	<key>Save as copy</key>
+	<string>Сохранить как копию</string>
+	<key>Save as search template</key>
+	<string>Сохранить как шаблон поиска</string>
+	<key>Save changes</key>
+	<string>Сохранить изменения</string>
+	<key>Save here</key>
+	<string>Сохранить здесь</string>
+	<key>Save search</key>
+	<string>Сохранить поиск</string>
+	<key>Saved search</key>
+	<string>Сохраненный поиск</string>
+	<key>Saved searches</key>
+	<string>Сохраненные поиски</string>
+	<key>Saving</key>
+	<string>Сохраняется</string>
+	<key>Saving edited file failed</key>
+	<string>Не удалось сохранить редактируемый файл</string>
+	<key>Scan</key>
+	<string>Cканировать</string>
+	<key>Scan additional</key>
+	<string>Сканировать дополнительно</string>
+	<key>Scan document</key>
+	<string>Сканировать документ</string>
+	<key>Scan documents and photos with your camera.</key>
+	<string>Сканировать документы и фотографии с помощью вашей камеры.</string>
+	<key>Scans</key>
+	<string>Сканы</string>
+	<key>Scene</key>
+	<string>Сцена</string>
+	<key>Scheduled upload of %ld media assets</key>
+	<string>Запланирована закачка %ld элементов мультимедиа</string>
+	<key>Scroll to Bottom</key>
+	<string>Прокрутить в конец</string>
+	<key>Scroll to Top</key>
+	<string>Прокрутить в начало</string>
+	<key>Search</key>
+	<string>Найти</string>
+	<key>Search PDF</key>
+	<string>Поиск PDF</string>
+	<key>Search account</key>
+	<string>Поиск в учётной записи</string>
+	<key>Search folder</key>
+	<string>Поиск в папке</string>
+	<key>Search for users or groups</key>
+	<string>Поиск пользователей или групп</string>
+	<key>Search from {{folder.name}}</key>
+	<string>Поиск по {{folder.name}}</string>
+	<key>Search space</key>
+	<string>Поиск в пространстве</string>
+	<key>Search template</key>
+	<string>Шаблон поиска</string>
+	<key>Search templates</key>
+	<string>Шаблоны поиска</string>
+	<key>Search tree</key>
+	<string>Дерево поиска</string>
+	<key>Search {{space.name}}</key>
+	<string>Поиск {{space.name}}</string>
+	<key>Security</key>
+	<string>Безопасность</string>
+	<key>Select</key>
+	<string>Выбрать</string>
+	<key>Select All</key>
+	<string>Выбрать всё</string>
+	<key>Select Destination</key>
+	<string>Select Destination</string>
+	<key>Select Last Item on Page</key>
+	<string>Выбрать последний элемент на странице</string>
+	<key>Select Next</key>
+	<string>Выбрать следующее</string>
+	<key>Select Previous</key>
+	<string>Выбрать предыдущее</string>
+	<key>Select folder</key>
+	<string>Select folder</string>
+	<key>Select one or more items.</key>
+	<string>Select one or more items.</string>
+	<key>Select target.</key>
+	<string>Select target.</string>
+	<key>Send feedback</key>
+	<string>Отправить свой отзыв</string>
+	<key>Serial number</key>
+	<string>Серийный номер</string>
+	<key>Server Password</key>
+	<string>Пароль сервера</string>
+	<key>Server URL</key>
+	<string>URL сервера</string>
+	<key>Server Username</key>
+	<string>Имя пользователя на сервере</string>
+	<key>Server name</key>
+	<string>Имя сервера</string>
+	<key>Set</key>
+	<string>Set</string>
+	<key>Settings</key>
+	<string>Настройки</string>
+	<key>Setup a new account in the app to save to.</key>
+	<string>Setup a new account in the app to save to.</string>
+	<key>Share</key>
+	<string>Общий доступ</string>
+	<key>Share Diagnostics</key>
+	<string>Диагностика общего доступа</string>
+	<key>Share Extension disabled</key>
+	<string>Отключение расширения общего доступа</string>
+	<key>Share Extension unavailable</key>
+	<string>Share Extension unavailable</string>
+	<key>Share with</key>
+	<string>Поделиться с</string>
+	<key>Shared</key>
+	<string>Shared</string>
+	<key>Shared by link</key>
+	<string>Доступные по ссылке</string>
+	<key>Shared by me</key>
+	<string>Shared by me</string>
+	<key>Shared by {{owner}}</key>
+	<string>Shared by {{owner}}</string>
+	<key>Shared with</key>
+	<string>Опубликован для</string>
+	<key>Shared with me</key>
+	<string>Shared with me</string>
+	<key>Shared with {{recipients}}</key>
+	<string>Shared with {{recipients}}</string>
+	<key>Shared with {{recipient}}</key>
+	<string>Shared with {{recipient}}</string>
+	<key>Shares</key>
+	<string>События обмена файлами</string>
+	<key>Sharing</key>
+	<string>Общий доступ</string>
+	<key>Sharing requires an active connection.</key>
+	<string>Sharing requires an active connection.</string>
+	<key>Shortcut</key>
+	<string>Shortcut</string>
+	<key>Shortcut to '{{hostname}}'</key>
+	<string>Shortcut to '{{hostname}}'</string>
+	<key>Shortcuts Actions</key>
+	<string>Сокращения для действий</string>
+	<key>Shorten by one week</key>
+	<string>Shorten by one week</string>
+	<key>Show</key>
+	<string>Show</string>
+	<key>Show all</key>
+	<string>Показать всё</string>
+	<key>Show folders on top</key>
+	<string>Показывать папки в начале</string>
+	<key>Show hidden files and folders</key>
+	<string>Показывать скрытые файлы и папки</string>
+	<key>Show message</key>
+	<string>Show message</string>
+	<key>Show more results</key>
+	<string>Показать больше результатов</string>
+	<key>Show new version</key>
+	<string>Показать новую версию</string>
+	<key>Show/Hide sidebar</key>
+	<string>Show/Hide sidebar</string>
+	<key>Shutter priority</key>
+	<string>Приоритет выдержки</string>
+	<key>Shutter speed</key>
+	<string>Выдержка</string>
+	<key>Sign in</key>
+	<string>Войти</string>
+	<key>Size</key>
+	<string>Размер</string>
+	<key>Skip</key>
+	<string>Пропустить</string>
+	<key>Skip Ahead</key>
+	<string>Пропустить вперёд</string>
+	<key>Skip Back</key>
+	<string>Пропустить назад</string>
+	<key>Some cellular data may still be used. To completely avoid the usage of cellular data, please turn off access to cellular for the entire app in the Settings app.</key>
+	<string>Будет использовано некоторое количество сотового трафика. Чтобы полностью избежать его использования, пожалуйста отключите доступ к сотовой сети для всего приложения в приложении Настроек.</string>
+	<key>Sort by %@</key>
+	<string>Сортировка по %@</string>
+	<key>Sort by {{attribute}} in {{direction}} order</key>
+	<string>Sort by {{attribute}} in {{direction}} order</string>
+	<key>Space</key>
+	<string>Space</string>
+	<key>Spaces</key>
+	<string>Spaces</string>
+	<key>Spot</key>
+	<string>Пятно</string>
+	<key>Start setup</key>
+	<string>Начать настройку</string>
+	<key>Status</key>
+	<string>Статус</string>
+	<key>Storage</key>
+	<string>Хранилище</string>
+	<key>Strobe return light detected</key>
+	<string>Встречный строб-свет обнаружен</string>
+	<key>Strobe return light not detected</key>
+	<string>Встречный строб-свет не обнаружен</string>
+	<key>Subscribe</key>
+	<string>Подписаться</string>
+	<key>Subscribe Now</key>
+	<string>Подпишитесь сейчас</string>
+	<key>Switch Theme Style</key>
+	<string>Переключить стиль темы</string>
+	<key>System</key>
+	<string>Система</string>
+	<key>System Appeareance</key>
+	<string>Внешний вид системы</string>
+	<key>TIFF</key>
+	<string>TIFF</string>
+	<key>Tab %@</key>
+	<string>Вкладка %@</string>
+	<key>Take photo or video</key>
+	<string>Снять фото или видео</string>
+	<key>Take survey</key>
+	<string>Take survey</string>
+	<key>Tap to launch the app.</key>
+	<string>Нажмите, чтобы запустить приложение.</string>
+	<key>Tap to quit the app.</key>
+	<string>Нажмите, чтобы выйти из приложения.</string>
+	<key>Terms Of Use</key>
+	<string>Условия использования</string>
+	<key>Text</key>
+	<string>Текст</string>
+	<key>Thank you for using %@.
+</key>
+	<string>Спасибо за использование %@.
+</string>
+	<key>Thank you for using %@.
+If you like our App, please leave an AppStore review.
+❤️</key>
+	<string>Спасибо, что используете %@.
+Если вам нравится наше приложение, оставьте отзыв в AppStore.
+❤️</string>
+	<key>The account has been disabled.</key>
+	<string>Учётная запись была отключена.</string>
+	<key>The connection's access token has expired or become invalid. Sign in again to re-gain access.</key>
+	<string>Токен доступа данного соединения устарел или стал недействительным. Перевойдите, чтобы восстановить доступ.</string>
+	<key>The destination this shortcut points to could not be found. It may have been deleted or you may not have access to it.</key>
+	<string>The destination this shortcut points to could not be found. It may have been deleted or you may not have access to it.</string>
+	<key>The entered URL does not include a hostname.</key>
+	<string>Введённый адрес URL не содержит в себе имя сервера.</string>
+	<key>The entered codes are different</key>
+	<string>Введённые коды отличаются</string>
+	<key>The entered page number doesn't exist</key>
+	<string>Введённый номер страницы не существует</string>
+	<key>The following steps will guide you through the setup process.</key>
+	<string>Следующие шаги помогут вам в процессе настройки.</string>
+	<key>The last 10 archived logs are kept on the device - with each log covering up to 24 hours of usage. When sharing please bear in mind that logs may contain sensitive information such as server URLs and user-specific information.</key>
+	<string>В памяти устройства архивируются последние 10 лог-файлов. Каждый из них может содержать до 24 часов информации о использовании приложения. При обмене лог-файлами, помните, что они могут содержать конфиденциальную информацию, такую как URL серверов или данные о пользователе.</string>
+	<key>The password was copied to the clipboard</key>
+	<string>The password was copied to the clipboard</string>
+	<key>The search term you entered did not match any item in the selected scope.</key>
+	<string>Введенный вами термин поиска не соответствует ни одному элементу в выбранной области видимости.</string>
+	<key>The server declined access with the credentials stored for this connection.</key>
+	<string>Сервер отказал в доступе с учётными данными, сохранёнными для данного соединения.</string>
+	<key>The shortcut points to a URL, but the configuration of this app prohibits opening it.</key>
+	<string>The shortcut points to a URL, but the configuration of this app prohibits opening it.</string>
+	<key>The shortcut points to another item, but the configuration of this app prohibits opening it.</key>
+	<string>The shortcut points to a URL, but the configuration of this app prohibits opening it.</string>
+	<key>The {{app.name}} share extension is not available on this system.</key>
+	<string>The {{app.name}} share extension is not available on this system.</string>
+	<key>Theme</key>
+	<string>Тема</string>
+	<key>This action can't be undone.</key>
+	<string>Это действие невозможно отменить.</string>
+	<key>This document has %@ pages</key>
+	<string>В этом документе %@ страниц</string>
+	<key>This folder is empty.</key>
+	<string>Папка пуста.</string>
+	<key>This folder is empty. Fill it with content:</key>
+	<string>Эта папка пуста. Заполните ее содержимым:</string>
+	<key>This folder no longer exists on the server.</key>
+	<string>Эта папка больше не существует на сервере.</string>
+	<key>This permission is needed to upload photos and videos from your photo library.</key>
+	<string>Это разрешение необходимо для загрузки фото и видео из вашей библиотеки.</string>
+	<key>This shortcut points to:
+{{url}}</key>
+	<string>This shortcut points to:
+{{url}}</string>
+	<key>This will also delete all locally stored file copies.</key>
+	<string>Это так же удалит все локально сохранённые копии файла.</string>
+	<key>Time</key>
+	<string>Время</string>
+	<key>Time measured since uploading, editing, downloading or viewing the respective file through this device. Does not apply to files downloaded via the Available Offline feature. Local copies may be deleted before the given period of time has passed, f.ex. because there's a newer version of a file on the server - or through the manual deletion of offline copies. Also, local copies may not be deleted after the given period of time has passed, f.ex. if an action is performed on it, the file is still in use - or the account holding the file hasn't been used in the app.</key>
+	<string>Время, измеренное с момента закачки, правки, скачивания или просмотра соответствующего файла с помощью этого устройства. Не применяется к файлам, скачанным через возможность доступа без сети. Локальные копии могут удаляться до наступления заданного периода времени, например из-за более свежей версии файла на сервере, или через ручное удаление локальных копий. С другой стороны, локальные копии могут быть не удалены по истечении заданного времени, например из-за выполняемых над ними действий удерживающих файл, или учётная запись, в которой числится файл, не используется в приложении.</string>
+	<key>To use the app, you need to create a passcode.</key>
+	<string>To use the app, you need to create a passcode.</string>
+	<key>Toggle Search Scope</key>
+	<string>Переключить область поиска</string>
+	<key>Toggle layout</key>
+	<string>Toggle layout</string>
+	<key>Total update scans</key>
+	<string>Всего сканов обновлений</string>
+	<key>Touch ID</key>
+	<string>Touch ID</string>
+	<key>Tree</key>
+	<string>дерево</string>
+	<key>Type</key>
+	<string>Тип</string>
+	<key>URL</key>
+	<string>URL</string>
+	<key>URL of webpage or item</key>
+	<string>URL of webpage or item</string>
+	<key>URL was copied to the clipboard</key>
+	<string>URL была скопирована в буфер обмена</string>
+	<key>Uncalibrated</key>
+	<string>Неоткалибровано</string>
+	<key>Unfavorite item</key>
+	<string>Убрать элемент из избранного</string>
+	<key>Unknown</key>
+	<string>Unknown</string>
+	<key>Unlock</key>
+	<string>Разблокировать</string>
+	<key>Unlock %@</key>
+	<string>Разблокировать %@</string>
+	<key>Unlock all Pro Features.</key>
+	<string>Разблокировать все профессиональные возможности.</string>
+	<key>Unlock using %@?</key>
+	<string>Unlock using %@?</string>
+	<key>Unlocked</key>
+	<string>Разблокировано</string>
+	<key>Unshare</key>
+	<string>Закрыть доступ</string>
+	<key>Update Status</key>
+	<string>Статус обновления</string>
+	<key>Updating %ld items…</key>
+	<string>Обновление %ld элементов…</string>
+	<key>Updating connection…</key>
+	<string>Соединение обновляется…</string>
+	<key>Upload</key>
+	<string>Загрузить</string>
+	<key>Upload file</key>
+	<string>Загрузить файл</string>
+	<key>Upload from your photo library</key>
+	<string>Загрзука из вашей фото-библиотеки</string>
+	<key>Uploading %ld files…</key>
+	<string>Загрузка %ld файлов…</string>
+	<key>Uploading {{remainingFileCount}} files…</key>
+	<string>Uploading {{remainingFileCount}} files…</string>
+	<key>Usage terms</key>
+	<string>Условия использования</string>
+	<key>Use background location updates</key>
+	<string>Использовать фоновое обновление местоположения</string>
+	<key>Use background refresh</key>
+	<string>Использовать фоновое обновление</string>
+	<key>Use ownCloud actions in Shortcuts.</key>
+	<string>Использовать действия ownCloud в сокращениях.</string>
+	<key>User Interface</key>
+	<string>Интерфейс пользователя</string>
+	<key>User-approved certificates</key>
+	<string>Сертификаты, подтверждённые пользователем</string>
+	<key>Username</key>
+	<string>Имя пользователя</string>
+	<key>Users</key>
+	<string>Пользователи</string>
+	<key>Validation Error</key>
+	<string>Ошибка проверки</string>
+	<key>Verbose</key>
+	<string>Verbose</string>
+	<key>Verifying password…</key>
+	<string>Verifying password…</string>
+	<key>Version information were copied to the clipboard</key>
+	<string>Информация о версии скопирована в буфер обмена</string>
+	<key>Video upload</key>
+	<string>Закачка видео</string>
+	<key>Video upload path</key>
+	<string>Путь загрузки видео</string>
+	<key>Videos</key>
+	<string>Видео</string>
+	<key>View documentation</key>
+	<string>View documentation</string>
+	<key>Visit the forums</key>
+	<string>Visit the forums</string>
+	<key>W</key>
+	<string>з.д.</string>
+	<key>Waiting for response from login session in external browser…</key>
+	<string>Жду ответа от сеанса, вошедшего во внешнем браузере…</string>
+	<key>Waiting for server response…</key>
+	<string>Жду ответа сервера…</string>
+	<key>Warning</key>
+	<string>Предупреждение</string>
+	<key>Welcome to %@</key>
+	<string>Добро пожаловать в %@</string>
+	<key>When activated, logs may impact performance and include sensitive information. However the logs are not subject to automatic submission to %@ servers. Sharing logs with others is sole user responsibility.</key>
+	<string>Если включить, то журналы могут ухудшить производительность и включать критичную информацию. Однако журналы не отправляются автоматически на сервера %@. Предоставление доступа к журналу другим — это целиком ответственность пользователя.</string>
+	<key>White balance</key>
+	<string>Баланс белого</string>
+	<key>Would you like to view the updated version?</key>
+	<string>Хотите посмотреть обновлённую версию?</string>
+	<key>YCbCr</key>
+	<string>YCbCr</string>
+	<key>You are required to set the passcode</key>
+	<string>Вам следует ввести код доступа</string>
+	<key>You need to configure an email account first to be able to send emails.</key>
+	<string>Чтобы иметь возможность отправлять сообщения, вам нужно сначала настроить учётную запись почты.</string>
+	<key>after %@</key>
+	<string>после %@</string>
+	<key>after free %@ trial</key>
+	<string>после бесплатного 1%@ период</string>
+	<key>ascending</key>
+	<string>ascending</string>
+	<key>beta</key>
+	<string>бета</string>
+	<key>date</key>
+	<string>дате</string>
+	<key>descending</key>
+	<string>descending</string>
+	<key>enabled</key>
+	<string>включен</string>
+	<key>https://example.com</key>
+	<string>https://example.com</string>
+	<key>kind</key>
+	<string>добрый</string>
+	<key>last used</key>
+	<string>последний используемый</string>
+	<key>license</key>
+	<string>license</string>
+	<key>name</key>
+	<string>имя</string>
+	<key>never</key>
+	<string>никогда</string>
+	<key>none</key>
+	<string>пусто</string>
+	<key>not present</key>
+	<string>не присутствует</string>
+	<key>off</key>
+	<string>выкл</string>
+	<key>on</key>
+	<string>on</string>
+	<key>release</key>
+	<string>выпуск</string>
+	<key>shared</key>
+	<string>поделился</string>
+	<key>size</key>
+	<string>размеру</string>
+	<key>undated</key>
+	<string>undated</string>
+	<key>unknown</key>
+	<string>неизвестно</string>
+	<key>{{attribute}} {{direction}}</key>
+	<string>{{attribute}} {{direction}}</string>
+	<key>{{fileName}} (file)</key>
+	<string>{{fileName}} (file)</string>
+	<key>{{folderName}} (folder)</key>
+	<string>{{folderName}} (folder)</string>
+	<key>{{itemCount}} items with {{totalSize}} total ({{fileCount}} files, {{folderCount}} folders)</key>
+	<string>{{itemCount}} элементов с {{totalSize}} общим размером ({{fileCount}} файлов, {{folderCount}} папок)</string>
+	<key>{{itemName}} ({{link}}) | password: {{password}}</key>
+	<string>{{itemName}} ({{link}}) | password: {{password}}</string>
+	<key>{{link}} | password: {{password}}</key>
+	<string>{{link}} | password: {{password}}</string>
+	<key>{{remaining}} available</key>
+	<string>{{remaining}} доступно</string>
+	<key>{{spaceName}} (space)</key>
+	<string>{{spaceName}} (space)</string>
+</dict>
+</plist>

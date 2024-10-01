@@ -35,9 +35,6 @@ public class PrivateSharePage extends CommonPage {
     @iOSXCUITFindBy(id = "Delete")
     private WebElement delete;
 
-    @iOSXCUITFindBy(id = "Share")
-    private WebElement share;
-
     @iOSXCUITFindBy(id = "Expiration date")
     private WebElement expirationDate;
 
@@ -86,7 +83,6 @@ public class PrivateSharePage extends CommonPage {
             //Sharing as default as custom. Changeable if needed
             case ("Custom"): {
                 custom.click();
-                share.click();
                 break;
             }
         }
@@ -100,7 +96,6 @@ public class PrivateSharePage extends CommonPage {
     public void removeSharingPermission() {
         Log.log(Level.FINE, "Starts: Remove sharing permission");
         custom.click();
-        share.click();
     }
 
     public void savePermissions() {

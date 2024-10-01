@@ -45,6 +45,9 @@ public class CommonPage {
     @iOSXCUITFindBy(id = "Allow")
     protected List<WebElement> allow;
 
+    @iOSXCUITFindBy(xpath = "//XCUIElementTypeButton[@label=\"Allow Full Access\"]")
+    protected List<WebElement> allowFullAccess;
+
     protected static IOSDriver driver = AppiumManager.getManager().getDriver();
     protected static Actions actions;
     private static final SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMdd_HHmmss");
@@ -90,11 +93,11 @@ public class CommonPage {
     }
 
     public WebElement findXpath(String xpath) {
-        return (WebElement) driver.findElement(AppiumBy.xpath(xpath));
+        return driver.findElement(AppiumBy.xpath(xpath));
     }
 
     public List<WebElement> findListXpath(String xpath) {
-        return (List<WebElement>) driver.findElements(AppiumBy.xpath(xpath));
+        return driver.findElements(AppiumBy.xpath(xpath));
     }
 
     public WebElement findId(String id) {
@@ -102,7 +105,11 @@ public class CommonPage {
     }
 
     public List<WebElement> findListId(String id) {
-        return (List<WebElement>) driver.findElements(AppiumBy.id(id));
+        return driver.findElements(AppiumBy.id(id));
+    }
+
+    public List<WebElement> findListCss(String cssClass) {
+        return driver.findElements(AppiumBy.cssSelector(cssClass));
     }
 
     public static void swipe(double startx, double starty, double endx, double endy) {
@@ -152,7 +159,7 @@ public class CommonPage {
     }
 
     protected void browseToFolder(String path) {
-        Log.log(Level.FINE, "Browse to folder: " + path);
+        Log.log(Level.FINE, "Starts: Browse to folder: " + path);
         String completePath = Pattern.quote("/");
         String[] route = path.split(completePath);
         Log.log(Level.FINE, "Route length: " + route.length);
@@ -166,6 +173,29 @@ public class CommonPage {
                 browse(route[i]);
             }
         }
+    }
+
+    //Need to change the context to springboard because buttons are not included in app
+    //https://appium.github.io/appium-xcuitest-driver/latest/guides/troubleshooting/#interact-with-dialogs-managed-by-comapplespringboard
+
+    public void acceptLibraryPermission(){
+        Log.log(Level.FINE, "Starts: Give full access to library");
+        driver.activateApp("com.apple.springboard");
+        if (!allowFullAccess.isEmpty()) {
+            allowFullAccess.get(0).click();
+        }
+        //return the control to the app
+        driver.activateApp("com.owncloud.ios-app");
+    }
+
+    public void acceptNotifications(){
+        Log.log(Level.FINE, "Starts: accept Notifications Permissions");
+        driver.activateApp("com.apple.springboard");
+        if (!allow.isEmpty()) {
+            allow.get(0).click();
+        }
+        //return the control to the app
+        driver.activateApp("com.owncloud.ios-app");
     }
 
     public static void takeScreenshot(String name) {

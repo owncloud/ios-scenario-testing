@@ -25,10 +25,10 @@ public class SharePage extends CommonPage {
     @iOSXCUITFindBy(id = "Copy Private Link")
     private WebElement copyPrivateLink;
 
-    @iOSXCUITFindBy(id = "Viewer (Download, preview and share)")
+    @iOSXCUITFindBy(id = "Viewer (Download and preview)")
     private WebElement viewerPermission;
 
-    @iOSXCUITFindBy(id = "Editor (Upload, edit, delete, download, preview and share)")
+    @iOSXCUITFindBy(id = "Editor (Upload, edit, delete, download and preview)")
     private WebElement editorPermission;
 
     @iOSXCUITFindBy(id = "Custom (Set detailed permissions)")
@@ -163,11 +163,9 @@ public class SharePage extends CommonPage {
             case "Viewer": {
                 return viewerPermission.isDisplayed();
             }
+            case "Custom":
             case "Editor": {
                 return editorPermission.isDisplayed();
-            }
-            case "Custom": {
-                return customPermission.isDisplayed();
             }
             default:
                 return false;

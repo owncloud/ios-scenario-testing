@@ -1,0 +1,1479 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>
+This is a BETA release that may - and likely will - still contain bugs.
+
+YOU SHOULD NOT USE THIS BETA VERSION WITH PRODUCTION SYSTEMS, PRODUCTION DATA OR DATA OF VALUE. YOU'RE USING THIS BETA AT YOUR OWN RISK.
+
+Please let us know about any issues that come up via the "Send Feedback" option in the settings.</key>
+	<string>
+This is a BETA release that may - and likely will - still contain bugs.
+
+YOU SHOULD NOT USE THIS BETA VERSION WITH PRODUCTION SYSTEMS, PRODUCTION DATA OR DATA OF VALUE. YOU'RE USING THIS BETA AT YOUR OWN RISK.
+
+Please let us know about any issues that come up via the "Send Feedback" option in the settings.</string>
+	<key> couldn't download file(s)</key>
+	<string>ไม่สามารถดาวน์โหลดไฟล์</string>
+	<key>%@ (%d bits/channel)</key>
+	<string>%@ (%d บิต/แชนแนล)</string>
+	<key>%@ / %@</key>
+	<string>%@ / %@</string>
+	<key>%@ / %@ – starting immediately</key>
+	<string>%@/%@ - เริ่มทันที</string>
+	<key>%@ is not available for this item.</key>
+	<string>%@ ไม่สามารถใช้ได้กับรายการนี้</string>
+	<key>%@ is not available, when this account is offline. Please open the app and log into your account before you can do this action.</key>
+	<string>%@ ไม่สามารถใช้งานได้เมื่อบัญชีนี้ออฟไลน์ โปรดเปิดแอปและลงชื่อเข้าใช้บัญชีของคุณก่อนจึงจะสามารถดำเนินการนี้ได้</string>
+	<key>%@ of %@</key>
+	<string>%@ จาก %@</string>
+	<key>%@ was updated</key>
+	<string>%@ ได้รับการอัปเดตแล้ว</string>
+	<key>%@%@ %@ version %@ build %@
+(app: %@, sdk: %@)</key>
+	<string>%@%@%@ เวอร์ชัน %@ บิวด์ %@
+(แอป: %@, sdk: %@)</string>
+	<key>%ld Item was copied to the clipboard</key>
+	<string>%ld ถูกคัดลอกไปยังคลิปบอร์ดแล้ว</string>
+	<key>%ld Items were copied to the clipboard</key>
+	<string>%ld รายการได้ถูกคัดลอกไปยังคลิปบอร์ดแล้ว</string>
+	<key>%ld digit code</key>
+	<string>%ld ตัวอักษร</string>
+	<key>'%@' is currently locked</key>
+	<string>'%@' ปัจจุบันถูกล็อกอยู่</string>
+	<key>+ %ld more</key>
+	<string>+ %ld เพิ่มเติม</string>
+	<key>Accept</key>
+	<string>ยอมรับ</string>
+	<key>Accept Share failed</key>
+	<string>ยอมรับการแชร์ล้มเหลว</string>
+	<key>Accept or decline</key>
+	<string>Accept or decline</string>
+	<key>Accept share</key>
+	<string>Accept share</string>
+	<key>Accepted</key>
+	<string>ยืนยันแล้ว</string>
+	<key>Access denied</key>
+	<string>เข้าถึงถูกปฏิเสธ</string>
+	<key>Access for the media selected for upload is limited</key>
+	<string>เข้าถึงสื่อที่เลือกสำหรับการอัปโหลดมีจำกัด</string>
+	<key>Account</key>
+	<string>บัญชี</string>
+	<key>Account setup complete</key>
+	<string>Account setup complete</string>
+	<key>Accounts</key>
+	<string>บัญชี</string>
+	<key>Acknowledgements</key>
+	<string>กิตติกรรมประกาศ</string>
+	<key>Action</key>
+	<string>การกระทำ</string>
+	<key>Action executed</key>
+	<string>ดำเนินการเรียบร้อยแล้ว</string>
+	<key>Actions</key>
+	<string>การกระทำ</string>
+	<key>Add</key>
+	<string>เพิ่ม</string>
+	<key>Add account</key>
+	<string>เพิ่มบัญชี</string>
+	<key>Add item</key>
+	<string>เพิ่มรายการ</string>
+	<key>Add to sidebar</key>
+	<string>Add to sidebar</string>
+	<key>Advanced settings</key>
+	<string>ตั้งค่าขั้นสูง</string>
+	<key>After %ld seconds</key>
+	<string>After %ld seconds</string>
+	<key>After 1 minute</key>
+	<string>หลังจากผ่านไป 1 นาที</string>
+	<key>After 30 minutes</key>
+	<string>หลังจากผ่านไป 30 นาที</string>
+	<key>After 5 minutes</key>
+	<string>หลังจากผ่านไป 5 นาที</string>
+	<key>Agree</key>
+	<string>Agree</string>
+	<key>Albums</key>
+	<string>อัลบัม</string>
+	<key>All Photos</key>
+	<string>รูปภาพทั้งหมด</string>
+	<key>All done</key>
+	<string>เสร็จเรียบร้อยแล้ว</string>
+	<key>Allow this app to refresh the content when on Wi-Fi or mobile network in background.</key>
+	<string>อนุญาตให้แอปนี้รีเฟรชเนื้อหาเมื่อใช้ Wi-Fi หรือเครือข่ายมือถือในพื้นหลัง</string>
+	<key>Altitude</key>
+	<string>ระดับความสูง</string>
+	<key>An error occurred</key>
+	<string>เกิดข้อผิดพลาดบางประการ</string>
+	<key>An item with the same name already exists in this location.</key>
+	<string>มีรายการที่มีชื่อเดียวกันอยู่แล้วในตำแหน่งนี้</string>
+	<key>An operation is currently performed that prevents connecting to '%@'. Please try again later.</key>
+	<string>ขณะนี้มีการดำเนินการเพื่อป้องกันการเชื่อมต่อไปยัง '%@' กรุณาลองใหม่อีกครั้งในภายหลัง</string>
+	<key>Aperture</key>
+	<string>รูรับแสง</string>
+	<key>Aperture priority</key>
+	<string>ลำดับความสำคัญของรูรับแสง</string>
+	<key>App Version</key>
+	<string>เวอร์ชันของแอป</string>
+	<key>Apply choice to all similar issues</key>
+	<string>ใช้ตัวเลือกกับปัญหาที่คล้ายกันทั้งหมด</string>
+	<key>Apply to all</key>
+	<string>นำไปใช้กับทั้งหมด</string>
+	<key>Approve</key>
+	<string>อนุมัติ</string>
+	<key>Approved</key>
+	<string>ได้รับการอนุมัติ</string>
+	<key>Are you sure you want to delete these items from the server?</key>
+	<string>คุณแน่ใจหรือว่าต้องการลบรายการเหล่านี้ออกจากเซิร์ฟเวอร์?</string>
+	<key>Are you sure you want to delete this item from the server?</key>
+	<string>คุณแน่ใจว่าต้องการลบรายการนี้ออกจากเซิร์ฟเวอร์?</string>
+	<key>Are you sure you want to unshare these items?</key>
+	<string>คุณแน่ใจว่าต้องการยกเลิกการแชร์รายการเหล่านี้?</string>
+	<key>Are you sure you want to unshare this item?</key>
+	<string>คุณแน่ใจว่าต้องการยกเลิกการแชร์รายการนี้?</string>
+	<key>Audio</key>
+	<string>เสียง</string>
+	<key>Audios</key>
+	<string>Audios</string>
+	<key>Authenticated as %@ via %@</key>
+	<string>รับรองความถูกต้องด้วย %@ ผ่านทาง %@</string>
+	<key>Authenticated via</key>
+	<string>ตรวจสอบแล้วผ่านทาง</string>
+	<key>Authenticating…</key>
+	<string>กำลังตรวจสอบสิทธิ์...</string>
+	<key>Authentication error</key>
+	<string>Authentication error</string>
+	<key>Authentication failed</key>
+	<string>Authentication failed</string>
+	<key>Authentication with %@ is no longer allowed. Re-authentication needed.</key>
+	<string>%@ จำเป็นต้องถูกตรวจสอบสิทธิ์อีกครั้ง</string>
+	<key>Authoring</key>
+	<string>กำลังเขียน</string>
+	<key>Authorization failed</key>
+	<string>การอนุมัติล้มเหลว</string>
+	<key>Auto</key>
+	<string>อัตโนมัติ</string>
+	<key>Auto Upload</key>
+	<string>อัปโหลดอัตโนมัติ</string>
+	<key>Auto Upload Photos</key>
+	<string>อัปโหลดรูปภาพอัตโนมัติ</string>
+	<key>Auto Upload Videos</key>
+	<string>อัปโหลดวิดีโออัตโนมัติ</string>
+	<key>Auto mode</key>
+	<string>โหมดอัตโนมัติ</string>
+	<key>Auto upload disabled</key>
+	<string>Auto upload disabled</string>
+	<key>Auto upload of media was disabled since configured account / folder was not found</key>
+	<string>การอัปโหลดสื่ออัตโนมัติถูกปิดใช้งานเนื่องจาก ไม่พบบัญชีหรือโฟลเดอร์ที่กำหนดค่า</string>
+	<key>Auto-approved</key>
+	<string>อนุมัติอัตโนมัติ</string>
+	<key>Available Offline</key>
+	<string>พร้อมใช้งานแบบออฟไลน์แล้ว</string>
+	<key>Available offline</key>
+	<string>Available offline</string>
+	<key>Average</key>
+	<string>เฉลี่ย</string>
+	<key>Back</key>
+	<string>ย้อนกลับ</string>
+	<key>Background upload notifications</key>
+	<string>แจ้งเตือนการอัปโหลดพื้นหลัง</string>
+	<key>Background uploads (Lab Version)</key>
+	<string>อัปโหลดพื้นหลัง (เวอร์ชันแล็บ)</string>
+	<key>Beta Warning</key>
+	<string>Beta Warning</string>
+	<key>Biometric authentication failed</key>
+	<string>การตรวจสอบสิทธิ์แบบไบโอเมตริกซ์ล้มเหลว</string>
+	<key>Bookmark Metadata</key>
+	<string>ข้อมูล metadata ของบุ๊กมาร์ก</string>
+	<key>Browse</key>
+	<string>เรียกดู</string>
+	<key>Busy</key>
+	<string>Busy</string>
+	<key>By feature</key>
+	<string>ตามคุณลักษณะ</string>
+	<key>Camera details</key>
+	<string>รายละเอียดกล้อง</string>
+	<key>Cancel</key>
+	<string>ยกเลิก</string>
+	<key>Cannot connect to </key>
+	<string>ไม่สามารถเชื่อมต่อ</string>
+	<key>Capture settings</key>
+	<string>ตั้งค่าการถ่ายภาพ</string>
+	<key>Cellular Data Usage</key>
+	<string>Cellular Data Usage</string>
+	<key>Cellular Data Usage have been disabled via MDM configuration. Please contact your administrator for more information.</key>
+	<string>Cellular Data Usage have been disabled via MDM configuration. Please contact your administrator for more information.</string>
+	<key>CenterWeightedAverage</key>
+	<string>การวัดแสงอัตโนมัติ</string>
+	<key>Certificate Details</key>
+	<string>รายละเอียดใบรับรอง</string>
+	<key>Certificate has issues.
+Open 'Certificate Details' for more informations.</key>
+	<string>ใบรับรองมีปัญหา
+เปิด 'รายละเอียดใบรับรอง' สำหรับข้อมูลเพิ่มเติม</string>
+	<key>Certificate may have issues, but was accepted by user.
+Open 'Certificate Details' for more informations.</key>
+	<string>ใบรับรองอาจมีปัญหาแต่ได้รับการยอมรับจากผู้ใช้แล้ว
+เปิด 'รายละเอียดใบรับรอง' สำหรับข้อมูลเพิ่มเติม</string>
+	<key>Certificate was rejected by user.</key>
+	<string>หนังสือรับรองถูกปฏิเสธโดยผู้ใช้</string>
+	<key>Certificates</key>
+	<string>ใบรับรอง</string>
+	<key>Change</key>
+	<string>เปลี่ยนแปลง</string>
+	<key>Change Sort Order</key>
+	<string>เปลี่ยนลำดับการเรียง</string>
+	<key>Change password</key>
+	<string>Change password</string>
+	<key>Changed {{settingID}} to {{newValue}}.</key>
+	<string>Changed {{settingID}} to {{newValue}}.</string>
+	<key>Choose destination directory…</key>
+	<string>เลือกไดเร็กทอรีปลายทาง...</string>
+	<key>Clear</key>
+	<string>Clear</string>
+	<key>Cleared all.</key>
+	<string>Cleared all.</string>
+	<key>Cleared {{settingID}}.</key>
+	<string>Cleared {{settingID}}.</string>
+	<key>Close Search</key>
+	<string>ปิดการค้นหา</string>
+	<key>Close Window</key>
+	<string>ปิดหน้าต่าง</string>
+	<key>Close actions menu</key>
+	<string>ปิดเมนูการกระทำ</string>
+	<key>Color model</key>
+	<string>โมเดลสี</string>
+	<key>Color space</key>
+	<string>พื้นที่สี</string>
+	<key>Compacting</key>
+	<string>กำลังย่อ</string>
+	<key>Compacting of '%@' failed</key>
+	<string>กำลังย่อข้อมูลพบความล้มเหลว '%@'</string>
+	<key>Completed update scans</key>
+	<string>สแกนการอัปเดตเสร็จสมบูรณ์</string>
+	<key>Compulsory flash firing</key>
+	<string>ถ่ายด้วยแฟลช</string>
+	<key>Compulsory flash supression</key>
+	<string>ป้องกันการถ่ายด้วยแฟลช</string>
+	<key>Connecting</key>
+	<string>Connecting</string>
+	<key>Connecting...</key>
+	<string>กำลังเชื่อมต่อ ...</string>
+	<key>Connecting…</key>
+	<string>กำลังเชื่อมต่อ...</string>
+	<key>Contact info</key>
+	<string>ข้อมูลการติดต่อ</string>
+	<key>Contacting server…</key>
+	<string>กำลังติดต่อเซิร์ฟเวอร์...</string>
+	<key>Contents from cache.</key>
+	<string>เนื้อหาจากแคช</string>
+	<key>Continue</key>
+	<string>ดำเนินการต่อ</string>
+	<key>Continue offline</key>
+	<string>ใช่งานแบบออฟไลน์ต่อไป</string>
+	<key>Convert HEIC to JPEG</key>
+	<string>แปลง HEIC เป็น JPEG</string>
+	<key>Convert videos to MP4</key>
+	<string>แปลงวิดีโอเป็น MP4</string>
+	<key>Coordinates</key>
+	<string>พิกัด</string>
+	<key>Copy</key>
+	<string>คัดลอก</string>
+	<key>Copy "{{itemName}}"</key>
+	<string>Copy "{{itemName}}"</string>
+	<key>Copy Private Link</key>
+	<string>คัดลอกลิงก์ส่วนตัว</string>
+	<key>Copy here</key>
+	<string>ึคัดลอก</string>
+	<key>Copy to clipboard</key>
+	<string>Copy to clipboard</string>
+	<key>Copy {{itemCount}} items</key>
+	<string>Copy {{itemCount}} items</string>
+	<key>Copying %ld items…</key>
+	<string>กำลังคัดลอก %ld ไฟล์</string>
+	<key>Copyright</key>
+	<string>ลิขสิทธิ์</string>
+	<key>Could not get the picture</key>
+	<string>ไม่สามารถรับรูปภาพได้</string>
+	<key>Couldn't resolve a private link since the item is not known to the server.</key>
+	<string>ไม่สามารถแก้ไขลิงก์ส่วนตัวเนื่องจากไม่รู้จักรายการไปยังเซิร์ฟเวอร์</string>
+	<key>Couldn't resolve a private link since you are offline and corresponding item is not cached locally.</key>
+	<string>ไม่สามารถแก้ไขลิงก์ส่วนตัวเนื่องจากคุณอยูในสถานะออฟไลน์ และรายการที่เกี่ยวข้องไม่มีแคชในเครื่อง</string>
+	<key>Create</key>
+	<string>สร้าง</string>
+	<key>Create folder</key>
+	<string>สร้างโฟลเดอร์</string>
+	<key>Create link</key>
+	<string>Create link</string>
+	<key>Create one file per page</key>
+	<string>สร้างหนึ่งไฟล์ต่อหนึ่งหน้า</string>
+	<key>Create shortcut</key>
+	<string>Create shortcut</string>
+	<key>Creating %ld folders…</key>
+	<string>กำลังสร้าง %ld โฟลเดอร์</string>
+	<key>Creative</key>
+	<string>สร้างสรรค์</string>
+	<key>Credentials</key>
+	<string>ข้อมูลส่วนตัวสำหรับเข้าระบบ</string>
+	<key>Cut</key>
+	<string>ตัด</string>
+	<key>Dark</key>
+	<string>มืด</string>
+	<key>Data usage</key>
+	<string>การใช้ข้อมูล</string>
+	<key>Date</key>
+	<string>วันที่</string>
+	<key>Debug</key>
+	<string>Debug</string>
+	<key>Decline</key>
+	<string>ลดลง</string>
+	<key>Decline Share failed</key>
+	<string>ปฏิเสธการแชร์ล้มเหลว</string>
+	<key>Decline share</key>
+	<string>Decline share</string>
+	<key>Declined</key>
+	<string>ปฏิเสธ</string>
+	<key>Decrease Slider Value</key>
+	<string>ลดจำนวน Slider</string>
+	<key>Delete</key>
+	<string>ลบ</string>
+	<key>Delete Authentication Data</key>
+	<string>ลบข้อมูลการรับรองความถูกต้อง</string>
+	<key>Delete all</key>
+	<string>ลบทั้งหมด</string>
+	<key>Delete all Offline Files</key>
+	<string>Delete all Offline Files</string>
+	<key>Delete all log files?</key>
+	<string>ลบไฟล์ log ทั้งหมด?</string>
+	<key>Delete code</key>
+	<string>ลบรหัส</string>
+	<key>Delete unused local copies</key>
+	<string>ลบสำเนาที่ไม่ได้ใช้ในเครื่อง</string>
+	<key>Deleting %ld items…</key>
+	<string>กำลังลบ %ld ไฟล์</string>
+	<key>Deletion of '%@' failed</key>
+	<string>Deletion of '%@' failed</string>
+	<key>Density</key>
+	<string>หนาแน่น</string>
+	<key>Description</key>
+	<string>รายละเอียด</string>
+	<key>Deselect All</key>
+	<string>ยกเลิกการเลือกทั้งหมด</string>
+	<key>Diagnostic Overview</key>
+	<string>ภาพรวมการวินิจฉัย</string>
+	<key>Diagnostics</key>
+	<string>วินิจฉัย</string>
+	<key>Didn't fire</key>
+	<string>ไม่ได้ถ่าย</string>
+	<key>Digitized date</key>
+	<string>แปลงวันที่เป็นดิจิทัล</string>
+	<key>Disable</key>
+	<string>Disable</string>
+	<key>Disable gestures</key>
+	<string>Disable gestures</string>
+	<key>Discard changes</key>
+	<string>ยกเลิกการเปลี่ยนแปลง</string>
+	<key>Disconnect</key>
+	<string>ตัดการเชื่อมต่อ</string>
+	<key>Do you want to log out from '%@'?</key>
+	<string>Do you want to log out from '%@'?</string>
+	<key>Do you want to open the following URL?</key>
+	<string>คุณต้องการเปิด URL ต่อไปนี้?</string>
+	<key>Document Scanner</key>
+	<string>ตัวสแกนเอกสาร</string>
+	<key>Documentation</key>
+	<string>เอกสารคู่มือประกอบการใช้งาน</string>
+	<key>Documents</key>
+	<string>เอกสาร</string>
+	<key>Done</key>
+	<string>เสร็จสิ้น</string>
+	<key>Download</key>
+	<string>Download</string>
+	<key>Download / View</key>
+	<string>ดาวน์โหลดหรือดู</string>
+	<key>Download / View / Upload</key>
+	<string>ดาวน์โหลด ดู หรืออัปโหลด</string>
+	<key>Download instead of streaming</key>
+	<string>ดาวน์โหลดแทนการสตรีม</string>
+	<key>Downloaded Files</key>
+	<string>Downloaded Files</string>
+	<key>Downloading %ld files…</key>
+	<string>กำลังดาวน์โหลด  %ld ไฟล์</string>
+	<key>Duplicate</key>
+	<string>ซ้ำ</string>
+	<key>E</key>
+	<string>E</string>
+	<key>EXIF aux info</key>
+	<string>ข้อมูล EXIF aux</string>
+	<key>Edit</key>
+	<string>แก้ไข</string>
+	<key>Edit account</key>
+	<string>แก้ไขบัญชี</string>
+	<key>Enable</key>
+	<string>เปิดใช้งาน</string>
+	<key>Enable Pro Features (QA)</key>
+	<string>Enable Pro Features (QA)</string>
+	<key>Enable diagnostics</key>
+	<string>เปิดใช้งานการวินิจฉัย</string>
+	<key>Enable logging</key>
+	<string>เปิดใช้ระบบบันทึกข้อมูล</string>
+	<key>Enabling presentation mode will prevent the display from sleep mode until the view is closed.</key>
+	<string>เปิดใช้งานโหมดการนำเสนอ เพื่อป้องกันไม่ให้จอเข้าสู่โหมดสลีปจนกว่าจะปิดมุมมอง</string>
+	<key>Enabling this option will attempt to mask private data, so it does not become part of any log. Since logging is a development and debugging feature, though, we can't guarantee that the log file will be free of any private data even with this option enabled. Therefore, please look through any log file and verify its free of any data you're not comfortable sharing before sharing it with anybody.</key>
+	<string>การเปิดใช้งานตัวเลือกนี้จะพยายามปกปิดข้อมูลส่วนตัวดังนั้นจึงไม่มีการเก็บบันทึกใดๆ เนื่องจาก log เป็นคุณลักษณะการพัฒนาและดีบัก แม้ว่าจะเปิดใช้งานตัวเลือกนี้เราไม่สามารถรับประกันได้ว่าไฟล์ log จะไม่มีข้อมูลส่วนตัวใดๆ  ดังนั้นโปรดดูไฟล์ log เพื่อความแน่ใจ</string>
+	<key>Enter a new code with %ld digits</key>
+	<string>ใส่รหัสใหม่ %ld ตัวอักษร</string>
+	<key>Enter a search term</key>
+	<string>Enter a search term</string>
+	<key>Enter code</key>
+	<string>กรอกรหัส</string>
+	<key>Enter multiple selection</key>
+	<string>สามารถเลือกได้หลายรายการ</string>
+	<key>Enter the user or group you want to invite.</key>
+	<string>Enter the user or group you want to invite.</string>
+	<key>Error</key>
+	<string>ข้อผิดพลาด</string>
+	<key>Error creating {{itemName}}</key>
+	<string>Error creating {{itemName}}</string>
+	<key>Error fetching transactions</key>
+	<string>เกิดข้อผิดพลาดขณะดึงข้อมูลธุรกรรม</string>
+	<key>Error importing %@</key>
+	<string>เกิดข้อผิดพลาดขณะนำเข้า %@</string>
+	<key>Error loading item</key>
+	<string>เกิดข้อผิดพลาดขณะโหลดรายการ</string>
+	<key>Error loading product info from App Store</key>
+	<string>เกิดข้อผิดพลาดขณะที่โหลดข้อมูลผลิตภัณฑ์จาก App Store</string>
+	<key>Error opening %@</key>
+	<string>เกิดข้อผิดพลาดขณะเปิด %@</string>
+	<key>Error opening {{itemName}} in {{appName}}</key>
+	<string>Error opening {{itemName}} in {{appName}}</string>
+	<key>Error restoring purchases</key>
+	<string>การกู้คืนคำสั่งซื้อเกิดข้อผิดพลาด</string>
+	<key>Exit Full Screen</key>
+	<string>ออกจากโหมดเต็มหน้าจอ</string>
+	<key>Exit multiple selection</key>
+	<string>Exit multiple selection</string>
+	<key>Expiration date</key>
+	<string>วันที่หมดอายุ</string>
+	<key>Expires {{expirationDate}}</key>
+	<string>Expires {{expirationDate}}</string>
+	<key>Exposure bias</key>
+	<string>การชดเชยของแสง</string>
+	<key>Extend by one week</key>
+	<string>Extend by one week</string>
+	<key>Extended upload settings</key>
+	<string>ตั้งค่าการอัปโหลดเพิ่มเติม</string>
+	<key>Face ID</key>
+	<string>ปลดล็อคด้วยใบหน้า</string>
+	<key>Favorite item</key>
+	<string>รายการโปรด</string>
+	<key>Favorites</key>
+	<string>รายการโปรด</string>
+	<key>Feedback</key>
+	<string>ข้อเสนอแนะ</string>
+	<key>Fetching server information…</key>
+	<string>Fetching server information…</string>
+	<key>Fetching user information…</key>
+	<string>กำลังเรียกข้อมูลผู้ใช้...</string>
+	<key>File</key>
+	<string>ไฟล์</string>
+	<key>File Provider access has been disabled by the administrator.
+
+Please use the app to access your files.</key>
+	<string>File Provider access has been disabled by the administrator.
+
+Please use the app to access your files.</string>
+	<key>File Provider access has been disabled by the administrator. Please use the app to create new folders.</key>
+	<string>File Provider access has been disabled by the administrator. Please use the app to create new folders.</string>
+	<key>File Provider access has been disabled by the administrator. Please use the share extension to import files.</key>
+	<string>File Provider access has been disabled by the administrator. Please use the share extension to import files.</string>
+	<key>File an issue</key>
+	<string>File an issue</string>
+	<key>File couldn't be opened</key>
+	<string>ไม่สามารถเปิดไฟล์ได้</string>
+	<key>File format</key>
+	<string>รูปแบบไฟล์</string>
+	<key>File name cannot contain / or \</key>
+	<string>ชื่อไฟล์จะต้องไม่มี / หรือ \</string>
+	<key>File no longer exists</key>
+	<string>ไม่มีไฟล์นี้</string>
+	<key>Files</key>
+	<string>ไฟล์</string>
+	<key>Files and folders marked as Available Offline will become unavailable. They will be re-downloaded next time you log into your account (connectivity required).</key>
+	<string>ไฟล์และโฟลเดอร์ที่ทำเครื่องหมายว่าพร้อมใช้งานแบบออฟไลน์จะไม่สามารถใช้งานได้ ไฟล์เหล่านี้จะถูกดาวน์โหลดอีกในครั้งต่อไปที่คุณเข้าสู่บัญชีของคุณ (จำเป็นต้องเชื่อมต่อ)</string>
+	<key>Files selected and downloaded for offline availability will show up here.</key>
+	<string>Files selected and downloaded for offline availability will show up here.</string>
+	<key>Find Next</key>
+	<string>ค้นหาถัดไป</string>
+	<key>Find Previous</key>
+	<string>ค้นหาก่อนหน้า</string>
+	<key>Find information, answers and solutions in the detailed documentation.</key>
+	<string>Find information, answers and solutions in the detailed documentation.</string>
+	<key>Fired</key>
+	<string>เผา</string>
+	<key>Firmware</key>
+	<string>เฟิร์มแวร์</string>
+	<key>Flash</key>
+	<string>แฟลช</string>
+	<key>Flash compensation</key>
+	<string>ชดเชยแสงแฟลช</string>
+	<key>Focal length</key>
+	<string>ความยาวโฟกัส</string>
+	<key>Focal length @ 35 mm</key>
+	<string>ระยะห่างระหว่างเลนส์และเซ็นเซอร์ 35 มม.</string>
+	<key>Folder</key>
+	<string>สร้างโฟลเดอร์ใหม่</string>
+	<key>Folder name</key>
+	<string>ชื่อโฟลเดอร์</string>
+	<key>Folder removed</key>
+	<string>ลบโฟลเดอร์แล้ว</string>
+	<key>Forbidden Characters</key>
+	<string>ห้ามใช้อักขระต้องห้าม</string>
+	<key>Free</key>
+	<string>ฟรี</string>
+	<key>Free on %@</key>
+	<string>ฟรีบน %@</string>
+	<key>Full Screen</key>
+	<string>เต็มจอ</string>
+	<key>GPS Location</key>
+	<string>ตำแหน่ง GPS</string>
+	<key>General</key>
+	<string>ทั่วไป</string>
+	<key>Generate</key>
+	<string>Generate</string>
+	<key>Get in touch with our community in the forums - or file a GitHub issue to report a bug or request a feature.</key>
+	<string>Get in touch with our community in the forums - or file a GitHub issue to report a bug or request a feature.</string>
+	<key>Go to Beginning</key>
+	<string>ไปที่จุดเริ่มต้น</string>
+	<key>Go to page</key>
+	<string>ไปยังหน้า</string>
+	<key>Grid</key>
+	<string>Grid</string>
+	<key>Group</key>
+	<string>Group</string>
+	<key>Groups</key>
+	<string>กลุ่ม</string>
+	<key>Help</key>
+	<string>ช่วยเหลือ</string>
+	<key>Help &amp; Contact</key>
+	<string>Help &amp; Contact</string>
+	<key>Hide</key>
+	<string>Hide</string>
+	<key>Histogram</key>
+	<string>ฮิสโตแกรม</string>
+	<key>How should this file be saved?</key>
+	<string>ไฟล์นี้ควรถูกบันทึก?</string>
+	<key>ISO</key>
+	<string>ISO</string>
+	<key>If you 'Continue', you will be prompted to allow the '{{app.name}}' app to open the login page where you can enter your credentials.</key>
+	<string>If you 'Continue', you will be prompted to allow the '{{app.name}}' app to open the login page where you can enter your credentials.</string>
+	<key>If you 'Continue', you will be prompted to allow the '{{app.name}}' app to open the {{authmethodName}} login page where you can enter your credentials.</key>
+	<string>If you 'Continue', you will be prompted to allow the '{{app.name}}' app to open the {{authmethodName}} login page where you can enter your credentials.</string>
+	<key>If you choose "Immediately" the App will be locked, when it is no longer in foreground.</key>
+	<string>หากคุณเลือก "ทันที" แอปจะถูกล็อกเมื่อไม่ได้อยู่เบื้องหน้าอีกต่อไป</string>
+	<key>If you have a moment to give us your feedback, please take our survey.</key>
+	<string>If you have a moment to give us your feedback, please take our survey.</string>
+	<key>If you make an item a favorite, it will turn up here.</key>
+	<string>If you make an item a favorite, it will turn up here.</string>
+	<key>If you would like background media uploads to be more reliable, you should enable background location updates.</key>
+	<string>หากคุณต้องการให้การอัปโหลดสื่อพื้นหลังมีความน่าเชื่อถือมากยิ่งขึ้น คุณควรเปิดใช้งานการอัปเดตตำแหน่งในเบื้องหลัง</string>
+	<key>If you'd like to give the account a custom name, please enter it below:</key>
+	<string>If you'd like to give the account a custom name, please enter it below:</string>
+	<key>Ignore updates</key>
+	<string>ไม่สนใจการอัปเดต</string>
+	<key>Image details</key>
+	<string>รายละเอียดรูปภาพ</string>
+	<key>Image grid</key>
+	<string>Image grid</string>
+	<key>Image metadata</key>
+	<string>ข้อมูล metadata ของรูปภาพ</string>
+	<key>Image metadata, extended upload options</key>
+	<string>ข้อมูล metadata ของรูปภาพ, ตัวเลือกการอัปโหลดเพิ่มเติม</string>
+	<key>Images</key>
+	<string>รูปภาพ</string>
+	<key>Immediately</key>
+	<string>ทันที</string>
+	<key>Import "{{itemName}}"</key>
+	<string>Import "{{itemName}}"</string>
+	<key>Import from Clipboard</key>
+	<string>นำเข้าจากคลิปบอร์ด</string>
+	<key>Import not allowed</key>
+	<string>Import not allowed</string>
+	<key>Import {{itemCount}} files</key>
+	<string>Import {{itemCount}} files</string>
+	<key>Importing %@ media files for upload</key>
+	<string>กำลังนำเข้าไฟล์สื่อ %@ สำหรับการอัปโหลด</string>
+	<key>Importing files through opening is not allowed on this device.</key>
+	<string>Importing files through opening is not allowed on this device.</string>
+	<key>Importing files through the Share Extension is not allowed on this device.</key>
+	<string>Importing files through the Share Extension is not allowed on this device.</string>
+	<key>Importing item %ld of %ld</key>
+	<string>กำลังนำเข้ารายการ %ld จากทั้งหมด %ld</string>
+	<key>In order to accurately determine your current licensing status, please add one or more accounts first.</key>
+	<string>เพื่อระบุสถานะ License ปัจจุบันของคุณได้อย่างถูกต้องโปรดเพิ่มบัญชีอย่างน้อยหนึ่งบัญชีก่อน</string>
+	<key>In the cloud</key>
+	<string>In the cloud</string>
+	<key>In-App Purchases</key>
+	<string>การสั่งซื้อในแอป</string>
+	<key>Include available offline files</key>
+	<string>รวมถึงไฟล์ออฟไลน์ที่มีอยู่</string>
+	<key>Incorrect code</key>
+	<string>รหัสไม่ถูกต้อง</string>
+	<key>Increase Slider Value</key>
+	<string>เพิ่มจำนวน Slider</string>
+	<key>Info</key>
+	<string>ข้อมูล</string>
+	<key>Invalid Page</key>
+	<string>หน้าไม่ถูกต้อง</string>
+	<key>Invite</key>
+	<string>Invite</string>
+	<key>Issues</key>
+	<string>ปัญหา</string>
+	<key>Item grid</key>
+	<string>Item grid</string>
+	<key>Item with same name already exists</key>
+	<string>มีชื่อรายการซ้ำโปรดใช้ชื่ออื่น</string>
+	<key>Keywords</key>
+	<string>คีย์เวิร์ด</string>
+	<key>Landscape</key>
+	<string>ภูมิทัศน์</string>
+	<key>Lens ID</key>
+	<string>ID ของเลนส์</string>
+	<key>Lens info</key>
+	<string>ข้อมูลเลนส์</string>
+	<key>Lens make</key>
+	<string>ทำเลนส์</string>
+	<key>Lens model</key>
+	<string>รุ่นเลนส์</string>
+	<key>Lens serial</key>
+	<string>เลนส์อนุกรม</string>
+	<key>Light</key>
+	<string>สว่าง</string>
+	<key>Limited Photo Access</key>
+	<string>จำกัดการเข้าถึงภาพถ่าย</string>
+	<key>Link</key>
+	<string>ลิงก์</string>
+	<key>Link points to an account bookmark which is not configured in the app.</key>
+	<string>ในแอปยังไม่ได้กำหนดค่าลิงก์คะแนนไปยังบัญชีบุ๊คมาร์ค</string>
+	<key>Link resolution failed</key>
+	<string>ลิงก์ความละเอียดล้มเหลว</string>
+	<key>Links</key>
+	<string>ลิงก์</string>
+	<key>List</key>
+	<string>รายการ</string>
+	<key>Loading…</key>
+	<string>กำลังโหลด...</string>
+	<key>Local copy</key>
+	<string>Local copy</string>
+	<key>Local version</key>
+	<string>Local version</string>
+	<key>Location permission denied</key>
+	<string>ปฏิเสธสิทธิ์การเข้าถึงตำแหน่ง</string>
+	<key>Locations</key>
+	<string>Locations</string>
+	<key>Lock application</key>
+	<string>ล็อกแอปพลิเคชัน</string>
+	<key>Log Destinations</key>
+	<string>log ปลายทาง</string>
+	<key>Log Files</key>
+	<string>ไฟล์ log</string>
+	<key>Log Level</key>
+	<string>ระดับ log</string>
+	<key>Log out</key>
+	<string>ออกจากระบบ</string>
+	<key>Log out of '%@' failed</key>
+	<string>Log out of '%@' failed</string>
+	<key>Logging</key>
+	<string>กำลังเก็บบันทึก</string>
+	<key>Login</key>
+	<string>เข้าสู่ระบบ</string>
+	<key>Make available offline</key>
+	<string>ทำให้พร้อมใช้งานแบบออฟไลน์</string>
+	<key>Make unavailable offline</key>
+	<string>ทำให้พร้อมใช้งานแบบออฟไลน์</string>
+	<key>Manage</key>
+	<string>การจัดการ</string>
+	<key>Manual</key>
+	<string>ด้วยตนเอง</string>
+	<key>Markup</key>
+	<string>มาร์กอัป</string>
+	<key>Markup Documents</key>
+	<string>เอกสารลายน้ำ</string>
+	<key>Markup photos and PDF files.</key>
+	<string>กรอกลายน้ำรูปภาพและไฟล์ PDF</string>
+	<key>Mask private data</key>
+	<string>ซ่อนข้อมูลส่วนตัว</string>
+	<key>Media Export</key>
+	<string>ส่งออกสื่อ</string>
+	<key>Media Files</key>
+	<string>ไฟล์สื่อ</string>
+	<key>Media Upload</key>
+	<string>การอัปโหลดสื่อ</string>
+	<key>Media import</key>
+	<string>นำเข้าสื่อ</string>
+	<key>Messages</key>
+	<string>Messages</string>
+	<key>Metering</key>
+	<string>การวัดแสง</string>
+	<key>Missing hostname</key>
+	<string>ไม่มีชื่อโฮสต์</string>
+	<key>Missing permissions</key>
+	<string>ไม่มีสิทธิ์</string>
+	<key>More</key>
+	<string>ขยาย</string>
+	<key>More for {{title}}</key>
+	<string>More for {{title}}</string>
+	<key>More information</key>
+	<string>ข้อมูลเพิ่มเติม</string>
+	<key>Move</key>
+	<string>ย้าย</string>
+	<key>Move "{{itemName}}"</key>
+	<string>Move "{{itemName}}"</string>
+	<key>Move here</key>
+	<string>ย้ายมาที่นี่</string>
+	<key>Move {{itemCount}} items</key>
+	<string>Move {{itemCount}} items</string>
+	<key>Moving %ld items…</key>
+	<string>กำลังย้าย %ld ไฟล์</string>
+	<key>MultiSpot</key>
+	<string>หลายจุด</string>
+	<key>Multiple items</key>
+	<string>หลายรายการ</string>
+	<key>Mute/Unmute</key>
+	<string>ปิดเสียง / เปิดเสียง</string>
+	<key>N</key>
+	<string>N</string>
+	<key>Name</key>
+	<string>ชื่อ</string>
+	<key>Name of saved search</key>
+	<string>Name of saved search</string>
+	<key>Name of template</key>
+	<string>Name of template</string>
+	<key>Network unavailable</key>
+	<string>เครือข่ายใช้งานไม่ได้</string>
+	<key>New Folder</key>
+	<string>โฟลเดอร์ใหม่</string>
+	<key>New document</key>
+	<string>เอกสารใหม่</string>
+	<key>New in %@</key>
+	<string>ใหม่ใน %@</string>
+	<key>New settings received from MDM</key>
+	<string>การตั้งค่าใหม่ที่ได้รับจาก MDM</string>
+	<key>Next</key>
+	<string>ถัดไป</string>
+	<key>Next item</key>
+	<string>Next item</string>
+	<key>No Access to the media selected for upload</key>
+	<string>ไม่มีการเข้าถึงสื่อที่เลือกสำหรับการอัปโหลด</string>
+	<key>No account configured</key>
+	<string>No account configured</string>
+	<key>No account has been set up in the {{app.name}} app yet.</key>
+	<string>No account has been set up in the {{app.name}} app yet.</string>
+	<key>No accounts found</key>
+	<string>ไม่พบบัญชี</string>
+	<key>No actions available</key>
+	<string>ไม่มีการดำเนินการ</string>
+	<key>No authentication data has been found for this connection.</key>
+	<string>ไม่พบข้อมูลการตรวจสอบสิทธิ์สำหรับการเชื่อมต่อนี้</string>
+	<key>No contents</key>
+	<string>No contents</string>
+	<key>No favorites found</key>
+	<string>No favorites found</string>
+	<key>No files available offline</key>
+	<string>No files available offline</string>
+	<key>No issues found. Certificate passed validation.</key>
+	<string>ไม่พบปัญหา ผ่านการตรวจสอบใบรับรองแล้ว</string>
+	<key>No items found matching the search criteria.</key>
+	<string>No items found matching the search criteria.</string>
+	<key>No items shared by link</key>
+	<string>No items shared by link</string>
+	<key>No items shared by you</key>
+	<string>No items shared by you</string>
+	<key>No items shared with you</key>
+	<string>No items shared with you</string>
+	<key>No matches</key>
+	<string>ไม่ตรงกัน</string>
+	<key>No pending messages or ongoing actions.</key>
+	<string>ไม่มีข้อความที่รอดำเนินการหรือดำเนินการอยู่</string>
+	<key>No spaces</key>
+	<string>No spaces</string>
+	<key>No strobe return detection</key>
+	<string>ไม่ได้ตรวจจับการย้อนแสงของแฟลช</string>
+	<key>No user or group matches your search.</key>
+	<string>No user or group matches your search.</string>
+	<key>Normal</key>
+	<string>ปกติ</string>
+	<key>Not defined</key>
+	<string>ไม่ได้กำหนด</string>
+	<key>Not now</key>
+	<string>ไม่ใช่ตอนนี้</string>
+	<key>OK</key>
+	<string>ตกลง</string>
+	<key>Off</key>
+	<string>ปิด</string>
+	<key>Offline</key>
+	<string>Offline</string>
+	<key>Offline files use</key>
+	<string>ใช้ไฟล์ออฟไลน์</string>
+	<key>Online</key>
+	<string>Online</string>
+	<key>Open Selected</key>
+	<string>เปิดที่เลือก</string>
+	<key>Open app</key>
+	<string>Open app</string>
+	<key>Open file</key>
+	<string>เปิดไฟล์</string>
+	<key>Open help page</key>
+	<string>Open help page</string>
+	<key>Open in</key>
+	<string>เปิดด้วย</string>
+	<key>Open in a new Window</key>
+	<string>เปิดในหน้าต่างใหม่</string>
+	<key>Open in {{appName}} (web)</key>
+	<string>Open in {{appName}} (web)</string>
+	<key>Open link</key>
+	<string>Open link</string>
+	<key>Open login page</key>
+	<string>Open login page</string>
+	<key>Open shortcut</key>
+	<string>Open shortcut</string>
+	<key>Opening documents is not supported by the app provider on this instance.</key>
+	<string>Opening documents is not supported by the app provider on this instance.</string>
+	<key>Opening link failed</key>
+	<string>Opening link failed</string>
+	<key>Opening not allowed</key>
+	<string>Opening not allowed</string>
+	<key>Opening…</key>
+	<string>Opening…</string>
+	<key>Optic ID</key>
+	<string>Optic ID</string>
+	<key>Options</key>
+	<string>ตัวเลือก</string>
+	<key>Original date</key>
+	<string>วันที่เดิม</string>
+	<key>Otherwise background media uploads using background refresh technology would depend on how frequently you use the app.</key>
+	<string>การอัปโหลดในพื้นหลังจะใช้เทคโนโลยีการรีเฟรชพื้นหลัง โดยจะขึ้นอยู่กับความถี่ที่คุณใช้แอป</string>
+	<key>Outline</key>
+	<string>เค้าโครง</string>
+	<key>Overwrite original</key>
+	<string>เขียนทับต้นฉบับ</string>
+	<key>Owner</key>
+	<string>เจ้าของ</string>
+	<key>PDF Documents</key>
+	<string>เอกสาร PDF</string>
+	<key>Page</key>
+	<string>หน้า</string>
+	<key>Partial</key>
+	<string>บางส่วน</string>
+	<key>Passcode Lock</key>
+	<string>รหัสปลดล็อค</string>
+	<key>Passcode option</key>
+	<string>ตัวเลือกรหัสปลดล็อค</string>
+	<key>Passcode protection is not supported on this device.
+Please disable passcode lock in the app settings.</key>
+	<string>อุปกรณ์นี้ไม่รองรับการป้องกันรหัสผ่าน
+โปรดปิดการใช้งานรหัสปลดล็อคในการตั้งค่าแอป</string>
+	<key>Passcode setup</key>
+	<string>Passcode setup</string>
+	<key>Passed</key>
+	<string>ผ่านแล้ว</string>
+	<key>Password</key>
+	<string>รหัสผ่าน</string>
+	<key>Paste</key>
+	<string>Paste</string>
+	<key>Pattern</key>
+	<string>รูปแบบ</string>
+	<key>Pending</key>
+	<string>อยู่ระหว่างดำเนินการ</string>
+	<key>Permissions</key>
+	<string>สิทธิ์การเข้าใช้งาน</string>
+	<key>Photo Pro Features</key>
+	<string>คุณสมบัติ Photo pro</string>
+	<key>Photo upload</key>
+	<string>อัปโหลดรูปภาพ</string>
+	<key>Photo upload path</key>
+	<string>Path สำหรับอัปโหลดภาพ</string>
+	<key>Photometric interpretation</key>
+	<string>Photometric interpretation</string>
+	<key>Photos</key>
+	<string>รูปภาพ</string>
+	<key>Pick a destination for photo uploads</key>
+	<string>Pick a destination for photo uploads</string>
+	<key>Pick a destination for video uploads</key>
+	<string>Pick a destination for video uploads</string>
+	<key>Pick a document type to create:</key>
+	<string>Pick a document type to create:</string>
+	<key>Pick a name</key>
+	<string>Pick a name</string>
+	<key>Pick file or folder</key>
+	<string>Pick file or folder</string>
+	<key>Place</key>
+	<string>สถานที่</string>
+	<key>Play/Pause</key>
+	<string>เล่น / หยุดชั่วคราว</string>
+	<key>Please choose how many digits you want to use for the passcode lock?</key>
+	<string>โปรดเลือกจำนวนตัวอักษรที่คุณต้องการใช้สำหรับรหัสปลดล็อค</string>
+	<key>Please configure an email account</key>
+	<string>โปรดกำหนดค่าบัญชีอีเมล</string>
+	<key>Please note: Folders can only be pasted into the %@ app and the same account.</key>
+	<string>โปรดทราบ: สามารถวางโฟลเดอร์ลงในแอพ %@ ด้วยบัญชีเดียวกันเท่านั้น</string>
+	<key>Please open the app and select the account to re-authenticate.</key>
+	<string>Please open the app and select the account to re-authenticate.</string>
+	<key>Please re-enable location acquisition in system settings</key>
+	<string>โปรดเปิดใช้งานการค้นหาตำแหน่งอีกครั้งในการตั้งค่าระบบ</string>
+	<key>Please try again in %@</key>
+	<string>โปรดลองอีกครั้งใน %@</string>
+	<key>Please wait…</key>
+	<string>โปรดรอ…</string>
+	<key>Portions of this app may utilize the following copyrighted material, the use of which is hereby acknowledged.</key>
+	<string>ลิขสิทธิ์ทั้งหมดของแอปพลิเคชัน จะถูกเก็บรักษาไว้โดยบริษัทหรือผู้ให้อนุญาตลิขสิทธิ์ดังกล่าว</string>
+	<key>Portrait</key>
+	<string>แนวตั้ง</string>
+	<key>Prefer RAW photos</key>
+	<string>กำหนดรูปภาพเป็นไฟล์ RAW</string>
+	<key>Prefer original videos</key>
+	<string>ใช้วิดีโอต้นฉบับ</string>
+	<key>Prefer unedited photos</key>
+	<string>ใช้รูปภาพที่ไม่ได้ตัดต่อ</string>
+	<key>Preparing account</key>
+	<string>Preparing account</string>
+	<key>Preparing…</key>
+	<string>กำลังจัดเตรียม…</string>
+	<key>Presentation Mode</key>
+	<string>โหมดการนำเสนอ</string>
+	<key>Preserve original media file names</key>
+	<string>รักษาชื่อไฟล์ดั้งเดิม</string>
+	<key>Prevent dragging of files and folders and multiselection using system defined gestures</key>
+	<string>ป้องกันการลากไฟล์และโฟลเดอร์และการเลือกหลายรายการโดยใช้ท่าทางที่ระบบกำหนด</string>
+	<key>Previous</key>
+	<string>ก่อนหน้า</string>
+	<key>Previous item</key>
+	<string>Previous item</string>
+	<key>Privacy</key>
+	<string>ความเป็นส่วนตัว</string>
+	<key>Privacy Policy</key>
+	<string>นโยบายความเป็นส่วนตัว</string>
+	<key>Private Link</key>
+	<string>ลิงก์ส่วนบุคคล</string>
+	<key>Pro Features</key>
+	<string> ฟีดเจอร์ Pro</string>
+	<key>Proceed</key>
+	<string>ดำเนินการ</string>
+	<key>Processing on server</key>
+	<string>Processing on server</string>
+	<key>Profile</key>
+	<string>ข้อมูลส่วนตัว</string>
+	<key>Program</key>
+	<string>โปรแกรม</string>
+	<key>Public Link</key>
+	<string>ลิงก์สาธารณะ</string>
+	<key>Purchase</key>
+	<string>การสั่งซื้อ</string>
+	<key>Purchase failed</key>
+	<string>คำสั่งซื้อล้มเหลว</string>
+	<key>Purchases &amp; Subscriptions</key>
+	<string>Purchases &amp; Subscriptions</string>
+	<key>Quick Access</key>
+	<string>เข้าถึงด่วน</string>
+	<key>RGB</key>
+	<string>RGB</string>
+	<key>Read</key>
+	<string>อ่าน</string>
+	<key>Really delete '%@'?</key>
+	<string>ต้องการลบ '%@'?</string>
+	<key>Really include available offline files?</key>
+	<string>รวมไฟล์ออฟไลน์ที่มีอยู่?</string>
+	<key>Recents</key>
+	<string>ล่าสุด</string>
+	<key>Recommend to a friend</key>
+	<string>แนะนำให้เพื่อน</string>
+	<key>Red eye detection supported</key>
+	<string>รองรับการตรวจจับตาแดง</string>
+	<key>Refresh without asking</key>
+	<string>รีเฟรชโดยไม่ต้องถาม</string>
+	<key>Rejected</key>
+	<string>ปฏิเสธแล้ว</string>
+	<key>Remove</key>
+	<string>ลบออก</string>
+	<key>Remove expiration date</key>
+	<string>Remove expiration date</string>
+	<key>Remove from sidebar</key>
+	<string>Remove from sidebar</string>
+	<key>Remove password</key>
+	<string>Remove password</string>
+	<key>Removes downloaded files and local copies of items marked as Available Offline. The latter will be re-downloaded next time you log into your account (connectivity required).</key>
+	<string>Removes downloaded files and local copies of items marked as Available Offline. The latter will be re-downloaded next time you log into your account (connectivity required).</string>
+	<key>Rename</key>
+	<string>เปลี่ยนชื่อ</string>
+	<key>Repeat code</key>
+	<string>กรอกรหัสอีกครั้ง</string>
+	<key>Resolving link…</key>
+	<string>กำลังแก้ไขลิงก์ ...</string>
+	<key>Restore purchases</key>
+	<string>เรียกคืนการซื้อสินค้า</string>
+	<key>Restoring purchases…</key>
+	<string>กำลังกู้คืนการซื้อ...</string>
+	<key>Resume</key>
+	<string>ดำเนินการต่อ</string>
+	<key>Reveal</key>
+	<string>Reveal</string>
+	<key>Reveal in folder</key>
+	<string>เปิดเผยในโฟลเดอร์</string>
+	<key>Review Connection</key>
+	<string>ตรวจสอบการเชื่อมต่อ</string>
+	<key>Revoke approval</key>
+	<string>เพิกถอนการอนุมัติ</string>
+	<key>S</key>
+	<string>S</string>
+	<key>Save</key>
+	<string>บันทึก</string>
+	<key>Save File</key>
+	<string>บันทึกไฟล์</string>
+	<key>Save as</key>
+	<string>บันทึกเป็น</string>
+	<key>Save as copy</key>
+	<string>บันทึกเป็นสำเนา</string>
+	<key>Save as search template</key>
+	<string>Save as search template</string>
+	<key>Save changes</key>
+	<string>บันทึกการเปลี่ยนแปลง
+</string>
+	<key>Save here</key>
+	<string>บันทึกที่นี่</string>
+	<key>Save search</key>
+	<string>Save search</string>
+	<key>Saved search</key>
+	<string>Saved search</string>
+	<key>Saved searches</key>
+	<string>Saved searches</string>
+	<key>Saving</key>
+	<string>บันทึก</string>
+	<key>Saving edited file failed</key>
+	<string>บันทึกไฟล์ที่ถูกแก้ไขไม่สำเร็จ</string>
+	<key>Scan</key>
+	<string>สแกน</string>
+	<key>Scan additional</key>
+	<string>สแกนเพิ่มเติม</string>
+	<key>Scan document</key>
+	<string>สแกนเอกสาร</string>
+	<key>Scan documents and photos with your camera.</key>
+	<string>สแกนเอกสารและภาพถ่ายด้วยกล้องของคุณ</string>
+	<key>Scans</key>
+	<string>สแกน</string>
+	<key>Scene</key>
+	<string>ฉาก</string>
+	<key>Scheduled upload of %ld media assets</key>
+	<string>กำหนดเวลาอัปโหลดเนื้อหาสื่อของ %ld</string>
+	<key>Scroll to Bottom</key>
+	<string>เลื่อนลงด้านล่าง</string>
+	<key>Scroll to Top</key>
+	<string>เลื่อนขึ้นด้านบน</string>
+	<key>Search</key>
+	<string>ค้นหา</string>
+	<key>Search PDF</key>
+	<string>ค้นหา PDF</string>
+	<key>Search account</key>
+	<string>ค้นหาบัญชี</string>
+	<key>Search folder</key>
+	<string>ค้นหาโฟลเดอร์</string>
+	<key>Search for users or groups</key>
+	<string>Search for users or groups</string>
+	<key>Search from {{folder.name}}</key>
+	<string>Search from {{folder.name}}</string>
+	<key>Search space</key>
+	<string>Search space</string>
+	<key>Search template</key>
+	<string>Search template</string>
+	<key>Search templates</key>
+	<string>Search templates</string>
+	<key>Search tree</key>
+	<string>Search tree</string>
+	<key>Search {{space.name}}</key>
+	<string>Search {{space.name}}</string>
+	<key>Security</key>
+	<string>ความปลอดภัย</string>
+	<key>Select</key>
+	<string>เลือก</string>
+	<key>Select All</key>
+	<string>เลือกทั้งหมด</string>
+	<key>Select Destination</key>
+	<string>Select Destination</string>
+	<key>Select Last Item on Page</key>
+	<string>เลือกรายการสุดท้ายในหน้า</string>
+	<key>Select Next</key>
+	<string>เลือกถัดไป</string>
+	<key>Select Previous</key>
+	<string>เลือกก่อนหน้า</string>
+	<key>Select folder</key>
+	<string>Select folder</string>
+	<key>Select one or more items.</key>
+	<string>Select one or more items.</string>
+	<key>Select target.</key>
+	<string>Select target.</string>
+	<key>Send feedback</key>
+	<string>ส่งความคิดเห็น</string>
+	<key>Serial number</key>
+	<string>หมายเลขซีเรียล</string>
+	<key>Server Password</key>
+	<string>รหัสผ่านเซิร์ฟเวอร์</string>
+	<key>Server URL</key>
+	<string>URL ของเซิร์ฟเวอร์</string>
+	<key>Server Username</key>
+	<string>ชื่อผู้ใช้เซิร์ฟเวอร์</string>
+	<key>Server name</key>
+	<string>ชื่อเซิร์ฟเวอร์</string>
+	<key>Set</key>
+	<string>Set</string>
+	<key>Settings</key>
+	<string>ตั้งค่า</string>
+	<key>Setup a new account in the app to save to.</key>
+	<string>Setup a new account in the app to save to.</string>
+	<key>Share</key>
+	<string>แชร์</string>
+	<key>Share Diagnostics</key>
+	<string>แบ่งปันการวินิจฉัย</string>
+	<key>Share Extension disabled</key>
+	<string>Share Extension disabled</string>
+	<key>Share Extension unavailable</key>
+	<string>Share Extension unavailable</string>
+	<key>Share with</key>
+	<string>แชร์ให้กับ</string>
+	<key>Shared</key>
+	<string>Shared</string>
+	<key>Shared by link</key>
+	<string>ลิงก์ที่กำลังแชร์อยู่</string>
+	<key>Shared by me</key>
+	<string>Shared by me</string>
+	<key>Shared by {{owner}}</key>
+	<string>Shared by {{owner}}</string>
+	<key>Shared with</key>
+	<string>แชร์ด้วย</string>
+	<key>Shared with me</key>
+	<string>Shared with me</string>
+	<key>Shared with {{recipients}}</key>
+	<string>Shared with {{recipients}}</string>
+	<key>Shared with {{recipient}}</key>
+	<string>Shared with {{recipient}}</string>
+	<key>Shares</key>
+	<string>แชร์</string>
+	<key>Sharing</key>
+	<string>แชร์ข้อมูล</string>
+	<key>Sharing requires an active connection.</key>
+	<string>Sharing requires an active connection.</string>
+	<key>Shortcut</key>
+	<string>Shortcut</string>
+	<key>Shortcut to '{{hostname}}'</key>
+	<string>Shortcut to '{{hostname}}'</string>
+	<key>Shortcuts Actions</key>
+	<string>สร้างทางลัด</string>
+	<key>Shorten by one week</key>
+	<string>Shorten by one week</string>
+	<key>Show</key>
+	<string>Show</string>
+	<key>Show all</key>
+	<string>แสดงทั้งหมด</string>
+	<key>Show folders on top</key>
+	<string>แสดงโฟลเดอร์ด้านบน</string>
+	<key>Show hidden files and folders</key>
+	<string>แสดงไฟล์และโฟลเดอร์ที่ซ่อน</string>
+	<key>Show message</key>
+	<string>Show message</string>
+	<key>Show more results</key>
+	<string>แสดงผลลัพธ์เพิ่มเติม</string>
+	<key>Show new version</key>
+	<string>แสดงเวอร์ชันใหม่</string>
+	<key>Show/Hide sidebar</key>
+	<string>Show/Hide sidebar</string>
+	<key>Shutter priority</key>
+	<string>ลำดับของชัตเตอร์</string>
+	<key>Shutter speed</key>
+	<string>ความเร็วชัตเตอร์</string>
+	<key>Sign in</key>
+	<string>เข้าสู่ระบบ</string>
+	<key>Size</key>
+	<string>ขนาด</string>
+	<key>Skip</key>
+	<string>ข้าม</string>
+	<key>Skip Ahead</key>
+	<string>ข้ามไปข้างหน้า</string>
+	<key>Skip Back</key>
+	<string>ข้ามกลับ</string>
+	<key>Some cellular data may still be used. To completely avoid the usage of cellular data, please turn off access to cellular for the entire app in the Settings app.</key>
+	<string>เพื่อหลีกเลี่ยงค่าบริการเพิ่มเติมท่านสามารถปิดการใช้งานเน็ตมือถือผ่านหน้าตั้งค่า</string>
+	<key>Sort by %@</key>
+	<string>จัดเรียงตาม %@</string>
+	<key>Sort by {{attribute}} in {{direction}} order</key>
+	<string>Sort by {{attribute}} in {{direction}} order</string>
+	<key>Space</key>
+	<string>Space</string>
+	<key>Spaces</key>
+	<string>Spaces</string>
+	<key>Spot</key>
+	<string>จุด</string>
+	<key>Start setup</key>
+	<string>Start setup</string>
+	<key>Status</key>
+	<string>สถานะ</string>
+	<key>Storage</key>
+	<string>พื้นที่จัดเก็บข้อมูล</string>
+	<key>Strobe return light detected</key>
+	<string>ตรวจพบแสงแฟลชย้อนกลับ</string>
+	<key>Strobe return light not detected</key>
+	<string>ไม่พบไฟย้อนแสงของแฟลช</string>
+	<key>Subscribe</key>
+	<string>สมัครรับข้อมูล</string>
+	<key>Subscribe Now</key>
+	<string>สมัครเดี๋ยวนี้</string>
+	<key>Switch Theme Style</key>
+	<string>เปลี่ยนรูปแบบธีม</string>
+	<key>System</key>
+	<string>ระบบ</string>
+	<key>System Appeareance</key>
+	<string>ลักษณะของระบบ</string>
+	<key>TIFF</key>
+	<string>TIFF</string>
+	<key>Tab %@</key>
+	<string>แถบ%@</string>
+	<key>Take photo or video</key>
+	<string>ถ่ายภาพหรือวิดีโอ</string>
+	<key>Take survey</key>
+	<string>Take survey</string>
+	<key>Tap to launch the app.</key>
+	<string>แตะเพื่อเปิดแอป</string>
+	<key>Tap to quit the app.</key>
+	<string>แตะเพื่อออกจากแอป</string>
+	<key>Terms Of Use</key>
+	<string>ข้อตกลงในการใช้งาน</string>
+	<key>Text</key>
+	<string>ข้อความ</string>
+	<key>Thank you for using %@.
+</key>
+	<string>ขอบคุณที่ใช้ %@</string>
+	<key>Thank you for using %@.
+If you like our App, please leave an AppStore review.
+❤️</key>
+	<string>ขอบคุณที่เลือกใช้ %@
+ถ้าคุณชอบแอปของเราสามารถรีวิวได้ที่ AppStore ❤️</string>
+	<key>The account has been disabled.</key>
+	<string>บัญชีถูกปิดใช้งาน</string>
+	<key>The connection's access token has expired or become invalid. Sign in again to re-gain access.</key>
+	<string>โทเค็นเข้าถึงการเชื่อมต่อหมดอายุหรือไม่ถูกต้อง กรุณาลงชื่อเข้าใช้อีกครั้งเพื่อรับสิทธิ์การเข้าถึง</string>
+	<key>The destination this shortcut points to could not be found. It may have been deleted or you may not have access to it.</key>
+	<string>The destination this shortcut points to could not be found. It may have been deleted or you may not have access to it.</string>
+	<key>The entered URL does not include a hostname.</key>
+	<string>ป้อน URL โดยไม่รวมชื่อโฮสต์</string>
+	<key>The entered codes are different</key>
+	<string>กรุณาป้อนรหัสให้ตรงกัน</string>
+	<key>The entered page number doesn't exist</key>
+	<string>ไม่มีหมายเลขหน้าที่ป้อน</string>
+	<key>The following steps will guide you through the setup process.</key>
+	<string>The following steps will guide you through the setup process.</string>
+	<key>The last 10 archived logs are kept on the device - with each log covering up to 24 hours of usage. When sharing please bear in mind that logs may contain sensitive information such as server URLs and user-specific information.</key>
+	<string>log 10 ไฟล์ล่าสุดถูกเก็บไว้ในอุปกรณ์ - โดยแต่ละ log ครอบคลุมการใช้งานสูงสุด 24 ชั่วโมง เมื่อทำการแชร์โปรดจำไว้ว่า log อาจมีข้อมูลที่ละเอียดอ่อนเช่น URL เซิร์ฟเวอร์และข้อมูลเฉพาะของผู้ใช้</string>
+	<key>The password was copied to the clipboard</key>
+	<string>The password was copied to the clipboard</string>
+	<key>The search term you entered did not match any item in the selected scope.</key>
+	<string>The search term you entered did not match any item in the selected scope.</string>
+	<key>The server declined access with the credentials stored for this connection.</key>
+	<string>เซิร์ฟเวอร์ปฏิเสธการเข้าถึงด้วยหนังสือรับรองที่เก็บไว้สำหรับการเชื่อมต่อนี้</string>
+	<key>The shortcut points to a URL, but the configuration of this app prohibits opening it.</key>
+	<string>The shortcut points to a URL, but the configuration of this app prohibits opening it.</string>
+	<key>The shortcut points to another item, but the configuration of this app prohibits opening it.</key>
+	<string>The shortcut points to a URL, but the configuration of this app prohibits opening it.</string>
+	<key>The {{app.name}} share extension is not available on this system.</key>
+	<string>The {{app.name}} share extension is not available on this system.</string>
+	<key>Theme</key>
+	<string>ธีม</string>
+	<key>This action can't be undone.</key>
+	<string>ไม่สามารถยกเลิกการดำเนินการนี้ได้</string>
+	<key>This document has %@ pages</key>
+	<string>เอกสารนี้มีทั้งหมด %@ หน้า</string>
+	<key>This folder is empty.</key>
+	<string>This folder is empty.</string>
+	<key>This folder is empty. Fill it with content:</key>
+	<string>This folder is empty. Fill it with content:</string>
+	<key>This folder no longer exists on the server.</key>
+	<string>โฟลเดอร์นี้ไม่มีอยู่บนเซิร์ฟเวอร์อีกต่อไป</string>
+	<key>This permission is needed to upload photos and videos from your photo library.</key>
+	<string>จำเป็นต้องได้รับอนุญาตเพื่ออัปโหลดรูปภาพและวิดีโอจากคลังรูปภาพของคุณ</string>
+	<key>This shortcut points to:
+{{url}}</key>
+	<string>This shortcut points to:
+{{url}}</string>
+	<key>This will also delete all locally stored file copies.</key>
+	<string>นอกจากนี้จะลบไฟล์สำเนาที่เก็บไว้ในเครื่องทั้งหมด</string>
+	<key>Time</key>
+	<string>เวลา</string>
+	<key>Time measured since uploading, editing, downloading or viewing the respective file through this device. Does not apply to files downloaded via the Available Offline feature. Local copies may be deleted before the given period of time has passed, f.ex. because there's a newer version of a file on the server - or through the manual deletion of offline copies. Also, local copies may not be deleted after the given period of time has passed, f.ex. if an action is performed on it, the file is still in use - or the account holding the file hasn't been used in the app.</key>
+	<string>เวลาที่วัดได้ตั้งแต่การอัปโหลด แก้ไขดาวน์โหลด หรือดูไฟล์ที่เกี่ยวข้องผ่านอุปกรณ์นี้ ใช้ไม่ได้กับไฟล์ที่ดาวน์โหลดผ่านคุณสมบัติ "การพร้อมใช้งานแบบออฟไลน์" สำเนาในเครื่องอาจถูกลบก่อนการประสานข้อมูล  เนื่องจากมีไฟล์เวอร์ชันใหม่บนเซิร์ฟเวอร์ - หรือผ่านการลบสำเนาออฟไลน์ด้วยตนเอง นอกจากนี้สำเนาในเครื่องอาจไม่ถูกลบหลังจากผ่านช่วงเวลาที่กำหนด หากมีการดำเนินการกับไฟล์นั้นยังคงมีการใช้งานอยู่หรือบัญชีที่ถือครองไฟล์นั้นไม่ได้ถูกใช้ในแอป</string>
+	<key>To use the app, you need to create a passcode.</key>
+	<string>To use the app, you need to create a passcode.</string>
+	<key>Toggle Search Scope</key>
+	<string>สลับขอบเขตการค้นหา</string>
+	<key>Toggle layout</key>
+	<string>Toggle layout</string>
+	<key>Total update scans</key>
+	<string>สแกนการอัปเดตทั้งหมด</string>
+	<key>Touch ID</key>
+	<string>ยืนยันตนด้วยลายนิ้วมือ</string>
+	<key>Tree</key>
+	<string>Tree</string>
+	<key>Type</key>
+	<string>ประเภท</string>
+	<key>URL</key>
+	<string>URL</string>
+	<key>URL of webpage or item</key>
+	<string>URL of webpage or item</string>
+	<key>URL was copied to the clipboard</key>
+	<string>คัดลอก URL ไปยังคลิปบอร์ดแล้ว</string>
+	<key>Uncalibrated</key>
+	<string>ไม่ได้ปรับเทียบ</string>
+	<key>Unfavorite item</key>
+	<string>รายการที่ไม่ชอบ</string>
+	<key>Unknown</key>
+	<string>Unknown</string>
+	<key>Unlock</key>
+	<string>ปลดล็อค</string>
+	<key>Unlock %@</key>
+	<string>ปลดล็อค %@</string>
+	<key>Unlock all Pro Features.</key>
+	<string>ปลดล็อคคุณสมบัติ Pro ทั้งหมด</string>
+	<key>Unlock using %@?</key>
+	<string>Unlock using %@?</string>
+	<key>Unlocked</key>
+	<string>ปลดล็อคแล้ว</string>
+	<key>Unshare</key>
+	<string>ยกเลิกการแชร์</string>
+	<key>Update Status</key>
+	<string>อัปเดตสถานะ</string>
+	<key>Updating %ld items…</key>
+	<string>กำลังอัปเดต %ld ไฟล์</string>
+	<key>Updating connection…</key>
+	<string>กำลังอัปเดตการเชื่อมต่อ ...</string>
+	<key>Upload</key>
+	<string>อัปโหลดไฟล์</string>
+	<key>Upload file</key>
+	<string>อัปโหลดไฟล์</string>
+	<key>Upload from your photo library</key>
+	<string>อัปโหลดจากคลังรูปภาพของคุณ</string>
+	<key>Uploading %ld files…</key>
+	<string>กำลังอัปโหลด %ld ไฟล์</string>
+	<key>Uploading {{remainingFileCount}} files…</key>
+	<string>Uploading {{remainingFileCount}} files…</string>
+	<key>Usage terms</key>
+	<string>เงื่อนไขการใช้งาน</string>
+	<key>Use background location updates</key>
+	<string>ใช้การอัปเดตตำแหน่งพื้นหลัง</string>
+	<key>Use background refresh</key>
+	<string>ใช้การรีเฟรชพื้นหลัง</string>
+	<key>Use ownCloud actions in Shortcuts.</key>
+	<string>สร้างทางลัด ownCloud</string>
+	<key>User Interface</key>
+	<string>หน้าจอผู้ใช้</string>
+	<key>User-approved certificates</key>
+	<string>ใบรับรองที่ได้รับอนุญาตจากผู้ใช้</string>
+	<key>Username</key>
+	<string>ชื่อผู้ใช้</string>
+	<key>Users</key>
+	<string>ผู้ใช้งาน</string>
+	<key>Validation Error</key>
+	<string>ข้อผิดพลาดในการตรวจสอบ</string>
+	<key>Verbose</key>
+	<string>Verbose</string>
+	<key>Verifying password…</key>
+	<string>Verifying password…</string>
+	<key>Version information were copied to the clipboard</key>
+	<string>ข้อมูลเวอร์ชันถูกคัดลอกไปยังคลิปบอร์ดแล้ว</string>
+	<key>Video upload</key>
+	<string>อัปโหลดวิดีโอ</string>
+	<key>Video upload path</key>
+	<string>เส้นทางการอัปโหลดวิดีโอ</string>
+	<key>Videos</key>
+	<string>วิดีโอ</string>
+	<key>View documentation</key>
+	<string>View documentation</string>
+	<key>Visit the forums</key>
+	<string>Visit the forums</string>
+	<key>W</key>
+	<string>W</string>
+	<key>Waiting for response from login session in external browser…</key>
+	<string>กำลังรอการตอบสนองจากเซสชันการเข้าสู่ระบบในเบราว์เซอร์ภายนอก...</string>
+	<key>Waiting for server response…</key>
+	<string>กำลังรอการตอบกลับของเซิร์ฟเวอร์...</string>
+	<key>Warning</key>
+	<string>คำเตือน</string>
+	<key>Welcome to %@</key>
+	<string>ยินดีต้อนรับสู่ %@</string>
+	<key>When activated, logs may impact performance and include sensitive information. However the logs are not subject to automatic submission to %@ servers. Sharing logs with others is sole user responsibility.</key>
+	<string>เมื่อเปิดใช้งาน log อาจส่งผลต่อประสิทธิภาพและรวมถึงข้อมูลส่วนตัว อย่างไรก็ตาม log จะไม่ถูกส่งไปยังเซิร์ฟเวอร์ %@ โดยอัตโนมัติ การแชร์ log กับผู้อื่นถือเป็นความรับผิดชอบของผู้ใช้เพียงผู้เดียว</string>
+	<key>White balance</key>
+	<string>สมดุลสีขาว</string>
+	<key>Would you like to view the updated version?</key>
+	<string>คุณต้องการดูเวอร์ชันที่อัปเดตแล้ว?</string>
+	<key>YCbCr</key>
+	<string>YCbCr</string>
+	<key>You are required to set the passcode</key>
+	<string>คุณจะต้องตั้งรหัสผ่าน</string>
+	<key>You need to configure an email account first to be able to send emails.</key>
+	<string>คุณต้องกำหนดค่าบัญชีอีเมลก่อนจึงจะสามารถส่งอีเมลได้</string>
+	<key>after %@</key>
+	<string>หลังจาก %@</string>
+	<key>after free %@ trial</key>
+	<string>หลังจากทดลองใช้ฟรี %@ ครั้ง</string>
+	<key>ascending</key>
+	<string>ascending</string>
+	<key>beta</key>
+	<string>เวอร์ชันเบต้า</string>
+	<key>date</key>
+	<string>วันที่</string>
+	<key>descending</key>
+	<string>descending</string>
+	<key>enabled</key>
+	<string>เปิดใช้งาน</string>
+	<key>https://example.com</key>
+	<string>https://example.com</string>
+	<key>kind</key>
+	<string>ประเภท</string>
+	<key>last used</key>
+	<string>last used</string>
+	<key>license</key>
+	<string>license</string>
+	<key>name</key>
+	<string>ชื่อ</string>
+	<key>never</key>
+	<string>ไม่ต้องเลย</string>
+	<key>none</key>
+	<string>ไม่มี</string>
+	<key>not present</key>
+	<string>ไม่มี</string>
+	<key>off</key>
+	<string>ปิด</string>
+	<key>on</key>
+	<string>on</string>
+	<key>release</key>
+	<string>ล่าสุด</string>
+	<key>shared</key>
+	<string>ถูกแชร์</string>
+	<key>size</key>
+	<string>ขนาด</string>
+	<key>undated</key>
+	<string>undated</string>
+	<key>unknown</key>
+	<string>ไม่รู้จัก</string>
+	<key>{{attribute}} {{direction}}</key>
+	<string>{{attribute}} {{direction}}</string>
+	<key>{{fileName}} (file)</key>
+	<string>{{fileName}} (file)</string>
+	<key>{{folderName}} (folder)</key>
+	<string>{{folderName}} (folder)</string>
+	<key>{{itemCount}} items with {{totalSize}} total ({{fileCount}} files, {{folderCount}} folders)</key>
+	<string>{{itemCount}} items with {{totalSize}} total ({{fileCount}} files, {{folderCount}} folders)</string>
+	<key>{{itemName}} ({{link}}) | password: {{password}}</key>
+	<string>{{itemName}} ({{link}}) | password: {{password}}</string>
+	<key>{{link}} | password: {{password}}</key>
+	<string>{{link}} | password: {{password}}</string>
+	<key>{{remaining}} available</key>
+	<string>{{remaining}} available</string>
+	<key>{{spaceName}} (space)</key>
+	<string>{{spaceName}} (space)</string>
+</dict>
+</plist>

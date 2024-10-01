@@ -1,1028 +1,1480 @@
-/*
-  Localizable.strings
-  ownCloud
-
-  Created by Pablo Carrascal on 13/03/2018.
-  Copyright © 2018 ownCloud GmbH. All rights reserved.
-*/
-
-/*
- * Copyright (C) 2018, ownCloud GmbH.
- *
- * This code is covered by the GNU Public License Version 3.
- *
- * For distribution utilizing Apple mechanisms please see https://owncloud.org/contribute/iOS-license-exception/
- * You should have received a copy of this license along with this program. If not, see <http://www.gnu.org/licenses/gpl-3.0.en.html>.
- *
- */
-
-/* Add / Edit Bookmark */
-"Edit account" = "Modificar cuenta";
-"Add account" = "Agregar cuenta";
-"Server URL" = "URL del servidor";
-"https://example.com" = "https://ejemplo.com";
-"Continue" = "Continuar";
-"Name" = "Nombre";
-"Example Server" = "Servidor de ejemplo";
-"Show Certificate Details" = "Mostrar detalles del Certificado";
-"Connect" = "Conectar";
-"Delete Authentication Data" = "Eliminar Datos de Autenticación";
-"Authentication" = "Autenticación";
-"Username" = "Nombre de usuario";
-"Password" = "Contraseña";
-"Certificate Details" = "Detalles del Certificado";
-"Cancel" = "Cancelar";
-"Approve" = "Aprobar";
-"Error" = "Error";
-"Issues" = "Problemas";
-"Review Connection" = "Revisar Conexión";
-"Authenticated via" = "Autenticado por medio de ";
-"Authenticated as %@ via %@" = "Autenticado como %@ por medio de %@";
-"Edit" = "Editar";
-"Credentials" = "Credenciales";
-"Rejected" = "Rechazado";
-"Passed" = "Aceptado";
-"Accepted" = "Aceptado";
-"Validation Error" = "Error de validación";
-"Certificate was rejected by user." = "Certificado rechazado por usuario.";
-"Certificate has issues.\nOpen 'Certificate Details' for more informations." = "Problemas con el certificado.\nAbra 'Detalles Certificado' para más información.";
-"No issues found. Certificate passed validation." = "Sin problemas detectados. El certificado ha pasado la validación.";
-"Certificate may have issues, but was accepted by user.\nOpen 'Certificate Details' for more informations." = "El certificado presenta problemas , pero ha sido aceptado por el usuario.\nAbra 'Detalles Certificado' para más información.";
-"If you 'Continue', you will be prompted to allow the '{{app.name}}' app to open the {{authmethodName}} login page where you can enter your credentials." = "Si usted continúa, será redirigido para permitir a '{{app.name}}' abrir la pagina de autenticación {{authmethodName}} donde podrá introducir sus credenciales. ";
-
-"Error opening %@" = "Error al abrir %@";
-
-"Contacting server…" = "Contactando servidor...";
-"Authenticating…" = "Autenticando...";
-
-"Fetching user information…" = "Obteniendo información del usuario...";
-"Updating connection…" = "Actualizando conexión...";
-
-"Preparing account" = "Preparando cuenta";
-"Please wait…" = "Por favor espere...";
-"Skip" = "Omitir";
-
-"Missing hostname" = "Falta nombre de Host";
-"The entered URL does not include a hostname." = "La URL introducida no incluye el nombre de host.";
-"Add account" = "Agregar cuenta";
-"Server name" = "Nombre del servidor";
-"Server Password" = "Contraseña del servidor";
-"Server Username" = "Nombre de usuario del servidor";
-"Show accounts" = "Mostrar cuentas";
-"Setup complete" = "Configuración completa";
-"Edit Login" = "Editar Login";
-"Manage Storage" = "Gestión de almcenamiento";
-"Access Files" = "Acceder a ficheros";
-"Log out" = "Salir";
-"Retry" = "Reintentar";
-
-/* Bookmark Info */
-"Bookmark Metadata" = "Metadatos de marcadores";
-
-/* Client */
-"Browse" = "Navegar";
-"Files" = "Archivos";
-"Disconnect" = "Desconectar";
-"Connecting…" = "Conectando...";
-"Connected." = "Conectado.";
-"Select" = "Seleccionar";
-"Done" = "Hecho";
-
-"Folder" = "Carpeta";
-
-"Stopped" = "Detenido";
-"Started…" = "Iniciado...";
-"Contents from cache." = "Contenidos de la caché.";
-"Waiting for server response…" = "Esperando la respuesta del servidor...";
-"This folder no longer exists." = "Esta carpeta ya no existe.";
-"Everything up-to-date." = "Contenido actualizado";
-"Please wait…" = "Por favor espere...";
-"Sort by %@" = "Ordenar por %@";
-"Sort by" = "Ordenar por";
-
-"name" = "nombre";
-"kind" = "tipo";
-"size" = "tamaño";
-"date" = "fecha";
-"last used" = "last used";
-
-"Tree" = "Árbol";
-"Search folder" = "Buscar carpeta";
-"Search tree" = "Buscar en árbol";
-"Search from {{folder.name}}" = "Buscar en {{folder.name}}";
-"Search space" = "Buscar en space";
-"Search {{space.name}}" = "Buscar {{space.name}}";
-"Search account" = "Buscar cuenta";
-"Enter a search term" = "Introduzca un término de búsqueda";
-"Search for users or groups" = "Buscar usuarios o grupos";
-"Enter the user or group you want to invite." = "Introduzca el usuario o grupo que quiera invitar.";
-
-"Pending" = "Pendiente";
-"Show parent paths" = "Mostrar rutas padre";
-"Reveal in folder" = "Revelar en carpeta";
-
-"%@ of %@ used" = "%@ de %@ usados";
-"Total: %@" = "Total: %@";
-"%@ item | " = "%@ Elemento I";
-"%@ items | " = "%@Elementos |";
-
-"{{itemCount}} items with {{totalSize}} total ({{fileCount}} files, {{folderCount}} folders)" = "{{itemCount}} elementos con {{totalSize}} en total, ({{fileCount}} ficheros, {{folderCount}} carpetas)";
-"{{remaining}} available" = "{{remaining}} disponible";
-
-"Loading…" = "Cargando...";
-
-"Show more results" = "Mostrar más resultados";
-
-"An error occurred" = "Ocurrió un error";
-
-/* Item Layouts */
-"List" = "Lista";
-"Grid" = "Rejilla";
-"Item grid" = "Rejilla de elementos";
-"Image grid" = "Rejilla de imágenes";
-
-/* Saved searches */
-"Saved searches" = "Búsquedas guardadas.";
-"Saved search templates" = "Plantillas de búsqueda guardadas";
-"Save search" = "Guardar búsqueda";
-"Save as search template" = "Guardar como plantilla de búsqueda";
-
-"Name of saved search" = "Nombre de búsqueda guardada";
-"Saved search" = "Búsqueda guardada";
-"Saved searches" = "Búsquedas guardadas.";
-"Name of template" = "Nombre de plantilla";
-"Search template" = "Buscar plantilla";
-"Search templates" = "Buscar plantillas";
-
-/* Search scope */
-"Search scope" = "Alcance de búsqueda";
-"Toggle Search Scope" = "Cambiar alcance de búsqueda";
-
-/* Static Login Setup */
-"Server error" = "Error en servidor";
-"The server doesn't support any allowed authentication method." = "El servidor no soporta ningún método de autenticación";
-"The server doesn't support any known and allowed authentication method found." = "El servidor no soporta ningún método de autenticación conocido o permitido.";
-"Retry detection" = "Reintentar detección";
-"Enter your username and password" = "Introduzca su nombre de usuario y contraseña";
-"Please log in to authorize the app." = "Inicie sesión para autorizar la aplicación.";
-"Welcome to %@" = "Bienvenido a %@";
-"Please enter a server URL" = "Ingrese una URL de servidor";
-"Please pick a profile to begin setup" = "Elija un perfil para comenzar la configuración";
-"The following steps will guide you through the setup process." = "The following steps will guide you through the setup process.";
-"Start setup" = "Start setup";
-"Open login page" = "Open login page";
-"If you 'Continue', you will be prompted to allow the '{{app.name}}' app to open the login page where you can enter your credentials." = "If you 'Continue', you will be prompted to allow the '{{app.name}}' app to open the login page where you can enter your credentials.";
-"Account setup complete" = "Account setup complete";
-"If you'd like to give the account a custom name, please enter it below:" = "If you'd like to give the account a custom name, please enter it below:";
-
-/* Single Account */
-"You are connected as\n%@" = "Está conectado como \n%@";
-"Login" = "Usuario";
-"Wrong URL" = "URL incorrecta";
-"Please enter a valid URL" = "Por favor, introduzca una URL válida";
-"Missing Profile URL" = "Introduzca perfil de URL ";
-"The Profile '%@' does not have a URL configured.\nPlease provide a URL via configuration or MDM." = "El perfil %@no tiene una URL configurada.\nPor favor, introduzca una URL a través de su configuración o MDM.";
-
-/* Client Messages */
-"No contents" = "Sin contenido";
-"This folder contains no files or folders." = "Esta carpeta no contiene archivos o carpetas.";
-"This folder is empty." = "Carpeta vacía";
-"This folder is empty. Fill it with content:" = "Carpeta vacía. Añada contenido:";
-
-"Folder removed" = "Carpeta eliminada";
-"This folder no longer exists on the server." = "Esa carpeta ya no existe en el servidor.";
-"Are you sure you want to delete this item from the server?" = "¿Esta seguro de que desea borrar este elemento del servidor?";
-"Are you sure you want to delete these items from the server?" = "¿Está seguro que desea eliminar estos elementos de su servidor?";
-"Multiple items" = "Múltiples elementos";
-"Deleting '%@'" = "Eliminando '%@'";
-"Renaming to %@" = "Cambiando el nombre a %@";
-"Upload from your photo library" = "Subir desde su biblioteca de fotos";
-"Missing permissions" = "Faltan permisos";
-"This permission is needed to upload photos and videos from your photo library." = "Este permiso es necesario para subir fotos y videos desde su biblioteca de fotos.";
-"Not now" = "No ahora";
-"Upload file" = "Subir archivo";
-"Upload files" = "Subir archivos";
-
-"No matches" = "Sin coincidencias";
-"The search term you entered did not match any item in the selected scope." = "No hay coincidencias entre el término de búsqueda introducido y ningún elemento en el ámbito seleccionado.";
-"There are no results for this search term" = "No hay resultados respecto del término buscado";
-"No items found matching the search criteria." = "No se encontraron elementos coincidentes con el criterio de búsqueda.";
-
-"Status" = "Estado";
-
-"Authorization failed" = "Autorización fallida";
-"The account has been disabled." = "La cuenta ha sido deshabilitada";
-"The server declined access with the credentials stored for this connection." = "El servidor declinó el acceso con estas credenciales guardadas para esta conexión.";
-"Access denied" = "Acceso denegado";
-"The connection's access token has expired or become invalid. Sign in again to re-gain access." = "El token de conexión ha expirado o ya no es válido. Vuelva a autenticarse para volver a tener acceso.";
-"No authentication data has been found for this connection." = "No se encontraron datos de autenticación para esta conexión";
-"Authentication with %@ is no longer allowed. Re-authentication needed." = "Autenticación con %@ no permitida. Se necesita reautenticación.";
-"Sign in" = "Entrar";
-"Continue offline" = "Seguir offline";
-"Media upload in the previous session was incomplete since the application was terminated" = "Hay subidas de ficheros  que no se completaron en su última sesión porque la aplicación fue cerrada.";
-
-"Waiting for response from login session in external browser…" = "Esperando respuesta de la sesión de inicio de sesión en un navegador externo...";
-
-"All done" = "Terminado.";
-"No pending messages or ongoing actions." = "No hay mensajes o acciones pendientes.";
-
-"Show all" = "Mostrar todo";
-"+ %ld more" = "+ %ld más";
-"Apply choice to all similar issues" = "Aplicar elección a problemas similares";
-"Apply to all" = "Aplicar a todos";
-
-/* Server List*/
-"Cancel" = "Cancelar";
-"OK" = "Aceptar";
-
-"'%@' is currently locked" = "'%@' está actualmente bloqueado";
-"An operation is currently performed that prevents connecting to '%@'. Please try again later." = "Una operación que se esta realizando en este momento impide conectarse a '%@'. Por favor pruebe nuevamente más tarde.";
-"Do you really want to disconnect from your '%@' account?" = "Quiere desconectar su cuenta %@?";
-"This will remove all locally stored file copies from your device." = "Esta acción eliminará todas las copias locales de los ficheros de su dispositivo.";
-"Really delete '%@'?" = "¿Realmente desea eliminar '%@'?";
-"Do you want to log out from '%@'?" = "¿Desea cerrar sesión desde '%@'?";
-"This will also delete all locally stored file copies." = "Esto también eliminará todas las copias almacenadas localmente.";
-"Delete" = "Eliminar";
-"Remove" = "Eliminar";
-"Removing of '%@' failed" = "Eliminación de %@ falló";
-"Accounts" = "Cuentas";
-
-"Help" = "Ayuda";
-"Feedback" = "Sugerencias";
-"Welcome" = "Bienvenido";
-"Thanks for choosing %@! \n Start by adding your account." = "Gracias por elegir %@! \n Empiece agregando su cuenta.";
-
-/* Settings Messages */
-
-"Security" = "Seguridad";
-"Passcode Lock" = "Bloqueo con código";
-"Face ID" = "Face ID";
-"Touch ID" = "Touch ID";
-"Unlock using %@?" = "¿Desbloquear usando %@?";
-"Videos" = "Vídeos";
-"Photos" = "Fotos";
-"Wifi only" = "Solo wifi";
-"Settings" = "Ajustes";
-"Lock application" = "Bloquear aplicación";
-"Upload videos via WiFi only" = "Subir vídeos sólo cuando hay WiFi";
-"Upload pictures via WiFi only" = "Subir imágenes sólo cuando hay WiFi";
-"More" = "Más";
-"Documentation" = "Documentación";
-"Send feedback" = "Enviar comentarios";
-"Recommend to a friend" = "Recomendar a un amigo";
-"Privacy Policy" = "Política de privacidad";
-"Terms Of Use" = "Términos de uso";
-"Acknowledgements" = "Reconocimientos";
-"license" = "licencia";
-"Portions of this app may utilize the following copyrighted material, the use of which is hereby acknowledged." = "Partes de esta app pueden utilizar el siguiente material con copyright, el uso del cual esta reconocido por la presente.";
-"Video upload path" = "Ruta de subida de vídeos";
-"Photo upload path" = "Ruta de subida de fotos";
-"Immediately" = "Inmediatamente";
-"After 1 minute" = "Después de 1 minuto";
-"After 5 minutes" = "Después de 5 minutos";
-"After 30 minutes" = "Después de 30 minutos";
-"After %ld seconds" = "Después de %ld segundos";
-"If you choose \"Immediately\" the App will be locked, when it is no longer in foreground." = "Si elige \"Inmediatamente\", la aplicación se bloqueará cuando ya no esté en primer plano.";
-"Please configure an email account" = "Por favor configure una cuenta de correo electrónico";
-"You need to configure an email account first to be able to send emails." = "Necesita configurar una cuenta de correo electrónico para poder enviar correos.";
-"Do you want to open the following URL?" = "¿Desea abrir la siguiente URL?";
-"Passcode option" = "Opción código";
-"Please choose how many digits you want to use for the passcode lock?" = "Elija cuántos dígitos desea usar para el bloqueo por código.";
-"%ld digit code" = "Código de %!d dígitos";
-"Enter a new code with %ld digits" = "Ingrese un nuevo código %!d";
-"To use the app, you need to create a passcode." = "Para usar la app tiene que crear un código de acceso.";
-"Passcode setup" = "Configuración de código de acceso";
-
-"%@%@ %@ version %@ build %@\n(app: %@, sdk: %@)" = "%@%@%@versión %@ build %@\n(app: %@, sdk: %@)";
-"beta" = "beta";
-"release" = "lanzamiento";
-"App Version" = "App Version";
-"Version information were copied to the clipboard" = "Información de la versión copiada al portapapeles.";
-
-
-/* User Interface Settings */
-"Theme" = "Tema";
-"User Interface" = "Interfaz de usuario";
-"Dark" = "Oscuro";
-"Dark Blue" = "Azul oscuro";
-"Dark Web" = "Web oscuro";
-"Light" = "Claro";
-"Classic" = "Clásico";
-"System" = "Sistema";
-"System Appeareance" = "Aspecto del sistema";
-
-/* Log settings */
-"Log Files" = "Archivos de log";
-"Browse log files" = "Navegar por logs";
-"Share" = "Compartir";
-"Delete all log files?" = "¿Eliminar todos los logs?";
-"Delete all" = "Eliminar todo";
-
-"Log Level" = "Nivel de logs";
-"Log Destinations" = "Destino logs";
-"Privacy" = "Privacidad";
-
-"Logging" = "Registrando";
-"Enable logging" = "Habilitar registro";
-"Options" = "Opciones";
-
-"Off" = "Desactivado";
-"Info" = "Información";
-"Default" = "Predeterminado";
-"Warning" = "Alerta";
-"Error" = "Error";
-
-"Share log file" = "Compartir logs";
-"Reset log file" = "Restablecer logs";
-
-"When activated, logs may impact performance and include sensitive information. However the logs are not subject to automatic submission to %@ servers. Sharing logs with others is sole user responsibility." = "Cuando los archivos de registro son activados éstos pueden impactar en la performance e incluir información sensible. Sin embargo, éstos no están sujetos a la carga automática hacia los servidores %@. Compartir estos archivos de registro es bajo su propia responsabilidad.";
-
-"The last 10 archived logs are kept on the device - with each log covering up to 24 hours of usage. When sharing please bear in mind that logs may contain sensitive information such as server URLs and user-specific information." = "Los últimos 10 archivos de log se guardan en el dispositivo, y cada archivo cubre hasta 24 horas de uso. Al compartir, tenga en cuenta que los logs pueden contener información confidencial, como las direcciones URL del servidor y la información específica del usuario.";
-
-"Mask private data" = "Enmascarar datos privados";
-"Enabling this option will attempt to mask private data, so it does not become part of any log. Since logging is a development and debugging feature, though, we can't guarantee that the log file will be free of any private data even with this option enabled. Therefore, please look through any log file and verify its free of any data you're not comfortable sharing before sharing it with anybody." = "Habilitar esta opción intentará enmascarar los datos privados, por lo que no aparecerán en los logs. Sin embargo, dado que el log es una función de desarrollo y depuración, no podemos garantizar que el archivo de log esté libre de datos privados, incluso con esta opción habilitada. Por lo tanto, revise cualquier log y verifique que esté libre de cualquier dato susceptible antes de compartirlo.";
-
-"No log file found" = "No se encuentra archivo de log";
-"The log file can't be shared because no log file could be found or the log file is empty." = "El archivo de log no se puede compartir porque no se pudo encontrar ninguno o está vacío.";
-"Enable log file" = "Habilitar logs";
-
-"Really reset log file?" = "Desea restablecer el archivo de logs?";
-"This action can't be undone." = "Esta acción no se puede deshacer.";
-
-/* Data usage settings */
-"Data usage" = "Uso de datos";
-"Delete unused local copies" = "Borrar copias locales no usadas";
-"Time measured since uploading, editing, downloading or viewing the respective file through this device. Does not apply to files downloaded via the Available Offline feature. Local copies may be deleted before the given period of time has passed, f.ex. because there's a newer version of a file on the server - or through the manual deletion of offline copies. Also, local copies may not be deleted after the given period of time has passed, f.ex. if an action is performed on it, the file is still in use - or the account holding the file hasn't been used in the app." = "Tiempo medido desde que se sube, edita, descarga o visualiza el fichero en este dispositivo. No aplica a ficheros descargados a través de la funcionalidad \"Disponible offline\". Las copias locales pueden ser borradas  antes de que el tiempo seleccionado haya transcurrido, por ejemplo, si hay una nueva versión del fichero en el servidor o por el borrado manual de copias offline. Las copias locales pueden no ser borradas después de que el tiempo haya transcurrido, por ejemplo, si se ejecuta una acción sobre él, si el archivo está en uso, o si la cuenta que lo contiene no ha sido usada aún en la app.";
-"never" = "nunca";
-"after %@" = "después de %@";
-"Decrease Slider Value" = "Decrementar valor";
-"Increase Slider Value" = "Incrementar valor";
-
-"Cellular Data Usage" = "Uso de datos del móvil";
-"Some cellular data may still be used. To completely avoid the usage of cellular data, please turn off access to cellular for the entire app in the Settings app." = "Es posible que aún se utilicen algunos datos móviles. Para evitar por completo el uso de datos móviles, desactive el acceso al móvil para toda la aplicación desde la configuración de la aplicación.";
-"Cellular Data Usage have been disabled via MDM configuration. Please contact your administrator for more information." = "El uso de datos móviles se ha desactivado a través de la configuración de MDM. Póngase en contacto con su administrador para obtener más información.";
-"General" = "General";
-"By feature" = "por característica";
-
-"off" = "apagado";
-"enabled" = "activado";
-
-/* Display settings */
-"Advanced settings" = "Configuración avanzada";
-"Show hidden files and folders" = "Mostrar archivos y carpetas ocultos";
-"Show folders on top" = "Mostrar carpetas encima";
-"Disable gestures" = "Deshabilitar gestos";
-"Prevent dragging of files and folders and multiselection using system defined gestures" = "Evite el arrastre de archivos y carpetas y la selección múltiple mediante gestos definidos por el sistema";
-
-/* Advanced settings */
-"Enable diagnostics" = "Habilitar diagnósticos";
-
-/* Passcode Messages */
-
-"Enter code" = "Introducir código";
-"Repeat code" = "Repita el código";
-"Delete code" = "Eliminar código";
-"The entered codes are different" = "Los códigos introducidos son diferentes";
-"Incorrect code" = "Código incorrecto";
-"Please try again in %@" = "Por favor pruebe nuevamente en %@";
-"Unlock %@" = "Desbloquear %@";
-"Biometric authentication failed" = "Fallo de autenticación biométrica.";
-"You are required to set the passcode" = "Debe configurar el código de acceso";
-
-/* Certificate management */
-
-"Certificates" = "Certificados";
-"User-approved certificates" = "Certificados aprobados por el usuario";
-
-"Approved" = "Aprobado";
-"Auto-approved" = "Auto-aprobado";
-"Revoke approval" =  "Eliminar aprobación";
-
-/* Actions */
-
-"Forbidden Characters" = "Caracteres prohibidos";
-"File name cannot contain / or \\" = "El nombre de archivo no puede contener / o \\";
-"Item with same name already exists" = "Ya existe un elemento con el mismo nombre";
-"An item with the same name already exists in this location." = "Ya existe un elemento con el mismo nombre en esta localización.";
-"New Folder" = "Nueva carpeta";
-"Folder name" = "Nombre de la carpeta";
-"Rename" ="Cambiar nombre";
-"Create folder" ="Crear carpeta";
-"Duplicate" = "Duplicar";
-"Move" = "Mover";
-"Move {{itemCount}} items" = "Mover {{itemCount}} elementos";
-"Move \"{{itemName}}\"" = "Mover \"{{itemName}}\"";
-"Move here" = "Mover aquí";
-"Select target." = "Seleccionar destino.";
-"Open in" = "Abrir en";
-"Copy" = "Copiar";
-"Copy {{itemCount}} items" = "Copiar {{itemCount}} elementos";
-"Copy \"{{itemName}}\"" = "Copiar \"{{itemName}}\"";
-"Copy here" = "Copiar aqui";
-
-"Cannot connect to " = "No se puede conectar con ";
-" couldn't download file(s)" = "No es posible descargar fichero(s)";
-"Actions" = "Acciones";
-"copy" = "Copiar";
-"Close Window" = "Cerrar ventana";
-"Open in a new Window" = "Abrir en nueva ventana";
-"Open in Window" = "Abrir en ventana";
-"Take photo or video" = "Tomar foto o video";
-"%ld Item was copied to the clipboard" = "El elemento %!d fue copiado al portapapeles";
-"%ld Items were copied to the clipboard" = "%!d elementos fueron copiados al portapapeles";
-"Please note: Folders can only be pasted into the %@ app and the same account." = "Tenga en cuenta que: Las carpetas solo pueden ser pegadas dentro de la aplicación %@ y en la misma cuenta.";
-
-"Processing on server" = "Procesando en el servidor";
-
-"Preparing…" = "Preparando...";
-
-"No actions available" = "No hay acciones disponibles";
-"No actions are available for this folder, possibly because of missing permissions." = "No hay acciones disponibles para esta carpeta, posiblemente por falta de permisos.";
-
-"Close actions menu" = "Cerrar el menú de acciones";
-"Favorited" = "Agregado a Favoritos";
-"Favorite item" = "Elemento favorito";
-"Unfavorite item" = "Elemento no favorito";
-"Presentation Mode" = "Modo presentación";
-"Enabling presentation mode will prevent the display from sleep mode until the view is closed." = "Habilitar el modo de presentación evitará que la pantalla pase al modo de suspensión hasta que se cierre la vista.";
-"Enable" = "Activar";
-"Exit Full Screen" = "Salir de pantalla completa";
-
-"Select one or more items." = "Seleccione uno o más elementos.";
-
-"Add item" = "Añadir elemento";
-
-/* App Provider */
-"New document" = "Nuevo documento";
-"Pick a name" = "Coja un nombre";
-"Pick a document type to create:" = "Elige un tipo de documento para crear:";
-"Error creating {{itemName}}" = "Error creando {{itemName}}";
-
-"Opening…" = "Abriendo...";
-
-"Open in {{appName}} (web)" = "Abrir en {{appName}} (web)";
-"Error opening {{itemName}} in {{appName}}" = "Error abriendo {{itemName}} en {{appName}}";
-"Opening documents is not supported by the app provider on this instance." = "Abrir documentos no esta soportado por el proveedor de aplicaciones en esta instancia.";
-
-/* Preview */
-"Open file" = "Abrir archivo";
-"Network unavailable" = "Red no disponible";
-"Error" = "Error";
-"Could not get the picture" = "No se pudo obtener la imagen";
-"Downloading" = "Descargando";
-"File couldn't be opened" = "Fichero no pudo ser abierto";
-"Connecting..." = "Conectando...";
-
-"File" = "Archivo";
-"%@ was updated" = "%@ ha sido actualizado";
-"Would you like to view the updated version?" = "¿Le gustaría ver la versión actualizada?";
-"Show new version" = "Mostrar nueva versión";
-"Refresh without asking" = "Actualizar sin preguntar";
-"Ignore updates" = "Ignorar actualizaciones";
-
-/* PDF Viewer */
-"Resume" = "Continuar";
-"Go to page" = "Ir a la página";
-"Page" = "Página";
-"This document has %@ pages" = "Este documento tiene %@ páginas.";
-"%@ of %@" = "%@ de %@";
-"Invalid Page" = "Página no válida";
-"The entered page number doesn't exist" = "El número de página introducida no existe";
-"Search PDF" = "Buscar PDF";
-"Outline" = "Descripción";
-"Find Next" = "Encontrar siguiente";
-"Find Previous" = "Encontrar anterior";
-"Close Search" = "Cerrar búsqueda";
-
-/* Photo Upload */
-"Upload" = "Subir";
-"Select All" = "Seleccionar todo";
-"Deselect All" = "Deseleccionar todo";
-"All Photos" = "Todas las Fotos";
-"Albums" = "Álbumes";
-"Importing from photo library" = "Importando desde la biblioteca de fotos";
-"Media import" = "importar media";
-"%@ of %@" = "%@ de %@";
-"Selected folder lacks file creation permission" = "La carpeta seleccionada no tiene permisos de creación de ficheros";
-"%d Item" = "%d Elemento";
-"%d Items" = "%d Elementos";
-"Select Items" = "Seleccionar elemento";
-
-/* Scan */
-"Scan" = "Escanear";
-"Scans" = "Escaneos";
-"Scan document" = "Escanear documentos";
-"Saving" = "Guardando";
-"File format" = "Formato de fichero";
-"Name" = "Nombre";
-"Save as" = "Salvar como";
-"Options" = "Opciones";
-"Scan additional" = "Escanear otro fichero";
-"Create one file per page" = "Crear un fichero por página";
-
-/* Sharing */
-"Sharing requires an active connection." = "Compartir necesita una conexión activa.";
-"No items shared with you" = "No hay elementos compartidos con usted";
-"No items shared by you" = "No hay elementos compartidos.";
-"No items shared by link" = "No hay elementos compartidos por enlace";
-
-"Searching Shares…" = "Buscar Compartidos...";
-"Recipient" = "Destinatario";
-"Recipients" = "Destinatarios";
-"Public Link" = "Enlace público";
-"Public Links" = "Enlaces Públicos";
-"Shared by {{owner}}" = "Compartido por {{owner}}";
-"Shared with {{recipient}}" = "Compartido con {{recipient}}";
-"Shared with {{recipients}}" = "Compartido con {{recipients}}";
-"Expires {{expirationDate}}" = "Expira {{expirationDate}}";
-"Share {{itemName}}" = "Compartir {{itemName}}";
-"Create link" = "Crear enlace";
-"Invite" = "Invitar";
-"Invite Recipient" = "Invitar usuarios";
-"Recipients" = "Destinatarios";
-"Add email or name" = "Agregar correo electrónico o nombre";
-"Users" = "Usuarios";
-"Groups" = "Grupos";
-"Start typing to search users, groups and remote users." = "Empiece a teclear para buscar usuarios, grupos o usuarios remotos.";
-"(Group)" = "(Grupo)";
-"Adding User to Share failed" = "Falló la acción de agregar usuario a Compartidos";
-"Permissions" = "Permisos";
-"Invited: %@" = "Invitado: %@";
-"Created: %@" = "Creado: %@";
-"Allows the users you share with to re-share" = "Permitir a los usuarios con los que comparte que re-compartan";
-"Allows the users you share with to edit your shared files, and to collaborate" = "Permite editar y colaborar a los usuarios con los que comparte ";
-"Allows the users you share with to create new files and add them to the share" = "Permite a los usuarios con los que comparte crear nuevos ficheros y agregarlos al recurso compartido.";
-"Allows uploading a new version of a shared file and replacing it" = "Permite subir una nueva versión de un fichero compartido y reemplazarlo";
-"Allows the users you share with to delete shared files" = "Permite eliminar a los usuarios con los cuales comparte";
-"Setting permission failed" = "Fallo al establecer permisos";
-"Shared with" = "Compartido con";
-"Remove Recipient failed" = "Falló el borrado del destinatario ";
-"Remove Recipient" = "Quitar destinatario";
-"Create" = "Crear";
-"Change" = "Cambiar";
-"Recipients can view or download contents." = "Destinatarios puede ver o descargar el contenido";
-"Recipients can view, download, edit, delete and upload contents." = "Destinatarios pueden ver, descargar, editar, borrar y subir contenido.";
-"Receive files from multiple recipients without revealing the contents of the folder." = "Recibir archivos de multiples origenes sin revelar el contenido de la carpeta.";
-"Download / View" = "Descargar / Ver";
-"Download / View / Upload" = "Descargar / Ver / Subir";
-"Upload only (File Drop)" = "Sólo subir (sin mostrar archivos)";
-"Creating public link failed" = "Falló la creación de un enalce público";
-"Create Public Link" = "Crear enlace público";
-"Links" = "Enlaces";
-"Link" = "Enlace";
-"Setting expiration date failed" = "Falló guardar fecha de expiración ";
-"Expiration date" = "Fecha de expiración";
-"Copy Public Link" = "Copiar enlace público";
-"Delete Public Link" = "Eliminar enlace público";
-"Deleting Public Link failed" = "La eliminación de enlace público falló";
-"Deleting password failed" = "La eliminación de la contraseña falló";
-"Setting password failed" = "Falló el ajuste de la contraseña";
-"Type to update password" = "Introduzca nueva contraseña";
-"Cannot change permission" = "No es posible cambiar los permisos";
-"Before you can set the permission\n%@,\n you must enter a password." = "Antes de que establezca el permiso\n%@,\n debe ingresar una contraseña.";
-"Password Protected" = "Protegido con contraseña";
-"Pending Federated Invites" = "Invitaciones federadas pendientes";
-"Pending Invites" = "Invitaciones pendientes";
-"Shared with you" = "Compartido contigo";
-"Shared with others" = "Compartido con otros";
-"Shares" = "Compartidos";
-"Copy Private Link" = "Copiar enlace privado";
-"Only people who have access to the file/folder can use it. Use it as a permanent link for yourself or to point others to files within shares." = "Solo las personas que tienen acceso al archivo/carpeta pueden usarlo. Úselo como un enlace permanente para usted o para señalar a otros archivos dentro de los recursos compartidos.";
-"Accept Share failed" = "Falló aceptar compartición";
-"Decline Share failed" = "Falló declinar compartir";
-"Accept" = "Aceptar";
-"Decline" = "Denegar";
-"Declined" = "Denegado";
-"Decline Share" = "Declinar compartición";
-"Unshare" = "Dejar de compartir";
-"Unshare failed" = "Falló dejar de compartir";
-"Are you sure you want to unshare these items?" = "¿Está seguro que desea dejar de compartir estos elementos?";
-"Are you sure you want to unshare this item?" = "¿Está seguro que desea dejar de compartir este elemento?";
-"Share" = "Compartir";
-"Read" = "Leer";
-"Can Share" = "Puede compartir";
-"Can Edit" = "Puede editar";
-"Can Edit and Change" = "Puede editar y cambiar";
-"Can Create" = "Puede crear";
-"Can Change" = "Puede cambiar";
-"Can Delete" = "Puede eliminar";
-"Accept Invite %@" = "Aceptar invitación %@";
-"Decline Invite %@" = "Declinar invitación %@";
-"Decline cannot be undone." = "Declinar no se puede deshacer.";
-"Sharing" = "Compartiendo";
-"You" = "Tú";
-"Share this file" = "Compartir este archivo";
-"Share this folder" = "Compartir esta carpeta";
-"shared" = "compartido";
-"Owner" = "Propietario";
-"Private Link" = "Enlace privado";
-"Created Public Link" = "Enlace Público creado";
-"URL was copied to the clipboard" = "La URL fue copiada al portapapeles";
-"%@ is not available, when this account is offline. Please open the app and log into your account before you can do this action." = "%@ no está disponible cuando esta cuenta está desconectada. Abra la aplicación e inicie sesión en su cuenta antes de poder realizar esta acción.";
-"%@ is not available for this item." = "%@ no está disponible para este artículo.";
-"Share with user/group" = "Compartir con usuario/grupo";
-"Share link" = "Compartir enlace";
-
-"Shared with me" = "Compartido conmigo";
-"Shared by me" = "Compartido por mi";
-"Shared by link" = "Compartido por enlace";
-
-"Share with" = "Compartir con";
-"Add" = "Añadir";
-"Save changes" = "Guardar cambios";
-
-"Enter password" = "Enter password";
-
-/* Quick Access view */
-"Quick Access" = "Acceso rápido";
-"Collection" = "Colección";
-"Recents" = "Recientes";
-"Favorites"= "Favoritos";
-"Images" = "Imágenes";
-"PDF Documents" = "Documentos PDF";
-"Text" = "Texto";
-"Documents" = "Documentos";
-"Audio" = "Audio";
-
-/* Favorites view */
-"No favorites found" = "No se encontraron favoritos";
-"If you make an item a favorite, it will turn up here." = "Si marca un elemento como favorito, aparecerá aquí.";
-
-/* Media files settings */
-"Media Files" = "Archivos multimedia";
-"Download instead of streaming" = "Descargar en vez de transmitir";
-
-/* Photo upload settings */
-"Media Upload" = "Subir multimedia";
-"Media Export" = "Exportación de medios";
-"Auto Upload" = "Subida automática";
-"Convert HEIC to JPEG" = "Convertir HEIC a JPEG";
-"Convert videos to MP4" = "Convertir videos a MP4";
-"Preserve original media file names" = "Conservar los nombres de los archivos multimedia originales";
-"Auto Upload Photos" = "Auto actualizar Fotos";
-"Auto Upload Videos" = "Auto actualizar Videos";
-"Account" = "Cuenta";
-"Accounts" = "Cuentas";
-"Select account" = "Seleccionar cuenta";
-"Photo upload path" = "Ruta de subida de fotos";
-"Video upload path" = "Ruta de subida de vídeos";
-"Select Upload Path" = "Seleccionar ruta de subida";
-"Auto upload of media was disabled since configured account / folder was not found" = "La subida automática de media ha sido des habilitada puesto que la cuenta/carpeta no ha podido ser encontrada.";
-"Importing %@ media files for upload" = "Importando %@ archivos para su subida";
-"Photo upload" = "Subir foto";
-"Video upload" = "Subir video";
-
-/* Background media uploads */
-"Background uploads (Lab Version)" = "Cargas en segundo plano (Versión Lab)";
-"Background uploads" = "Subidas en segundo plano";
-"Use background refresh" = "Usar refrescado en segundo plano";
-"Allow this app to refresh the content when on Wi-Fi or mobile network in background." = "Permita que esta aplicación actualice el contenido cuando esté en modalidad Wi-Fi o red móvil en segundo plano.";
-"Enable background uploads" = "Habilitar cargas en segundo plano";
-"Use background location updates" = "Usar actualizaciones de ubicación en segundo plano";
-"Background upload notifications" = "Notificaciones de carga en segundo plano";
-"If you would like background media uploads to be more reliable, you should enable background location updates." = "Si desea que las cargas de medios en segundo plano sean más confiables, debe habilitar las actualizaciones de ubicación en segundo plano.";
-"Background media uploads rely on location updates and will stop working if location acquisition permissions are revoked." = "Las cargas de medios en segundo plano dependen de las actualizaciones de ubicación y dejarán de funcionar si se revocan los permisos de adquisición de ubicación.";
-"Otherwise background media uploads using background refresh technology would depend on how frequently you use the app." = "De lo contrario, las cargas de medios en segundo plano con tecnología de actualización en segundo plano dependerían de la frecuencia con la que utilice la aplicación.";
-"Location permission denied" = "Permiso de ubicación denegado";
-"Please re-enable location acquisition in system settings" = "Vuelva a habilitar la adquisición de ubicación en la configuración del sistema";
-"Scheduled upload of %ld media assets" = "Carga programada de %ld activos multimedia";
-
-/* Progress summarizer */
-"Creating %ld folders…" = "Creando %ld carpetas...";
-"Moving %ld items…" = "Moviendo %ld elementos...";
-"Copying %ld items…" = "Copiando %ld elementos...";
-"Deleting %ld items…" = "Eliminando %ld elementos...";
-"Uploading %ld files…" = "Subiendo %ld archivos...";
-"Downloading %ld files…" = "Descargando %ld elementos...";
-"Updating %ld items…" = "Actualizando %ld elementos...";
-
-/* Offline storage management */
-"Free on %@" = "Gratis en %@";
-"unknown" = "desconocido";
-"Offline files use" = "Uso de archivos sin conexión";
-"Compacting of '%@' failed" = "Compactado de '%@' falló";
-"Include available offline files" = "Incluir ficheros disponibles offline";
-"Delete all Offline Files" = "Eliminar todos los archivos sin conexión";
-"Manage" = "Administrar";
-"Storage" = "Almacenamiento";
-"Compacting" = "Compactando";
-
-"Really include available offline files?" = "Desea realmente incluir ficheros disponibles offline?";
-"Files and folders marked as Available Offline will become unavailable. They will be re-downloaded next time you log into your account (connectivity required)." = "Ficheros y carpetas marcadas como disponible offline no estarán disponibles. Serán descargados de nuevo la próxima vez que entre en su cuenta (se requiere conexión)";
-"Removes downloaded files and local copies of items marked as Available Offline. The latter will be re-downloaded next time you log into your account (connectivity required)." = "Elimina los archivos descargados y las copias locales de los elementos marcados como Disponibles sin conexión. Este último se volverá a descargar la próxima vez que inicie sesión en su cuenta (se requiere conectividad).";
-
-/* Diagnostic */
-"Diagnostic Overview" = "Descripción general del diagnóstico";
-"Diagnostics" = "Diagnósticos";
-"Share Diagnostics" = "Compartir diagnósticos";
-"Action executed" = "Acción ejecutada";
-
-"Update Status" = "Estado de actualización";
-"Completed update scans" = "Análisis de actualización completo";
-"Total update scans" = "Escaneos de actualización total";
-
-/* Available offline */
-"Root folder" = "Carpeta raíz";
-"at" = "a las";
-"(no match)" = "(sin resultados)";
-
-"Make available offline" = "Hacer disponible offline";
-"Make unavailable offline" = "Deshacer disponible offline";
-
-"Available Offline" = "Disponible offline";
-
-"No files available offline" = "No hay ficheros disponibles offline";
-"Files selected and downloaded for offline availability will show up here." = "Ficheros seleccionados y descargados para ser disponibles offline se mostrarán aquí.";
-
-"Locations" = "Localizaciones";
-"Downloaded Files" = "Ficheros descargados";
-
-/* Single Account */
-"You are connected as\n%@" = "Está conectado como \n%@";
-
-/* Release Notes */
-"Proceed" = "Proceder";
-"New in %@" = "Nuevo en %@";
-"Thank you for using %@.\nIf you like our App, please leave an AppStore review.\n❤️" = "Gracias por usar %@.\nSI le gustó nuestra aplicación, por favor deje una reseña en la AppStore.\n❤️";
-"Thank you for using %@.\n" = "Gracias por usar %@. \n";
-
-/* Key Commands */
-"Select Next" = "Seleccione el siguiente";
-"Select Previous" = "Seleccione el anterior";
-"Open Selected" = "Abrir el seleccionado";
-"Change Sort Order" = "Cambiar método de ordenación";
-"Search" = "Buscar";
-"Back" = "Volver";
-"Save" = "Guardar";
-"Sort by %@" = "Ordenar por %@";
-"Tab %@" = "Tab %@";
-"Select Last Item on Page" = "Seleccionar el último elemento de la página";
-"Scroll to Top" = "Ir al inicio";
-"Scroll to Bottom" = "Ir al final";
-"Copy to Clipboard" = "Copiar al portapapeles";
-"Import from Clipboard" = "Importar del portapapeles";
-"Choose destination directory…" = "Elegir carpeta de destino...";
-"Next" = "Siguiente";
-"Previous" = "Anterior";
-"Favorite" = "Favorito";
-"Cut" = "Cortar";
-"Paste" = "Pegar";
-"Play/Pause" = "Play/Pausa";
-"Skip Back" = "Ir hacia atrás";
-"Skip Ahead" = "Ir hacia delante";
-"Go to Beginning" = "Ir al principio";
-"Mute/Unmute" = "Mutear/Desmutear";
-"Full Screen" = "Pantalla completa";
-"Switch Theme Style" = "Cambiar estilo del tema";
-
-/* Markup */
-"How should this file be saved?" = "¿Cómo debe ser guardado este archivo?";
-"Overwrite original" = "Sobreescribir original";
-"Save as copy" = "Guardar una copia";
-"Discard changes" = "Descartar cambios";
-"Markup" = "Marcar";
-"Crop or Rotate" = "Recortar o rotar";
-"Saving edited file failed" = "Falló el guardado del archivo editado";
-"File no longer exists" = "El archivo ya no existe";
-
-/* Licensing */
-"Unlocked" = "Desbloqueado";
-"Unlock" = "Desbloquear";
-
-"Subscribe Now" = "Subscríbase ahora";
-"Free" = "Gratis";
-
-"%@ / %@" = "%@ / %@";
-"after free %@ trial" = "despues de %@ de prueba gratuita";
-
-/* Example usage: "Try [14 days] for free." */
-"Try %@ for free." = "Pruebe %@ de manera gratuita.";
-
-/* Example usage: "Then [1,99 €] / [year]." */
-"Then %@ / %@." = "Luego %@ / %@.";
-
-/* Example usage: "[1,99 €] / [year] - starting immediately." */
-"%@ / %@ – starting immediately" = "%@ / %@ – comenzando inmediatamente";
-
-/* Licensing: Pro Features */
-"Pro Features" = "Características Premium";
-
-/* Licensing: App Store */
-"Restore purchases" = "Restaurar compras";
-"Restoring purchases…" = "Restaurando compras...";
-"Error restoring purchases" = "Se produjo un error al restaurar las compras";
-"Error loading product info from App Store"= "Se produjo un error al cargar la información del producto desde la App Store";
-"Purchase failed" = "Falló la compra";
-"More information" = "Más información";
-
-/* Licensing: Enterprise */
-"Enterprise" = "Enterprise";
-
-/* Licensing: Settings */
-"In-App Purchases" = "Compras dentro de la aplicación";
-"Purchases & Subscriptions" = "Compras & Suscripciones";
-"Error fetching transactions" = "Se produjo un error al recuperar las transacciones";
-"Document Scanner" = "Escáner de documentos";
-"Scan documents and photos with your camera." = "Escanée documentos y fotos con la cámara";
-"Shortcuts Actions" = "Atajos";
-"Use ownCloud actions in Shortcuts." = "Use acciones de ownCloud en Atajos";
-"Markup Documents" = "Marcar documentos";
-"Markup photos and PDF files." = "Marque fotos y ficheros PDF";
-"Unlock all Pro Features." = "Desbloquear todas las funcionalidades pro";
-
-"Purchased App Version" = "Versión de compra de la App";
-"Receipt Date" = "Fecha del recibo";
-"Manage subscription" = "Gestionar suscripción";
-"Purchases are not allowed on this device." = "Compras no permitidas en este dispositivo";
-"Type" = "Tipo";
-"Quantity" = "Cantidad";
-"Product" = "Producto";
-"Date" = "Fecha";
-"Cancelled" = "Cancelado";
-"Ends" = "Fin";
-"none" = "ninguno";
-"trial" = "prueba";
-"purchase" = "compra";
-"subscription" = "suscripción";
-"Photo Pro Features" = "Funciones de foto profesional";
-"Image metadata, extended upload options" = "Metadatos de imagen, opciones de carga extendidas";
-"Purchase" = "Compra";
-"Subscribe" = "Subscribirse";
-
-"No accounts found" = "No se han encontrado cuentas";
-"In order to accurately determine your current licensing status, please add one or more accounts first." = "Para determinar con precisión su estado actual de licencia, primero agregue una o más cuentas.";
-
-/* Share Sheet */
-"Save File" = "Guardar fichero";
-"Choose an account and folder to import into." = "Elija una cuenta y una carpeta para importar.";
-"No account configured.\nSetup an new account in the app to save to." = "No hay una cuenta configurada. \nConfigure una nueva cuenta en la aplicación para guardar.";
-"Importing item %ld of %ld" = "Importando elemento %Id de %Id";
-"Error importing %@" = "Error al importar %@";
-"Error loading item" = "Error al cargar elemento.";
-"Preparing…" = "Preparando...";
-"Import \"{{itemName}}\"" = "Importar \"{{itemName}}\"";
-"Import {{itemCount}} files" = "Importar {{itemCount}} ficheros";
-"Save here" = "Guardar aquí";
-
-/* FileProvider */
-/* - Disabled */
-"File Provider access has been disabled by the administrator.\n\nPlease use the app to access your files." = "El acceso al proveedor de aplicaciones ha sido desactivado por el administrador.\n\nPor favor, use la app para acceder a sus ficheros.";
-"File Provider access has been disabled by the administrator. Please use the app to create new folders." = "El acceso al proveedor de aplicaciones ha sido desactivado por el administrador. Por favor, use la app para crear nuevas carpetas.";
-"File Provider access has been disabled by the administrator. Please use the share extension to import files." = "El acceso al proveedor de aplicaciones ha sido desactivado por el administrador. Por favor, use la extension compartir para importar ficheros.";
-
-/* - No account */
-"No account has been set up in the {{app.name}} app yet." = "No account has been set up in the {{app.name}} app yet.";
-"Open app" = "Open app";
-
-/* Disallowed Import Methods */
-/* - Share Extension */
-"Share Extension disabled" = "Extensión Compartir deshabilitada";
-"Importing files through the Share Extension is not allowed on this device." = "Importar archivos a través de la extensión Compartir no está permitido en este dispositivo.";
-
-/* - Open with */
-"Opening not allowed" = "No se permite su apertura";
-"Importing files through opening is not allowed on this device." = "La importación de archivos a través de la apertura no está permitida en este dispositivo.";
-
-/* - Files.app */
-"Import not allowed" = "Importar no está permitido";
-"Importing files through the File Provider is not allowed on this device." = "La importación de archivos a través del proveedor de archivos no está permitida en este dispositivo.";
-
-/* Misc. accessibility */
-"Enter multiple selection" = "Ingresar selección múltiple";
-
-/* Universal Links */
-"Resolving link…" = "Resolviendo enlace…";
-"Link resolution failed" = "Falló la resolución del enlace";
-"Couldn't resolve a private link since you are offline and corresponding item is not cached locally." = "No se pudo resolver un enlace privado porque no está conectado y el elemento correspondiente no está almacenado en caché localmente.";
-"Couldn't resolve a private link since the item is not known to the server." = "No se pudo resolver un enlace privado porque el servidor no conoce el elemento.";
-"Link points to an account bookmark which is not configured in the app." = "El enlace apunta a una cuenta que no está configurada en la aplicación.";
-
-/* Photo meta-data */
-"Image metadata" = "Metadatos de imagen";
-"Image details" = "Detalles de la imagen";
-"Profile" = "Perfil";
-"Size" = "Tamaño";
-"Density" = "Densidad";
-"Color model" = "Modelo de color";
-"%@ (%d bits/channel)" = "%@ (%d bits/canal)";
-"Histogram" = "Histograma";
-
-"Camera details" = "Detalles de la cámara";
-"Capture settings" = "Configuración de captura";
-"Time" = "Hora";
-"EXIF aux info" = "Información auxiliar EXIF";
-"Authoring" =  "Autoría";
-"TIFF" = "TIFF";
-
-"Lens make" = "Marca de la lente";
-"Lens model" = "Modelo de lente";
-"Lens info" = "Información de la lente";
-"Focal length" = "Longitud focal";
-"Focal length @ 35 mm" = "Longitud focal @ 35 mm";
-
-"Shutter speed" = "Velocidad del obturador";
-"Aperture" = "Abertura";
-"ISO" = "ISO";
-
-/* EXIF: exposure program */
-"Program" = "Programa";
-"Not defined" = "No definida";
-"Manual" = "Manual";
-"Normal" = "Normal";
-"Aperture priority" = "Prioridad de apertura";
-"Shutter priority" = "Prioridad de obturador";
-"Creative" = "Creativo";
-"Action" = "Acción";
-"Portrait" = "Retrato";
-"Landscape" = "Paisaje";
-
-/* EXIF: exposure metering mode */
-"Metering" = "Medida";
-"unknown" = "desconocido";
-"Average" = "Promedio";
-"CenterWeightedAverage" = "Promedio ponderado central";
-"Spot" = "Lugar";
-"MultiSpot" = "MultiSpot";
-"Pattern" = "Patrón";
-"Partial" = "Parcial";
-
-/* EXIF: flash mode */
-"Flash" = "Flash";
-"Fired" = "disparó";
-"Didn't fire" = "No disparó";
-"No strobe return detection" = "Sin detección de retorno de luz estroboscópica";
-"Strobe return light not detected" = "Luz de retorno estroboscópica no detectada";
-"Strobe return light detected" = "Luz de retorno estroboscópica detectada";
-"Compulsory flash firing" = "Disparo de flash obligatorio";
-"Compulsory flash supression" = "Supresión de flash obligatoria";
-"Auto mode" = "Modo automático";
-"Red eye detection supported" = "Compatible con detección de ojos rojos";
-"not present" = "no presente";
-
-/* EXIF: white balance */
-"White balance" = "Balance de blancos";
-"Auto" = "auto";
-"Manual" = "Manual";
-
-"Exposure bias" = "Sesgo de exposición";
-"Uncalibrated" = "Sin calibrar";
-"Original date" = "Fecha original";
-"Digitized date" = "Fecha digitalizada";
-
-"Color space" = "Espacio de color";
-
-/* EXIF: aux info */
-"Lens ID" = "ID de lente";
-"Lens serial" = "Serie de lentes";
-"Serial number" = "Número de serie";
-"Flash compensation" = "Compensación de flash";
-"Owner" = "Propietario";
-"Firmware" = "Firmware";
-"Keywords" = "Palabras clave";
-"Copyright" = "Derechos de Autor";
-
-/* IPTC meta data */
-"Contact info" = "Datos de contacto";
-"Usage terms" = "Términos de uso";
-"Scene" = "Escena";
-"Description" = "Descripción";
-
-/* IPTC photometric interpretation */
-"Photometric interpretation" = "Interpretación fotométrica";
-"none" = "ninguno";
-"RGB" = "RGB";
-"YCbCr" = "YCbCr";
-
-/* EXIF: gps position data */
-"GPS Location" = "Ubicación GPS";
-"Coordinates" = "Coordenadas";
-"Altitude" = "Altitud";
-"Place" = "Lugar";
-"E" = "E";
-"W" = "O";
-"N" = "N";
-"S" = "S";
-
-/* Pro photo upload settings */
-"Extended upload settings" = "Configuración de carga extendida";
-"Prefer unedited photos" = "Prefiero fotos sin editar";
-"Prefer RAW photos" = "Prefiero fotos RAW";
-"Prefer original videos" = "Prefiero videos originales";
-
-/* Limited photo library access */
-"Limited Photo Access" = "Acceso limitado a fotos";
-"Access for the media selected for upload is limited" = "El acceso a los medios seleccionados para cargar es limitado";
-"No Access to the media selected for upload" = "Sin acceso a los medios seleccionados para cargar";
-
-/* macOS support */
-"Passcode protection is not supported on this device.\nPlease disable passcode lock in the app settings." = "La protección con contraseña no es compatible con este dispositivo. \nDesactive el bloqueo con contraseña en la configuración de la aplicación.";
-
-/* MDM settings push */
-"New settings received from MDM" = "Nueva configuración recibida de MDM";
-"Tap to quit the app." = "Toque para salir de la aplicación.";
-"Tap to launch the app." = "Toque para iniciar la aplicación.";
-
-/* Beta warning */
-"Beta Warning" = "Aviso versión Beta";
-"\nThis is a BETA release that may - and likely will - still contain bugs.\n\nYOU SHOULD NOT USE THIS BETA VERSION WITH PRODUCTION SYSTEMS, PRODUCTION DATA OR DATA OF VALUE. YOU'RE USING THIS BETA AT YOUR OWN RISK.\n\nPlease let us know about any issues that come up via the \"Send Feedback\" option in the settings." = "\nEsto es una version BETA y puede - muy probablemente - contener problemas y errores\n\nNO USE ESTA VERSIÓN BETA EN SISTEMAS DE PRODUCCIÓN, DATOS DE PRODUCCIÓN O DATOS DE VALOR. EL USO DE ESTA BETA ES BAJO SU PROPIO RIESGO Y RESPONSABILIDAD\n\nPor favor, háganos saber problemas o errores que sucedan a través de la opción \"Enviar Feedback\" en la Configuración.";
-"Agree" = "Aceptar";
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>
+This is a BETA release that may - and likely will - still contain bugs.
+
+YOU SHOULD NOT USE THIS BETA VERSION WITH PRODUCTION SYSTEMS, PRODUCTION DATA OR DATA OF VALUE. YOU'RE USING THIS BETA AT YOUR OWN RISK.
+
+Please let us know about any issues that come up via the "Send Feedback" option in the settings.</key>
+	<string>
+Esto es una version BETA y puede - muy probablemente - contener problemas y errores
+
+NO USE ESTA VERSIÓN BETA EN SISTEMAS DE PRODUCCIÓN, DATOS DE PRODUCCIÓN O DATOS DE VALOR. EL USO DE ESTA BETA ES BAJO SU PROPIO RIESGO Y RESPONSABILIDAD
+
+Por favor, háganos saber problemas o errores que sucedan a través de la opción "Enviar Feedback" en la Configuración.</string>
+	<key> couldn't download file(s)</key>
+	<string>No es posible descargar fichero(s)</string>
+	<key>%@ (%d bits/channel)</key>
+	<string>%@ (%d bits/canal)</string>
+	<key>%@ / %@</key>
+	<string>%@ / %@</string>
+	<key>%@ / %@ – starting immediately</key>
+	<string>%@ / %@ – comenzando inmediatamente</string>
+	<key>%@ is not available for this item.</key>
+	<string>%@ no está disponible para este artículo.</string>
+	<key>%@ is not available, when this account is offline. Please open the app and log into your account before you can do this action.</key>
+	<string>%@ no está disponible cuando esta cuenta está desconectada. Abra la aplicación e inicie sesión en su cuenta antes de poder realizar esta acción.</string>
+	<key>%@ of %@</key>
+	<string>%@ de %@</string>
+	<key>%@ was updated</key>
+	<string>%@ ha sido actualizado</string>
+	<key>%@%@ %@ version %@ build %@
+(app: %@, sdk: %@)</key>
+	<string>%@%@%@versión %@ build %@
+(app: %@, sdk: %@)</string>
+	<key>%ld Item was copied to the clipboard</key>
+	<string>El elemento %!d fue copiado al portapapeles</string>
+	<key>%ld Items were copied to the clipboard</key>
+	<string>%!d elementos fueron copiados al portapapeles</string>
+	<key>%ld digit code</key>
+	<string>Código de %!d dígitos</string>
+	<key>'%@' is currently locked</key>
+	<string>'%@' está actualmente bloqueado</string>
+	<key>+ %ld more</key>
+	<string>+ %ld más</string>
+	<key>Accept</key>
+	<string>Aceptar</string>
+	<key>Accept Share failed</key>
+	<string>Falló aceptar compartición</string>
+	<key>Accept or decline</key>
+	<string>Accept or decline</string>
+	<key>Accept share</key>
+	<string>Accept share</string>
+	<key>Accepted</key>
+	<string>Aceptado</string>
+	<key>Access denied</key>
+	<string>Acceso denegado</string>
+	<key>Access for the media selected for upload is limited</key>
+	<string>El acceso a los medios seleccionados para cargar es limitado</string>
+	<key>Account</key>
+	<string>Cuenta</string>
+	<key>Account setup complete</key>
+	<string>Account setup complete</string>
+	<key>Accounts</key>
+	<string>Cuentas</string>
+	<key>Acknowledgements</key>
+	<string>Reconocimientos</string>
+	<key>Action</key>
+	<string>Acción</string>
+	<key>Action executed</key>
+	<string>Acción ejecutada</string>
+	<key>Actions</key>
+	<string>Acciones</string>
+	<key>Add</key>
+	<string>Añadir</string>
+	<key>Add account</key>
+	<string>Agregar cuenta</string>
+	<key>Add item</key>
+	<string>Añadir elemento</string>
+	<key>Add to sidebar</key>
+	<string>Add to sidebar</string>
+	<key>Advanced settings</key>
+	<string>Configuración avanzada</string>
+	<key>After %ld seconds</key>
+	<string>Después de %ld segundos</string>
+	<key>After 1 minute</key>
+	<string>Después de 1 minuto</string>
+	<key>After 30 minutes</key>
+	<string>Después de 30 minutos</string>
+	<key>After 5 minutes</key>
+	<string>Después de 5 minutos</string>
+	<key>Agree</key>
+	<string>Aceptar</string>
+	<key>Albums</key>
+	<string>Álbumes</string>
+	<key>All Photos</key>
+	<string>Todas las Fotos</string>
+	<key>All done</key>
+	<string>Terminado.</string>
+	<key>Allow this app to refresh the content when on Wi-Fi or mobile network in background.</key>
+	<string>Permita que esta aplicación actualice el contenido cuando esté en modalidad Wi-Fi o red móvil en segundo plano.</string>
+	<key>Altitude</key>
+	<string>Altitud</string>
+	<key>An error occurred</key>
+	<string>Ocurrió un error</string>
+	<key>An item with the same name already exists in this location.</key>
+	<string>Ya existe un elemento con el mismo nombre en esta localización.</string>
+	<key>An operation is currently performed that prevents connecting to '%@'. Please try again later.</key>
+	<string>Una operación que se esta realizando en este momento impide conectarse a '%@'. Por favor pruebe nuevamente más tarde.</string>
+	<key>Aperture</key>
+	<string>Abertura</string>
+	<key>Aperture priority</key>
+	<string>Prioridad de apertura</string>
+	<key>App Version</key>
+	<string>App Version</string>
+	<key>Apply choice to all similar issues</key>
+	<string>Aplicar elección a problemas similares</string>
+	<key>Apply to all</key>
+	<string>Aplicar a todos</string>
+	<key>Approve</key>
+	<string>Aprobar</string>
+	<key>Approved</key>
+	<string>Aprobado</string>
+	<key>Are you sure you want to delete these items from the server?</key>
+	<string>¿Está seguro que desea eliminar estos elementos de su servidor?</string>
+	<key>Are you sure you want to delete this item from the server?</key>
+	<string>¿Esta seguro de que desea borrar este elemento del servidor?</string>
+	<key>Are you sure you want to unshare these items?</key>
+	<string>¿Está seguro que desea dejar de compartir estos elementos?</string>
+	<key>Are you sure you want to unshare this item?</key>
+	<string>¿Está seguro que desea dejar de compartir este elemento?</string>
+	<key>Audio</key>
+	<string>Audio</string>
+	<key>Audios</key>
+	<string>Audios</string>
+	<key>Authenticated as %@ via %@</key>
+	<string>Autenticado como %@ por medio de %@</string>
+	<key>Authenticated via</key>
+	<string>Autenticado por medio de </string>
+	<key>Authenticating…</key>
+	<string>Autenticando...</string>
+	<key>Authentication error</key>
+	<string>Authentication error</string>
+	<key>Authentication failed</key>
+	<string>Authentication failed</string>
+	<key>Authentication with %@ is no longer allowed. Re-authentication needed.</key>
+	<string>Autenticación con %@ no permitida. Se necesita reautenticación.</string>
+	<key>Authoring</key>
+	<string>Autoría</string>
+	<key>Authorization failed</key>
+	<string>Autorización fallida</string>
+	<key>Auto</key>
+	<string>auto</string>
+	<key>Auto Upload</key>
+	<string>Subida automática</string>
+	<key>Auto Upload Photos</key>
+	<string>Auto actualizar Fotos</string>
+	<key>Auto Upload Videos</key>
+	<string>Auto actualizar Videos</string>
+	<key>Auto mode</key>
+	<string>Modo automático</string>
+	<key>Auto upload disabled</key>
+	<string>Auto upload disabled</string>
+	<key>Auto upload of media was disabled since configured account / folder was not found</key>
+	<string>La subida automática de media ha sido des habilitada puesto que la cuenta/carpeta no ha podido ser encontrada.</string>
+	<key>Auto-approved</key>
+	<string>Auto-aprobado</string>
+	<key>Available Offline</key>
+	<string>Disponible offline</string>
+	<key>Available offline</key>
+	<string>Available offline</string>
+	<key>Average</key>
+	<string>Promedio</string>
+	<key>Back</key>
+	<string>Volver</string>
+	<key>Background upload notifications</key>
+	<string>Notificaciones de carga en segundo plano</string>
+	<key>Background uploads (Lab Version)</key>
+	<string>Cargas en segundo plano (Versión Lab)</string>
+	<key>Beta Warning</key>
+	<string>Aviso versión Beta</string>
+	<key>Biometric authentication failed</key>
+	<string>Fallo de autenticación biométrica.</string>
+	<key>Bookmark Metadata</key>
+	<string>Metadatos de marcadores</string>
+	<key>Browse</key>
+	<string>Navegar</string>
+	<key>Busy</key>
+	<string>Busy</string>
+	<key>By feature</key>
+	<string>por característica</string>
+	<key>Camera details</key>
+	<string>Detalles de la cámara</string>
+	<key>Cancel</key>
+	<string>Cancelar</string>
+	<key>Cannot connect to </key>
+	<string>No se puede conectar con </string>
+	<key>Capture settings</key>
+	<string>Configuración de captura</string>
+	<key>Cellular Data Usage</key>
+	<string>Uso de datos del móvil</string>
+	<key>Cellular Data Usage have been disabled via MDM configuration. Please contact your administrator for more information.</key>
+	<string>El uso de datos móviles se ha desactivado a través de la configuración de MDM. Póngase en contacto con su administrador para obtener más información.</string>
+	<key>CenterWeightedAverage</key>
+	<string>Promedio ponderado central</string>
+	<key>Certificate Details</key>
+	<string>Detalles del Certificado</string>
+	<key>Certificate has issues.
+Open 'Certificate Details' for more informations.</key>
+	<string>Problemas con el certificado.
+Abra 'Detalles Certificado' para más información.</string>
+	<key>Certificate may have issues, but was accepted by user.
+Open 'Certificate Details' for more informations.</key>
+	<string>El certificado presenta problemas , pero ha sido aceptado por el usuario.
+Abra 'Detalles Certificado' para más información.</string>
+	<key>Certificate was rejected by user.</key>
+	<string>Certificado rechazado por usuario.</string>
+	<key>Certificates</key>
+	<string>Certificados</string>
+	<key>Change</key>
+	<string>Cambiar</string>
+	<key>Change Sort Order</key>
+	<string>Cambiar método de ordenación</string>
+	<key>Change password</key>
+	<string>Change password</string>
+	<key>Changed {{settingID}} to {{newValue}}.</key>
+	<string>Changed {{settingID}} to {{newValue}}.</string>
+	<key>Choose destination directory…</key>
+	<string>Elegir carpeta de destino...</string>
+	<key>Clear</key>
+	<string>Clear</string>
+	<key>Cleared all.</key>
+	<string>Cleared all.</string>
+	<key>Cleared {{settingID}}.</key>
+	<string>Cleared {{settingID}}.</string>
+	<key>Close Search</key>
+	<string>Cerrar búsqueda</string>
+	<key>Close Window</key>
+	<string>Cerrar ventana</string>
+	<key>Close actions menu</key>
+	<string>Cerrar el menú de acciones</string>
+	<key>Color model</key>
+	<string>Modelo de color</string>
+	<key>Color space</key>
+	<string>Espacio de color</string>
+	<key>Compacting</key>
+	<string>Compactando</string>
+	<key>Compacting of '%@' failed</key>
+	<string>Compactado de '%@' falló</string>
+	<key>Completed update scans</key>
+	<string>Análisis de actualización completo</string>
+	<key>Compulsory flash firing</key>
+	<string>Disparo de flash obligatorio</string>
+	<key>Compulsory flash supression</key>
+	<string>Supresión de flash obligatoria</string>
+	<key>Connecting</key>
+	<string>Connecting</string>
+	<key>Connecting...</key>
+	<string>Conectando...</string>
+	<key>Connecting…</key>
+	<string>Conectando...</string>
+	<key>Contact info</key>
+	<string>Datos de contacto</string>
+	<key>Contacting server…</key>
+	<string>Contactando servidor...</string>
+	<key>Contents from cache.</key>
+	<string>Contenidos de la caché.</string>
+	<key>Continue</key>
+	<string>Continuar</string>
+	<key>Continue offline</key>
+	<string>Seguir offline</string>
+	<key>Convert HEIC to JPEG</key>
+	<string>Convertir HEIC a JPEG</string>
+	<key>Convert videos to MP4</key>
+	<string>Convertir videos a MP4</string>
+	<key>Coordinates</key>
+	<string>Coordenadas</string>
+	<key>Copy</key>
+	<string>Copiar</string>
+	<key>Copy "{{itemName}}"</key>
+	<string>Copiar "{{itemName}}"</string>
+	<key>Copy Private Link</key>
+	<string>Copiar enlace privado</string>
+	<key>Copy here</key>
+	<string>Copiar aqui</string>
+	<key>Copy to clipboard</key>
+	<string>Copy to clipboard</string>
+	<key>Copy {{itemCount}} items</key>
+	<string>Copiar {{itemCount}} elementos</string>
+	<key>Copying %ld items…</key>
+	<string>Copiando %ld elementos...</string>
+	<key>Copyright</key>
+	<string>Derechos de Autor</string>
+	<key>Could not get the picture</key>
+	<string>No se pudo obtener la imagen</string>
+	<key>Couldn't resolve a private link since the item is not known to the server.</key>
+	<string>No se pudo resolver un enlace privado porque el servidor no conoce el elemento.</string>
+	<key>Couldn't resolve a private link since you are offline and corresponding item is not cached locally.</key>
+	<string>No se pudo resolver un enlace privado porque no está conectado y el elemento correspondiente no está almacenado en caché localmente.</string>
+	<key>Create</key>
+	<string>Crear</string>
+	<key>Create folder</key>
+	<string>Crear carpeta</string>
+	<key>Create link</key>
+	<string>Crear enlace</string>
+	<key>Create one file per page</key>
+	<string>Crear un fichero por página</string>
+	<key>Create shortcut</key>
+	<string>Create shortcut</string>
+	<key>Creating %ld folders…</key>
+	<string>Creando %ld carpetas...</string>
+	<key>Creative</key>
+	<string>Creativo</string>
+	<key>Credentials</key>
+	<string>Credenciales</string>
+	<key>Cut</key>
+	<string>Cortar</string>
+	<key>Dark</key>
+	<string>Oscuro</string>
+	<key>Data usage</key>
+	<string>Uso de datos</string>
+	<key>Date</key>
+	<string>Fecha</string>
+	<key>Debug</key>
+	<string>Debug</string>
+	<key>Decline</key>
+	<string>Denegar</string>
+	<key>Decline Share failed</key>
+	<string>Falló declinar compartir</string>
+	<key>Decline share</key>
+	<string>Decline share</string>
+	<key>Declined</key>
+	<string>Denegado</string>
+	<key>Decrease Slider Value</key>
+	<string>Decrementar valor</string>
+	<key>Delete</key>
+	<string>Eliminar</string>
+	<key>Delete Authentication Data</key>
+	<string>Eliminar Datos de Autenticación</string>
+	<key>Delete all</key>
+	<string>Eliminar todo</string>
+	<key>Delete all Offline Files</key>
+	<string>Eliminar todos los archivos sin conexión</string>
+	<key>Delete all log files?</key>
+	<string>¿Eliminar todos los logs?</string>
+	<key>Delete code</key>
+	<string>Eliminar código</string>
+	<key>Delete unused local copies</key>
+	<string>Borrar copias locales no usadas</string>
+	<key>Deleting %ld items…</key>
+	<string>Eliminando %ld elementos...</string>
+	<key>Deletion of '%@' failed</key>
+	<string>Deletion of '%@' failed</string>
+	<key>Density</key>
+	<string>Densidad</string>
+	<key>Description</key>
+	<string>Descripción</string>
+	<key>Deselect All</key>
+	<string>Deseleccionar todo</string>
+	<key>Diagnostic Overview</key>
+	<string>Descripción general del diagnóstico</string>
+	<key>Diagnostics</key>
+	<string>Diagnósticos</string>
+	<key>Didn't fire</key>
+	<string>No disparó</string>
+	<key>Digitized date</key>
+	<string>Fecha digitalizada</string>
+	<key>Disable</key>
+	<string>Disable</string>
+	<key>Disable gestures</key>
+	<string>Deshabilitar gestos</string>
+	<key>Discard changes</key>
+	<string>Descartar cambios</string>
+	<key>Disconnect</key>
+	<string>Desconectar</string>
+	<key>Do you want to log out from '%@'?</key>
+	<string>¿Desea cerrar sesión desde '%@'?</string>
+	<key>Do you want to open the following URL?</key>
+	<string>¿Desea abrir la siguiente URL?</string>
+	<key>Document Scanner</key>
+	<string>Escáner de documentos</string>
+	<key>Documentation</key>
+	<string>Documentación</string>
+	<key>Documents</key>
+	<string>Documentos</string>
+	<key>Done</key>
+	<string>Hecho</string>
+	<key>Download</key>
+	<string>Download</string>
+	<key>Download / View</key>
+	<string>Descargar / Ver</string>
+	<key>Download / View / Upload</key>
+	<string>Descargar / Ver / Subir</string>
+	<key>Download instead of streaming</key>
+	<string>Descargar en vez de transmitir</string>
+	<key>Downloaded Files</key>
+	<string>Ficheros descargados</string>
+	<key>Downloading %ld files…</key>
+	<string>Descargando %ld elementos...</string>
+	<key>Duplicate</key>
+	<string>Duplicar</string>
+	<key>E</key>
+	<string>E</string>
+	<key>EXIF aux info</key>
+	<string>Información auxiliar EXIF</string>
+	<key>Edit</key>
+	<string>Editar</string>
+	<key>Edit account</key>
+	<string>Modificar cuenta</string>
+	<key>Enable</key>
+	<string>Activar</string>
+	<key>Enable Pro Features (QA)</key>
+	<string>Enable Pro Features (QA)</string>
+	<key>Enable diagnostics</key>
+	<string>Habilitar diagnósticos</string>
+	<key>Enable logging</key>
+	<string>Habilitar registro</string>
+	<key>Enabling presentation mode will prevent the display from sleep mode until the view is closed.</key>
+	<string>Habilitar el modo de presentación evitará que la pantalla pase al modo de suspensión hasta que se cierre la vista.</string>
+	<key>Enabling this option will attempt to mask private data, so it does not become part of any log. Since logging is a development and debugging feature, though, we can't guarantee that the log file will be free of any private data even with this option enabled. Therefore, please look through any log file and verify its free of any data you're not comfortable sharing before sharing it with anybody.</key>
+	<string>Habilitar esta opción intentará enmascarar los datos privados, por lo que no aparecerán en los logs. Sin embargo, dado que el log es una función de desarrollo y depuración, no podemos garantizar que el archivo de log esté libre de datos privados, incluso con esta opción habilitada. Por lo tanto, revise cualquier log y verifique que esté libre de cualquier dato susceptible antes de compartirlo.</string>
+	<key>Enter a new code with %ld digits</key>
+	<string>Ingrese un nuevo código %!d</string>
+	<key>Enter a search term</key>
+	<string>Introduzca un término de búsqueda</string>
+	<key>Enter code</key>
+	<string>Introducir código</string>
+	<key>Enter multiple selection</key>
+	<string>Ingresar selección múltiple</string>
+	<key>Enter the user or group you want to invite.</key>
+	<string>Introduzca el usuario o grupo que quiera invitar.</string>
+	<key>Error</key>
+	<string>Error</string>
+	<key>Error creating {{itemName}}</key>
+	<string>Error creando {{itemName}}</string>
+	<key>Error fetching transactions</key>
+	<string>Se produjo un error al recuperar las transacciones</string>
+	<key>Error importing %@</key>
+	<string>Error al importar %@</string>
+	<key>Error loading item</key>
+	<string>Error al cargar elemento.</string>
+	<key>Error loading product info from App Store</key>
+	<string>Se produjo un error al cargar la información del producto desde la App Store</string>
+	<key>Error opening %@</key>
+	<string>Error al abrir %@</string>
+	<key>Error opening {{itemName}} in {{appName}}</key>
+	<string>Error abriendo {{itemName}} en {{appName}}</string>
+	<key>Error restoring purchases</key>
+	<string>Se produjo un error al restaurar las compras</string>
+	<key>Exit Full Screen</key>
+	<string>Salir de pantalla completa</string>
+	<key>Exit multiple selection</key>
+	<string>Exit multiple selection</string>
+	<key>Expiration date</key>
+	<string>Fecha de expiración</string>
+	<key>Expires {{expirationDate}}</key>
+	<string>Expira {{expirationDate}}</string>
+	<key>Exposure bias</key>
+	<string>Sesgo de exposición</string>
+	<key>Extend by one week</key>
+	<string>Extend by one week</string>
+	<key>Extended upload settings</key>
+	<string>Configuración de carga extendida</string>
+	<key>Face ID</key>
+	<string>Face ID</string>
+	<key>Favorite item</key>
+	<string>Elemento favorito</string>
+	<key>Favorites</key>
+	<string>Favoritos</string>
+	<key>Feedback</key>
+	<string>Sugerencias</string>
+	<key>Fetching server information…</key>
+	<string>Fetching server information…</string>
+	<key>Fetching user information…</key>
+	<string>Obteniendo información del usuario...</string>
+	<key>File</key>
+	<string>Archivo</string>
+	<key>File Provider access has been disabled by the administrator.
+
+Please use the app to access your files.</key>
+	<string>El acceso al proveedor de aplicaciones ha sido desactivado por el administrador.
+
+Por favor, use la app para acceder a sus ficheros.</string>
+	<key>File Provider access has been disabled by the administrator. Please use the app to create new folders.</key>
+	<string>El acceso al proveedor de aplicaciones ha sido desactivado por el administrador. Por favor, use la app para crear nuevas carpetas.</string>
+	<key>File Provider access has been disabled by the administrator. Please use the share extension to import files.</key>
+	<string>El acceso al proveedor de aplicaciones ha sido desactivado por el administrador. Por favor, use la extension compartir para importar ficheros.</string>
+	<key>File an issue</key>
+	<string>File an issue</string>
+	<key>File couldn't be opened</key>
+	<string>Fichero no pudo ser abierto</string>
+	<key>File format</key>
+	<string>Formato de fichero</string>
+	<key>File name cannot contain / or \</key>
+	<string>El nombre de archivo no puede contener / o \</string>
+	<key>File no longer exists</key>
+	<string>El archivo ya no existe</string>
+	<key>Files</key>
+	<string>Archivos</string>
+	<key>Files and folders marked as Available Offline will become unavailable. They will be re-downloaded next time you log into your account (connectivity required).</key>
+	<string>Ficheros y carpetas marcadas como disponible offline no estarán disponibles. Serán descargados de nuevo la próxima vez que entre en su cuenta (se requiere conexión)</string>
+	<key>Files selected and downloaded for offline availability will show up here.</key>
+	<string>Ficheros seleccionados y descargados para ser disponibles offline se mostrarán aquí.</string>
+	<key>Find Next</key>
+	<string>Encontrar siguiente</string>
+	<key>Find Previous</key>
+	<string>Encontrar anterior</string>
+	<key>Find information, answers and solutions in the detailed documentation.</key>
+	<string>Find information, answers and solutions in the detailed documentation.</string>
+	<key>Fired</key>
+	<string>disparó</string>
+	<key>Firmware</key>
+	<string>Firmware</string>
+	<key>Flash</key>
+	<string>Flash</string>
+	<key>Flash compensation</key>
+	<string>Compensación de flash</string>
+	<key>Focal length</key>
+	<string>Longitud focal</string>
+	<key>Focal length @ 35 mm</key>
+	<string>Longitud focal @ 35 mm</string>
+	<key>Folder</key>
+	<string>Carpeta</string>
+	<key>Folder name</key>
+	<string>Nombre de la carpeta</string>
+	<key>Folder removed</key>
+	<string>Carpeta eliminada</string>
+	<key>Forbidden Characters</key>
+	<string>Caracteres prohibidos</string>
+	<key>Free</key>
+	<string>Gratis</string>
+	<key>Free on %@</key>
+	<string>Gratis en %@</string>
+	<key>Full Screen</key>
+	<string>Pantalla completa</string>
+	<key>GPS Location</key>
+	<string>Ubicación GPS</string>
+	<key>General</key>
+	<string>General</string>
+	<key>Generate</key>
+	<string>Generate</string>
+	<key>Get in touch with our community in the forums - or file a GitHub issue to report a bug or request a feature.</key>
+	<string>Get in touch with our community in the forums - or file a GitHub issue to report a bug or request a feature.</string>
+	<key>Go to Beginning</key>
+	<string>Ir al principio</string>
+	<key>Go to page</key>
+	<string>Ir a la página</string>
+	<key>Grid</key>
+	<string>Rejilla</string>
+	<key>Group</key>
+	<string>Group</string>
+	<key>Groups</key>
+	<string>Grupos</string>
+	<key>Help</key>
+	<string>Ayuda</string>
+	<key>Help &amp; Contact</key>
+	<string>Help &amp; Contact</string>
+	<key>Hide</key>
+	<string>Hide</string>
+	<key>Histogram</key>
+	<string>Histograma</string>
+	<key>How should this file be saved?</key>
+	<string>¿Cómo debe ser guardado este archivo?</string>
+	<key>ISO</key>
+	<string>ISO</string>
+	<key>If you 'Continue', you will be prompted to allow the '{{app.name}}' app to open the login page where you can enter your credentials.</key>
+	<string>If you 'Continue', you will be prompted to allow the '{{app.name}}' app to open the login page where you can enter your credentials.</string>
+	<key>If you 'Continue', you will be prompted to allow the '{{app.name}}' app to open the {{authmethodName}} login page where you can enter your credentials.</key>
+	<string>Si usted continúa, será redirigido para permitir a '{{app.name}}' abrir la pagina de autenticación {{authmethodName}} donde podrá introducir sus credenciales. </string>
+	<key>If you choose "Immediately" the App will be locked, when it is no longer in foreground.</key>
+	<string>Si elige "Inmediatamente", la aplicación se bloqueará cuando ya no esté en primer plano.</string>
+	<key>If you have a moment to give us your feedback, please take our survey.</key>
+	<string>If you have a moment to give us your feedback, please take our survey.</string>
+	<key>If you make an item a favorite, it will turn up here.</key>
+	<string>Si marca un elemento como favorito, aparecerá aquí.</string>
+	<key>If you would like background media uploads to be more reliable, you should enable background location updates.</key>
+	<string>Si desea que las cargas de medios en segundo plano sean más confiables, debe habilitar las actualizaciones de ubicación en segundo plano.</string>
+	<key>If you'd like to give the account a custom name, please enter it below:</key>
+	<string>If you'd like to give the account a custom name, please enter it below:</string>
+	<key>Ignore updates</key>
+	<string>Ignorar actualizaciones</string>
+	<key>Image details</key>
+	<string>Detalles de la imagen</string>
+	<key>Image grid</key>
+	<string>Rejilla de imágenes</string>
+	<key>Image metadata</key>
+	<string>Metadatos de imagen</string>
+	<key>Image metadata, extended upload options</key>
+	<string>Metadatos de imagen, opciones de carga extendidas</string>
+	<key>Images</key>
+	<string>Imágenes</string>
+	<key>Immediately</key>
+	<string>Inmediatamente</string>
+	<key>Import "{{itemName}}"</key>
+	<string>Importar "{{itemName}}"</string>
+	<key>Import from Clipboard</key>
+	<string>Importar del portapapeles</string>
+	<key>Import not allowed</key>
+	<string>Importar no está permitido</string>
+	<key>Import {{itemCount}} files</key>
+	<string>Importar {{itemCount}} ficheros</string>
+	<key>Importing %@ media files for upload</key>
+	<string>Importando %@ archivos para su subida</string>
+	<key>Importing files through opening is not allowed on this device.</key>
+	<string>La importación de archivos a través de la apertura no está permitida en este dispositivo.</string>
+	<key>Importing files through the Share Extension is not allowed on this device.</key>
+	<string>Importar archivos a través de la extensión Compartir no está permitido en este dispositivo.</string>
+	<key>Importing item %ld of %ld</key>
+	<string>Importando elemento %Id de %Id</string>
+	<key>In order to accurately determine your current licensing status, please add one or more accounts first.</key>
+	<string>Para determinar con precisión su estado actual de licencia, primero agregue una o más cuentas.</string>
+	<key>In the cloud</key>
+	<string>In the cloud</string>
+	<key>In-App Purchases</key>
+	<string>Compras dentro de la aplicación</string>
+	<key>Include available offline files</key>
+	<string>Incluir ficheros disponibles offline</string>
+	<key>Incorrect code</key>
+	<string>Código incorrecto</string>
+	<key>Increase Slider Value</key>
+	<string>Incrementar valor</string>
+	<key>Info</key>
+	<string>Información</string>
+	<key>Invalid Page</key>
+	<string>Página no válida</string>
+	<key>Invite</key>
+	<string>Invitar</string>
+	<key>Issues</key>
+	<string>Problemas</string>
+	<key>Item grid</key>
+	<string>Rejilla de elementos</string>
+	<key>Item with same name already exists</key>
+	<string>Ya existe un elemento con el mismo nombre</string>
+	<key>Keywords</key>
+	<string>Palabras clave</string>
+	<key>Landscape</key>
+	<string>Paisaje</string>
+	<key>Lens ID</key>
+	<string>ID de lente</string>
+	<key>Lens info</key>
+	<string>Información de la lente</string>
+	<key>Lens make</key>
+	<string>Marca de la lente</string>
+	<key>Lens model</key>
+	<string>Modelo de lente</string>
+	<key>Lens serial</key>
+	<string>Serie de lentes</string>
+	<key>Light</key>
+	<string>Claro</string>
+	<key>Limited Photo Access</key>
+	<string>Acceso limitado a fotos</string>
+	<key>Link</key>
+	<string>Enlace</string>
+	<key>Link points to an account bookmark which is not configured in the app.</key>
+	<string>El enlace apunta a una cuenta que no está configurada en la aplicación.</string>
+	<key>Link resolution failed</key>
+	<string>Falló la resolución del enlace</string>
+	<key>Links</key>
+	<string>Enlaces</string>
+	<key>List</key>
+	<string>Lista</string>
+	<key>Loading…</key>
+	<string>Cargando...</string>
+	<key>Local copy</key>
+	<string>Local copy</string>
+	<key>Local version</key>
+	<string>Local version</string>
+	<key>Location permission denied</key>
+	<string>Permiso de ubicación denegado</string>
+	<key>Locations</key>
+	<string>Localizaciones</string>
+	<key>Lock application</key>
+	<string>Bloquear aplicación</string>
+	<key>Log Destinations</key>
+	<string>Destino logs</string>
+	<key>Log Files</key>
+	<string>Archivos de log</string>
+	<key>Log Level</key>
+	<string>Nivel de logs</string>
+	<key>Log out</key>
+	<string>Salir</string>
+	<key>Log out of '%@' failed</key>
+	<string>Log out of '%@' failed</string>
+	<key>Logging</key>
+	<string>Registrando</string>
+	<key>Login</key>
+	<string>Usuario</string>
+	<key>Make available offline</key>
+	<string>Hacer disponible offline</string>
+	<key>Make unavailable offline</key>
+	<string>Deshacer disponible offline</string>
+	<key>Manage</key>
+	<string>Administrar</string>
+	<key>Manual</key>
+	<string>Manual</string>
+	<key>Markup</key>
+	<string>Marcar</string>
+	<key>Markup Documents</key>
+	<string>Marcar documentos</string>
+	<key>Markup photos and PDF files.</key>
+	<string>Marque fotos y ficheros PDF</string>
+	<key>Mask private data</key>
+	<string>Enmascarar datos privados</string>
+	<key>Media Export</key>
+	<string>Exportación de medios</string>
+	<key>Media Files</key>
+	<string>Archivos multimedia</string>
+	<key>Media Upload</key>
+	<string>Subir multimedia</string>
+	<key>Media import</key>
+	<string>importar media</string>
+	<key>Messages</key>
+	<string>Messages</string>
+	<key>Metering</key>
+	<string>Medida</string>
+	<key>Missing hostname</key>
+	<string>Falta nombre de Host</string>
+	<key>Missing permissions</key>
+	<string>Faltan permisos</string>
+	<key>More</key>
+	<string>Más</string>
+	<key>More for {{title}}</key>
+	<string>More for {{title}}</string>
+	<key>More information</key>
+	<string>Más información</string>
+	<key>Move</key>
+	<string>Mover</string>
+	<key>Move "{{itemName}}"</key>
+	<string>Mover "{{itemName}}"</string>
+	<key>Move here</key>
+	<string>Mover aquí</string>
+	<key>Move {{itemCount}} items</key>
+	<string>Mover {{itemCount}} elementos</string>
+	<key>Moving %ld items…</key>
+	<string>Moviendo %ld elementos...</string>
+	<key>MultiSpot</key>
+	<string>MultiSpot</string>
+	<key>Multiple items</key>
+	<string>Múltiples elementos</string>
+	<key>Mute/Unmute</key>
+	<string>Mutear/Desmutear</string>
+	<key>N</key>
+	<string>N</string>
+	<key>Name</key>
+	<string>Nombre</string>
+	<key>Name of saved search</key>
+	<string>Nombre de búsqueda guardada</string>
+	<key>Name of template</key>
+	<string>Nombre de plantilla</string>
+	<key>Network unavailable</key>
+	<string>Red no disponible</string>
+	<key>New Folder</key>
+	<string>Nueva carpeta</string>
+	<key>New document</key>
+	<string>Nuevo documento</string>
+	<key>New in %@</key>
+	<string>Nuevo en %@</string>
+	<key>New settings received from MDM</key>
+	<string>Nueva configuración recibida de MDM</string>
+	<key>Next</key>
+	<string>Siguiente</string>
+	<key>Next item</key>
+	<string>Next item</string>
+	<key>No Access to the media selected for upload</key>
+	<string>Sin acceso a los medios seleccionados para cargar</string>
+	<key>No account configured</key>
+	<string>No account configured</string>
+	<key>No account has been set up in the {{app.name}} app yet.</key>
+	<string>No account has been set up in the {{app.name}} app yet.</string>
+	<key>No accounts found</key>
+	<string>No se han encontrado cuentas</string>
+	<key>No actions available</key>
+	<string>No hay acciones disponibles</string>
+	<key>No authentication data has been found for this connection.</key>
+	<string>No se encontraron datos de autenticación para esta conexión</string>
+	<key>No contents</key>
+	<string>Sin contenido</string>
+	<key>No favorites found</key>
+	<string>No se encontraron favoritos</string>
+	<key>No files available offline</key>
+	<string>No hay ficheros disponibles offline</string>
+	<key>No issues found. Certificate passed validation.</key>
+	<string>Sin problemas detectados. El certificado ha pasado la validación.</string>
+	<key>No items found matching the search criteria.</key>
+	<string>No se encontraron elementos coincidentes con el criterio de búsqueda.</string>
+	<key>No items shared by link</key>
+	<string>No hay elementos compartidos por enlace</string>
+	<key>No items shared by you</key>
+	<string>No hay elementos compartidos.</string>
+	<key>No items shared with you</key>
+	<string>No hay elementos compartidos con usted</string>
+	<key>No matches</key>
+	<string>Sin coincidencias</string>
+	<key>No pending messages or ongoing actions.</key>
+	<string>No hay mensajes o acciones pendientes.</string>
+	<key>No spaces</key>
+	<string>No spaces</string>
+	<key>No strobe return detection</key>
+	<string>Sin detección de retorno de luz estroboscópica</string>
+	<key>No user or group matches your search.</key>
+	<string>No user or group matches your search.</string>
+	<key>Normal</key>
+	<string>Normal</string>
+	<key>Not defined</key>
+	<string>No definida</string>
+	<key>Not now</key>
+	<string>No ahora</string>
+	<key>OK</key>
+	<string>Aceptar</string>
+	<key>Off</key>
+	<string>Desactivado</string>
+	<key>Offline</key>
+	<string>Offline</string>
+	<key>Offline files use</key>
+	<string>Uso de archivos sin conexión</string>
+	<key>Online</key>
+	<string>Online</string>
+	<key>Open Selected</key>
+	<string>Abrir el seleccionado</string>
+	<key>Open app</key>
+	<string>Open app</string>
+	<key>Open file</key>
+	<string>Abrir archivo</string>
+	<key>Open help page</key>
+	<string>Open help page</string>
+	<key>Open in</key>
+	<string>Abrir en</string>
+	<key>Open in a new Window</key>
+	<string>Abrir en nueva ventana</string>
+	<key>Open in {{appName}} (web)</key>
+	<string>Abrir en {{appName}} (web)</string>
+	<key>Open link</key>
+	<string>Open link</string>
+	<key>Open login page</key>
+	<string>Open login page</string>
+	<key>Open shortcut</key>
+	<string>Open shortcut</string>
+	<key>Opening documents is not supported by the app provider on this instance.</key>
+	<string>Abrir documentos no esta soportado por el proveedor de aplicaciones en esta instancia.</string>
+	<key>Opening link failed</key>
+	<string>Opening link failed</string>
+	<key>Opening not allowed</key>
+	<string>No se permite su apertura</string>
+	<key>Opening…</key>
+	<string>Abriendo...</string>
+	<key>Optic ID</key>
+	<string>Optic ID</string>
+	<key>Options</key>
+	<string>Opciones</string>
+	<key>Original date</key>
+	<string>Fecha original</string>
+	<key>Otherwise background media uploads using background refresh technology would depend on how frequently you use the app.</key>
+	<string>De lo contrario, las cargas de medios en segundo plano con tecnología de actualización en segundo plano dependerían de la frecuencia con la que utilice la aplicación.</string>
+	<key>Outline</key>
+	<string>Descripción</string>
+	<key>Overwrite original</key>
+	<string>Sobreescribir original</string>
+	<key>Owner</key>
+	<string>Propietario</string>
+	<key>PDF Documents</key>
+	<string>Documentos PDF</string>
+	<key>Page</key>
+	<string>Página</string>
+	<key>Partial</key>
+	<string>Parcial</string>
+	<key>Passcode Lock</key>
+	<string>Bloqueo con código</string>
+	<key>Passcode option</key>
+	<string>Opción código</string>
+	<key>Passcode protection is not supported on this device.
+Please disable passcode lock in the app settings.</key>
+	<string>La protección con contraseña no es compatible con este dispositivo. 
+Desactive el bloqueo con contraseña en la configuración de la aplicación.</string>
+	<key>Passcode setup</key>
+	<string>Configuración de código de acceso</string>
+	<key>Passed</key>
+	<string>Aceptado</string>
+	<key>Password</key>
+	<string>Contraseña</string>
+	<key>Paste</key>
+	<string>Pegar</string>
+	<key>Pattern</key>
+	<string>Patrón</string>
+	<key>Pending</key>
+	<string>Pendiente</string>
+	<key>Permissions</key>
+	<string>Permisos</string>
+	<key>Photo Pro Features</key>
+	<string>Funciones de foto profesional</string>
+	<key>Photo upload</key>
+	<string>Subir foto</string>
+	<key>Photo upload path</key>
+	<string>Ruta de subida de fotos</string>
+	<key>Photometric interpretation</key>
+	<string>Interpretación fotométrica</string>
+	<key>Photos</key>
+	<string>Fotos</string>
+	<key>Pick a destination for photo uploads</key>
+	<string>Pick a destination for photo uploads</string>
+	<key>Pick a destination for video uploads</key>
+	<string>Pick a destination for video uploads</string>
+	<key>Pick a document type to create:</key>
+	<string>Elige un tipo de documento para crear:</string>
+	<key>Pick a name</key>
+	<string>Coja un nombre</string>
+	<key>Pick file or folder</key>
+	<string>Pick file or folder</string>
+	<key>Place</key>
+	<string>Lugar</string>
+	<key>Play/Pause</key>
+	<string>Play/Pausa</string>
+	<key>Please choose how many digits you want to use for the passcode lock?</key>
+	<string>Elija cuántos dígitos desea usar para el bloqueo por código.</string>
+	<key>Please configure an email account</key>
+	<string>Por favor configure una cuenta de correo electrónico</string>
+	<key>Please note: Folders can only be pasted into the %@ app and the same account.</key>
+	<string>Tenga en cuenta que: Las carpetas solo pueden ser pegadas dentro de la aplicación %@ y en la misma cuenta.</string>
+	<key>Please open the app and select the account to re-authenticate.</key>
+	<string>Please open the app and select the account to re-authenticate.</string>
+	<key>Please re-enable location acquisition in system settings</key>
+	<string>Vuelva a habilitar la adquisición de ubicación en la configuración del sistema</string>
+	<key>Please try again in %@</key>
+	<string>Por favor pruebe nuevamente en %@</string>
+	<key>Please wait…</key>
+	<string>Por favor espere...</string>
+	<key>Portions of this app may utilize the following copyrighted material, the use of which is hereby acknowledged.</key>
+	<string>Partes de esta app pueden utilizar el siguiente material con copyright, el uso del cual esta reconocido por la presente.</string>
+	<key>Portrait</key>
+	<string>Retrato</string>
+	<key>Prefer RAW photos</key>
+	<string>Prefiero fotos RAW</string>
+	<key>Prefer original videos</key>
+	<string>Prefiero videos originales</string>
+	<key>Prefer unedited photos</key>
+	<string>Prefiero fotos sin editar</string>
+	<key>Preparing account</key>
+	<string>Preparando cuenta</string>
+	<key>Preparing…</key>
+	<string>Preparando...</string>
+	<key>Presentation Mode</key>
+	<string>Modo presentación</string>
+	<key>Preserve original media file names</key>
+	<string>Conservar los nombres de los archivos multimedia originales</string>
+	<key>Prevent dragging of files and folders and multiselection using system defined gestures</key>
+	<string>Evite el arrastre de archivos y carpetas y la selección múltiple mediante gestos definidos por el sistema</string>
+	<key>Previous</key>
+	<string>Anterior</string>
+	<key>Previous item</key>
+	<string>Previous item</string>
+	<key>Privacy</key>
+	<string>Privacidad</string>
+	<key>Privacy Policy</key>
+	<string>Política de privacidad</string>
+	<key>Private Link</key>
+	<string>Enlace privado</string>
+	<key>Pro Features</key>
+	<string>Características Premium</string>
+	<key>Proceed</key>
+	<string>Proceder</string>
+	<key>Processing on server</key>
+	<string>Procesando en el servidor</string>
+	<key>Profile</key>
+	<string>Perfil</string>
+	<key>Program</key>
+	<string>Programa</string>
+	<key>Public Link</key>
+	<string>Enlace público</string>
+	<key>Purchase</key>
+	<string>Compra</string>
+	<key>Purchase failed</key>
+	<string>Falló la compra</string>
+	<key>Purchases &amp; Subscriptions</key>
+	<string>Compras &amp; Suscripciones</string>
+	<key>Quick Access</key>
+	<string>Acceso rápido</string>
+	<key>RGB</key>
+	<string>RGB</string>
+	<key>Read</key>
+	<string>Leer</string>
+	<key>Really delete '%@'?</key>
+	<string>¿Realmente desea eliminar '%@'?</string>
+	<key>Really include available offline files?</key>
+	<string>Desea realmente incluir ficheros disponibles offline?</string>
+	<key>Recents</key>
+	<string>Recientes</string>
+	<key>Recommend to a friend</key>
+	<string>Recomendar a un amigo</string>
+	<key>Red eye detection supported</key>
+	<string>Compatible con detección de ojos rojos</string>
+	<key>Refresh without asking</key>
+	<string>Actualizar sin preguntar</string>
+	<key>Rejected</key>
+	<string>Rechazado</string>
+	<key>Remove</key>
+	<string>Eliminar</string>
+	<key>Remove expiration date</key>
+	<string>Remove expiration date</string>
+	<key>Remove from sidebar</key>
+	<string>Remove from sidebar</string>
+	<key>Remove password</key>
+	<string>Remove password</string>
+	<key>Removes downloaded files and local copies of items marked as Available Offline. The latter will be re-downloaded next time you log into your account (connectivity required).</key>
+	<string>Elimina los archivos descargados y las copias locales de los elementos marcados como Disponibles sin conexión. Este último se volverá a descargar la próxima vez que inicie sesión en su cuenta (se requiere conectividad).</string>
+	<key>Rename</key>
+	<string>Cambiar nombre</string>
+	<key>Repeat code</key>
+	<string>Repita el código</string>
+	<key>Resolving link…</key>
+	<string>Resolviendo enlace…</string>
+	<key>Restore purchases</key>
+	<string>Restaurar compras</string>
+	<key>Restoring purchases…</key>
+	<string>Restaurando compras...</string>
+	<key>Resume</key>
+	<string>Continuar</string>
+	<key>Reveal</key>
+	<string>Reveal</string>
+	<key>Reveal in folder</key>
+	<string>Revelar en carpeta</string>
+	<key>Review Connection</key>
+	<string>Revisar Conexión</string>
+	<key>Revoke approval</key>
+	<string>Eliminar aprobación</string>
+	<key>S</key>
+	<string>S</string>
+	<key>Save</key>
+	<string>Guardar</string>
+	<key>Save File</key>
+	<string>Guardar fichero</string>
+	<key>Save as</key>
+	<string>Salvar como</string>
+	<key>Save as copy</key>
+	<string>Guardar una copia</string>
+	<key>Save as search template</key>
+	<string>Guardar como plantilla de búsqueda</string>
+	<key>Save changes</key>
+	<string>Guardar cambios</string>
+	<key>Save here</key>
+	<string>Guardar aquí</string>
+	<key>Save search</key>
+	<string>Guardar búsqueda</string>
+	<key>Saved search</key>
+	<string>Búsqueda guardada</string>
+	<key>Saved searches</key>
+	<string>Búsquedas guardadas.</string>
+	<key>Saving</key>
+	<string>Guardando</string>
+	<key>Saving edited file failed</key>
+	<string>Falló el guardado del archivo editado</string>
+	<key>Scan</key>
+	<string>Escanear</string>
+	<key>Scan additional</key>
+	<string>Escanear otro fichero</string>
+	<key>Scan document</key>
+	<string>Escanear documentos</string>
+	<key>Scan documents and photos with your camera.</key>
+	<string>Escanée documentos y fotos con la cámara</string>
+	<key>Scans</key>
+	<string>Escaneos</string>
+	<key>Scene</key>
+	<string>Escena</string>
+	<key>Scheduled upload of %ld media assets</key>
+	<string>Carga programada de %ld activos multimedia</string>
+	<key>Scroll to Bottom</key>
+	<string>Ir al final</string>
+	<key>Scroll to Top</key>
+	<string>Ir al inicio</string>
+	<key>Search</key>
+	<string>Buscar</string>
+	<key>Search PDF</key>
+	<string>Buscar PDF</string>
+	<key>Search account</key>
+	<string>Buscar cuenta</string>
+	<key>Search folder</key>
+	<string>Buscar carpeta</string>
+	<key>Search for users or groups</key>
+	<string>Buscar usuarios o grupos</string>
+	<key>Search from {{folder.name}}</key>
+	<string>Buscar en {{folder.name}}</string>
+	<key>Search space</key>
+	<string>Buscar en space</string>
+	<key>Search template</key>
+	<string>Buscar plantilla</string>
+	<key>Search templates</key>
+	<string>Buscar plantillas</string>
+	<key>Search tree</key>
+	<string>Buscar en árbol</string>
+	<key>Search {{space.name}}</key>
+	<string>Buscar {{space.name}}</string>
+	<key>Security</key>
+	<string>Seguridad</string>
+	<key>Select</key>
+	<string>Seleccionar</string>
+	<key>Select All</key>
+	<string>Seleccionar todo</string>
+	<key>Select Destination</key>
+	<string>Select Destination</string>
+	<key>Select Last Item on Page</key>
+	<string>Seleccionar el último elemento de la página</string>
+	<key>Select Next</key>
+	<string>Seleccione el siguiente</string>
+	<key>Select Previous</key>
+	<string>Seleccione el anterior</string>
+	<key>Select folder</key>
+	<string>Select folder</string>
+	<key>Select one or more items.</key>
+	<string>Seleccione uno o más elementos.</string>
+	<key>Select target.</key>
+	<string>Seleccionar destino.</string>
+	<key>Send feedback</key>
+	<string>Enviar comentarios</string>
+	<key>Serial number</key>
+	<string>Número de serie</string>
+	<key>Server Password</key>
+	<string>Contraseña del servidor</string>
+	<key>Server URL</key>
+	<string>URL del servidor</string>
+	<key>Server Username</key>
+	<string>Nombre de usuario del servidor</string>
+	<key>Server name</key>
+	<string>Nombre del servidor</string>
+	<key>Set</key>
+	<string>Set</string>
+	<key>Settings</key>
+	<string>Ajustes</string>
+	<key>Setup a new account in the app to save to.</key>
+	<string>Setup a new account in the app to save to.</string>
+	<key>Share</key>
+	<string>Compartir</string>
+	<key>Share Diagnostics</key>
+	<string>Compartir diagnósticos</string>
+	<key>Share Extension disabled</key>
+	<string>Extensión Compartir deshabilitada</string>
+	<key>Share Extension unavailable</key>
+	<string>Share Extension unavailable</string>
+	<key>Share with</key>
+	<string>Compartir con</string>
+	<key>Shared</key>
+	<string>Shared</string>
+	<key>Shared by link</key>
+	<string>Compartido por enlace</string>
+	<key>Shared by me</key>
+	<string>Compartido por mi</string>
+	<key>Shared by {{owner}}</key>
+	<string>Compartido por {{owner}}</string>
+	<key>Shared with</key>
+	<string>Compartido con</string>
+	<key>Shared with me</key>
+	<string>Compartido conmigo</string>
+	<key>Shared with {{recipients}}</key>
+	<string>Compartido con {{recipients}}</string>
+	<key>Shared with {{recipient}}</key>
+	<string>Compartido con {{recipient}}</string>
+	<key>Shares</key>
+	<string>Compartidos</string>
+	<key>Sharing</key>
+	<string>Compartiendo</string>
+	<key>Sharing requires an active connection.</key>
+	<string>Compartir necesita una conexión activa.</string>
+	<key>Shortcut</key>
+	<string>Shortcut</string>
+	<key>Shortcut to '{{hostname}}'</key>
+	<string>Shortcut to '{{hostname}}'</string>
+	<key>Shortcuts Actions</key>
+	<string>Atajos</string>
+	<key>Shorten by one week</key>
+	<string>Shorten by one week</string>
+	<key>Show</key>
+	<string>Show</string>
+	<key>Show all</key>
+	<string>Mostrar todo</string>
+	<key>Show folders on top</key>
+	<string>Mostrar carpetas encima</string>
+	<key>Show hidden files and folders</key>
+	<string>Mostrar archivos y carpetas ocultos</string>
+	<key>Show message</key>
+	<string>Show message</string>
+	<key>Show more results</key>
+	<string>Mostrar más resultados</string>
+	<key>Show new version</key>
+	<string>Mostrar nueva versión</string>
+	<key>Show/Hide sidebar</key>
+	<string>Show/Hide sidebar</string>
+	<key>Shutter priority</key>
+	<string>Prioridad de obturador</string>
+	<key>Shutter speed</key>
+	<string>Velocidad del obturador</string>
+	<key>Sign in</key>
+	<string>Entrar</string>
+	<key>Size</key>
+	<string>Tamaño</string>
+	<key>Skip</key>
+	<string>Omitir</string>
+	<key>Skip Ahead</key>
+	<string>Ir hacia delante</string>
+	<key>Skip Back</key>
+	<string>Ir hacia atrás</string>
+	<key>Some cellular data may still be used. To completely avoid the usage of cellular data, please turn off access to cellular for the entire app in the Settings app.</key>
+	<string>Es posible que aún se utilicen algunos datos móviles. Para evitar por completo el uso de datos móviles, desactive el acceso al móvil para toda la aplicación desde la configuración de la aplicación.</string>
+	<key>Sort by %@</key>
+	<string>Ordenar por %@</string>
+	<key>Sort by {{attribute}} in {{direction}} order</key>
+	<string>Sort by {{attribute}} in {{direction}} order</string>
+	<key>Space</key>
+	<string>Space</string>
+	<key>Spaces</key>
+	<string>Spaces</string>
+	<key>Spot</key>
+	<string>Lugar</string>
+	<key>Start setup</key>
+	<string>Start setup</string>
+	<key>Status</key>
+	<string>Estado</string>
+	<key>Storage</key>
+	<string>Almacenamiento</string>
+	<key>Strobe return light detected</key>
+	<string>Luz de retorno estroboscópica detectada</string>
+	<key>Strobe return light not detected</key>
+	<string>Luz de retorno estroboscópica no detectada</string>
+	<key>Subscribe</key>
+	<string>Subscribirse</string>
+	<key>Subscribe Now</key>
+	<string>Subscríbase ahora</string>
+	<key>Switch Theme Style</key>
+	<string>Cambiar estilo del tema</string>
+	<key>System</key>
+	<string>Sistema</string>
+	<key>System Appeareance</key>
+	<string>Aspecto del sistema</string>
+	<key>TIFF</key>
+	<string>TIFF</string>
+	<key>Tab %@</key>
+	<string>Tab %@</string>
+	<key>Take photo or video</key>
+	<string>Tomar foto o video</string>
+	<key>Take survey</key>
+	<string>Take survey</string>
+	<key>Tap to launch the app.</key>
+	<string>Toque para iniciar la aplicación.</string>
+	<key>Tap to quit the app.</key>
+	<string>Toque para salir de la aplicación.</string>
+	<key>Terms Of Use</key>
+	<string>Términos de uso</string>
+	<key>Text</key>
+	<string>Texto</string>
+	<key>Thank you for using %@.
+</key>
+	<string>Gracias por usar %@. 
+</string>
+	<key>Thank you for using %@.
+If you like our App, please leave an AppStore review.
+❤️</key>
+	<string>Gracias por usar %@.
+SI le gustó nuestra aplicación, por favor deje una reseña en la AppStore.
+❤️</string>
+	<key>The account has been disabled.</key>
+	<string>La cuenta ha sido deshabilitada</string>
+	<key>The connection's access token has expired or become invalid. Sign in again to re-gain access.</key>
+	<string>El token de conexión ha expirado o ya no es válido. Vuelva a autenticarse para volver a tener acceso.</string>
+	<key>The destination this shortcut points to could not be found. It may have been deleted or you may not have access to it.</key>
+	<string>The destination this shortcut points to could not be found. It may have been deleted or you may not have access to it.</string>
+	<key>The entered URL does not include a hostname.</key>
+	<string>La URL introducida no incluye el nombre de host.</string>
+	<key>The entered codes are different</key>
+	<string>Los códigos introducidos son diferentes</string>
+	<key>The entered page number doesn't exist</key>
+	<string>El número de página introducida no existe</string>
+	<key>The following steps will guide you through the setup process.</key>
+	<string>The following steps will guide you through the setup process.</string>
+	<key>The last 10 archived logs are kept on the device - with each log covering up to 24 hours of usage. When sharing please bear in mind that logs may contain sensitive information such as server URLs and user-specific information.</key>
+	<string>Los últimos 10 archivos de log se guardan en el dispositivo, y cada archivo cubre hasta 24 horas de uso. Al compartir, tenga en cuenta que los logs pueden contener información confidencial, como las direcciones URL del servidor y la información específica del usuario.</string>
+	<key>The password was copied to the clipboard</key>
+	<string>The password was copied to the clipboard</string>
+	<key>The search term you entered did not match any item in the selected scope.</key>
+	<string>No hay coincidencias entre el término de búsqueda introducido y ningún elemento en el ámbito seleccionado.</string>
+	<key>The server declined access with the credentials stored for this connection.</key>
+	<string>El servidor declinó el acceso con estas credenciales guardadas para esta conexión.</string>
+	<key>The shortcut points to a URL, but the configuration of this app prohibits opening it.</key>
+	<string>The shortcut points to a URL, but the configuration of this app prohibits opening it.</string>
+	<key>The shortcut points to another item, but the configuration of this app prohibits opening it.</key>
+	<string>The shortcut points to a URL, but the configuration of this app prohibits opening it.</string>
+	<key>The {{app.name}} share extension is not available on this system.</key>
+	<string>The {{app.name}} share extension is not available on this system.</string>
+	<key>Theme</key>
+	<string>Tema</string>
+	<key>This action can't be undone.</key>
+	<string>Esta acción no se puede deshacer.</string>
+	<key>This document has %@ pages</key>
+	<string>Este documento tiene %@ páginas.</string>
+	<key>This folder is empty.</key>
+	<string>Carpeta vacía</string>
+	<key>This folder is empty. Fill it with content:</key>
+	<string>Carpeta vacía. Añada contenido:</string>
+	<key>This folder no longer exists on the server.</key>
+	<string>Esa carpeta ya no existe en el servidor.</string>
+	<key>This permission is needed to upload photos and videos from your photo library.</key>
+	<string>Este permiso es necesario para subir fotos y videos desde su biblioteca de fotos.</string>
+	<key>This shortcut points to:
+{{url}}</key>
+	<string>This shortcut points to:
+{{url}}</string>
+	<key>This will also delete all locally stored file copies.</key>
+	<string>Esto también eliminará todas las copias almacenadas localmente.</string>
+	<key>Time</key>
+	<string>Hora</string>
+	<key>Time measured since uploading, editing, downloading or viewing the respective file through this device. Does not apply to files downloaded via the Available Offline feature. Local copies may be deleted before the given period of time has passed, f.ex. because there's a newer version of a file on the server - or through the manual deletion of offline copies. Also, local copies may not be deleted after the given period of time has passed, f.ex. if an action is performed on it, the file is still in use - or the account holding the file hasn't been used in the app.</key>
+	<string>Tiempo medido desde que se sube, edita, descarga o visualiza el fichero en este dispositivo. No aplica a ficheros descargados a través de la funcionalidad "Disponible offline". Las copias locales pueden ser borradas  antes de que el tiempo seleccionado haya transcurrido, por ejemplo, si hay una nueva versión del fichero en el servidor o por el borrado manual de copias offline. Las copias locales pueden no ser borradas después de que el tiempo haya transcurrido, por ejemplo, si se ejecuta una acción sobre él, si el archivo está en uso, o si la cuenta que lo contiene no ha sido usada aún en la app.</string>
+	<key>To use the app, you need to create a passcode.</key>
+	<string>Para usar la app tiene que crear un código de acceso.</string>
+	<key>Toggle Search Scope</key>
+	<string>Cambiar alcance de búsqueda</string>
+	<key>Toggle layout</key>
+	<string>Toggle layout</string>
+	<key>Total update scans</key>
+	<string>Escaneos de actualización total</string>
+	<key>Touch ID</key>
+	<string>Touch ID</string>
+	<key>Tree</key>
+	<string>Árbol</string>
+	<key>Type</key>
+	<string>Tipo</string>
+	<key>URL</key>
+	<string>URL</string>
+	<key>URL of webpage or item</key>
+	<string>URL of webpage or item</string>
+	<key>URL was copied to the clipboard</key>
+	<string>La URL fue copiada al portapapeles</string>
+	<key>Uncalibrated</key>
+	<string>Sin calibrar</string>
+	<key>Unfavorite item</key>
+	<string>Elemento no favorito</string>
+	<key>Unknown</key>
+	<string>Unknown</string>
+	<key>Unlock</key>
+	<string>Desbloquear</string>
+	<key>Unlock %@</key>
+	<string>Desbloquear %@</string>
+	<key>Unlock all Pro Features.</key>
+	<string>Desbloquear todas las funcionalidades pro</string>
+	<key>Unlock using %@?</key>
+	<string>¿Desbloquear usando %@?</string>
+	<key>Unlocked</key>
+	<string>Desbloqueado</string>
+	<key>Unshare</key>
+	<string>Dejar de compartir</string>
+	<key>Update Status</key>
+	<string>Estado de actualización</string>
+	<key>Updating %ld items…</key>
+	<string>Actualizando %ld elementos...</string>
+	<key>Updating connection…</key>
+	<string>Actualizando conexión...</string>
+	<key>Upload</key>
+	<string>Subir</string>
+	<key>Upload file</key>
+	<string>Subir archivo</string>
+	<key>Upload from your photo library</key>
+	<string>Subir desde su biblioteca de fotos</string>
+	<key>Uploading %ld files…</key>
+	<string>Subiendo %ld archivos...</string>
+	<key>Uploading {{remainingFileCount}} files…</key>
+	<string>Uploading {{remainingFileCount}} files…</string>
+	<key>Usage terms</key>
+	<string>Términos de uso</string>
+	<key>Use background location updates</key>
+	<string>Usar actualizaciones de ubicación en segundo plano</string>
+	<key>Use background refresh</key>
+	<string>Usar refrescado en segundo plano</string>
+	<key>Use ownCloud actions in Shortcuts.</key>
+	<string>Use acciones de ownCloud en Atajos</string>
+	<key>User Interface</key>
+	<string>Interfaz de usuario</string>
+	<key>User-approved certificates</key>
+	<string>Certificados aprobados por el usuario</string>
+	<key>Username</key>
+	<string>Nombre de usuario</string>
+	<key>Users</key>
+	<string>Usuarios</string>
+	<key>Validation Error</key>
+	<string>Error de validación</string>
+	<key>Verbose</key>
+	<string>Verbose</string>
+	<key>Verifying password…</key>
+	<string>Verifying password…</string>
+	<key>Version information were copied to the clipboard</key>
+	<string>Información de la versión copiada al portapapeles.</string>
+	<key>Video upload</key>
+	<string>Subir video</string>
+	<key>Video upload path</key>
+	<string>Ruta de subida de vídeos</string>
+	<key>Videos</key>
+	<string>Vídeos</string>
+	<key>View documentation</key>
+	<string>View documentation</string>
+	<key>Visit the forums</key>
+	<string>Visit the forums</string>
+	<key>W</key>
+	<string>O</string>
+	<key>Waiting for response from login session in external browser…</key>
+	<string>Esperando respuesta de la sesión de inicio de sesión en un navegador externo...</string>
+	<key>Waiting for server response…</key>
+	<string>Esperando la respuesta del servidor...</string>
+	<key>Warning</key>
+	<string>Alerta</string>
+	<key>Welcome to %@</key>
+	<string>Bienvenido a %@</string>
+	<key>When activated, logs may impact performance and include sensitive information. However the logs are not subject to automatic submission to %@ servers. Sharing logs with others is sole user responsibility.</key>
+	<string>Cuando los archivos de registro son activados éstos pueden impactar en la performance e incluir información sensible. Sin embargo, éstos no están sujetos a la carga automática hacia los servidores %@. Compartir estos archivos de registro es bajo su propia responsabilidad.</string>
+	<key>White balance</key>
+	<string>Balance de blancos</string>
+	<key>Would you like to view the updated version?</key>
+	<string>¿Le gustaría ver la versión actualizada?</string>
+	<key>YCbCr</key>
+	<string>YCbCr</string>
+	<key>You are required to set the passcode</key>
+	<string>Debe configurar el código de acceso</string>
+	<key>You need to configure an email account first to be able to send emails.</key>
+	<string>Necesita configurar una cuenta de correo electrónico para poder enviar correos.</string>
+	<key>after %@</key>
+	<string>después de %@</string>
+	<key>after free %@ trial</key>
+	<string>despues de %@ de prueba gratuita</string>
+	<key>ascending</key>
+	<string>ascending</string>
+	<key>beta</key>
+	<string>beta</string>
+	<key>date</key>
+	<string>fecha</string>
+	<key>descending</key>
+	<string>descending</string>
+	<key>enabled</key>
+	<string>activado</string>
+	<key>https://example.com</key>
+	<string>https://ejemplo.com</string>
+	<key>kind</key>
+	<string>tipo</string>
+	<key>last used</key>
+	<string>last used</string>
+	<key>license</key>
+	<string>licencia</string>
+	<key>name</key>
+	<string>nombre</string>
+	<key>never</key>
+	<string>nunca</string>
+	<key>none</key>
+	<string>ninguno</string>
+	<key>not present</key>
+	<string>no presente</string>
+	<key>off</key>
+	<string>apagado</string>
+	<key>on</key>
+	<string>on</string>
+	<key>release</key>
+	<string>lanzamiento</string>
+	<key>shared</key>
+	<string>compartido</string>
+	<key>size</key>
+	<string>tamaño</string>
+	<key>undated</key>
+	<string>undated</string>
+	<key>unknown</key>
+	<string>desconocido</string>
+	<key>{{attribute}} {{direction}}</key>
+	<string>{{attribute}} {{direction}}</string>
+	<key>{{fileName}} (file)</key>
+	<string>{{fileName}} (file)</string>
+	<key>{{folderName}} (folder)</key>
+	<string>{{folderName}} (folder)</string>
+	<key>{{itemCount}} items with {{totalSize}} total ({{fileCount}} files, {{folderCount}} folders)</key>
+	<string>{{itemCount}} elementos con {{totalSize}} en total, ({{fileCount}} ficheros, {{folderCount}} carpetas)</string>
+	<key>{{itemName}} ({{link}}) | password: {{password}}</key>
+	<string>{{itemName}} ({{link}}) | password: {{password}}</string>
+	<key>{{link}} | password: {{password}}</key>
+	<string>{{link}} | password: {{password}}</string>
+	<key>{{remaining}} available</key>
+	<string>{{remaining}} disponible</string>
+	<key>{{spaceName}} (space)</key>
+	<string>{{spaceName}} (space)</string>
+</dict>
+</plist>

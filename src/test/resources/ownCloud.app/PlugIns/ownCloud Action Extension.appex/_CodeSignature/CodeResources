@@ -38,11 +38,11 @@
 		</data>
 		<key>Down_Down.bundle/Info.plist</key>
 		<data>
-		DFgC8JXKv0MD2HXGXysjKLR+Wjw=
+		Jaa9cOsiRXC+p+D+QvJAB2/eolo=
 		</data>
 		<key>Down_Down.bundle/_CodeSignature/CodeDirectory</key>
 		<data>
-		xa/VU/KdiBoovQGjWHicsUY1KoM=
+		lmcQgB7kh8uGokLectKFLnqCuv0=
 		</data>
 		<key>Down_Down.bundle/_CodeSignature/CodeRequirements</key>
 		<data>
@@ -50,7 +50,7 @@
 		</data>
 		<key>Down_Down.bundle/_CodeSignature/CodeRequirements-1</key>
 		<data>
-		Yp+ZBV5XtAXOegJWjSuD66LS0O0=
+		V9xBOdGKDDtf5lxbNwI5nC16OqI=
 		</data>
 		<key>Down_Down.bundle/_CodeSignature/CodeResources</key>
 		<data>
@@ -62,11 +62,11 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		rKiF/bUWHHiAF7VEZUE+HhCo9JU=
+		HbPzPxIizWj9HlU0oZNEfhWcJTA=
 		</data>
 		<key>PocketSVG_PocketSVG.bundle/Info.plist</key>
 		<data>
-		ezCo70GM7gh7KJZhTBXa93MiR4M=
+		VrpcnmbEzRW0Hnvxzt6vSSwORRM=
 		</data>
 		<key>PocketSVG_PocketSVG.bundle/SVGColors.plist</key>
 		<data>
@@ -74,7 +74,7 @@
 		</data>
 		<key>PocketSVG_PocketSVG.bundle/_CodeSignature/CodeDirectory</key>
 		<data>
-		4GvK18IKXTanpgKm4+isUpav7XQ=
+		i7XTtRY+P4iNy2ZXAv0aRMbzO0o=
 		</data>
 		<key>PocketSVG_PocketSVG.bundle/_CodeSignature/CodeRequirements</key>
 		<data>
@@ -82,7 +82,7 @@
 		</data>
 		<key>PocketSVG_PocketSVG.bundle/_CodeSignature/CodeRequirements-1</key>
 		<data>
-		Wl9nMu1SMObFjSD/oEwr3rgajjU=
+		FYCRuT6AthfKMniBUIAZ4lrh+lU=
 		</data>
 		<key>PocketSVG_PocketSVG.bundle/_CodeSignature/CodeResources</key>
 		<data>
@@ -96,11 +96,24 @@
 		<data>
 		apH8VatkxzeYJC/UN4aujlBCyi4=
 		</data>
+		<key>__preview.dylib</key>
+		<data>
+		dmW25ny2hG44kz5RIsTT/BqkRsY=
+		</data>
+		<key>cs.lproj/InfoPlist.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			Rajbu5O0CFOoxTJ8CoztrDZkuzo=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
 		<key>de.lproj/InfoPlist.strings</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			gDuM88JkpJoSm+QZ7Rp3+tGkXTE=
+			pdGY/OTO1TRdywlv75u7QIg4K80=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -109,7 +122,137 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			rKuI6AHrkjiAOvujVKDpIBKGJ/E=
+			Rajbu5O0CFOoxTJ8CoztrDZkuzo=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>en_GB.lproj/InfoPlist.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			Rajbu5O0CFOoxTJ8CoztrDZkuzo=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>es.lproj/InfoPlist.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			Rajbu5O0CFOoxTJ8CoztrDZkuzo=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>fr.lproj/InfoPlist.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			Rajbu5O0CFOoxTJ8CoztrDZkuzo=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>ko.lproj/InfoPlist.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			Rajbu5O0CFOoxTJ8CoztrDZkuzo=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>mk.lproj/InfoPlist.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			Rajbu5O0CFOoxTJ8CoztrDZkuzo=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>nb_NO.lproj/InfoPlist.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			Rajbu5O0CFOoxTJ8CoztrDZkuzo=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>nn_NO.lproj/InfoPlist.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			Rajbu5O0CFOoxTJ8CoztrDZkuzo=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>ownCloud Action Extension.debug.dylib</key>
+		<data>
+		uHTzVER2dtCELXx/jt3/RbwOqWA=
+		</data>
+		<key>pt_BR.lproj/InfoPlist.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			Rajbu5O0CFOoxTJ8CoztrDZkuzo=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>pt_PT.lproj/InfoPlist.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			Rajbu5O0CFOoxTJ8CoztrDZkuzo=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>ru.lproj/InfoPlist.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			3qgMdM1mwyd4kzy2PSRrb+JksGw=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>sq.lproj/InfoPlist.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			BsbglXv2gllj4errRJ3Z8QKeLXg=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>th_TH.lproj/InfoPlist.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			Rajbu5O0CFOoxTJ8CoztrDZkuzo=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>tr.lproj/InfoPlist.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			Rajbu5O0CFOoxTJ8CoztrDZkuzo=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>zh-Hans.lproj/InfoPlist.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			Rajbu5O0CFOoxTJ8CoztrDZkuzo=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -177,14 +320,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			86VZldcHkV0dS2ItNvC6DGgyLGXfzOelMVY/AUUC5RI=
+			tVdNxuQfs0dN4bpDxSaRLMeTbiB5hqh7d7hclRYqrTE=
 			</data>
 		</dict>
 		<key>Down_Down.bundle/_CodeSignature/CodeDirectory</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			FzJzc7ne9kC7kjdMv1qrMmKHZxrhqJ/aubmsk5OD2Wg=
+			+CxBjh3l1Tw1uJe6dK3F/P0qsKIZOF5mTf22cRy5WBc=
 			</data>
 		</dict>
 		<key>Down_Down.bundle/_CodeSignature/CodeRequirements</key>
@@ -198,7 +341,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			J/xxvFbYDoNkPTqRI/8nhUhr5xNWzfZj/hJz2SD0U4Q=
+			gg5nAiQ+L+BsCFduOriR26hL2j9IcYuWdIIzGTtaqUI=
 			</data>
 		</dict>
 		<key>Down_Down.bundle/_CodeSignature/CodeResources</key>
@@ -219,7 +362,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			WeNLLiEPwCne3gZHtKHt6JGDqSSENcN+Z4/YTjsuU7M=
+			HaWewzcdPrI/uaw7JEb7jJk8WKN74mGvaaQO7DEKNdA=
 			</data>
 		</dict>
 		<key>PocketSVG_PocketSVG.bundle/SVGColors.plist</key>
@@ -233,7 +376,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			qtNCYFyYHAMvr7etWGbKcXMhAJWs704p4PQMNlD2M1A=
+			BsHUKkMHL8ilGF9tLJS8As5bFpZYJEgDHyEean5JeVc=
 			</data>
 		</dict>
 		<key>PocketSVG_PocketSVG.bundle/_CodeSignature/CodeRequirements</key>
@@ -247,7 +390,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			1y9F4u91Ga21HHl/e0H+t5FStJVjbpBy4REjqsb0fZk=
+			WL3NgYbYW1SF283NYhaauLQMXZA0E3cdchvhQVFrFbY=
 			</data>
 		</dict>
 		<key>PocketSVG_PocketSVG.bundle/_CodeSignature/CodeResources</key>
@@ -271,11 +414,27 @@
 			Gc7WdA261JuWakyxpPju5YKnPRQQRYx1jbSx3N8pOMA=
 			</data>
 		</dict>
+		<key>__preview.dylib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			i3arB6c94706NOJ98O/tqxduFRARf2jMlPvJp0NS+O8=
+			</data>
+		</dict>
+		<key>cs.lproj/InfoPlist.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			stmNWzl83hL/lTwDfVSuFLnw86L+yQgJdfXQUPTx+aU=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
 		<key>de.lproj/InfoPlist.strings</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			N43V03wLrMeAHXKRfefRrN9RS2uSvMhCo741BkyAJQE=
+			OFF5k6Vz7RpgZVDoyMLq8hhjve42R3H7AcwlHe2XU/E=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -284,7 +443,140 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Kd2o/riNA8tfzjF359x29i0c2q3a25h72QYBH9GzS6E=
+			stmNWzl83hL/lTwDfVSuFLnw86L+yQgJdfXQUPTx+aU=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>en_GB.lproj/InfoPlist.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			stmNWzl83hL/lTwDfVSuFLnw86L+yQgJdfXQUPTx+aU=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>es.lproj/InfoPlist.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			stmNWzl83hL/lTwDfVSuFLnw86L+yQgJdfXQUPTx+aU=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>fr.lproj/InfoPlist.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			stmNWzl83hL/lTwDfVSuFLnw86L+yQgJdfXQUPTx+aU=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>ko.lproj/InfoPlist.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			stmNWzl83hL/lTwDfVSuFLnw86L+yQgJdfXQUPTx+aU=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>mk.lproj/InfoPlist.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			stmNWzl83hL/lTwDfVSuFLnw86L+yQgJdfXQUPTx+aU=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>nb_NO.lproj/InfoPlist.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			stmNWzl83hL/lTwDfVSuFLnw86L+yQgJdfXQUPTx+aU=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>nn_NO.lproj/InfoPlist.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			stmNWzl83hL/lTwDfVSuFLnw86L+yQgJdfXQUPTx+aU=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>ownCloud Action Extension.debug.dylib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			1e9wX33DXXi5/bXZdUZp2GmnBnRzWC0Xo8h5PahFiO4=
+			</data>
+		</dict>
+		<key>pt_BR.lproj/InfoPlist.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			stmNWzl83hL/lTwDfVSuFLnw86L+yQgJdfXQUPTx+aU=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>pt_PT.lproj/InfoPlist.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			stmNWzl83hL/lTwDfVSuFLnw86L+yQgJdfXQUPTx+aU=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>ru.lproj/InfoPlist.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			12UyP9zv0pKJz3a2D0k5gdQnfyisxbsyPPTocPt2TFo=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>sq.lproj/InfoPlist.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			tFG6WepSNSz2aHJL8AwX430yVkp811bMBxMgIXITVE8=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>th_TH.lproj/InfoPlist.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			stmNWzl83hL/lTwDfVSuFLnw86L+yQgJdfXQUPTx+aU=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>tr.lproj/InfoPlist.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			stmNWzl83hL/lTwDfVSuFLnw86L+yQgJdfXQUPTx+aU=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>zh-Hans.lproj/InfoPlist.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			stmNWzl83hL/lTwDfVSuFLnw86L+yQgJdfXQUPTx+aU=
 			</data>
 			<key>optional</key>
 			<true/>

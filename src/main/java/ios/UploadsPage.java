@@ -38,8 +38,8 @@ public class UploadsPage extends CommonPage {
         add.click();
     }
 
-    public int photoUploaded(ArrayList<OCFile> listFiles) {
-        Log.log(Level.FINE, "Items: " + listFiles.size());
+    public boolean photoUploaded(ArrayList<OCFile> listFiles, int photos) {
+        Log.log(Level.FINE, "Starts photoUploaded: " + listFiles.size());
         int mediaUploaded = 0;
         for (OCFile ocfile : listFiles) {
             Log.log(Level.FINE, "Item name: " + ocfile.getName());
@@ -47,7 +47,17 @@ public class UploadsPage extends CommonPage {
                 mediaUploaded++;
             }
         }
-        return mediaUploaded;
+        return photos == mediaUploaded;
     }
 
+    public boolean photoDisplayed(int photos) {
+        Log.log(Level.FINE, "Starts photoDisplayed: " + photos);
+        List<WebElement> pics = findListCss("XCUIElementTypeStaticText");
+        int i = 0;
+        for (WebElement textInView : pics) {
+            if (textInView.getText().contains("Photo-"))
+                i++;
+        }
+        return photos == i;
+    }
 }

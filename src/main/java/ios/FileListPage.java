@@ -137,9 +137,7 @@ public class FileListPage extends CommonPage {
         refreshBySwipe();
         openPlusButton();
         uploadFile.click();
-        // Driver doesn't recognize the dialog. Not in DOM. Solution: clicking coordinates
-        tap(190,590);
-        //Wait till gallery loads. When the "Cancel" button is present
+        acceptLibraryPermission();
         waitById(WAIT_TIME, "Cancel");
     }
 

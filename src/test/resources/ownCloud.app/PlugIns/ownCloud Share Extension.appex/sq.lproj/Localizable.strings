@@ -1,1028 +1,1480 @@
-/*
-  Localizable.strings
-  ownCloud
-
-  Created by Pablo Carrascal on 13/03/2018.
-  Copyright © 2018 ownCloud GmbH. All rights reserved.
-*/
-
-/*
- * Copyright (C) 2018, ownCloud GmbH.
- *
- * This code is covered by the GNU Public License Version 3.
- *
- * For distribution utilizing Apple mechanisms please see https://owncloud.org/contribute/iOS-license-exception/
- * You should have received a copy of this license along with this program. If not, see <http://www.gnu.org/licenses/gpl-3.0.en.html>.
- *
- */
-
-/* Add / Edit Bookmark */
-"Edit account" = "Përpunoni llogari";
-"Add account" = "Shtoni llogari";
-"Server URL" = "URL shërbyesi";
-"https://example.com" = "https://example.com";
-"Continue" = "Vazhdo";
-"Name" = "Emër";
-"Example Server" = "Shërbyes Shembull";
-"Show Certificate Details" = "Shfaq Hollësi Dëshmie";
-"Connect" = "Lidhuni";
-"Delete Authentication Data" = "Fshi të Dhëna Mirëfilltësimi";
-"Authentication" = "Mirëfilltësim";
-"Username" = "Emër përdoruesi";
-"Password" = "Fjalëkalim";
-"Certificate Details" = "Hollësi Dëshmie";
-"Cancel" = "Anuloje";
-"Approve" = "Miratoje";
-"Error" = "Gabim";
-"Issues" = "Probleme";
-"Review Connection" = "Shqyrtoni Lidhjen";
-"Authenticated via" = "Mirëfilltësuar përmes";
-"Authenticated as %@ via %@" = "Mirëfilltësuar si %@ përmes %@";
-"Edit" = "Përpunoni";
-"Credentials" = "Kredenciale";
-"Rejected" = "Hedhur poshtë";
-"Passed" = "Vleftësuar";
-"Accepted" = "Pranuar";
-"Validation Error" = "Gabim Vleftësim";
-"Certificate was rejected by user." = "Dëshmia u hodh poshtë nga përdoruesi.";
-"Certificate has issues.\nOpen 'Certificate Details' for more informations." = "Dëshmia ka probleme.\nPër më tepër hollësi, hapni 'Hollësi Dëshmie'.";
-"No issues found. Certificate passed validation." = "S’u gjetën probleme. Dëshmia e mori vleftësimin.";
-"Certificate may have issues, but was accepted by user.\nOpen 'Certificate Details' for more informations." = "Dëshmia mund të ketë probleme, por u pranua nga përdoruesi.\nPër më tepër hollësi, hapni 'Hollësi Dëshmie'.";
-"If you 'Continue', you will be prompted to allow the '{{app.name}}' app to open the {{authmethodName}} login page where you can enter your credentials." = "Nëse “Vazhdoni”, do t’ju shfaqet kërkesa për të lejuar aplikacionin '{{app.name}}' të hapë faqen e hyrjeve me {{authmethodName}}, prej nga mund të jepni kredencialet tuaja.";
-
-"Error opening %@" = "Gabim në hapjen e %@";
-
-"Contacting server…" = "Po kontaktohet shërbyesi…";
-"Authenticating…" = "Po bëhet mirëfilltësimi…";
-
-"Fetching user information…" = "Po sillen hollësi përdoruesi…";
-"Updating connection…" = "Po përditësohet lidhja…";
-
-"Preparing account" = "Përgatitje llogarie";
-"Please wait…" = "Ju lutemi, prisni…";
-"Skip" = "Anashkalojeni";
-
-"Missing hostname" = "Mungon strehëemër";
-"The entered URL does not include a hostname." = "URL-ja e dhënë nuk përmban një strehëemër.";
-"Add account" = "Shtoni llogari";
-"Server name" = "Emër shërbyesi";
-"Server Password" = "Fjalëkalim Shërbyesi";
-"Server Username" = "Emër përdoruesi Shërbyesi";
-"Show accounts" = "Shfaq llogari";
-"Setup complete" = "Ujdisje e plotësuar";
-"Edit Login" = "Përpunoni Kredenciale Hyrjeje";
-"Manage Storage" = "Administroni Depozitim";
-"Access Files" = "Përdorni Kartela";
-"Log out" = "Dilni";
-"Retry" = "Riprovo";
-
-/* Bookmark Info */
-"Bookmark Metadata" = "Tejtëdhëna Faqerojtësi";
-
-/* Client */
-"Browse" = "Shfletoni";
-"Files" = "Kartela";
-"Disconnect" = "Shkëputu";
-"Connecting…" = "Po lidhet…";
-"Connected." = "U lidh.";
-"Select" = "Përzgjidhe";
-"Done" = "U bë";
-
-"Folder" = "Dosje";
-
-"Stopped" = "U ndal";
-"Started…" = "U fillua…";
-"Contents from cache." = "Lëndë prej fshehtine.";
-"Waiting for server response…" = "Po pritet për përgjigje nga shërbyesi…";
-"This folder no longer exists." = "Kjo dosje s’ekziston më.";
-"Everything up-to-date." = "Gjithçka është e përditësuar.";
-"Please wait…" = "Ju lutemi, prisni…";
-"Sort by %@" = "Renditi sipas %@";
-"Sort by" = "Renditi sipas";
-
-"name" = "emër";
-"kind" = "lloj";
-"size" = "madhësi";
-"date" = "datë";
-"last used" = "përdorur së fundi më";
-
-"Tree" = "Pemë";
-"Search folder" = "Kërko në dosje";
-"Search tree" = "Pemë kërkimesh";
-"Search from {{folder.name}}" = "Kërko prej {{folder.name}}";
-"Search space" = "Kërko në hapësirë";
-"Search {{space.name}}" = "Kërko në {{space.name}}";
-"Search account" = "Kërko llogari";
-"Enter a search term" = "Jepni një term kërkimi";
-"Search for users or groups" = "Kërkoni për përdorues ose grupe";
-"Enter the user or group you want to invite." = "Jepni përdoruesin, ose grupin, që doni të ftohet.";
-
-"Pending" = "Në pritje";
-"Show parent paths" = "Shfaq shtigjet mëmë";
-"Reveal in folder" = "Shfaqe në dosje";
-
-"%@ of %@ used" = "%@ nga %@ të përdorur";
-"Total: %@" = "Gjithsej: %@";
-"%@ item | " = "%@ objekt | ";
-"%@ items | " = "%@ objekte | ";
-
-"{{itemCount}} items with {{totalSize}} total ({{fileCount}} files, {{folderCount}} folders)" = "{{itemCount}} objekte, me {{totalSize}} gjithsej, ({{fileCount}} kartela, {{folderCount}} dosje)";
-"{{remaining}} available" = "{{remaining}} të lira";
-
-"Loading…" = "Po ngarkohet…";
-
-"Show more results" = "Shfaq më tepër përfundime";
-
-"An error occurred" = "Ndodhi një gabim";
-
-/* Item Layouts */
-"List" = "Listë";
-"Grid" = "Mozaik";
-"Item grid" = "Mozaik objektesh";
-"Image grid" = "Mozaik figurash";
-
-/* Saved searches */
-"Saved searches" = "Kërkime të ruajtur";
-"Saved search templates" = "Gjedhe kërkimesh të ruajtur";
-"Save search" = "Ruaje kërkimin";
-"Save as search template" = "Ruaje si gjedhe kërkimi";
-
-"Name of saved search" = "Emër i kërkimit të ruajtur";
-"Saved search" = "Kërkim i ruajtur";
-"Saved searches" = "Kërkime të ruajtur";
-"Name of template" = "Emër gjedheje";
-"Search template" = "Gjedhe kërkimi";
-"Search templates" = "Gjedhe kërkimi";
-
-/* Search scope */
-"Search scope" = "Shtrirje kërkimi";
-"Toggle Search Scope" = "Aktivizoni/Çaktivizoni Shtrirje Kërkimi";
-
-/* Static Login Setup */
-"Server error" = "Gabim shërbyesi";
-"The server doesn't support any allowed authentication method." = "Shërbyesi nuk mbulon ndonjë nga metodat e mirëfilltësimeve.";
-"The server doesn't support any known and allowed authentication method found." = "Shërbyesi nuk mbulon ndonjë nga metodat e njohura dhe të lejuara që u gjetën.";
-"Retry detection" = "Riprovo pikasjen";
-"Enter your username and password" = "Jepni emrin e përdoruesit dhe fjalëkalimin tuaj";
-"Please log in to authorize the app." = "Që të autorizoni aplikacionin, ju lutemi, bëni hyrjen.";
-"Welcome to %@" = "Mirë se vini te %@";
-"Please enter a server URL" = "Ju lutemi, jepni një URL shërbyesi";
-"Please pick a profile to begin setup" = "Ju lutemi, zgjidhni një profil për të filluar ujdisja";
-"The following steps will guide you through the setup process." = "Hapat vijues do t’ju udhëheqin nëpër procesin e ujdisjes.";
-"Start setup" = "Nisni ujdisjen";
-"Open login page" = "Hapni faqen e hyrjeve";
-"If you 'Continue', you will be prompted to allow the '{{app.name}}' app to open the login page where you can enter your credentials." = "Nëse “Vazhdoni”, do t’ju kërkohet të lejoni aplikacionin '{{app.name}}' të hapë faqen e hyrjeve, ku mund të jepni kredencialet tuaja.";
-"Account setup complete" = "Ujdisje llogarie e plotësuar";
-"If you'd like to give the account a custom name, please enter it below:" = "Nëse doni t’i jepni llogarisë një emër vetjak, ju lutemi, jepeni më poshtë:";
-
-/* Single Account */
-"You are connected as\n%@" = "Jeni i lidhur si\n%@";
-"Login" = "Hyrje";
-"Wrong URL" = "URL e gabuar";
-"Please enter a valid URL" = "Ju lutemi, jepni një URL të vlefshme";
-"Missing Profile URL" = "Mungon URL Profili";
-"The Profile '%@' does not have a URL configured.\nPlease provide a URL via configuration or MDM." = "Profili '%@' s’ka URL të formësuar.\nJu lutemi, jepni një URL përmes formësimi ose MDM-je.";
-
-/* Client Messages */
-"No contents" = "Pa lëndë";
-"This folder contains no files or folders." = "Kjo dosje s’përmban kartela ose dosje.";
-"This folder is empty." = "Kjo dosje është e zbrazët.";
-"This folder is empty. Fill it with content:" = "Kjo dosje është e zbrazët. Mbusheni me lëndë:";
-
-"Folder removed" = "Dosje e hequr";
-"This folder no longer exists on the server." = "Kjo dosje s’ekziston më te shërbyesi.";
-"Are you sure you want to delete this item from the server?" = "Jeni i sigurt se doni të fshihet ky objekt prej shërbyesit?";
-"Are you sure you want to delete these items from the server?" = "Jeni i sigurt se doni të fshihen këto objekte prej shërbyesi?";
-"Multiple items" = "Shumë objekte";
-"Deleting '%@'" = "Po fshihet '%@'";
-"Renaming to %@" = "Po riemërtohet si %@";
-"Upload from your photo library" = "Ngarkoni që nga fototeka juaj";
-"Missing permissions" = "Mungojnë leje";
-"This permission is needed to upload photos and videos from your photo library." = "Kjo leje është e domosdoshme për të ngarkuar foto dhe video prej fototekës tuaj.";
-"Not now" = "Jo tani";
-"Upload file" = "Ngarkoni kartelë";
-"Upload files" = "Ngarko kartela";
-
-"No matches" = "S’ka përputhje";
-"The search term you entered did not match any item in the selected scope." = "Termi i kërkimit që dhatë, s’ka përputhje me ndonjë objekt brenda fushëveprimit të përzgjedhur.";
-"There are no results for this search term" = "S’ka përfundime për këtë term kërkimi";
-"No items found matching the search criteria." = "S’u gjetën objekte me përputhje me kriteret e kërkimit.";
-
-"Status" = "Gjendje";
-
-"Authorization failed" = "Autorizimi dështoi";
-"The account has been disabled." = "Llogaria është çaktivizuar.";
-"The server declined access with the credentials stored for this connection." = "Shërbyesi nuk pranoi hyrje me kredencialet e depozituara për këtë lidhje.";
-"Access denied" = "Hyrje e mohuar";
-"The connection's access token has expired or become invalid. Sign in again to re-gain access." = "Token-i i hyrjes për lidhjen ka skaduar ose është bërë i pavlefshëm. Ribëni hyrjen në llogari, që të rifitoni hyrje.";
-"No authentication data has been found for this connection." = "Për këtë lidhje s’u gjetën të dhëna mirëfilltësimi.";
-"Authentication with %@ is no longer allowed. Re-authentication needed." = "Mirëfilltësimi me %@ nuk lejohet më. Lyspet rimirëfilltësim.";
-"Sign in" = "Hyni";
-"Continue offline" = "Vazhdo pa qenë në linjë";
-"Media upload in the previous session was incomplete since the application was terminated" = "Ngarkimi media në sesionin e mëparshëm qe i paplotë, ngaqë aplikacioni u mbyll";
-
-"Waiting for response from login session in external browser…" = "Po pritet për përgjigje prej sesioni hyrjeje në shfletues të jashtëm…";
-
-"All done" = "U bë";
-"No pending messages or ongoing actions." = "S’ka mesazhe pezull apo veprime në kryerje e sipër.";
-
-"Show all" = "Shfaqi krejt";
-"+ %ld more" = "+ %ld më tepër";
-"Apply choice to all similar issues" = "Zbatoje zgjedhjen mbi probleme të ngjashme";
-"Apply to all" = "Zbatoje mbi krejt";
-
-/* Server List*/
-"Cancel" = "Anuloje";
-"OK" = "OK";
-
-"'%@' is currently locked" = "'%@' është e kyçur";
-"An operation is currently performed that prevents connecting to '%@'. Please try again later." = "Po kryhet një veprim që e pengon lidhjen me '%@'. Ju lutemi, riprovoni më vonë.";
-"Do you really want to disconnect from your '%@' account?" = "Doni vërtet të shkëputet prej llogarisë tuaj '%@'?";
-"This will remove all locally stored file copies from your device." = "Kjo do të heqë prej pajisjes tuaj krejt kopjet e kartelave të depozituara lokalisht.";
-"Really delete '%@'?" = "Të fshihet '%@' vërtet?";
-"Do you want to log out from '%@'?" = "Doni të dilni nga '%@'?";
-"This will also delete all locally stored file copies." = "Kjo do të shkaktojë fshirjen edhe të krejt kopjeve të kartelës të depozituara lokalisht.";
-"Delete" = "Fshije";
-"Remove" = "Hiqe";
-"Removing of '%@' failed" = "Heqja e '%@' dështoi";
-"Accounts" = "Llogari";
-
-"Help" = "Ndihmë";
-"Feedback" = "Përshtypje";
-"Welcome" = "Mirë se vini";
-"Thanks for choosing %@! \n Start by adding your account." = "Faleminderit që zgjodhët %@! \nFillojani duke shtuar llogarinë tuaj.";
-
-/* Settings Messages */
-
-"Security" = "Siguri";
-"Passcode Lock" = "Kyçje Me Kodkalim";
-"Face ID" = "Face ID";
-"Touch ID" = "Touch ID";
-"Unlock using %@?" = "Shkyçe duke përdorur %@?";
-"Videos" = "Video";
-"Photos" = "Foto";
-"Wifi only" = "Vetëm wifi";
-"Settings" = "Rregullime";
-"Lock application" = "Kyçe aplikacionin";
-"Upload videos via WiFi only" = "Videot ngarkoji vetëm përmes WiFi-it";
-"Upload pictures via WiFi only" = "Fotot ngarkoji vetëm përmes WiFi-it";
-"More" = "Më tepër";
-"Documentation" = "Dokumentim";
-"Send feedback" = "Dërgoni përshtypje";
-"Recommend to a friend" = "Këshillojani një shoku";
-"Privacy Policy" = "Rregulla Privatësie";
-"Terms Of Use" = "Kushte Përdorimi";
-"Acknowledgements" = "Falënderime";
-"license" = "licencë";
-"Portions of this app may utilize the following copyrighted material, the use of which is hereby acknowledged." = "Pjesë të këtij aplikacioni mund të përdorin materialin vijues që është nën të drejta kopjimi, përdorimi i të cilit këtu është i lejuar.";
-"Video upload path" = "Shteg ngarkimesh videosh";
-"Photo upload path" = "Shteg ngarkimi fotosh";
-"Immediately" = "Menjëherë";
-"After 1 minute" = "Pas 1 minute";
-"After 5 minutes" = "Pas 5 minutash";
-"After 30 minutes" = "Pas 30 minutash";
-"After %ld seconds" = "Pas %ld sekondash";
-"If you choose \"Immediately\" the App will be locked, when it is no longer in foreground." = "Nëse zgjidhni “Menjëherë”, Aplikacioni do të kyçet, kur s’është më përpara në ekran.";
-"Please configure an email account" = "Ju lutemi, formësoni një llogari email";
-"You need to configure an email account first to be able to send emails." = "Së pari lypset të formësoni një llogari email, që të jeni në gjendje të dërgoni email-e.";
-"Do you want to open the following URL?" = "Doni të hapet URL-ja vijuese?";
-"Passcode option" = "Mundësi kodkalimi";
-"Please choose how many digits you want to use for the passcode lock?" = "Ju lutemi, zgjidhni sa shifra doni të përdoren për kyçje me kodkalim?";
-"%ld digit code" = "Kod me %ld shifra";
-"Enter a new code with %ld digits" = "Jepni një kod të ri me %ld shifra";
-"To use the app, you need to create a passcode." = "Që të përdorni aplikacionin, lypset të krijoni një kodkalim.";
-"Passcode setup" = "Ujdisje kodkalimi";
-
-"%@%@ %@ version %@ build %@\n(app: %@, sdk: %@)" = "%@%@ %@ version %@ montimi %@\n(aplikacion: %@, sdk: %@)";
-"beta" = "beta";
-"release" = "hedhje në qarkullim";
-"App Version" = "Version Aplikacioni";
-"Version information were copied to the clipboard" = "Hollësitë e versionit u kopjuan në të papastër";
-
-
-/* User Interface Settings */
-"Theme" = "Temë";
-"User Interface" = "Ndërfaqe Përdoruesi";
-"Dark" = "E errët";
-"Dark Blue" = "Blu e Errët";
-"Dark Web" = "Web-i i Errët";
-"Light" = "E çelët";
-"Classic" = "Klasike";
-"System" = "Sistem";
-"System Appeareance" = "Dukje Sistemi";
-
-/* Log settings */
-"Log Files" = "Kartela Regjistër";
-"Browse log files" = "Shfletoni kartela regjistër";
-"Share" = "Ndaje me të tjerë";
-"Delete all log files?" = "Të fshihen krejt kartelat regjistër?";
-"Delete all" = "Fshiji krejt";
-
-"Log Level" = "Nivel Regjistrimi";
-"Log Destinations" = "Destinacione Regjistri";
-"Privacy" = "Privatësi";
-
-"Logging" = "Regjistrim";
-"Enable logging" = "Aktivizo regjistrimet";
-"Options" = "Mundësi";
-
-"Off" = "Off";
-"Info" = "Hollësi";
-"Default" = "Parazgjedhje";
-"Warning" = "Kujdes";
-"Error" = "Gabim";
-
-"Share log file" = "Ndajeni kartelën e regjistrimit me dikë";
-"Reset log file" = "Zeroje kartelën e regjistrimit";
-
-"When activated, logs may impact performance and include sensitive information. However the logs are not subject to automatic submission to %@ servers. Sharing logs with others is sole user responsibility." = "Kur aktivizohen, regjistrat mund të kenë ndikim në funksionim dhe përfshijnë të dhëna rezervat. Sidoqoftë, regjistrat nuk janë subjekt parashtrimi të automatizuar te shërbyes %@. Ndarja e regjistrave me të tjerë është përgjegjësi vetëm e përdoruesit.";
-
-"The last 10 archived logs are kept on the device - with each log covering up to 24 hours of usage. When sharing please bear in mind that logs may contain sensitive information such as server URLs and user-specific information." = "10 regjistrat e fundit të arkivuar mbahen në pajisje - ku çdo regjistër mbulon deri në 24 orë përdorim. Kur bëhet ndarje e tyre, ju lutemi, kini parasysh se regjistrat mund të përmbajnë të dhëna rezervat, të tilla si URL shërbyesi dhe hollësi që lidhen me përdoruesin.";
-
-"Mask private data" = "Masko të dhëna private";
-"Enabling this option will attempt to mask private data, so it does not become part of any log. Since logging is a development and debugging feature, though, we can't guarantee that the log file will be free of any private data even with this option enabled. Therefore, please look through any log file and verify its free of any data you're not comfortable sharing before sharing it with anybody." = "Me aktivizimin e kësaj mundësie programi do të rreket të maskojë të dhëna private, që të mos jenë pjesë e ndonjë regjistrimi. Por, ngaqë regjistrimi është një veçori e lidhur me zhvillimin dhe diagnostikimet, s’mund të garantojmë që kartela regjistër do të jetë pa ndonjë të dhënë private, edhe pse kjo mundësi është e aktivizuar. Ndaj, ju lutemi, hidhini një sy cilësdo kartele regjistër dhe verifikoni se është pa ndonjë të dhënë për të cilën s’ndiheni rehat ta ndani me të tjerë, përpara se ta ndani me dikë.";
-
-"No log file found" = "S’u gjet kartelë regjistër";
-"The log file can't be shared because no log file could be found or the log file is empty." = "S’ndahet dot me të tjerë kartela regjistër, ngaqë s’u gjet e tillë, ose kartela regjistër është e zbrazët.";
-"Enable log file" = "Aktivizo kartelë regjistër";
-
-"Really reset log file?" = "Të zerohet vërtet kartela regjistër?";
-"This action can't be undone." = "Ky veprim s’mund të zhbëhet.";
-
-/* Data usage settings */
-"Data usage" = "Përdorim të dhënash";
-"Delete unused local copies" = "Fshi kopje vendore të papërdorura";
-"Time measured since uploading, editing, downloading or viewing the respective file through this device. Does not apply to files downloaded via the Available Offline feature. Local copies may be deleted before the given period of time has passed, f.ex. because there's a newer version of a file on the server - or through the manual deletion of offline copies. Also, local copies may not be deleted after the given period of time has passed, f.ex. if an action is performed on it, the file is still in use - or the account holding the file hasn't been used in the app." = "Kohë e matur që prej ngarkimit, përpunimit, shkarkimit apo parjes së kartelës përkatëse përmes kësaj pajisjeje. Nuk prek kartelat e shkarkuara përmes veçorisë E passhme Jo Në Linjë. Kopjet vendore mund të fshihen përpara se të ketë kaluar periudha kohore e dhënë, p.sh., ngaqë në shërbyes pati një version më të ri të kartelës - ose përmes fshirjes dorazi të kopjeve <em>offline</em>. Kopjet vendore mundet gjithashtu të mos fshihen pasi të ketë kaluar periudha kohore e dhënë, p.sh., nëse mbi të po kryhet një veprim, kartela është ende në përdorim - ose llogaria që përmban kartelën s’është përdorur në aplikacion.";
-"never" = "kurrë";
-"after %@" = "pas %@";
-"Decrease Slider Value" = "Zvogëloni Vlerë Rrëshqitësi";
-"Increase Slider Value" = "Zmadhoni Vlerë Rrëshqitësi";
-
-"Cellular Data Usage" = "Përdorim të Dhënash Celulari";
-"Some cellular data may still be used. To completely avoid the usage of cellular data, please turn off access to cellular for the entire app in the Settings app." = "Disa të dhëna celulari mund të jenë ende duke u përdorur Për të shmangur plotësisht përdorimin e të dhënave të shërbimit celular, ju lutemi, çaktivizoni  hyrjen në celular për krejt aplikacionin, që nga aplikacioni Rregullime.";
-"Cellular Data Usage have been disabled via MDM configuration. Please contact your administrator for more information." = "Përdorimi i të Dhënave Celulare është çaktivizuar përmes formësimit të MDM-së. Për më tepër hollësi, ju lutemi, lidhuni me përgjegjësin.";
-"General" = "Të përgjithshme";
-"By feature" = "Sipas veçorish";
-
-"off" = "off";
-"enabled" = "e aktivizuar";
-
-/* Display settings */
-"Advanced settings" = "Rregullime të mëtejshme";
-"Show hidden files and folders" = "Shfaq kartela dhe dosje të fshehura";
-"Show folders on top" = "Dosjet shfaqi në krye";
-"Disable gestures" = "Çaktivizo gjeste";
-"Prevent dragging of files and folders and multiselection using system defined gestures" = "Parandalo tërheqje kartelash dhe dosjesh dhe përzgjedhje të shumëfishta duke përdorur gjeste të përcaktuara nga sistemi";
-
-/* Advanced settings */
-"Enable diagnostics" = "Aktivizo diagnostikime";
-
-/* Passcode Messages */
-
-"Enter code" = "Jepni kod";
-"Repeat code" = "Përsëriteni kodin";
-"Delete code" = "Fshije kodin";
-"The entered codes are different" = "Kodet e dhënë janë të ndryshëm";
-"Incorrect code" = "Kod i pasaktë";
-"Please try again in %@" = "Ju lutemi, riprovoni për %@";
-"Unlock %@" = "Shkyçe %@";
-"Biometric authentication failed" = "Mirëfilltësimi biometrik dështoi";
-"You are required to set the passcode" = "Është e domosdoshme të caktoni frazëkalimin";
-
-/* Certificate management */
-
-"Certificates" = "Dëshmi";
-"User-approved certificates" = "Dëshmi të miratuara nga përdorues";
-
-"Approved" = "Të miratuara";
-"Auto-approved" = "E vetëmiratuar";
-"Revoke approval" =  "Shfuqizoji miratimin";
-
-/* Actions */
-
-"Forbidden Characters" = "Shenja të Ndaluara";
-"File name cannot contain / or \\" = "Emri i kartelës s’mund të përmbajë / ose \\";
-"Item with same name already exists" = "Ka tashmë një objekt me të njëjtin emër";
-"An item with the same name already exists in this location." = "Në këtë vendndodhje ka tashmë një objekt me të njëjtin emër.";
-"New Folder" = "Dosje e Re";
-"Folder name" = "Emër dosjeje";
-"Rename" ="RiemÃ«rtoje";
-"Create folder" ="Krijo dosje";
-"Duplicate" = "Përsëdyte";
-"Move" = "Zhvendose";
-"Move {{itemCount}} items" = "Lëviz {{itemCount}} objekte";
-"Move \"{{itemName}}\"" = "Lëvize “{{itemName}}”";
-"Move here" = "Shpjere këtu";
-"Select target." = "Përzgjidhni objektiv.";
-"Open in" = "Hape në";
-"Copy" = "Kopjoje";
-"Copy {{itemCount}} items" = "Kopjo {{itemCount}} objekte";
-"Copy \"{{itemName}}\"" = "Kopjo “{{itemName}}”";
-"Copy here" = "Kopjoje këtu";
-
-"Cannot connect to " = "S’lidhet dot te";
-" couldn't download file(s)" = "s’u shkarkua dot kartelë(a)";
-"Actions" = "Veprime";
-"copy" = "kopjoje";
-"Close Window" = "Mbylle Dritaren";
-"Open in a new Window" = "Hape në Dritare të re";
-"Open in Window" = "Hape në Dritare";
-"Take photo or video" = "Bëni foto ose video";
-"%ld Item was copied to the clipboard" = "Në të papastër u kopjua %ld objekt";
-"%ld Items were copied to the clipboard" = "%ld Objekte u kopjuan në të papastër";
-"Please note: Folders can only be pasted into the %@ app and the same account." = "Ju lutemi, mbani parasysh: Dosjet mund të ngjiten vetëm te aplikacioni %@ dhe e njëjta llogari.";
-
-"Processing on server" = "Përpunim në shërbyes";
-
-"Preparing…" = "Po përgatitet…";
-
-"No actions available" = "S’ka veprime gati";
-"No actions are available for this folder, possibly because of missing permissions." = "S’ka veprime të gatshme për këtë dosje, mundet ngaqë mungojnë leje.";
-
-"Close actions menu" = "Mbylle menunë e veprimeve";
-"Favorited" = "U kalua e parapëlqyer";
-"Favorite item" = "Vëri shenjë objektit si i parapëlqyer";
-"Unfavorite item" = "Hiqja shenjën objektit si i parapëlqyer";
-"Presentation Mode" = "Mënyrë Paraqitje";
-"Enabling presentation mode will prevent the display from sleep mode until the view is closed." = "Aktivizimi i mënyrës paraqitje do ta pengojë ekranin të kalojë në mënyrën dremitje, deri kur të mbyllet pamja.";
-"Enable" = "Aktivizoje";
-"Exit Full Screen" = "Dil nga Sa Krejt Ekrani";
-
-"Select one or more items." = "Përzgjidhni një ose më tepër objekte.";
-
-"Add item" = "Shtoni element";
-
-/* App Provider */
-"New document" = "Dokument i ri";
-"Pick a name" = "Zgjidhni një emër";
-"Pick a document type to create:" = "Zgjidhni një dokument për krijim:";
-"Error creating {{itemName}}" = "Gabim në krijimin e {{itemName}}";
-
-"Opening…" = "Po hapet…";
-
-"Open in {{appName}} (web)" = "Hape me {{appName}} (web)";
-"Error opening {{itemName}} in {{appName}}" = "Gabim në hapjen e {{itemName}} me {{appName}}";
-"Opening documents is not supported by the app provider on this instance." = "Hapja e dokumenteve nuk mbulohet nga shërbimi i aplikacioneve në këtë instancë.";
-
-/* Preview */
-"Open file" = "Hap kartelë";
-"Network unavailable" = "Rrjet i pakapshëm";
-"Error" = "Gabim";
-"Could not get the picture" = "S’u mor dot figura";
-"Downloading" = "Shkarkim";
-"File couldn't be opened" = "Kartela s’u hap dot";
-"Connecting..." = "Po lidhet…";
-
-"File" = "Kartelë";
-"%@ was updated" = "%@ u përditësua";
-"Would you like to view the updated version?" = "Do të donit të shihni versionin e përditësuar?";
-"Show new version" = "Shfaq versionin e ri";
-"Refresh without asking" = "Rifreskoje pa pyetur";
-"Ignore updates" = "Shpërfill përditësimet";
-
-/* PDF Viewer */
-"Resume" = "Rimerre";
-"Go to page" = "Shko tek faqja";
-"Page" = "Faqe";
-"This document has %@ pages" = "Ky dokument ka %@ faqe";
-"%@ of %@" = "%@ nga %@";
-"Invalid Page" = "Faqe e Pavlefshme";
-"The entered page number doesn't exist" = "Numri i dhënë për faqen nuk ekziston";
-"Search PDF" = "Kërko në PDF";
-"Outline" = "Përvijoje";
-"Find Next" = "Gjej Pasuesen";
-"Find Previous" = "Gjej të Mëparshmen";
-"Close Search" = "Mbylle Kërkimin";
-
-/* Photo Upload */
-"Upload" = "Ngarkoje";
-"Select All" = "Përzgjidhi Krejt";
-"Deselect All" = "Shpërzgjidhi Krejt";
-"All Photos" = "Krejt Fotot";
-"Albums" = "Albume";
-"Importing from photo library" = "Importim nga fototekë";
-"Media import" = "Importim media";
-"%@ of %@" = "%@ nga %@";
-"Selected folder lacks file creation permission" = "Dosjes së përzgjedhur i mungon leje krijimi kartelash";
-"%d Item" = "%d Objekt";
-"%d Items" = "%d Objekte";
-"Select Items" = "Përzgjidhni Objekte";
-
-/* Scan */
-"Scan" = "Skanim";
-"Scans" = "Skanime";
-"Scan document" = "Skanoni dokument";
-"Saving" = "Po ruhet";
-"File format" = "Format kartelash";
-"Name" = "Emër";
-"Save as" = "Ruaje si";
-"Options" = "Mundësi";
-"Scan additional" = "Skanim shtesë";
-"Create one file per page" = "Krijo një kartelë për faqe";
-
-/* Sharing */
-"Sharing requires an active connection." = "Ndarja me të tjerë lyp një lidhje aktive";
-"No items shared with you" = "S’ka objekte të ndarë me ju";
-"No items shared by you" = "S’ka objekte të ndarë nga ju";
-"No items shared by link" = "S’ka objekte ndarë përmes lidhjeje";
-
-"Searching Shares…" = "Po kërkohet në Pjesë…";
-"Recipient" = "Marrës";
-"Recipients" = "Marrëss";
-"Public Link" = "Lidhje Publike";
-"Public Links" = "Lidhje Publike";
-"Shared by {{owner}}" = "Ndarë me të tjerë nga {{owner}}";
-"Shared with {{recipient}}" = "Ndarë me {{recipient}}";
-"Shared with {{recipients}}" = "Ndarë me {{recipients}}";
-"Expires {{expirationDate}}" = "Skadon më {{expirationDate}}";
-"Share {{itemName}}" = "Ndajeni {{itemName}} me të tjerë";
-"Create link" = "Krijo lidhje";
-"Invite" = "Ftoje";
-"Invite Recipient" = "Ftoni Marrës";
-"Recipients" = "Marrëss";
-"Add email or name" = "Shtoni email ose emër";
-"Users" = "PÃ«rdorues";
-"Groups" = "Grupe";
-"Start typing to search users, groups and remote users." = "Filloni të shtypni që të kërkohet për përdorues, grupe dhe përdorues të largët.";
-"(Group)" = "(Grup)";
-"Adding User to Share failed" = "Dështoi shtim Përdoruesi te Pjesë";
-"Permissions" = "Leje";
-"Invited: %@" = "U ftua: %@";
-"Created: %@" = "U krijua: %@";
-"Allows the users you share with to re-share" = "Lejon që përdoruesit me të cilët ndani të rindajnë";
-"Allows the users you share with to edit your shared files, and to collaborate" = "U lejon përdoruesve me të cilët ndani gjëra të përpunojnë kartelat tuaja që ndani, dhe të bashkëpunojnë";
-"Allows the users you share with to create new files and add them to the share" = "U lejon përdoruesve me të cilët ndani gjëra të krijojnë kartela të reja dhe t’i shtojnë ato te ndarja";
-"Allows uploading a new version of a shared file and replacing it" = "Lejon ngarkimin e një versioni të ri të një kartelë të ndarë, si dhe zëvendësim të saj";
-"Allows the users you share with to delete shared files" = "U lejon përdoruesve me të cilët ndani gjëra të fshijnë kartela të ndara";
-"Setting permission failed" = "Dështoi dhënia e lejes";
-"Shared with" = "Ndarë me:";
-"Remove Recipient failed" = "Dështoi Heqje Marrësi";
-"Remove Recipient" = "Hiqe Marrësin";
-"Create" = "Krijoje";
-"Change" = "Ndryshoje";
-"Recipients can view or download contents." = "Marrësit mund të shohin dhe shkarkojnë lëndë.";
-"Recipients can view, download, edit, delete and upload contents." = "Marrësit mund të shohin shkarkojnë, përpunojnë, fshijnë dhe ngarkojnë lëndë.";
-"Receive files from multiple recipients without revealing the contents of the folder." = "Merr kartela prej të tjerësh pa e zbuluar lëndën e dosjes.";
-"Download / View" = "Të shkarkojë / Të shohë";
-"Download / View / Upload" = "Të shkarkojë / Të shohë / Të ngarkojë";
-"Upload only (File Drop)" = "Vetëm ngarkim (Lënie Kartele)";
-"Creating public link failed" = "Dështoi krijimi i lidhjes publike";
-"Create Public Link" = "Krijoni Lidhje Publike";
-"Links" = "Lidhje";
-"Link" = "Lidhje";
-"Setting expiration date failed" = "Dështoi caktimi i datës së skadimit";
-"Expiration date" = "Datë skadimi";
-"Copy Public Link" = "Kopjo Lidhje Publike";
-"Delete Public Link" = "Fshi Lidhje Publike";
-"Deleting Public Link failed" = "Dështoi fshirja e Lidhjes Publike";
-"Deleting password failed" = "Dështoi fshirja e fjalëkalimit";
-"Setting password failed" = "Dështoi caktimi i fjalëkalimit";
-"Type to update password" = "Shtypni që të përditësohet fjalëkalimi";
-"Cannot change permission" = "S’ndryshohet dot leje";
-"Before you can set the permission\n%@,\n you must enter a password." = "Përpara se të caktoni lejen\n%@,\n duhet të jepni një fjalëkalim.";
-"Password Protected" = "Mbrojtur me Fjalëkalim";
-"Pending Federated Invites" = "Ftesa të Federuara Pezull";
-"Pending Invites" = "Ftesa Pezull";
-"Shared with you" = "Të ndara me ju";
-"Shared with others" = "Të ndara me të tjerët";
-"Shares" = "Pjesë";
-"Copy Private Link" = "Kopjo Lidhje Private";
-"Only people who have access to the file/folder can use it. Use it as a permanent link for yourself or to point others to files within shares." = "Vetëm personat që kanë hyrje te kartela/dosja mund ta përdorin atë. Përdoreni si një lidhje të përhershme për veten tuaj, ose për t’u treguar të tjerëve kartela brenda pjesësh.";
-"Accept Share failed" = "Dështoi Pranimi i Pjesës";
-"Decline Share failed" = "Dështoi Hedhja Tej e Pjesës";
-"Accept" = "Pranoje";
-"Decline" = "Hidhe poshtë";
-"Declined" = "Hedhur Poshtë";
-"Decline Share" = "Hidhe Poshtë Pjesën";
-"Unshare" = "Hiqi ndarjen me të tjerë";
-"Unshare failed" = "Dështoi heqja e ndarjes";
-"Are you sure you want to unshare these items?" = "Jeni i sigurt se doni të hiqet ndarja e këtyre objekteve?";
-"Are you sure you want to unshare this item?" = "Jeni i sigurt se doni të hiqet ndarja e këtij objekti?";
-"Share" = "Ndaje me të tjerë";
-"Read" = "Lexoni";
-"Can Share" = "Mund të Ndajë";
-"Can Edit" = "Mund të Përpunojë";
-"Can Edit and Change" = "Mund të Përpunojë dhe Ndryshojë";
-"Can Create" = "Mund të Krijojë";
-"Can Change" = "Mund të Ndryshojë";
-"Can Delete" = "Mund të Fshijë";
-"Accept Invite %@" = "Pranoni Ftesën %@";
-"Decline Invite %@" = "Hidheni Tej Ftesën %@";
-"Decline cannot be undone." = "Hedhja tej s’mund të zhbëhet.";
-"Sharing" = "Ndarje me të tjerët";
-"You" = "Ju";
-"Share this file" = "Ndajeni këtë kartelë";
-"Share this folder" = "Ndajeni këtë dosje";
-"shared" = "e ndarë me të tjerë";
-"Owner" = "I zoti";
-"Private Link" = "Lidhje Private";
-"Created Public Link" = "Lidhja Publike u Krijua";
-"URL was copied to the clipboard" = "URL-ja u kopjua në të papastër";
-"%@ is not available, when this account is offline. Please open the app and log into your account before you can do this action." = "Kur kjo llogari s’është në linjë,  %@ s’mund të përdoret. Ju lutemi, hapni aplikacionin dhe hyni në llogarinë tuaj, përpara se të provoni këtë veprim.";
-"%@ is not available for this item." = "%@ s’mund të kryhet për këtë objekt.";
-"Share with user/group" = "Ndajeni me përdorues/grup";
-"Share link" = "Lidhje pjese";
-
-"Shared with me" = "Ndarë me mua";
-"Shared by me" = "Ndarë nga unë";
-"Shared by link" = "Të ndara me lidhje";
-
-"Share with" = "Ndajeni me";
-"Add" = "Shtoni";
-"Save changes" = "Ruaji ndryshimet";
-
-"Enter password" = "Jepni fjalëkalim";
-
-/* Quick Access view */
-"Quick Access" = "Hyrje e Shpejtë";
-"Collection" = "Koleksion";
-"Recents" = "Tani së fundi";
-"Favorites"= "Të parapëlqyera";
-"Images" = "Foto";
-"PDF Documents" = "Dokumente PDF";
-"Text" = "Tekst";
-"Documents" = "Dokumente";
-"Audio" = "Audio";
-
-/* Favorites view */
-"No favorites found" = "S’u gjetën të parapëlqyer";
-"If you make an item a favorite, it will turn up here." = "Nëse një objekti i vini shenjë si të parapëlqyer, ai do të shfaqet këtu.";
-
-/* Media files settings */
-"Media Files" = "Kartela Media";
-"Download instead of streaming" = "Shkarkoje, në vend se ta transmetosh";
-
-/* Photo upload settings */
-"Media Upload" = "Ngarkim Media";
-"Media Export" = "Eksportim Mediash";
-"Auto Upload" = "Vetëngarkoje";
-"Convert HEIC to JPEG" = "Shndërroje HEIC në JPEG";
-"Convert videos to MP4" = "Shndërroji videot në MP4";
-"Preserve original media file names" = "Ruaj emra origjinalë kartelash media";
-"Auto Upload Photos" = "Vetëngarko Foto";
-"Auto Upload Videos" = "Vetëngarko Video";
-"Account" = "Llogari";
-"Accounts" = "Llogari";
-"Select account" = "Përzgjidhni llogari";
-"Photo upload path" = "Shteg ngarkimi fotosh";
-"Video upload path" = "Shteg ngarkimesh videosh";
-"Select Upload Path" = "Përzgjidhni Shteg Ngarkimi";
-"Auto upload of media was disabled since configured account / folder was not found" = "Vetëngarkimi i medias qe çaktivizuar, ngaqë s’u gjet llogaria / dosja e formësuar";
-"Importing %@ media files for upload" = "Po importohen kartela media %@ për ngarkim";
-"Photo upload" = "Ngarkim fotosh";
-"Video upload" = "Ngarkim videosh";
-
-/* Background media uploads */
-"Background uploads (Lab Version)" = "Ngarkime në sfond (Lab Version)";
-"Background uploads" = "Ngarkime në prapaskenë";
-"Use background refresh" = "Përdor rifreskim në prapaskenë";
-"Allow this app to refresh the content when on Wi-Fi or mobile network in background." = "Lejojeni këtë aplikacion të rifreskojë në prapaskenë lëndën, kur gjendet në rrjet Wi-Fi ose celular.";
-"Enable background uploads" = "Aktivizo ngarkime në prapaskenë";
-"Use background location updates" = "Përdor përditësime në prapaskenë të vendndodhjes";
-"Background upload notifications" = "Njoftime ngarkimesh në prapaskenë";
-"If you would like background media uploads to be more reliable, you should enable background location updates." = "Nëse do të donit që ngarkimet në prapaskenë të mediave të jenë më të qëndrueshme, duhet të aktivizoni përditësime vendndodhjeje në prapaskenë.";
-"Background media uploads rely on location updates and will stop working if location acquisition permissions are revoked." = "Ngarkimet në prapaskenë të mediave bazohen në përditësime vendndodhjeje dhe do të reshtin së funksionuari, nëse hiqet leja për marrje vendndodhjeje.";
-"Otherwise background media uploads using background refresh technology would depend on how frequently you use the app." = "Përndryshe, ngarkimet në prapaskenë të mediave duke përdorur teknologji rifreskimi do të vareshin nga fakti se sa shpesh e përdorni aplikacionin.";
-"Location permission denied" = "Leje e mohuar për vendndodhje";
-"Please re-enable location acquisition in system settings" = "Ju lutemi, riaktivizoni marrje vendndodhjeje te rregullimet e sistemit";
-"Scheduled upload of %ld media assets" = "Ngarkim i planifikuar i %ld burimesh media";
-
-/* Progress summarizer */
-"Creating %ld folders…" = "Po krijohen %ld dosje…";
-"Moving %ld items…" = "Po lëziven %ld objekte…";
-"Copying %ld items…" = "Po kopjohen %ld objekte…";
-"Deleting %ld items…" = "Po fshihen %ld objekte…";
-"Uploading %ld files…" = "Po ngarkohen %ld kartela…";
-"Downloading %ld files…" = "Po shkarkohen %ld kartela…";
-"Updating %ld items…" = "Po përditësohen %ld objekte…";
-
-/* Offline storage management */
-"Free on %@" = "Falas në %@";
-"unknown" = "i panjohur";
-"Offline files use" = "Përdorim kartelash pa internet";
-"Compacting of '%@' failed" = "Dështoi ngjeshja e '%@'";
-"Include available offline files" = "Përfshi kartela të passhme jashtë linje";
-"Delete all Offline Files" = "Fshi Krejt Kartelat Jo Në Linjë";
-"Manage" = "Administroni";
-"Storage" = "Depozitë";
-"Compacting" = "Po ngjeshet";
-
-"Really include available offline files?" = "Të përfshihen vërtet kartela të passhme jashtë linje?";
-"Files and folders marked as Available Offline will become unavailable. They will be re-downloaded next time you log into your account (connectivity required)." = "Kartelat dhe dosjet me shenjë për Të Passhme Jashtë Linje s’do të mund të përdoren dot. Ato do të rishkarkohen herës pasuese që bëni hyrjen në llogarinë tuaj (lypset lidhje në internet).";
-"Removes downloaded files and local copies of items marked as Available Offline. The latter will be re-downloaded next time you log into your account (connectivity required)." = "Heq kartelat e shkarkuara dhe kopjet vendore që tregohen si Të Përdorshme Jo Në Linjë. Këto të dytat do të rishkarkohen herën tjetër që bëni hyrjen në llogarinë tuaj (lyp lidhje në internet).";
-
-/* Diagnostic */
-"Diagnostic Overview" = "Përmbledhje Diagnostikimi";
-"Diagnostics" = "Diagnostikime";
-"Share Diagnostics" = "Ndani Diagnostikim Me të Tjerë";
-"Action executed" = "Veprimi u krye";
-
-"Update Status" = "Gjendje Përditësimi";
-"Completed update scans" = "U plotësuan kontrolle përditësimi";
-"Total update scans" = "Kontrolle përditësimi gjithsej";
-
-/* Available offline */
-"Root folder" = "Dosje rrënjë";
-"at" = "në";
-"(no match)" = "(pa përputhje)";
-
-"Make available offline" = "Bëje të passhme jo në linjë";
-"Make unavailable offline" = "Bëje jo të passhme jashtë linje";
-
-"Available Offline" = "E passhme Jashtë Linje";
-
-"No files available offline" = "S’ka kartela për përdorim jashtë interneti";
-"Files selected and downloaded for offline availability will show up here." = "Kartelat e përzgjedhura dhe të shkarkuara për përdorim jashtë interneti do të shfaqen këtu.";
-
-"Locations" = "Vende";
-"Downloaded Files" = "Kartela të Shkarkuara";
-
-/* Single Account */
-"You are connected as\n%@" = "Jeni i lidhur si\n%@";
-
-/* Release Notes */
-"Proceed" = "Bëje";
-"New in %@" = "E re në %@";
-"Thank you for using %@.\nIf you like our App, please leave an AppStore review.\n❤️" = "Faleminderit që përdorni %@.\nNëse e pëlqeni Aplikacionin tonë, ju lutemi, lini një shqyrtim te AppStore.\n❤️";
-"Thank you for using %@.\n" = "Faleminderit që përdorni %@.\n";
-
-/* Key Commands */
-"Select Next" = "Përzgjidhni Pasuesen";
-"Select Previous" = "Përzgjidhni të Mëparshmen";
-"Open Selected" = "Hap të Përzgjedhurën";
-"Change Sort Order" = "Ndrysho Rend Renditjeje";
-"Search" = "Kërko";
-"Back" = "Mbrapsht";
-"Save" = "Ruaje";
-"Sort by %@" = "Renditi sipas %@";
-"Tab %@" = "Skeda %@";
-"Select Last Item on Page" = "Përzgjidhni Elementin e Fundit në Faqe";
-"Scroll to Top" = "Rrëshqitni drejt Kreut";
-"Scroll to Bottom" = "Rrëshqitni drejt Fundit";
-"Copy to Clipboard" = "Kopjoje në të Papastër";
-"Import from Clipboard" = "Importoje prej të Papastre";
-"Choose destination directory…" = "Zgjidhni drejtori vendmbërritje…";
-"Next" = "Pasuesja";
-"Previous" = "E mëparshmja";
-"Favorite" = "Vëre Si të Parapëlqyer";
-"Cut" = "Prije";
-"Paste" = "Ngjite";
-"Play/Pause" = "Luaje/Pushoje";
-"Skip Back" = "Kërcim Prapa";
-"Skip Ahead" = "Kërcim Përpara";
-"Go to Beginning" = "Kalo te Fillimi";
-"Mute/Unmute" = "Hiqi/Ktheji Zërin";
-"Full Screen" = "Sa Krejt Ekrani";
-"Switch Theme Style" = "Ndërroni Stil Teme";
-
-/* Markup */
-"How should this file be saved?" = "Si duhet ruajtur kjo?";
-"Overwrite original" = "Mbishkruaj origjinalin";
-"Save as copy" = "Ruaje si kopje";
-"Discard changes" = "Hidhi tej ndryshimet";
-"Markup" = "Markup";
-"Crop or Rotate" = "Qethje ose Rrotullim";
-"Saving edited file failed" = "Ruajtja e kartelës së përpunar dështoi";
-"File no longer exists" = "Kartela s’ekziston më";
-
-/* Licensing */
-"Unlocked" = "E shkyçur";
-"Unlock" = "Shkyçe";
-
-"Subscribe Now" = "Pajtohuni Tani";
-"Free" = "Falaq";
-
-"%@ / %@" = "%@ / %@";
-"after free %@ trial" = "pas %@ provë falas";
-
-/* Example usage: "Try [14 days] for free." */
-"Try %@ for free." = "Provojeni falas %@.";
-
-/* Example usage: "Then [1,99 €] / [year]." */
-"Then %@ / %@." = "Më tej, %@ / %@.";
-
-/* Example usage: "[1,99 €] / [year] - starting immediately." */
-"%@ / %@ – starting immediately" = "%@ / %@ – duke filluar mu tani";
-
-/* Licensing: Pro Features */
-"Pro Features" = "Veçori Pro";
-
-/* Licensing: App Store */
-"Restore purchases" = "Rikthe blerjet";
-"Restoring purchases…" = "Po rikthehen blerjet…";
-"Error restoring purchases" = "Gabim gjatë rikthimit të blerjeve";
-"Error loading product info from App Store"= "Gabim në ngarkim hollësish produkti nga App Store";
-"Purchase failed" = "Blerja dështoi";
-"More information" = "Më tepër hollësi";
-
-/* Licensing: Enterprise */
-"Enterprise" = "Ndërrmarrje";
-
-/* Licensing: Settings */
-"In-App Purchases" = "Blerje Brenda Aplikacionit";
-"Purchases & Subscriptions" = "Blerje & Pajtime";
-"Error fetching transactions" = "Gabim në sjellje transaksionesh";
-"Document Scanner" = "Skaner Dokumentesh";
-"Scan documents and photos with your camera." = "Skanoni me kamerën tuaj dokumente dhe photo.";
-"Shortcuts Actions" = "Veprime Shkurtoresh";
-"Use ownCloud actions in Shortcuts." = "Përdorni veprime ownCloud te Shkurtoret.";
-"Markup Documents" = "U vini Dokumenteve Elementë Markup-i";
-"Markup photos and PDF files." = "U vini fotove dhe kartelave PDF Elementë Markup-i.";
-"Unlock all Pro Features." = "Shkyçi krejt Veçoritë Pro";
-
-"Purchased App Version" = "Version Aplikacioni të Blerë";
-"Receipt Date" = "Datë Dëftese";
-"Manage subscription" = "Administroni pajtim";
-"Purchases are not allowed on this device." = "Në këtë pajisje nuk lejohen blerjet.";
-"Type" = "Lloj";
-"Quantity" = "Sasi";
-"Product" = "Produkt";
-"Date" = "Datë";
-"Cancelled" = "Anuluar";
-"Ends" = "Përfundon";
-"none" = "asnjë";
-"trial" = "provë";
-"purchase" = "blerje";
-"subscription" = "pajtim";
-"Photo Pro Features" = "Veçori Pro Fotosh";
-"Image metadata, extended upload options" = "Tejtëdhëna figurash, mundësi të zgjeruara ngarkimi";
-"Purchase" = "Blijeni";
-"Subscribe" = "Pajtohuni";
-
-"No accounts found" = "S’u gjetën llogari";
-"In order to accurately determine your current licensing status, please add one or more accounts first." = "Që të përcaktohet saktë gjendja juaj aktuale e licencimit, ju lutemi, së pari shtoni një ose më tepër llogari.";
-
-/* Share Sheet */
-"Save File" = "Ruaje Kartelën";
-"Choose an account and folder to import into." = "Zgjidhni një llogari dhe një dosje ku të importohet.";
-"No account configured.\nSetup an new account in the app to save to." = "S’ka llogari të formësuar.\nUjdisni te aplikacioni një llogari të re ku të bëhet ruajtja.";
-"Importing item %ld of %ld" = "Po importohet objekti %ld nga %ld gjithsej";
-"Error importing %@" = "Gabim në importimin e %@";
-"Error loading item" = "Gabim në ngarkim objekti";
-"Preparing…" = "Po përgatitet…";
-"Import \"{{itemName}}\"" = "Importo “{{itemName}}”";
-"Import {{itemCount}} files" = "Importo {{itemCount}} kartela";
-"Save here" = "Ruaje këtu";
-
-/* FileProvider */
-/* - Disabled */
-"File Provider access has been disabled by the administrator.\n\nPlease use the app to access your files." = "Hyrja te Shërbimi i Kartelave është çaktivizuar nga përgjegjësi.\n\nJu lutemi, për të hyrë te kartelat tuaja përdorni aplikacionin.";
-"File Provider access has been disabled by the administrator. Please use the app to create new folders." = "Hyrja te Shërbimi i Kartelave është çaktivizuar nga përgjegjësi. Ju lutemi, për të krijuar kartela të reja, përdorni aplikacionin.";
-"File Provider access has been disabled by the administrator. Please use the share extension to import files." = "Hyrja te Shërbimi i Kartelave është çaktivizuar nga përgjegjësi. Ju lutemi, për të importuar kartela, përdorni zgjerimin për ndarje më të tjerë.";
-
-/* - No account */
-"No account has been set up in the {{app.name}} app yet." = "Te {{app.name}} s’është ujdisur ende llogari.";
-"Open app" = "Hap aplikacionin";
-
-/* Disallowed Import Methods */
-/* - Share Extension */
-"Share Extension disabled" = "Zgjerimi për Ndarje Me të Tjerë është çaktivizuar";
-"Importing files through the Share Extension is not allowed on this device." = "Në këtë pajisje nuk lejohet importim kartelash përmes Share Extension.";
-
-/* - Open with */
-"Opening not allowed" = "Nuk lejohet hapja";
-"Importing files through opening is not allowed on this device." = "Në këtë pajisje nuk lejohet importim kartelash përmes hapjes.";
-
-/* - Files.app */
-"Import not allowed" = "Nuk lejohet importimi";
-"Importing files through the File Provider is not allowed on this device." = "Në këtë pajisje nuk lejohet importimi i kartelave përmes Furnizuesit të Kartelave.";
-
-/* Misc. accessibility */
-"Enter multiple selection" = "Jepni përzgjedhje të shumëfishtë";
-
-/* Universal Links */
-"Resolving link…" = "Po shquhet lidhja…";
-"Link resolution failed" = "Shquarja e lidhjes dështoi";
-"Couldn't resolve a private link since you are offline and corresponding item is not cached locally." = "S’u bë dot shquarja e një lidhjeje private, ngaqë s’jeni i lidhur në internet dhe objekti përgjegjës s’është ruajtur lokalisht në fshehtinë.";
-"Couldn't resolve a private link since the item is not known to the server." = "S’u bë dot shquarja e një lidhjeje private, ngaqë objekti s’njihet nga shërbyesi.";
-"Link points to an account bookmark which is not configured in the app." = "Lidhja shpie te një faqerojtës llogarie që s’është formësuar te aplikacioni.";
-
-/* Photo meta-data */
-"Image metadata" = "Tejtëdhëna figure";
-"Image details" = "Hollësi figure";
-"Profile" = "Profil";
-"Size" = "Madhësi";
-"Density" = "Dendësi";
-"Color model" = "Model ngjyrash";
-"%@ (%d bits/channel)" = "%@ (%d bite/kanal)";
-"Histogram" = "Histogram";
-
-"Camera details" = "Hollësi kamere";
-"Capture settings" = "Rregullime fotografimi";
-"Time" = "Kohë";
-"EXIF aux info" = "Hollësi EXIF aux";
-"Authoring" =  "Authoring";
-"TIFF" = "TIFF";
-
-"Lens make" = "Prodhues Lenteje";
-"Lens model" = "Model lenteje";
-"Lens info" = "Hollësi thjerre";
-"Focal length" = "Rreze vatrore";
-"Focal length @ 35 mm" = "Rreze vatrore @ 35 mm";
-
-"Shutter speed" = "Shpejtësi diafragme";
-"Aperture" = "Hapje";
-"ISO" = "ISO";
-
-/* EXIF: exposure program */
-"Program" = "Program";
-"Not defined" = "E papërcaktuar";
-"Manual" = "Dorazi";
-"Normal" = "Normal";
-"Aperture priority" = "Përparësi hapjeje";
-"Shutter priority" = "Përparësi diafragme";
-"Creative" = "Creative";
-"Action" = "Veprim";
-"Portrait" = "Portret";
-"Landscape" = "Së gjeri";
-
-/* EXIF: exposure metering mode */
-"Metering" = "Metering";
-"unknown" = "i panjohur";
-"Average" = "Average";
-"CenterWeightedAverage" = "CenterWeightedAverage";
-"Spot" = "Spot";
-"MultiSpot" = "MultiSpot";
-"Pattern" = "Mostër";
-"Partial" = "Partial";
-
-/* EXIF: flash mode */
-"Flash" = "Flash";
-"Fired" = "Shkrepur";
-"Didn't fire" = "S’u shkrep";
-"No strobe return detection" = "No strobe return detection";
-"Strobe return light not detected" = "Strobe return light not detected";
-"Strobe return light detected" = "Strobe return light detected";
-"Compulsory flash firing" = "Shkrepje e detyrueshme flashi";
-"Compulsory flash supression" = "Çaktivizim i detyrueshëm flashi";
-"Auto mode" = "Mënyra e automatizuar";
-"Red eye detection supported" = "Mbulohet pikasje syri të kuq";
-"not present" = "jo e pranishme";
-
-/* EXIF: white balance */
-"White balance" = "Balancë të bardhe";
-"Auto" = "Auto";
-"Manual" = "Dorazi";
-
-"Exposure bias" = "Exposure bias";
-"Uncalibrated" = "E pakalibruar";
-"Original date" = "Datë origjinali";
-"Digitized date" = "Datë digitalizimi";
-
-"Color space" = "Paletë ngjyrash";
-
-/* EXIF: aux info */
-"Lens ID" = "ID lenteje";
-"Lens serial" = "Numër serial lenteje";
-"Serial number" = "Numër serial";
-"Flash compensation" = "Kompensim flashi";
-"Owner" = "I zoti";
-"Firmware" = "Firmware";
-"Keywords" = "Fjalëkyçe";
-"Copyright" = "Të drejta kopjimi";
-
-/* IPTC meta data */
-"Contact info" = "Hollësi kontakti";
-"Usage terms" = "Terma përdorimi";
-"Scene" = "Skenë";
-"Description" = "Përshkrim";
-
-/* IPTC photometric interpretation */
-"Photometric interpretation" = "Interpretim fotometrik";
-"none" = "asnjë";
-"RGB" = "RGB";
-"YCbCr" = "YCbCr";
-
-/* EXIF: gps position data */
-"GPS Location" = "Vendndodhje GPS";
-"Coordinates" = "Koordinata";
-"Altitude" = "Lartësi";
-"Place" = "Vend";
-"E" = "L";
-"W" = "P";
-"N" = "V";
-"S" = "J";
-
-/* Pro photo upload settings */
-"Extended upload settings" = "Rregullime ngarkimesh të zgjeruara";
-"Prefer unedited photos" = "Parapëlqe foto të papërpunuara";
-"Prefer RAW photos" = "Parapëlqe foto RAW";
-"Prefer original videos" = "Parapëlqe video origjinale";
-
-/* Limited photo library access */
-"Limited Photo Access" = "Hyrje e Kufizuar te Fotot";
-"Access for the media selected for upload is limited" = "Hyrja te media e përzgjedhur për ngarkim është e kufizuar";
-"No Access to the media selected for upload" = "Pa Hyrje te media e përzgjedhur për ngarkim";
-
-/* macOS support */
-"Passcode protection is not supported on this device.\nPlease disable passcode lock in the app settings." = "Mbrojtja me frazëkalim nuk mbulohet në këtë pajisje.\nJu lutemi, çaktivizoni kyçjen me frazëkalim, që nga rregullimet e aplikacionit.";
-
-/* MDM settings push */
-"New settings received from MDM" = "U morën rregullime të reja nga MDM";
-"Tap to quit the app." = "Prekeni që të mbyllet aplikacioni.";
-"Tap to launch the app." = "Prekeni që të hapet aplikacioni.";
-
-/* Beta warning */
-"Beta Warning" = "Sinjalizim për Beta";
-"\nThis is a BETA release that may - and likely will - still contain bugs.\n\nYOU SHOULD NOT USE THIS BETA VERSION WITH PRODUCTION SYSTEMS, PRODUCTION DATA OR DATA OF VALUE. YOU'RE USING THIS BETA AT YOUR OWN RISK.\n\nPlease let us know about any issues that come up via the \"Send Feedback\" option in the settings." = "\nKjo është një hedhje BETA në qarkullim, që mund - dhe me gjasa do të ketë - ende të meta.\n\nS’DUHET TA PËRDORNI KËTË VERSION BETA ME SISTEME PRODHIMI, TË DHËNA PRODHIMI OSE TË DHËNA ME VLERË. E PËRDORNI KËTË BETA ME QARIN DHE ZARARIN TUAJ.\n\nJu lutemi, na bëni të ditur çfarëdo problemi që shfaqet, përmes mundësisë “Dërgoni Përshtypje”, te rregullimet.";
-"Agree" = "Pajtohem";
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>
+This is a BETA release that may - and likely will - still contain bugs.
+
+YOU SHOULD NOT USE THIS BETA VERSION WITH PRODUCTION SYSTEMS, PRODUCTION DATA OR DATA OF VALUE. YOU'RE USING THIS BETA AT YOUR OWN RISK.
+
+Please let us know about any issues that come up via the "Send Feedback" option in the settings.</key>
+	<string>
+Kjo është një hedhje BETA në qarkullim, që mund - dhe me gjasa do të ketë - ende të meta.
+
+S’DUHET TA PËRDORNI KËTË VERSION BETA ME SISTEME PRODHIMI, TË DHËNA PRODHIMI OSE TË DHËNA ME VLERË. E PËRDORNI KËTË BETA ME QARIN DHE ZARARIN TUAJ.
+
+Ju lutemi, na bëni të ditur çfarëdo problemi që shfaqet, përmes mundësisë “Dërgoni Përshtypje”, te rregullimet.</string>
+	<key> couldn't download file(s)</key>
+	<string>s’u shkarkua dot kartelë(a)</string>
+	<key>%@ (%d bits/channel)</key>
+	<string>%@ (%d bite/kanal)</string>
+	<key>%@ / %@</key>
+	<string>%@ / %@</string>
+	<key>%@ / %@ – starting immediately</key>
+	<string>%@ / %@ – duke filluar mu tani</string>
+	<key>%@ is not available for this item.</key>
+	<string>%@ s’mund të kryhet për këtë objekt.</string>
+	<key>%@ is not available, when this account is offline. Please open the app and log into your account before you can do this action.</key>
+	<string>Kur kjo llogari s’është në linjë,  %@ s’mund të përdoret. Ju lutemi, hapni aplikacionin dhe hyni në llogarinë tuaj, përpara se të provoni këtë veprim.</string>
+	<key>%@ of %@</key>
+	<string>%@ nga %@</string>
+	<key>%@ was updated</key>
+	<string>%@ u përditësua</string>
+	<key>%@%@ %@ version %@ build %@
+(app: %@, sdk: %@)</key>
+	<string>%@%@ %@ version %@ montimi %@
+(aplikacion: %@, sdk: %@)</string>
+	<key>%ld Item was copied to the clipboard</key>
+	<string>Në të papastër u kopjua %ld objekt</string>
+	<key>%ld Items were copied to the clipboard</key>
+	<string>%ld Objekte u kopjuan në të papastër</string>
+	<key>%ld digit code</key>
+	<string>Kod me %ld shifra</string>
+	<key>'%@' is currently locked</key>
+	<string>'%@' është e kyçur</string>
+	<key>+ %ld more</key>
+	<string>+ %ld më tepër</string>
+	<key>Accept</key>
+	<string>Pranoje</string>
+	<key>Accept Share failed</key>
+	<string>Dështoi Pranimi i Pjesës</string>
+	<key>Accept or decline</key>
+	<string>Accept or decline</string>
+	<key>Accept share</key>
+	<string>Accept share</string>
+	<key>Accepted</key>
+	<string>Pranuar</string>
+	<key>Access denied</key>
+	<string>Hyrje e mohuar</string>
+	<key>Access for the media selected for upload is limited</key>
+	<string>Hyrja te media e përzgjedhur për ngarkim është e kufizuar</string>
+	<key>Account</key>
+	<string>Llogari</string>
+	<key>Account setup complete</key>
+	<string>Ujdisje llogarie e plotësuar</string>
+	<key>Accounts</key>
+	<string>Llogari</string>
+	<key>Acknowledgements</key>
+	<string>Falënderime</string>
+	<key>Action</key>
+	<string>Veprim</string>
+	<key>Action executed</key>
+	<string>Veprimi u krye</string>
+	<key>Actions</key>
+	<string>Veprime</string>
+	<key>Add</key>
+	<string>Shtoni</string>
+	<key>Add account</key>
+	<string>Shtoni llogari</string>
+	<key>Add item</key>
+	<string>Shtoni element</string>
+	<key>Add to sidebar</key>
+	<string>Add to sidebar</string>
+	<key>Advanced settings</key>
+	<string>Rregullime të mëtejshme</string>
+	<key>After %ld seconds</key>
+	<string>Pas %ld sekondash</string>
+	<key>After 1 minute</key>
+	<string>Pas 1 minute</string>
+	<key>After 30 minutes</key>
+	<string>Pas 30 minutash</string>
+	<key>After 5 minutes</key>
+	<string>Pas 5 minutash</string>
+	<key>Agree</key>
+	<string>Pajtohem</string>
+	<key>Albums</key>
+	<string>Albume</string>
+	<key>All Photos</key>
+	<string>Krejt Fotot</string>
+	<key>All done</key>
+	<string>U bë</string>
+	<key>Allow this app to refresh the content when on Wi-Fi or mobile network in background.</key>
+	<string>Lejojeni këtë aplikacion të rifreskojë në prapaskenë lëndën, kur gjendet në rrjet Wi-Fi ose celular.</string>
+	<key>Altitude</key>
+	<string>Lartësi</string>
+	<key>An error occurred</key>
+	<string>Ndodhi një gabim</string>
+	<key>An item with the same name already exists in this location.</key>
+	<string>Në këtë vendndodhje ka tashmë një objekt me të njëjtin emër.</string>
+	<key>An operation is currently performed that prevents connecting to '%@'. Please try again later.</key>
+	<string>Po kryhet një veprim që e pengon lidhjen me '%@'. Ju lutemi, riprovoni më vonë.</string>
+	<key>Aperture</key>
+	<string>Hapje</string>
+	<key>Aperture priority</key>
+	<string>Përparësi hapjeje</string>
+	<key>App Version</key>
+	<string>Version Aplikacioni</string>
+	<key>Apply choice to all similar issues</key>
+	<string>Zbatoje zgjedhjen mbi probleme të ngjashme</string>
+	<key>Apply to all</key>
+	<string>Zbatoje mbi krejt</string>
+	<key>Approve</key>
+	<string>Miratoje</string>
+	<key>Approved</key>
+	<string>Të miratuara</string>
+	<key>Are you sure you want to delete these items from the server?</key>
+	<string>Jeni i sigurt se doni të fshihen këto objekte prej shërbyesi?</string>
+	<key>Are you sure you want to delete this item from the server?</key>
+	<string>Jeni i sigurt se doni të fshihet ky objekt prej shërbyesit?</string>
+	<key>Are you sure you want to unshare these items?</key>
+	<string>Jeni i sigurt se doni të hiqet ndarja e këtyre objekteve?</string>
+	<key>Are you sure you want to unshare this item?</key>
+	<string>Jeni i sigurt se doni të hiqet ndarja e këtij objekti?</string>
+	<key>Audio</key>
+	<string>Audio</string>
+	<key>Audios</key>
+	<string>Audios</string>
+	<key>Authenticated as %@ via %@</key>
+	<string>Mirëfilltësuar si %@ përmes %@</string>
+	<key>Authenticated via</key>
+	<string>Mirëfilltësuar përmes</string>
+	<key>Authenticating…</key>
+	<string>Po bëhet mirëfilltësimi…</string>
+	<key>Authentication error</key>
+	<string>Authentication error</string>
+	<key>Authentication failed</key>
+	<string>Authentication failed</string>
+	<key>Authentication with %@ is no longer allowed. Re-authentication needed.</key>
+	<string>Mirëfilltësimi me %@ nuk lejohet më. Lyspet rimirëfilltësim.</string>
+	<key>Authoring</key>
+	<string>Authoring</string>
+	<key>Authorization failed</key>
+	<string>Autorizimi dështoi</string>
+	<key>Auto</key>
+	<string>Auto</string>
+	<key>Auto Upload</key>
+	<string>Vetëngarkoje</string>
+	<key>Auto Upload Photos</key>
+	<string>Vetëngarko Foto</string>
+	<key>Auto Upload Videos</key>
+	<string>Vetëngarko Video</string>
+	<key>Auto mode</key>
+	<string>Mënyra e automatizuar</string>
+	<key>Auto upload disabled</key>
+	<string>Auto upload disabled</string>
+	<key>Auto upload of media was disabled since configured account / folder was not found</key>
+	<string>Vetëngarkimi i medias qe çaktivizuar, ngaqë s’u gjet llogaria / dosja e formësuar</string>
+	<key>Auto-approved</key>
+	<string>E vetëmiratuar</string>
+	<key>Available Offline</key>
+	<string>E passhme Jashtë Linje</string>
+	<key>Available offline</key>
+	<string>Available offline</string>
+	<key>Average</key>
+	<string>Average</string>
+	<key>Back</key>
+	<string>Mbrapsht</string>
+	<key>Background upload notifications</key>
+	<string>Njoftime ngarkimesh në prapaskenë</string>
+	<key>Background uploads (Lab Version)</key>
+	<string>Ngarkime në sfond (Lab Version)</string>
+	<key>Beta Warning</key>
+	<string>Sinjalizim për Beta</string>
+	<key>Biometric authentication failed</key>
+	<string>Mirëfilltësimi biometrik dështoi</string>
+	<key>Bookmark Metadata</key>
+	<string>Tejtëdhëna Faqerojtësi</string>
+	<key>Browse</key>
+	<string>Shfletoni</string>
+	<key>Busy</key>
+	<string>Busy</string>
+	<key>By feature</key>
+	<string>Sipas veçorish</string>
+	<key>Camera details</key>
+	<string>Hollësi kamere</string>
+	<key>Cancel</key>
+	<string>Anuloje</string>
+	<key>Cannot connect to </key>
+	<string>S’lidhet dot te</string>
+	<key>Capture settings</key>
+	<string>Rregullime fotografimi</string>
+	<key>Cellular Data Usage</key>
+	<string>Përdorim të Dhënash Celulari</string>
+	<key>Cellular Data Usage have been disabled via MDM configuration. Please contact your administrator for more information.</key>
+	<string>Përdorimi i të Dhënave Celulare është çaktivizuar përmes formësimit të MDM-së. Për më tepër hollësi, ju lutemi, lidhuni me përgjegjësin.</string>
+	<key>CenterWeightedAverage</key>
+	<string>CenterWeightedAverage</string>
+	<key>Certificate Details</key>
+	<string>Hollësi Dëshmie</string>
+	<key>Certificate has issues.
+Open 'Certificate Details' for more informations.</key>
+	<string>Dëshmia ka probleme.
+Për më tepër hollësi, hapni 'Hollësi Dëshmie'.</string>
+	<key>Certificate may have issues, but was accepted by user.
+Open 'Certificate Details' for more informations.</key>
+	<string>Dëshmia mund të ketë probleme, por u pranua nga përdoruesi.
+Për më tepër hollësi, hapni 'Hollësi Dëshmie'.</string>
+	<key>Certificate was rejected by user.</key>
+	<string>Dëshmia u hodh poshtë nga përdoruesi.</string>
+	<key>Certificates</key>
+	<string>Dëshmi</string>
+	<key>Change</key>
+	<string>Ndryshoje</string>
+	<key>Change Sort Order</key>
+	<string>Ndrysho Rend Renditjeje</string>
+	<key>Change password</key>
+	<string>Change password</string>
+	<key>Changed {{settingID}} to {{newValue}}.</key>
+	<string>Changed {{settingID}} to {{newValue}}.</string>
+	<key>Choose destination directory…</key>
+	<string>Zgjidhni drejtori vendmbërritje…</string>
+	<key>Clear</key>
+	<string>Clear</string>
+	<key>Cleared all.</key>
+	<string>Cleared all.</string>
+	<key>Cleared {{settingID}}.</key>
+	<string>Cleared {{settingID}}.</string>
+	<key>Close Search</key>
+	<string>Mbylle Kërkimin</string>
+	<key>Close Window</key>
+	<string>Mbylle Dritaren</string>
+	<key>Close actions menu</key>
+	<string>Mbylle menunë e veprimeve</string>
+	<key>Color model</key>
+	<string>Model ngjyrash</string>
+	<key>Color space</key>
+	<string>Paletë ngjyrash</string>
+	<key>Compacting</key>
+	<string>Po ngjeshet</string>
+	<key>Compacting of '%@' failed</key>
+	<string>Dështoi ngjeshja e '%@'</string>
+	<key>Completed update scans</key>
+	<string>U plotësuan kontrolle përditësimi</string>
+	<key>Compulsory flash firing</key>
+	<string>Shkrepje e detyrueshme flashi</string>
+	<key>Compulsory flash supression</key>
+	<string>Çaktivizim i detyrueshëm flashi</string>
+	<key>Connecting</key>
+	<string>Connecting</string>
+	<key>Connecting...</key>
+	<string>Po lidhet…</string>
+	<key>Connecting…</key>
+	<string>Po lidhet…</string>
+	<key>Contact info</key>
+	<string>Hollësi kontakti</string>
+	<key>Contacting server…</key>
+	<string>Po kontaktohet shërbyesi…</string>
+	<key>Contents from cache.</key>
+	<string>Lëndë prej fshehtine.</string>
+	<key>Continue</key>
+	<string>Vazhdo</string>
+	<key>Continue offline</key>
+	<string>Vazhdo pa qenë në linjë</string>
+	<key>Convert HEIC to JPEG</key>
+	<string>Shndërroje HEIC në JPEG</string>
+	<key>Convert videos to MP4</key>
+	<string>Shndërroji videot në MP4</string>
+	<key>Coordinates</key>
+	<string>Koordinata</string>
+	<key>Copy</key>
+	<string>Kopjoje</string>
+	<key>Copy "{{itemName}}"</key>
+	<string>Kopjo “{{itemName}}”</string>
+	<key>Copy Private Link</key>
+	<string>Kopjo Lidhje Private</string>
+	<key>Copy here</key>
+	<string>Kopjoje këtu</string>
+	<key>Copy to clipboard</key>
+	<string>Copy to clipboard</string>
+	<key>Copy {{itemCount}} items</key>
+	<string>Kopjo {{itemCount}} objekte</string>
+	<key>Copying %ld items…</key>
+	<string>Po kopjohen %ld objekte…</string>
+	<key>Copyright</key>
+	<string>Të drejta kopjimi</string>
+	<key>Could not get the picture</key>
+	<string>S’u mor dot figura</string>
+	<key>Couldn't resolve a private link since the item is not known to the server.</key>
+	<string>S’u bë dot shquarja e një lidhjeje private, ngaqë objekti s’njihet nga shërbyesi.</string>
+	<key>Couldn't resolve a private link since you are offline and corresponding item is not cached locally.</key>
+	<string>S’u bë dot shquarja e një lidhjeje private, ngaqë s’jeni i lidhur në internet dhe objekti përgjegjës s’është ruajtur lokalisht në fshehtinë.</string>
+	<key>Create</key>
+	<string>Krijoje</string>
+	<key>Create folder</key>
+	<string>Krijo dosje</string>
+	<key>Create link</key>
+	<string>Krijo lidhje</string>
+	<key>Create one file per page</key>
+	<string>Krijo një kartelë për faqe</string>
+	<key>Create shortcut</key>
+	<string>Create shortcut</string>
+	<key>Creating %ld folders…</key>
+	<string>Po krijohen %ld dosje…</string>
+	<key>Creative</key>
+	<string>Creative</string>
+	<key>Credentials</key>
+	<string>Kredenciale</string>
+	<key>Cut</key>
+	<string>Prije</string>
+	<key>Dark</key>
+	<string>E errët</string>
+	<key>Data usage</key>
+	<string>Përdorim të dhënash</string>
+	<key>Date</key>
+	<string>Datë</string>
+	<key>Debug</key>
+	<string>Debug</string>
+	<key>Decline</key>
+	<string>Hidhe poshtë</string>
+	<key>Decline Share failed</key>
+	<string>Dështoi Hedhja Tej e Pjesës</string>
+	<key>Decline share</key>
+	<string>Decline share</string>
+	<key>Declined</key>
+	<string>Hedhur Poshtë</string>
+	<key>Decrease Slider Value</key>
+	<string>Zvogëloni Vlerë Rrëshqitësi</string>
+	<key>Delete</key>
+	<string>Fshije</string>
+	<key>Delete Authentication Data</key>
+	<string>Fshi të Dhëna Mirëfilltësimi</string>
+	<key>Delete all</key>
+	<string>Fshiji krejt</string>
+	<key>Delete all Offline Files</key>
+	<string>Fshi Krejt Kartelat Jo Në Linjë</string>
+	<key>Delete all log files?</key>
+	<string>Të fshihen krejt kartelat regjistër?</string>
+	<key>Delete code</key>
+	<string>Fshije kodin</string>
+	<key>Delete unused local copies</key>
+	<string>Fshi kopje vendore të papërdorura</string>
+	<key>Deleting %ld items…</key>
+	<string>Po fshihen %ld objekte…</string>
+	<key>Deletion of '%@' failed</key>
+	<string>Deletion of '%@' failed</string>
+	<key>Density</key>
+	<string>Dendësi</string>
+	<key>Description</key>
+	<string>Përshkrim</string>
+	<key>Deselect All</key>
+	<string>Shpërzgjidhi Krejt</string>
+	<key>Diagnostic Overview</key>
+	<string>Përmbledhje Diagnostikimi</string>
+	<key>Diagnostics</key>
+	<string>Diagnostikime</string>
+	<key>Didn't fire</key>
+	<string>S’u shkrep</string>
+	<key>Digitized date</key>
+	<string>Datë digitalizimi</string>
+	<key>Disable</key>
+	<string>Disable</string>
+	<key>Disable gestures</key>
+	<string>Çaktivizo gjeste</string>
+	<key>Discard changes</key>
+	<string>Hidhi tej ndryshimet</string>
+	<key>Disconnect</key>
+	<string>Shkëputu</string>
+	<key>Do you want to log out from '%@'?</key>
+	<string>Doni të dilni nga '%@'?</string>
+	<key>Do you want to open the following URL?</key>
+	<string>Doni të hapet URL-ja vijuese?</string>
+	<key>Document Scanner</key>
+	<string>Skaner Dokumentesh</string>
+	<key>Documentation</key>
+	<string>Dokumentim</string>
+	<key>Documents</key>
+	<string>Dokumente</string>
+	<key>Done</key>
+	<string>U bë</string>
+	<key>Download</key>
+	<string>Download</string>
+	<key>Download / View</key>
+	<string>Të shkarkojë / Të shohë</string>
+	<key>Download / View / Upload</key>
+	<string>Të shkarkojë / Të shohë / Të ngarkojë</string>
+	<key>Download instead of streaming</key>
+	<string>Shkarkoje, në vend se ta transmetosh</string>
+	<key>Downloaded Files</key>
+	<string>Kartela të Shkarkuara</string>
+	<key>Downloading %ld files…</key>
+	<string>Po shkarkohen %ld kartela…</string>
+	<key>Duplicate</key>
+	<string>Përsëdyte</string>
+	<key>E</key>
+	<string>L</string>
+	<key>EXIF aux info</key>
+	<string>Hollësi EXIF aux</string>
+	<key>Edit</key>
+	<string>Përpunoni</string>
+	<key>Edit account</key>
+	<string>Përpunoni llogari</string>
+	<key>Enable</key>
+	<string>Aktivizoje</string>
+	<key>Enable Pro Features (QA)</key>
+	<string>Enable Pro Features (QA)</string>
+	<key>Enable diagnostics</key>
+	<string>Aktivizo diagnostikime</string>
+	<key>Enable logging</key>
+	<string>Aktivizo regjistrimet</string>
+	<key>Enabling presentation mode will prevent the display from sleep mode until the view is closed.</key>
+	<string>Aktivizimi i mënyrës paraqitje do ta pengojë ekranin të kalojë në mënyrën dremitje, deri kur të mbyllet pamja.</string>
+	<key>Enabling this option will attempt to mask private data, so it does not become part of any log. Since logging is a development and debugging feature, though, we can't guarantee that the log file will be free of any private data even with this option enabled. Therefore, please look through any log file and verify its free of any data you're not comfortable sharing before sharing it with anybody.</key>
+	<string>Me aktivizimin e kësaj mundësie programi do të rreket të maskojë të dhëna private, që të mos jenë pjesë e ndonjë regjistrimi. Por, ngaqë regjistrimi është një veçori e lidhur me zhvillimin dhe diagnostikimet, s’mund të garantojmë që kartela regjistër do të jetë pa ndonjë të dhënë private, edhe pse kjo mundësi është e aktivizuar. Ndaj, ju lutemi, hidhini një sy cilësdo kartele regjistër dhe verifikoni se është pa ndonjë të dhënë për të cilën s’ndiheni rehat ta ndani me të tjerë, përpara se ta ndani me dikë.</string>
+	<key>Enter a new code with %ld digits</key>
+	<string>Jepni një kod të ri me %ld shifra</string>
+	<key>Enter a search term</key>
+	<string>Jepni një term kërkimi</string>
+	<key>Enter code</key>
+	<string>Jepni kod</string>
+	<key>Enter multiple selection</key>
+	<string>Jepni përzgjedhje të shumëfishtë</string>
+	<key>Enter the user or group you want to invite.</key>
+	<string>Jepni përdoruesin, ose grupin, që doni të ftohet.</string>
+	<key>Error</key>
+	<string>Gabim</string>
+	<key>Error creating {{itemName}}</key>
+	<string>Gabim në krijimin e {{itemName}}</string>
+	<key>Error fetching transactions</key>
+	<string>Gabim në sjellje transaksionesh</string>
+	<key>Error importing %@</key>
+	<string>Gabim në importimin e %@</string>
+	<key>Error loading item</key>
+	<string>Gabim në ngarkim objekti</string>
+	<key>Error loading product info from App Store</key>
+	<string>Gabim në ngarkim hollësish produkti nga App Store</string>
+	<key>Error opening %@</key>
+	<string>Gabim në hapjen e %@</string>
+	<key>Error opening {{itemName}} in {{appName}}</key>
+	<string>Gabim në hapjen e {{itemName}} me {{appName}}</string>
+	<key>Error restoring purchases</key>
+	<string>Gabim gjatë rikthimit të blerjeve</string>
+	<key>Exit Full Screen</key>
+	<string>Dil nga Sa Krejt Ekrani</string>
+	<key>Exit multiple selection</key>
+	<string>Exit multiple selection</string>
+	<key>Expiration date</key>
+	<string>Datë skadimi</string>
+	<key>Expires {{expirationDate}}</key>
+	<string>Skadon më {{expirationDate}}</string>
+	<key>Exposure bias</key>
+	<string>Exposure bias</string>
+	<key>Extend by one week</key>
+	<string>Extend by one week</string>
+	<key>Extended upload settings</key>
+	<string>Rregullime ngarkimesh të zgjeruara</string>
+	<key>Face ID</key>
+	<string>Face ID</string>
+	<key>Favorite item</key>
+	<string>Vëri shenjë objektit si i parapëlqyer</string>
+	<key>Favorites</key>
+	<string>Të parapëlqyera</string>
+	<key>Feedback</key>
+	<string>Përshtypje</string>
+	<key>Fetching server information…</key>
+	<string>Fetching server information…</string>
+	<key>Fetching user information…</key>
+	<string>Po sillen hollësi përdoruesi…</string>
+	<key>File</key>
+	<string>Kartelë</string>
+	<key>File Provider access has been disabled by the administrator.
+
+Please use the app to access your files.</key>
+	<string>Hyrja te Shërbimi i Kartelave është çaktivizuar nga përgjegjësi.
+
+Ju lutemi, për të hyrë te kartelat tuaja përdorni aplikacionin.</string>
+	<key>File Provider access has been disabled by the administrator. Please use the app to create new folders.</key>
+	<string>Hyrja te Shërbimi i Kartelave është çaktivizuar nga përgjegjësi. Ju lutemi, për të krijuar kartela të reja, përdorni aplikacionin.</string>
+	<key>File Provider access has been disabled by the administrator. Please use the share extension to import files.</key>
+	<string>Hyrja te Shërbimi i Kartelave është çaktivizuar nga përgjegjësi. Ju lutemi, për të importuar kartela, përdorni zgjerimin për ndarje më të tjerë.</string>
+	<key>File an issue</key>
+	<string>File an issue</string>
+	<key>File couldn't be opened</key>
+	<string>Kartela s’u hap dot</string>
+	<key>File format</key>
+	<string>Format kartelash</string>
+	<key>File name cannot contain / or \</key>
+	<string>Emri i kartelës s’mund të përmbajë / ose \</string>
+	<key>File no longer exists</key>
+	<string>Kartela s’ekziston më</string>
+	<key>Files</key>
+	<string>Kartela</string>
+	<key>Files and folders marked as Available Offline will become unavailable. They will be re-downloaded next time you log into your account (connectivity required).</key>
+	<string>Kartelat dhe dosjet me shenjë për Të Passhme Jashtë Linje s’do të mund të përdoren dot. Ato do të rishkarkohen herës pasuese që bëni hyrjen në llogarinë tuaj (lypset lidhje në internet).</string>
+	<key>Files selected and downloaded for offline availability will show up here.</key>
+	<string>Kartelat e përzgjedhura dhe të shkarkuara për përdorim jashtë interneti do të shfaqen këtu.</string>
+	<key>Find Next</key>
+	<string>Gjej Pasuesen</string>
+	<key>Find Previous</key>
+	<string>Gjej të Mëparshmen</string>
+	<key>Find information, answers and solutions in the detailed documentation.</key>
+	<string>Find information, answers and solutions in the detailed documentation.</string>
+	<key>Fired</key>
+	<string>Shkrepur</string>
+	<key>Firmware</key>
+	<string>Firmware</string>
+	<key>Flash</key>
+	<string>Flash</string>
+	<key>Flash compensation</key>
+	<string>Kompensim flashi</string>
+	<key>Focal length</key>
+	<string>Rreze vatrore</string>
+	<key>Focal length @ 35 mm</key>
+	<string>Rreze vatrore @ 35 mm</string>
+	<key>Folder</key>
+	<string>Dosje</string>
+	<key>Folder name</key>
+	<string>Emër dosjeje</string>
+	<key>Folder removed</key>
+	<string>Dosje e hequr</string>
+	<key>Forbidden Characters</key>
+	<string>Shenja të Ndaluara</string>
+	<key>Free</key>
+	<string>Falaq</string>
+	<key>Free on %@</key>
+	<string>Falas në %@</string>
+	<key>Full Screen</key>
+	<string>Sa Krejt Ekrani</string>
+	<key>GPS Location</key>
+	<string>Vendndodhje GPS</string>
+	<key>General</key>
+	<string>Të përgjithshme</string>
+	<key>Generate</key>
+	<string>Generate</string>
+	<key>Get in touch with our community in the forums - or file a GitHub issue to report a bug or request a feature.</key>
+	<string>Get in touch with our community in the forums - or file a GitHub issue to report a bug or request a feature.</string>
+	<key>Go to Beginning</key>
+	<string>Kalo te Fillimi</string>
+	<key>Go to page</key>
+	<string>Shko tek faqja</string>
+	<key>Grid</key>
+	<string>Mozaik</string>
+	<key>Group</key>
+	<string>Group</string>
+	<key>Groups</key>
+	<string>Grupe</string>
+	<key>Help</key>
+	<string>Ndihmë</string>
+	<key>Help &amp; Contact</key>
+	<string>Help &amp; Contact</string>
+	<key>Hide</key>
+	<string>Hide</string>
+	<key>Histogram</key>
+	<string>Histogram</string>
+	<key>How should this file be saved?</key>
+	<string>Si duhet ruajtur kjo?</string>
+	<key>ISO</key>
+	<string>ISO</string>
+	<key>If you 'Continue', you will be prompted to allow the '{{app.name}}' app to open the login page where you can enter your credentials.</key>
+	<string>Nëse “Vazhdoni”, do t’ju kërkohet të lejoni aplikacionin '{{app.name}}' të hapë faqen e hyrjeve, ku mund të jepni kredencialet tuaja.</string>
+	<key>If you 'Continue', you will be prompted to allow the '{{app.name}}' app to open the {{authmethodName}} login page where you can enter your credentials.</key>
+	<string>Nëse “Vazhdoni”, do t’ju shfaqet kërkesa për të lejuar aplikacionin '{{app.name}}' të hapë faqen e hyrjeve me {{authmethodName}}, prej nga mund të jepni kredencialet tuaja.</string>
+	<key>If you choose "Immediately" the App will be locked, when it is no longer in foreground.</key>
+	<string>Nëse zgjidhni “Menjëherë”, Aplikacioni do të kyçet, kur s’është më përpara në ekran.</string>
+	<key>If you have a moment to give us your feedback, please take our survey.</key>
+	<string>If you have a moment to give us your feedback, please take our survey.</string>
+	<key>If you make an item a favorite, it will turn up here.</key>
+	<string>Nëse një objekti i vini shenjë si të parapëlqyer, ai do të shfaqet këtu.</string>
+	<key>If you would like background media uploads to be more reliable, you should enable background location updates.</key>
+	<string>Nëse do të donit që ngarkimet në prapaskenë të mediave të jenë më të qëndrueshme, duhet të aktivizoni përditësime vendndodhjeje në prapaskenë.</string>
+	<key>If you'd like to give the account a custom name, please enter it below:</key>
+	<string>Nëse doni t’i jepni llogarisë një emër vetjak, ju lutemi, jepeni më poshtë:</string>
+	<key>Ignore updates</key>
+	<string>Shpërfill përditësimet</string>
+	<key>Image details</key>
+	<string>Hollësi figure</string>
+	<key>Image grid</key>
+	<string>Mozaik figurash</string>
+	<key>Image metadata</key>
+	<string>Tejtëdhëna figure</string>
+	<key>Image metadata, extended upload options</key>
+	<string>Tejtëdhëna figurash, mundësi të zgjeruara ngarkimi</string>
+	<key>Images</key>
+	<string>Foto</string>
+	<key>Immediately</key>
+	<string>Menjëherë</string>
+	<key>Import "{{itemName}}"</key>
+	<string>Importo “{{itemName}}”</string>
+	<key>Import from Clipboard</key>
+	<string>Importoje prej të Papastre</string>
+	<key>Import not allowed</key>
+	<string>Nuk lejohet importimi</string>
+	<key>Import {{itemCount}} files</key>
+	<string>Importo {{itemCount}} kartela</string>
+	<key>Importing %@ media files for upload</key>
+	<string>Po importohen kartela media %@ për ngarkim</string>
+	<key>Importing files through opening is not allowed on this device.</key>
+	<string>Në këtë pajisje nuk lejohet importim kartelash përmes hapjes.</string>
+	<key>Importing files through the Share Extension is not allowed on this device.</key>
+	<string>Në këtë pajisje nuk lejohet importim kartelash përmes Share Extension.</string>
+	<key>Importing item %ld of %ld</key>
+	<string>Po importohet objekti %ld nga %ld gjithsej</string>
+	<key>In order to accurately determine your current licensing status, please add one or more accounts first.</key>
+	<string>Që të përcaktohet saktë gjendja juaj aktuale e licencimit, ju lutemi, së pari shtoni një ose më tepër llogari.</string>
+	<key>In the cloud</key>
+	<string>In the cloud</string>
+	<key>In-App Purchases</key>
+	<string>Blerje Brenda Aplikacionit</string>
+	<key>Include available offline files</key>
+	<string>Përfshi kartela të passhme jashtë linje</string>
+	<key>Incorrect code</key>
+	<string>Kod i pasaktë</string>
+	<key>Increase Slider Value</key>
+	<string>Zmadhoni Vlerë Rrëshqitësi</string>
+	<key>Info</key>
+	<string>Hollësi</string>
+	<key>Invalid Page</key>
+	<string>Faqe e Pavlefshme</string>
+	<key>Invite</key>
+	<string>Ftoje</string>
+	<key>Issues</key>
+	<string>Probleme</string>
+	<key>Item grid</key>
+	<string>Mozaik objektesh</string>
+	<key>Item with same name already exists</key>
+	<string>Ka tashmë një objekt me të njëjtin emër</string>
+	<key>Keywords</key>
+	<string>Fjalëkyçe</string>
+	<key>Landscape</key>
+	<string>Së gjeri</string>
+	<key>Lens ID</key>
+	<string>ID lenteje</string>
+	<key>Lens info</key>
+	<string>Hollësi thjerre</string>
+	<key>Lens make</key>
+	<string>Prodhues Lenteje</string>
+	<key>Lens model</key>
+	<string>Model lenteje</string>
+	<key>Lens serial</key>
+	<string>Numër serial lenteje</string>
+	<key>Light</key>
+	<string>E çelët</string>
+	<key>Limited Photo Access</key>
+	<string>Hyrje e Kufizuar te Fotot</string>
+	<key>Link</key>
+	<string>Lidhje</string>
+	<key>Link points to an account bookmark which is not configured in the app.</key>
+	<string>Lidhja shpie te një faqerojtës llogarie që s’është formësuar te aplikacioni.</string>
+	<key>Link resolution failed</key>
+	<string>Shquarja e lidhjes dështoi</string>
+	<key>Links</key>
+	<string>Lidhje</string>
+	<key>List</key>
+	<string>Listë</string>
+	<key>Loading…</key>
+	<string>Po ngarkohet…</string>
+	<key>Local copy</key>
+	<string>Local copy</string>
+	<key>Local version</key>
+	<string>Local version</string>
+	<key>Location permission denied</key>
+	<string>Leje e mohuar për vendndodhje</string>
+	<key>Locations</key>
+	<string>Vende</string>
+	<key>Lock application</key>
+	<string>Kyçe aplikacionin</string>
+	<key>Log Destinations</key>
+	<string>Destinacione Regjistri</string>
+	<key>Log Files</key>
+	<string>Kartela Regjistër</string>
+	<key>Log Level</key>
+	<string>Nivel Regjistrimi</string>
+	<key>Log out</key>
+	<string>Dilni</string>
+	<key>Log out of '%@' failed</key>
+	<string>Log out of '%@' failed</string>
+	<key>Logging</key>
+	<string>Regjistrim</string>
+	<key>Login</key>
+	<string>Hyrje</string>
+	<key>Make available offline</key>
+	<string>Bëje të passhme jo në linjë</string>
+	<key>Make unavailable offline</key>
+	<string>Bëje jo të passhme jashtë linje</string>
+	<key>Manage</key>
+	<string>Administroni</string>
+	<key>Manual</key>
+	<string>Dorazi</string>
+	<key>Markup</key>
+	<string>Markup</string>
+	<key>Markup Documents</key>
+	<string>U vini Dokumenteve Elementë Markup-i</string>
+	<key>Markup photos and PDF files.</key>
+	<string>U vini fotove dhe kartelave PDF Elementë Markup-i.</string>
+	<key>Mask private data</key>
+	<string>Masko të dhëna private</string>
+	<key>Media Export</key>
+	<string>Eksportim Mediash</string>
+	<key>Media Files</key>
+	<string>Kartela Media</string>
+	<key>Media Upload</key>
+	<string>Ngarkim Media</string>
+	<key>Media import</key>
+	<string>Importim media</string>
+	<key>Messages</key>
+	<string>Messages</string>
+	<key>Metering</key>
+	<string>Metering</string>
+	<key>Missing hostname</key>
+	<string>Mungon strehëemër</string>
+	<key>Missing permissions</key>
+	<string>Mungojnë leje</string>
+	<key>More</key>
+	<string>Më tepër</string>
+	<key>More for {{title}}</key>
+	<string>More for {{title}}</string>
+	<key>More information</key>
+	<string>Më tepër hollësi</string>
+	<key>Move</key>
+	<string>Zhvendose</string>
+	<key>Move "{{itemName}}"</key>
+	<string>Lëvize “{{itemName}}”</string>
+	<key>Move here</key>
+	<string>Shpjere këtu</string>
+	<key>Move {{itemCount}} items</key>
+	<string>Lëviz {{itemCount}} objekte</string>
+	<key>Moving %ld items…</key>
+	<string>Po lëziven %ld objekte…</string>
+	<key>MultiSpot</key>
+	<string>MultiSpot</string>
+	<key>Multiple items</key>
+	<string>Shumë objekte</string>
+	<key>Mute/Unmute</key>
+	<string>Hiqi/Ktheji Zërin</string>
+	<key>N</key>
+	<string>V</string>
+	<key>Name</key>
+	<string>Emër</string>
+	<key>Name of saved search</key>
+	<string>Emër i kërkimit të ruajtur</string>
+	<key>Name of template</key>
+	<string>Emër gjedheje</string>
+	<key>Network unavailable</key>
+	<string>Rrjet i pakapshëm</string>
+	<key>New Folder</key>
+	<string>Dosje e Re</string>
+	<key>New document</key>
+	<string>Dokument i ri</string>
+	<key>New in %@</key>
+	<string>E re në %@</string>
+	<key>New settings received from MDM</key>
+	<string>U morën rregullime të reja nga MDM</string>
+	<key>Next</key>
+	<string>Pasuesja</string>
+	<key>Next item</key>
+	<string>Next item</string>
+	<key>No Access to the media selected for upload</key>
+	<string>Pa Hyrje te media e përzgjedhur për ngarkim</string>
+	<key>No account configured</key>
+	<string>No account configured</string>
+	<key>No account has been set up in the {{app.name}} app yet.</key>
+	<string>Te {{app.name}} s’është ujdisur ende llogari.</string>
+	<key>No accounts found</key>
+	<string>S’u gjetën llogari</string>
+	<key>No actions available</key>
+	<string>S’ka veprime gati</string>
+	<key>No authentication data has been found for this connection.</key>
+	<string>Për këtë lidhje s’u gjetën të dhëna mirëfilltësimi.</string>
+	<key>No contents</key>
+	<string>Pa lëndë</string>
+	<key>No favorites found</key>
+	<string>S’u gjetën të parapëlqyer</string>
+	<key>No files available offline</key>
+	<string>S’ka kartela për përdorim jashtë interneti</string>
+	<key>No issues found. Certificate passed validation.</key>
+	<string>S’u gjetën probleme. Dëshmia e mori vleftësimin.</string>
+	<key>No items found matching the search criteria.</key>
+	<string>S’u gjetën objekte me përputhje me kriteret e kërkimit.</string>
+	<key>No items shared by link</key>
+	<string>S’ka objekte ndarë përmes lidhjeje</string>
+	<key>No items shared by you</key>
+	<string>S’ka objekte të ndarë nga ju</string>
+	<key>No items shared with you</key>
+	<string>S’ka objekte të ndarë me ju</string>
+	<key>No matches</key>
+	<string>S’ka përputhje</string>
+	<key>No pending messages or ongoing actions.</key>
+	<string>S’ka mesazhe pezull apo veprime në kryerje e sipër.</string>
+	<key>No spaces</key>
+	<string>No spaces</string>
+	<key>No strobe return detection</key>
+	<string>No strobe return detection</string>
+	<key>No user or group matches your search.</key>
+	<string>No user or group matches your search.</string>
+	<key>Normal</key>
+	<string>Normal</string>
+	<key>Not defined</key>
+	<string>E papërcaktuar</string>
+	<key>Not now</key>
+	<string>Jo tani</string>
+	<key>OK</key>
+	<string>OK</string>
+	<key>Off</key>
+	<string>Off</string>
+	<key>Offline</key>
+	<string>Offline</string>
+	<key>Offline files use</key>
+	<string>Përdorim kartelash pa internet</string>
+	<key>Online</key>
+	<string>Online</string>
+	<key>Open Selected</key>
+	<string>Hap të Përzgjedhurën</string>
+	<key>Open app</key>
+	<string>Hap aplikacionin</string>
+	<key>Open file</key>
+	<string>Hap kartelë</string>
+	<key>Open help page</key>
+	<string>Open help page</string>
+	<key>Open in</key>
+	<string>Hape në</string>
+	<key>Open in a new Window</key>
+	<string>Hape në Dritare të re</string>
+	<key>Open in {{appName}} (web)</key>
+	<string>Hape me {{appName}} (web)</string>
+	<key>Open link</key>
+	<string>Open link</string>
+	<key>Open login page</key>
+	<string>Hapni faqen e hyrjeve</string>
+	<key>Open shortcut</key>
+	<string>Open shortcut</string>
+	<key>Opening documents is not supported by the app provider on this instance.</key>
+	<string>Hapja e dokumenteve nuk mbulohet nga shërbimi i aplikacioneve në këtë instancë.</string>
+	<key>Opening link failed</key>
+	<string>Opening link failed</string>
+	<key>Opening not allowed</key>
+	<string>Nuk lejohet hapja</string>
+	<key>Opening…</key>
+	<string>Po hapet…</string>
+	<key>Optic ID</key>
+	<string>Optic ID</string>
+	<key>Options</key>
+	<string>Mundësi</string>
+	<key>Original date</key>
+	<string>Datë origjinali</string>
+	<key>Otherwise background media uploads using background refresh technology would depend on how frequently you use the app.</key>
+	<string>Përndryshe, ngarkimet në prapaskenë të mediave duke përdorur teknologji rifreskimi do të vareshin nga fakti se sa shpesh e përdorni aplikacionin.</string>
+	<key>Outline</key>
+	<string>Përvijoje</string>
+	<key>Overwrite original</key>
+	<string>Mbishkruaj origjinalin</string>
+	<key>Owner</key>
+	<string>I zoti</string>
+	<key>PDF Documents</key>
+	<string>Dokumente PDF</string>
+	<key>Page</key>
+	<string>Faqe</string>
+	<key>Partial</key>
+	<string>Partial</string>
+	<key>Passcode Lock</key>
+	<string>Kyçje Me Kodkalim</string>
+	<key>Passcode option</key>
+	<string>Mundësi kodkalimi</string>
+	<key>Passcode protection is not supported on this device.
+Please disable passcode lock in the app settings.</key>
+	<string>Mbrojtja me frazëkalim nuk mbulohet në këtë pajisje.
+Ju lutemi, çaktivizoni kyçjen me frazëkalim, që nga rregullimet e aplikacionit.</string>
+	<key>Passcode setup</key>
+	<string>Ujdisje kodkalimi</string>
+	<key>Passed</key>
+	<string>Vleftësuar</string>
+	<key>Password</key>
+	<string>Fjalëkalim</string>
+	<key>Paste</key>
+	<string>Ngjite</string>
+	<key>Pattern</key>
+	<string>Mostër</string>
+	<key>Pending</key>
+	<string>Në pritje</string>
+	<key>Permissions</key>
+	<string>Leje</string>
+	<key>Photo Pro Features</key>
+	<string>Veçori Pro Fotosh</string>
+	<key>Photo upload</key>
+	<string>Ngarkim fotosh</string>
+	<key>Photo upload path</key>
+	<string>Shteg ngarkimi fotosh</string>
+	<key>Photometric interpretation</key>
+	<string>Interpretim fotometrik</string>
+	<key>Photos</key>
+	<string>Foto</string>
+	<key>Pick a destination for photo uploads</key>
+	<string>Pick a destination for photo uploads</string>
+	<key>Pick a destination for video uploads</key>
+	<string>Pick a destination for video uploads</string>
+	<key>Pick a document type to create:</key>
+	<string>Zgjidhni një dokument për krijim:</string>
+	<key>Pick a name</key>
+	<string>Zgjidhni një emër</string>
+	<key>Pick file or folder</key>
+	<string>Pick file or folder</string>
+	<key>Place</key>
+	<string>Vend</string>
+	<key>Play/Pause</key>
+	<string>Luaje/Pushoje</string>
+	<key>Please choose how many digits you want to use for the passcode lock?</key>
+	<string>Ju lutemi, zgjidhni sa shifra doni të përdoren për kyçje me kodkalim?</string>
+	<key>Please configure an email account</key>
+	<string>Ju lutemi, formësoni një llogari email</string>
+	<key>Please note: Folders can only be pasted into the %@ app and the same account.</key>
+	<string>Ju lutemi, mbani parasysh: Dosjet mund të ngjiten vetëm te aplikacioni %@ dhe e njëjta llogari.</string>
+	<key>Please open the app and select the account to re-authenticate.</key>
+	<string>Please open the app and select the account to re-authenticate.</string>
+	<key>Please re-enable location acquisition in system settings</key>
+	<string>Ju lutemi, riaktivizoni marrje vendndodhjeje te rregullimet e sistemit</string>
+	<key>Please try again in %@</key>
+	<string>Ju lutemi, riprovoni për %@</string>
+	<key>Please wait…</key>
+	<string>Ju lutemi, prisni…</string>
+	<key>Portions of this app may utilize the following copyrighted material, the use of which is hereby acknowledged.</key>
+	<string>Pjesë të këtij aplikacioni mund të përdorin materialin vijues që është nën të drejta kopjimi, përdorimi i të cilit këtu është i lejuar.</string>
+	<key>Portrait</key>
+	<string>Portret</string>
+	<key>Prefer RAW photos</key>
+	<string>Parapëlqe foto RAW</string>
+	<key>Prefer original videos</key>
+	<string>Parapëlqe video origjinale</string>
+	<key>Prefer unedited photos</key>
+	<string>Parapëlqe foto të papërpunuara</string>
+	<key>Preparing account</key>
+	<string>Përgatitje llogarie</string>
+	<key>Preparing…</key>
+	<string>Po përgatitet…</string>
+	<key>Presentation Mode</key>
+	<string>Mënyrë Paraqitje</string>
+	<key>Preserve original media file names</key>
+	<string>Ruaj emra origjinalë kartelash media</string>
+	<key>Prevent dragging of files and folders and multiselection using system defined gestures</key>
+	<string>Parandalo tërheqje kartelash dhe dosjesh dhe përzgjedhje të shumëfishta duke përdorur gjeste të përcaktuara nga sistemi</string>
+	<key>Previous</key>
+	<string>E mëparshmja</string>
+	<key>Previous item</key>
+	<string>Previous item</string>
+	<key>Privacy</key>
+	<string>Privatësi</string>
+	<key>Privacy Policy</key>
+	<string>Rregulla Privatësie</string>
+	<key>Private Link</key>
+	<string>Lidhje Private</string>
+	<key>Pro Features</key>
+	<string>Veçori Pro</string>
+	<key>Proceed</key>
+	<string>Bëje</string>
+	<key>Processing on server</key>
+	<string>Përpunim në shërbyes</string>
+	<key>Profile</key>
+	<string>Profil</string>
+	<key>Program</key>
+	<string>Program</string>
+	<key>Public Link</key>
+	<string>Lidhje Publike</string>
+	<key>Purchase</key>
+	<string>Blijeni</string>
+	<key>Purchase failed</key>
+	<string>Blerja dështoi</string>
+	<key>Purchases &amp; Subscriptions</key>
+	<string>Blerje &amp; Pajtime</string>
+	<key>Quick Access</key>
+	<string>Hyrje e Shpejtë</string>
+	<key>RGB</key>
+	<string>RGB</string>
+	<key>Read</key>
+	<string>Lexoni</string>
+	<key>Really delete '%@'?</key>
+	<string>Të fshihet '%@' vërtet?</string>
+	<key>Really include available offline files?</key>
+	<string>Të përfshihen vërtet kartela të passhme jashtë linje?</string>
+	<key>Recents</key>
+	<string>Tani së fundi</string>
+	<key>Recommend to a friend</key>
+	<string>Këshillojani një shoku</string>
+	<key>Red eye detection supported</key>
+	<string>Mbulohet pikasje syri të kuq</string>
+	<key>Refresh without asking</key>
+	<string>Rifreskoje pa pyetur</string>
+	<key>Rejected</key>
+	<string>Hedhur poshtë</string>
+	<key>Remove</key>
+	<string>Hiqe</string>
+	<key>Remove expiration date</key>
+	<string>Remove expiration date</string>
+	<key>Remove from sidebar</key>
+	<string>Remove from sidebar</string>
+	<key>Remove password</key>
+	<string>Remove password</string>
+	<key>Removes downloaded files and local copies of items marked as Available Offline. The latter will be re-downloaded next time you log into your account (connectivity required).</key>
+	<string>Heq kartelat e shkarkuara dhe kopjet vendore që tregohen si Të Përdorshme Jo Në Linjë. Këto të dytat do të rishkarkohen herën tjetër që bëni hyrjen në llogarinë tuaj (lyp lidhje në internet).</string>
+	<key>Rename</key>
+	<string>RiemÃ«rtoje</string>
+	<key>Repeat code</key>
+	<string>Përsëriteni kodin</string>
+	<key>Resolving link…</key>
+	<string>Po shquhet lidhja…</string>
+	<key>Restore purchases</key>
+	<string>Rikthe blerjet</string>
+	<key>Restoring purchases…</key>
+	<string>Po rikthehen blerjet…</string>
+	<key>Resume</key>
+	<string>Rimerre</string>
+	<key>Reveal</key>
+	<string>Reveal</string>
+	<key>Reveal in folder</key>
+	<string>Shfaqe në dosje</string>
+	<key>Review Connection</key>
+	<string>Shqyrtoni Lidhjen</string>
+	<key>Revoke approval</key>
+	<string>Shfuqizoji miratimin</string>
+	<key>S</key>
+	<string>J</string>
+	<key>Save</key>
+	<string>Ruaje</string>
+	<key>Save File</key>
+	<string>Ruaje Kartelën</string>
+	<key>Save as</key>
+	<string>Ruaje si</string>
+	<key>Save as copy</key>
+	<string>Ruaje si kopje</string>
+	<key>Save as search template</key>
+	<string>Ruaje si gjedhe kërkimi</string>
+	<key>Save changes</key>
+	<string>Ruaji ndryshimet</string>
+	<key>Save here</key>
+	<string>Ruaje këtu</string>
+	<key>Save search</key>
+	<string>Ruaje kërkimin</string>
+	<key>Saved search</key>
+	<string>Kërkim i ruajtur</string>
+	<key>Saved searches</key>
+	<string>Kërkime të ruajtur</string>
+	<key>Saving</key>
+	<string>Po ruhet</string>
+	<key>Saving edited file failed</key>
+	<string>Ruajtja e kartelës së përpunar dështoi</string>
+	<key>Scan</key>
+	<string>Skanim</string>
+	<key>Scan additional</key>
+	<string>Skanim shtesë</string>
+	<key>Scan document</key>
+	<string>Skanoni dokument</string>
+	<key>Scan documents and photos with your camera.</key>
+	<string>Skanoni me kamerën tuaj dokumente dhe photo.</string>
+	<key>Scans</key>
+	<string>Skanime</string>
+	<key>Scene</key>
+	<string>Skenë</string>
+	<key>Scheduled upload of %ld media assets</key>
+	<string>Ngarkim i planifikuar i %ld burimesh media</string>
+	<key>Scroll to Bottom</key>
+	<string>Rrëshqitni drejt Fundit</string>
+	<key>Scroll to Top</key>
+	<string>Rrëshqitni drejt Kreut</string>
+	<key>Search</key>
+	<string>Kërko</string>
+	<key>Search PDF</key>
+	<string>Kërko në PDF</string>
+	<key>Search account</key>
+	<string>Kërko llogari</string>
+	<key>Search folder</key>
+	<string>Kërko në dosje</string>
+	<key>Search for users or groups</key>
+	<string>Kërkoni për përdorues ose grupe</string>
+	<key>Search from {{folder.name}}</key>
+	<string>Kërko prej {{folder.name}}</string>
+	<key>Search space</key>
+	<string>Kërko në hapësirë</string>
+	<key>Search template</key>
+	<string>Gjedhe kërkimi</string>
+	<key>Search templates</key>
+	<string>Gjedhe kërkimi</string>
+	<key>Search tree</key>
+	<string>Pemë kërkimesh</string>
+	<key>Search {{space.name}}</key>
+	<string>Kërko në {{space.name}}</string>
+	<key>Security</key>
+	<string>Siguri</string>
+	<key>Select</key>
+	<string>Përzgjidhe</string>
+	<key>Select All</key>
+	<string>Përzgjidhi Krejt</string>
+	<key>Select Destination</key>
+	<string>Select Destination</string>
+	<key>Select Last Item on Page</key>
+	<string>Përzgjidhni Elementin e Fundit në Faqe</string>
+	<key>Select Next</key>
+	<string>Përzgjidhni Pasuesen</string>
+	<key>Select Previous</key>
+	<string>Përzgjidhni të Mëparshmen</string>
+	<key>Select folder</key>
+	<string>Select folder</string>
+	<key>Select one or more items.</key>
+	<string>Përzgjidhni një ose më tepër objekte.</string>
+	<key>Select target.</key>
+	<string>Përzgjidhni objektiv.</string>
+	<key>Send feedback</key>
+	<string>Dërgoni përshtypje</string>
+	<key>Serial number</key>
+	<string>Numër serial</string>
+	<key>Server Password</key>
+	<string>Fjalëkalim Shërbyesi</string>
+	<key>Server URL</key>
+	<string>URL shërbyesi</string>
+	<key>Server Username</key>
+	<string>Emër përdoruesi Shërbyesi</string>
+	<key>Server name</key>
+	<string>Emër shërbyesi</string>
+	<key>Set</key>
+	<string>Set</string>
+	<key>Settings</key>
+	<string>Rregullime</string>
+	<key>Setup a new account in the app to save to.</key>
+	<string>Setup a new account in the app to save to.</string>
+	<key>Share</key>
+	<string>Ndaje me të tjerë</string>
+	<key>Share Diagnostics</key>
+	<string>Ndani Diagnostikim Me të Tjerë</string>
+	<key>Share Extension disabled</key>
+	<string>Zgjerimi për Ndarje Me të Tjerë është çaktivizuar</string>
+	<key>Share Extension unavailable</key>
+	<string>Share Extension unavailable</string>
+	<key>Share with</key>
+	<string>Ndajeni me</string>
+	<key>Shared</key>
+	<string>Shared</string>
+	<key>Shared by link</key>
+	<string>Të ndara me lidhje</string>
+	<key>Shared by me</key>
+	<string>Ndarë nga unë</string>
+	<key>Shared by {{owner}}</key>
+	<string>Ndarë me të tjerë nga {{owner}}</string>
+	<key>Shared with</key>
+	<string>Ndarë me:</string>
+	<key>Shared with me</key>
+	<string>Ndarë me mua</string>
+	<key>Shared with {{recipients}}</key>
+	<string>Ndarë me {{recipients}}</string>
+	<key>Shared with {{recipient}}</key>
+	<string>Ndarë me {{recipient}}</string>
+	<key>Shares</key>
+	<string>Pjesë</string>
+	<key>Sharing</key>
+	<string>Ndarje me të tjerët</string>
+	<key>Sharing requires an active connection.</key>
+	<string>Ndarja me të tjerë lyp një lidhje aktive</string>
+	<key>Shortcut</key>
+	<string>Shortcut</string>
+	<key>Shortcut to '{{hostname}}'</key>
+	<string>Shortcut to '{{hostname}}'</string>
+	<key>Shortcuts Actions</key>
+	<string>Veprime Shkurtoresh</string>
+	<key>Shorten by one week</key>
+	<string>Shorten by one week</string>
+	<key>Show</key>
+	<string>Show</string>
+	<key>Show all</key>
+	<string>Shfaqi krejt</string>
+	<key>Show folders on top</key>
+	<string>Dosjet shfaqi në krye</string>
+	<key>Show hidden files and folders</key>
+	<string>Shfaq kartela dhe dosje të fshehura</string>
+	<key>Show message</key>
+	<string>Show message</string>
+	<key>Show more results</key>
+	<string>Shfaq më tepër përfundime</string>
+	<key>Show new version</key>
+	<string>Shfaq versionin e ri</string>
+	<key>Show/Hide sidebar</key>
+	<string>Show/Hide sidebar</string>
+	<key>Shutter priority</key>
+	<string>Përparësi diafragme</string>
+	<key>Shutter speed</key>
+	<string>Shpejtësi diafragme</string>
+	<key>Sign in</key>
+	<string>Hyni</string>
+	<key>Size</key>
+	<string>Madhësi</string>
+	<key>Skip</key>
+	<string>Anashkalojeni</string>
+	<key>Skip Ahead</key>
+	<string>Kërcim Përpara</string>
+	<key>Skip Back</key>
+	<string>Kërcim Prapa</string>
+	<key>Some cellular data may still be used. To completely avoid the usage of cellular data, please turn off access to cellular for the entire app in the Settings app.</key>
+	<string>Disa të dhëna celulari mund të jenë ende duke u përdorur Për të shmangur plotësisht përdorimin e të dhënave të shërbimit celular, ju lutemi, çaktivizoni  hyrjen në celular për krejt aplikacionin, që nga aplikacioni Rregullime.</string>
+	<key>Sort by %@</key>
+	<string>Renditi sipas %@</string>
+	<key>Sort by {{attribute}} in {{direction}} order</key>
+	<string>Sort by {{attribute}} in {{direction}} order</string>
+	<key>Space</key>
+	<string>Space</string>
+	<key>Spaces</key>
+	<string>Spaces</string>
+	<key>Spot</key>
+	<string>Spot</string>
+	<key>Start setup</key>
+	<string>Nisni ujdisjen</string>
+	<key>Status</key>
+	<string>Gjendje</string>
+	<key>Storage</key>
+	<string>Depozitë</string>
+	<key>Strobe return light detected</key>
+	<string>Strobe return light detected</string>
+	<key>Strobe return light not detected</key>
+	<string>Strobe return light not detected</string>
+	<key>Subscribe</key>
+	<string>Pajtohuni</string>
+	<key>Subscribe Now</key>
+	<string>Pajtohuni Tani</string>
+	<key>Switch Theme Style</key>
+	<string>Ndërroni Stil Teme</string>
+	<key>System</key>
+	<string>Sistem</string>
+	<key>System Appeareance</key>
+	<string>Dukje Sistemi</string>
+	<key>TIFF</key>
+	<string>TIFF</string>
+	<key>Tab %@</key>
+	<string>Skeda %@</string>
+	<key>Take photo or video</key>
+	<string>Bëni foto ose video</string>
+	<key>Take survey</key>
+	<string>Take survey</string>
+	<key>Tap to launch the app.</key>
+	<string>Prekeni që të hapet aplikacioni.</string>
+	<key>Tap to quit the app.</key>
+	<string>Prekeni që të mbyllet aplikacioni.</string>
+	<key>Terms Of Use</key>
+	<string>Kushte Përdorimi</string>
+	<key>Text</key>
+	<string>Tekst</string>
+	<key>Thank you for using %@.
+</key>
+	<string>Faleminderit që përdorni %@.
+</string>
+	<key>Thank you for using %@.
+If you like our App, please leave an AppStore review.
+❤️</key>
+	<string>Faleminderit që përdorni %@.
+Nëse e pëlqeni Aplikacionin tonë, ju lutemi, lini një shqyrtim te AppStore.
+❤️</string>
+	<key>The account has been disabled.</key>
+	<string>Llogaria është çaktivizuar.</string>
+	<key>The connection's access token has expired or become invalid. Sign in again to re-gain access.</key>
+	<string>Token-i i hyrjes për lidhjen ka skaduar ose është bërë i pavlefshëm. Ribëni hyrjen në llogari, që të rifitoni hyrje.</string>
+	<key>The destination this shortcut points to could not be found. It may have been deleted or you may not have access to it.</key>
+	<string>The destination this shortcut points to could not be found. It may have been deleted or you may not have access to it.</string>
+	<key>The entered URL does not include a hostname.</key>
+	<string>URL-ja e dhënë nuk përmban një strehëemër.</string>
+	<key>The entered codes are different</key>
+	<string>Kodet e dhënë janë të ndryshëm</string>
+	<key>The entered page number doesn't exist</key>
+	<string>Numri i dhënë për faqen nuk ekziston</string>
+	<key>The following steps will guide you through the setup process.</key>
+	<string>Hapat vijues do t’ju udhëheqin nëpër procesin e ujdisjes.</string>
+	<key>The last 10 archived logs are kept on the device - with each log covering up to 24 hours of usage. When sharing please bear in mind that logs may contain sensitive information such as server URLs and user-specific information.</key>
+	<string>10 regjistrat e fundit të arkivuar mbahen në pajisje - ku çdo regjistër mbulon deri në 24 orë përdorim. Kur bëhet ndarje e tyre, ju lutemi, kini parasysh se regjistrat mund të përmbajnë të dhëna rezervat, të tilla si URL shërbyesi dhe hollësi që lidhen me përdoruesin.</string>
+	<key>The password was copied to the clipboard</key>
+	<string>The password was copied to the clipboard</string>
+	<key>The search term you entered did not match any item in the selected scope.</key>
+	<string>Termi i kërkimit që dhatë, s’ka përputhje me ndonjë objekt brenda fushëveprimit të përzgjedhur.</string>
+	<key>The server declined access with the credentials stored for this connection.</key>
+	<string>Shërbyesi nuk pranoi hyrje me kredencialet e depozituara për këtë lidhje.</string>
+	<key>The shortcut points to a URL, but the configuration of this app prohibits opening it.</key>
+	<string>The shortcut points to a URL, but the configuration of this app prohibits opening it.</string>
+	<key>The shortcut points to another item, but the configuration of this app prohibits opening it.</key>
+	<string>The shortcut points to a URL, but the configuration of this app prohibits opening it.</string>
+	<key>The {{app.name}} share extension is not available on this system.</key>
+	<string>The {{app.name}} share extension is not available on this system.</string>
+	<key>Theme</key>
+	<string>Temë</string>
+	<key>This action can't be undone.</key>
+	<string>Ky veprim s’mund të zhbëhet.</string>
+	<key>This document has %@ pages</key>
+	<string>Ky dokument ka %@ faqe</string>
+	<key>This folder is empty.</key>
+	<string>Kjo dosje është e zbrazët.</string>
+	<key>This folder is empty. Fill it with content:</key>
+	<string>Kjo dosje është e zbrazët. Mbusheni me lëndë:</string>
+	<key>This folder no longer exists on the server.</key>
+	<string>Kjo dosje s’ekziston më te shërbyesi.</string>
+	<key>This permission is needed to upload photos and videos from your photo library.</key>
+	<string>Kjo leje është e domosdoshme për të ngarkuar foto dhe video prej fototekës tuaj.</string>
+	<key>This shortcut points to:
+{{url}}</key>
+	<string>This shortcut points to:
+{{url}}</string>
+	<key>This will also delete all locally stored file copies.</key>
+	<string>Kjo do të shkaktojë fshirjen edhe të krejt kopjeve të kartelës të depozituara lokalisht.</string>
+	<key>Time</key>
+	<string>Kohë</string>
+	<key>Time measured since uploading, editing, downloading or viewing the respective file through this device. Does not apply to files downloaded via the Available Offline feature. Local copies may be deleted before the given period of time has passed, f.ex. because there's a newer version of a file on the server - or through the manual deletion of offline copies. Also, local copies may not be deleted after the given period of time has passed, f.ex. if an action is performed on it, the file is still in use - or the account holding the file hasn't been used in the app.</key>
+	<string>Kohë e matur që prej ngarkimit, përpunimit, shkarkimit apo parjes së kartelës përkatëse përmes kësaj pajisjeje. Nuk prek kartelat e shkarkuara përmes veçorisë E passhme Jo Në Linjë. Kopjet vendore mund të fshihen përpara se të ketë kaluar periudha kohore e dhënë, p.sh., ngaqë në shërbyes pati një version më të ri të kartelës - ose përmes fshirjes dorazi të kopjeve &lt;em&gt;offline&lt;/em&gt;. Kopjet vendore mundet gjithashtu të mos fshihen pasi të ketë kaluar periudha kohore e dhënë, p.sh., nëse mbi të po kryhet një veprim, kartela është ende në përdorim - ose llogaria që përmban kartelën s’është përdorur në aplikacion.</string>
+	<key>To use the app, you need to create a passcode.</key>
+	<string>Që të përdorni aplikacionin, lypset të krijoni një kodkalim.</string>
+	<key>Toggle Search Scope</key>
+	<string>Aktivizoni/Çaktivizoni Shtrirje Kërkimi</string>
+	<key>Toggle layout</key>
+	<string>Toggle layout</string>
+	<key>Total update scans</key>
+	<string>Kontrolle përditësimi gjithsej</string>
+	<key>Touch ID</key>
+	<string>Touch ID</string>
+	<key>Tree</key>
+	<string>Pemë</string>
+	<key>Type</key>
+	<string>Lloj</string>
+	<key>URL</key>
+	<string>URL</string>
+	<key>URL of webpage or item</key>
+	<string>URL of webpage or item</string>
+	<key>URL was copied to the clipboard</key>
+	<string>URL-ja u kopjua në të papastër</string>
+	<key>Uncalibrated</key>
+	<string>E pakalibruar</string>
+	<key>Unfavorite item</key>
+	<string>Hiqja shenjën objektit si i parapëlqyer</string>
+	<key>Unknown</key>
+	<string>Unknown</string>
+	<key>Unlock</key>
+	<string>Shkyçe</string>
+	<key>Unlock %@</key>
+	<string>Shkyçe %@</string>
+	<key>Unlock all Pro Features.</key>
+	<string>Shkyçi krejt Veçoritë Pro</string>
+	<key>Unlock using %@?</key>
+	<string>Shkyçe duke përdorur %@?</string>
+	<key>Unlocked</key>
+	<string>E shkyçur</string>
+	<key>Unshare</key>
+	<string>Hiqi ndarjen me të tjerë</string>
+	<key>Update Status</key>
+	<string>Gjendje Përditësimi</string>
+	<key>Updating %ld items…</key>
+	<string>Po përditësohen %ld objekte…</string>
+	<key>Updating connection…</key>
+	<string>Po përditësohet lidhja…</string>
+	<key>Upload</key>
+	<string>Ngarkoje</string>
+	<key>Upload file</key>
+	<string>Ngarkoni kartelë</string>
+	<key>Upload from your photo library</key>
+	<string>Ngarkoni që nga fototeka juaj</string>
+	<key>Uploading %ld files…</key>
+	<string>Po ngarkohen %ld kartela…</string>
+	<key>Uploading {{remainingFileCount}} files…</key>
+	<string>Uploading {{remainingFileCount}} files…</string>
+	<key>Usage terms</key>
+	<string>Terma përdorimi</string>
+	<key>Use background location updates</key>
+	<string>Përdor përditësime në prapaskenë të vendndodhjes</string>
+	<key>Use background refresh</key>
+	<string>Përdor rifreskim në prapaskenë</string>
+	<key>Use ownCloud actions in Shortcuts.</key>
+	<string>Përdorni veprime ownCloud te Shkurtoret.</string>
+	<key>User Interface</key>
+	<string>Ndërfaqe Përdoruesi</string>
+	<key>User-approved certificates</key>
+	<string>Dëshmi të miratuara nga përdorues</string>
+	<key>Username</key>
+	<string>Emër përdoruesi</string>
+	<key>Users</key>
+	<string>PÃ«rdorues</string>
+	<key>Validation Error</key>
+	<string>Gabim Vleftësim</string>
+	<key>Verbose</key>
+	<string>Verbose</string>
+	<key>Verifying password…</key>
+	<string>Verifying password…</string>
+	<key>Version information were copied to the clipboard</key>
+	<string>Hollësitë e versionit u kopjuan në të papastër</string>
+	<key>Video upload</key>
+	<string>Ngarkim videosh</string>
+	<key>Video upload path</key>
+	<string>Shteg ngarkimesh videosh</string>
+	<key>Videos</key>
+	<string>Video</string>
+	<key>View documentation</key>
+	<string>View documentation</string>
+	<key>Visit the forums</key>
+	<string>Visit the forums</string>
+	<key>W</key>
+	<string>P</string>
+	<key>Waiting for response from login session in external browser…</key>
+	<string>Po pritet për përgjigje prej sesioni hyrjeje në shfletues të jashtëm…</string>
+	<key>Waiting for server response…</key>
+	<string>Po pritet për përgjigje nga shërbyesi…</string>
+	<key>Warning</key>
+	<string>Kujdes</string>
+	<key>Welcome to %@</key>
+	<string>Mirë se vini te %@</string>
+	<key>When activated, logs may impact performance and include sensitive information. However the logs are not subject to automatic submission to %@ servers. Sharing logs with others is sole user responsibility.</key>
+	<string>Kur aktivizohen, regjistrat mund të kenë ndikim në funksionim dhe përfshijnë të dhëna rezervat. Sidoqoftë, regjistrat nuk janë subjekt parashtrimi të automatizuar te shërbyes %@. Ndarja e regjistrave me të tjerë është përgjegjësi vetëm e përdoruesit.</string>
+	<key>White balance</key>
+	<string>Balancë të bardhe</string>
+	<key>Would you like to view the updated version?</key>
+	<string>Do të donit të shihni versionin e përditësuar?</string>
+	<key>YCbCr</key>
+	<string>YCbCr</string>
+	<key>You are required to set the passcode</key>
+	<string>Është e domosdoshme të caktoni frazëkalimin</string>
+	<key>You need to configure an email account first to be able to send emails.</key>
+	<string>Së pari lypset të formësoni një llogari email, që të jeni në gjendje të dërgoni email-e.</string>
+	<key>after %@</key>
+	<string>pas %@</string>
+	<key>after free %@ trial</key>
+	<string>pas %@ provë falas</string>
+	<key>ascending</key>
+	<string>ascending</string>
+	<key>beta</key>
+	<string>beta</string>
+	<key>date</key>
+	<string>datë</string>
+	<key>descending</key>
+	<string>descending</string>
+	<key>enabled</key>
+	<string>e aktivizuar</string>
+	<key>https://example.com</key>
+	<string>https://example.com</string>
+	<key>kind</key>
+	<string>lloj</string>
+	<key>last used</key>
+	<string>përdorur së fundi më</string>
+	<key>license</key>
+	<string>licencë</string>
+	<key>name</key>
+	<string>emër</string>
+	<key>never</key>
+	<string>kurrë</string>
+	<key>none</key>
+	<string>asnjë</string>
+	<key>not present</key>
+	<string>jo e pranishme</string>
+	<key>off</key>
+	<string>off</string>
+	<key>on</key>
+	<string>on</string>
+	<key>release</key>
+	<string>hedhje në qarkullim</string>
+	<key>shared</key>
+	<string>e ndarë me të tjerë</string>
+	<key>size</key>
+	<string>madhësi</string>
+	<key>undated</key>
+	<string>undated</string>
+	<key>unknown</key>
+	<string>i panjohur</string>
+	<key>{{attribute}} {{direction}}</key>
+	<string>{{attribute}} {{direction}}</string>
+	<key>{{fileName}} (file)</key>
+	<string>{{fileName}} (file)</string>
+	<key>{{folderName}} (folder)</key>
+	<string>{{folderName}} (folder)</string>
+	<key>{{itemCount}} items with {{totalSize}} total ({{fileCount}} files, {{folderCount}} folders)</key>
+	<string>{{itemCount}} objekte, me {{totalSize}} gjithsej, ({{fileCount}} kartela, {{folderCount}} dosje)</string>
+	<key>{{itemName}} ({{link}}) | password: {{password}}</key>
+	<string>{{itemName}} ({{link}}) | password: {{password}}</string>
+	<key>{{link}} | password: {{password}}</key>
+	<string>{{link}} | password: {{password}}</string>
+	<key>{{remaining}} available</key>
+	<string>{{remaining}} të lira</string>
+	<key>{{spaceName}} (space)</key>
+	<string>{{spaceName}} (space)</string>
+</dict>
+</plist>

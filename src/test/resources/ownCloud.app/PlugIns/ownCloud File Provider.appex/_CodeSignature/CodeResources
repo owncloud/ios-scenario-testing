@@ -6,17 +6,57 @@
 	<dict>
 		<key>Info.plist</key>
 		<data>
-		zOR5FX9md3EQcmCiasa30U+JKE4=
+		X0xtjFKsL8vgawWlYItYuSBICwI=
 		</data>
 		<key>PrivacyInfo.xcprivacy</key>
 		<data>
 		apH8VatkxzeYJC/UN4aujlBCyi4=
 		</data>
+		<key>__preview.dylib</key>
+		<data>
+		7Hl04Vwmgxf/f7u0zWRyntmZjoo=
+		</data>
+		<key>cs.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			dwJJgO/4Eummv8wWinICBQte1qg=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>de.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			kYpFdVa1wwrUDWxHmp4RWUr55KE=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
 		<key>en.lproj/Localizable.strings</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			8ERpYrFAk2PaWIHqnkvn1ZQRzgA=
+			dwJJgO/4Eummv8wWinICBQte1qg=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>en_GB.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			dwJJgO/4Eummv8wWinICBQte1qg=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>es.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			dwJJgO/4Eummv8wWinICBQte1qg=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -25,7 +65,110 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			8ERpYrFAk2PaWIHqnkvn1ZQRzgA=
+			dwJJgO/4Eummv8wWinICBQte1qg=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>ko.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			dwJJgO/4Eummv8wWinICBQte1qg=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>mk.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			dwJJgO/4Eummv8wWinICBQte1qg=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>nb_NO.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			dwJJgO/4Eummv8wWinICBQte1qg=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>nn_NO.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			dwJJgO/4Eummv8wWinICBQte1qg=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>ownCloud File Provider.debug.dylib</key>
+		<data>
+		6MbQSXcSOSE8FzER0nir5pJM1Ng=
+		</data>
+		<key>pt_BR.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			dwJJgO/4Eummv8wWinICBQte1qg=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>pt_PT.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			dwJJgO/4Eummv8wWinICBQte1qg=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>ru.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			dwJJgO/4Eummv8wWinICBQte1qg=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>sq.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			Hk8L04RvSC76WCDUI/7ICbGrdjM=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>th_TH.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			dwJJgO/4Eummv8wWinICBQte1qg=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>tr.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			dwJJgO/4Eummv8wWinICBQte1qg=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>zh-Hans.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			dwJJgO/4Eummv8wWinICBQte1qg=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -40,11 +183,54 @@
 			Gc7WdA261JuWakyxpPju5YKnPRQQRYx1jbSx3N8pOMA=
 			</data>
 		</dict>
+		<key>__preview.dylib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			LbAREjN2qKJp9eitUx0askQb8Bj4ZCACshg8iVUkooQ=
+			</data>
+		</dict>
+		<key>cs.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			2mJKZdx/p3HkOW20pToPArVRFP6LzgOFvICylWwZ6TU=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>de.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			uJErsel7KsLhzDl1w5/6KK/Z1fUeG0UBD1nWrgrX6NQ=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
 		<key>en.lproj/Localizable.strings</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			g+BMHHmkDTU7Gj11I6c6w2WKe6lsq9ELyHk0KwXMXjQ=
+			2mJKZdx/p3HkOW20pToPArVRFP6LzgOFvICylWwZ6TU=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>en_GB.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			2mJKZdx/p3HkOW20pToPArVRFP6LzgOFvICylWwZ6TU=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>es.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			2mJKZdx/p3HkOW20pToPArVRFP6LzgOFvICylWwZ6TU=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -53,7 +239,113 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			g+BMHHmkDTU7Gj11I6c6w2WKe6lsq9ELyHk0KwXMXjQ=
+			2mJKZdx/p3HkOW20pToPArVRFP6LzgOFvICylWwZ6TU=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>ko.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			2mJKZdx/p3HkOW20pToPArVRFP6LzgOFvICylWwZ6TU=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>mk.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			2mJKZdx/p3HkOW20pToPArVRFP6LzgOFvICylWwZ6TU=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>nb_NO.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			2mJKZdx/p3HkOW20pToPArVRFP6LzgOFvICylWwZ6TU=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>nn_NO.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			2mJKZdx/p3HkOW20pToPArVRFP6LzgOFvICylWwZ6TU=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>ownCloud File Provider.debug.dylib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			7vzYbgfwG3fKf7x8sbC1xMxlt5alRSGftpMIhiTgIBw=
+			</data>
+		</dict>
+		<key>pt_BR.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			2mJKZdx/p3HkOW20pToPArVRFP6LzgOFvICylWwZ6TU=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>pt_PT.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			2mJKZdx/p3HkOW20pToPArVRFP6LzgOFvICylWwZ6TU=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>ru.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			2mJKZdx/p3HkOW20pToPArVRFP6LzgOFvICylWwZ6TU=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>sq.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			AVzv14Jj1b2Aelhwgdj/hFRFff+DdnP/dn8zccEKCSM=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>th_TH.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			2mJKZdx/p3HkOW20pToPArVRFP6LzgOFvICylWwZ6TU=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>tr.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			2mJKZdx/p3HkOW20pToPArVRFP6LzgOFvICylWwZ6TU=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>zh-Hans.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			2mJKZdx/p3HkOW20pToPArVRFP6LzgOFvICylWwZ6TU=
 			</data>
 			<key>optional</key>
 			<true/>

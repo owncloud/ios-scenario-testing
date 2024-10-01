@@ -1,0 +1,1480 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>
+This is a BETA release that may - and likely will - still contain bugs.
+
+YOU SHOULD NOT USE THIS BETA VERSION WITH PRODUCTION SYSTEMS, PRODUCTION DATA OR DATA OF VALUE. YOU'RE USING THIS BETA AT YOUR OWN RISK.
+
+Please let us know about any issues that come up via the "Send Feedback" option in the settings.</key>
+	<string>
+Esta é uma versão BETA que pode - e provavelmente ainda conterá - bugs.
+
+VOCÊ NÃO DEVE USAR ESTA VERSÃO BETA COM SISTEMAS DE PRODUÇÃO, DADOS DE PRODUÇÃO OU DADOS DE VALOR. VOCÊ ESTÁ USANDO ESTE BETA POR SUA CONTA E RISCO.
+
+Informe-nos sobre quaisquer problemas que surgirem por meio da opção "Enviar Feedback" nas configurações.</string>
+	<key> couldn't download file(s)</key>
+	<string>não foi possível baixar esse arquivo(s)</string>
+	<key>%@ (%d bits/channel)</key>
+	<string>%@ (%d bits/canal)</string>
+	<key>%@ / %@</key>
+	<string>%@ / %@</string>
+	<key>%@ / %@ – starting immediately</key>
+	<string>%@ / %@ – iniciando imediatamente</string>
+	<key>%@ is not available for this item.</key>
+	<string>%@ não está disponível para este item.</string>
+	<key>%@ is not available, when this account is offline. Please open the app and log into your account before you can do this action.</key>
+	<string>%@ não está disponível, quando esta conta está offline. Abra o aplicativo e faça login em sua conta antes de realizar esta ação. </string>
+	<key>%@ of %@</key>
+	<string>%@ de %@</string>
+	<key>%@ was updated</key>
+	<string>%@ foi atualizado</string>
+	<key>%@%@ %@ version %@ build %@
+(app: %@, sdk: %@)</key>
+	<string>%@%@ %@ versão%@ construir %@
+(app: %@, sdk: %@)</string>
+	<key>%ld Item was copied to the clipboard</key>
+	<string>%ld O item foi copiado para a área de transferência </string>
+	<key>%ld Items were copied to the clipboard</key>
+	<string>%ld os itens foram copiados para a área de transferência </string>
+	<key>%ld digit code</key>
+	<string>%ld código de dígito </string>
+	<key>'%@' is currently locked</key>
+	<string>'%@' está bloqueado no momento</string>
+	<key>+ %ld more</key>
+	<string>+ %ld mais</string>
+	<key>Accept</key>
+	<string>Aceitar</string>
+	<key>Accept Share failed</key>
+	<string>Aceitar compartilhamento falhou</string>
+	<key>Accept or decline</key>
+	<string>Accept or decline</string>
+	<key>Accept share</key>
+	<string>Accept share</string>
+	<key>Accepted</key>
+	<string>Aceito</string>
+	<key>Access denied</key>
+	<string>Acesso negado</string>
+	<key>Access for the media selected for upload is limited</key>
+	<string>O acesso para a mídia selecionada para envio é limitado</string>
+	<key>Account</key>
+	<string>Conta</string>
+	<key>Account setup complete</key>
+	<string>Configuração da conta concluída</string>
+	<key>Accounts</key>
+	<string>Contas</string>
+	<key>Acknowledgements</key>
+	<string>Agradecimentos</string>
+	<key>Action</key>
+	<string>Ação</string>
+	<key>Action executed</key>
+	<string>Ação executada</string>
+	<key>Actions</key>
+	<string>Ações</string>
+	<key>Add</key>
+	<string>Adicionar</string>
+	<key>Add account</key>
+	<string>Adicionar uma conta</string>
+	<key>Add item</key>
+	<string>Adicionar item</string>
+	<key>Add to sidebar</key>
+	<string>Add to sidebar</string>
+	<key>Advanced settings</key>
+	<string>Configurações avançadas</string>
+	<key>After %ld seconds</key>
+	<string>Após %ld segundos</string>
+	<key>After 1 minute</key>
+	<string>Após 1 minuto</string>
+	<key>After 30 minutes</key>
+	<string>Após 30 minutos</string>
+	<key>After 5 minutes</key>
+	<string>Após 5 minutos</string>
+	<key>Agree</key>
+	<string>Concordar</string>
+	<key>Albums</key>
+	<string>Albuns</string>
+	<key>All Photos</key>
+	<string>Todas as fotos</string>
+	<key>All done</key>
+	<string>Tudo feito</string>
+	<key>Allow this app to refresh the content when on Wi-Fi or mobile network in background.</key>
+	<string>Permitir que este aplicativo atualize o conteúdo quando estiver em uma rede Wi-Fi ou móvel em segundo plano. </string>
+	<key>Altitude</key>
+	<string>Altitude</string>
+	<key>An error occurred</key>
+	<string>Ocorreu um erro</string>
+	<key>An item with the same name already exists in this location.</key>
+	<string>Já existe um item com o mesmo nome neste local.</string>
+	<key>An operation is currently performed that prevents connecting to '%@'. Please try again later.</key>
+	<string>Uma operação está sendo realizada e impede a conexão com '%@'. Por favor, tente novamente mais tarde.</string>
+	<key>Aperture</key>
+	<string>Abertura</string>
+	<key>Aperture priority</key>
+	<string>Prioridade de abertura</string>
+	<key>App Version</key>
+	<string>Versão do Aplicativo</string>
+	<key>Apply choice to all similar issues</key>
+	<string>Aplicar escolha a todos os problemas semelhantes</string>
+	<key>Apply to all</key>
+	<string>Aplicar para tudo</string>
+	<key>Approve</key>
+	<string>Aprovar</string>
+	<key>Approved</key>
+	<string>Aprovado</string>
+	<key>Are you sure you want to delete these items from the server?</key>
+	<string>Tem certeza de que deseja excluir esses itens do servidor?</string>
+	<key>Are you sure you want to delete this item from the server?</key>
+	<string>Você tem certeza que deseja excluir este item do servidor?</string>
+	<key>Are you sure you want to unshare these items?</key>
+	<string>Tem certeza de que deseja cancelar o compartilhamento desses itens?</string>
+	<key>Are you sure you want to unshare this item?</key>
+	<string>Tem certeza de que deseja cancelar o compartilhamento deste item?</string>
+	<key>Audio</key>
+	<string>Audio</string>
+	<key>Audios</key>
+	<string>Audios</string>
+	<key>Authenticated as %@ via %@</key>
+	<string>Autenticado como %@ via %@</string>
+	<key>Authenticated via</key>
+	<string>Autenticado via</string>
+	<key>Authenticating…</key>
+	<string>Autenticando...</string>
+	<key>Authentication error</key>
+	<string>Authentication error</string>
+	<key>Authentication failed</key>
+	<string>Authentication failed</string>
+	<key>Authentication with %@ is no longer allowed. Re-authentication needed.</key>
+	<string>A autenticação com %@ não é mais permitida. Re-autenticação necessária. </string>
+	<key>Authoring</key>
+	<string>Autoria </string>
+	<key>Authorization failed</key>
+	<string>Falha na autorização</string>
+	<key>Auto</key>
+	<string>Auto</string>
+	<key>Auto Upload</key>
+	<string>Envio Automático</string>
+	<key>Auto Upload Photos</key>
+	<string>Envio Automático de Fotos</string>
+	<key>Auto Upload Videos</key>
+	<string>Upload Automático de Vídeos</string>
+	<key>Auto mode</key>
+	<string>Modo automático</string>
+	<key>Auto upload disabled</key>
+	<string>Auto upload disabled</string>
+	<key>Auto upload of media was disabled since configured account / folder was not found</key>
+	<string>O envio automático de mídia foi desativado porque a conta/pasta configurada não foi encontrada</string>
+	<key>Auto-approved</key>
+	<string>Aprovação-automática</string>
+	<key>Available Offline</key>
+	<string>Disponível Offline</string>
+	<key>Available offline</key>
+	<string>Available offline</string>
+	<key>Average</key>
+	<string>Média </string>
+	<key>Back</key>
+	<string>Voltar</string>
+	<key>Background upload notifications</key>
+	<string>Notificações de upload em segundo plano</string>
+	<key>Background uploads (Lab Version)</key>
+	<string>Envios em segundo plano (versão de laboratório) </string>
+	<key>Beta Warning</key>
+	<string>Aviso Beta</string>
+	<key>Biometric authentication failed</key>
+	<string>Autenticação biométrica falhou</string>
+	<key>Bookmark Metadata</key>
+	<string>Metadados de Favoritos </string>
+	<key>Browse</key>
+	<string>Procurar</string>
+	<key>Busy</key>
+	<string>Busy</string>
+	<key>By feature</key>
+	<string>Por recurso</string>
+	<key>Camera details</key>
+	<string>Detalhes da câmera</string>
+	<key>Cancel</key>
+	<string>Cancelar</string>
+	<key>Cannot connect to </key>
+	<string>Não foi possível conectar a</string>
+	<key>Capture settings</key>
+	<string>Configurações de captura </string>
+	<key>Cellular Data Usage</key>
+	<string>Uso de dados móveis</string>
+	<key>Cellular Data Usage have been disabled via MDM configuration. Please contact your administrator for more information.</key>
+	<string>O Uso de Dados Celulares foi desabilitado por meio da configuração do MDM. Entre em contato com o administrador para obter mais informações.</string>
+	<key>CenterWeightedAverage</key>
+	<string>Média Ponderada Central </string>
+	<key>Certificate Details</key>
+	<string>Detalhes do certificado</string>
+	<key>Certificate has issues.
+Open 'Certificate Details' for more informations.</key>
+	<string>O certificado tem problemas.
+Abra "Detalhes do certificado" para mais informações.</string>
+	<key>Certificate may have issues, but was accepted by user.
+Open 'Certificate Details' for more informations.</key>
+	<string>O certificado pode ter problemas, mas foi aceito pelo usuário.
+Abra "Detalhes do certificado" para mais informações.</string>
+	<key>Certificate was rejected by user.</key>
+	<string>O certificado foi rejeitado pelo usuário.</string>
+	<key>Certificates</key>
+	<string>Certificados</string>
+	<key>Change</key>
+	<string>Modificar </string>
+	<key>Change Sort Order</key>
+	<string>Modificar Ordem de Classificação</string>
+	<key>Change password</key>
+	<string>Change password</string>
+	<key>Changed {{settingID}} to {{newValue}}.</key>
+	<string>Changed {{settingID}} to {{newValue}}.</string>
+	<key>Choose destination directory…</key>
+	<string>Escolha o diretório de destino... </string>
+	<key>Clear</key>
+	<string>Clear</string>
+	<key>Cleared all.</key>
+	<string>Cleared all.</string>
+	<key>Cleared {{settingID}}.</key>
+	<string>Cleared {{settingID}}.</string>
+	<key>Close Search</key>
+	<string>Fechar Pesquisa </string>
+	<key>Close Window</key>
+	<string>Fechar Janela</string>
+	<key>Close actions menu</key>
+	<string>Fechar menu de ações</string>
+	<key>Color model</key>
+	<string>Modelo de cores</string>
+	<key>Color space</key>
+	<string>Espaço colorido </string>
+	<key>Compacting</key>
+	<string>Compactando</string>
+	<key>Compacting of '%@' failed</key>
+	<string>Compactação de '%@' falhou</string>
+	<key>Completed update scans</key>
+	<string>Verificações de atualização concluídas</string>
+	<key>Compulsory flash firing</key>
+	<string>Disparo de flash obrigatório </string>
+	<key>Compulsory flash supression</key>
+	<string>Supressão de flash obrigatória </string>
+	<key>Connecting</key>
+	<string>Connecting</string>
+	<key>Connecting...</key>
+	<string>Conectando...</string>
+	<key>Connecting…</key>
+	<string>Conectando...</string>
+	<key>Contact info</key>
+	<string>Informação de contato </string>
+	<key>Contacting server…</key>
+	<string>Conectando ao servidor...</string>
+	<key>Contents from cache.</key>
+	<string>Conteúdo do cache.</string>
+	<key>Continue</key>
+	<string>Continuar</string>
+	<key>Continue offline</key>
+	<string>Continuar offline</string>
+	<key>Convert HEIC to JPEG</key>
+	<string>Converter HEIC para JPEG</string>
+	<key>Convert videos to MP4</key>
+	<string>Converta vídeos para MP4</string>
+	<key>Coordinates</key>
+	<string>Coordenadas</string>
+	<key>Copy</key>
+	<string>Copiar</string>
+	<key>Copy "{{itemName}}"</key>
+	<string>Copiar "{{itemName}}"</string>
+	<key>Copy Private Link</key>
+	<string>Copiar Linque Privado</string>
+	<key>Copy here</key>
+	<string>Copiar aqui</string>
+	<key>Copy to clipboard</key>
+	<string>Copy to clipboard</string>
+	<key>Copy {{itemCount}} items</key>
+	<string>Copiar {{itemCount}} itens</string>
+	<key>Copying %ld items…</key>
+	<string>Copiando %ld itens…</string>
+	<key>Copyright</key>
+	<string>Direitos Autorais</string>
+	<key>Could not get the picture</key>
+	<string>Não foi possível obter a imagem</string>
+	<key>Couldn't resolve a private link since the item is not known to the server.</key>
+	<string>Não foi possível resolver um linque privado, pois o item não é conhecido pelo servidor.</string>
+	<key>Couldn't resolve a private link since you are offline and corresponding item is not cached locally.</key>
+	<string>Não foi possível resolver um linque privado porque você está offline e o item correspondente não está armazenado em cache localmente.</string>
+	<key>Create</key>
+	<string>Criar</string>
+	<key>Create folder</key>
+	<string>Criar pasta</string>
+	<key>Create link</key>
+	<string>Criar link</string>
+	<key>Create one file per page</key>
+	<string>Criar um aquivo por página</string>
+	<key>Create shortcut</key>
+	<string>Create shortcut</string>
+	<key>Creating %ld folders…</key>
+	<string>Criando %ld pastas…</string>
+	<key>Creative</key>
+	<string>Criativa</string>
+	<key>Credentials</key>
+	<string>Credenciais</string>
+	<key>Cut</key>
+	<string>Cortar</string>
+	<key>Dark</key>
+	<string>Escuro</string>
+	<key>Data usage</key>
+	<string>Uso de dados</string>
+	<key>Date</key>
+	<string>Data</string>
+	<key>Debug</key>
+	<string>Debug</string>
+	<key>Decline</key>
+	<string>Rejeitar</string>
+	<key>Decline Share failed</key>
+	<string>Recusa de compartilhamento falhou</string>
+	<key>Decline share</key>
+	<string>Decline share</string>
+	<key>Declined</key>
+	<string>Rejeitado</string>
+	<key>Decrease Slider Value</key>
+	<string>Decrescer o Valor de Recuo</string>
+	<key>Delete</key>
+	<string>Excluir</string>
+	<key>Delete Authentication Data</key>
+	<string>Excluir dados de autenticação</string>
+	<key>Delete all</key>
+	<string>Excluir Tudo</string>
+	<key>Delete all Offline Files</key>
+	<string>Excluir todos os arquivos offline</string>
+	<key>Delete all log files?</key>
+	<string>Excluir todos os arquivos de log?</string>
+	<key>Delete code</key>
+	<string>Excluir o código</string>
+	<key>Delete unused local copies</key>
+	<string>Excluir cópias locais não usadas</string>
+	<key>Deleting %ld items…</key>
+	<string>Excluindo %ld itens…</string>
+	<key>Deletion of '%@' failed</key>
+	<string>Deletion of '%@' failed</string>
+	<key>Density</key>
+	<string>Densidade</string>
+	<key>Description</key>
+	<string>Descrição</string>
+	<key>Deselect All</key>
+	<string>Desmarcar Todos</string>
+	<key>Diagnostic Overview</key>
+	<string>Visão geral do Diagnóstico</string>
+	<key>Diagnostics</key>
+	<string>Diagnósticos</string>
+	<key>Didn't fire</key>
+	<string>Não disparou </string>
+	<key>Digitized date</key>
+	<string>Data digitalizada</string>
+	<key>Disable</key>
+	<string>Disable</string>
+	<key>Disable gestures</key>
+	<string>Desativar gestos</string>
+	<key>Discard changes</key>
+	<string>Descartar mudanças</string>
+	<key>Disconnect</key>
+	<string>Desconectar</string>
+	<key>Do you want to log out from '%@'?</key>
+	<string>Gostaria de desconectar de '%@'?</string>
+	<key>Do you want to open the following URL?</key>
+	<string>Você deseja abrir o seguinte endereço URL?</string>
+	<key>Document Scanner</key>
+	<string>Scanner de Documentos</string>
+	<key>Documentation</key>
+	<string>Documentação</string>
+	<key>Documents</key>
+	<string>Documentos</string>
+	<key>Done</key>
+	<string>Concluída</string>
+	<key>Download</key>
+	<string>Download</string>
+	<key>Download / View</key>
+	<string>Baixar / Visualizar</string>
+	<key>Download / View / Upload</key>
+	<string>Baixar / Visualizar / Enviar</string>
+	<key>Download instead of streaming</key>
+	<string>Baixe em vez de streaming</string>
+	<key>Downloaded Files</key>
+	<string>Arquivos Baixados</string>
+	<key>Downloading %ld files…</key>
+	<string>Baixar %ld arquivos…</string>
+	<key>Duplicate</key>
+	<string>Duplicado</string>
+	<key>E</key>
+	<string>E</string>
+	<key>EXIF aux info</key>
+	<string>EXIF aux info</string>
+	<key>Edit</key>
+	<string>Editar</string>
+	<key>Edit account</key>
+	<string>Editar conta</string>
+	<key>Enable</key>
+	<string>Habilitar</string>
+	<key>Enable Pro Features (QA)</key>
+	<string>Enable Pro Features (QA)</string>
+	<key>Enable diagnostics</key>
+	<string>Habilitar diagnósticos</string>
+	<key>Enable logging</key>
+	<string>Habilitar escrita no Log</string>
+	<key>Enabling presentation mode will prevent the display from sleep mode until the view is closed.</key>
+	<string>Habilitar o modo de apresentação impedirá que o monitor entre no modo de hibernação até que a visualização seja fechada. </string>
+	<key>Enabling this option will attempt to mask private data, so it does not become part of any log. Since logging is a development and debugging feature, though, we can't guarantee that the log file will be free of any private data even with this option enabled. Therefore, please look through any log file and verify its free of any data you're not comfortable sharing before sharing it with anybody.</key>
+	<string>A ativação desta opção tentará mascarar dados privados, portanto, não se tornará parte de nenhum log. Como o registro em log é um recurso de desenvolvimento e depuração, não podemos garantir que o arquivo de log esteja livre de dados privados, mesmo com essa opção ativada. Portanto, por favor, olhe através de qualquer arquivo de log e verifique se ele está livre de qualquer dado que você não esteja confortável em compartilhar antes de compartilhá-lo com alguém.</string>
+	<key>Enter a new code with %ld digits</key>
+	<string>Entre novo código com %ld digitos</string>
+	<key>Enter a search term</key>
+	<string>Insira um termo de pesquisa</string>
+	<key>Enter code</key>
+	<string>Coloque o código</string>
+	<key>Enter multiple selection</key>
+	<string>Entrar com seleção múltipla</string>
+	<key>Enter the user or group you want to invite.</key>
+	<string>Insira o usuário ou grupo que deseja convidar.</string>
+	<key>Error</key>
+	<string>Erro</string>
+	<key>Error creating {{itemName}}</key>
+	<string>Erro ao criar {{itemName}}</string>
+	<key>Error fetching transactions</key>
+	<string>Erro ao obter transações</string>
+	<key>Error importing %@</key>
+	<string>Erro importando %@</string>
+	<key>Error loading item</key>
+	<string>Erro carregando o item</string>
+	<key>Error loading product info from App Store</key>
+	<string>Erro ao carregar as informações do produto na App Store</string>
+	<key>Error opening %@</key>
+	<string>Erro abrindo %@</string>
+	<key>Error opening {{itemName}} in {{appName}}</key>
+	<string>Erro ao abrir {{itemName}} em {{appName}}</string>
+	<key>Error restoring purchases</key>
+	<string>Erro ao restaurar compras</string>
+	<key>Exit Full Screen</key>
+	<string>Sair da Tela cheia</string>
+	<key>Exit multiple selection</key>
+	<string>Exit multiple selection</string>
+	<key>Expiration date</key>
+	<string>Data de expiração</string>
+	<key>Expires {{expirationDate}}</key>
+	<string>Expira em {{expirationDate}}</string>
+	<key>Exposure bias</key>
+	<string>Viés de exposição </string>
+	<key>Extend by one week</key>
+	<string>Extend by one week</string>
+	<key>Extended upload settings</key>
+	<string>Configurações de envio estendidas</string>
+	<key>Face ID</key>
+	<string>ID de Face</string>
+	<key>Favorite item</key>
+	<string>Item favorito</string>
+	<key>Favorites</key>
+	<string>Favoritos</string>
+	<key>Feedback</key>
+	<string>Comentários</string>
+	<key>Fetching server information…</key>
+	<string>Fetching server information…</string>
+	<key>Fetching user information…</key>
+	<string>Buscando informações do usuário...</string>
+	<key>File</key>
+	<string>Arquivo</string>
+	<key>File Provider access has been disabled by the administrator.
+
+Please use the app to access your files.</key>
+	<string>O acesso do provedor de arquivos foi desativado pelo administrador.
+
+Por favor, use o aplicativo para acessar seus arquivos.</string>
+	<key>File Provider access has been disabled by the administrator. Please use the app to create new folders.</key>
+	<string>O acesso do provedor de arquivos foi desativado pelo administrador. Por favor, use o aplicativo para criar novas pastas.</string>
+	<key>File Provider access has been disabled by the administrator. Please use the share extension to import files.</key>
+	<string>O acesso do provedor de arquivos foi desativado pelo administrador. Use a extensão de compartilhamento para importar arquivos.</string>
+	<key>File an issue</key>
+	<string>File an issue</string>
+	<key>File couldn't be opened</key>
+	<string>O arquivo não pode ser aberto</string>
+	<key>File format</key>
+	<string>Formato do arquivo</string>
+	<key>File name cannot contain / or \</key>
+	<string>O nome do arquivo não pode conter / ou \</string>
+	<key>File no longer exists</key>
+	<string>O arquivo não existe mais</string>
+	<key>Files</key>
+	<string>Arquivos</string>
+	<key>Files and folders marked as Available Offline will become unavailable. They will be re-downloaded next time you log into your account (connectivity required).</key>
+	<string> Arquivos e pastas marcados como Disponível offline ficarão indisponíveis. Eles serão baixados novamente na próxima vez que você fizer login na sua conta (é necessária conectividade).</string>
+	<key>Files selected and downloaded for offline availability will show up here.</key>
+	<string>Os arquivos selecionados e baixados para disponibilidade off-line serão exibidos aqui.</string>
+	<key>Find Next</key>
+	<string>Encontre o próximo </string>
+	<key>Find Previous</key>
+	<string>Encontre o Anterior </string>
+	<key>Find information, answers and solutions in the detailed documentation.</key>
+	<string>Find information, answers and solutions in the detailed documentation.</string>
+	<key>Fired</key>
+	<string>Disparado</string>
+	<key>Firmware</key>
+	<string>Firmware</string>
+	<key>Flash</key>
+	<string>Instantânea</string>
+	<key>Flash compensation</key>
+	<string>Compensação instantânea</string>
+	<key>Focal length</key>
+	<string>Comprimento focal</string>
+	<key>Focal length @ 35 mm</key>
+	<string>Distância focal @ 35 mm</string>
+	<key>Folder</key>
+	<string>Pasta</string>
+	<key>Folder name</key>
+	<string>Nome da pasta</string>
+	<key>Folder removed</key>
+	<string>Pasta removida</string>
+	<key>Forbidden Characters</key>
+	<string>Caracteres Proibidos</string>
+	<key>Free</key>
+	<string>Sem custo</string>
+	<key>Free on %@</key>
+	<string>Livre em %@</string>
+	<key>Full Screen</key>
+	<string>Tela cheia </string>
+	<key>GPS Location</key>
+	<string>Localização GPS </string>
+	<key>General</key>
+	<string>Geral</string>
+	<key>Generate</key>
+	<string>Generate</string>
+	<key>Get in touch with our community in the forums - or file a GitHub issue to report a bug or request a feature.</key>
+	<string>Get in touch with our community in the forums - or file a GitHub issue to report a bug or request a feature.</string>
+	<key>Go to Beginning</key>
+	<string>Vá para o começo </string>
+	<key>Go to page</key>
+	<string>Ir para página</string>
+	<key>Grid</key>
+	<string>Grade</string>
+	<key>Group</key>
+	<string>Group</string>
+	<key>Groups</key>
+	<string>Grupos</string>
+	<key>Help</key>
+	<string>Ajuda</string>
+	<key>Help &amp; Contact</key>
+	<string>Help &amp; Contact</string>
+	<key>Hide</key>
+	<string>Hide</string>
+	<key>Histogram</key>
+	<string>Histograma </string>
+	<key>How should this file be saved?</key>
+	<string>Como esse arquivo deve ser salvo?</string>
+	<key>ISO</key>
+	<string>ISO</string>
+	<key>If you 'Continue', you will be prompted to allow the '{{app.name}}' app to open the login page where you can enter your credentials.</key>
+	<string>Se você 'Continuar', será solicitado que você permita que o aplicativo '{{app.name}}' abra a página de login onde você pode inserir suas credenciais.</string>
+	<key>If you 'Continue', you will be prompted to allow the '{{app.name}}' app to open the {{authmethodName}} login page where you can enter your credentials.</key>
+	<string>Se você 'Continuar', você será solicitado a permitir que o aplicativo '{{app.name}}' abra a página de login {{authmethodName}} onde você pode inserir suas credenciais.</string>
+	<key>If you choose "Immediately" the App will be locked, when it is no longer in foreground.</key>
+	<string>Se você escolher "Imediatamente", o aplicativo será bloqueado, quando não estiver mais em primeiro plano. </string>
+	<key>If you have a moment to give us your feedback, please take our survey.</key>
+	<string>If you have a moment to give us your feedback, please take our survey.</string>
+	<key>If you make an item a favorite, it will turn up here.</key>
+	<string>Se você tornar um item favorito, ele aparecerá aqui.</string>
+	<key>If you would like background media uploads to be more reliable, you should enable background location updates.</key>
+	<string>Se desejar que os envios de mídia em segundo plano sejam mais confiáveis, você deve habilitar as atualizações de localização em segundo plano.</string>
+	<key>If you'd like to give the account a custom name, please enter it below:</key>
+	<string>Se desejar dar um nome personalizado à conta, insira-o abaixo:</string>
+	<key>Ignore updates</key>
+	<string>Ignore as atualizações</string>
+	<key>Image details</key>
+	<string>Detalhes da Imagem </string>
+	<key>Image grid</key>
+	<string>Grade de imagem</string>
+	<key>Image metadata</key>
+	<string>Image metadados</string>
+	<key>Image metadata, extended upload options</key>
+	<string>Metadados de imagem, opções estendidas de envio</string>
+	<key>Images</key>
+	<string>Imagens</string>
+	<key>Immediately</key>
+	<string>Imediatamente</string>
+	<key>Import "{{itemName}}"</key>
+	<string>Importar "{{itemName}}"</string>
+	<key>Import from Clipboard</key>
+	<string>Importar da área de transferência </string>
+	<key>Import not allowed</key>
+	<string>Importação não autorizado</string>
+	<key>Import {{itemCount}} files</key>
+	<string>Importar {{itemCount}} arquivos</string>
+	<key>Importing %@ media files for upload</key>
+	<string>Importando %@ arquivos de mídia para envio</string>
+	<key>Importing files through opening is not allowed on this device.</key>
+	<string>A importação de arquivos através da abertura não é permitida neste dispositivo.</string>
+	<key>Importing files through the Share Extension is not allowed on this device.</key>
+	<string>A importação de arquivos por meio da extensão de compartilhamento não é permitida neste dispositivo.</string>
+	<key>Importing item %ld of %ld</key>
+	<string>Importando item %ld de %ld</string>
+	<key>In order to accurately determine your current licensing status, please add one or more accounts first.</key>
+	<string>Para determinar com precisão o seu status de licenciamento atual, adicione uma ou mais contas primeiro. </string>
+	<key>In the cloud</key>
+	<string>In the cloud</string>
+	<key>In-App Purchases</key>
+	<string>Compras dentro do aplicativo</string>
+	<key>Include available offline files</key>
+	<string>Incluir arquivos disponíveis offline</string>
+	<key>Incorrect code</key>
+	<string>Código incorreto</string>
+	<key>Increase Slider Value</key>
+	<string>Acrescer o Valor de Avanço</string>
+	<key>Info</key>
+	<string>Informação</string>
+	<key>Invalid Page</key>
+	<string>Página inválida</string>
+	<key>Invite</key>
+	<string>Convidar</string>
+	<key>Issues</key>
+	<string>Problemas</string>
+	<key>Item grid</key>
+	<string>Grade de itens</string>
+	<key>Item with same name already exists</key>
+	<string>Item com o mesmo nome já existe</string>
+	<key>Keywords</key>
+	<string>PalavrasChave</string>
+	<key>Landscape</key>
+	<string>Panorama </string>
+	<key>Lens ID</key>
+	<string>ID da lente </string>
+	<key>Lens info</key>
+	<string>Informação da lente</string>
+	<key>Lens make</key>
+	<string>Marca da lente</string>
+	<key>Lens model</key>
+	<string>Modelo da lente</string>
+	<key>Lens serial</key>
+	<string>Série da lente</string>
+	<key>Light</key>
+	<string>Claro</string>
+	<key>Limited Photo Access</key>
+	<string>Acesso Limitado a Fotos</string>
+	<key>Link</key>
+	<string>Linque</string>
+	<key>Link points to an account bookmark which is not configured in the app.</key>
+	<string>O linque aponta para um marcador de conta que não está configurado no aplicativo.</string>
+	<key>Link resolution failed</key>
+	<string>Falha na resolução do linque</string>
+	<key>Links</key>
+	<string>Linques</string>
+	<key>List</key>
+	<string>Listar</string>
+	<key>Loading…</key>
+	<string>Carregando...</string>
+	<key>Local copy</key>
+	<string>Local copy</string>
+	<key>Local version</key>
+	<string>Local version</string>
+	<key>Location permission denied</key>
+	<string>Permissão de localização negada</string>
+	<key>Locations</key>
+	<string>Localizações</string>
+	<key>Lock application</key>
+	<string>Bloquear aplicação</string>
+	<key>Log Destinations</key>
+	<string>Destinos de Log</string>
+	<key>Log Files</key>
+	<string>Arquivos de log</string>
+	<key>Log Level</key>
+	<string>Nível do Log</string>
+	<key>Log out</key>
+	<string>Sair</string>
+	<key>Log out of '%@' failed</key>
+	<string>Log out of '%@' failed</string>
+	<key>Logging</key>
+	<string>Gravando no Log</string>
+	<key>Login</key>
+	<string>Login</string>
+	<key>Make available offline</key>
+	<string> Disponibilizar offline</string>
+	<key>Make unavailable offline</key>
+	<string>Tornar offline indisponível</string>
+	<key>Manage</key>
+	<string>Gerenciar</string>
+	<key>Manual</key>
+	<string>Manual</string>
+	<key>Markup</key>
+	<string>Marcação</string>
+	<key>Markup Documents</key>
+	<string>Marcação de Documentos</string>
+	<key>Markup photos and PDF files.</key>
+	<string>Marcar fotos e arquivos PDF.</string>
+	<key>Mask private data</key>
+	<string>Mascarar dados privados</string>
+	<key>Media Export</key>
+	<string>Exportação de mídia</string>
+	<key>Media Files</key>
+	<string>Arquivos de Mídia</string>
+	<key>Media Upload</key>
+	<string>Envio de mídia</string>
+	<key>Media import</key>
+	<string>Importação de mídia</string>
+	<key>Messages</key>
+	<string>Messages</string>
+	<key>Metering</key>
+	<string>Medição </string>
+	<key>Missing hostname</key>
+	<string>Nome do host ausente</string>
+	<key>Missing permissions</key>
+	<string>Permissões ausentes</string>
+	<key>More</key>
+	<string>Mais</string>
+	<key>More for {{title}}</key>
+	<string>More for {{title}}</string>
+	<key>More information</key>
+	<string>Mais Informações</string>
+	<key>Move</key>
+	<string>Mover</string>
+	<key>Move "{{itemName}}"</key>
+	<string>Mover "{{itemName}}"</string>
+	<key>Move here</key>
+	<string>Mova aqui</string>
+	<key>Move {{itemCount}} items</key>
+	<string>Mova {{itemCount}} itens</string>
+	<key>Moving %ld items…</key>
+	<string>Movendo %ld itens…</string>
+	<key>MultiSpot</key>
+	<string>MultiLocais</string>
+	<key>Multiple items</key>
+	<string>Vários itens</string>
+	<key>Mute/Unmute</key>
+	<string>Sem som/Com som </string>
+	<key>N</key>
+	<string>N</string>
+	<key>Name</key>
+	<string>Nome</string>
+	<key>Name of saved search</key>
+	<string>Nome da pesquisa salva</string>
+	<key>Name of template</key>
+	<string>Nome do modelo</string>
+	<key>Network unavailable</key>
+	<string>Rede indisponível</string>
+	<key>New Folder</key>
+	<string>Nova Pasta</string>
+	<key>New document</key>
+	<string>Novo documento</string>
+	<key>New in %@</key>
+	<string>Novo em %@</string>
+	<key>New settings received from MDM</key>
+	<string>Novas configurações recebidas do MDM </string>
+	<key>Next</key>
+	<string>Próxima</string>
+	<key>Next item</key>
+	<string>Next item</string>
+	<key>No Access to the media selected for upload</key>
+	<string>Sem acesso à mídia selecionada para envio</string>
+	<key>No account configured</key>
+	<string>No account configured</string>
+	<key>No account has been set up in the {{app.name}} app yet.</key>
+	<string>Nenhuma conta foi configurada no aplicativo {{app.name}} ainda.</string>
+	<key>No accounts found</key>
+	<string>Nenhuma conta encontrada </string>
+	<key>No actions available</key>
+	<string>Nenhuma ação disponível</string>
+	<key>No authentication data has been found for this connection.</key>
+	<string>Nenhum dado de autenticação foi achado para esta conexão.</string>
+	<key>No contents</key>
+	<string>Sem conteúdo</string>
+	<key>No favorites found</key>
+	<string>Nenhum favorito encontrado</string>
+	<key>No files available offline</key>
+	<string>Nenhum arquivo disponível off-line</string>
+	<key>No issues found. Certificate passed validation.</key>
+	<string>Nenhum problema encontrado. Certificado passou pela validação.</string>
+	<key>No items found matching the search criteria.</key>
+	<string>Não foram encontrados itens correspondentes aos critérios de pesquisa.</string>
+	<key>No items shared by link</key>
+	<string>Nenhum item compartilhado por link</string>
+	<key>No items shared by you</key>
+	<string>Nenhum item compartilhado por você</string>
+	<key>No items shared with you</key>
+	<string>Nenhum item compartilhado com você</string>
+	<key>No matches</key>
+	<string>Não coincidem</string>
+	<key>No pending messages or ongoing actions.</key>
+	<string>Sem mensagens pendentes ou ações em andamento.</string>
+	<key>No spaces</key>
+	<string>No spaces</string>
+	<key>No strobe return detection</key>
+	<string>Sem detecção de retorno estroboscópio</string>
+	<key>No user or group matches your search.</key>
+	<string>No user or group matches your search.</string>
+	<key>Normal</key>
+	<string>Normal</string>
+	<key>Not defined</key>
+	<string>Não definido</string>
+	<key>Not now</key>
+	<string>Agora não</string>
+	<key>OK</key>
+	<string>OK</string>
+	<key>Off</key>
+	<string>Desligado</string>
+	<key>Offline</key>
+	<string>Offline</string>
+	<key>Offline files use</key>
+	<string>Uso de arquivos off-line</string>
+	<key>Online</key>
+	<string>Online</string>
+	<key>Open Selected</key>
+	<string>Abrir o Selecionado</string>
+	<key>Open app</key>
+	<string>Abrir aplicativo</string>
+	<key>Open file</key>
+	<string>Abrir arquivo</string>
+	<key>Open help page</key>
+	<string>Open help page</string>
+	<key>Open in</key>
+	<string>Aberto em</string>
+	<key>Open in a new Window</key>
+	<string>Abrir em uma nova Janela</string>
+	<key>Open in {{appName}} (web)</key>
+	<string>Abrir em {{appName}} (web)</string>
+	<key>Open link</key>
+	<string>Open link</string>
+	<key>Open login page</key>
+	<string>Abrir página de login</string>
+	<key>Open shortcut</key>
+	<string>Open shortcut</string>
+	<key>Opening documents is not supported by the app provider on this instance.</key>
+	<string>A abertura de documentos não é suportada pelo provedor de aplicativos nesta instância.</string>
+	<key>Opening link failed</key>
+	<string>Opening link failed</string>
+	<key>Opening not allowed</key>
+	<string>Abertura não permitida</string>
+	<key>Opening…</key>
+	<string>Abertura…</string>
+	<key>Optic ID</key>
+	<string>Optic ID</string>
+	<key>Options</key>
+	<string>Opções</string>
+	<key>Original date</key>
+	<string>Data original </string>
+	<key>Otherwise background media uploads using background refresh technology would depend on how frequently you use the app.</key>
+	<string>Caso contrário, os envios de mídia em segundo plano usando a tecnologia de atualização em segundo plano dependeriam da frequência com que você usa o aplicativo.</string>
+	<key>Outline</key>
+	<string>Esboço</string>
+	<key>Overwrite original</key>
+	<string>Substituir original</string>
+	<key>Owner</key>
+	<string>Proprietário</string>
+	<key>PDF Documents</key>
+	<string>Documentos PDF</string>
+	<key>Page</key>
+	<string>Página</string>
+	<key>Partial</key>
+	<string>Parcial</string>
+	<key>Passcode Lock</key>
+	<string>Senha-código de bloqueio</string>
+	<key>Passcode option</key>
+	<string>Opção de senha </string>
+	<key>Passcode protection is not supported on this device.
+Please disable passcode lock in the app settings.</key>
+	<string>A proteção por senha não é compatível com este dispositivo. 
+Desative o bloqueio por senha nas configurações do aplicativo. </string>
+	<key>Passcode setup</key>
+	<string>Configuração de senha</string>
+	<key>Passed</key>
+	<string>Passado</string>
+	<key>Password</key>
+	<string>Senha</string>
+	<key>Paste</key>
+	<string>Colar</string>
+	<key>Pattern</key>
+	<string>Padrão</string>
+	<key>Pending</key>
+	<string>Pendente</string>
+	<key>Permissions</key>
+	<string>Permissões</string>
+	<key>Photo Pro Features</key>
+	<string>Recursos do Foto Pro</string>
+	<key>Photo upload</key>
+	<string>Envio de foto</string>
+	<key>Photo upload path</key>
+	<string>Caminho para envio de imagens</string>
+	<key>Photometric interpretation</key>
+	<string>Interpretação fotométrica</string>
+	<key>Photos</key>
+	<string>Imagens</string>
+	<key>Pick a destination for photo uploads</key>
+	<string>Pick a destination for photo uploads</string>
+	<key>Pick a destination for video uploads</key>
+	<string>Pick a destination for video uploads</string>
+	<key>Pick a document type to create:</key>
+	<string>Escolha um tipo de documento para criar:</string>
+	<key>Pick a name</key>
+	<string>Escolha um nome</string>
+	<key>Pick file or folder</key>
+	<string>Pick file or folder</string>
+	<key>Place</key>
+	<string>Local</string>
+	<key>Play/Pause</key>
+	<string>Rodar/Pausar</string>
+	<key>Please choose how many digits you want to use for the passcode lock?</key>
+	<string>Por favor, escolha quantos dígitos você deseja usar para o bloqueio por senha? </string>
+	<key>Please configure an email account</key>
+	<string>Por favor, configure uma conta de email</string>
+	<key>Please note: Folders can only be pasted into the %@ app and the same account.</key>
+	<string>Observação: as pastas só podem ser coladas no  %@ aplicativo e a mesma conta. </string>
+	<key>Please open the app and select the account to re-authenticate.</key>
+	<string>Please open the app and select the account to re-authenticate.</string>
+	<key>Please re-enable location acquisition in system settings</key>
+	<string>Reative a aquisição de localização nas configurações do sistema</string>
+	<key>Please try again in %@</key>
+	<string>Por favor, tente novamente em %@</string>
+	<key>Please wait…</key>
+	<string>Por favor aguarde...</string>
+	<key>Portions of this app may utilize the following copyrighted material, the use of which is hereby acknowledged.</key>
+	<string>Partes deste aplicativo podem utilizar o seguinte material protegido por direitos autorais, cujo uso é aqui reconhecido.</string>
+	<key>Portrait</key>
+	<string>Retrato</string>
+	<key>Prefer RAW photos</key>
+	<string>Prefira fotos RAW </string>
+	<key>Prefer original videos</key>
+	<string>Prefira vídeos originais</string>
+	<key>Prefer unedited photos</key>
+	<string>Prefira fotos não editadas</string>
+	<key>Preparing account</key>
+	<string>Preparando conta</string>
+	<key>Preparing…</key>
+	<string>Preparando…</string>
+	<key>Presentation Mode</key>
+	<string>Modo de Apresentação </string>
+	<key>Preserve original media file names</key>
+	<string>Preservar nomes originais dos arquivos de mídia</string>
+	<key>Prevent dragging of files and folders and multiselection using system defined gestures</key>
+	<string>Impedir o arrastamento de arquivos e pastas e a seleção múltipla usando gestos definidos pelo sistema</string>
+	<key>Previous</key>
+	<string>Anterior</string>
+	<key>Previous item</key>
+	<string>Previous item</string>
+	<key>Privacy</key>
+	<string>Privacidade</string>
+	<key>Privacy Policy</key>
+	<string>Política de Privacidade</string>
+	<key>Private Link</key>
+	<string>Linque Privado</string>
+	<key>Pro Features</key>
+	<string>Recursos Pro</string>
+	<key>Proceed</key>
+	<string>Prosseguir</string>
+	<key>Processing on server</key>
+	<string>Processando no servidor</string>
+	<key>Profile</key>
+	<string>Perfil</string>
+	<key>Program</key>
+	<string>Programa</string>
+	<key>Public Link</key>
+	<string>Linque Público</string>
+	<key>Purchase</key>
+	<string>Compra </string>
+	<key>Purchase failed</key>
+	<string>A compra falhou</string>
+	<key>Purchases &amp; Subscriptions</key>
+	<string>Compras &amp; Assinaturas</string>
+	<key>Quick Access</key>
+	<string>Acesso Rápido</string>
+	<key>RGB</key>
+	<string>RGB</string>
+	<key>Read</key>
+	<string>Ler</string>
+	<key>Really delete '%@'?</key>
+	<string>Realmente excluir '%@'?</string>
+	<key>Really include available offline files?</key>
+	<string> Realmente incluir arquivos offline disponíveis?</string>
+	<key>Recents</key>
+	<string>Recentes</string>
+	<key>Recommend to a friend</key>
+	<string>Recomendar a um amigo</string>
+	<key>Red eye detection supported</key>
+	<string>Compatível com detecção de olhos vermelhos</string>
+	<key>Refresh without asking</key>
+	<string>Atualizar sem pedir</string>
+	<key>Rejected</key>
+	<string>Rejeitado</string>
+	<key>Remove</key>
+	<string>Remover</string>
+	<key>Remove expiration date</key>
+	<string>Remove expiration date</string>
+	<key>Remove from sidebar</key>
+	<string>Remove from sidebar</string>
+	<key>Remove password</key>
+	<string>Remove password</string>
+	<key>Removes downloaded files and local copies of items marked as Available Offline. The latter will be re-downloaded next time you log into your account (connectivity required).</key>
+	<string>Remove arquivos baixados e cópias locais de itens marcados como Disponíveis offline. Este último será baixado novamente na próxima vez que você fizer login em sua conta (conectividade necessária).</string>
+	<key>Rename</key>
+	<string>Renomear</string>
+	<key>Repeat code</key>
+	<string>Repetir o código</string>
+	<key>Resolving link…</key>
+	<string>Resolvendo linque...</string>
+	<key>Restore purchases</key>
+	<string>Restaurar compras</string>
+	<key>Restoring purchases…</key>
+	<string>Restaurando compras...</string>
+	<key>Resume</key>
+	<string>Resumir</string>
+	<key>Reveal</key>
+	<string>Reveal</string>
+	<key>Reveal in folder</key>
+	<string>Revelar na pasta</string>
+	<key>Review Connection</key>
+	<string>Rever conexão</string>
+	<key>Revoke approval</key>
+	<string>Revogar aprovação</string>
+	<key>S</key>
+	<string>S</string>
+	<key>Save</key>
+	<string>Salvar</string>
+	<key>Save File</key>
+	<string>Salvar Arquivo</string>
+	<key>Save as</key>
+	<string>Salvar como</string>
+	<key>Save as copy</key>
+	<string>Salvar como cópia</string>
+	<key>Save as search template</key>
+	<string>Salvar como modelo de pesquisa</string>
+	<key>Save changes</key>
+	<string>Salvar alterações</string>
+	<key>Save here</key>
+	<string>Salvar aqui</string>
+	<key>Save search</key>
+	<string>Salvar busca</string>
+	<key>Saved search</key>
+	<string>Pesquisa salva</string>
+	<key>Saved searches</key>
+	<string>Pesquisas salvas</string>
+	<key>Saving</key>
+	<string>Salvando</string>
+	<key>Saving edited file failed</key>
+	<string>Falha ao salvar o arquivo editado</string>
+	<key>Scan</key>
+	<string>Escanear</string>
+	<key>Scan additional</key>
+	<string>Escaneamento adicional</string>
+	<key>Scan document</key>
+	<string>Escanear documento</string>
+	<key>Scan documents and photos with your camera.</key>
+	<string>Digitalize documentos e fotos com sua câmera.</string>
+	<key>Scans</key>
+	<string>Escaneamentos</string>
+	<key>Scene</key>
+	<string>Cena </string>
+	<key>Scheduled upload of %ld media assets</key>
+	<string>Carregamento programado de %ld ativos de mídia</string>
+	<key>Scroll to Bottom</key>
+	<string>Rolar para Baixo</string>
+	<key>Scroll to Top</key>
+	<string>Rolar para o Topo</string>
+	<key>Search</key>
+	<string>Pesquisar</string>
+	<key>Search PDF</key>
+	<string>Pesquisar PDF</string>
+	<key>Search account</key>
+	<string>Pesquisar conta </string>
+	<key>Search folder</key>
+	<string>Pesquisar pasta</string>
+	<key>Search for users or groups</key>
+	<string>Pesquisar usuários ou grupos</string>
+	<key>Search from {{folder.name}}</key>
+	<string>Pesquise em {{folder.name}}</string>
+	<key>Search space</key>
+	<string>Espaço de pesquisa</string>
+	<key>Search template</key>
+	<string>Modelo de pesquisa</string>
+	<key>Search templates</key>
+	<string>Pesquisar modelos</string>
+	<key>Search tree</key>
+	<string>Árvore de pesquisa</string>
+	<key>Search {{space.name}}</key>
+	<string>Pesquisar {{space.name}}</string>
+	<key>Security</key>
+	<string>Segurança</string>
+	<key>Select</key>
+	<string>Selecionar</string>
+	<key>Select All</key>
+	<string>Selecionar Todos</string>
+	<key>Select Destination</key>
+	<string>Select Destination</string>
+	<key>Select Last Item on Page</key>
+	<string>Selecione Último item na Página</string>
+	<key>Select Next</key>
+	<string>Selecionar Próximo</string>
+	<key>Select Previous</key>
+	<string>Selecionar o Anterior</string>
+	<key>Select folder</key>
+	<string>Select folder</string>
+	<key>Select one or more items.</key>
+	<string>Selecione um ou mais itens.</string>
+	<key>Select target.</key>
+	<string>Selecione o alvo.</string>
+	<key>Send feedback</key>
+	<string>Enviar comentário</string>
+	<key>Serial number</key>
+	<string>Número de série</string>
+	<key>Server Password</key>
+	<string>Senha do Servidor</string>
+	<key>Server URL</key>
+	<string>URL do servidor</string>
+	<key>Server Username</key>
+	<string>Usuário do Servidor</string>
+	<key>Server name</key>
+	<string>Nome do Servidor</string>
+	<key>Set</key>
+	<string>Set</string>
+	<key>Settings</key>
+	<string>Configurações</string>
+	<key>Setup a new account in the app to save to.</key>
+	<string>Setup a new account in the app to save to.</string>
+	<key>Share</key>
+	<string>Compartilhar</string>
+	<key>Share Diagnostics</key>
+	<string>Compartilhar Diagnósticos</string>
+	<key>Share Extension disabled</key>
+	<string>Extensão de compartilhamento desabilitada</string>
+	<key>Share Extension unavailable</key>
+	<string>Share Extension unavailable</string>
+	<key>Share with</key>
+	<string>Compartilhar com</string>
+	<key>Shared</key>
+	<string>Shared</string>
+	<key>Shared by link</key>
+	<string>Compartilhado por link</string>
+	<key>Shared by me</key>
+	<string>Compartilhado por mim</string>
+	<key>Shared by {{owner}}</key>
+	<string>Compartilhado por {{owner}}</string>
+	<key>Shared with</key>
+	<string>Compartilhado com</string>
+	<key>Shared with me</key>
+	<string>Compartilhou comigo</string>
+	<key>Shared with {{recipients}}</key>
+	<string>Compartilhado com {{recipients}}</string>
+	<key>Shared with {{recipient}}</key>
+	<string>Compartilhado com {{recipient}}</string>
+	<key>Shares</key>
+	<string>Compartilhamentos</string>
+	<key>Sharing</key>
+	<string>Compartilhamento</string>
+	<key>Sharing requires an active connection.</key>
+	<string>O compartilhamento requer uma conexão ativa.</string>
+	<key>Shortcut</key>
+	<string>Shortcut</string>
+	<key>Shortcut to '{{hostname}}'</key>
+	<string>Shortcut to '{{hostname}}'</string>
+	<key>Shortcuts Actions</key>
+	<string>Atalhos de Ações</string>
+	<key>Shorten by one week</key>
+	<string>Shorten by one week</string>
+	<key>Show</key>
+	<string>Show</string>
+	<key>Show all</key>
+	<string>Mostrar tudo</string>
+	<key>Show folders on top</key>
+	<string>Mostrar pastas no topo </string>
+	<key>Show hidden files and folders</key>
+	<string>Mostrar arquivos e pastas escondidos</string>
+	<key>Show message</key>
+	<string>Show message</string>
+	<key>Show more results</key>
+	<string>Mostrar mais resultados </string>
+	<key>Show new version</key>
+	<string>Mostrar nova versão</string>
+	<key>Show/Hide sidebar</key>
+	<string>Show/Hide sidebar</string>
+	<key>Shutter priority</key>
+	<string>Prioridade do obturador </string>
+	<key>Shutter speed</key>
+	<string>Velocidade do obturador</string>
+	<key>Sign in</key>
+	<string>Entrar</string>
+	<key>Size</key>
+	<string>Tamanho</string>
+	<key>Skip</key>
+	<string>Pular</string>
+	<key>Skip Ahead</key>
+	<string>Pular À frente </string>
+	<key>Skip Back</key>
+	<string>Não Retornar</string>
+	<key>Some cellular data may still be used. To completely avoid the usage of cellular data, please turn off access to cellular for the entire app in the Settings app.</key>
+	<string>Alguns dados do celular ainda podem ser usados. Para evitar completamente o uso de dados do celular, desligue o acesso ao celular para todo o aplicativo nas configurações do aplicativo.</string>
+	<key>Sort by %@</key>
+	<string>Ordenar por %@</string>
+	<key>Sort by {{attribute}} in {{direction}} order</key>
+	<string>Sort by {{attribute}} in {{direction}} order</string>
+	<key>Space</key>
+	<string>Space</string>
+	<key>Spaces</key>
+	<string>Spaces</string>
+	<key>Spot</key>
+	<string>Local</string>
+	<key>Start setup</key>
+	<string>Iniciar configuração</string>
+	<key>Status</key>
+	<string>Status</string>
+	<key>Storage</key>
+	<string>Armazenamento</string>
+	<key>Strobe return light detected</key>
+	<string>Luz estroboscópica de retorno detectada </string>
+	<key>Strobe return light not detected</key>
+	<string>Luz de retorno estroboscópica não detectada</string>
+	<key>Subscribe</key>
+	<string>Assinar</string>
+	<key>Subscribe Now</key>
+	<string>Inscreva-se agora</string>
+	<key>Switch Theme Style</key>
+	<string>Mudar o Estilo do Tema</string>
+	<key>System</key>
+	<string>Sistema</string>
+	<key>System Appeareance</key>
+	<string>Aparência do Sistema</string>
+	<key>TIFF</key>
+	<string>TIFF</string>
+	<key>Tab %@</key>
+	<string>Aba %@</string>
+	<key>Take photo or video</key>
+	<string>Tirar foto ou vídeo</string>
+	<key>Take survey</key>
+	<string>Take survey</string>
+	<key>Tap to launch the app.</key>
+	<string>Toque para iniciar o aplicativo. </string>
+	<key>Tap to quit the app.</key>
+	<string>Toque para sair do aplicativo. </string>
+	<key>Terms Of Use</key>
+	<string>Termos de Uso</string>
+	<key>Text</key>
+	<string>Texto</string>
+	<key>Thank you for using %@.
+</key>
+	<string>Obrigado por usar %@.
+</string>
+	<key>Thank you for using %@.
+If you like our App, please leave an AppStore review.
+❤️</key>
+	<string>Obrigado por usar %@.
+Se você gosta do nosso aplicativo, deixe um comentário na AppStore.
+❤️</string>
+	<key>The account has been disabled.</key>
+	<string>Esta conta foi desabilitada.</string>
+	<key>The connection's access token has expired or become invalid. Sign in again to re-gain access.</key>
+	<string> O token de acesso da conexão expirou ou se tornou inválido. Faça login novamente para obter novamente acesso.</string>
+	<key>The destination this shortcut points to could not be found. It may have been deleted or you may not have access to it.</key>
+	<string>The destination this shortcut points to could not be found. It may have been deleted or you may not have access to it.</string>
+	<key>The entered URL does not include a hostname.</key>
+	<string>O URL inserida não inclui um nome de host.</string>
+	<key>The entered codes are different</key>
+	<string>Os códigos inseridos são diferentes</string>
+	<key>The entered page number doesn't exist</key>
+	<string>A página inserida não existe</string>
+	<key>The following steps will guide you through the setup process.</key>
+	<string>As etapas a seguir guiarão você pelo processo de configuração.</string>
+	<key>The last 10 archived logs are kept on the device - with each log covering up to 24 hours of usage. When sharing please bear in mind that logs may contain sensitive information such as server URLs and user-specific information.</key>
+	<string>Os últimos 10 logs arquivados são mantidos no dispositivo - com cada log cobrindo até 24 horas de uso. Ao compartilhar, lembre-se de que os registros podem conter informações confidenciais, como URLs do servidor e informações específicas do usuário.</string>
+	<key>The password was copied to the clipboard</key>
+	<string>The password was copied to the clipboard</string>
+	<key>The search term you entered did not match any item in the selected scope.</key>
+	<string>O termo de pesquisa inserido não corresponde a nenhum item no escopo selecionado.</string>
+	<key>The server declined access with the credentials stored for this connection.</key>
+	<string>O servidor recusou o acesso com as credenciais armazenadas para esta conexão.</string>
+	<key>The shortcut points to a URL, but the configuration of this app prohibits opening it.</key>
+	<string>The shortcut points to a URL, but the configuration of this app prohibits opening it.</string>
+	<key>The shortcut points to another item, but the configuration of this app prohibits opening it.</key>
+	<string>The shortcut points to a URL, but the configuration of this app prohibits opening it.</string>
+	<key>The {{app.name}} share extension is not available on this system.</key>
+	<string>The {{app.name}} share extension is not available on this system.</string>
+	<key>Theme</key>
+	<string>Tema</string>
+	<key>This action can't be undone.</key>
+	<string>Essa ação não poderá ser desfeita</string>
+	<key>This document has %@ pages</key>
+	<string>Esse documento possui %@ páginas</string>
+	<key>This folder is empty.</key>
+	<string>Esta pasta está vazia.</string>
+	<key>This folder is empty. Fill it with content:</key>
+	<string>Esta pasta está vazia. Preencha com o conteúdo:</string>
+	<key>This folder no longer exists on the server.</key>
+	<string>Esta pasta não existe mais no servidor.</string>
+	<key>This permission is needed to upload photos and videos from your photo library.</key>
+	<string>Essa permissão é necessária para fazer envios de fotos e vídeos da sua biblioteca de fotos.</string>
+	<key>This shortcut points to:
+{{url}}</key>
+	<string>This shortcut points to:
+{{url}}</string>
+	<key>This will also delete all locally stored file copies.</key>
+	<string>Isto também irá excluir todas as cópias locais dos arquivo salvos.</string>
+	<key>Time</key>
+	<string>Horário</string>
+	<key>Time measured since uploading, editing, downloading or viewing the respective file through this device. Does not apply to files downloaded via the Available Offline feature. Local copies may be deleted before the given period of time has passed, f.ex. because there's a newer version of a file on the server - or through the manual deletion of offline copies. Also, local copies may not be deleted after the given period of time has passed, f.ex. if an action is performed on it, the file is still in use - or the account holding the file hasn't been used in the app.</key>
+	<string>Tempo medido desde o envio, edição, baixa ou visualização do respectivo arquivo através deste dispositivo. Não se aplica a arquivos baixados pelo recurso Disponível Off-line. As cópias locais podem ser excluídas antes que o período de tempo tenha passado, por ex. porque há uma versão mais recente de um arquivo no servidor - ou através da exclusão manual de cópias offline. Além disso, as cópias locais não podem ser excluídas após o período de tempo especificado, por ex. se uma ação for executada, o arquivo ainda está em uso - ou a conta que o contém não foi usada no aplicativo. </string>
+	<key>To use the app, you need to create a passcode.</key>
+	<string>Para usar o aplicativo, você precisa criar uma senha.</string>
+	<key>Toggle Search Scope</key>
+	<string>Alternar Escopo de Pesquisa </string>
+	<key>Toggle layout</key>
+	<string>Toggle layout</string>
+	<key>Total update scans</key>
+	<string>Varreduras de atualização totais</string>
+	<key>Touch ID</key>
+	<string>ID de toque</string>
+	<key>Tree</key>
+	<string>Árvore</string>
+	<key>Type</key>
+	<string>Digite</string>
+	<key>URL</key>
+	<string>URL</string>
+	<key>URL of webpage or item</key>
+	<string>URL of webpage or item</string>
+	<key>URL was copied to the clipboard</key>
+	<string>A URL foi copiada para a área de transferência</string>
+	<key>Uncalibrated</key>
+	<string>Descalibrado </string>
+	<key>Unfavorite item</key>
+	<string>Item não favorito</string>
+	<key>Unknown</key>
+	<string>Unknown</string>
+	<key>Unlock</key>
+	<string>Desbloquear</string>
+	<key>Unlock %@</key>
+	<string>Desbloquear %@</string>
+	<key>Unlock all Pro Features.</key>
+	<string>Desbloqueie todos os Recursos Profissionais.</string>
+	<key>Unlock using %@?</key>
+	<string>Desbloquear usando %@?</string>
+	<key>Unlocked</key>
+	<string>Desbloqueado</string>
+	<key>Unshare</key>
+	<string>Descompartilhar</string>
+	<key>Update Status</key>
+	<string>Atualização do Status</string>
+	<key>Updating %ld items…</key>
+	<string>Enviando %ld itens…</string>
+	<key>Updating connection…</key>
+	<string>Atualizando conexão...</string>
+	<key>Upload</key>
+	<string>Enviar</string>
+	<key>Upload file</key>
+	<string>Enviar arquivo</string>
+	<key>Upload from your photo library</key>
+	<string>Enviar da sua biblioteca de fotos</string>
+	<key>Uploading %ld files…</key>
+	<string>Enviar %ld arquivos…</string>
+	<key>Uploading {{remainingFileCount}} files…</key>
+	<string>Uploading {{remainingFileCount}} files…</string>
+	<key>Usage terms</key>
+	<string>Termos de uso </string>
+	<key>Use background location updates</key>
+	<string>Use atualizações de localização em segundo plano</string>
+	<key>Use background refresh</key>
+	<string>Usar atualização de fundo</string>
+	<key>Use ownCloud actions in Shortcuts.</key>
+	<string>Use ações ownCloud em Atalhos.</string>
+	<key>User Interface</key>
+	<string>Interface de Usuário</string>
+	<key>User-approved certificates</key>
+	<string>Certificados Aprovados pelo Usuário</string>
+	<key>Username</key>
+	<string>Nome do Usuário</string>
+	<key>Users</key>
+	<string>Usuários</string>
+	<key>Validation Error</key>
+	<string>Erro de Validação</string>
+	<key>Verbose</key>
+	<string>Verbose</string>
+	<key>Verifying password…</key>
+	<string>Verifying password…</string>
+	<key>Version information were copied to the clipboard</key>
+	<string>As informações da versão foram copiadas para a área de transferência</string>
+	<key>Video upload</key>
+	<string>Envio de vídeo</string>
+	<key>Video upload path</key>
+	<string>Caminho para vídeos enviados</string>
+	<key>Videos</key>
+	<string>Videos</string>
+	<key>View documentation</key>
+	<string>View documentation</string>
+	<key>Visit the forums</key>
+	<string>Visit the forums</string>
+	<key>W</key>
+	<string>W</string>
+	<key>Waiting for response from login session in external browser…</key>
+	<string>Aguardando resposta da sessão de conexão no navegador externo...</string>
+	<key>Waiting for server response…</key>
+	<string>Aguardando resposta do servidor…</string>
+	<key>Warning</key>
+	<string>Aviso</string>
+	<key>Welcome to %@</key>
+	<string>Bem-vindo ao %@</string>
+	<key>When activated, logs may impact performance and include sensitive information. However the logs are not subject to automatic submission to %@ servers. Sharing logs with others is sole user responsibility.</key>
+	<string>Quando ativado, os registros podem afetar o desempenho e incluir informações confidenciais. No entanto, os logs não estão sujeitos a envio automático para %@ servidores. Compartilhar registros com outras pessoas é responsabilidade exclusiva do usuário.</string>
+	<key>White balance</key>
+	<string>Balanço do branco</string>
+	<key>Would you like to view the updated version?</key>
+	<string>Deseja ver a versão atualizada?</string>
+	<key>YCbCr</key>
+	<string>YCbCr</string>
+	<key>You are required to set the passcode</key>
+	<string>Você deve definir a senha</string>
+	<key>You need to configure an email account first to be able to send emails.</key>
+	<string>Você precisa configurar uma conta de e-mail primeiro para poder enviar e-mails.</string>
+	<key>after %@</key>
+	<string>após %@</string>
+	<key>after free %@ trial</key>
+	<string>após %@ tentativas grátis</string>
+	<key>ascending</key>
+	<string>ascending</string>
+	<key>beta</key>
+	<string>beta</string>
+	<key>date</key>
+	<string>data</string>
+	<key>descending</key>
+	<string>descending</string>
+	<key>enabled</key>
+	<string>habilitado</string>
+	<key>https://example.com</key>
+	<string>https://example.com</string>
+	<key>kind</key>
+	<string>tipo</string>
+	<key>last used</key>
+	<string>usado por último</string>
+	<key>license</key>
+	<string>licença</string>
+	<key>name</key>
+	<string>nome</string>
+	<key>never</key>
+	<string>nunca</string>
+	<key>none</key>
+	<string>nenhum</string>
+	<key>not present</key>
+	<string>não presente </string>
+	<key>off</key>
+	<string>desligado</string>
+	<key>on</key>
+	<string>on</string>
+	<key>release</key>
+	<string>versão</string>
+	<key>shared</key>
+	<string>compartilhado</string>
+	<key>size</key>
+	<string>tamanho</string>
+	<key>undated</key>
+	<string>undated</string>
+	<key>unknown</key>
+	<string>desconhecido</string>
+	<key>{{attribute}} {{direction}}</key>
+	<string>{{attribute}} {{direction}}</string>
+	<key>{{fileName}} (file)</key>
+	<string>{{fileName}} (file)</string>
+	<key>{{folderName}} (folder)</key>
+	<string>{{folderName}} (folder)</string>
+	<key>{{itemCount}} items with {{totalSize}} total ({{fileCount}} files, {{folderCount}} folders)</key>
+	<string>{{itemCount}} itens com {{totalSize}} total ({{fileCount}} arquivos, {{folderCount}} pastas)</string>
+	<key>{{itemName}} ({{link}}) | password: {{password}}</key>
+	<string>{{itemName}} ({{link}}) | password: {{password}}</string>
+	<key>{{link}} | password: {{password}}</key>
+	<string>{{link}} | password: {{password}}</string>
+	<key>{{remaining}} available</key>
+	<string>{{restante}} disponível</string>
+	<key>{{spaceName}} (space)</key>
+	<string>{{spaceName}} (space)</string>
+</dict>
+</plist>

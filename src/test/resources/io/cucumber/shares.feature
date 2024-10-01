@@ -68,7 +68,7 @@ Feature: Private Share
       | folder | Share5 | Bob    | bob@own.com | Editor      |
       | folder | Share6 | Bob    | bob@own.com | Custom      |
 
-  @resharing
+  @resharing @ignore
   Rule: Resharing
 
   Scenario Outline: Resharing allowed

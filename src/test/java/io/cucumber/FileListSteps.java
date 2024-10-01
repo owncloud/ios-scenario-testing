@@ -409,9 +409,11 @@ public class FileListSteps {
         String stepName = new Object() {
         }.getClass().getEnclosingMethod().getName().toUpperCase();
         Log.log(Level.FINE, "----STEP----: " + stepName);
+        //Checks that pictures are displayed in the app
+        assertTrue(world.getUploadsPage().photoDisplayed(photos));
         ArrayList<OCFile> list = world.getFilesAPI().listItems("", "Alice");
-        int photosUploaded = world.getUploadsPage().photoUploaded(list);
-        assertEquals(photosUploaded, photos);
+        //Checks that pictures are uploaded to the server
+        assertTrue(world.getUploadsPage().photoUploaded(list, photos));
     }
 
     @Then("Alice should see {string} in the filelist")
