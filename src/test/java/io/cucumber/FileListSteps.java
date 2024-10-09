@@ -1,6 +1,5 @@
 package io.cucumber;
 
-import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
@@ -53,7 +52,7 @@ public class FileListSteps {
         return type;
     }
 
-    @ParameterType("file|pdf|image")
+    @ParameterType("file|pdf|image|audio|video")
     public String fileType(String type) {
         return type;
     }
@@ -80,15 +79,23 @@ public class FileListSteps {
                         break;
                     }
                     case ("shortcut"): {
-                        world.getFilesAPI().pushShortcut(itemName, userName);
+                        world.getFilesAPI().pushFileByMime(itemName, "text/uri-list");
                         break;
                     }
                     case ("image"): {
-                        world.getFilesAPI().pushPic(itemName);
+                        world.getFilesAPI().pushFileByMime(itemName, "image/jpg");
                         break;
                     }
                     case ("pdf"): {
-                        world.getFilesAPI().pushPdf(itemName);
+                        world.getFilesAPI().pushFileByMime(itemName, "application/pdf");
+                        break;
+                    }
+                    case ("audio"): {
+                        world.getFilesAPI().pushFileByMime(itemName, "audio/mpeg3");
+                        break;
+                    }
+                    case ("video"): {
+                        world.getFilesAPI().pushFileByMime(itemName, "video/mp4");
                         break;
                     }
                 }
