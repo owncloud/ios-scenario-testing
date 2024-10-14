@@ -25,3 +25,23 @@ Feature: Sidebar
     And Alice selects to remove from the sidebar the folder sidebar2 using the Actions menu
     And Alice opens the sidebar
     Then Alice should not see sidebar2 in sidebar
+
+  Scenario Outline: Check default search criteria
+    Given the following items have been created in Alice account
+      | <type> | <file>   |
+      | file   | finally.sh |
+    And Alice opens the sidebar
+    When Alice opens the option search in sidebar
+    And Alice selects the following Quick Access
+      | <name> |
+    Then Alice should see <file> in the filelist
+    But Alice should not see finally.sh in filelist
+
+    Examples:
+
+      | type  | name          | file           |
+      | pdf   | PDF Documents | sample.pdf     |
+      | image | Images        | blank.jpg      |
+      | audio | Audios        | sound.mp3      |
+      | video | Videos        | video.mp4      |
+      | file  | Documents     | officedoc.docx |

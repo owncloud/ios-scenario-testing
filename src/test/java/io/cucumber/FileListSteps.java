@@ -42,7 +42,7 @@ public class FileListSteps {
         return type;
     }
 
-    @ParameterType("Quick Access|filelist|shared with me")
+    @ParameterType("Quick Access|filelist|shared with me|search")
     public String typeOfList(String type) {
         return type;
     }
@@ -305,12 +305,23 @@ public class FileListSteps {
         world.getFileListPage().openItemSidebar(itemName);
     }
 
-    @When("Alice opens the {itemtype} {word} in sidebar")
-    public void open_item_in_sidebar_word(String itemType, String itemName) {
+    @When("Alice opens the folder {word} in sidebar")
+    public void open_item_in_sidebar_word(String itemName) {
         String stepName = new Object() {
         }.getClass().getEnclosingMethod().getName().toUpperCase();
         Log.log(Level.FINE, "----STEP----: " + stepName);
         world.getFileListPage().openItemSidebar(itemName);
+    }
+
+    @When("Alice selects the following Quick Access")
+    public void select_option_quick_access(DataTable table) {
+        String stepName = new Object() {
+        }.getClass().getEnclosingMethod().getName().toUpperCase();
+        Log.log(Level.FINE, "----STEP----: " + stepName);
+        List<List<String>> listItems = table.asLists();
+        String type = listItems.get(0).get(0);
+        //For any stupid reason, it's a blank just after the name
+        world.getFileListPage().openQuickAccessOption(type + " ");
     }
 
     @When("Alice creates new folder {word} in the folder picker to {word} inside")

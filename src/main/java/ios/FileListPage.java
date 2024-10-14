@@ -146,15 +146,20 @@ public class FileListPage extends CommonPage {
         sideMenuOpener.click();
     }
 
-    public void openCollection(String collection) {
-        Log.log(Level.FINE, "Starts: Open Quick Access collection: " + collection);
-        String collectionXpath = "//XCUIElementTypeStaticText[@name=\"" + collection + "\"]";
+    public void openCollection(String option) {
+        Log.log(Level.FINE, "Starts: Open Quick Access collection: " + option);
+        String collectionXpath = "//XCUIElementTypeStaticText[@name=\"" + option + "\"]";
         findXpath(collectionXpath).click();
     }
 
     public void openSpacesList() {
         Log.log(Level.FINE, "Starts: Open Spces list");
         spaces.click();
+    }
+
+    public void openQuickAccessOption(String option){
+        Log.log(Level.FINE, "Starts: Open Quick Access option: " + option);
+        findXpath("//XCUIElementTypeButton[@name=\""+ option +"\"]").click();
     }
 
     public void openItemSidebar(String itemName) {
@@ -173,6 +178,10 @@ public class FileListPage extends CommonPage {
             case "shared by link": {
                 findXpath("//XCUIElementTypeStaticText[@name=\"Shares\"]").click();
                 findXpath("//XCUIElementTypeStaticText[@name=\"Shared by link\"]").click();
+                break;
+            }
+            case "search": {
+                findXpath("//XCUIElementTypeStaticText[@name=\"Search\"]").click();
                 break;
             }
             default:
