@@ -160,10 +160,10 @@ public class SharePage extends CommonPage {
 
     public boolean displayedPermission(String permissionName) {
         switch (permissionName) {
+            case "Custom":
             case "Viewer": {
                 return viewerPermission.isDisplayed();
             }
-            case "Custom":
             case "Editor": {
                 return editorPermission.isDisplayed();
             }

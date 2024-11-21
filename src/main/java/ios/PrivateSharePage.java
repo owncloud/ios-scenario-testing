@@ -58,7 +58,11 @@ public class PrivateSharePage extends CommonPage {
         String urlShare = System.getProperty("server").split("://")[1].split(":")[0];
         String searchXpath = "//XCUIElementTypeTextField[@name=\"Alice@" + urlShare + "\"]";
         findXpath(searchXpath).sendKeys(shareeName);
-        findXpath("(//XCUIElementTypeStaticText[@name=\"" + shareeName + "\"])[1]").click();
+        if (type.equals("user"))
+            findXpath("(//XCUIElementTypeStaticText[@name=\"" + shareeName + "\"])[1]").click();
+        else //groups return as additional information, the group name itself
+            findXpath("(//XCUIElementTypeStaticText[@name=\"" + shareeName +
+                    " ("+ shareeName + ")\"])[1]").click();
     }
 
     public void setPermissions(String permission) {

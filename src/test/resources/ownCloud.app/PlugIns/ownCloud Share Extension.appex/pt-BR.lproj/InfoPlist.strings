@@ -3,12 +3,12 @@
 <plist version="1.0">
 <dict>
 	<key>CFBundleDisplayName</key>
-	<string>Share to ownCloud</string>
+	<string>Compartilhar no ownCloud</string>
 	<key>CFBundleName</key>
-	<string>ownCloud Share Extension</string>
+	<string>Extensão de compartilhamento ownCloud</string>
 	<key>Share Extension unavailable</key>
-	<string>Share Extension unavailable</string>
+	<string>Extensão de compartilhamento indisponível</string>
 	<key>The Share Extension is not available on this system.</key>
-	<string>The Share Extension is not available on this system.</string>
+	<string>A extensão de compartilhamento não está disponível neste sistema.</string>
 </dict>
 </plist>

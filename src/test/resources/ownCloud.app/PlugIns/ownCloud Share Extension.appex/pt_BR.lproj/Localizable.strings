@@ -49,9 +49,9 @@ Informe-nos sobre quaisquer problemas que surgirem por meio da opção "Enviar F
 	<key>Accept Share failed</key>
 	<string>Aceitar compartilhamento falhou</string>
 	<key>Accept or decline</key>
-	<string>Accept or decline</string>
+	<string>Aceitar ou declinar</string>
 	<key>Accept share</key>
-	<string>Accept share</string>
+	<string>Aceitar compartilhamento</string>
 	<key>Accepted</key>
 	<string>Aceito</string>
 	<key>Access denied</key>
@@ -133,7 +133,7 @@ Informe-nos sobre quaisquer problemas que surgirem por meio da opção "Enviar F
 	<key>Audio</key>
 	<string>Audio</string>
 	<key>Audios</key>
-	<string>Audios</string>
+	<string>Áudios</string>
 	<key>Authenticated as %@ via %@</key>
 	<string>Autenticado como %@ via %@</string>
 	<key>Authenticated via</key>
@@ -141,9 +141,9 @@ Informe-nos sobre quaisquer problemas que surgirem por meio da opção "Enviar F
 	<key>Authenticating…</key>
 	<string>Autenticando...</string>
 	<key>Authentication error</key>
-	<string>Authentication error</string>
+	<string>Erro de autenticação</string>
 	<key>Authentication failed</key>
-	<string>Authentication failed</string>
+	<string>Falha na autenticação</string>
 	<key>Authentication with %@ is no longer allowed. Re-authentication needed.</key>
 	<string>A autenticação com %@ não é mais permitida. Re-autenticação necessária. </string>
 	<key>Authoring</key>
@@ -161,7 +161,7 @@ Informe-nos sobre quaisquer problemas que surgirem por meio da opção "Enviar F
 	<key>Auto mode</key>
 	<string>Modo automático</string>
 	<key>Auto upload disabled</key>
-	<string>Auto upload disabled</string>
+	<string>Carregamento automático desativado</string>
 	<key>Auto upload of media was disabled since configured account / folder was not found</key>
 	<string>O envio automático de mídia foi desativado porque a conta/pasta configurada não foi encontrada</string>
 	<key>Auto-approved</key>
@@ -169,7 +169,7 @@ Informe-nos sobre quaisquer problemas que surgirem por meio da opção "Enviar F
 	<key>Available Offline</key>
 	<string>Disponível Offline</string>
 	<key>Available offline</key>
-	<string>Available offline</string>
+	<string>Disponível fora de linha</string>
 	<key>Average</key>
 	<string>Média </string>
 	<key>Back</key>
@@ -187,7 +187,7 @@ Informe-nos sobre quaisquer problemas que surgirem por meio da opção "Enviar F
 	<key>Browse</key>
 	<string>Procurar</string>
 	<key>Busy</key>
-	<string>Busy</string>
+	<string>Ocupado</string>
 	<key>By feature</key>
 	<string>Por recurso</string>
 	<key>Camera details</key>
@@ -223,9 +223,9 @@ Abra "Detalhes do certificado" para mais informações.</string>
 	<key>Change Sort Order</key>
 	<string>Modificar Ordem de Classificação</string>
 	<key>Change password</key>
-	<string>Change password</string>
+	<string>Mudar senha</string>
 	<key>Changed {{settingID}} to {{newValue}}.</key>
-	<string>Changed {{settingID}} to {{newValue}}.</string>
+	<string>Mudou {{settingID}} para {{newValue}}.</string>
 	<key>Choose destination directory…</key>
 	<string>Escolha o diretório de destino... </string>
 	<key>Clear</key>
@@ -285,7 +285,7 @@ Abra "Detalhes do certificado" para mais informações.</string>
 	<key>Copy here</key>
 	<string>Copiar aqui</string>
 	<key>Copy to clipboard</key>
-	<string>Copy to clipboard</string>
+	<string>Copiar para a área de tranferência</string>
 	<key>Copy {{itemCount}} items</key>
 	<string>Copiar {{itemCount}} itens</string>
 	<key>Copying %ld items…</key>
@@ -323,7 +323,7 @@ Abra "Detalhes do certificado" para mais informações.</string>
 	<key>Date</key>
 	<string>Data</string>
 	<key>Debug</key>
-	<string>Debug</string>
+	<string>Depurar</string>
 	<key>Decline</key>
 	<string>Rejeitar</string>
 	<key>Decline Share failed</key>
@@ -351,7 +351,7 @@ Abra "Detalhes do certificado" para mais informações.</string>
 	<key>Deleting %ld items…</key>
 	<string>Excluindo %ld itens…</string>
 	<key>Deletion of '%@' failed</key>
-	<string>Deletion of '%@' failed</string>
+	<string>Falha na exclusão de '%@'</string>
 	<key>Density</key>
 	<string>Densidade</string>
 	<key>Description</key>
@@ -367,7 +367,7 @@ Abra "Detalhes do certificado" para mais informações.</string>
 	<key>Digitized date</key>
 	<string>Data digitalizada</string>
 	<key>Disable</key>
-	<string>Disable</string>
+	<string>Desativar</string>
 	<key>Disable gestures</key>
 	<string>Desativar gestos</string>
 	<key>Discard changes</key>
@@ -387,7 +387,7 @@ Abra "Detalhes do certificado" para mais informações.</string>
 	<key>Done</key>
 	<string>Concluída</string>
 	<key>Download</key>
-	<string>Download</string>
+	<string>Baixar</string>
 	<key>Download / View</key>
 	<string>Baixar / Visualizar</string>
 	<key>Download / View / Upload</key>
@@ -487,7 +487,7 @@ Por favor, use o aplicativo para acessar seus arquivos.</string>
 	<key>File Provider access has been disabled by the administrator. Please use the share extension to import files.</key>
 	<string>O acesso do provedor de arquivos foi desativado pelo administrador. Use a extensão de compartilhamento para importar arquivos.</string>
 	<key>File an issue</key>
-	<string>File an issue</string>
+	<string>registrar um problema</string>
 	<key>File couldn't be opened</key>
 	<string>O arquivo não pode ser aberto</string>
 	<key>File format</key>
@@ -507,7 +507,7 @@ Por favor, use o aplicativo para acessar seus arquivos.</string>
 	<key>Find Previous</key>
 	<string>Encontre o Anterior </string>
 	<key>Find information, answers and solutions in the detailed documentation.</key>
-	<string>Find information, answers and solutions in the detailed documentation.</string>
+	<string>Você pode encontrar informações, repostas e soluções na documentação detalhada.</string>
 	<key>Fired</key>
 	<string>Disparado</string>
 	<key>Firmware</key>
@@ -539,7 +539,7 @@ Por favor, use o aplicativo para acessar seus arquivos.</string>
 	<key>General</key>
 	<string>Geral</string>
 	<key>Generate</key>
-	<string>Generate</string>
+	<string>Gerar</string>
 	<key>Get in touch with our community in the forums - or file a GitHub issue to report a bug or request a feature.</key>
 	<string>Get in touch with our community in the forums - or file a GitHub issue to report a bug or request a feature.</string>
 	<key>Go to Beginning</key>
@@ -549,15 +549,15 @@ Por favor, use o aplicativo para acessar seus arquivos.</string>
 	<key>Grid</key>
 	<string>Grade</string>
 	<key>Group</key>
-	<string>Group</string>
+	<string>Grupo</string>
 	<key>Groups</key>
 	<string>Grupos</string>
 	<key>Help</key>
 	<string>Ajuda</string>
 	<key>Help &amp; Contact</key>
-	<string>Help &amp; Contact</string>
+	<string>Ajuda &amp; Contato</string>
 	<key>Hide</key>
-	<string>Hide</string>
+	<string>Esconder</string>
 	<key>Histogram</key>
 	<string>Histograma </string>
 	<key>How should this file be saved?</key>
@@ -611,7 +611,7 @@ Por favor, use o aplicativo para acessar seus arquivos.</string>
 	<key>In order to accurately determine your current licensing status, please add one or more accounts first.</key>
 	<string>Para determinar com precisão o seu status de licenciamento atual, adicione uma ou mais contas primeiro. </string>
 	<key>In the cloud</key>
-	<string>In the cloud</string>
+	<string>Na nuvem</string>
 	<key>In-App Purchases</key>
 	<string>Compras dentro do aplicativo</string>
 	<key>Include available offline files</key>
@@ -663,9 +663,9 @@ Por favor, use o aplicativo para acessar seus arquivos.</string>
 	<key>Loading…</key>
 	<string>Carregando...</string>
 	<key>Local copy</key>
-	<string>Local copy</string>
+	<string>Cópia local</string>
 	<key>Local version</key>
-	<string>Local version</string>
+	<string>Versão local</string>
 	<key>Location permission denied</key>
 	<string>Permissão de localização negada</string>
 	<key>Locations</key>
@@ -681,7 +681,7 @@ Por favor, use o aplicativo para acessar seus arquivos.</string>
 	<key>Log out</key>
 	<string>Sair</string>
 	<key>Log out of '%@' failed</key>
-	<string>Log out of '%@' failed</string>
+	<string>Falha no logout de '%@'</string>
 	<key>Logging</key>
 	<string>Gravando no Log</string>
 	<key>Login</key>
@@ -711,7 +711,7 @@ Por favor, use o aplicativo para acessar seus arquivos.</string>
 	<key>Media import</key>
 	<string>Importação de mídia</string>
 	<key>Messages</key>
-	<string>Messages</string>
+	<string>Mensagens</string>
 	<key>Metering</key>
 	<string>Medição </string>
 	<key>Missing hostname</key>
@@ -721,7 +721,7 @@ Por favor, use o aplicativo para acessar seus arquivos.</string>
 	<key>More</key>
 	<string>Mais</string>
 	<key>More for {{title}}</key>
-	<string>More for {{title}}</string>
+	<string>Mais para {{title}}</string>
 	<key>More information</key>
 	<string>Mais Informações</string>
 	<key>Move</key>
@@ -761,11 +761,11 @@ Por favor, use o aplicativo para acessar seus arquivos.</string>
 	<key>Next</key>
 	<string>Próxima</string>
 	<key>Next item</key>
-	<string>Next item</string>
+	<string>Próximo item</string>
 	<key>No Access to the media selected for upload</key>
 	<string>Sem acesso à mídia selecionada para envio</string>
 	<key>No account configured</key>
-	<string>No account configured</string>
+	<string>Nenhuma conta configurada</string>
 	<key>No account has been set up in the {{app.name}} app yet.</key>
 	<string>Nenhuma conta foi configurada no aplicativo {{app.name}} ainda.</string>
 	<key>No accounts found</key>
@@ -795,11 +795,11 @@ Por favor, use o aplicativo para acessar seus arquivos.</string>
 	<key>No pending messages or ongoing actions.</key>
 	<string>Sem mensagens pendentes ou ações em andamento.</string>
 	<key>No spaces</key>
-	<string>No spaces</string>
+	<string>Nenhum espaço</string>
 	<key>No strobe return detection</key>
 	<string>Sem detecção de retorno estroboscópio</string>
 	<key>No user or group matches your search.</key>
-	<string>No user or group matches your search.</string>
+	<string>Nenhum usuário ou grupo corresponde à sua presquisa.</string>
 	<key>Normal</key>
 	<string>Normal</string>
 	<key>Not defined</key>
@@ -811,11 +811,11 @@ Por favor, use o aplicativo para acessar seus arquivos.</string>
 	<key>Off</key>
 	<string>Desligado</string>
 	<key>Offline</key>
-	<string>Offline</string>
+	<string>Fora de linha</string>
 	<key>Offline files use</key>
 	<string>Uso de arquivos off-line</string>
 	<key>Online</key>
-	<string>Online</string>
+	<string>Em Linha</string>
 	<key>Open Selected</key>
 	<string>Abrir o Selecionado</string>
 	<key>Open app</key>
@@ -823,7 +823,7 @@ Por favor, use o aplicativo para acessar seus arquivos.</string>
 	<key>Open file</key>
 	<string>Abrir arquivo</string>
 	<key>Open help page</key>
-	<string>Open help page</string>
+	<string>Abrir a página de ajuda</string>
 	<key>Open in</key>
 	<string>Aberto em</string>
 	<key>Open in a new Window</key>
@@ -831,7 +831,7 @@ Por favor, use o aplicativo para acessar seus arquivos.</string>
 	<key>Open in {{appName}} (web)</key>
 	<string>Abrir em {{appName}} (web)</string>
 	<key>Open link</key>
-	<string>Open link</string>
+	<string>Abrir o link</string>
 	<key>Open login page</key>
 	<string>Abrir página de login</string>
 	<key>Open shortcut</key>
@@ -839,7 +839,7 @@ Por favor, use o aplicativo para acessar seus arquivos.</string>
 	<key>Opening documents is not supported by the app provider on this instance.</key>
 	<string>A abertura de documentos não é suportada pelo provedor de aplicativos nesta instância.</string>
 	<key>Opening link failed</key>
-	<string>Opening link failed</string>
+	<string>Falha ao abrir o link</string>
 	<key>Opening not allowed</key>
 	<string>Abertura não permitida</string>
 	<key>Opening…</key>
@@ -947,7 +947,7 @@ Desative o bloqueio por senha nas configurações do aplicativo. </string>
 	<key>Previous</key>
 	<string>Anterior</string>
 	<key>Previous item</key>
-	<string>Previous item</string>
+	<string>Itens anteriores</string>
 	<key>Privacy</key>
 	<string>Privacidade</string>
 	<key>Privacy Policy</key>
@@ -1095,7 +1095,7 @@ Desative o bloqueio por senha nas configurações do aplicativo. </string>
 	<key>Select All</key>
 	<string>Selecionar Todos</string>
 	<key>Select Destination</key>
-	<string>Select Destination</string>
+	<string>Selecionar o Destino</string>
 	<key>Select Last Item on Page</key>
 	<string>Selecione Último item na Página</string>
 	<key>Select Next</key>
@@ -1103,7 +1103,7 @@ Desative o bloqueio por senha nas configurações do aplicativo. </string>
 	<key>Select Previous</key>
 	<string>Selecionar o Anterior</string>
 	<key>Select folder</key>
-	<string>Select folder</string>
+	<string>Selecionar pasta</string>
 	<key>Select one or more items.</key>
 	<string>Selecione um ou mais itens.</string>
 	<key>Select target.</key>
@@ -1121,7 +1121,7 @@ Desative o bloqueio por senha nas configurações do aplicativo. </string>
 	<key>Server name</key>
 	<string>Nome do Servidor</string>
 	<key>Set</key>
-	<string>Set</string>
+	<string>Definir</string>
 	<key>Settings</key>
 	<string>Configurações</string>
 	<key>Setup a new account in the app to save to.</key>
@@ -1133,11 +1133,11 @@ Desative o bloqueio por senha nas configurações do aplicativo. </string>
 	<key>Share Extension disabled</key>
 	<string>Extensão de compartilhamento desabilitada</string>
 	<key>Share Extension unavailable</key>
-	<string>Share Extension unavailable</string>
+	<string>A extensão de compartilhamento está indisponível</string>
 	<key>Share with</key>
 	<string>Compartilhar com</string>
 	<key>Shared</key>
-	<string>Shared</string>
+	<string>Compartilhado</string>
 	<key>Shared by link</key>
 	<string>Compartilhado por link</string>
 	<key>Shared by me</key>
@@ -1167,7 +1167,7 @@ Desative o bloqueio por senha nas configurações do aplicativo. </string>
 	<key>Shorten by one week</key>
 	<string>Shorten by one week</string>
 	<key>Show</key>
-	<string>Show</string>
+	<string>Mostrar</string>
 	<key>Show all</key>
 	<string>Mostrar tudo</string>
 	<key>Show folders on top</key>
@@ -1175,13 +1175,13 @@ Desative o bloqueio por senha nas configurações do aplicativo. </string>
 	<key>Show hidden files and folders</key>
 	<string>Mostrar arquivos e pastas escondidos</string>
 	<key>Show message</key>
-	<string>Show message</string>
+	<string>Mostrar mensagens</string>
 	<key>Show more results</key>
 	<string>Mostrar mais resultados </string>
 	<key>Show new version</key>
 	<string>Mostrar nova versão</string>
 	<key>Show/Hide sidebar</key>
-	<string>Show/Hide sidebar</string>
+	<string>Mostrar/Esconder barra lateral</string>
 	<key>Shutter priority</key>
 	<string>Prioridade do obturador </string>
 	<key>Shutter speed</key>
@@ -1203,9 +1203,9 @@ Desative o bloqueio por senha nas configurações do aplicativo. </string>
 	<key>Sort by {{attribute}} in {{direction}} order</key>
 	<string>Sort by {{attribute}} in {{direction}} order</string>
 	<key>Space</key>
-	<string>Space</string>
+	<string>Espaço</string>
 	<key>Spaces</key>
-	<string>Spaces</string>
+	<string>Espaços</string>
 	<key>Spot</key>
 	<string>Local</string>
 	<key>Start setup</key>
@@ -1323,7 +1323,7 @@ Se você gosta do nosso aplicativo, deixe um comentário na AppStore.
 	<key>URL</key>
 	<string>URL</string>
 	<key>URL of webpage or item</key>
-	<string>URL of webpage or item</string>
+	<string>URL da página da Web ou do item</string>
 	<key>URL was copied to the clipboard</key>
 	<string>A URL foi copiada para a área de transferência</string>
 	<key>Uncalibrated</key>
@@ -1331,7 +1331,7 @@ Se você gosta do nosso aplicativo, deixe um comentário na AppStore.
 	<key>Unfavorite item</key>
 	<string>Item não favorito</string>
 	<key>Unknown</key>
-	<string>Unknown</string>
+	<string>Desconhecido</string>
 	<key>Unlock</key>
 	<string>Desbloquear</string>
 	<key>Unlock %@</key>
@@ -1379,9 +1379,9 @@ Se você gosta do nosso aplicativo, deixe um comentário na AppStore.
 	<key>Validation Error</key>
 	<string>Erro de Validação</string>
 	<key>Verbose</key>
-	<string>Verbose</string>
+	<string>Verboso</string>
 	<key>Verifying password…</key>
-	<string>Verifying password…</string>
+	<string>Verificando a senha…</string>
 	<key>Version information were copied to the clipboard</key>
 	<string>As informações da versão foram copiadas para a área de transferência</string>
 	<key>Video upload</key>
@@ -1391,9 +1391,9 @@ Se você gosta do nosso aplicativo, deixe um comentário na AppStore.
 	<key>Videos</key>
 	<string>Videos</string>
 	<key>View documentation</key>
-	<string>View documentation</string>
+	<string>Ver documentação</string>
 	<key>Visit the forums</key>
-	<string>Visit the forums</string>
+	<string>Visitar os fóruns</string>
 	<key>W</key>
 	<string>W</string>
 	<key>Waiting for response from login session in external browser…</key>
@@ -1427,7 +1427,7 @@ Se você gosta do nosso aplicativo, deixe um comentário na AppStore.
 	<key>date</key>
 	<string>data</string>
 	<key>descending</key>
-	<string>descending</string>
+	<string>descendente</string>
 	<key>enabled</key>
 	<string>habilitado</string>
 	<key>https://example.com</key>
@@ -1457,24 +1457,24 @@ Se você gosta do nosso aplicativo, deixe um comentário na AppStore.
 	<key>size</key>
 	<string>tamanho</string>
 	<key>undated</key>
-	<string>undated</string>
+	<string>não datado</string>
 	<key>unknown</key>
 	<string>desconhecido</string>
 	<key>{{attribute}} {{direction}}</key>
 	<string>{{attribute}} {{direction}}</string>
 	<key>{{fileName}} (file)</key>
-	<string>{{fileName}} (file)</string>
+	<string>{{fileName}} (arquivo)</string>
 	<key>{{folderName}} (folder)</key>
-	<string>{{folderName}} (folder)</string>
+	<string>{{folderName}} (diretório)</string>
 	<key>{{itemCount}} items with {{totalSize}} total ({{fileCount}} files, {{folderCount}} folders)</key>
 	<string>{{itemCount}} itens com {{totalSize}} total ({{fileCount}} arquivos, {{folderCount}} pastas)</string>
 	<key>{{itemName}} ({{link}}) | password: {{password}}</key>
-	<string>{{itemName}} ({{link}}) | password: {{password}}</string>
+	<string>{{itemName}} ({{link}}) | senha: {{password}}</string>
 	<key>{{link}} | password: {{password}}</key>
-	<string>{{link}} | password: {{password}}</string>
+	<string>{{link}} | senha: {{password}}</string>
 	<key>{{remaining}} available</key>
 	<string>{{restante}} disponível</string>
 	<key>{{spaceName}} (space)</key>
-	<string>{{spaceName}} (space)</string>
+	<string>{{spaceName}} (espaço)</string>
 </dict>
 </plist>

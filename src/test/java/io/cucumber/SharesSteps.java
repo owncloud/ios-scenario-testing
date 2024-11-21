@@ -56,7 +56,6 @@ public class SharesSteps {
             throws Throwable {
         String stepName = new Object() {
         }.getClass().getEnclosingMethod().getName().toUpperCase();
-        ;
         Log.log(Level.FINE, "----STEP----: " + stepName);
         List<List<String>> listUser = table.asLists();
         String sharee = listUser.get(0).get(1);
