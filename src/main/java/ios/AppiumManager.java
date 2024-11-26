@@ -79,7 +79,7 @@ public class AppiumManager {
         if (System.getProperty("device") != null && !System.getProperty("device").isEmpty()) {
             capabilities.setCapability("appium:deviceName", System.getProperty("device"));
         } else {
-            capabilities.setCapability("appium:deviceName", "iPhone 15");
+            capabilities.setCapability("appium:deviceName", "iPhone 16");
         }
 
         capabilities.setCapability("udid", System.getProperty("udid"));
