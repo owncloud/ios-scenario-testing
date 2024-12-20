@@ -25,7 +25,7 @@ Please let us know about any issues that come up via the "Send Feedback" option 
 	<key>%@ is not available for this item.</key>
 	<string>%@ n'est pas disponible pour cet élément.</string>
 	<key>%@ is not available, when this account is offline. Please open the app and log into your account before you can do this action.</key>
-	<string>%@ is not available, when this account is offline. Please open the app and log into your account before you can do this action.</string>
+	<string>%@ est pas disponible, quand votre compte est hors-ligne. S'il vous plaît, ouvrez l'application et connectez-vous à votre compte avant de pouvoir faire cette action.</string>
 	<key>%@ of %@</key>
 	<string>%@ de %@</string>
 	<key>%@ was updated</key>
@@ -35,9 +35,9 @@ Please let us know about any issues that come up via the "Send Feedback" option 
 	<string>%@%@%@version%@build%@
 (app: %@, sdk: %@)</string>
 	<key>%ld Item was copied to the clipboard</key>
-	<string>%ld Item was copied to the clipboard</string>
+	<string>%ld Item a été copié dans le presse-papier</string>
 	<key>%ld Items were copied to the clipboard</key>
-	<string>%ld Items were copied to the clipboard</string>
+	<string>%ld Items ont été copiés dans le presse-papier</string>
 	<key>%ld digit code</key>
 	<string>%ld digit code</string>
 	<key>'%@' is currently locked</key>
@@ -61,7 +61,7 @@ Please let us know about any issues that come up via the "Send Feedback" option 
 	<key>Account</key>
 	<string>Compte</string>
 	<key>Account setup complete</key>
-	<string>Account setup complete</string>
+	<string>Configuration du compte complétée </string>
 	<key>Accounts</key>
 	<string>Comptes</string>
 	<key>Acknowledgements</key>
@@ -99,7 +99,7 @@ Please let us know about any issues that come up via the "Send Feedback" option 
 	<key>All done</key>
 	<string>C'est fini</string>
 	<key>Allow this app to refresh the content when on Wi-Fi or mobile network in background.</key>
-	<string>Allow this app to refresh the content when on Wi-Fi or mobile network in background.</string>
+	<string>Autoriser cette app a rafraîchir le contenu en Wi-Fi ou données cellulaire en arrière-plan. </string>
 	<key>Altitude</key>
 	<string>Altitude</string>
 	<key>An error occurred</key>
@@ -167,9 +167,9 @@ Please let us know about any issues that come up via the "Send Feedback" option 
 	<key>Auto-approved</key>
 	<string>Approuvé automatiquement</string>
 	<key>Available Offline</key>
-	<string>Disponible hors ligne</string>
+	<string>Disponible Hors-ligne</string>
 	<key>Available offline</key>
-	<string>Available offline</string>
+	<string>Disponible hors-ligne</string>
 	<key>Average</key>
 	<string>Moyenne</string>
 	<key>Back</key>
@@ -227,7 +227,7 @@ Ouvrez 'Détails du certificat' pour plus d'informations.</string>
 	<key>Changed {{settingID}} to {{newValue}}.</key>
 	<string>Changed {{settingID}} to {{newValue}}.</string>
 	<key>Choose destination directory…</key>
-	<string>Sélectionner le dossier de destination …</string>
+	<string>Sélectionner le dossier de destination…</string>
 	<key>Clear</key>
 	<string>Clear</string>
 	<key>Cleared all.</key>
@@ -761,11 +761,11 @@ Please use the app to access your files.</string>
 	<key>Next</key>
 	<string>Suivant</string>
 	<key>Next item</key>
-	<string>Next item</string>
+	<string>Article suivant</string>
 	<key>No Access to the media selected for upload</key>
 	<string>Aucun accès au média sélectionné pour le téléchargement</string>
 	<key>No account configured</key>
-	<string>No account configured</string>
+	<string>Aucun compte configuré</string>
 	<key>No account has been set up in the {{app.name}} app yet.</key>
 	<string>No account has been set up in the {{app.name}} app yet.</string>
 	<key>No accounts found</key>
@@ -799,7 +799,7 @@ Please use the app to access your files.</string>
 	<key>No strobe return detection</key>
 	<string>Aucune détection de retour stroboscopique</string>
 	<key>No user or group matches your search.</key>
-	<string>No user or group matches your search.</string>
+	<string>Aucun utilisateur ou groupe ne correspond à votre recherche.</string>
 	<key>Normal</key>
 	<string>Normal</string>
 	<key>Not defined</key>
@@ -811,11 +811,11 @@ Please use the app to access your files.</string>
 	<key>Off</key>
 	<string>Désactivé</string>
 	<key>Offline</key>
-	<string>Offline</string>
+	<string>Hors ligne</string>
 	<key>Offline files use</key>
 	<string>Utilisation des fichiers hors ligne</string>
 	<key>Online</key>
-	<string>Online</string>
+	<string>En ligne</string>
 	<key>Open Selected</key>
 	<string>Ouvrir la sélection</string>
 	<key>Open app</key>
@@ -823,7 +823,7 @@ Please use the app to access your files.</string>
 	<key>Open file</key>
 	<string>Ouvrir le fichier</string>
 	<key>Open help page</key>
-	<string>Open help page</string>
+	<string>Ouvrir la page d'aide</string>
 	<key>Open in</key>
 	<string>Ouvrir dans</string>
 	<key>Open in a new Window</key>
@@ -1473,7 +1473,7 @@ Si vous aimez notre application, veuillez laisser un avis sur l'AppStore.
 	<key>{{link}} | password: {{password}}</key>
 	<string>{{link}} | password: {{password}}</string>
 	<key>{{remaining}} available</key>
-	<string>{{remaining}} available</string>
+	<string>{{remaining}} disponible</string>
 	<key>{{spaceName}} (space)</key>
 	<string>{{spaceName}} (space)</string>
 </dict>

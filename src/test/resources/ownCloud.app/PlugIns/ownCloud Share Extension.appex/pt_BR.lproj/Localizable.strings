@@ -79,7 +79,7 @@ Informe-nos sobre quaisquer problemas que surgirem por meio da opção "Enviar F
 	<key>Add item</key>
 	<string>Adicionar item</string>
 	<key>Add to sidebar</key>
-	<string>Add to sidebar</string>
+	<string>Adicionar à barra lateral</string>
 	<key>Advanced settings</key>
 	<string>Configurações avançadas</string>
 	<key>After %ld seconds</key>
@@ -229,11 +229,11 @@ Abra "Detalhes do certificado" para mais informações.</string>
 	<key>Choose destination directory…</key>
 	<string>Escolha o diretório de destino... </string>
 	<key>Clear</key>
-	<string>Clear</string>
+	<string>Apagar</string>
 	<key>Cleared all.</key>
-	<string>Cleared all.</string>
+	<string>Tudo apagado</string>
 	<key>Cleared {{settingID}}.</key>
-	<string>Cleared {{settingID}}.</string>
+	<string>Apagado {{settingID}}.</string>
 	<key>Close Search</key>
 	<string>Fechar Pesquisa </string>
 	<key>Close Window</key>
@@ -255,7 +255,7 @@ Abra "Detalhes do certificado" para mais informações.</string>
 	<key>Compulsory flash supression</key>
 	<string>Supressão de flash obrigatória </string>
 	<key>Connecting</key>
-	<string>Connecting</string>
+	<string>Conectando</string>
 	<key>Connecting...</key>
 	<string>Conectando...</string>
 	<key>Connecting…</key>
@@ -307,7 +307,7 @@ Abra "Detalhes do certificado" para mais informações.</string>
 	<key>Create one file per page</key>
 	<string>Criar um aquivo por página</string>
 	<key>Create shortcut</key>
-	<string>Create shortcut</string>
+	<string>Criar atalho</string>
 	<key>Creating %ld folders…</key>
 	<string>Criando %ld pastas…</string>
 	<key>Creative</key>
@@ -329,7 +329,7 @@ Abra "Detalhes do certificado" para mais informações.</string>
 	<key>Decline Share failed</key>
 	<string>Recusa de compartilhamento falhou</string>
 	<key>Decline share</key>
-	<string>Decline share</string>
+	<string>Recusar compartilhamento</string>
 	<key>Declined</key>
 	<string>Rejeitado</string>
 	<key>Decrease Slider Value</key>
@@ -459,7 +459,7 @@ Abra "Detalhes do certificado" para mais informações.</string>
 	<key>Exposure bias</key>
 	<string>Viés de exposição </string>
 	<key>Extend by one week</key>
-	<string>Extend by one week</string>
+	<string>Extender por uma semana</string>
 	<key>Extended upload settings</key>
 	<string>Configurações de envio estendidas</string>
 	<key>Face ID</key>
@@ -471,7 +471,7 @@ Abra "Detalhes do certificado" para mais informações.</string>
 	<key>Feedback</key>
 	<string>Comentários</string>
 	<key>Fetching server information…</key>
-	<string>Fetching server information…</string>
+	<string>Buscando informação do servidor...</string>
 	<key>Fetching user information…</key>
 	<string>Buscando informações do usuário...</string>
 	<key>File</key>
@@ -541,7 +541,7 @@ Por favor, use o aplicativo para acessar seus arquivos.</string>
 	<key>Generate</key>
 	<string>Gerar</string>
 	<key>Get in touch with our community in the forums - or file a GitHub issue to report a bug or request a feature.</key>
-	<string>Get in touch with our community in the forums - or file a GitHub issue to report a bug or request a feature.</string>
+	<string>Entre em contato com nossa comunidade nos foruns - ou registre um problema no GitHub para comunicar um bug ou pedir um novo recurso.</string>
 	<key>Go to Beginning</key>
 	<string>Vá para o começo </string>
 	<key>Go to page</key>
@@ -571,7 +571,7 @@ Por favor, use o aplicativo para acessar seus arquivos.</string>
 	<key>If you choose "Immediately" the App will be locked, when it is no longer in foreground.</key>
 	<string>Se você escolher "Imediatamente", o aplicativo será bloqueado, quando não estiver mais em primeiro plano. </string>
 	<key>If you have a moment to give us your feedback, please take our survey.</key>
-	<string>If you have a moment to give us your feedback, please take our survey.</string>
+	<string>Se você tiver um momento para nos dar seu feedback, por favor, responda nosso questionário.</string>
 	<key>If you make an item a favorite, it will turn up here.</key>
 	<string>Se você tornar um item favorito, ele aparecerá aqui.</string>
 	<key>If you would like background media uploads to be more reliable, you should enable background location updates.</key>
@@ -835,7 +835,7 @@ Por favor, use o aplicativo para acessar seus arquivos.</string>
 	<key>Open login page</key>
 	<string>Abrir página de login</string>
 	<key>Open shortcut</key>
-	<string>Open shortcut</string>
+	<string>Abrir atalho</string>
 	<key>Opening documents is not supported by the app provider on this instance.</key>
 	<string>A abertura de documentos não é suportada pelo provedor de aplicativos nesta instância.</string>
 	<key>Opening link failed</key>
@@ -845,7 +845,7 @@ Por favor, use o aplicativo para acessar seus arquivos.</string>
 	<key>Opening…</key>
 	<string>Abertura…</string>
 	<key>Optic ID</key>
-	<string>Optic ID</string>
+	<string>ID Ótica</string>
 	<key>Options</key>
 	<string>Opções</string>
 	<key>Original date</key>
@@ -897,15 +897,15 @@ Desative o bloqueio por senha nas configurações do aplicativo. </string>
 	<key>Photos</key>
 	<string>Imagens</string>
 	<key>Pick a destination for photo uploads</key>
-	<string>Pick a destination for photo uploads</string>
+	<string>Escolha um destino para envio de fotos</string>
 	<key>Pick a destination for video uploads</key>
-	<string>Pick a destination for video uploads</string>
+	<string>Escolha um destino para enviar vídeos</string>
 	<key>Pick a document type to create:</key>
 	<string>Escolha um tipo de documento para criar:</string>
 	<key>Pick a name</key>
 	<string>Escolha um nome</string>
 	<key>Pick file or folder</key>
-	<string>Pick file or folder</string>
+	<string>Escolha o arquivo ou pasta</string>
 	<key>Place</key>
 	<string>Local</string>
 	<key>Play/Pause</key>
@@ -917,7 +917,7 @@ Desative o bloqueio por senha nas configurações do aplicativo. </string>
 	<key>Please note: Folders can only be pasted into the %@ app and the same account.</key>
 	<string>Observação: as pastas só podem ser coladas no  %@ aplicativo e a mesma conta. </string>
 	<key>Please open the app and select the account to re-authenticate.</key>
-	<string>Please open the app and select the account to re-authenticate.</string>
+	<string>Por favor, abra o app e selecione a conta para re-autenticar.</string>
 	<key>Please re-enable location acquisition in system settings</key>
 	<string>Reative a aquisição de localização nas configurações do sistema</string>
 	<key>Please try again in %@</key>
@@ -995,11 +995,11 @@ Desative o bloqueio por senha nas configurações do aplicativo. </string>
 	<key>Remove</key>
 	<string>Remover</string>
 	<key>Remove expiration date</key>
-	<string>Remove expiration date</string>
+	<string>Remover data de validade</string>
 	<key>Remove from sidebar</key>
-	<string>Remove from sidebar</string>
+	<string>Remover da barra lateral</string>
 	<key>Remove password</key>
-	<string>Remove password</string>
+	<string>Remover senha</string>
 	<key>Removes downloaded files and local copies of items marked as Available Offline. The latter will be re-downloaded next time you log into your account (connectivity required).</key>
 	<string>Remove arquivos baixados e cópias locais de itens marcados como Disponíveis offline. Este último será baixado novamente na próxima vez que você fizer login em sua conta (conectividade necessária).</string>
 	<key>Rename</key>
@@ -1015,7 +1015,7 @@ Desative o bloqueio por senha nas configurações do aplicativo. </string>
 	<key>Resume</key>
 	<string>Resumir</string>
 	<key>Reveal</key>
-	<string>Reveal</string>
+	<string>Revelar</string>
 	<key>Reveal in folder</key>
 	<string>Revelar na pasta</string>
 	<key>Review Connection</key>
@@ -1125,7 +1125,7 @@ Desative o bloqueio por senha nas configurações do aplicativo. </string>
 	<key>Settings</key>
 	<string>Configurações</string>
 	<key>Setup a new account in the app to save to.</key>
-	<string>Setup a new account in the app to save to.</string>
+	<string>Configure uma nova conta no app para onde salvar</string>
 	<key>Share</key>
 	<string>Compartilhar</string>
 	<key>Share Diagnostics</key>
@@ -1159,13 +1159,13 @@ Desative o bloqueio por senha nas configurações do aplicativo. </string>
 	<key>Sharing requires an active connection.</key>
 	<string>O compartilhamento requer uma conexão ativa.</string>
 	<key>Shortcut</key>
-	<string>Shortcut</string>
+	<string>Atalho</string>
 	<key>Shortcut to '{{hostname}}'</key>
-	<string>Shortcut to '{{hostname}}'</string>
+	<string>Atalho para '{{hostname}}'</string>
 	<key>Shortcuts Actions</key>
 	<string>Atalhos de Ações</string>
 	<key>Shorten by one week</key>
-	<string>Shorten by one week</string>
+	<string>Encurtado em uma semana</string>
 	<key>Show</key>
 	<string>Mostrar</string>
 	<key>Show all</key>
@@ -1201,7 +1201,7 @@ Desative o bloqueio por senha nas configurações do aplicativo. </string>
 	<key>Sort by %@</key>
 	<string>Ordenar por %@</string>
 	<key>Sort by {{attribute}} in {{direction}} order</key>
-	<string>Sort by {{attribute}} in {{direction}} order</string>
+	<string>Agrupar por {{attribute}} na ordem de {{direction}}</string>
 	<key>Space</key>
 	<string>Espaço</string>
 	<key>Spaces</key>
@@ -1235,7 +1235,7 @@ Desative o bloqueio por senha nas configurações do aplicativo. </string>
 	<key>Take photo or video</key>
 	<string>Tirar foto ou vídeo</string>
 	<key>Take survey</key>
-	<string>Take survey</string>
+	<string>Responda o questionário</string>
 	<key>Tap to launch the app.</key>
 	<string>Toque para iniciar o aplicativo. </string>
 	<key>Tap to quit the app.</key>
@@ -1259,7 +1259,7 @@ Se você gosta do nosso aplicativo, deixe um comentário na AppStore.
 	<key>The connection's access token has expired or become invalid. Sign in again to re-gain access.</key>
 	<string> O token de acesso da conexão expirou ou se tornou inválido. Faça login novamente para obter novamente acesso.</string>
 	<key>The destination this shortcut points to could not be found. It may have been deleted or you may not have access to it.</key>
-	<string>The destination this shortcut points to could not be found. It may have been deleted or you may not have access to it.</string>
+	<string>O destino para onde este atalho aponta não foi encontrado. Ele pode ter sido apagado ou você pode não ter acesso a ele.</string>
 	<key>The entered URL does not include a hostname.</key>
 	<string>O URL inserida não inclui um nome de host.</string>
 	<key>The entered codes are different</key>
@@ -1271,17 +1271,17 @@ Se você gosta do nosso aplicativo, deixe um comentário na AppStore.
 	<key>The last 10 archived logs are kept on the device - with each log covering up to 24 hours of usage. When sharing please bear in mind that logs may contain sensitive information such as server URLs and user-specific information.</key>
 	<string>Os últimos 10 logs arquivados são mantidos no dispositivo - com cada log cobrindo até 24 horas de uso. Ao compartilhar, lembre-se de que os registros podem conter informações confidenciais, como URLs do servidor e informações específicas do usuário.</string>
 	<key>The password was copied to the clipboard</key>
-	<string>The password was copied to the clipboard</string>
+	<string>A senha foi copiada para a área de transferência.</string>
 	<key>The search term you entered did not match any item in the selected scope.</key>
 	<string>O termo de pesquisa inserido não corresponde a nenhum item no escopo selecionado.</string>
 	<key>The server declined access with the credentials stored for this connection.</key>
 	<string>O servidor recusou o acesso com as credenciais armazenadas para esta conexão.</string>
 	<key>The shortcut points to a URL, but the configuration of this app prohibits opening it.</key>
-	<string>The shortcut points to a URL, but the configuration of this app prohibits opening it.</string>
+	<string>Este atalho aponta para uma URL, mas a configuração deste app proíbe abri-la.</string>
 	<key>The shortcut points to another item, but the configuration of this app prohibits opening it.</key>
-	<string>The shortcut points to a URL, but the configuration of this app prohibits opening it.</string>
+	<string>O atalho aponta para uma URL, mas a configuração deste app proíbe abri-la.</string>
 	<key>The {{app.name}} share extension is not available on this system.</key>
-	<string>The {{app.name}} share extension is not available on this system.</string>
+	<string>A extenção de compartilhamento de {{app.name}} não está disponível neste sistema.</string>
 	<key>Theme</key>
 	<string>Tema</string>
 	<key>This action can't be undone.</key>
@@ -1298,7 +1298,7 @@ Se você gosta do nosso aplicativo, deixe um comentário na AppStore.
 	<string>Essa permissão é necessária para fazer envios de fotos e vídeos da sua biblioteca de fotos.</string>
 	<key>This shortcut points to:
 {{url}}</key>
-	<string>This shortcut points to:
+	<string>Este atalho aponta para:
 {{url}}</string>
 	<key>This will also delete all locally stored file copies.</key>
 	<string>Isto também irá excluir todas as cópias locais dos arquivo salvos.</string>
@@ -1311,7 +1311,7 @@ Se você gosta do nosso aplicativo, deixe um comentário na AppStore.
 	<key>Toggle Search Scope</key>
 	<string>Alternar Escopo de Pesquisa </string>
 	<key>Toggle layout</key>
-	<string>Toggle layout</string>
+	<string>Acionar layout</string>
 	<key>Total update scans</key>
 	<string>Varreduras de atualização totais</string>
 	<key>Touch ID</key>
@@ -1359,7 +1359,7 @@ Se você gosta do nosso aplicativo, deixe um comentário na AppStore.
 	<key>Uploading %ld files…</key>
 	<string>Enviar %ld arquivos…</string>
 	<key>Uploading {{remainingFileCount}} files…</key>
-	<string>Uploading {{remainingFileCount}} files…</string>
+	<string>Enviando {{remainingFileCount}} arquivos…</string>
 	<key>Usage terms</key>
 	<string>Termos de uso </string>
 	<key>Use background location updates</key>
@@ -1421,7 +1421,7 @@ Se você gosta do nosso aplicativo, deixe um comentário na AppStore.
 	<key>after free %@ trial</key>
 	<string>após %@ tentativas grátis</string>
 	<key>ascending</key>
-	<string>ascending</string>
+	<string>subindo</string>
 	<key>beta</key>
 	<string>beta</string>
 	<key>date</key>
@@ -1449,7 +1449,7 @@ Se você gosta do nosso aplicativo, deixe um comentário na AppStore.
 	<key>off</key>
 	<string>desligado</string>
 	<key>on</key>
-	<string>on</string>
+	<string>ligado</string>
 	<key>release</key>
 	<string>versão</string>
 	<key>shared</key>

@@ -10,7 +10,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		N8CX0v6TsHRWF//726HSbkgogrM=
+		aKqdUMYxH0RoHYPK0fiqdUCZPqQ=
 		</data>
 		<key>LICENSE</key>
 		<data>
@@ -52,15 +52,6 @@
 			<key>hash</key>
 			<data>
 			qPa41fhxSzgq6GJOrQZLEYvA278=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>en_GB.lproj/Localizable.strings</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			t9TW0vYhJfHPGRwollUYZA11hU8=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -110,29 +101,11 @@
 			<key>optional</key>
 			<true/>
 		</dict>
-		<key>nb_NO.lproj/Localizable.strings</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			qPa41fhxSzgq6GJOrQZLEYvA278=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
 		<key>nn-NO.lproj/Localizable.strings</key>
 		<dict>
 			<key>hash</key>
 			<data>
 			udJhAQ6nG3N9M2Gqqfl8LzujnuU=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>nn_NO.lproj/Localizable.strings</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			qPa41fhxSzgq6GJOrQZLEYvA278=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -151,24 +124,6 @@
 			<key>hash</key>
 			<data>
 			n51GlzjcM62GKY2g9DAQCj4DdDI=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>pt_BR.lproj/Localizable.strings</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			W0nC9nbwO7fQnBiOiFz9EQCP1RQ=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>pt_PT.lproj/Localizable.strings</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			p8RHFhFgAgzI5RdbwdhIkcwV+F4=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -196,15 +151,6 @@
 			<key>hash</key>
 			<data>
 			wuEE7cf5k6Fo4jpVRf+MAah983A=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>th_TH.lproj/Localizable.strings</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			JNqoCbbsmV9tGwlupeU8DRK6Mz8=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -287,15 +233,6 @@
 			<key>optional</key>
 			<true/>
 		</dict>
-		<key>en_GB.lproj/Localizable.strings</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			oSSK7JqFAOmuFL/PoMlBJ7snXXXhLHH1p6JFoOwzoLQ=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
 		<key>es.lproj/Localizable.strings</key>
 		<dict>
 			<key>hash2</key>
@@ -341,29 +278,11 @@
 			<key>optional</key>
 			<true/>
 		</dict>
-		<key>nb_NO.lproj/Localizable.strings</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			LHZG3rgdYiGk0dQt2DiCsXgvIO7+boPG2jaRlzJQm2M=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
 		<key>nn-NO.lproj/Localizable.strings</key>
 		<dict>
 			<key>hash2</key>
 			<data>
 			mg9qQWA7qaVUo0edM9uILNggxxEhtCWSJBYwxKRuU8c=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>nn_NO.lproj/Localizable.strings</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			LHZG3rgdYiGk0dQt2DiCsXgvIO7+boPG2jaRlzJQm2M=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -382,24 +301,6 @@
 			<key>hash2</key>
 			<data>
 			+jrMVUcTSRyLbcD1yOKokYfD1B1tQWuoX1OCbCtcVto=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>pt_BR.lproj/Localizable.strings</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			LB0h2cXC+joasfyT6JAn7WMfZscqA4tLGyi8XCI4VYA=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>pt_PT.lproj/Localizable.strings</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			hX6glvdIVIwL4uRXTlj9DRGylqKozVUl48zTwZWLDg0=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -427,15 +328,6 @@
 			<key>hash2</key>
 			<data>
 			/LtkBqyVNI2YGviuvbkT81y2HQzEoUD3/WK1FPVUC7g=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>th_TH.lproj/Localizable.strings</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			pjM3KJ0t6nFG4KGxMWZm0dWnFil6VQAU3XpqiPcwKKw=
 			</data>
 			<key>optional</key>
 			<true/>

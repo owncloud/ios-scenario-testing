@@ -6,7 +6,7 @@
 	<dict>
 		<key>Base.lproj/Intents.intentdefinition</key>
 		<data>
-		wTkNIU50/P43unJMMV3enxdNxhc=
+		ExmgtUEyRyPE0XsjA+pVaTkShQ8=
 		</data>
 		<key>Down_Down.bundle/DownView (macOS).bundle/css/down.min.css</key>
 		<data>
@@ -42,11 +42,11 @@
 		</data>
 		<key>Down_Down.bundle/Info.plist</key>
 		<data>
-		Jaa9cOsiRXC+p+D+QvJAB2/eolo=
+		6hjmKYuy8sOAJ6ydOtetNBj+I1s=
 		</data>
 		<key>Down_Down.bundle/_CodeSignature/CodeDirectory</key>
 		<data>
-		lmcQgB7kh8uGokLectKFLnqCuv0=
+		+f16mUUkXyvdJB4FDhpQKnt3QSs=
 		</data>
 		<key>Down_Down.bundle/_CodeSignature/CodeRequirements</key>
 		<data>
@@ -54,7 +54,7 @@
 		</data>
 		<key>Down_Down.bundle/_CodeSignature/CodeRequirements-1</key>
 		<data>
-		V9xBOdGKDDtf5lxbNwI5nC16OqI=
+		r5R5XLyMqiUChA4HjuNUNH8Kz2w=
 		</data>
 		<key>Down_Down.bundle/_CodeSignature/CodeResources</key>
 		<data>
@@ -66,11 +66,11 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		i3QhxZKNFrO9/13u2jnUC6I8pbg=
+		gkG1DC2UzxSLrWc046F8NVVh/hI=
 		</data>
 		<key>PocketSVG_PocketSVG.bundle/Info.plist</key>
 		<data>
-		VrpcnmbEzRW0Hnvxzt6vSSwORRM=
+		+aOt28pjco6Y9Od3aWp/TM+pv/A=
 		</data>
 		<key>PocketSVG_PocketSVG.bundle/SVGColors.plist</key>
 		<data>
@@ -78,7 +78,7 @@
 		</data>
 		<key>PocketSVG_PocketSVG.bundle/_CodeSignature/CodeDirectory</key>
 		<data>
-		i7XTtRY+P4iNy2ZXAv0aRMbzO0o=
+		/V+1TqO4p5FzJNW4TIjjSjczkqA=
 		</data>
 		<key>PocketSVG_PocketSVG.bundle/_CodeSignature/CodeRequirements</key>
 		<data>
@@ -86,7 +86,7 @@
 		</data>
 		<key>PocketSVG_PocketSVG.bundle/_CodeSignature/CodeRequirements-1</key>
 		<data>
-		FYCRuT6AthfKMniBUIAZ4lrh+lU=
+		cYu39AoTIxwUAHw45vkQcuO9APQ=
 		</data>
 		<key>PocketSVG_PocketSVG.bundle/_CodeSignature/CodeResources</key>
 		<data>
@@ -102,7 +102,7 @@
 		</data>
 		<key>__preview.dylib</key>
 		<data>
-		c0nGtaTEeJc7TJfngZiJCptCYpA=
+		OIVn1gWONL9m5OnbAo68OZfJVMg=
 		</data>
 		<key>ar.lproj/Intents.strings</key>
 		<dict>
@@ -214,7 +214,7 @@
 		</dict>
 		<key>ownCloud Intents.debug.dylib</key>
 		<data>
-		ostZlAm9XnvRizKjwLGRaXNZQvc=
+		ko/7yHgBgZWjMDKQ9a5qERp5Hs0=
 		</data>
 		<key>pt-BR.lproj/Intents.strings</key>
 		<dict>
@@ -277,7 +277,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			yalMjwH1T3EpcCLf/GcdO7/ZHSdrvL5Gxj9fPJyhH2Y=
+			EiOO4lJEHTReWVzuWRgrFuS75P1V/CQ5GbdbJYhXHwI=
 			</data>
 		</dict>
 		<key>Down_Down.bundle/DownView (macOS).bundle/css/down.min.css</key>
@@ -340,14 +340,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			tVdNxuQfs0dN4bpDxSaRLMeTbiB5hqh7d7hclRYqrTE=
+			v7MhhMAIf326bOYs0m+fSBARv5yJxr8Gf7AA6HAxG5s=
 			</data>
 		</dict>
 		<key>Down_Down.bundle/_CodeSignature/CodeDirectory</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			+CxBjh3l1Tw1uJe6dK3F/P0qsKIZOF5mTf22cRy5WBc=
+			Mo+j0jEVyxWbH1vd0NLK7pY0VJZIXkd3nAti2wIUpow=
 			</data>
 		</dict>
 		<key>Down_Down.bundle/_CodeSignature/CodeRequirements</key>
@@ -361,7 +361,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			gg5nAiQ+L+BsCFduOriR26hL2j9IcYuWdIIzGTtaqUI=
+			IY2wHpSV6g1VRc6WvSjNmtpeJusZfZwXMB0RhJekDRE=
 			</data>
 		</dict>
 		<key>Down_Down.bundle/_CodeSignature/CodeResources</key>
@@ -382,7 +382,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			HaWewzcdPrI/uaw7JEb7jJk8WKN74mGvaaQO7DEKNdA=
+			Wd/3zHp1TcjJLaVnEXeT6sABdD61VX63ZzHRvbJST0M=
 			</data>
 		</dict>
 		<key>PocketSVG_PocketSVG.bundle/SVGColors.plist</key>
@@ -396,7 +396,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			BsHUKkMHL8ilGF9tLJS8As5bFpZYJEgDHyEean5JeVc=
+			8V/nC5cxBkr1tu3rqvMynoUd9o7JjcykDUTuOu0PHmM=
 			</data>
 		</dict>
 		<key>PocketSVG_PocketSVG.bundle/_CodeSignature/CodeRequirements</key>
@@ -410,7 +410,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			WL3NgYbYW1SF283NYhaauLQMXZA0E3cdchvhQVFrFbY=
+			udh3nSnBC+TViPKzyy08+kOaEeS4x+SATXCySKRrC6w=
 			</data>
 		</dict>
 		<key>PocketSVG_PocketSVG.bundle/_CodeSignature/CodeResources</key>
@@ -438,7 +438,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			eFC0fNP993Ss8CS0rYvDQZDfi8IJ0qST7QmlKiyQ/j8=
+			rJLPTIdKrmT369oOwxDwDnsuYlxhshxgoGQVjo/pd6M=
 			</data>
 		</dict>
 		<key>ar.lproj/Intents.strings</key>
@@ -553,7 +553,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			kWrCxjQxxlhHDg+oyg/8Baf51U7oAPWVNXmab/vFaFw=
+			NzCmT5fvb4QDBP/Uu20hH7hy3DWohhzp6jnmN8qH1Hw=
 			</data>
 		</dict>
 		<key>pt-BR.lproj/Intents.strings</key>

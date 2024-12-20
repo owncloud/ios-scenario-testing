@@ -39,7 +39,7 @@ public class GraphAPI extends CommonAPI {
 
     private RequestBody createBodySpace(String name, String description) {
         Log.log(Level.FINE, "BODY SPACE: Name: " + name + " . Description: " + description);
-        String json = "{\"Name\":\" " + name + " \",\"driveType\":\"project\", \"description\":\" " + description + " \"}";
+        String json = "{\"name\":\" " + name + " \",\"driveType\":\"project\", \"description\":\" " + description + " \"}";
         MediaType JSON = MediaType.parse("application/json; charset=utf-8");
         RequestBody body = RequestBody.create(JSON, json);
         return body;

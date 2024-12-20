@@ -6,11 +6,11 @@
 	<dict>
 		<key>Info.plist</key>
 		<data>
-		IBNBpdkGyRTLi9wEMOVr4g3EfyY=
+		vCdouWSHBg+hKA818KMf8LO9xug=
 		</data>
 		<key>OpenSSL.LICENSE</key>
 		<data>
-		ycUL1Gtpq6YuYcZdirCN0ejIOzg=
+		xcimj0uAkps+ZvBU83u54WB4hH8=
 		</data>
 		<key>cs.lproj/Localizable.strings</key>
 		<dict>
@@ -44,15 +44,6 @@
 			<key>hash</key>
 			<data>
 			SLaUcKKiN5MBrmKTztC4RYyqtBc=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>en_GB.lproj/Localizable.strings</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			GfxCEcFqjrmFtBT4F70CgYnQODQ=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -102,29 +93,11 @@
 			<key>optional</key>
 			<true/>
 		</dict>
-		<key>nb_NO.lproj/Localizable.strings</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			SLaUcKKiN5MBrmKTztC4RYyqtBc=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
 		<key>nn-NO.lproj/Localizable.strings</key>
 		<dict>
 			<key>hash</key>
 			<data>
 			23yGIz6rkdkaj4ik6G93LeVt+ug=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>nn_NO.lproj/Localizable.strings</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			SLaUcKKiN5MBrmKTztC4RYyqtBc=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -143,24 +116,6 @@
 			<key>hash</key>
 			<data>
 			+mrn7DbMzwr/0fxeUzL8oRsClFM=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>pt_BR.lproj/Localizable.strings</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			O5SZaBnzUo6jw/SrhJLS3UVAIuc=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>pt_PT.lproj/Localizable.strings</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			HpmE3if3qG25Zxql4vuSWGBIzpA=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -192,15 +147,6 @@
 			<key>optional</key>
 			<true/>
 		</dict>
-		<key>th_TH.lproj/Localizable.strings</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			mbhgSRM/FhfXBnsoe1waunvR3zs=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
 		<key>tr.lproj/Localizable.strings</key>
 		<dict>
 			<key>hash</key>
@@ -226,7 +172,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			NW5CJe0HffJYaGeVeXhBBLG3pXUuusxzBKLU7A8Z6Wg=
+			fVRQyy0UJlG4r6MVtfI478gF2tgn2RujZ9hRa8nUnno=
 			</data>
 		</dict>
 		<key>cs.lproj/Localizable.strings</key>
@@ -261,15 +207,6 @@
 			<key>hash2</key>
 			<data>
 			M/47/jdXEFzpkyDZ6EEXOjs1hiOEwvSbP6fYef2dy8s=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>en_GB.lproj/Localizable.strings</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			BKiH6B4LXyqTc4nX77Qgo5abMo4yE4x1Ub7N3E8y7DI=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -319,29 +256,11 @@
 			<key>optional</key>
 			<true/>
 		</dict>
-		<key>nb_NO.lproj/Localizable.strings</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			M/47/jdXEFzpkyDZ6EEXOjs1hiOEwvSbP6fYef2dy8s=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
 		<key>nn-NO.lproj/Localizable.strings</key>
 		<dict>
 			<key>hash2</key>
 			<data>
 			Ra+EmXMMByCvKa+LZNZUy+Hlq7F0U9CtJyFh7IAZqwI=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>nn_NO.lproj/Localizable.strings</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			M/47/jdXEFzpkyDZ6EEXOjs1hiOEwvSbP6fYef2dy8s=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -360,24 +279,6 @@
 			<key>hash2</key>
 			<data>
 			AwTWd1UdHmIe5bqiWsZ3K57LmgP/Se/1N2mmNbnbjjg=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>pt_BR.lproj/Localizable.strings</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			jvU/ffc1jgE3vwhCJUXRwLO+LoRV+loFMPslEy8oGAM=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>pt_PT.lproj/Localizable.strings</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			Bx/C0ml4M8qU3AYZwfFXPncypXa1Dy6HPQ1b6I7BspE=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -405,15 +306,6 @@
 			<key>hash2</key>
 			<data>
 			LtTUhIk18yZXz6ugqZ2VeAR6x87JDfhPlsc5r6l2r+A=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>th_TH.lproj/Localizable.strings</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			Tpbh9EA9T4OQ0mvE2PV11VSbyymDIvQ0tgeWZ/8gGjU=
 			</data>
 			<key>optional</key>
 			<true/>
