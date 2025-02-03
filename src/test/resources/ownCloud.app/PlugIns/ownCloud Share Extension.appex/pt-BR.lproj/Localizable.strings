@@ -2,18 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>
-This is a BETA release that may - and likely will - still contain bugs.
-
-YOU SHOULD NOT USE THIS BETA VERSION WITH PRODUCTION SYSTEMS, PRODUCTION DATA OR DATA OF VALUE. YOU'RE USING THIS BETA AT YOUR OWN RISK.
-
-Please let us know about any issues that come up via the "Send Feedback" option in the settings.</key>
-	<string>
-Esta é uma versão BETA que pode - e provavelmente ainda conterá - bugs.
-
-VOCÊ NÃO DEVE USAR ESTA VERSÃO BETA COM SISTEMAS DE PRODUÇÃO, DADOS DE PRODUÇÃO OU DADOS DE VALOR. VOCÊ ESTÁ USANDO ESTE BETA POR SUA CONTA E RISCO.
-
-Informe-nos sobre quaisquer problemas que surgirem por meio da opção "Enviar Feedback" nas configurações.</string>
 	<key> couldn't download file(s)</key>
 	<string>não foi possível baixar esse arquivo(s)</string>
 	<key>%@ (%d bits/channel)</key>

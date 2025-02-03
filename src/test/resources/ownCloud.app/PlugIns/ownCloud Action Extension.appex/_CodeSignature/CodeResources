@@ -38,11 +38,11 @@
 		</data>
 		<key>Down_Down.bundle/Info.plist</key>
 		<data>
-		6hjmKYuy8sOAJ6ydOtetNBj+I1s=
+		qNQ5e9Qg6lJlQK0yNTYpftRMtLc=
 		</data>
 		<key>Down_Down.bundle/_CodeSignature/CodeDirectory</key>
 		<data>
-		+f16mUUkXyvdJB4FDhpQKnt3QSs=
+		sTPW+C1sw2h0utGycTaXKXQP1lw=
 		</data>
 		<key>Down_Down.bundle/_CodeSignature/CodeRequirements</key>
 		<data>
@@ -50,7 +50,7 @@
 		</data>
 		<key>Down_Down.bundle/_CodeSignature/CodeRequirements-1</key>
 		<data>
-		r5R5XLyMqiUChA4HjuNUNH8Kz2w=
+		FoYo0AWtD9gC9Rg/9LJapK0mUCo=
 		</data>
 		<key>Down_Down.bundle/_CodeSignature/CodeResources</key>
 		<data>
@@ -62,11 +62,11 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		OpkmX36Amw0Nc6JBIjRZpXN7vvM=
+		9JpI7zfv5wUjLV/18y57O7RNIiM=
 		</data>
 		<key>PocketSVG_PocketSVG.bundle/Info.plist</key>
 		<data>
-		+aOt28pjco6Y9Od3aWp/TM+pv/A=
+		paN/Pb52hz4Va9qIbgIN7yNkGS8=
 		</data>
 		<key>PocketSVG_PocketSVG.bundle/SVGColors.plist</key>
 		<data>
@@ -74,7 +74,7 @@
 		</data>
 		<key>PocketSVG_PocketSVG.bundle/_CodeSignature/CodeDirectory</key>
 		<data>
-		/V+1TqO4p5FzJNW4TIjjSjczkqA=
+		neHlCLdzYBAh7MIMl1o+zztFI0g=
 		</data>
 		<key>PocketSVG_PocketSVG.bundle/_CodeSignature/CodeRequirements</key>
 		<data>
@@ -82,7 +82,7 @@
 		</data>
 		<key>PocketSVG_PocketSVG.bundle/_CodeSignature/CodeRequirements-1</key>
 		<data>
-		cYu39AoTIxwUAHw45vkQcuO9APQ=
+		6QlMAycctwdzqBJkhviphcBuXmQ=
 		</data>
 		<key>PocketSVG_PocketSVG.bundle/_CodeSignature/CodeResources</key>
 		<data>
@@ -127,15 +127,6 @@
 			<key>optional</key>
 			<true/>
 		</dict>
-		<key>en_GB.lproj/InfoPlist.strings</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			Rajbu5O0CFOoxTJ8CoztrDZkuzo=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
 		<key>es.lproj/InfoPlist.strings</key>
 		<dict>
 			<key>hash</key>
@@ -172,46 +163,10 @@
 			<key>optional</key>
 			<true/>
 		</dict>
-		<key>nb_NO.lproj/InfoPlist.strings</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			Rajbu5O0CFOoxTJ8CoztrDZkuzo=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>nn_NO.lproj/InfoPlist.strings</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			Rajbu5O0CFOoxTJ8CoztrDZkuzo=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
 		<key>ownCloud Action Extension.debug.dylib</key>
 		<data>
-		cO8rjbOYLhOLeS1Yc1UKhsx7WwE=
+		L+zuyt/w2QkZc/RkburDrAL8Aak=
 		</data>
-		<key>pt_BR.lproj/InfoPlist.strings</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			Rajbu5O0CFOoxTJ8CoztrDZkuzo=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>pt_PT.lproj/InfoPlist.strings</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			Rajbu5O0CFOoxTJ8CoztrDZkuzo=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
 		<key>ru.lproj/InfoPlist.strings</key>
 		<dict>
 			<key>hash</key>
@@ -226,15 +181,6 @@
 			<key>hash</key>
 			<data>
 			BsbglXv2gllj4errRJ3Z8QKeLXg=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>th_TH.lproj/InfoPlist.strings</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			Rajbu5O0CFOoxTJ8CoztrDZkuzo=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -320,14 +266,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			v7MhhMAIf326bOYs0m+fSBARv5yJxr8Gf7AA6HAxG5s=
+			h+RKWdh6HVVy7il2I7TIIEzbsZOopWysysM/9vfx5KM=
 			</data>
 		</dict>
 		<key>Down_Down.bundle/_CodeSignature/CodeDirectory</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Mo+j0jEVyxWbH1vd0NLK7pY0VJZIXkd3nAti2wIUpow=
+			WNnb2YpxDezGLxQCtL1odU7Ifge26Xu7YnFxwfcZn6Q=
 			</data>
 		</dict>
 		<key>Down_Down.bundle/_CodeSignature/CodeRequirements</key>
@@ -341,7 +287,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			IY2wHpSV6g1VRc6WvSjNmtpeJusZfZwXMB0RhJekDRE=
+			zpE+219XrEJMdXTL2qzRWRkd/9vIc2LH9Rm6u3jo7Pk=
 			</data>
 		</dict>
 		<key>Down_Down.bundle/_CodeSignature/CodeResources</key>
@@ -362,7 +308,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Wd/3zHp1TcjJLaVnEXeT6sABdD61VX63ZzHRvbJST0M=
+			xidGGb7cczB6Lmluf96aE0XuDqwfJMQiwS+XfML2KIw=
 			</data>
 		</dict>
 		<key>PocketSVG_PocketSVG.bundle/SVGColors.plist</key>
@@ -376,7 +322,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			8V/nC5cxBkr1tu3rqvMynoUd9o7JjcykDUTuOu0PHmM=
+			tYECvjE5TEFMYiG2c5Zu6Gl4ID+XAS2zQAJxuRGoJ/I=
 			</data>
 		</dict>
 		<key>PocketSVG_PocketSVG.bundle/_CodeSignature/CodeRequirements</key>
@@ -390,7 +336,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			udh3nSnBC+TViPKzyy08+kOaEeS4x+SATXCySKRrC6w=
+			JwMKomd2+3DhJBZH7bF+00qO7r5TslNZH9/9QVAhGpk=
 			</data>
 		</dict>
 		<key>PocketSVG_PocketSVG.bundle/_CodeSignature/CodeResources</key>
@@ -448,15 +394,6 @@
 			<key>optional</key>
 			<true/>
 		</dict>
-		<key>en_GB.lproj/InfoPlist.strings</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			stmNWzl83hL/lTwDfVSuFLnw86L+yQgJdfXQUPTx+aU=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
 		<key>es.lproj/InfoPlist.strings</key>
 		<dict>
 			<key>hash2</key>
@@ -493,48 +430,12 @@
 			<key>optional</key>
 			<true/>
 		</dict>
-		<key>nb_NO.lproj/InfoPlist.strings</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			stmNWzl83hL/lTwDfVSuFLnw86L+yQgJdfXQUPTx+aU=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>nn_NO.lproj/InfoPlist.strings</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			stmNWzl83hL/lTwDfVSuFLnw86L+yQgJdfXQUPTx+aU=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
 		<key>ownCloud Action Extension.debug.dylib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			z2sEJAQfEl8OusdQvCu+DwufIoI0wgTGnlcumbX2emY=
+			gKUIuSXhKksnUYnNsIAmCWRhiNN8w6ZpF1xHXR/vjp4=
 			</data>
-		</dict>
-		<key>pt_BR.lproj/InfoPlist.strings</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			stmNWzl83hL/lTwDfVSuFLnw86L+yQgJdfXQUPTx+aU=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>pt_PT.lproj/InfoPlist.strings</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			stmNWzl83hL/lTwDfVSuFLnw86L+yQgJdfXQUPTx+aU=
-			</data>
-			<key>optional</key>
-			<true/>
 		</dict>
 		<key>ru.lproj/InfoPlist.strings</key>
 		<dict>
@@ -550,15 +451,6 @@
 			<key>hash2</key>
 			<data>
 			tFG6WepSNSz2aHJL8AwX430yVkp811bMBxMgIXITVE8=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>th_TH.lproj/InfoPlist.strings</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			stmNWzl83hL/lTwDfVSuFLnw86L+yQgJdfXQUPTx+aU=
 			</data>
 			<key>optional</key>
 			<true/>

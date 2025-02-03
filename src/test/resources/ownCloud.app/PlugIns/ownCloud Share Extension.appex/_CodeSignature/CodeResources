@@ -42,11 +42,11 @@
 		</data>
 		<key>Down_Down.bundle/Info.plist</key>
 		<data>
-		6hjmKYuy8sOAJ6ydOtetNBj+I1s=
+		qNQ5e9Qg6lJlQK0yNTYpftRMtLc=
 		</data>
 		<key>Down_Down.bundle/_CodeSignature/CodeDirectory</key>
 		<data>
-		+f16mUUkXyvdJB4FDhpQKnt3QSs=
+		sTPW+C1sw2h0utGycTaXKXQP1lw=
 		</data>
 		<key>Down_Down.bundle/_CodeSignature/CodeRequirements</key>
 		<data>
@@ -54,7 +54,7 @@
 		</data>
 		<key>Down_Down.bundle/_CodeSignature/CodeRequirements-1</key>
 		<data>
-		r5R5XLyMqiUChA4HjuNUNH8Kz2w=
+		FoYo0AWtD9gC9Rg/9LJapK0mUCo=
 		</data>
 		<key>Down_Down.bundle/_CodeSignature/CodeResources</key>
 		<data>
@@ -66,11 +66,11 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		P1BSBLyhaAi0WV/NEndPM0/JSa8=
+		9axffM0m8WunMGM1EAjTCYSTH0k=
 		</data>
 		<key>PocketSVG_PocketSVG.bundle/Info.plist</key>
 		<data>
-		+aOt28pjco6Y9Od3aWp/TM+pv/A=
+		paN/Pb52hz4Va9qIbgIN7yNkGS8=
 		</data>
 		<key>PocketSVG_PocketSVG.bundle/SVGColors.plist</key>
 		<data>
@@ -78,7 +78,7 @@
 		</data>
 		<key>PocketSVG_PocketSVG.bundle/_CodeSignature/CodeDirectory</key>
 		<data>
-		/V+1TqO4p5FzJNW4TIjjSjczkqA=
+		neHlCLdzYBAh7MIMl1o+zztFI0g=
 		</data>
 		<key>PocketSVG_PocketSVG.bundle/_CodeSignature/CodeRequirements</key>
 		<data>
@@ -86,7 +86,7 @@
 		</data>
 		<key>PocketSVG_PocketSVG.bundle/_CodeSignature/CodeRequirements-1</key>
 		<data>
-		cYu39AoTIxwUAHw45vkQcuO9APQ=
+		6QlMAycctwdzqBJkhviphcBuXmQ=
 		</data>
 		<key>PocketSVG_PocketSVG.bundle/_CodeSignature/CodeResources</key>
 		<data>
@@ -117,7 +117,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			M7CK54YcIP6eN5EIJZFMpy4b3eM=
+			muTI+AHnU9mLW1kCTIqZsqHIrmU=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -135,7 +135,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			STn1FLub07lp7eS2GsHC1tdJUSg=
+			EGrDjO22qQkADus6UETZVnR1j9A=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -153,7 +153,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			imeg1COL8TqGDxTNSwDCuL1rxqY=
+			lCZzR0HMKvk9j7bfjtsirUESEF4=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -171,7 +171,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			DtwQhfUhQH+rqeM36nsyaYxqHaY=
+			QvNU8RyuZbEzhBsvj0QbPy3ILEA=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -189,16 +189,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			S3pev3sgpI3f1sUAWJxtikkwrNc=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>en_GB.lproj/Localizable.strings</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			3N6G/jj5Z2aLWTTYPF+U8GXBtwU=
+			KjtxmskKC8KxOfhzENiQ4DPy2mQ=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -216,7 +207,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			de/r6HJQF6yidw/l8Y0k7DeL6tg=
+			bp3+/In5NiRrL9KAplWZYzLUNwM=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -252,7 +243,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			5pMfz4VJP1TwXgt0/UkbPqYphPk=
+			Od7kPVgWAv1bO0L50mybU6zFh4s=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -270,7 +261,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			7oP10aOQBYYeWC42y/vmP6uO5KM=
+			JnWLUHQ2Tr6xHYFZb7pJUdXJ360=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -288,7 +279,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			kDZTxvth8Hu66dR4EH38erJsSQE=
+			9zUVxb+QOYwRByDfufMhS2No2Q4=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -311,15 +302,6 @@
 			<key>optional</key>
 			<true/>
 		</dict>
-		<key>nb_NO.lproj/Localizable.strings</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			yW5YGBQkqAEil9EKn6SQpd+hk/w=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
 		<key>nn-NO.lproj/InfoPlist.strings</key>
 		<dict>
 			<key>hash</key>
@@ -338,18 +320,9 @@
 			<key>optional</key>
 			<true/>
 		</dict>
-		<key>nn_NO.lproj/Localizable.strings</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			TU2xhS73kJ1Xcx/hIfuxmCJeQ8I=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
 		<key>ownCloud Share Extension.debug.dylib</key>
 		<data>
-		Hq7aAtwdIAlDqnA77yiOOZMqrrU=
+		7bBJwWzfJ7hxfMNn9NnU38w5Rf0=
 		</data>
 		<key>pt-BR.lproj/InfoPlist.strings</key>
 		<dict>
@@ -364,7 +337,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			c77AmYLFN7z/l9smT0k8pVwcILA=
+			YHxOpOAglRy0jTAvStbB46mNp+k=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -387,24 +360,6 @@
 			<key>optional</key>
 			<true/>
 		</dict>
-		<key>pt_BR.lproj/Localizable.strings</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			zBZx0iMEDtfiEncVeq56PIjALBc=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>pt_PT.lproj/Localizable.strings</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			JN0Qf7IwdSeaR9mjp3jtURbdhHo=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
 		<key>ru.lproj/InfoPlist.strings</key>
 		<dict>
 			<key>hash</key>
@@ -418,7 +373,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			Ai39oPbyEEH7+10Ynq8bVCWEwag=
+			TEVuO/Bp0+Yg9RgT5DmjNjSWITA=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -436,7 +391,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			SSwCv8qNi/5ZLuB1pBlUjXP7rCY=
+			V9ZJ+U3j+LLSfXUQaEvYk1UmggE=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -454,16 +409,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			SfB4s6A3MlGVfICCXlWcZJ90Yb0=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>th_TH.lproj/Localizable.strings</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			EQRB+Ir3ukofE7tI9ZoNDsbgHNE=
+			oXY8jlROrnvkB0pkdajkwLGtdn4=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -481,7 +427,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			S3pev3sgpI3f1sUAWJxtikkwrNc=
+			KjtxmskKC8KxOfhzENiQ4DPy2mQ=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -499,7 +445,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			/p8Y+xHS7HK419aeOnItOpD3HkM=
+			TY2pZxtTIVwFvWwMHLHUKnuzEsw=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -574,14 +520,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			v7MhhMAIf326bOYs0m+fSBARv5yJxr8Gf7AA6HAxG5s=
+			h+RKWdh6HVVy7il2I7TIIEzbsZOopWysysM/9vfx5KM=
 			</data>
 		</dict>
 		<key>Down_Down.bundle/_CodeSignature/CodeDirectory</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Mo+j0jEVyxWbH1vd0NLK7pY0VJZIXkd3nAti2wIUpow=
+			WNnb2YpxDezGLxQCtL1odU7Ifge26Xu7YnFxwfcZn6Q=
 			</data>
 		</dict>
 		<key>Down_Down.bundle/_CodeSignature/CodeRequirements</key>
@@ -595,7 +541,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			IY2wHpSV6g1VRc6WvSjNmtpeJusZfZwXMB0RhJekDRE=
+			zpE+219XrEJMdXTL2qzRWRkd/9vIc2LH9Rm6u3jo7Pk=
 			</data>
 		</dict>
 		<key>Down_Down.bundle/_CodeSignature/CodeResources</key>
@@ -616,7 +562,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Wd/3zHp1TcjJLaVnEXeT6sABdD61VX63ZzHRvbJST0M=
+			xidGGb7cczB6Lmluf96aE0XuDqwfJMQiwS+XfML2KIw=
 			</data>
 		</dict>
 		<key>PocketSVG_PocketSVG.bundle/SVGColors.plist</key>
@@ -630,7 +576,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			8V/nC5cxBkr1tu3rqvMynoUd9o7JjcykDUTuOu0PHmM=
+			tYECvjE5TEFMYiG2c5Zu6Gl4ID+XAS2zQAJxuRGoJ/I=
 			</data>
 		</dict>
 		<key>PocketSVG_PocketSVG.bundle/_CodeSignature/CodeRequirements</key>
@@ -644,7 +590,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			udh3nSnBC+TViPKzyy08+kOaEeS4x+SATXCySKRrC6w=
+			JwMKomd2+3DhJBZH7bF+00qO7r5TslNZH9/9QVAhGpk=
 			</data>
 		</dict>
 		<key>PocketSVG_PocketSVG.bundle/_CodeSignature/CodeResources</key>
@@ -688,7 +634,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			bxxNpip4Wq2ioRsBKIo1OBulnMDHRabTEvWJWSd8WMk=
+			XNQitIF+CTvBQo4ZCuVqP3Qx/ikjsd98RhvB9pbVC9Q=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -706,7 +652,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			RzllHPmeNxb6qw3IzK6EJlfsegNm2uwQ/eqcRz0sFtM=
+			a/IqUAkmLSbt2hyUS2yVSKcd+kNY3v/SwvwURsRgM0g=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -724,7 +670,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			k+RMSUjKqtVtF0wuthZaQZYIJ8/wzUvmVTMW+RJ3eO4=
+			Jn6fA2ktHvxK5t22E1alDvDbbWuZ0rAhtVfnHnj7a0A=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -742,7 +688,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			lDirSHSHcsq3aq5rDtXef9+3Pr++F+PWk1AU3tmJnmY=
+			1Qc9DmAJxzoPMVTllhjwXDPuvKg6yWPuY/ksuN70Q2g=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -760,16 +706,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			1sRJRUK9PBc+XiEwBY6HKU+IJ16M8ZMW3zLDqyXPPwE=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>en_GB.lproj/Localizable.strings</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			hIkKNaRS4mrGnJrewDwa5tGT0/syIaBfADAU6QZ72W0=
+			CE+SySIHlSlcPbwasNXM966Co2E9oD+SUu4U434Zuk0=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -787,7 +724,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			UOq9hqle0ijUZEciDgPPwvFG5QyfU+NLKVpjLVwKNWI=
+			o9bghMFKbW0mzUdC57HIuka2xL+yhDzVOAAjKFeVgsc=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -823,7 +760,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			KlChpjTm3U9ZCG+XOAMEzf4mXa7Jcb7uHe+f1rmccjI=
+			cwfBpa0YQLf++FKVcgvuLh6SETlmwtHqxEl805FEfks=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -841,7 +778,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			EeP9PiKZMif2sFL4+89SL0sZt3wrDulrjqppFeVObo4=
+			mT4SuCFNJkjG79GFbFjjld8qcvzJnQ2DN8OtNWzlOVo=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -859,7 +796,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			NMZYL50aYvyxm5X7ie5yvlGdQNtY6w+VqFIVJn+m45U=
+			Eh2TROhiNohNkJ+wvzGV58erGOOxTMmSlhllrTLiPWs=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -882,15 +819,6 @@
 			<key>optional</key>
 			<true/>
 		</dict>
-		<key>nb_NO.lproj/Localizable.strings</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			7ADU9y6ECSU9Sm29wf6pueAe+DcyZBduQJCOXk4wg0s=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
 		<key>nn-NO.lproj/InfoPlist.strings</key>
 		<dict>
 			<key>hash2</key>
@@ -909,20 +837,11 @@
 			<key>optional</key>
 			<true/>
 		</dict>
-		<key>nn_NO.lproj/Localizable.strings</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			9k0978BvHyDsGig6E8vpx4fGEnYE8fIV3ODy1vI1FBE=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
 		<key>ownCloud Share Extension.debug.dylib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			yxXTx+IJexArCDl2tk8MXtXoV+YG+F2F7r9Hj1wt5bc=
+			sgA6Dbkrh52BSCObLAJtlnpnlaBQ6/8Xe7uEe5KiWU0=
 			</data>
 		</dict>
 		<key>pt-BR.lproj/InfoPlist.strings</key>
@@ -938,7 +857,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			9jbmTAZ+nyBsyyxMYFxph1fT60lStoUFBEmuUT9dVnE=
+			MyAoExGEaWbpoeWDOuP9AzqW6CT1054ZiRLQyUibjSA=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -961,24 +880,6 @@
 			<key>optional</key>
 			<true/>
 		</dict>
-		<key>pt_BR.lproj/Localizable.strings</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			4gbEvtsY+x0WqqLHULtZb62N4rfPn09pEMG3OjiQjzc=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>pt_PT.lproj/Localizable.strings</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			r8H4UUwyNwLlgItcXvnpCgKm5Z6r15COSq427f7SnJs=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
 		<key>ru.lproj/InfoPlist.strings</key>
 		<dict>
 			<key>hash2</key>
@@ -992,7 +893,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			CaS8WE7p7I4HiyY7ehEx1XhwWVvnSNyvle4o0laQd4c=
+			8MbyOJ7wuKRy8/OFlWOsNsByiJwC6uFqAVgP0vDBSoI=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -1010,7 +911,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			HMDzcvIpvJCfYNkDjej69EdQ5zxqTQLcevAQOcQhlUc=
+			F3EH/1hWgaYQkR2jG6gtun6XKSRVRZo9E+LxnbHBWGA=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -1028,16 +929,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			2Wv9q4PyzTzLS5iq4MjRRbHcAb5OZ57V8MC2p/wYEAk=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>th_TH.lproj/Localizable.strings</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			oQ2g5qFiwRYpUKZkrsHELdJlvKEw/DXspywjzeAWht0=
+			ZCfwHNevW7GtVGFCoNR1hbHLBpRu+5r+EGmqir+oKoU=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -1055,7 +947,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			1sRJRUK9PBc+XiEwBY6HKU+IJ16M8ZMW3zLDqyXPPwE=
+			CE+SySIHlSlcPbwasNXM966Co2E9oD+SUu4U434Zuk0=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -1073,7 +965,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			b/WWxg7b2ymCp/NMm8sdb527EJz0n0j30XqrYF3HcM4=
+			ajfFKXi6HYHSGDo1o110IfiICjr0s8usG+5e7Si9Txc=
 			</data>
 			<key>optional</key>
 			<true/>

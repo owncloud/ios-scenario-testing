@@ -2,18 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>
-This is a BETA release that may - and likely will - still contain bugs.
-
-YOU SHOULD NOT USE THIS BETA VERSION WITH PRODUCTION SYSTEMS, PRODUCTION DATA OR DATA OF VALUE. YOU'RE USING THIS BETA AT YOUR OWN RISK.
-
-Please let us know about any issues that come up via the "Send Feedback" option in the settings.</key>
-	<string>
-Kjo është një hedhje BETA në qarkullim, që mund - dhe me gjasa do të ketë - ende të meta.
-
-S’DUHET TA PËRDORNI KËTË VERSION BETA ME SISTEME PRODHIMI, TË DHËNA PRODHIMI OSE TË DHËNA ME VLERË. E PËRDORNI KËTË BETA ME QARIN DHE ZARARIN TUAJ.
-
-Ju lutemi, na bëni të ditur çfarëdo problemi që shfaqet, përmes mundësisë “Dërgoni Përshtypje”, te rregullimet.</string>
 	<key> couldn't download file(s)</key>
 	<string>s’u shkarkua dot kartelë(a)</string>
 	<key>%@ (%d bits/channel)</key>

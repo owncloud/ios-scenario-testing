@@ -6,7 +6,7 @@
 	<dict>
 		<key>Info.plist</key>
 		<data>
-		6h+C9WaycsBQmHaON8mawouv0Ak=
+		pgN0sEbTCXOaSHrzSQTOxLANx0I=
 		</data>
 		<key>PrivacyInfo.xcprivacy</key>
 		<data>
@@ -35,15 +35,6 @@
 			<true/>
 		</dict>
 		<key>en.lproj/Localizable.strings</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			dwJJgO/4Eummv8wWinICBQte1qg=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>en_GB.lproj/Localizable.strings</key>
 		<dict>
 			<key>hash</key>
 			<data>
@@ -88,46 +79,10 @@
 			<key>optional</key>
 			<true/>
 		</dict>
-		<key>nb_NO.lproj/Localizable.strings</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			dwJJgO/4Eummv8wWinICBQte1qg=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>nn_NO.lproj/Localizable.strings</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			dwJJgO/4Eummv8wWinICBQte1qg=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
 		<key>ownCloud File Provider.debug.dylib</key>
 		<data>
-		MzijFhdNFu3IY9AM8AUcPQUdPzM=
+		mzQqwgEWnTobxFrldWf4dpQ1kww=
 		</data>
-		<key>pt_BR.lproj/Localizable.strings</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			dwJJgO/4Eummv8wWinICBQte1qg=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>pt_PT.lproj/Localizable.strings</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			dwJJgO/4Eummv8wWinICBQte1qg=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
 		<key>ru.lproj/Localizable.strings</key>
 		<dict>
 			<key>hash</key>
@@ -142,15 +97,6 @@
 			<key>hash</key>
 			<data>
 			Hk8L04RvSC76WCDUI/7ICbGrdjM=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>th_TH.lproj/Localizable.strings</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			dwJJgO/4Eummv8wWinICBQte1qg=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -217,15 +163,6 @@
 			<key>optional</key>
 			<true/>
 		</dict>
-		<key>en_GB.lproj/Localizable.strings</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			2mJKZdx/p3HkOW20pToPArVRFP6LzgOFvICylWwZ6TU=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
 		<key>es.lproj/Localizable.strings</key>
 		<dict>
 			<key>hash2</key>
@@ -262,48 +199,12 @@
 			<key>optional</key>
 			<true/>
 		</dict>
-		<key>nb_NO.lproj/Localizable.strings</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			2mJKZdx/p3HkOW20pToPArVRFP6LzgOFvICylWwZ6TU=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>nn_NO.lproj/Localizable.strings</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			2mJKZdx/p3HkOW20pToPArVRFP6LzgOFvICylWwZ6TU=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
 		<key>ownCloud File Provider.debug.dylib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			2WYNdynS+WRmCMIRh0BiUesbSXii/F5ed8+mtgfSpMc=
+			QMEWKZfIe0a3Es8bIXTZlUkQESwogRGI998HBjrjshI=
 			</data>
-		</dict>
-		<key>pt_BR.lproj/Localizable.strings</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			2mJKZdx/p3HkOW20pToPArVRFP6LzgOFvICylWwZ6TU=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>pt_PT.lproj/Localizable.strings</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			2mJKZdx/p3HkOW20pToPArVRFP6LzgOFvICylWwZ6TU=
-			</data>
-			<key>optional</key>
-			<true/>
 		</dict>
 		<key>ru.lproj/Localizable.strings</key>
 		<dict>
@@ -319,15 +220,6 @@
 			<key>hash2</key>
 			<data>
 			AVzv14Jj1b2Aelhwgdj/hFRFff+DdnP/dn8zccEKCSM=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>th_TH.lproj/Localizable.strings</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			2mJKZdx/p3HkOW20pToPArVRFP6LzgOFvICylWwZ6TU=
 			</data>
 			<key>optional</key>
 			<true/>
