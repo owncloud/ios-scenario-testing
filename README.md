@@ -52,30 +52,19 @@ Different requirements:
 
 ### 1. Build app
 
-First, build the [app](https://github.com/owncloud/ios-app) from the expected branch/commit to get the test object. Before building, execute the following commands in the app's folder:
+First, build the [app](https://github.com/owncloud/ios-app) from the expected branch/commit to get the test object, by using the [buildapp](https://github.com/owncloud/ios-scenario-testing/blob/master/buildapp/buildapp.sh) script in the current repository.
 
-```
-gsed -i 's/.showBetaWarning : true/.showBetaWarning : false/i' ownCloudAppShared/Tools/VendorServices.swift
-grep .showBetaWarning ownCloudAppShared/Tools/VendorServices.swift
-gsed -i '170,200d' ownCloud/Release\ Notes/ReleaseNotesHostViewController.swift
-grep -C 2 shouldShowReleaseNotes ownCloud/Release\ Notes/ReleaseNotesHostViewController.swift
-gsed -i '136i OCConnectionAllowedAuthenticationMethodIDs : @[ OCAuthenticationMethodIdentifierBasicAuth ],' ios-sdk/ownCloudSDK/Connection/OCConnection.m
-```
-These instructions:
+The [buildapp](https://github.com/owncloud/ios-scenario-testing/blob/master/buildapp/buildapp.sh) script:
 
-- will disable the beta warning
+- will disable welcome wizard
 - will disable the release notes
 - will set basic auth as forced authentication method, required to execute the test suites
+- will move the final artifact to the correct place (`/src/test/resources` folder in the current structure)
 
-App is built via Xcode or CLI (`xcodebuild`)
+Check the script's variables for the proper setup in your own environment or CI system.
 
-After building, the `ownCloud.app` artifact is located in:
+In the current repository there will be always an `owncloud.app` file located in `/src/test/resources`, as example or fallback.
 
-`$HOME/Library/Developer/Xcode/DerivedData/ownCloud-*/Build/Products/Debug-*`
-
-move the `owncloud.app` to the correct place in the current tests project: `/src/test/resources`
-
-(in the current repository will be always an `owncloud.app` file located in the correct place.)
 
 ### 2. Execute tests
 
@@ -91,10 +80,10 @@ The script needs some parameters. Check help `executeTests -h`
 
 To execute all tests but the ignored ones (or any other tagged ones):
 
-	export UDID_DEVICE=F10FFCD4-CE92-4F40-B246-9709A4D4086A
-	export OC_SERVER_URL=https://my.owncloud.server
-	export APPIUM_URL=localhost:4723
-	./executeTests -t "not @ignore"
+		export UDID_DEVICE=F10FFCD4-CE92-4F40-B246-9709A4D4086A
+		export OC_SERVER_URL=https://my.owncloud.server
+		export APPIUM_URL=localhost:4723
+		./executeTests -t "not @ignore"
 
 The execution will display step by step how the scenario is being executed.
 
