@@ -82,13 +82,13 @@ public class AppiumManager {
             capabilities.setCapability("appium:deviceName", "iPhone 16");
         }
 
-        capabilities.setCapability("udid", System.getProperty("udid"));
+        capabilities.setCapability("appium:udid", System.getProperty("udid"));
 
         capabilities.setCapability("appium:app", app.getAbsolutePath());
 
         capabilities.setCapability("appium:automationName", AutomationName.IOS_XCUI_TEST);
 
-        capabilities.setCapability("showXcodeLog", true);
+        capabilities.setCapability("appium:showXcodeLog", true);
 
         //The following capabilities prevents reinstalling the app every test.
         capabilities.setCapability("appium:fullReset", false);
@@ -97,7 +97,7 @@ public class AppiumManager {
 
         capabilities.setCapability("appium:newCommandTimeout", 60);
 
-        capabilities.setCapability("platformVersion", "18.2");
+        capabilities.setCapability("appium:platformVersion", "18.2");
 
         capabilities.setCapability("appium:useNewWDA", false);
 

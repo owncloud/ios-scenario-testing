@@ -9,7 +9,7 @@ project.ext {
     apacheCommonsIo = '2.6'
     byteBuddyVersion = '1.10.5'
     guavaVersion = '30.1-jre'
-    javaClientVersion = '9.2.2'
+    javaClientVersion = '9.4.0'
     okhttpVersion= '3.12.13'
     okioVersion = '1.14.0'
     jsonVersion = '20200518'

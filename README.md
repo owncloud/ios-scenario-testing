@@ -124,9 +124,9 @@ repository, which contains the base skeleton to start working.
 
 Up to date: 04/Feb/2025
 
-|||
-|:-- |:-: |
+||        |
+|:-- |:------:|
 | [Cucumber version](https://cucumber.io/docs/installation/java/) | 7.21.0 |
-| [Appium version](https://github.com/appium/appium/releases)| 2.15.0|
-| [Appium xcuitest driver version](https://github.com/appium/appium-xcuitest-driver/releases)| 5.16.1|
-| [Java client version](https://github.com/appium/java-client/releases) | 9.2.2 |
+| [Appium version](https://github.com/appium/appium/releases)| 2.15.0 |
+| [Appium xcuitest driver version](https://github.com/appium/appium-xcuitest-driver/releases)| 5.16.1 |
+| [Java client version](https://github.com/appium/java-client/releases) | 9.4.0  |
