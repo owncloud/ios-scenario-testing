@@ -32,7 +32,7 @@ public class FileListSteps {
     }
 
     @ParameterType("make available offline|move|copy|delete|duplicate|share by link|edit link|rename|" +
-            "share|edit share|favorite|cut|unfavorite|add to the sidebar|remove from the sidebar")
+            "share|edit share|favorite|cut|unfavorite|add to the sidebar|remove from the sidebar|open in")
     public String operation(String operation) {
         return operation;
     }
@@ -101,6 +101,7 @@ public class FileListSteps {
                 }
             }
         }
+        world.getFileListPage().refreshBySwipe();
     }
 
     @Given("the folder {word} contains {int} files")
@@ -133,6 +134,14 @@ public class FileListSteps {
         Log.log(Level.FINE, "----STEP----: " + stepName);
         world.getFileListPage().refreshBySwipe();
         world.getFileListPage().openItemInList(itemName);
+    }
+
+    @When("Alice opens the action menu of {itemtype} {word}")
+    public void open_actions_menu(String itemType, String itemName) {
+        String stepName = new Object() {
+        }.getClass().getEnclosingMethod().getName().toUpperCase();
+        Log.log(Level.FINE, "----STEP----: " + stepName);
+        world.getFileListPage().openCard(itemName);
     }
 
     @When("Alice opens a private link pointing to {word} with scheme {word}")
@@ -608,5 +617,19 @@ public class FileListSteps {
                 break;
             }
         }
+    }
+
+    @Then("Alice should see the menu with the options to open the file in an external application")
+    public void menuOptionsExternalApplication() {
+        String stepName = new Object() {}.getClass().getEnclosingMethod().getName().toUpperCase();
+        Log.log(Level.FINE, "----STEP----: " + stepName);
+        assertTrue(world.getFileListPage().isExternalApp());
+    }
+
+    @Then("The Open In option is not available")
+    public void menuOptionsExternalApplicationNotAvailable() {
+        String stepName = new Object() {}.getClass().getEnclosingMethod().getName().toUpperCase();
+        Log.log(Level.FINE, "----STEP----: " + stepName);
+        assertFalse(world.getFileListPage().isOpenInVisible());
     }
 }

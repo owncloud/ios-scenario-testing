@@ -4,6 +4,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.logging.Level;
 import java.util.regex.Pattern;
 
@@ -60,6 +61,12 @@ public class FileListPage extends CommonPage {
     @iOSXCUITFindBy(xpath = "//XCUIElementTypeButton[@name=\"Delete\"]")
     private WebElement delete;
 
+    @iOSXCUITFindBy(xpath = xpath_openin)
+    private List<WebElement> openIn;
+
+    @iOSXCUITFindBy(id = "UIActivityContentView")
+    private WebElement externalApps;
+
 
     //Actions in action menu
     private final String xpath_delete = "//XCUIElementTypeCell[@name=\"com.owncloud.action.delete\"]";
@@ -70,6 +77,7 @@ public class FileListPage extends CommonPage {
     private final String xpath_paste = "//XCUIElementTypeCell[@name=\"com.owncloud.action.importpasteboard\"]";
     private final String xpath_duplicate = "//XCUIElementTypeCell[@name=\"com.owncloud.action.duplicate\"]";
     private final String xpath_copydirectory = "//XCUIElementTypeButton[@name=\"Choose destination directory…\"]";
+    private final String xpath_openin = "//XCUIElementTypeCell[@name=\"com.owncloud.action.openin\"]";
 
     //Actions in contextual menu menu
     private final String id_delete = "Delete";
@@ -85,6 +93,7 @@ public class FileListPage extends CommonPage {
     private final String id_sharing_c = "Sharing";
     private final String id_addSidebar = "Add to sidebar";
     private final String id_removeSidebar = "Remove from sidebar";
+    private final String id_openin = "Open in";
 
     public FileListPage() {
         super();
@@ -295,6 +304,17 @@ public class FileListPage extends CommonPage {
         return false;
     }
 
+    public boolean isExternalApp() {
+        Log.log(Level.FINE, "Starts: checking if external app menu is visible");
+        return externalApps.isDisplayed();
+    }
+
+    public boolean isOpenInVisible() {
+        Log.log(Level.FINE, "Starts: checking if open in menu is visible");
+        return !openIn.isEmpty();
+    }
+
+
     protected String browseTo(String path) {
         Log.log(Level.FINE, "Browse to path: " + path);
         String completePath = Pattern.quote("/");
@@ -359,6 +379,9 @@ public class FileListPage extends CommonPage {
             case "remove from the sidebar":
                 operation = findId(id_removeSidebar);
                 break;
+            case "open in":
+                operation = findXpath(xpath_openin);
+                break;
             default:
                 break;
         }
@@ -410,6 +433,9 @@ public class FileListPage extends CommonPage {
                 break;
             case "remove from the sidebar":
                 operation = findId(id_removeSidebar);
+                break;
+            case "open in":
+                operation = findId(id_openin);
                 break;
             default:
                 break;
