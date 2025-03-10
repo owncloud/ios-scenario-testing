@@ -29,10 +29,18 @@ public class ShortcutPage extends CommonPage {
     @iOSXCUITFindBy(id = "Safari")
     private WebElement safariBrowser;
 
+    public static ShortcutPage instance;
 
-    public ShortcutPage() {
+    private ShortcutPage() {
         super();
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
+    }
+
+    public static ShortcutPage getInstance() {
+        if (instance == null) {
+            instance = new ShortcutPage();
+        }
+        return instance;
     }
 
     public void createShortcutWeb(String urlTo, String name) {

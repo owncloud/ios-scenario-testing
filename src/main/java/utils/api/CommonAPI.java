@@ -68,7 +68,7 @@ public class CommonAPI {
 
     public CommonAPI()
             throws IOException {
-        AuthAPI authAPI = new AuthAPI();
+        AuthAPI authAPI = AuthAPI.getInstance();
         isOidc = authAPI.isOidc();
         //ftm, OIDC == oCIS. Bad.
         if (isOidc) {

@@ -95,9 +95,18 @@ public class FileListPage extends CommonPage {
     private final String id_removeSidebar = "Remove from sidebar";
     private final String id_openin = "Open in";
 
-    public FileListPage() {
+    public static FileListPage instance;
+
+    private FileListPage() {
         super();
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
+    }
+
+    public static FileListPage getInstance() {
+        if (instance == null) {
+            instance = new FileListPage();
+        }
+        return instance;
     }
 
     public void openItemInList(String itemName) {

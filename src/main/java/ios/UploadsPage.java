@@ -18,9 +18,18 @@ public class UploadsPage extends CommonPage {
     @iOSXCUITFindBy(xpath = "(//XCUIElementTypeButton[@name=\"Add\"])[2]")
     private WebElement add;
 
-    public UploadsPage() {
+    public static UploadsPage instance;
+
+    private UploadsPage() {
         super();
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
+    }
+
+    public static UploadsPage getInstance() {
+        if (instance == null) {
+            instance = new UploadsPage();
+        }
+        return instance;
     }
 
     public void selectPhotoGallery(int selection) {
@@ -55,6 +64,7 @@ public class UploadsPage extends CommonPage {
         List<WebElement> pics = findListCss("XCUIElementTypeStaticText");
         int i = 0;
         for (WebElement textInView : pics) {
+            //Log.log(Level.FINE, "Photo: " + textInView.getText());
             if (textInView.getText().contains("Photo-"))
                 i++;
         }

@@ -37,9 +37,18 @@ public class SharePage extends CommonPage {
     @iOSXCUITFindBy(id = "Done")
     private WebElement doneButton;
 
-    public SharePage() {
+    public static SharePage instance;
+
+    private SharePage() {
         super();
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
+    }
+
+    public static SharePage getInstance() {
+        if (instance == null) {
+            instance = new SharePage();
+        }
+        return instance;
     }
 
     public void invite() {

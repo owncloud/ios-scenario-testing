@@ -69,9 +69,18 @@ public class PublicLinkPage extends CommonPage {
     @iOSXCUITFindBy(xpath = "//XCUIElementTypeButton[@name=\"Unshare\"]")
     private WebElement unshareLink;
 
-    public PublicLinkPage() {
+    public static PublicLinkPage instance;
+
+    private PublicLinkPage() {
         super();
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
+    }
+
+    public static PublicLinkPage getInstance() {
+        if (instance == null) {
+            instance = new PublicLinkPage();
+        }
+        return instance;
     }
 
     public void setPermission(String permission) {

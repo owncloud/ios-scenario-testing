@@ -23,7 +23,16 @@ public class GraphAPI extends CommonAPI {
     private final String myDrives = "me/drives/";
     private final String owner = LocProperties.getProperties().getProperty("userNameDefault");
 
-    public GraphAPI() throws IOException {
+    public static GraphAPI instance;
+
+    private GraphAPI() throws IOException {
+    }
+
+    public static GraphAPI getInstance() throws IOException {
+        if (instance == null) {
+            instance = new GraphAPI();
+        }
+        return instance;
     }
 
     public void createSpace(String name, String description, String userName) throws IOException {

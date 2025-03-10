@@ -17,9 +17,18 @@ public class InputNamePage extends CommonPage {
     @iOSXCUITFindBy(id = "done-button")
     private WebElement acceptButton;
 
-    public InputNamePage() {
+    public static InputNamePage instance;
+
+    private InputNamePage() {
         super();
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
+    }
+
+    public static InputNamePage getInstance() {
+        if (instance == null) {
+            instance = new InputNamePage();
+        }
+        return instance;
     }
 
     public void setItemName(String itemName) {

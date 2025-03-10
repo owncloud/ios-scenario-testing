@@ -21,7 +21,16 @@ public class AuthAPI {
     private String userAgent = LocProperties.getProperties().getProperty("userAgent");
     private String host = urlServer.split("//")[1];
 
-    public AuthAPI() {
+    public static AuthAPI instance;
+
+    private AuthAPI() {
+    }
+
+    public static AuthAPI getInstance() {
+        if (instance == null) {
+            instance = new AuthAPI();
+        }
+        return instance;
     }
 
     protected Request davRequestUnauth(String url) {

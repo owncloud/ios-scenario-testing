@@ -47,10 +47,18 @@ public class PrivateSharePage extends CommonPage {
     @iOSXCUITFindBy(xpath = "//XCUIElementTypeButton[@name=\"Unshare\"]")
     private WebElement unshare;
 
+    public static PrivateSharePage instance;
 
-    public PrivateSharePage() {
+    private PrivateSharePage() {
         super();
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
+    }
+
+    public static PrivateSharePage getInstance() {
+        if (instance == null) {
+            instance = new PrivateSharePage();
+        }
+        return instance;
     }
 
     public void searchSharee(String shareeName, String type) {

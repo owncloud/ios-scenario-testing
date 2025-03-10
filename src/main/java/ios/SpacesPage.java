@@ -10,9 +10,18 @@ import utils.log.Log;
 
 public class SpacesPage extends CommonPage {
 
-    public SpacesPage(){
+    public static SpacesPage instance;
+
+    private SpacesPage(){
         super();
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
+    }
+
+    public static SpacesPage getInstance() {
+        if (instance == null) {
+            instance = new SpacesPage();
+        }
+        return instance;
     }
 
     public void openSpace (String spaceName){

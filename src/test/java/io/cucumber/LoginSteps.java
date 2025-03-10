@@ -20,15 +20,15 @@ public class LoginSteps {
         String stepName = new Object() {
         }.getClass().getEnclosingMethod().getName().toUpperCase();
         Log.log(Level.FINE, "----STEP----: " + stepName);
-        if (!world.getLoginPage().loggedIn()) {
+        if (!world.loginPage.loggedIn()) {
             String password = LocProperties.getProperties().getProperty("pwdDefault");
-            world.getLoginPage().addAccount();
-            world.getLoginPage().typeURL();
-            world.getLoginPage().typeCredentials(userName, password);
-            world.getLoginPage().submitLogin();
-            world.getLoginPage().selectDrive();
+            world.loginPage.addAccount();
+            world.loginPage.typeURL();
+            world.loginPage.typeCredentials(userName, password);
+            world.loginPage.submitLogin();
+            world.loginPage.selectDrive();
         } else {
-            world.getLoginPage().selectFirstBookmark();
+            world.loginPage.selectFirstBookmark();
         }
     }
 }

@@ -26,10 +26,19 @@ public class ShareAPI extends CommonAPI {
     private String sharingEndpoint = "/ocs/v2.php/apps/files_sharing/api/v1/shares";
     private String pendingEndpoint = "/pending";
     private final String shareeU = LocProperties.getProperties().getProperty("userToShare");
-    private AuthAPI authAPI = new AuthAPI();
+    private AuthAPI authAPI = AuthAPI.getInstance();
 
-    public ShareAPI() throws IOException {
+    public static ShareAPI instance;
+
+    private ShareAPI() throws IOException {
         super();
+    }
+
+    public static ShareAPI getInstance() throws IOException {
+        if (instance == null) {
+            instance = new ShareAPI();
+        }
+        return instance;
     }
 
     public void createShare(String sharingUser, String itemPath, String sharee, String type,

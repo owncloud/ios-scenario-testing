@@ -23,8 +23,17 @@ import utils.parser.FileSAXHandler;
 
 public class FilesAPI extends CommonAPI {
 
-    public FilesAPI() throws IOException {
+    public static FilesAPI instance;
+
+    private FilesAPI() throws IOException {
         super();
+    }
+
+    public static FilesAPI getInstance() throws IOException {
+        if (instance == null) {
+            instance = new FilesAPI();
+        }
+        return instance;
     }
 
     public void removeItem(String itemName, String userName)

@@ -28,7 +28,7 @@ public class PublicLinkSteps {
         String stepName = new Object() {
         }.getClass().getEnclosingMethod().getName();
         Log.log(Level.FINE, "----STEP----: " + stepName);
-        world.getShareAPI().createShare("Alice", itemName, "", "3", "1"
+        world.shareAPI.createShare("Alice", itemName, "", "3", "1"
                 , "", "aa55AA..", 0);
     }
 
@@ -37,35 +37,35 @@ public class PublicLinkSteps {
         String stepName = new Object() {
         }.getClass().getEnclosingMethod().getName().toUpperCase();
         Log.log(Level.FINE, "----STEP----: " + stepName);
-        world.getSharePage().createLink();
+        world.sharePage.createLink();
         List<List<String>> listItems = table.asLists();
         for (List<String> rows : listItems) {
             switch (rows.get(0)) {
                 case "password": {
-                    world.getPublicLinkPage().setPassword(rows.get(1));
+                    world.publicLinkPage.setPassword(rows.get(1));
                     break;
                 }
                 case "password-auto": {
-                    world.getPublicLinkPage().setPasswordAuto();
+                    world.publicLinkPage.setPasswordAuto();
                     break;
                 }
                 case "permission": {
-                    world.getPublicLinkPage().setPermission(rows.get(1));
+                    world.publicLinkPage.setPermission(rows.get(1));
                     break;
                 }
                 case "expiration": {
-                    world.getPublicLinkPage().setExpiration(rows.get(1));
+                    world.publicLinkPage.setExpiration(rows.get(1));
                     break;
                 }
                 case "name": {
-                    world.getPublicLinkPage().setName(rows.get(1));
+                    world.publicLinkPage.setName(rows.get(1));
                     break;
                 }
                 default:
                     break;
             }
         }
-        world.getPublicLinkPage().submitLink();
+        world.publicLinkPage.submitLink();
     }
 
     @When("Alice edits the link on {word} with the following fields")
@@ -75,22 +75,22 @@ public class PublicLinkSteps {
         ;
         Log.log(Level.FINE, "----STEP----: " + stepName);
         List<List<String>> listItems = table.asLists();
-        world.getSharePage().openPublicLink();
+        world.sharePage.openPublicLink();
         for (List<String> rows : listItems) {
             switch (rows.get(0)) {
                 case "permissions": {
-                    world.getPublicLinkPage().setPermission(rows.get(1));
+                    world.publicLinkPage.setPermission(rows.get(1));
                     break;
                 }
                 case "password": {
-                    world.getPublicLinkPage().setPassword(rows.get(1));
+                    world.publicLinkPage.setPassword(rows.get(1));
                     break;
                 }
                 default:
                     break;
             }
         }
-        world.getPublicLinkPage().saveChanges();
+        world.publicLinkPage.saveChanges();
     }
 
     @When("Alice deletes the link on {word}")
@@ -99,8 +99,8 @@ public class PublicLinkSteps {
         }.getClass().getEnclosingMethod().getName().toUpperCase();
         ;
         Log.log(Level.FINE, "----STEP----: " + stepName);
-        world.getSharePage().openPublicLink();
-        world.getPublicLinkPage().deleteLink();
+        world.sharePage.openPublicLink();
+        world.publicLinkPage.deleteLink();
     }
 
     @Then("link should be created on {word} with the following fields")
@@ -112,11 +112,11 @@ public class PublicLinkSteps {
         Log.log(Level.FINE, "----STEP----: " + stepName);
         //Asserts in UI
         List<List<String>> listItems = table.asLists();
-        world.getSharePage().openPublicLink();
+        world.sharePage.openPublicLink();
         for (List<String> rows : listItems) {
             switch (rows.get(0)) {
                 case "password": {
-                    assertTrue(world.getPublicLinkPage().isPasswordEnabled(itemName));
+                    assertTrue(world.publicLinkPage.isPasswordEnabled(itemName));
                     break;
                 }
                 case "permission": {
@@ -124,11 +124,11 @@ public class PublicLinkSteps {
                     break;
                 }
                 case "expiration": {
-                    assertTrue(world.getPublicLinkPage().isExpirationCorrect(rows.get(1)));
+                    assertTrue(world.publicLinkPage.isExpirationCorrect(rows.get(1)));
                     break;
                 }
                 case "name": {
-                    assertTrue(world.getPublicLinkPage().isNameCorrect(rows.get(1)));
+                    assertTrue(world.publicLinkPage.isNameCorrect(rows.get(1)));
                     break;
                 }
                 default:
@@ -136,8 +136,8 @@ public class PublicLinkSteps {
             }
         }
         //Asserts in server via API
-        OCShare share = world.getShareAPI().getShare(itemName);
-        assertTrue(world.getSharePage().checkCorrectShare(share, listItems));
+        OCShare share = world.shareAPI.getShare(itemName);
+        assertTrue(world.sharePage.checkCorrectShare(share, listItems));
     }
 
     @Then("link on {word} should not exist anymore")
@@ -147,8 +147,8 @@ public class PublicLinkSteps {
         }.getClass().getEnclosingMethod().getName().toUpperCase();
         ;
         Log.log(Level.FINE, "----STEP----: " + stepName);
-        assertFalse(world.getSharePage().isItemInListLinks());
-        ArrayList<OCShare> shares = world.getShareAPI().getLinksByDefault();
+        assertFalse(world.sharePage.isItemInListLinks());
+        ArrayList<OCShare> shares = world.shareAPI.getLinksByDefault();
         assertTrue(shares.isEmpty());
     }
 }

@@ -22,9 +22,18 @@ public class PreviewPage extends CommonPage {
     @iOSXCUITFindBy(id = "Outline")
     private WebElement outlinePdf;
 
-    public PreviewPage() {
+    public static PreviewPage instance;
+
+    private PreviewPage() {
         super();
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
+    }
+
+    public static PreviewPage getInstance() {
+        if (instance == null) {
+            instance = new PreviewPage();
+        }
+        return instance;
     }
 
     public boolean isTextFilePreviewed(String itemName) {

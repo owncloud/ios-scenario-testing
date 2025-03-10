@@ -22,89 +22,89 @@ import utils.api.TrashbinAPI;
 public class World {
 
     //Involved pages
-    private LoginPage loginPage;
-    private FileListPage fileListPage;
-    private InputNamePage inputNamePage;
-    private FolderPickerPage folderPickerPage;
-    private PrivateSharePage privateSharePage;
-    private PublicLinkPage publicLinkPage;
-    private SharePage sharePage;
-    private SpacesPage spacesPage;
-    private UploadsPage uploadsPage;
-    private ShortcutPage shortcutPage;
-    private PreviewPage previewPage;
+    public LoginPage loginPage = LoginPage.getInstance();
+    public FileListPage fileListPage = FileListPage.getInstance();
+    public InputNamePage inputNamePage= InputNamePage.getInstance();
+    public FolderPickerPage folderPickerPage= FolderPickerPage.getInstance();
+    public PrivateSharePage privateSharePage = PrivateSharePage.getInstance();
+    public PublicLinkPage publicLinkPage = PublicLinkPage.getInstance();
+    public SharePage sharePage = SharePage.getInstance();
+    public SpacesPage spacesPage = SpacesPage.getInstance();
+    public UploadsPage uploadsPage = UploadsPage.getInstance();
+    public ShortcutPage shortcutPage = ShortcutPage.getInstance();
+    public PreviewPage previewPage = PreviewPage.getInstance();
 
     //APIs to call
-    private AuthAPI authAPI;
-    private ShareAPI shareAPI;
-    private FilesAPI filesAPI;
-    private GraphAPI graphAPI;
-    private TrashbinAPI trashbinAPI;
+    public AuthAPI authAPI = AuthAPI.getInstance();
+    public ShareAPI shareAPI = ShareAPI.getInstance();
+    public FilesAPI filesAPI = FilesAPI.getInstance();
+    public GraphAPI graphAPI = GraphAPI.getInstance();
+    public TrashbinAPI trashbinAPI = TrashbinAPI.getInstance();
 
-    public World() {
+    public World() throws IOException {
     }
 
-    public LoginPage getLoginPage() {
+    /*public LoginPage loginPage {
         if (loginPage == null)
             loginPage = new LoginPage();
         return loginPage;
     }
 
-    public FileListPage getFileListPage() {
+    public FileListPage fileListPage {
         if (fileListPage == null)
             fileListPage = new FileListPage();
         return fileListPage;
     }
 
-    public InputNamePage getInputNamePage() {
+    public InputNamePage inputNamePage {
         if (inputNamePage == null)
             inputNamePage = new InputNamePage();
         return inputNamePage;
     }
 
-    public FolderPickerPage getFolderPickerPage() {
+    public FolderPickerPage folderPickerPage {
         if (folderPickerPage == null)
             folderPickerPage = new FolderPickerPage();
         return folderPickerPage;
     }
 
-    public PrivateSharePage getPrivateSharePage() {
+    public PrivateSharePage privateSharePage {
         if (privateSharePage == null)
             privateSharePage = new PrivateSharePage();
         return privateSharePage;
     }
 
-    public PublicLinkPage getPublicLinkPage() {
+    public PublicLinkPage publicLinkPage {
         if (publicLinkPage == null)
             publicLinkPage = new PublicLinkPage();
         return publicLinkPage;
     }
 
-    public SharePage getSharePage() {
+    public SharePage sharePage {
         if (sharePage == null)
             sharePage = new SharePage();
         return sharePage;
     }
 
-    public SpacesPage getSpacesPage() {
+    public SpacesPage spacesPage {
         if (spacesPage == null)
             spacesPage = new SpacesPage();
         return spacesPage;
     }
 
-    public UploadsPage getUploadsPage() {
+    public UploadsPage uploadsPage {
         if (uploadsPage == null)
             uploadsPage = new UploadsPage();
         return uploadsPage;
     }
 
-    public ShortcutPage getShortcutPage() {
+    public ShortcutPage shortcutPage {
         if (shortcutPage == null)
             shortcutPage = new ShortcutPage();
         return shortcutPage;
     }
 
-    public PreviewPage getPreviewPage() {
+    public PreviewPage previewPage {
         if (previewPage == null)
             previewPage = new PreviewPage();
         return previewPage;
@@ -116,21 +116,21 @@ public class World {
         return authAPI;
     }
 
-    public ShareAPI getShareAPI()
+    public ShareAPI shareAPI
             throws IOException {
         if (shareAPI == null)
             shareAPI = new ShareAPI();
         return shareAPI;
     }
 
-    public FilesAPI getFilesAPI()
+    public FilesAPI filesAPI
             throws IOException {
         if (filesAPI == null)
             filesAPI = new FilesAPI();
         return filesAPI;
     }
 
-    public GraphAPI getGraphAPI()
+    public GraphAPI graphAPI
             throws IOException {
         if (graphAPI == null)
             graphAPI = new GraphAPI();
@@ -142,5 +142,5 @@ public class World {
         if (trashbinAPI == null)
             trashbinAPI = new TrashbinAPI();
         return trashbinAPI;
-    }
+    }*/
 }

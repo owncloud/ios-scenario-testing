@@ -26,9 +26,18 @@ public class FolderPickerPage extends CommonPage {
     private String xpath_move = "//XCUIElementTypeButton[@name=\"Move here\"]";
     private String xpath_copy = "//XCUIElementTypeButton[@name=\"Copy here\"]";
 
-    public FolderPickerPage() {
+    public static FolderPickerPage instance;
+
+    private FolderPickerPage() {
         super();
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
+    }
+
+    public static FolderPickerPage getInstance() {
+        if (instance == null) {
+            instance = new FolderPickerPage();
+        }
+        return instance;
     }
 
     public void selectSpace(String action) {

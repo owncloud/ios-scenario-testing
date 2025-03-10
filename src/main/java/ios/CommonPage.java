@@ -57,7 +57,7 @@ public class CommonPage {
     public CommonPage() {
         actions = new Actions(driver);
         //Determine auth method
-        AuthAPI authAPI = new AuthAPI();
+        AuthAPI authAPI = AuthAPI.getInstance();
         try {
             if (authType.equals("")) { //Check auth type onlyonce
                 authType = authAPI.checkAuthMethod();
