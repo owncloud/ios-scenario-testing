@@ -2,6 +2,14 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>
+This is a BETA release that may - and likely will - still contain bugs.
+
+YOU SHOULD NOT USE THIS BETA VERSION WITH PRODUCTION SYSTEMS, PRODUCTION DATA OR DATA OF VALUE. YOU'RE USING THIS BETA AT YOUR OWN RISK.</key>
+	<string>
+This is a BETA release that may - and likely will - still contain bugs.
+
+YOU SHOULD NOT USE THIS BETA VERSION WITH PRODUCTION SYSTEMS, PRODUCTION DATA OR DATA OF VALUE. YOU'RE USING THIS BETA AT YOUR OWN RISK.</string>
 	<key> couldn't download file(s)</key>
 	<string>Datei(en) konnte nicht geladen werden</string>
 	<key>%@ (%d bits/channel)</key>
@@ -322,6 +330,8 @@ Open 'Certificate Details' for more informations.</key>
 	<string>Abgelehnt</string>
 	<key>Decrease Slider Value</key>
 	<string>Schiebereglerwert verringern</string>
+	<key>Default search scope</key>
+	<string>Default search scope</string>
 	<key>Delete</key>
 	<string>Löschen</string>
 	<key>Delete Authentication Data</key>
@@ -553,9 +563,9 @@ Bitte verwenden Sie die App, um auf Ihre Dateien zuzugreifen.</string>
 	<key>ISO</key>
 	<string>ISO</string>
 	<key>If you 'Continue', you will be prompted to allow the '{{app.name}}' app to open the login page where you can enter your credentials.</key>
-	<string>If you 'Continue', you will be prompted to allow the '{{app.name}}' app to open the login page where you can enter your credentials.</string>
+	<string>Wenn Sie auf 'Fortsetzen' klicken, werden Sie aufgefordert, der App '{{app.name}}' das Öffnen der Anmeldeseite zu erlauben, wo Sie Ihre Zugangsdaten eingeben können.</string>
 	<key>If you 'Continue', you will be prompted to allow the '{{app.name}}' app to open the {{authmethodName}} login page where you can enter your credentials.</key>
-	<string>Wenn Sie auf 'Fortsetzen' klicken, werden Sie aufgefordert, der App '{{app.name}}' das Öffnen der {{authmethodName}} Login Seite zu erlauben, wo Sie Ihre Zugangsdaten eingeben können.</string>
+	<string>Wenn Sie auf 'Fortsetzen' klicken, werden Sie aufgefordert, der App '{{app.name}}' das Öffnen der {{authmethodName}} Anmeldeseite zu erlauben, wo Sie Ihre Zugangsdaten eingeben können.</string>
 	<key>If you choose "Immediately" the App will be locked, when it is no longer in foreground.</key>
 	<string>Wenn Sie "Sofort" wählen, wird die App gesperrt, wenn sie nicht mehr im Vordergrund ist.</string>
 	<key>If you have a moment to give us your feedback, please take our survey.</key>
@@ -565,7 +575,7 @@ Bitte verwenden Sie die App, um auf Ihre Dateien zuzugreifen.</string>
 	<key>If you would like background media uploads to be more reliable, you should enable background location updates.</key>
 	<string>Wenn Sie möchten, dass die Medien-Uploads im Hintergrund zuverlässiger sind, sollten Sie die Standortaktualisierung im Hintergrund aktivieren.</string>
 	<key>If you'd like to give the account a custom name, please enter it below:</key>
-	<string>If you'd like to give the account a custom name, please enter it below:</string>
+	<string>Wenn Sie dem Konto einen benutzerdefinierten Namen geben möchten, geben Sie ihn bitte unten ein:</string>
 	<key>Ignore updates</key>
 	<string>Aktualisierungen ignorieren</string>
 	<key>Image details</key>
@@ -1058,6 +1068,8 @@ Bitte deaktivieren Sie die PIN-Sperre in den App-Einstellungen.</string>
 	<string>Suche</string>
 	<key>Search PDF</key>
 	<string>PDF suchen</string>
+	<key>Search Settings</key>
+	<string>Search Settings</string>
 	<key>Search account</key>
 	<string>Konto durchsuchen</string>
 	<key>Search folder</key>
@@ -1066,6 +1078,12 @@ Bitte deaktivieren Sie die PIN-Sperre in den App-Einstellungen.</string>
 	<string>Suche nach Benutzer:innen oder Gruppen</string>
 	<key>Search from {{folder.name}}</key>
 	<string>Suche von {{folder.name}}</string>
+	<key>Search in</key>
+	<string>Search in</string>
+	<key>Search on the server is unavailable while not connected. To search offline, switch to the Account scope.</key>
+	<string>Search on the server is unavailable while not connected. To search offline, switch to the Account scope.</string>
+	<key>Search server</key>
+	<string>Search server</string>
 	<key>Search space</key>
 	<string>Space durchsuchen</string>
 	<key>Search template</key>
@@ -1076,6 +1094,16 @@ Bitte deaktivieren Sie die PIN-Sperre in den App-Einstellungen.</string>
 	<string>Baum durchsuchen</string>
 	<key>Search {{space.name}}</key>
 	<string>{{space.name}} durchsuchen</string>
+	<key>Searches in the current space ONLY.</key>
+	<string>Searches in the current space ONLY.</string>
+	<key>Searches the current folder ONLY.</key>
+	<string>Searches the current folder ONLY.</string>
+	<key>Searches the current folder and its subfolders.</key>
+	<string>Searches the current folder and its subfolders.</string>
+	<key>Searches the personal folder and all spaces.</key>
+	<string>Searches the personal folder and all spaces.</string>
+	<key>Searches using the server.</key>
+	<string>Searches using the server.</string>
 	<key>Security</key>
 	<string>Sicherheit</string>
 	<key>Select</key>
@@ -1100,6 +1128,8 @@ Bitte deaktivieren Sie die PIN-Sperre in den App-Einstellungen.</string>
 	<string>Feedback senden</string>
 	<key>Serial number</key>
 	<string>Seriennummer</string>
+	<key>Server</key>
+	<string>Server</string>
 	<key>Server Password</key>
 	<string>Server-Passwort</string>
 	<key>Server URL</key>
@@ -1108,6 +1138,8 @@ Bitte deaktivieren Sie die PIN-Sperre in den App-Einstellungen.</string>
 	<string>Server-Benutzername</string>
 	<key>Server name</key>
 	<string>Servername</string>
+	<key>Server search requires a connection</key>
+	<string>Server search requires a connection</string>
 	<key>Set</key>
 	<string>Setzen</string>
 	<key>Settings</key>
@@ -1197,7 +1229,7 @@ Bitte deaktivieren Sie die PIN-Sperre in den App-Einstellungen.</string>
 	<key>Spot</key>
 	<string>Spot</string>
 	<key>Start setup</key>
-	<string>Start setup</string>
+	<string>Einrichtung starten</string>
 	<key>Status</key>
 	<string>Status</string>
 	<key>Storage</key>
@@ -1412,6 +1444,8 @@ Wenn Ihnen unsere App gefällt, hinterlassen Sie bitte eine AppStore-Rezension.
 	<string>aufsteigend</string>
 	<key>beta</key>
 	<string>Beta</string>
+	<key>contents</key>
+	<string>contents</string>
 	<key>date</key>
 	<string>Datum</string>
 	<key>descending</key>
@@ -1428,6 +1462,10 @@ Wenn Ihnen unsere App gefällt, hinterlassen Sie bitte eine AppStore-Rezension.
 	<string>Lizenz</string>
 	<key>name</key>
 	<string>Name</string>
+	<key>name + contents</key>
+	<string>name + contents</string>
+	<key>names</key>
+	<string>names</string>
 	<key>never</key>
 	<string>Niemals</string>
 	<key>none</key>

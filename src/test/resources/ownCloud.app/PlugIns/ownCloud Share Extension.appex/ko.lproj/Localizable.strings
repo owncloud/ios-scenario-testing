@@ -2,6 +2,14 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>
+This is a BETA release that may - and likely will - still contain bugs.
+
+YOU SHOULD NOT USE THIS BETA VERSION WITH PRODUCTION SYSTEMS, PRODUCTION DATA OR DATA OF VALUE. YOU'RE USING THIS BETA AT YOUR OWN RISK.</key>
+	<string>
+This is a BETA release that may - and likely will - still contain bugs.
+
+YOU SHOULD NOT USE THIS BETA VERSION WITH PRODUCTION SYSTEMS, PRODUCTION DATA OR DATA OF VALUE. YOU'RE USING THIS BETA AT YOUR OWN RISK.</string>
 	<key> couldn't download file(s)</key>
 	<string>파일을 다운로드할 수 없음</string>
 	<key>%@ (%d bits/channel)</key>
@@ -322,6 +330,8 @@ Open 'Certificate Details' for more informations.</key>
 	<string>거절됨</string>
 	<key>Decrease Slider Value</key>
 	<string>슬라이더 값 감소</string>
+	<key>Default search scope</key>
+	<string>Default search scope</string>
 	<key>Delete</key>
 	<string>삭제</string>
 	<key>Delete Authentication Data</key>
@@ -1058,6 +1068,8 @@ Please disable passcode lock in the app settings.</key>
 	<string>검색</string>
 	<key>Search PDF</key>
 	<string>PDF 찾기</string>
+	<key>Search Settings</key>
+	<string>Search Settings</string>
 	<key>Search account</key>
 	<string>계정 검색</string>
 	<key>Search folder</key>
@@ -1066,6 +1078,12 @@ Please disable passcode lock in the app settings.</key>
 	<string>Search for users or groups</string>
 	<key>Search from {{folder.name}}</key>
 	<string>Search from {{folder.name}}</string>
+	<key>Search in</key>
+	<string>Search in</string>
+	<key>Search on the server is unavailable while not connected. To search offline, switch to the Account scope.</key>
+	<string>Search on the server is unavailable while not connected. To search offline, switch to the Account scope.</string>
+	<key>Search server</key>
+	<string>Search server</string>
 	<key>Search space</key>
 	<string>Search space</string>
 	<key>Search template</key>
@@ -1076,6 +1094,16 @@ Please disable passcode lock in the app settings.</key>
 	<string>Search tree</string>
 	<key>Search {{space.name}}</key>
 	<string>Search {{space.name}}</string>
+	<key>Searches in the current space ONLY.</key>
+	<string>Searches in the current space ONLY.</string>
+	<key>Searches the current folder ONLY.</key>
+	<string>Searches the current folder ONLY.</string>
+	<key>Searches the current folder and its subfolders.</key>
+	<string>Searches the current folder and its subfolders.</string>
+	<key>Searches the personal folder and all spaces.</key>
+	<string>Searches the personal folder and all spaces.</string>
+	<key>Searches using the server.</key>
+	<string>Searches using the server.</string>
 	<key>Security</key>
 	<string>보안</string>
 	<key>Select</key>
@@ -1100,6 +1128,8 @@ Please disable passcode lock in the app settings.</key>
 	<string>피드백 보내기</string>
 	<key>Serial number</key>
 	<string>일련 번호</string>
+	<key>Server</key>
+	<string>Server</string>
 	<key>Server Password</key>
 	<string>서버 암호</string>
 	<key>Server URL</key>
@@ -1108,6 +1138,8 @@ Please disable passcode lock in the app settings.</key>
 	<string>서버 사용자이름</string>
 	<key>Server name</key>
 	<string>서버 이름</string>
+	<key>Server search requires a connection</key>
+	<string>Server search requires a connection</string>
 	<key>Set</key>
 	<string>Set</string>
 	<key>Settings</key>
@@ -1411,6 +1443,8 @@ If you like our App, please leave an AppStore review.
 	<string>ascending</string>
 	<key>beta</key>
 	<string>베타</string>
+	<key>contents</key>
+	<string>contents</string>
 	<key>date</key>
 	<string>날짜</string>
 	<key>descending</key>
@@ -1427,6 +1461,10 @@ If you like our App, please leave an AppStore review.
 	<string>라이선스</string>
 	<key>name</key>
 	<string>이름</string>
+	<key>name + contents</key>
+	<string>name + contents</string>
+	<key>names</key>
+	<string>names</string>
 	<key>never</key>
 	<string>없음</string>
 	<key>none</key>

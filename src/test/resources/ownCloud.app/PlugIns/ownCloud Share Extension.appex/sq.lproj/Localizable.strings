@@ -2,6 +2,14 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>
+This is a BETA release that may - and likely will - still contain bugs.
+
+YOU SHOULD NOT USE THIS BETA VERSION WITH PRODUCTION SYSTEMS, PRODUCTION DATA OR DATA OF VALUE. YOU'RE USING THIS BETA AT YOUR OWN RISK.</key>
+	<string>
+This is a BETA release that may - and likely will - still contain bugs.
+
+YOU SHOULD NOT USE THIS BETA VERSION WITH PRODUCTION SYSTEMS, PRODUCTION DATA OR DATA OF VALUE. YOU'RE USING THIS BETA AT YOUR OWN RISK.</string>
 	<key> couldn't download file(s)</key>
 	<string>s’u shkarkua dot kartelë(a)</string>
 	<key>%@ (%d bits/channel)</key>
@@ -322,6 +330,8 @@ Për më tepër hollësi, hapni 'Hollësi Dëshmie'.</string>
 	<string>Hedhur Poshtë</string>
 	<key>Decrease Slider Value</key>
 	<string>Zvogëloni Vlerë Rrëshqitësi</string>
+	<key>Default search scope</key>
+	<string>Default search scope</string>
 	<key>Delete</key>
 	<string>Fshije</string>
 	<key>Delete Authentication Data</key>
@@ -1058,6 +1068,8 @@ Ju lutemi, çaktivizoni kyçjen me frazëkalim, që nga rregullimet e aplikacion
 	<string>Kërko</string>
 	<key>Search PDF</key>
 	<string>Kërko në PDF</string>
+	<key>Search Settings</key>
+	<string>Search Settings</string>
 	<key>Search account</key>
 	<string>Kërko llogari</string>
 	<key>Search folder</key>
@@ -1066,6 +1078,12 @@ Ju lutemi, çaktivizoni kyçjen me frazëkalim, që nga rregullimet e aplikacion
 	<string>Kërkoni për përdorues ose grupe</string>
 	<key>Search from {{folder.name}}</key>
 	<string>Kërko prej {{folder.name}}</string>
+	<key>Search in</key>
+	<string>Search in</string>
+	<key>Search on the server is unavailable while not connected. To search offline, switch to the Account scope.</key>
+	<string>Search on the server is unavailable while not connected. To search offline, switch to the Account scope.</string>
+	<key>Search server</key>
+	<string>Search server</string>
 	<key>Search space</key>
 	<string>Kërko në hapësirë</string>
 	<key>Search template</key>
@@ -1076,6 +1094,16 @@ Ju lutemi, çaktivizoni kyçjen me frazëkalim, që nga rregullimet e aplikacion
 	<string>Pemë kërkimesh</string>
 	<key>Search {{space.name}}</key>
 	<string>Kërko në {{space.name}}</string>
+	<key>Searches in the current space ONLY.</key>
+	<string>Searches in the current space ONLY.</string>
+	<key>Searches the current folder ONLY.</key>
+	<string>Searches the current folder ONLY.</string>
+	<key>Searches the current folder and its subfolders.</key>
+	<string>Searches the current folder and its subfolders.</string>
+	<key>Searches the personal folder and all spaces.</key>
+	<string>Searches the personal folder and all spaces.</string>
+	<key>Searches using the server.</key>
+	<string>Searches using the server.</string>
 	<key>Security</key>
 	<string>Siguri</string>
 	<key>Select</key>
@@ -1100,6 +1128,8 @@ Ju lutemi, çaktivizoni kyçjen me frazëkalim, që nga rregullimet e aplikacion
 	<string>Dërgoni përshtypje</string>
 	<key>Serial number</key>
 	<string>Numër serial</string>
+	<key>Server</key>
+	<string>Server</string>
 	<key>Server Password</key>
 	<string>Fjalëkalim Shërbyesi</string>
 	<key>Server URL</key>
@@ -1108,6 +1138,8 @@ Ju lutemi, çaktivizoni kyçjen me frazëkalim, që nga rregullimet e aplikacion
 	<string>Emër përdoruesi Shërbyesi</string>
 	<key>Server name</key>
 	<string>Emër shërbyesi</string>
+	<key>Server search requires a connection</key>
+	<string>Server search requires a connection</string>
 	<key>Set</key>
 	<string>Set</string>
 	<key>Settings</key>
@@ -1412,6 +1444,8 @@ Nëse e pëlqeni Aplikacionin tonë, ju lutemi, lini një shqyrtim te AppStore.
 	<string>ascending</string>
 	<key>beta</key>
 	<string>beta</string>
+	<key>contents</key>
+	<string>contents</string>
 	<key>date</key>
 	<string>datë</string>
 	<key>descending</key>
@@ -1428,6 +1462,10 @@ Nëse e pëlqeni Aplikacionin tonë, ju lutemi, lini një shqyrtim te AppStore.
 	<string>licencë</string>
 	<key>name</key>
 	<string>emër</string>
+	<key>name + contents</key>
+	<string>name + contents</string>
+	<key>names</key>
+	<string>names</string>
 	<key>never</key>
 	<string>kurrë</string>
 	<key>none</key>

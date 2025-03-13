@@ -2,6 +2,14 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>
+This is a BETA release that may - and likely will - still contain bugs.
+
+YOU SHOULD NOT USE THIS BETA VERSION WITH PRODUCTION SYSTEMS, PRODUCTION DATA OR DATA OF VALUE. YOU'RE USING THIS BETA AT YOUR OWN RISK.</key>
+	<string>
+This is a BETA release that may - and likely will - still contain bugs.
+
+YOU SHOULD NOT USE THIS BETA VERSION WITH PRODUCTION SYSTEMS, PRODUCTION DATA OR DATA OF VALUE. YOU'RE USING THIS BETA AT YOUR OWN RISK.</string>
 	<key> couldn't download file(s)</key>
 	<string> couldn't download file(s)</string>
 	<key>%@ (%d bits/channel)</key>
@@ -36,6 +44,10 @@
 	<string>Accept</string>
 	<key>Accept Share failed</key>
 	<string>Accept Share failed</string>
+	<key>Accept or decline</key>
+	<string>Accept or decline</string>
+	<key>Accept share</key>
+	<string>Accept share</string>
 	<key>Accepted</key>
 	<string>Accepted</string>
 	<key>Access denied</key>
@@ -62,6 +74,8 @@
 	<string>Add account</string>
 	<key>Add item</key>
 	<string>Add item</string>
+	<key>Add to sidebar</key>
+	<string>Add to sidebar</string>
 	<key>Advanced settings</key>
 	<string>Advanced settings</string>
 	<key>After %ld seconds</key>
@@ -114,12 +128,18 @@
 	<string>Are you sure you want to unshare this item?</string>
 	<key>Audio</key>
 	<string>Audio</string>
+	<key>Audios</key>
+	<string>Audios</string>
 	<key>Authenticated as %@ via %@</key>
 	<string>Authenticated as %@ via %@</string>
 	<key>Authenticated via</key>
 	<string>Authenticated via</string>
 	<key>Authenticating…</key>
 	<string>Authenticating…</string>
+	<key>Authentication error</key>
+	<string>Authentication error</string>
+	<key>Authentication failed</key>
+	<string>Authentication failed</string>
 	<key>Authentication with %@ is no longer allowed. Re-authentication needed.</key>
 	<string>Authentication with %@ is no longer allowed. Re-authentication needed.</string>
 	<key>Authoring</key>
@@ -136,12 +156,16 @@
 	<string>Auto Upload Videos</string>
 	<key>Auto mode</key>
 	<string>Auto mode</string>
+	<key>Auto upload disabled</key>
+	<string>Auto upload disabled</string>
 	<key>Auto upload of media was disabled since configured account / folder was not found</key>
 	<string>Auto upload of media was disabled since configured account / folder was not found</string>
 	<key>Auto-approved</key>
 	<string>Auto-approved</string>
 	<key>Available Offline</key>
 	<string>Available Offline</string>
+	<key>Available offline</key>
+	<string>Available offline</string>
 	<key>Average</key>
 	<string>Average</string>
 	<key>Back</key>
@@ -158,6 +182,8 @@
 	<string>Bookmark Metadata</string>
 	<key>Browse</key>
 	<string>Browse</string>
+	<key>Busy</key>
+	<string>Busy</string>
 	<key>By feature</key>
 	<string>By feature</string>
 	<key>Camera details</key>
@@ -192,8 +218,18 @@ Open 'Certificate Details' for more information.</string>
 	<string>Change</string>
 	<key>Change Sort Order</key>
 	<string>Change Sort Order</string>
+	<key>Change password</key>
+	<string>Change password</string>
+	<key>Changed {{settingID}} to {{newValue}}.</key>
+	<string>Changed {{settingID}} to {{newValue}}.</string>
 	<key>Choose destination directory…</key>
 	<string>Choose destination directory…</string>
+	<key>Clear</key>
+	<string>Clear</string>
+	<key>Cleared all.</key>
+	<string>Cleared all.</string>
+	<key>Cleared {{settingID}}.</key>
+	<string>Cleared {{settingID}}.</string>
 	<key>Close Search</key>
 	<string>Close Search</string>
 	<key>Close Window</key>
@@ -214,6 +250,8 @@ Open 'Certificate Details' for more information.</string>
 	<string>Compulsory flash firing</string>
 	<key>Compulsory flash supression</key>
 	<string>Compulsory flash supression</string>
+	<key>Connecting</key>
+	<string>Connecting</string>
 	<key>Connecting...</key>
 	<string>Connecting...</string>
 	<key>Connecting…</key>
@@ -242,6 +280,8 @@ Open 'Certificate Details' for more information.</string>
 	<string>Copy Private Link</string>
 	<key>Copy here</key>
 	<string>Copy here</string>
+	<key>Copy to clipboard</key>
+	<string>Copy to clipboard</string>
 	<key>Copy {{itemCount}} items</key>
 	<string>Copy {{itemCount}} items</string>
 	<key>Copying %ld items…</key>
@@ -262,6 +302,8 @@ Open 'Certificate Details' for more information.</string>
 	<string>Create link</string>
 	<key>Create one file per page</key>
 	<string>Create one file per page</string>
+	<key>Create shortcut</key>
+	<string>Create shortcut</string>
 	<key>Creating %ld folders…</key>
 	<string>Creating %ld folders…</string>
 	<key>Creative</key>
@@ -276,14 +318,20 @@ Open 'Certificate Details' for more information.</string>
 	<string>Data usage</string>
 	<key>Date</key>
 	<string>Date</string>
+	<key>Debug</key>
+	<string>Debug</string>
 	<key>Decline</key>
 	<string>Decline</string>
 	<key>Decline Share failed</key>
 	<string>Decline Share failed</string>
+	<key>Decline share</key>
+	<string>Decline share</string>
 	<key>Declined</key>
 	<string>Declined</string>
 	<key>Decrease Slider Value</key>
 	<string>Decrease Slider Value</string>
+	<key>Default search scope</key>
+	<string>Default search scope</string>
 	<key>Delete</key>
 	<string>Delete</string>
 	<key>Delete Authentication Data</key>
@@ -300,6 +348,8 @@ Open 'Certificate Details' for more information.</string>
 	<string>Delete unused local copies</string>
 	<key>Deleting %ld items…</key>
 	<string>Deleting %ld items…</string>
+	<key>Deletion of '%@' failed</key>
+	<string>Deletion of '%@' failed</string>
 	<key>Density</key>
 	<string>Density</string>
 	<key>Description</key>
@@ -314,6 +364,8 @@ Open 'Certificate Details' for more information.</string>
 	<string>Didn't fire</string>
 	<key>Digitized date</key>
 	<string>Digitised date</string>
+	<key>Disable</key>
+	<string>Disable</string>
 	<key>Disable gestures</key>
 	<string>Disable gestures</string>
 	<key>Discard changes</key>
@@ -332,6 +384,8 @@ Open 'Certificate Details' for more information.</string>
 	<string>Documents</string>
 	<key>Done</key>
 	<string>Done</string>
+	<key>Download</key>
+	<string>Download</string>
 	<key>Download / View</key>
 	<string>Download / View</string>
 	<key>Download / View / Upload</key>
@@ -354,6 +408,8 @@ Open 'Certificate Details' for more information.</string>
 	<string>Edit account</string>
 	<key>Enable</key>
 	<string>Enable</string>
+	<key>Enable Pro Features (QA)</key>
+	<string>Enable Pro Features (QA)</string>
 	<key>Enable diagnostics</key>
 	<string>Enable diagnostics</string>
 	<key>Enable logging</key>
@@ -392,12 +448,16 @@ Open 'Certificate Details' for more information.</string>
 	<string>Error restoring purchases</string>
 	<key>Exit Full Screen</key>
 	<string>Exit Full Screen</string>
+	<key>Exit multiple selection</key>
+	<string>Exit multiple selection</string>
 	<key>Expiration date</key>
 	<string>Expiration date</string>
 	<key>Expires {{expirationDate}}</key>
 	<string>Expires {{expirationDate}}</string>
 	<key>Exposure bias</key>
 	<string>Exposure bias</string>
+	<key>Extend by one week</key>
+	<string>Extend by one week</string>
 	<key>Extended upload settings</key>
 	<string>Extended upload settings</string>
 	<key>Face ID</key>
@@ -408,6 +468,8 @@ Open 'Certificate Details' for more information.</string>
 	<string>Favourites</string>
 	<key>Feedback</key>
 	<string>Feedback</string>
+	<key>Fetching server information…</key>
+	<string>Fetching server information…</string>
 	<key>Fetching user information…</key>
 	<string>Fetching user information…</string>
 	<key>File</key>
@@ -422,6 +484,8 @@ Please use the app to access your files.</string>
 	<string>File Provider access has been disabled by the administrator. Please use the app to create new folders.</string>
 	<key>File Provider access has been disabled by the administrator. Please use the share extension to import files.</key>
 	<string>File Provider access has been disabled by the administrator. Please use the share extension to import files.</string>
+	<key>File an issue</key>
+	<string>File an issue</string>
 	<key>File couldn't be opened</key>
 	<string>File couldn't be opened</string>
 	<key>File format</key>
@@ -440,6 +504,8 @@ Please use the app to access your files.</string>
 	<string>Find Next</string>
 	<key>Find Previous</key>
 	<string>Find Previous</string>
+	<key>Find information, answers and solutions in the detailed documentation.</key>
+	<string>Find information, answers and solutions in the detailed documentation.</string>
 	<key>Fired</key>
 	<string>Fired</string>
 	<key>Firmware</key>
@@ -470,16 +536,26 @@ Please use the app to access your files.</string>
 	<string>GPS Location</string>
 	<key>General</key>
 	<string>General</string>
+	<key>Generate</key>
+	<string>Generate</string>
+	<key>Get in touch with our community in the forums - or file a GitHub issue to report a bug or request a feature.</key>
+	<string>Get in touch with our community in the forums - or file a GitHub issue to report a bug or request a feature.</string>
 	<key>Go to Beginning</key>
 	<string>Go to Beginning</string>
 	<key>Go to page</key>
 	<string>Go to page</string>
 	<key>Grid</key>
 	<string>Grid</string>
+	<key>Group</key>
+	<string>Group</string>
 	<key>Groups</key>
 	<string>Groups</string>
 	<key>Help</key>
 	<string>Help</string>
+	<key>Help &amp; Contact</key>
+	<string>Help &amp; Contact</string>
+	<key>Hide</key>
+	<string>Hide</string>
 	<key>Histogram</key>
 	<string>Histogram</string>
 	<key>How should this file be saved?</key>
@@ -492,6 +568,8 @@ Please use the app to access your files.</string>
 	<string>If you 'Continue', you will be prompted to allow the '{{app.name}}' app to open the {{authmethodName}} login page where you can enter your credentials.</string>
 	<key>If you choose "Immediately" the App will be locked, when it is no longer in foreground.</key>
 	<string>If you choose "Immediately" the App will be locked, when it is no longer in foreground.</string>
+	<key>If you have a moment to give us your feedback, please take our survey.</key>
+	<string>If you have a moment to give us your feedback, please take our survey.</string>
 	<key>If you make an item a favorite, it will turn up here.</key>
 	<string>If you make an item a favourite, it will turn up here.</string>
 	<key>If you would like background media uploads to be more reliable, you should enable background location updates.</key>
@@ -530,6 +608,8 @@ Please use the app to access your files.</string>
 	<string>Importing item %ld of %ld</string>
 	<key>In order to accurately determine your current licensing status, please add one or more accounts first.</key>
 	<string>In order to accurately determine your current licensing status, please add one or more accounts first.</string>
+	<key>In the cloud</key>
+	<string>In the cloud</string>
 	<key>In-App Purchases</key>
 	<string>In-App Purchases</string>
 	<key>Include available offline files</key>
@@ -580,6 +660,10 @@ Please use the app to access your files.</string>
 	<string>List</string>
 	<key>Loading…</key>
 	<string>Loading…</string>
+	<key>Local copy</key>
+	<string>Local copy</string>
+	<key>Local version</key>
+	<string>Local version</string>
 	<key>Location permission denied</key>
 	<string>Location permission denied</string>
 	<key>Locations</key>
@@ -594,6 +678,8 @@ Please use the app to access your files.</string>
 	<string>Log Level</string>
 	<key>Log out</key>
 	<string>Log out</string>
+	<key>Log out of '%@' failed</key>
+	<string>Log out of '%@' failed</string>
 	<key>Logging</key>
 	<string>Logging</string>
 	<key>Login</key>
@@ -622,6 +708,8 @@ Please use the app to access your files.</string>
 	<string>Media Upload</string>
 	<key>Media import</key>
 	<string>Media import</string>
+	<key>Messages</key>
+	<string>Messages</string>
 	<key>Metering</key>
 	<string>Metering</string>
 	<key>Missing hostname</key>
@@ -630,6 +718,8 @@ Please use the app to access your files.</string>
 	<string>Missing permissions</string>
 	<key>More</key>
 	<string>More</string>
+	<key>More for {{title}}</key>
+	<string>More for {{title}}</string>
 	<key>More information</key>
 	<string>More information</string>
 	<key>Move</key>
@@ -668,8 +758,12 @@ Please use the app to access your files.</string>
 	<string>New settings received from MDM</string>
 	<key>Next</key>
 	<string>Next</string>
+	<key>Next item</key>
+	<string>Next item</string>
 	<key>No Access to the media selected for upload</key>
 	<string>No Access to the media selected for upload</string>
+	<key>No account configured</key>
+	<string>No account configured</string>
 	<key>No account has been set up in the {{app.name}} app yet.</key>
 	<string>No account has been set up in the {{app.name}} app yet.</string>
 	<key>No accounts found</key>
@@ -698,8 +792,12 @@ Please use the app to access your files.</string>
 	<string>No matches</string>
 	<key>No pending messages or ongoing actions.</key>
 	<string>No pending messages or ongoing actions.</string>
+	<key>No spaces</key>
+	<string>No spaces</string>
 	<key>No strobe return detection</key>
 	<string>No strobe return detection</string>
+	<key>No user or group matches your search.</key>
+	<string>No user or group matches your search.</string>
 	<key>Normal</key>
 	<string>Normal</string>
 	<key>Not defined</key>
@@ -710,28 +808,42 @@ Please use the app to access your files.</string>
 	<string>OK</string>
 	<key>Off</key>
 	<string>Off</string>
+	<key>Offline</key>
+	<string>Offline</string>
 	<key>Offline files use</key>
 	<string>Offline files use</string>
+	<key>Online</key>
+	<string>Online</string>
 	<key>Open Selected</key>
 	<string>Open Selected</string>
 	<key>Open app</key>
 	<string>Open app</string>
 	<key>Open file</key>
 	<string>Open file</string>
+	<key>Open help page</key>
+	<string>Open help page</string>
 	<key>Open in</key>
 	<string>Open in</string>
 	<key>Open in a new Window</key>
 	<string>Open in a new Window</string>
 	<key>Open in {{appName}} (web)</key>
 	<string>Open in {{appName}} (web)</string>
+	<key>Open link</key>
+	<string>Open link</string>
 	<key>Open login page</key>
 	<string>Open login page</string>
+	<key>Open shortcut</key>
+	<string>Open shortcut</string>
 	<key>Opening documents is not supported by the app provider on this instance.</key>
 	<string>Opening documents is not supported by the app provider on this instance.</string>
+	<key>Opening link failed</key>
+	<string>Opening link failed</string>
 	<key>Opening not allowed</key>
 	<string>Opening not allowed</string>
 	<key>Opening…</key>
 	<string>Opening…</string>
+	<key>Optic ID</key>
+	<string>Optic ID</string>
 	<key>Options</key>
 	<string>Options</string>
 	<key>Original date</key>
@@ -782,10 +894,16 @@ Please disable passcode lock in the app settings.</string>
 	<string>Photometric interpretation</string>
 	<key>Photos</key>
 	<string>Photos</string>
+	<key>Pick a destination for photo uploads</key>
+	<string>Pick a destination for photo uploads</string>
+	<key>Pick a destination for video uploads</key>
+	<string>Pick a destination for video uploads</string>
 	<key>Pick a document type to create:</key>
 	<string>Pick a document type to create:</string>
 	<key>Pick a name</key>
 	<string>Pick a name</string>
+	<key>Pick file or folder</key>
+	<string>Pick file or folder</string>
 	<key>Place</key>
 	<string>Place</string>
 	<key>Play/Pause</key>
@@ -796,6 +914,8 @@ Please disable passcode lock in the app settings.</string>
 	<string>Please configure an email account</string>
 	<key>Please note: Folders can only be pasted into the %@ app and the same account.</key>
 	<string>Please note: Folders can only be pasted into the %@ app and the same account.</string>
+	<key>Please open the app and select the account to re-authenticate.</key>
+	<string>Please open the app and select the account to re-authenticate.</string>
 	<key>Please re-enable location acquisition in system settings</key>
 	<string>Please re-enable location acquisition in system settings</string>
 	<key>Please try again in %@</key>
@@ -824,6 +944,8 @@ Please disable passcode lock in the app settings.</string>
 	<string>Prevent dragging of files and folders and multiselection using system defined gestures</string>
 	<key>Previous</key>
 	<string>Previous</string>
+	<key>Previous item</key>
+	<string>Previous item</string>
 	<key>Privacy</key>
 	<string>Privacy</string>
 	<key>Privacy Policy</key>
@@ -870,6 +992,12 @@ Please disable passcode lock in the app settings.</string>
 	<string>Rejected</string>
 	<key>Remove</key>
 	<string>Remove</string>
+	<key>Remove expiration date</key>
+	<string>Remove expiration date</string>
+	<key>Remove from sidebar</key>
+	<string>Remove from sidebar</string>
+	<key>Remove password</key>
+	<string>Remove password</string>
 	<key>Removes downloaded files and local copies of items marked as Available Offline. The latter will be re-downloaded next time you log into your account (connectivity required).</key>
 	<string>Removes downloaded files and local copies of items marked as Available Offline. The latter will be re-downloaded next time you log into your account (connectivity required).</string>
 	<key>Rename</key>
@@ -884,6 +1012,8 @@ Please disable passcode lock in the app settings.</string>
 	<string>Restoring purchases…</string>
 	<key>Resume</key>
 	<string>Resume</string>
+	<key>Reveal</key>
+	<string>Reveal</string>
 	<key>Reveal in folder</key>
 	<string>Reveal in folder</string>
 	<key>Review Connection</key>
@@ -938,6 +1068,8 @@ Please disable passcode lock in the app settings.</string>
 	<string>Search</string>
 	<key>Search PDF</key>
 	<string>Search PDF</string>
+	<key>Search Settings</key>
+	<string>Search Settings</string>
 	<key>Search account</key>
 	<string>Search account</string>
 	<key>Search folder</key>
@@ -946,6 +1078,12 @@ Please disable passcode lock in the app settings.</string>
 	<string>Search for users or groups</string>
 	<key>Search from {{folder.name}}</key>
 	<string>Search from {{folder.name}}</string>
+	<key>Search in</key>
+	<string>Search in</string>
+	<key>Search on the server is unavailable while not connected. To search offline, switch to the Account scope.</key>
+	<string>Search on the server is unavailable while not connected. To search offline, switch to the Account scope.</string>
+	<key>Search server</key>
+	<string>Search server</string>
 	<key>Search space</key>
 	<string>Search space</string>
 	<key>Search template</key>
@@ -956,18 +1094,32 @@ Please disable passcode lock in the app settings.</string>
 	<string>Search tree</string>
 	<key>Search {{space.name}}</key>
 	<string>Search {{space.name}}</string>
+	<key>Searches in the current space ONLY.</key>
+	<string>Searches in the current space ONLY.</string>
+	<key>Searches the current folder ONLY.</key>
+	<string>Searches the current folder ONLY.</string>
+	<key>Searches the current folder and its subfolders.</key>
+	<string>Searches the current folder and its subfolders.</string>
+	<key>Searches the personal folder and all spaces.</key>
+	<string>Searches the personal folder and all spaces.</string>
+	<key>Searches using the server.</key>
+	<string>Searches using the server.</string>
 	<key>Security</key>
 	<string>Security</string>
 	<key>Select</key>
 	<string>Select</string>
 	<key>Select All</key>
 	<string>Select All</string>
+	<key>Select Destination</key>
+	<string>Select Destination</string>
 	<key>Select Last Item on Page</key>
 	<string>Select Last Item on Page</string>
 	<key>Select Next</key>
 	<string>Select Next</string>
 	<key>Select Previous</key>
 	<string>Select Previous</string>
+	<key>Select folder</key>
+	<string>Select folder</string>
 	<key>Select one or more items.</key>
 	<string>Select one or more items.</string>
 	<key>Select target.</key>
@@ -976,6 +1128,8 @@ Please disable passcode lock in the app settings.</string>
 	<string>Send feedback</string>
 	<key>Serial number</key>
 	<string>Serial number</string>
+	<key>Server</key>
+	<string>Server</string>
 	<key>Server Password</key>
 	<string>Server Password</string>
 	<key>Server URL</key>
@@ -984,16 +1138,26 @@ Please disable passcode lock in the app settings.</string>
 	<string>Server Username</string>
 	<key>Server name</key>
 	<string>Server name</string>
+	<key>Server search requires a connection</key>
+	<string>Server search requires a connection</string>
+	<key>Set</key>
+	<string>Set</string>
 	<key>Settings</key>
 	<string>Settings</string>
+	<key>Setup a new account in the app to save to.</key>
+	<string>Setup a new account in the app to save to.</string>
 	<key>Share</key>
 	<string>Share</string>
 	<key>Share Diagnostics</key>
 	<string>Share Diagnostics</string>
 	<key>Share Extension disabled</key>
 	<string>Share Extension disabled</string>
+	<key>Share Extension unavailable</key>
+	<string>Share Extension unavailable</string>
 	<key>Share with</key>
 	<string>Share with</string>
+	<key>Shared</key>
+	<string>Shared</string>
 	<key>Shared by link</key>
 	<string>Shared by link</string>
 	<key>Shared by me</key>
@@ -1014,18 +1178,30 @@ Please disable passcode lock in the app settings.</string>
 	<string>Sharing</string>
 	<key>Sharing requires an active connection.</key>
 	<string>Sharing requires an active connection.</string>
+	<key>Shortcut</key>
+	<string>Shortcut</string>
+	<key>Shortcut to '{{hostname}}'</key>
+	<string>Shortcut to '{{hostname}}'</string>
 	<key>Shortcuts Actions</key>
 	<string>Shortcuts Actions</string>
+	<key>Shorten by one week</key>
+	<string>Shorten by one week</string>
+	<key>Show</key>
+	<string>Show</string>
 	<key>Show all</key>
 	<string>Show all</string>
 	<key>Show folders on top</key>
 	<string>Show folders on top</string>
 	<key>Show hidden files and folders</key>
 	<string>Show hidden files and folders</string>
+	<key>Show message</key>
+	<string>Show message</string>
 	<key>Show more results</key>
 	<string>Show more results</string>
 	<key>Show new version</key>
 	<string>Show new version</string>
+	<key>Show/Hide sidebar</key>
+	<string>Show/Hide sidebar</string>
 	<key>Shutter priority</key>
 	<string>Shutter priority</string>
 	<key>Shutter speed</key>
@@ -1044,6 +1220,12 @@ Please disable passcode lock in the app settings.</string>
 	<string>Some cellular data may still be used. To completely avoid the usage of cellular data, please turn off access to cellular for the entire app in the Settings app.</string>
 	<key>Sort by %@</key>
 	<string>Sort by %@</string>
+	<key>Sort by {{attribute}} in {{direction}} order</key>
+	<string>Sort by {{attribute}} in {{direction}} order</string>
+	<key>Space</key>
+	<string>Space</string>
+	<key>Spaces</key>
+	<string>Spaces</string>
 	<key>Spot</key>
 	<string>Spot</string>
 	<key>Start setup</key>
@@ -1072,6 +1254,8 @@ Please disable passcode lock in the app settings.</string>
 	<string>Tab %@</string>
 	<key>Take photo or video</key>
 	<string>Take photo or video</string>
+	<key>Take survey</key>
+	<string>Take survey</string>
 	<key>Tap to launch the app.</key>
 	<string>Tap to launch the app.</string>
 	<key>Tap to quit the app.</key>
@@ -1094,6 +1278,8 @@ If you like our App, please leave an AppStore review.
 	<string>The account has been disabled.</string>
 	<key>The connection's access token has expired or become invalid. Sign in again to re-gain access.</key>
 	<string>The connection's access token has expired or become invalid. Sign in again to re-gain access.</string>
+	<key>The destination this shortcut points to could not be found. It may have been deleted or you may not have access to it.</key>
+	<string>The destination this shortcut points to could not be found. It may have been deleted or you may not have access to it.</string>
 	<key>The entered URL does not include a hostname.</key>
 	<string>The entered URL does not include a hostname.</string>
 	<key>The entered codes are different</key>
@@ -1104,10 +1290,18 @@ If you like our App, please leave an AppStore review.
 	<string>The following steps will guide you through the setup process.</string>
 	<key>The last 10 archived logs are kept on the device - with each log covering up to 24 hours of usage. When sharing please bear in mind that logs may contain sensitive information such as server URLs and user-specific information.</key>
 	<string>The last 10 archived logs are kept on the device - with each log covering up to 24 hours of usage. When sharing please bear in mind that logs may contain sensitive information such as server URLs and user-specific information.</string>
+	<key>The password was copied to the clipboard</key>
+	<string>The password was copied to the clipboard</string>
 	<key>The search term you entered did not match any item in the selected scope.</key>
 	<string>The search term you entered did not match any item in the selected scope.</string>
 	<key>The server declined access with the credentials stored for this connection.</key>
 	<string>The server declined access with the credentials stored for this connection.</string>
+	<key>The shortcut points to a URL, but the configuration of this app prohibits opening it.</key>
+	<string>The shortcut points to a URL, but the configuration of this app prohibits opening it.</string>
+	<key>The shortcut points to another item, but the configuration of this app prohibits opening it.</key>
+	<string>The shortcut points to a URL, but the configuration of this app prohibits opening it.</string>
+	<key>The {{app.name}} share extension is not available on this system.</key>
+	<string>The {{app.name}} share extension is not available on this system.</string>
 	<key>Theme</key>
 	<string>Theme</string>
 	<key>This action can't be undone.</key>
@@ -1122,6 +1316,10 @@ If you like our App, please leave an AppStore review.
 	<string>This folder no longer exists on the server.</string>
 	<key>This permission is needed to upload photos and videos from your photo library.</key>
 	<string>This permission is needed to upload photos and videos from your photo library.</string>
+	<key>This shortcut points to:
+{{url}}</key>
+	<string>This shortcut points to:
+{{url}}</string>
 	<key>This will also delete all locally stored file copies.</key>
 	<string>This will also delete all locally stored file copies.</string>
 	<key>Time</key>
@@ -1132,6 +1330,8 @@ If you like our App, please leave an AppStore review.
 	<string>To use the app, you need to create a passcode.</string>
 	<key>Toggle Search Scope</key>
 	<string>Toggle Search Scope</string>
+	<key>Toggle layout</key>
+	<string>Toggle layout</string>
 	<key>Total update scans</key>
 	<string>Total update scans</string>
 	<key>Touch ID</key>
@@ -1140,12 +1340,18 @@ If you like our App, please leave an AppStore review.
 	<string>Tree</string>
 	<key>Type</key>
 	<string>Type</string>
+	<key>URL</key>
+	<string>URL</string>
+	<key>URL of webpage or item</key>
+	<string>URL of webpage or item</string>
 	<key>URL was copied to the clipboard</key>
 	<string>URL was copied to the clipboard</string>
 	<key>Uncalibrated</key>
 	<string>Uncalibrated</string>
 	<key>Unfavorite item</key>
 	<string>Unfavourite item</string>
+	<key>Unknown</key>
+	<string>Unknown</string>
 	<key>Unlock</key>
 	<string>Unlock</string>
 	<key>Unlock %@</key>
@@ -1172,6 +1378,8 @@ If you like our App, please leave an AppStore review.
 	<string>Upload from your photo library</string>
 	<key>Uploading %ld files…</key>
 	<string>Uploading %ld files…</string>
+	<key>Uploading {{remainingFileCount}} files…</key>
+	<string>Uploading {{remainingFileCount}} files…</string>
 	<key>Usage terms</key>
 	<string>Usage terms</string>
 	<key>Use background location updates</key>
@@ -1190,6 +1398,10 @@ If you like our App, please leave an AppStore review.
 	<string>Users</string>
 	<key>Validation Error</key>
 	<string>Validation Error</string>
+	<key>Verbose</key>
+	<string>Verbose</string>
+	<key>Verifying password…</key>
+	<string>Verifying password…</string>
 	<key>Version information were copied to the clipboard</key>
 	<string>Version information were copied to the clipboard</string>
 	<key>Video upload</key>
@@ -1198,6 +1410,10 @@ If you like our App, please leave an AppStore review.
 	<string>Video upload path</string>
 	<key>Videos</key>
 	<string>Videos</string>
+	<key>View documentation</key>
+	<string>View documentation</string>
+	<key>Visit the forums</key>
+	<string>Visit the forums</string>
 	<key>W</key>
 	<string>W</string>
 	<key>Waiting for response from login session in external browser…</key>
@@ -1224,10 +1440,16 @@ If you like our App, please leave an AppStore review.
 	<string>after %@</string>
 	<key>after free %@ trial</key>
 	<string>after free %@ trial</string>
+	<key>ascending</key>
+	<string>ascending</string>
 	<key>beta</key>
 	<string>beta</string>
+	<key>contents</key>
+	<string>contents</string>
 	<key>date</key>
 	<string>date</string>
+	<key>descending</key>
+	<string>descending</string>
 	<key>enabled</key>
 	<string>enabled</string>
 	<key>https://example.com</key>
@@ -1240,6 +1462,10 @@ If you like our App, please leave an AppStore review.
 	<string>licence</string>
 	<key>name</key>
 	<string>name</string>
+	<key>name + contents</key>
+	<string>name + contents</string>
+	<key>names</key>
+	<string>names</string>
 	<key>never</key>
 	<string>never</string>
 	<key>none</key>
@@ -1248,17 +1474,33 @@ If you like our App, please leave an AppStore review.
 	<string>not present</string>
 	<key>off</key>
 	<string>off</string>
+	<key>on</key>
+	<string>on</string>
 	<key>release</key>
 	<string>release</string>
 	<key>shared</key>
 	<string>shared</string>
 	<key>size</key>
 	<string>size</string>
+	<key>undated</key>
+	<string>undated</string>
 	<key>unknown</key>
 	<string>unknown</string>
+	<key>{{attribute}} {{direction}}</key>
+	<string>{{attribute}} {{direction}}</string>
+	<key>{{fileName}} (file)</key>
+	<string>{{fileName}} (file)</string>
+	<key>{{folderName}} (folder)</key>
+	<string>{{folderName}} (folder)</string>
 	<key>{{itemCount}} items with {{totalSize}} total ({{fileCount}} files, {{folderCount}} folders)</key>
 	<string>{{itemCount}} items with {{totalSize}} total ({{fileCount}} files, {{folderCount}} folders)</string>
+	<key>{{itemName}} ({{link}}) | password: {{password}}</key>
+	<string>{{itemName}} ({{link}}) | password: {{password}}</string>
+	<key>{{link}} | password: {{password}}</key>
+	<string>{{link}} | password: {{password}}</string>
 	<key>{{remaining}} available</key>
 	<string>{{remaining}} available</string>
+	<key>{{spaceName}} (space)</key>
+	<string>{{spaceName}} (space)</string>
 </dict>
 </plist>

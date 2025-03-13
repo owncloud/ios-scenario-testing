@@ -67,6 +67,26 @@ public class FileListPage extends CommonPage {
     @iOSXCUITFindBy(id = "UIActivityContentView")
     private WebElement externalApps;
 
+    @iOSXCUITFindBy(id = "client.search")
+    private WebElement searchOption;
+
+    @iOSXCUITFindBy(id = "Folder")
+    private WebElement folderSearchOption;
+
+    @iOSXCUITFindBy(id = "Server")
+    private WebElement serverSearchOption;
+
+    @iOSXCUITFindBy(id = "name + contents")
+    private List<WebElement> serverSearchScopeNameContents;
+
+    @iOSXCUITFindBy(id = "contents")
+    private List<WebElement> serverSearchScopeContents;
+
+    @iOSXCUITFindBy(xpath = "//XCUIElementTypeTextField[@name=\"Personal\"]")
+    private WebElement patternToSearch;
+
+    @iOSXCUITFindBy(id = "No matches")
+    private WebElement noMatchesSearch;
 
     //Actions in action menu
     private final String xpath_delete = "//XCUIElementTypeCell[@name=\"com.owncloud.action.delete\"]";
@@ -221,6 +241,37 @@ public class FileListPage extends CommonPage {
                 selectOperationFromContextual(operation);
                 break;
         }
+    }
+
+    public void serverSideSearch (String searchType, String pattern){
+        Log.log(Level.FINE, "Starts: Search in server: " + pattern);
+        searchOption.click();
+        folderSearchOption.click();
+        serverSearchOption.click();
+        selectSearchCriteria(searchType);
+        patternToSearch.sendKeys(pattern);
+    }
+
+    private void selectSearchCriteria(String searchType) {
+        switch (searchType) {
+            case ("contents"): {
+                if (!serverSearchScopeNameContents.isEmpty()) { //switch options
+                    serverSearchScopeNameContents.get(0).click();
+                    serverSearchScopeContents.get(0).click();
+                }
+            }
+            case ("name and contents"): {
+                if (!serverSearchScopeContents.isEmpty()) { //switch options
+                    serverSearchScopeContents.get(0).click();
+                    serverSearchScopeNameContents.get(0).click();
+                }
+            }
+        }
+    }
+
+    public boolean areNotMatches(){
+        Log.log(Level.FINE, "Starts: Check if there are not matches");
+        return noMatchesSearch.isDisplayed();
     }
 
     public boolean isItemInList(String itemName) {

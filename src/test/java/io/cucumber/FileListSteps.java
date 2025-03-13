@@ -52,8 +52,13 @@ public class FileListSteps {
         return type;
     }
 
-    @ParameterType("file|pdf|image|audio|video")
+    @ParameterType("file|pdf|image|audio|video|txt")
     public String fileType(String type) {
+        return type;
+    }
+
+    @ParameterType("content|name and contents")
+    public String search(String type) {
         return type;
     }
 
@@ -96,6 +101,15 @@ public class FileListSteps {
                     }
                     case ("video"): {
                         world.filesAPI.pushFileByMime(itemName, "video/mp4");
+                        break;
+                    }
+                    case ("txt"): {
+                        world.filesAPI.pushFileByMime(itemName, "text/plain");
+                        break;
+                    }
+                    case ("docx"): {
+                        world.filesAPI.pushFileByMime(itemName, "application/vnd.openxmlformats-" +
+                                "officedocument.wordprocessingml.document");
                         break;
                     }
                 }
@@ -370,6 +384,14 @@ public class FileListSteps {
         world.fileListPage.openShortcutLink();
     }
 
+    @When("Alice search by {search} in the server files containing {word}")
+    public void server_side_search(String searchType, String pattern) {
+        String stepName = new Object() {
+        }.getClass().getEnclosingMethod().getName().toUpperCase();
+        Log.log(Level.FINE, "----STEP----: " + stepName);
+        world.fileListPage.serverSideSearch(searchType, pattern);
+    }
+
     @Then("Alice should see {word} in the filelist")
     public void original_item_filelist(String itemName)
             throws Throwable {
@@ -631,5 +653,12 @@ public class FileListSteps {
         String stepName = new Object() {}.getClass().getEnclosingMethod().getName().toUpperCase();
         Log.log(Level.FINE, "----STEP----: " + stepName);
         assertFalse(world.fileListPage.isOpenInVisible());
+    }
+
+    @Then("Alice will see no matches")
+    public void no_matches_server_side_search() {
+        String stepName = new Object() {}.getClass().getEnclosingMethod().getName().toUpperCase();
+        Log.log(Level.FINE, "----STEP----: " + stepName);
+        assertTrue(world.fileListPage.areNotMatches());
     }
 }

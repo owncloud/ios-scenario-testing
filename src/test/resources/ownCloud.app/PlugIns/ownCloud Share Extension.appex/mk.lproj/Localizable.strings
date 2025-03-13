@@ -2,6 +2,14 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>
+This is a BETA release that may - and likely will - still contain bugs.
+
+YOU SHOULD NOT USE THIS BETA VERSION WITH PRODUCTION SYSTEMS, PRODUCTION DATA OR DATA OF VALUE. YOU'RE USING THIS BETA AT YOUR OWN RISK.</key>
+	<string>
+This is a BETA release that may - and likely will - still contain bugs.
+
+YOU SHOULD NOT USE THIS BETA VERSION WITH PRODUCTION SYSTEMS, PRODUCTION DATA OR DATA OF VALUE. YOU'RE USING THIS BETA AT YOUR OWN RISK.</string>
 	<key> couldn't download file(s)</key>
 	<string> couldn't download file(s)</string>
 	<key>%@ (%d bits/channel)</key>
@@ -322,6 +330,8 @@ Open 'Certificate Details' for more informations.</string>
 	<string>Одбиен</string>
 	<key>Decrease Slider Value</key>
 	<string>Decrease Slider Value</string>
+	<key>Default search scope</key>
+	<string>Default search scope</string>
 	<key>Delete</key>
 	<string>Избриши</string>
 	<key>Delete Authentication Data</key>
@@ -1058,6 +1068,8 @@ Please disable passcode lock in the app settings.</string>
 	<string>Барај</string>
 	<key>Search PDF</key>
 	<string>Search PDF</string>
+	<key>Search Settings</key>
+	<string>Search Settings</string>
 	<key>Search account</key>
 	<string>Search account</string>
 	<key>Search folder</key>
@@ -1066,6 +1078,12 @@ Please disable passcode lock in the app settings.</string>
 	<string>Search for users or groups</string>
 	<key>Search from {{folder.name}}</key>
 	<string>Search from {{folder.name}}</string>
+	<key>Search in</key>
+	<string>Search in</string>
+	<key>Search on the server is unavailable while not connected. To search offline, switch to the Account scope.</key>
+	<string>Search on the server is unavailable while not connected. To search offline, switch to the Account scope.</string>
+	<key>Search server</key>
+	<string>Search server</string>
 	<key>Search space</key>
 	<string>Search space</string>
 	<key>Search template</key>
@@ -1076,6 +1094,16 @@ Please disable passcode lock in the app settings.</string>
 	<string>Search tree</string>
 	<key>Search {{space.name}}</key>
 	<string>Search {{space.name}}</string>
+	<key>Searches in the current space ONLY.</key>
+	<string>Searches in the current space ONLY.</string>
+	<key>Searches the current folder ONLY.</key>
+	<string>Searches the current folder ONLY.</string>
+	<key>Searches the current folder and its subfolders.</key>
+	<string>Searches the current folder and its subfolders.</string>
+	<key>Searches the personal folder and all spaces.</key>
+	<string>Searches the personal folder and all spaces.</string>
+	<key>Searches using the server.</key>
+	<string>Searches using the server.</string>
 	<key>Security</key>
 	<string>Безбедност</string>
 	<key>Select</key>
@@ -1100,6 +1128,8 @@ Please disable passcode lock in the app settings.</string>
 	<string>Send feedback</string>
 	<key>Serial number</key>
 	<string>Serial number</string>
+	<key>Server</key>
+	<string>Server</string>
 	<key>Server Password</key>
 	<string>Server Password</string>
 	<key>Server URL</key>
@@ -1108,6 +1138,8 @@ Please disable passcode lock in the app settings.</string>
 	<string>Server Username</string>
 	<key>Server name</key>
 	<string>Server name</string>
+	<key>Server search requires a connection</key>
+	<string>Server search requires a connection</string>
 	<key>Set</key>
 	<string>Set</string>
 	<key>Settings</key>
@@ -1412,6 +1444,8 @@ If you like our App, please leave an AppStore review.
 	<string>ascending</string>
 	<key>beta</key>
 	<string>бета</string>
+	<key>contents</key>
+	<string>contents</string>
 	<key>date</key>
 	<string>date</string>
 	<key>descending</key>
@@ -1428,6 +1462,10 @@ If you like our App, please leave an AppStore review.
 	<string>license</string>
 	<key>name</key>
 	<string>name</string>
+	<key>name + contents</key>
+	<string>name + contents</string>
+	<key>names</key>
+	<string>names</string>
 	<key>never</key>
 	<string>никогаш</string>
 	<key>none</key>

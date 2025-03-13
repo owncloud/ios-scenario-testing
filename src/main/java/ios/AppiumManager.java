@@ -57,7 +57,7 @@ public class AppiumManager {
             Log.log(Level.SEVERE, "Driver could not be created: " + e.getMessage());
             e.printStackTrace();
         }
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(7));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
     }
 
     public static AppiumManager getManager() {
@@ -96,6 +96,8 @@ public class AppiumManager {
         capabilities.setCapability("appium:noReset", false);
 
         capabilities.setCapability("appium:newCommandTimeout", 60);
+
+        capabilities.setCapability("appium:commandTimeouts", 5000);
 
         capabilities.setCapability("appium:platformVersion", "18.2");
 
