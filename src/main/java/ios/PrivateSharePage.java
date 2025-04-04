@@ -1,5 +1,6 @@
 package ios;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
@@ -11,13 +12,13 @@ import utils.log.Log;
 
 public class PrivateSharePage extends CommonPage {
 
-    @iOSXCUITFindBy(id = "Viewer")
+    @iOSXCUITFindBy(id = "Can view")
     private WebElement viewer;
 
-    @iOSXCUITFindBy(id = "Editor")
+    @iOSXCUITFindBy(id = "Can edit without versions")
     private WebElement editor;
 
-    @iOSXCUITFindBy(id = "Uploader")
+    @iOSXCUITFindBy(id = "Can upload")
     private WebElement uploader;
 
     @iOSXCUITFindBy(id = "Contributor")
@@ -35,8 +36,14 @@ public class PrivateSharePage extends CommonPage {
     @iOSXCUITFindBy(id = "Delete")
     private WebElement delete;
 
-    @iOSXCUITFindBy(id = "Expiration date")
+    @iOSXCUITFindBy(xpath = "//XCUIElementTypeStaticText[@name=\"Add\"]")
     private WebElement expirationDate;
+
+    @iOSXCUITFindBy(id = "Remove expiration date")
+    private WebElement removeExpirationDate;
+
+    @iOSXCUITFindBy(id = "Date Picker")
+    private WebElement datePicker;
 
     @iOSXCUITFindBy(xpath = "//XCUIElementTypeButton[@name=\"Invite\"]")
     private WebElement inviteButton;
@@ -66,11 +73,7 @@ public class PrivateSharePage extends CommonPage {
         String urlShare = System.getProperty("server").split("://")[1].split(":")[0];
         String searchXpath = "//XCUIElementTypeTextField[@name=\"Alice@" + urlShare + "\"]";
         findXpath(searchXpath).sendKeys(shareeName);
-        if (type.equals("user"))
-            findXpath("(//XCUIElementTypeStaticText[@name=\"" + shareeName + "\"])[1]").click();
-        else //groups return as additional information, the group name itself
-            findXpath("(//XCUIElementTypeStaticText[@name=\"" + shareeName +
-                    " ("+ shareeName + ")\"])[1]").click();
+        findXpath("(//XCUIElementTypeStaticText[@name=\"" + shareeName + "\"])[1]").click();
     }
 
     public void setPermissions(String permission) {
@@ -84,7 +87,7 @@ public class PrivateSharePage extends CommonPage {
                 editor.click();
                 break;
             }
-            case ("Uploader"): {
+            case ("Upload"): {
                 uploader.click();
                 break;
             }
@@ -98,6 +101,22 @@ public class PrivateSharePage extends CommonPage {
                 break;
             }
         }
+    }
+
+    public void setExpiration() {
+        Log.log(Level.FINE, "Starts: Set expiration date");
+        expirationDate.click();
+    }
+
+    public boolean hasExpiration() {
+        Log.log(Level.FINE, "Starts: Check expiration date");
+        return !driver.findElements(By.xpath(
+                "//XCUIElementTypeStaticText[contains(@name, 'Expires')]")).isEmpty();
+    }
+
+    public void removeExpiration() {
+        Log.log(Level.FINE, "Starts: Remove expiration date");
+        removeExpirationDate.click();
     }
 
     public void invite() {

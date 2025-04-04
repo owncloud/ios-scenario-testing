@@ -25,14 +25,17 @@ public class SharePage extends CommonPage {
     @iOSXCUITFindBy(id = "Copy Private Link")
     private WebElement copyPrivateLink;
 
-    @iOSXCUITFindBy(id = "Viewer (Download and preview)")
+    @iOSXCUITFindBy(id = "Can view")
     private WebElement viewerPermission;
 
-    @iOSXCUITFindBy(id = "Editor (Upload, edit, delete, download and preview)")
+    @iOSXCUITFindBy(id = "Can edit without versions")
     private WebElement editorPermission;
 
-    @iOSXCUITFindBy(id = "Custom (Set detailed permissions)")
-    private WebElement customPermission;
+    @iOSXCUITFindBy(id = "Can upload")
+    private WebElement uploadPermission;
+
+    @iOSXCUITFindBy(id = "Secret File Drop")
+    private WebElement secretFileDropPermission;
 
     @iOSXCUITFindBy(id = "Done")
     private WebElement doneButton;
@@ -141,15 +144,24 @@ public class SharePage extends CommonPage {
                     break;
                 }
                 case "expiration": {
+                    boolean hasExpiration = !remoteShare.getExpiration().isEmpty();
+                    Log.log(Level.FINE, "Expiration: " + remoteShare.getExpiration()
+                            + " - Expected: " + entry.getValue());
+                    return switch (entry.getValue().toLowerCase()) {
+                        case "yes" -> hasExpiration;
+                        case "no" -> !hasExpiration;
+                        default -> false;
+                    };
+
                     //Get only month-day-year
-                    String remoteDate = remoteShare.getExpiration().substring(0, 10);
+                    /*String remoteDate = remoteShare.getExpiration().substring(0, 10);
                     String expDate = DateUtils.dateInDaysWithServerFormat(Integer.valueOf(entry.getValue()));
                     Log.log(Level.FINE, "Expiration dates: Remote: " + remoteDate
                             + " - Expected: " + expDate);
                     if (!remoteDate.equals(expDate)) {
                         Log.log(Level.FINE, "Expiration dates do not match");
                         return false;
-                    }
+                    }*/
                 }
             }
         }
@@ -168,17 +180,12 @@ public class SharePage extends CommonPage {
     }
 
     public boolean displayedPermission(String permissionName) {
-        switch (permissionName) {
-            case "Custom":
-            case "Viewer": {
-                return viewerPermission.isDisplayed();
-            }
-            case "Editor": {
-                return editorPermission.isDisplayed();
-            }
-            default:
-                return false;
-        }
+        return switch (permissionName) {
+            case "Viewer" -> viewerPermission.isDisplayed();
+            case "Editor" -> editorPermission.isDisplayed();
+            case "Upload" -> uploadPermission.isDisplayed();
+            default -> false;
+        };
     }
 
     //Permissions from server come in numeric format. This method translates

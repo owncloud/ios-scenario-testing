@@ -12,11 +12,11 @@ public class ShareSAXHandler extends DefaultHandler {
 
     private OCShare share;
     private ArrayList<OCShare> allShares;
-    private static String text = null;
-
+    private StringBuilder text = new StringBuilder();
 
     @Override
     public void startElement(String uri, String localName, String node, Attributes attributes) {
+        text.setLength(0);
         switch (node) {
             case ("ocs"): {
                 allShares = new ArrayList<>();
@@ -29,37 +29,38 @@ public class ShareSAXHandler extends DefaultHandler {
 
     @Override
     public void endElement(String uri, String localName, String node) {
+        String value = text.toString().trim();
         switch (node) {
             case ("id"): {
-                share.setId(text);
+                share.setId(value);
                 break;
             }
             case ("uid_file_owner"): {
-                share.setOwner(text);
+                share.setOwner(value);
                 break;
             }
             case ("share_type"): {
-                share.setType(text);
+                share.setType(value);
                 break;
             }
             case ("share_with"): {
-                share.setShareeName(text);
+                share.setShareeName(value);
                 break;
             }
             case ("name"): {
-                share.setLinkName(text);
+                share.setLinkName(value);
                 break;
             }
             case ("path"): {
-                share.setItemName(text.substring(1, text.length()));
+                share.setItemName(text.substring(1, value.length()));
                 break;
             }
             case ("permissions"): {
-                share.setPermissions(text);
+                share.setPermissions(value);
                 break;
             }
             case ("expiration"): {
-                share.setExpiration(text);
+                share.setExpiration(value);
                 break;
             }
             case ("element"): {
@@ -70,7 +71,7 @@ public class ShareSAXHandler extends DefaultHandler {
 
     @Override
     public void characters(char[] ch, int start, int length) throws SAXException {
-        text = String.copyValueOf(ch, start, length).trim();
+        text.append(ch, start, length);
     }
 
     public OCShare getShare() {

@@ -51,17 +51,21 @@ public class SharesSteps {
                 world.sharePage.translatePermissionsToInt(permissions), "", "", sharelevel);
     }
 
-    @When("Alice selects the following {usertype} as sharee with {word} permissions")
-    public void select_sharee_default(String type, String permissions, DataTable table)
-            throws Throwable {
+    @When("Alice selects the following {usertype} as sharee with the following fields")
+    public void select_sharee_default(String type, DataTable table) {
         String stepName = new Object() {
         }.getClass().getEnclosingMethod().getName().toUpperCase();
         Log.log(Level.FINE, "----STEP----: " + stepName);
         List<List<String>> listUser = table.asLists();
         String sharee = listUser.get(0).get(1);
+        String permissions = listUser.get(1).get(1);
+        boolean hasExpiration = "yes".equalsIgnoreCase(listUser.get(2).get(1));
         world.sharePage.invite();
         world.privateSharePage.searchSharee(sharee, type);
         world.privateSharePage.setPermissions(permissions);
+        if (hasExpiration) {
+            world.privateSharePage.setExpiration();
+        }
         world.privateSharePage.savePermissions();
     }
 
@@ -88,8 +92,12 @@ public class SharesSteps {
         List<List<String>> fieldList = table.asLists();
         String sharee = fieldList.get(0).get(1);
         String permissions = fieldList.get(1).get(1);
+        String expiration = fieldList.get(2).get(1);
         world.sharePage.openPrivateShare(sharee);
         world.privateSharePage.setPermissions(permissions);
+        if (expiration.equals("yes")){
+            world.privateSharePage.setExpiration();
+        }
         world.privateSharePage.saveChanges();
     }
 
@@ -98,7 +106,6 @@ public class SharesSteps {
             throws InterruptedException {
         String stepName = new Object() {
         }.getClass().getEnclosingMethod().getName().toUpperCase();
-        ;
         Log.log(Level.FINE, "----STEP----: " + stepName);
         List<List<String>> list = table.asLists();
         String sharee = list.get(0).get(0);
@@ -106,7 +113,7 @@ public class SharesSteps {
         world.privateSharePage.deletePrivateShare();
     }
 
-    @Then("share should be created on {word} with the following fields")
+    @Then("share should be created/edited on {word} with the following fields")
     public void share_created_with_fields(String itemName, DataTable table)
             throws Throwable {
         String stepName = new Object() {
@@ -126,6 +133,15 @@ public class SharesSteps {
                 case "permissions": {
                     Log.log(Level.FINE, "Checking permissions: " + rows.get(1));
                     assertTrue(world.sharePage.displayedPermission(rows.get(1)));
+                    break;
+                }
+                case "expiration": {
+                    Log.log(Level.FINE, "Checking expiration: " + rows.get(1));
+                    if (rows.get(1).equals("yes"))
+                        assertTrue(world.privateSharePage.hasExpiration());
+                    else
+                        assertFalse(world.privateSharePage.hasExpiration());
+                    break;
                 }
                 default:
                     break;
@@ -141,7 +157,6 @@ public class SharesSteps {
             throws Throwable {
         String stepName = new Object() {
         }.getClass().getEnclosingMethod().getName().toUpperCase();
-        ;
         Log.log(Level.FINE, "----STEP----: " + stepName);
         if (type.equals("user")) {
             assertTrue(world.shareAPI.isSharedWithMe(itemName, shareeName, false));

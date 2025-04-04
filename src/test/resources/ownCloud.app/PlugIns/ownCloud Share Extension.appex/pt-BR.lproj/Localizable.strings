@@ -1151,9 +1151,9 @@ Desative o bloqueio por senha nas configurações do aplicativo. </string>
 	<key>Share Diagnostics</key>
 	<string>Compartilhar Diagnósticos</string>
 	<key>Share Extension disabled</key>
-	<string>Extensão de compartilhamento desabilitada</string>
+	<string>Extensão de Compartilhamento desabilitada</string>
 	<key>Share Extension unavailable</key>
-	<string>Share Extension unavailable</string>
+	<string>Extensão de Compartilhamento indisponível</string>
 	<key>Share with</key>
 	<string>Compartilhar com</string>
 	<key>Shared</key>
@@ -1301,7 +1301,7 @@ Se você gosta do nosso aplicativo, deixe um comentário na AppStore.
 	<key>The shortcut points to another item, but the configuration of this app prohibits opening it.</key>
 	<string>The shortcut points to a URL, but the configuration of this app prohibits opening it.</string>
 	<key>The {{app.name}} share extension is not available on this system.</key>
-	<string>The {{app.name}} share extension is not available on this system.</string>
+	<string>A Extensão de Compartilhamento de {{app.name}} não está disponível em seu sistema.</string>
 	<key>Theme</key>
 	<string>Tema</string>
 	<key>This action can't be undone.</key>
