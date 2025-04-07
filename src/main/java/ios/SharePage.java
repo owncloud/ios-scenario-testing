@@ -198,7 +198,7 @@ public class SharePage extends CommonPage {
         if (permission.equals("15"))
             return "Editor";
         if (permission.equals("4"))
-            return "Uploader";
+            return "Secret";
         if (permission.equals("5"))
             return "Contributor";
         return "";

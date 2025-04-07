@@ -1,5 +1,6 @@
 package ios;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
@@ -7,7 +8,6 @@ import java.util.logging.Level;
 
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import io.appium.java_client.pagefactory.iOSXCUITFindBy;
-import utils.date.DateUtils;
 import utils.log.Log;
 
 public class PublicLinkPage extends CommonPage {
@@ -15,17 +15,17 @@ public class PublicLinkPage extends CommonPage {
     @iOSXCUITFindBy(id = "Name")
     private WebElement linkName;
 
-    @iOSXCUITFindBy(id = "Viewer")
+    @iOSXCUITFindBy(id = "Can view")
     private WebElement viewer;
 
-    @iOSXCUITFindBy(id = "Editor")
+    @iOSXCUITFindBy(id = "Can edit")
     private WebElement editor;
 
-    @iOSXCUITFindBy(id = "Uploader")
-    private WebElement uploader;
+    @iOSXCUITFindBy(id = "Secret File Drop")
+    private WebElement secretFileDrop;
 
-    @iOSXCUITFindBy(id = "Contributor")
-    private WebElement contributor;
+    @iOSXCUITFindBy(xpath = "//XCUIElementTypeStaticText[@name=\"Add\"]")
+    private WebElement addExpirationDate;
 
     @iOSXCUITFindBy(id = "Set")
     private WebElement setPasswordButton;
@@ -94,12 +94,8 @@ public class PublicLinkPage extends CommonPage {
                 editor.click();
                 break;
             }
-            case ("Uploader"): {
-                uploader.click();
-                break;
-            }
-            case ("Contributor"): {
-                contributor.click();
+            case ("Secret"): {
+                secretFileDrop.click();
                 break;
             }
         }
@@ -129,22 +125,25 @@ public class PublicLinkPage extends CommonPage {
     //Day to set: given day of the following month
     public void setExpiration(String day) {
         Log.log(Level.FINE, "Starts: Set Expiration date: " + day);
-        expirationButton.click();
+        addExpirationDate.click();
+        /*expirationButton.click();
         datePicker.click();
         monthPicker.click();
         //No matter which month, wheel moves to th next value. Framework issue
         monthWheel.sendKeys("December");
         datePicker.click();
-        findId(day).click();
+        findId(day).click();*/
     }
 
     public boolean isExpirationCorrect(String day) {
         Log.log(Level.FINE, "Starts: Check expiration day: " + day);
-        String displayedDate = DateUtils.displayedDate(day);
+        return !driver.findElements(By.xpath(
+                "//XCUIElementTypeStaticText[contains(@name, 'Expires')]")).isEmpty();
+        /*String displayedDate = DateUtils.displayedDate(day);
         Log.log(Level.FINE, "Date to compare: " + displayedDate);
         String dateInPicker = datePicker.getAttribute("value");
         Log.log(Level.FINE, "Date to check in the screen: " + dateInPicker);
-        return dateInPicker.equals(displayedDate);
+        return dateInPicker.equals(displayedDate);*/
     }
 
     public boolean isNameCorrect(String name) {

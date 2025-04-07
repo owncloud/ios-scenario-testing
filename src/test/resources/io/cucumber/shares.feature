@@ -94,7 +94,7 @@ Feature: Private Share
       | type   | item   | shareetype | sharee | permission |
       | folder | Share9 | user       | Bob    | Viewer     |
 
-  @sharesortcut
+  @shareshortcut
   Rule: Shortcuts
 
   Scenario Outline: Check shared file with me in list

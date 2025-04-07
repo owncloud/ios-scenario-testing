@@ -42,7 +42,7 @@ public class FileListSteps {
         return type;
     }
 
-    @ParameterType("Quick Access|filelist|shared with me|search|shared by me")
+    @ParameterType("Quick Access|filelist|shared with me|search|shared by me|shared by link")
     public String typeOfList(String type) {
         return type;
     }

@@ -27,7 +27,7 @@ Feature: Public Links
     Examples:
       | type   | item       | permission | menu       | name       |
       | folder | Links1     | Viewer     | Actions    | folderName |
-      | file   | Links2.txt | Viewer     | Contextual | fileName   |
+      | file   | Links2.txt | Editor     | Contextual | fileName   |
 
   Scenario Outline: Create a public link with password created by user
     Given the following items have been created in Alice account
@@ -59,7 +59,7 @@ Feature: Public Links
       | folder | Links5     |
       | file   | Links6.txt |
 
-  @expiration @ignore
+  @expiration
   Scenario Outline: Create a public link with expiration date
     Given the following items have been created in Alice account
       | <type> | <item> |
@@ -73,7 +73,7 @@ Feature: Public Links
 
     Examples:
       | type   | item   | expiration |
-      | folder | Links7 | 1          |
+      | folder | Links7 | yes        |
 
   Scenario Outline: Create a public link with permissions on a folder
     Given the following items have been created in Alice account
@@ -87,8 +87,8 @@ Feature: Public Links
 
     Examples:
       | item    | permissions |
-      | Links8  | Uploader    |
-      | Links9  | Contributor |
+      | Links8  | Secret      |
+      | Links9  | Viewer      |
       | Links10 | Editor      |
 
   @editlink
@@ -101,14 +101,16 @@ Feature: Public Links
     When Alice selects to share the folder <item> using the Actions menu
     And Alice edits the link on <item> with the following fields
       | permissions | <permissions> |
+      | expiration  | yes           |
     Then link should be created on <item> with the following fields
       | permissions | <permissions> |
+      | expiration  | yes           |
+
 
     Examples:
       | item    | permissions |
       | Links11 | Editor      |
-      | Links12 | Contributor |
-      | Links13 | Uploader    |
+      | Links12 | Secret      |
 
   @deletelink
   Rule: Delete a public link
@@ -123,4 +125,19 @@ Feature: Public Links
 
     Examples:
       | type   | item    |
-      | folder | Links14 |
+      | folder | Links13 |
+
+  @linkshortcut
+  Rule: Shortcuts on links
+
+  Scenario Outline: Check shared by link in list
+    Given the following items have been created in Alice account
+      | <type> | <item> |
+    And Alice has shared the folder <item> by link
+    When Alice opens the sidebar
+    And Alice opens the option shared by link in sidebar
+    Then Alice should see <item> in shared by link
+
+    Examples:
+      | type | item        |
+      | file | Links14.txt |

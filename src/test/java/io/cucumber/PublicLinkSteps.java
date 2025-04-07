@@ -86,6 +86,10 @@ public class PublicLinkSteps {
                     world.publicLinkPage.setPassword(rows.get(1));
                     break;
                 }
+                case "expiration": {
+                    world.publicLinkPage.setExpiration(null);
+                    break;
+                }
                 default:
                     break;
             }
@@ -108,7 +112,6 @@ public class PublicLinkSteps {
             throws Throwable {
         String stepName = new Object() {
         }.getClass().getEnclosingMethod().getName().toUpperCase();
-        ;
         Log.log(Level.FINE, "----STEP----: " + stepName);
         //Asserts in UI
         List<List<String>> listItems = table.asLists();
