@@ -104,7 +104,8 @@ public class SharePage extends CommonPage {
                     break;
                 }
                 case "password": {
-                    if (!(remoteShare.getType().equals("3") && remoteShare.hasPassword())) {
+                    if (!(remoteShare.getType().equals("3") && remoteShare.hasPassword())
+                            && !entry.getValue().equals("\"\"")) {
                         Log.log(Level.FINE, "Password not present");
                         return false;
                     }

@@ -39,6 +39,9 @@ public class PublicLinkPage extends CommonPage {
     @iOSXCUITFindBy(className = "XCUIElementTypeSecureTextField")
     private WebElement passwordField;
 
+    @iOSXCUITFindBy(id = "Remove password")
+    private WebElement removePassword;
+
     @iOSXCUITFindBy(xpath = "(//XCUIElementTypeButton[@name=\"Set\"])[2]")
     private WebElement submitPassword;
 
@@ -103,9 +106,15 @@ public class PublicLinkPage extends CommonPage {
 
     public void setPassword(String password) {
         Log.log(Level.FINE, "Starts: Add link password: " + password);
-        setPasswordButton.click();
-        passwordField.sendKeys(password);
-        setPasswordButton.click();
+        if (!password.equals("\"\"")) { //Password creation
+            Log.log(Level.FINE, "Creating new password: " + password);
+            setPasswordButton.click();
+            passwordField.sendKeys(password);
+            setPasswordButton.click();
+        } else { //Password removal
+            Log.log(Level.FINE, "Removing existing password");
+            removePassword.click();
+        }
     }
 
     public void setPasswordAuto() {
@@ -118,8 +127,13 @@ public class PublicLinkPage extends CommonPage {
         linkName.sendKeys(name);
     }
 
-    public boolean isPasswordEnabled(String itemName) {
-        return passwordEnabled.isDisplayed();
+    public boolean isPasswordEnabled(String itemName, String password) {
+        Log.log(Level.FINE, "Starts: Check password enabled: " + itemName + " with password: " + password);
+        if (password.equals("\"\"")) { //Password not set
+            return generatePassword.isDisplayed() && setPasswordButton.isDisplayed();
+        } else { //Password set
+            return passwordEnabled.isDisplayed();
+        }
     }
 
     //Day to set: given day of the following month

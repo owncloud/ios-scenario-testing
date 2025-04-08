@@ -106,11 +106,20 @@ Feature: Public Links
       | permissions | <permissions> |
       | expiration  | yes           |
 
-
     Examples:
       | item    | permissions |
       | Links11 | Editor      |
       | Links12 | Secret      |
+
+  Scenario: Edit existing link removing password
+    Given the following items have been created in Alice account
+      | folder | Links13 |
+    And Alice has shared the folder Links13 by link
+    When Alice selects to share the folder Links13 using the Contextual menu
+    And Alice edits the link on Links13 with the following fields
+      | password | "" |
+      Then link should be created on Links13 with the following fields
+      | password | "" |
 
   @deletelink
   Rule: Delete a public link
@@ -125,7 +134,7 @@ Feature: Public Links
 
     Examples:
       | type   | item    |
-      | folder | Links13 |
+      | folder | Links14 |
 
   @linkshortcut
   Rule: Shortcuts on links
@@ -140,4 +149,4 @@ Feature: Public Links
 
     Examples:
       | type | item        |
-      | file | Links14.txt |
+      | file | Links15.txt |

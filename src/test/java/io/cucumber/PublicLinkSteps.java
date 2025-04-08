@@ -72,7 +72,6 @@ public class PublicLinkSteps {
     public void edit_public_link(String itemName, DataTable table) {
         String stepName = new Object() {
         }.getClass().getEnclosingMethod().getName().toUpperCase();
-        ;
         Log.log(Level.FINE, "----STEP----: " + stepName);
         List<List<String>> listItems = table.asLists();
         world.sharePage.openPublicLink();
@@ -119,7 +118,7 @@ public class PublicLinkSteps {
         for (List<String> rows : listItems) {
             switch (rows.get(0)) {
                 case "password": {
-                    assertTrue(world.publicLinkPage.isPasswordEnabled(itemName));
+                    assertTrue(world.publicLinkPage.isPasswordEnabled(itemName, rows.get(1)));
                     break;
                 }
                 case "permission": {
