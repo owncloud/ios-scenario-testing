@@ -86,7 +86,7 @@ public class PublicLinkSteps {
                     break;
                 }
                 case "expiration": {
-                    world.publicLinkPage.setExpiration(null);
+                    world.publicLinkPage.setExpiration(rows.get(1));
                     break;
                 }
                 default:
@@ -112,8 +112,28 @@ public class PublicLinkSteps {
         String stepName = new Object() {
         }.getClass().getEnclosingMethod().getName().toUpperCase();
         Log.log(Level.FINE, "----STEP----: " + stepName);
-        //Asserts in UI
+        //1. Asserts in UI
+        //1.1 Checking in Shares page
         List<List<String>> listItems = table.asLists();
+        for (List<String> rows : listItems) {
+            switch (rows.get(0)) {
+                case "permission": {
+                    assertTrue(world.sharePage.isPermissionCorrect(rows.get(1)));
+                    break;
+                }
+                case "expiration": {
+                    assertTrue(world.sharePage.isExpirationCorrect(rows.get(1)));
+                    break;
+                }
+                case "name": {
+                    assertTrue(world.sharePage.isNameCorrect(rows.get(1)));
+                    break;
+                }
+                default:
+                    break;
+            }
+        }
+        //1.2. Checking in link page
         world.sharePage.openPublicLink();
         for (List<String> rows : listItems) {
             switch (rows.get(0)) {
@@ -137,7 +157,7 @@ public class PublicLinkSteps {
                     break;
             }
         }
-        //Asserts in server via API
+        //2. Asserts in server via API
         OCShare share = world.shareAPI.getShare(itemName);
         assertTrue(world.sharePage.checkCorrectShare(share, listItems));
     }
@@ -147,10 +167,11 @@ public class PublicLinkSteps {
             throws Throwable {
         String stepName = new Object() {
         }.getClass().getEnclosingMethod().getName().toUpperCase();
-        ;
         Log.log(Level.FINE, "----STEP----: " + stepName);
         assertFalse(world.sharePage.isItemInListLinks());
         ArrayList<OCShare> shares = world.shareAPI.getLinksByDefault();
         assertTrue(shares.isEmpty());
     }
+
+
 }

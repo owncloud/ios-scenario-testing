@@ -36,16 +36,18 @@ public class DateUtils {
     public static String displayedDate(String day) {
         String year = Integer.toString(DateUtils.todayYear()).substring(2);
         String month = Integer.toString(DateUtils.todayMonth() + 1);
-        String dayToday = Integer.toString(DateUtils.todayDay());
+        //String dayToday = Integer.toString(DateUtils.todayDay());
+        Log.log(Level.FINE, "Day: " + day + " Month: " + month + " Year: " + year);
         if (month.equals("12")) { //Jump to next year
-            year = year + 1;
+            year = String.valueOf(Integer.parseInt(year) + 1);
+            month = "1";
         }
-        if (DateUtils.daysOfMonth(DateUtils.todayMonth(), DateUtils.todayYear()) - Integer.parseInt(dayToday) < 7) {
-            month = Integer.toString(DateUtils.todayMonth() + 2);
-        } else {
-            month = Integer.toString(DateUtils.todayMonth() + 1);
-        }
-        return month + "/" + day + "/" + year;
+        //if (DateUtils.daysOfMonth(DateUtils.todayMonth(), DateUtils.todayYear()) - Integer.parseInt(day) < 7) {
+        //    month = Integer.toString(DateUtils.todayMonth() + 2);
+        //} else {
+        //    month = Integer.toString(DateUtils.todayMonth() + 1);
+        //}
+        return day + "/" + month + "/" + year;
     }
 
     private static String formatInt(int dateNumber) {
@@ -75,7 +77,7 @@ public class DateUtils {
             case 11: {
                 return 30;
             }
-            case 2: { //lap year
+            case 2: { //leap year
                 if (year % 4 == 0) {
                     return 29;
                 } else {

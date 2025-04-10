@@ -8,6 +8,7 @@ import java.util.logging.Level;
 
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import io.appium.java_client.pagefactory.iOSXCUITFindBy;
+import utils.date.DateUtils;
 import utils.log.Log;
 
 public class PublicLinkPage extends CommonPage {
@@ -24,9 +25,6 @@ public class PublicLinkPage extends CommonPage {
     @iOSXCUITFindBy(id = "Secret File Drop")
     private WebElement secretFileDrop;
 
-    @iOSXCUITFindBy(xpath = "//XCUIElementTypeStaticText[@name=\"Add\"]")
-    private WebElement addExpirationDate;
-
     @iOSXCUITFindBy(id = "Set")
     private WebElement setPasswordButton;
 
@@ -42,26 +40,17 @@ public class PublicLinkPage extends CommonPage {
     @iOSXCUITFindBy(id = "Remove password")
     private WebElement removePassword;
 
-    @iOSXCUITFindBy(xpath = "(//XCUIElementTypeButton[@name=\"Set\"])[2]")
-    private WebElement submitPassword;
-
-    @iOSXCUITFindBy(xpath = "(//XCUIElementTypeStaticText[@name=\"Add\"])[2]")
-    private WebElement expirationButton;
+    @iOSXCUITFindBy(xpath = "//XCUIElementTypeStaticText[@name=\"Add\"]")
+    private WebElement addExpirationDate;
 
     @iOSXCUITFindBy(id = "Date Picker")
     private WebElement datePicker;
 
-    @iOSXCUITFindBy(id = "Month")
-    private WebElement monthPicker;
+    @iOSXCUITFindBy(id = "DatePicker.NextMonth")
+    private WebElement nextMonth;
 
-    @iOSXCUITFindBy(xpath = "//XCUIElementTypeApplication[@name=\"ownCloud\"]/XCUIElementTypeWindow[1]" +
-            "/XCUIElementTypeOther[5]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther" +
-            "/XCUIElementTypeOther[2]/XCUIElementTypeDatePicker/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]" +
-            "/XCUIElementTypeDatePicker/XCUIElementTypePicker/XCUIElementTypePickerWheel[1]")
-    private WebElement monthWheel;
-
-    @iOSXCUITFindBy(id = "Create")
-    private WebElement createLink;
+    @iOSXCUITFindBy(id = "Remove expiration date")
+    private WebElement removeExpirationDate;
 
     @iOSXCUITFindBy(xpath = "//XCUIElementTypeStaticText[@name=\"Create\"]")
     private WebElement createButton;
@@ -84,6 +73,11 @@ public class PublicLinkPage extends CommonPage {
             instance = new PublicLinkPage();
         }
         return instance;
+    }
+
+    public void setName(String name) {
+        Log.log(Level.FINE, "Starts: Add link name: " + name);
+        linkName.sendKeys(name);
     }
 
     public void setPermission(String permission) {
@@ -122,9 +116,34 @@ public class PublicLinkPage extends CommonPage {
         generatePassword.click();
     }
 
-    public void setName(String name) {
-        Log.log(Level.FINE, "Starts: Add link name: " + name);
-        linkName.sendKeys(name);
+    //Day to set: given day of the following month
+    public void setExpiration(String expirationDay) {
+        Log.log(Level.FINE, "Starts: Set Expiration date: " + expirationDay);
+        if (!expirationDay.equals("0")){
+            addExpirationDate.click();
+            //expirationButton.click();
+            datePicker.click();
+            //monthPicker.click();
+            //No matter which month, wheel moves to th next value. Framework issue
+            //monthWheel.sendKeys("December");
+            nextMonth.click();
+            //datePicker.click();
+            findId(expirationDay).click();
+        } else {
+            if (hasExpiration()){
+                removeExpiration();
+            }
+        }
+    }
+
+    public void removeExpiration() {
+        Log.log(Level.FINE, "Starts: Remove expiration date");
+        removeExpirationDate.click();
+    }
+
+    public boolean isNameCorrect(String name) {
+        Log.log(Level.FINE, "Starts: Check if name is correct: " + name);
+        return findId("Name").getAttribute("value").equals(name);
     }
 
     public boolean isPasswordEnabled(String itemName, String password) {
@@ -136,33 +155,19 @@ public class PublicLinkPage extends CommonPage {
         }
     }
 
-    //Day to set: given day of the following month
-    public void setExpiration(String day) {
-        Log.log(Level.FINE, "Starts: Set Expiration date: " + day);
-        addExpirationDate.click();
-        /*expirationButton.click();
-        datePicker.click();
-        monthPicker.click();
-        //No matter which month, wheel moves to th next value. Framework issue
-        monthWheel.sendKeys("December");
-        datePicker.click();
-        findId(day).click();*/
+    public boolean hasExpiration() {
+        Log.log(Level.FINE, "Starts: Check expiration date");
+        return !driver.findElements(By.xpath(
+                "//XCUIElementTypeStaticText[contains(@name, 'Expires')]")).isEmpty();
     }
 
     public boolean isExpirationCorrect(String day) {
         Log.log(Level.FINE, "Starts: Check expiration day: " + day);
-        return !driver.findElements(By.xpath(
-                "//XCUIElementTypeStaticText[contains(@name, 'Expires')]")).isEmpty();
-        /*String displayedDate = DateUtils.displayedDate(day);
-        Log.log(Level.FINE, "Date to compare: " + displayedDate);
+        String displayedDate = DateUtils.displayedDate(String.valueOf(Integer.parseInt(day)));
+        Log.log(Level.FINE, "Date to check: " + displayedDate);
         String dateInPicker = datePicker.getAttribute("value");
         Log.log(Level.FINE, "Date to check in the screen: " + dateInPicker);
-        return dateInPicker.equals(displayedDate);*/
-    }
-
-    public boolean isNameCorrect(String name) {
-        Log.log(Level.FINE, "Starts: Check link name: " + name);
-        return linkName.getAttribute("value").equals(name);
+        return dateInPicker.equals(displayedDate);
     }
 
     public void submitLink() {

@@ -1,5 +1,6 @@
 package ios;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
@@ -145,24 +146,38 @@ public class SharePage extends CommonPage {
                     break;
                 }
                 case "expiration": {
-                    boolean hasExpiration = !remoteShare.getExpiration().isEmpty();
+                    /*boolean hasExpiration = !remoteShare.getExpiration().isEmpty();
                     Log.log(Level.FINE, "Expiration: " + remoteShare.getExpiration()
                             + " - Expected: " + entry.getValue());
                     return switch (entry.getValue().toLowerCase()) {
                         case "yes" -> hasExpiration;
                         case "no" -> !hasExpiration;
                         default -> false;
-                    };
+                    };*/
 
                     //Get only month-day-year
-                    /*String remoteDate = remoteShare.getExpiration().substring(0, 10);
-                    String expDate = DateUtils.dateInDaysWithServerFormat(Integer.valueOf(entry.getValue()));
-                    Log.log(Level.FINE, "Expiration dates: Remote: " + remoteDate
-                            + " - Expected: " + expDate);
-                    if (!remoteDate.equals(expDate)) {
-                        Log.log(Level.FINE, "Expiration dates do not match");
-                        return false;
-                    }*/
+                    String expirationDay = entry.getValue();
+                    if (!expirationDay.equals("0")) {
+                        String remoteDate = remoteShare.getExpiration().substring(0, 10);
+                        String shareType = remoteShare.getType();
+                        String expDate = "";
+                        if (shareType.equals("0")) {
+                            expDate = DateUtils.dateInDaysWithServerFormat(Integer.valueOf(entry.getValue()));
+                        } else if (shareType.equals("3")) {
+                            expDate = DateUtils.dateInDaysWithServerFormat(Integer.valueOf(entry.getValue())-1);
+                        }
+                        Log.log(Level.FINE, "Expiration dates: Remote: " + remoteDate
+                                + " - Expected: " + expDate);
+                        if (!remoteDate.equals(expDate)) {
+                            Log.log(Level.FINE, "Expiration dates do not match");
+                            return false;
+                        }
+                    } else {
+                        if (remoteShare.getExpiration() != null && !remoteShare.getExpiration().isEmpty()) {
+                            Log.log(Level.FINE, "Expiration date not expected " + remoteShare.getExpiration());
+                            return false;
+                        }
+                    }
                 }
             }
         }
@@ -180,6 +195,38 @@ public class SharePage extends CommonPage {
         return !findListId(sharee).isEmpty();
     }
 
+    public boolean isNameCorrect(String name) {
+        Log.log(Level.FINE, "Starts: Check link name: " + name);
+        return findId(name).isDisplayed();
+        //return linkName.getAttribute("value").equals(name);
+    }
+
+    public boolean isPermissionCorrect(String permission) {
+        Log.log(Level.FINE, "Starts: Check link permission: " + permission);
+        return switch (permission) {
+            case ("Viewer") -> //viewer.isDisplayed();
+                    findXpath("//*[contains(@name, 'Can view')]").isDisplayed();
+            case ("Editor") -> //editor.isDisplayed();
+                    findXpath("//*[contains(@name, 'Can edit')]").isDisplayed();
+            case ("Secret") -> //secretFileDrop.isDisplayed();
+                    findXpath("//*[contains(@name, 'Secret File Drop')]").isDisplayed();
+            default -> false;
+        };
+    }
+
+    public boolean isExpirationCorrect(String expirationDay) {
+        Log.log(Level.FINE, "Starts: Check expiration day: " + expirationDay);
+        if (!expirationDay.equals("0")) {
+            String displayedDate = DateUtils.displayedDate(expirationDay);
+            Log.log(Level.FINE, "Date to check: " + displayedDate);
+            return !driver.findElements(By.xpath(
+                    "//XCUIElementTypeStaticText[contains(@name, 'Expires " +
+                            displayedDate + "')]")).isEmpty();
+        } else {
+            return true;
+        }
+    }
+
     public boolean displayedPermission(String permissionName) {
         return switch (permissionName) {
             case "Viewer" -> viewerPermission.isDisplayed();
@@ -192,30 +239,25 @@ public class SharePage extends CommonPage {
     //Permissions from server come in numeric format. This method translates
     private String translatePermissionstoString(String permission) {
         Log.log(Level.FINE, "Permission to translate: " + permission);
-        if (permission.equals("1"))
-            return "Viewer";
-        if (permission.equals("3"))
-            return "Editor";
-        if (permission.equals("15"))
-            return "Editor";
-        if (permission.equals("4"))
-            return "Secret";
-        if (permission.equals("5"))
-            return "Contributor";
-        return "";
+        return switch (permission) {
+            case "1" -> "Viewer";
+            case "3" -> "Editor";
+            case "15" -> "Editor";
+            case "4" -> "Secret";
+            case "5" -> "Contributor";
+            default -> "";
+        };
     }
 
     public String translatePermissionsToInt(String permission) {
         Log.log(Level.FINE, "Permission to translate: " + permission);
-        if (permission.equals("Viewer"))
-            return "17";
-        if (permission.equals("Editor"))
-            return "15";
-        if (permission.equals("Uploader"))
-            return "4";
-        if (permission.equals("Contributor"))
-            return "5";
-        return "";
+        return switch (permission) {
+            case "Viewer" -> "17";
+            case "Editor" -> "15";
+            case "Uploader" -> "4";
+            case "Contributor" -> "5";
+            default -> "";
+        };
     }
 
     private HashMap<String, String> turnListToHashmap(List<List<String>> dataList) {

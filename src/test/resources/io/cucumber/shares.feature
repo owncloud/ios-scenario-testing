@@ -11,7 +11,7 @@ Feature: Private Share
   @createshare
   Rule: Create a share
 
-  @smoke
+  @smoke @expiration
   Scenario Outline: Correct share with user and expiration
     Given the following items have been created in Alice account
       | <type> | <item> |
@@ -28,9 +28,9 @@ Feature: Private Share
 
     Examples:
       | type   | item       | permissions | sharee | menu       | expiration |
-      | file   | Share1.txt | Viewer      | Bob    | Actions    | yes        |
-      | folder | Share2     | Editor      | Bob    | Contextual | no         |
-      | folder | Share3     | Upload      | Bob    | Actions    | yes        |
+      | file   | Share1.txt | Viewer      | Bob    | Actions    | 19         |
+      | folder | Share2     | Editor      | Bob    | Contextual | 0          |
+      | folder | Share3     | Upload      | Bob    | Actions    | 14         |
 
   @smoke
   Scenario Outline: Correct share with group
@@ -49,11 +49,11 @@ Feature: Private Share
 
     Examples:
       | type   | item       | group | permissions | menu       | expiration |
-      | file   | Share4.txt | test  | Viewer      | Contextual | yes        |
-      | folder | Share5     | test  | Editor      | Actions    | no         |
-      | folder | Share6     | test  | Upload      | Actions    | yes          |
+      | file   | Share4.txt | test  | Viewer      | Contextual | 11         |
+      | folder | Share5     | test  | Editor      | Actions    | 0          |
+      | folder | Share6     | test  | Upload      | Actions    | 22         |
 
-  @editshare
+  @editshare  @expiration
   Rule: Edit an existing share
 
   Scenario Outline: Edit existing share on a folder, removing permissions
@@ -71,10 +71,11 @@ Feature: Private Share
       | permissions | <permissions> |
       | expiration  | <expiration>  |
 
+    #expiration 0 means no expiration
     Examples:
       | type   | item       | sharee | permissions | expiration |
-      | file   | Share7.txt | Bob    | Editor      | yes        |
-      | folder | Share8     | Bob    | Upload      | no         |
+      | file   | Share7.txt | Bob    | Editor      | 12         |
+      | folder | Share8     | Bob    | Upload      | 0          |
 
   @deleteshare
   Rule: Delete an existing share

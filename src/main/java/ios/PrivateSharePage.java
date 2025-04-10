@@ -8,6 +8,7 @@ import java.util.logging.Level;
 
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import io.appium.java_client.pagefactory.iOSXCUITFindBy;
+import utils.date.DateUtils;
 import utils.log.Log;
 
 public class PrivateSharePage extends CommonPage {
@@ -21,29 +22,17 @@ public class PrivateSharePage extends CommonPage {
     @iOSXCUITFindBy(id = "Can upload")
     private WebElement uploader;
 
-    @iOSXCUITFindBy(id = "Contributor")
-    private WebElement contributor;
-
-    @iOSXCUITFindBy(id = "Custom")
-    private WebElement custom;
-
-    @iOSXCUITFindBy(id = "Read")
-    private WebElement read;
-
-    @iOSXCUITFindBy(id = "Upload")
-    private WebElement upload;
-
-    @iOSXCUITFindBy(id = "Delete")
-    private WebElement delete;
-
     @iOSXCUITFindBy(xpath = "//XCUIElementTypeStaticText[@name=\"Add\"]")
-    private WebElement expirationDate;
+    private WebElement addExpirationDate;
 
     @iOSXCUITFindBy(id = "Remove expiration date")
     private WebElement removeExpirationDate;
 
     @iOSXCUITFindBy(id = "Date Picker")
     private WebElement datePicker;
+
+    @iOSXCUITFindBy(id = "DatePicker.NextMonth")
+    private WebElement nextMonth;
 
     @iOSXCUITFindBy(xpath = "//XCUIElementTypeButton[@name=\"Invite\"]")
     private WebElement inviteButton;
@@ -76,6 +65,11 @@ public class PrivateSharePage extends CommonPage {
         findXpath("(//XCUIElementTypeStaticText[@name=\"" + shareeName + "\"])[1]").click();
     }
 
+    public boolean isNameCorrect(String name){
+        Log.log(Level.FINE, "Starts: Checking sharee name: " + name);
+        return findXpath("(//XCUIElementTypeStaticText[@name=\"" + name + "\"])[2]").isDisplayed();
+    }
+
     public void setPermissions(String permission) {
         Log.log(Level.FINE, "Starts: Set permissions: " + permission);
         switch (permission) {
@@ -91,21 +85,27 @@ public class PrivateSharePage extends CommonPage {
                 uploader.click();
                 break;
             }
-            case ("Contributor"): {
-                contributor.click();
-                break;
-            }
-            //Sharing as default as custom. Changeable if needed
-            case ("Custom"): {
-                custom.click();
-                break;
+        }
+    }
+
+    public void setExpiration(String expirationDay) {
+        Log.log(Level.FINE, "Starts: Set expiration date: " + expirationDay);
+        //expirationDate.click();
+        if (!expirationDay.equals("0")){
+        addExpirationDate.click();
+        datePicker.click();
+        nextMonth.click();
+        findId(expirationDay).click();
+        } else {
+            if (hasExpiration()){
+                removeExpiration();
             }
         }
     }
 
-    public void setExpiration() {
-        Log.log(Level.FINE, "Starts: Set expiration date");
-        expirationDate.click();
+    public void removeExpiration() {
+        Log.log(Level.FINE, "Starts: Remove expiration date");
+        removeExpirationDate.click();
     }
 
     public boolean hasExpiration() {
@@ -114,19 +114,17 @@ public class PrivateSharePage extends CommonPage {
                 "//XCUIElementTypeStaticText[contains(@name, 'Expires')]")).isEmpty();
     }
 
-    public void removeExpiration() {
-        Log.log(Level.FINE, "Starts: Remove expiration date");
-        removeExpirationDate.click();
-    }
-
-    public void invite() {
-        Log.log(Level.FINE, "Starts: Invite sharee");
-        inviteButton.click();
-    }
-
-    public void removeSharingPermission() {
-        Log.log(Level.FINE, "Starts: Remove sharing permission");
-        custom.click();
+    public boolean isExpirationCorrect(String day) {
+        Log.log(Level.FINE, "Starts: Check expiration day: " + day);
+        if (!day.equals("0")) {
+        String displayedDate = DateUtils.displayedDate(String.valueOf(Integer.parseInt(day)));
+        Log.log(Level.FINE, "Date to check: " + displayedDate);
+        String dateInPicker = datePicker.getAttribute("value");
+        Log.log(Level.FINE, "Date to check in the screen: " + dateInPicker);
+        return dateInPicker.equals(displayedDate);
+        } else {
+            return true;
+        }
     }
 
     public void savePermissions() {

@@ -69,11 +69,11 @@ Feature: Public Links
       | expiration    | <expiration> |
       | password-auto |              |
     Then link should be created on <item> with the following fields
-      | expiration | <expiration> |
+      | expiration | <expiration-exp> |
 
     Examples:
-      | type   | item   | expiration |
-      | folder | Links7 | yes        |
+      | type   | item   | expiration | expiration-exp |
+      | folder | Links7 | 12         | 13             |
 
   Scenario Outline: Create a public link with permissions on a folder
     Given the following items have been created in Alice account
@@ -91,7 +91,7 @@ Feature: Public Links
       | Links9  | Viewer      |
       | Links10 | Editor      |
 
-  @editlink
+  @editlink @expiration @aaaa
   Rule: Edit an existing public link
 
   Scenario Outline: Edit existing share on a folder, changing permissions
@@ -101,10 +101,10 @@ Feature: Public Links
     When Alice selects to share the folder <item> using the Actions menu
     And Alice edits the link on <item> with the following fields
       | permissions | <permissions> |
-      | expiration  | yes           |
+      | expiration  | 20             |
     Then link should be created on <item> with the following fields
       | permissions | <permissions> |
-      | expiration  | yes           |
+      | expiration  | 21            |
 
     Examples:
       | item    | permissions |
