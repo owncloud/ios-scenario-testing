@@ -120,16 +120,13 @@ public class PublicLinkPage extends CommonPage {
     public void setExpiration(String expirationDay) {
         Log.log(Level.FINE, "Starts: Set Expiration date: " + expirationDay);
         if (!expirationDay.equals("0")){
+            //Given the expiration day, selected the day within the following month
             addExpirationDate.click();
-            //expirationButton.click();
             datePicker.click();
-            //monthPicker.click();
-            //No matter which month, wheel moves to th next value. Framework issue
-            //monthWheel.sendKeys("December");
             nextMonth.click();
-            //datePicker.click();
             findId(expirationDay).click();
         } else {
+            //If the expiration date is set, remove it
             if (hasExpiration()){
                 removeExpiration();
             }
@@ -163,11 +160,15 @@ public class PublicLinkPage extends CommonPage {
 
     public boolean isExpirationCorrect(String day) {
         Log.log(Level.FINE, "Starts: Check expiration day: " + day);
-        String displayedDate = DateUtils.displayedDate(String.valueOf(Integer.parseInt(day)));
-        Log.log(Level.FINE, "Date to check: " + displayedDate);
-        String dateInPicker = datePicker.getAttribute("value");
-        Log.log(Level.FINE, "Date to check in the screen: " + dateInPicker);
-        return dateInPicker.equals(displayedDate);
+        if (!day.equals("0")) { //Adding 1 to the day, because UTC retrieved by the server
+            String displayedDate = DateUtils.displayedDate(String.valueOf(Integer.parseInt(day) +1 ));
+            Log.log(Level.FINE, "Date to check: " + displayedDate);
+            String dateInPicker = datePicker.getAttribute("value");
+            Log.log(Level.FINE, "Date to check in the screen: " + dateInPicker);
+            return dateInPicker.equals(displayedDate);
+        } else { //Expiration not set, "Add" is visible
+            return addExpirationDate.isDisplayed();
+        }
     }
 
     public void submitLink() {

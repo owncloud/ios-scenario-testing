@@ -3,13 +3,8 @@ package io.cucumber;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
-import org.xml.sax.SAXException;
-
-import java.io.IOException;
 import java.util.List;
 import java.util.logging.Level;
-
-import javax.xml.parsers.ParserConfigurationException;
 
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.Then;
@@ -34,35 +29,17 @@ public class PrivateShareSteps {
         String sharee = listUser.get(0).get(1);
         String permissions = listUser.get(1).get(1);
         String expiration = listUser.get(2).get(1);
-        //boolean hasExpiration = "yes".equalsIgnoreCase(listUser.get(2).get(1));
         world.sharePage.invite();
-        world.privateSharePage.searchSharee(sharee, type);
+        world.privateSharePage.searchSharee(sharee);
         world.privateSharePage.setPermissions(permissions);
-        //if (hasExpiration) {
         world.privateSharePage.setExpiration(expiration);
-        //}
         world.privateSharePage.savePermissions();
     }
-
-    /*@When("Alice selects the following {usertype} as sharee without {word} permission")
-    public void select_sharee_permissions(String type, String permission, DataTable table)
-            throws InterruptedException, IOException, ParserConfigurationException, SAXException {
-        String stepName = new Object() {
-        }.getClass().getEnclosingMethod().getName().toUpperCase();
-        Log.log(Level.FINE, "----STEP----: " + stepName);
-        List<List<String>> listUser = table.asLists();
-        String sharee = listUser.get(0).get(1);
-        world.sharePage.invite();
-        world.privateSharePage.searchSharee(sharee, type);
-        //world.privateSharePage.removeSharingPermission();
-        world.privateSharePage.savePermissions();
-    }*/
 
     @When("Alice edits the share with the following fields")
     public void user_edits_share(DataTable table) {
         String stepName = new Object() {
         }.getClass().getEnclosingMethod().getName().toUpperCase();
-        ;
         Log.log(Level.FINE, "----STEP----: " + stepName);
         List<List<String>> fieldList = table.asLists();
         String sharee = fieldList.get(0).get(1);
@@ -70,9 +47,7 @@ public class PrivateShareSteps {
         String expiration = fieldList.get(2).get(1);
         world.sharePage.openPrivateShare(sharee);
         world.privateSharePage.setPermissions(permissions);
-        //if (expiration.equals("yes")){
         world.privateSharePage.setExpiration(expiration);
-        //}
         world.privateSharePage.saveChanges();
     }
 
@@ -106,7 +81,6 @@ public class PrivateShareSteps {
             throws Throwable {
         String stepName = new Object() {
         }.getClass().getEnclosingMethod().getName().toUpperCase();
-        ;
         Log.log(Level.FINE, "----STEP----: " + stepName);
         assertFalse(world.shareAPI.isSharedWithMe(itemName, userName, false));
     }
@@ -119,30 +93,28 @@ public class PrivateShareSteps {
         Log.log(Level.FINE, "----STEP----: " + stepName);
         //Asserts in UI
         //1.1 Checking in Shares page
+        String sharee = table.asLists().get(0).get(1);
         List<List<String>> listItems = table.asLists();
         for (List<String> rows : listItems) {
             switch (rows.get(0)) {
-                case "sharee":
-                case "group": {
-                    Log.log(Level.FINE, "Checking sharee/group: " + rows.get(1));
+                case "group" -> {
+                    Log.log(Level.FINE, "Checking group: " + rows.get(1));
                     assertTrue(world.sharePage.isItemInListPrivateShares(rows.get(1)));
-                    break;
+                    assertTrue(world.sharePage.isGroup());
                 }
-                case "permissions": {
+                case "sharee" -> {
+                    Log.log(Level.FINE, "Checking sharee: " + rows.get(1));
+                    assertTrue(world.sharePage.isItemInListPrivateShares(rows.get(1)));
+                    assertFalse(world.sharePage.isGroup());
+                }
+                case "permissions" -> {
                     Log.log(Level.FINE, "Checking permissions: " + rows.get(1));
-                    assertTrue(world.sharePage.displayedPermission(rows.get(1)));
-                    break;
+                    assertTrue(world.sharePage.isSharePermissionCorrect(rows.get(1)));
                 }
-                case "expiration": {
-                    Log.log(Level.FINE, "Checking expiration: " + rows.get(1));
-                    assertTrue(world.sharePage.isExpirationCorrect(rows.get(1)));
-                }
-                default:
-                    break;
             }
         }
         //1.2 Checking in share page
-        world.sharePage.openPrivateShare("Bob"); //Will be always the sharee... improve?
+        world.sharePage.openPrivateShare(sharee);
         for (List<String> rows : listItems) {
             switch (rows.get(0)) {
                 case "sharee":
@@ -172,7 +144,6 @@ public class PrivateShareSteps {
     public void share_is_deleted(String itemName, DataTable table) {
         String stepName = new Object() {
         }.getClass().getEnclosingMethod().getName().toUpperCase();
-        ;
         Log.log(Level.FINE, "----STEP----: " + stepName);
         List<List<String>> list = table.asLists();
         String sharee = list.get(0).get(0);

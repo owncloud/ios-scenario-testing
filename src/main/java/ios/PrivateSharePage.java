@@ -57,40 +57,38 @@ public class PrivateSharePage extends CommonPage {
         return instance;
     }
 
-    public void searchSharee(String shareeName, String type) {
-        Log.log(Level.FINE, "Starts: Searching for sharee: " + shareeName + " that is a " + type);
-        String urlShare = System.getProperty("server").split("://")[1].split(":")[0];
-        String searchXpath = "//XCUIElementTypeTextField[@name=\"Alice@" + urlShare + "\"]";
-        findXpath(searchXpath).sendKeys(shareeName);
-        findXpath("(//XCUIElementTypeStaticText[@name=\"" + shareeName + "\"])[1]").click();
+    public void searchSharee(String shareeName) {
+        Log.log(Level.FINE, String.format("Starts: Searching for sharee: %s", shareeName));
+
+        String server = System.getProperty("server");
+        String urlShare = server.split("://")[1].split(":")[0];
+
+        String textFieldXpath = String.format("//XCUIElementTypeTextField[@name=\"Alice@%s\"]", urlShare);
+        findXpath(textFieldXpath).sendKeys(shareeName);
+
+        findId(shareeName).click();
     }
 
     public boolean isNameCorrect(String name){
         Log.log(Level.FINE, "Starts: Checking sharee name: " + name);
+
         return findXpath("(//XCUIElementTypeStaticText[@name=\"" + name + "\"])[2]").isDisplayed();
     }
 
     public void setPermissions(String permission) {
         Log.log(Level.FINE, "Starts: Set permissions: " + permission);
+
         switch (permission) {
-            case ("Viewer"): {
-                viewer.click();
-                break;
-            }
-            case ("Editor"): {
-                editor.click();
-                break;
-            }
-            case ("Upload"): {
-                uploader.click();
-                break;
-            }
+            case "Viewer" -> viewer.click();
+            case "Editor" -> editor.click();
+            case "Upload" -> uploader.click();
+            default -> Log.log(Level.WARNING, "Unknown permission: " + permission);
         }
     }
 
     public void setExpiration(String expirationDay) {
         Log.log(Level.FINE, "Starts: Set expiration date: " + expirationDay);
-        //expirationDate.click();
+
         if (!expirationDay.equals("0")){
         addExpirationDate.click();
         datePicker.click();
@@ -105,38 +103,46 @@ public class PrivateSharePage extends CommonPage {
 
     public void removeExpiration() {
         Log.log(Level.FINE, "Starts: Remove expiration date");
+
         removeExpirationDate.click();
     }
 
     public boolean hasExpiration() {
         Log.log(Level.FINE, "Starts: Check expiration date");
+
         return !driver.findElements(By.xpath(
                 "//XCUIElementTypeStaticText[contains(@name, 'Expires')]")).isEmpty();
     }
 
     public boolean isExpirationCorrect(String day) {
         Log.log(Level.FINE, "Starts: Check expiration day: " + day);
+
         if (!day.equals("0")) {
-        String displayedDate = DateUtils.displayedDate(String.valueOf(Integer.parseInt(day)));
-        Log.log(Level.FINE, "Date to check: " + displayedDate);
-        String dateInPicker = datePicker.getAttribute("value");
-        Log.log(Level.FINE, "Date to check in the screen: " + dateInPicker);
-        return dateInPicker.equals(displayedDate);
-        } else {
-            return true;
+            String displayedDate = DateUtils.displayedDate(String.valueOf(Integer.parseInt(day)));
+            String dateInPicker = datePicker.getAttribute("value");
+            Log.log(Level.FINE, "Date to check: " + displayedDate +
+                    ". Date to check in the screen: " + dateInPicker);
+            return dateInPicker.equals(displayedDate);
+        } else { //Expiration not set, "Add" is visible
+            return addExpirationDate.isDisplayed();
         }
     }
 
     public void savePermissions() {
         Log.log(Level.FINE, "Starts: Save permissions private share");
+
         inviteButton.click();
     }
 
     public void deletePrivateShare() {
+        Log.log(Level.FINE, "Starts: delete/unshare private share");
+
         unshare.click();
     }
 
     public void saveChanges() {
+        Log.log(Level.FINE, "Starts: Save changes private share");
+
         saveChanges.click();
     }
 }

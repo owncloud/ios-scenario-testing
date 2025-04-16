@@ -100,6 +100,10 @@ public class CommonPage {
         return driver.findElements(AppiumBy.xpath(xpath));
     }
 
+    public WebElement findTextByXpath(String text) {
+        return findXpath("//XCUIElementTypeStaticText[contains(@name, '" + text + "')]");
+    }
+
     public WebElement findId(String id) {
         return (WebElement) driver.findElement(AppiumBy.id(id));
     }

@@ -35,7 +35,7 @@ public class SpacesPage extends CommonPage {
     }
 
     public boolean isDescriptionVisible (String description){
-        Log.log(Level.FINE, "Starts: Is decription visible: " + description);
+        Log.log(Level.FINE, "Starts: Is description visible: " + description);
         return !findListId(description).isEmpty();
     }
 

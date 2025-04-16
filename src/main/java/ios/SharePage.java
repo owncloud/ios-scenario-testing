@@ -1,6 +1,5 @@
 package ios;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
@@ -19,6 +18,9 @@ public class SharePage extends CommonPage {
 
     @iOSXCUITFindBy(id = "Invite")
     private WebElement inviteButton;
+
+    @iOSXCUITFindBy(id = "person.3.fill")
+    private List<WebElement> shareeGroup;
 
     @iOSXCUITFindBy(id = "Create link")
     private WebElement createLinkButton;
@@ -94,6 +96,7 @@ public class SharePage extends CommonPage {
                     }
                     break;
                 }
+                case "group":
                 case "user": {
                     if (remoteShare.getType().equals("0")) { // private share
                         if (!remoteShare.getShareeName().equalsIgnoreCase(entry.getValue())) {
@@ -146,29 +149,23 @@ public class SharePage extends CommonPage {
                     break;
                 }
                 case "expiration": {
-                    /*boolean hasExpiration = !remoteShare.getExpiration().isEmpty();
-                    Log.log(Level.FINE, "Expiration: " + remoteShare.getExpiration()
-                            + " - Expected: " + entry.getValue());
-                    return switch (entry.getValue().toLowerCase()) {
-                        case "yes" -> hasExpiration;
-                        case "no" -> !hasExpiration;
-                        default -> false;
-                    };*/
-
-                    //Get only month-day-year
                     String expirationDay = entry.getValue();
+                    Log.log(Level.FINE, "Checking remote expiration: Get day: " + expirationDay);
                     if (!expirationDay.equals("0")) {
-                        String remoteDate = remoteShare.getExpiration().substring(0, 10);
-                        String shareType = remoteShare.getType();
-                        String expDate = "";
-                        if (shareType.equals("0")) {
-                            expDate = DateUtils.dateInDaysWithServerFormat(Integer.valueOf(entry.getValue()));
-                        } else if (shareType.equals("3")) {
-                            expDate = DateUtils.dateInDaysWithServerFormat(Integer.valueOf(entry.getValue())-1);
-                        }
-                        Log.log(Level.FINE, "Expiration dates: Remote: " + remoteDate
-                                + " - Expected: " + expDate);
-                        if (!remoteDate.equals(expDate)) {
+                        //First, preparing the remote date
+                        String remoteDate = remoteShare.getExpiration();
+                        Log.log(Level.FINE, "Expiration date remote: " + remoteShare.getExpiration());
+                        //Get the timestamp creation, that was some instants before and will
+                        //help to build the correct date to compare
+                        String timestamp = remoteDate.substring(11);
+                        String remoteDateTZ = DateUtils.getCorrectTZ(remoteDate);
+                        Log.log(Level.FINE, "Expiration date remote moved to TZ: " + remoteDateTZ);
+                        //Second, preparing the local date
+                        String localDate = DateUtils.dateInDaysWithServerFormat(
+                                Integer.valueOf(entry.getValue()), timestamp);
+                        Log.log(Level.FINE, "Expiration dates: Remote: " + remoteDateTZ
+                                + " - Local: " + localDate);
+                        if (!remoteDateTZ.equals(localDate)) {
                             Log.log(Level.FINE, "Expiration dates do not match");
                             return false;
                         }
@@ -198,36 +195,14 @@ public class SharePage extends CommonPage {
     public boolean isNameCorrect(String name) {
         Log.log(Level.FINE, "Starts: Check link name: " + name);
         return findId(name).isDisplayed();
-        //return linkName.getAttribute("value").equals(name);
     }
 
-    public boolean isPermissionCorrect(String permission) {
-        Log.log(Level.FINE, "Starts: Check link permission: " + permission);
-        return switch (permission) {
-            case ("Viewer") -> //viewer.isDisplayed();
-                    findXpath("//*[contains(@name, 'Can view')]").isDisplayed();
-            case ("Editor") -> //editor.isDisplayed();
-                    findXpath("//*[contains(@name, 'Can edit')]").isDisplayed();
-            case ("Secret") -> //secretFileDrop.isDisplayed();
-                    findXpath("//*[contains(@name, 'Secret File Drop')]").isDisplayed();
-            default -> false;
-        };
+    public boolean isGroup() {
+        Log.log(Level.FINE, "Starts: Check group or user");
+        return !shareeGroup.isEmpty();
     }
 
-    public boolean isExpirationCorrect(String expirationDay) {
-        Log.log(Level.FINE, "Starts: Check expiration day: " + expirationDay);
-        if (!expirationDay.equals("0")) {
-            String displayedDate = DateUtils.displayedDate(expirationDay);
-            Log.log(Level.FINE, "Date to check: " + displayedDate);
-            return !driver.findElements(By.xpath(
-                    "//XCUIElementTypeStaticText[contains(@name, 'Expires " +
-                            displayedDate + "')]")).isEmpty();
-        } else {
-            return true;
-        }
-    }
-
-    public boolean displayedPermission(String permissionName) {
+    public boolean isSharePermissionCorrect(String permissionName) {
         return switch (permissionName) {
             case "Viewer" -> viewerPermission.isDisplayed();
             case "Editor" -> editorPermission.isDisplayed();

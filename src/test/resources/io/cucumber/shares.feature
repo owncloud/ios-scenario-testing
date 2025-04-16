@@ -11,7 +11,7 @@ Feature: Private Share
   @createshare
   Rule: Create a share
 
-  @smoke @expiration
+  @smoke
   Scenario Outline: Correct share with user and expiration
     Given the following items have been created in Alice account
       | <type> | <item> |
@@ -20,11 +20,11 @@ Feature: Private Share
       | sharee      | <sharee>      |
       | permissions | <permissions> |
       | expiration  | <expiration>  |
-    Then user <sharee> should have access to <item>
-    And share should be created on <item> with the following fields
+    Then share should be created on <item> with the following fields
       | sharee      | <sharee>      |
       | permissions | <permissions> |
       | expiration  | <expiration>  |
+    And user <sharee> should have access to <item>
 
     Examples:
       | type   | item       | permissions | sharee | menu       | expiration |
@@ -45,7 +45,7 @@ Feature: Private Share
       | group       | <group>       |
       | permissions | <permissions> |
       | expiration  | <expiration>  |
-    And group test should have access to <item>
+    And group <group> should have access to <item>
 
     Examples:
       | type   | item       | group | permissions | menu       | expiration |
@@ -53,7 +53,7 @@ Feature: Private Share
       | folder | Share5     | test  | Editor      | Actions    | 0          |
       | folder | Share6     | test  | Upload      | Actions    | 22         |
 
-  @editshare  @expiration
+  @editshare
   Rule: Edit an existing share
 
   Scenario Outline: Edit existing share on a folder, removing permissions

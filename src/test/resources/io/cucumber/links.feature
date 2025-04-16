@@ -59,7 +59,6 @@ Feature: Public Links
       | folder | Links5     |
       | file   | Links6.txt |
 
-  @expiration
   Scenario Outline: Create a public link with expiration date
     Given the following items have been created in Alice account
       | <type> | <item> |
@@ -69,11 +68,11 @@ Feature: Public Links
       | expiration    | <expiration> |
       | password-auto |              |
     Then link should be created on <item> with the following fields
-      | expiration | <expiration-exp> |
+      | expiration | <expiration> |
 
     Examples:
-      | type   | item   | expiration | expiration-exp |
-      | folder | Links7 | 12         | 13             |
+      | type   | item   | expiration |
+      | folder | Links7 | 12         |
 
   Scenario Outline: Create a public link with permissions on a folder
     Given the following items have been created in Alice account
@@ -91,7 +90,7 @@ Feature: Public Links
       | Links9  | Viewer      |
       | Links10 | Editor      |
 
-  @editlink @expiration @aaaa
+  @editlink
   Rule: Edit an existing public link
 
   Scenario Outline: Edit existing share on a folder, changing permissions
@@ -104,7 +103,7 @@ Feature: Public Links
       | expiration  | 20             |
     Then link should be created on <item> with the following fields
       | permissions | <permissions> |
-      | expiration  | 21            |
+      | expiration  | 20            |
 
     Examples:
       | item    | permissions |

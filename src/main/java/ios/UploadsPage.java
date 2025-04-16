@@ -64,7 +64,7 @@ public class UploadsPage extends CommonPage {
         List<WebElement> pics = findListCss("XCUIElementTypeStaticText");
         int i = 0;
         for (WebElement textInView : pics) {
-            //Log.log(Level.FINE, "Photo: " + textInView.getText());
+            Log.log(Level.FINE, "Photo: " + textInView.getText());
             if (textInView.getText().contains("Photo-"))
                 i++;
         }
