@@ -4,7 +4,7 @@ import java.util.logging.Level;
 
 import io.cucumber.java.en.Given;
 import utils.LocProperties;
-import utils.log.Log;
+import utils.log.StepLogger;
 
 public class LoginSteps {
 
@@ -17,9 +17,7 @@ public class LoginSteps {
     @Given("user {word} is logged in")
     public void logged(String userName)
             throws Throwable {
-        String stepName = new Object() {
-        }.getClass().getEnclosingMethod().getName().toUpperCase();
-        Log.log(Level.FINE, "----STEP----: " + stepName);
+        StepLogger.logCurrentStep(Level.FINE);
         if (!world.loginPage.loggedIn()) {
             String password = LocProperties.getProperties().getProperty("pwdDefault");
             world.loginPage.addAccount();

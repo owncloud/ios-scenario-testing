@@ -11,6 +11,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import utils.entities.OCShare;
 import utils.log.Log;
+import utils.log.StepLogger;
 
 public class PrivateShareSteps {
 
@@ -22,9 +23,7 @@ public class PrivateShareSteps {
 
     @When("Alice selects the following {usertype} as sharee with the following fields")
     public void select_sharee_default(String type, DataTable table) {
-        String stepName = new Object() {
-        }.getClass().getEnclosingMethod().getName().toUpperCase();
-        Log.log(Level.FINE, "----STEP----: " + stepName);
+        StepLogger.logCurrentStep(Level.FINE);
         List<List<String>> listUser = table.asLists();
         String sharee = listUser.get(0).get(1);
         String permissions = listUser.get(1).get(1);
@@ -38,9 +37,7 @@ public class PrivateShareSteps {
 
     @When("Alice edits the share with the following fields")
     public void user_edits_share(DataTable table) {
-        String stepName = new Object() {
-        }.getClass().getEnclosingMethod().getName().toUpperCase();
-        Log.log(Level.FINE, "----STEP----: " + stepName);
+        StepLogger.logCurrentStep(Level.FINE);
         List<List<String>> fieldList = table.asLists();
         String sharee = fieldList.get(0).get(1);
         String permissions = fieldList.get(1).get(1);
@@ -52,11 +49,8 @@ public class PrivateShareSteps {
     }
 
     @When("Alice deletes the share with")
-    public void user_deletes_share(DataTable table)
-            throws InterruptedException {
-        String stepName = new Object() {
-        }.getClass().getEnclosingMethod().getName().toUpperCase();
-        Log.log(Level.FINE, "----STEP----: " + stepName);
+    public void user_deletes_share(DataTable table) {
+        StepLogger.logCurrentStep(Level.FINE);
         List<List<String>> list = table.asLists();
         String sharee = list.get(0).get(0);
         world.sharePage.openPrivateShare(sharee);
@@ -66,9 +60,7 @@ public class PrivateShareSteps {
     @Then("{usertype} {word} should have access to {word}")
     public void user_has_acces_to_the_item(String type, String shareeName, String itemName)
             throws Throwable {
-        String stepName = new Object() {
-        }.getClass().getEnclosingMethod().getName().toUpperCase();
-        Log.log(Level.FINE, "----STEP----: " + stepName);
+        StepLogger.logCurrentStep(Level.FINE);
         if (type.equals("user")) {
             assertTrue(world.shareAPI.isSharedWithMe(itemName, shareeName, false));
         } else if (type.equals("group")) {
@@ -79,18 +71,14 @@ public class PrivateShareSteps {
     @Then("user {word} should not have access to {word}")
     public void sharee_does_not_have_access(String userName, String itemName)
             throws Throwable {
-        String stepName = new Object() {
-        }.getClass().getEnclosingMethod().getName().toUpperCase();
-        Log.log(Level.FINE, "----STEP----: " + stepName);
+        StepLogger.logCurrentStep(Level.FINE);
         assertFalse(world.shareAPI.isSharedWithMe(itemName, userName, false));
     }
 
     @Then("share should be created/edited on {word} with the following fields")
     public void share_created_with_fields(String itemName, DataTable table)
             throws Throwable {
-        String stepName = new Object() {
-        }.getClass().getEnclosingMethod().getName().toUpperCase();
-        Log.log(Level.FINE, "----STEP----: " + stepName);
+        StepLogger.logCurrentStep(Level.FINE);
         //Asserts in UI
         //1.1 Checking in Shares page
         String sharee = table.asLists().get(0).get(1);
@@ -142,9 +130,7 @@ public class PrivateShareSteps {
 
     @Then("{word} should not be shared anymore with")
     public void share_is_deleted(String itemName, DataTable table) {
-        String stepName = new Object() {
-        }.getClass().getEnclosingMethod().getName().toUpperCase();
-        Log.log(Level.FINE, "----STEP----: " + stepName);
+        StepLogger.logCurrentStep(Level.FINE);
         List<List<String>> list = table.asLists();
         String sharee = list.get(0).get(0);
         assertFalse(world.sharePage.isItemInListPrivateShares(sharee));

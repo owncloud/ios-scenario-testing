@@ -43,7 +43,9 @@ public class Hooks {
     }
 
     private void cleanUp() throws Throwable {
-        Log.log(Level.FINE, "CLEAN UP STARTS");
+        Log.log(Level.FINE, "-------------------------------");
+        Log.log(Level.FINE, "STARTS: CLEAN UP AFTER SCENARIO");
+        Log.log(Level.FINE, "-------------------------------");
         //First, remove leftovers in root folder for every user
         ArrayList<String> userNames = new ArrayList<>(Arrays.asList("Alice", "Bob"));
         for (String userToClean: userNames) {
