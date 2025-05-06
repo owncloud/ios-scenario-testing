@@ -13,7 +13,6 @@ import ios.SharePage;
 import ios.ShortcutPage;
 import ios.SpacesPage;
 import ios.UploadsPage;
-import utils.api.AuthAPI;
 import utils.api.FilesAPI;
 import utils.api.GraphAPI;
 import utils.api.ShareAPI;
@@ -35,7 +34,6 @@ public class World {
     public PreviewPage previewPage = PreviewPage.getInstance();
 
     //APIs to call
-    public AuthAPI authAPI = AuthAPI.getInstance();
     public ShareAPI shareAPI = ShareAPI.getInstance();
     public FilesAPI filesAPI = FilesAPI.getInstance();
     public GraphAPI graphAPI = GraphAPI.getInstance();

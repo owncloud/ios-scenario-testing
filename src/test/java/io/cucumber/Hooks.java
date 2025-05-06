@@ -56,7 +56,7 @@ public class Hooks {
             //Empty trashbin
             world.trashbinAPI.emptyTrashbin(userToClean);
         }
-        if (world.authAPI.checkAuthMethod().equals("OIDC")){ //remove spaces
+        if (System.getProperty("backend").equals("oCIS")){ //remove spaces
             world.graphAPI.removeSpacesOfUser();
         }
         Log.log(Level.FINE, "CLEAN UP ENDS");

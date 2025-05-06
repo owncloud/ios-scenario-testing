@@ -9,6 +9,7 @@ import org.openqa.selenium.Dimension;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.Point;
 import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.interactions.PointerInput;
@@ -34,7 +35,6 @@ import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.ios.IOSStartScreenRecordingOptions;
 import io.appium.java_client.ios.IOSStartScreenRecordingOptions.VideoQuality;
 import io.appium.java_client.pagefactory.iOSXCUITFindBy;
-import utils.api.AuthAPI;
 import utils.log.Log;
 
 public class CommonPage {
@@ -45,26 +45,13 @@ public class CommonPage {
     @iOSXCUITFindBy(id = "Allow")
     protected List<WebElement> allow;
 
-    @iOSXCUITFindBy(xpath = "//XCUIElementTypeButton[@label=\"Allow Full Access\"]")
-    protected List<WebElement> allowFullAccess;
-
     protected static IOSDriver driver = AppiumManager.getManager().getDriver();
     protected static Actions actions;
     private static final SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMdd_HHmmss");
-    protected String authType = "";
     protected static final int WAIT_TIME = 7;
 
     public CommonPage() {
         actions = new Actions(driver);
-        //Determine auth method
-        AuthAPI authAPI = AuthAPI.getInstance();
-        try {
-            if (authType.equals("")) { //Check auth type onlyonce
-                authType = authAPI.checkAuthMethod();
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
     }
 
     public static void waitByXpath(int timeToWait, String resourceXpath) {
@@ -185,8 +172,13 @@ public class CommonPage {
     public void acceptLibraryPermission(){
         Log.log(Level.FINE, "Starts: Give full access to library");
         driver.activateApp("com.apple.springboard");
-        if (!allowFullAccess.isEmpty()) {
-            allowFullAccess.get(0).click();
+        try {
+            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(WAIT_TIME));
+            WebElement allowPermissionButton = wait.until(ExpectedConditions.visibilityOfElementLocated(
+                    By.xpath("//XCUIElementTypeButton[@label=\"Allow Full Access\"]")));
+            allowPermissionButton.click();
+        } catch (TimeoutException e) {
+            Log.log(Level.FINE, "Permission dialog already granted or not found");
         }
         //return the control to the app
         driver.activateApp("com.owncloud.ios-app");

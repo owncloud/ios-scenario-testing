@@ -35,7 +35,7 @@ public class TrashbinAPI extends CommonAPI {
     }
 
     private String getTrashEndpoint(String userName) {
-        if (isOidc) {
+        if (isOCIS) {
             return trashEndpointOCIS + personalSpaces.get(userName);
         } else {
             return trashEndpointOC10 + userName + "/";

@@ -44,6 +44,8 @@ help()
    echo -e ""
    echo -e "\t\t\$APPIUM_URL (optional): Appium server URL. if Appium Server is not specified, will be used \"localhost:4723/wd/hub\""
    echo -e ""
+   echo -e "\t\t\$BACKEND (optional): oCIS or oC10. If not specified, will be used oCIS"
+   echo -e ""
    echo -e "The option -h: will show this help"
    echo -e ""
    echo -e ""
@@ -76,6 +78,7 @@ done
 export oc=$OC_SERVER_URL
 export appium=$APPIUM_URL
 export udid=$UDID_DEVICE
+export backend=$BACKEND
 
 if [ -z "$oc" ]
 then
@@ -87,6 +90,7 @@ echo "Appium server: $appium"
 echo "oC server: $oc"
 echo "tags: $tags"
 echo "udid: $udid"
+echo "backend: $backend"
 
 if [ -z "$tags" ]
 then
@@ -94,12 +98,14 @@ then
   --info \
   -Dappium=$appium \
   -Dudid=$udid \
-  -Dserver=$oc
+  -Dserver=$oc \
+  -Dbackend=$backend
 else
   ./gradlew clean test \
   --info \
   -Dcucumber.filter.tags="$tags"\
   -Dappium=$appium \
   -Dudid=$udid \
-  -Dserver=$oc
+  -Dserver=$oc \
+  -Dbackend=$backend
 fi

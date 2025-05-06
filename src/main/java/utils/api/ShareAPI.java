@@ -26,7 +26,6 @@ public class ShareAPI extends CommonAPI {
     private String sharingEndpoint = "/ocs/v2.php/apps/files_sharing/api/v1/shares";
     private String pendingEndpoint = "/pending";
     private final String shareeU = LocProperties.getProperties().getProperty("userToShare");
-    private AuthAPI authAPI = AuthAPI.getInstance();
 
     public static ShareAPI instance;
 
@@ -153,7 +152,7 @@ public class ShareAPI extends CommonAPI {
         Log.log(Level.FINE, "BODY SHARE: path " + itemPath + " sharee: " + sharee + " type: "
                 + type + " permi: " + permissions + " name:" + name + " pwd: " + password);
         FormBody.Builder body = new FormBody.Builder();
-        if (isReshare == 1 && authAPI.isOidc()) {
+        if (isReshare == 1 && isOCIS) {
             body.add("path", "/Shares/" + itemPath);
         } else {
             body.add("path", itemPath);

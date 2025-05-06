@@ -62,13 +62,7 @@ test {
     systemProperty "server", System.getProperty("server")
     systemProperty "host", System.getProperty("host")
     systemProperty "udid", System.getProperty("udid")
-    //For login tests, out of regular scope
-    systemProperty "login_serverURL", System.getenv("serverBasicTest")
-    systemProperty "login_oauth2URL", System.getenv("serverOAuth2Test")
-    systemProperty "login_oidcURL", System.getenv("serverOIDCTest")
-    systemProperty "login_LDAPURL", System.getenv("serverLDAPTest")
-    systemProperty "login_red301URL", System.getenv("server301Test")
-    systemProperty "login_red302URL", System.getenv("server302Test")
+    systemProperty "backend", System.getProperty("backend")
 }
 
 gradle.startParameter.continueOnFailure = true

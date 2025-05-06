@@ -107,7 +107,7 @@ public class LoginPage extends CommonPage {
     public void selectDrive() {
         //assuming OIDC == oCIS. Bad, but works ftm
         selectFirstBookmark();
-        if (authType.equals("OIDC")) {
+        if (System.getProperty("backend").equals("oCIS")) {
             personal.click();
         } else {
             files.click();

@@ -1,6 +1,7 @@
 package ios;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
@@ -34,7 +35,7 @@ public class UploadsPage extends CommonPage {
 
     public void selectPhotoGallery(int selection) {
         Log.log(Level.FINE, "Starts: Select Photo Gallery");
-        List<WebElement> images = (List<WebElement>) driver.findElements(By.className("XCUIElementTypeImage"));
+        List<WebElement> images = driver.findElements(By.className("XCUIElementTypeImage"));
         int j = 0;
         for (int i = 0; i < images.size() && j < selection; i++) {
             WebElement image = images.get(i);
@@ -59,15 +60,20 @@ public class UploadsPage extends CommonPage {
         return photos == mediaUploaded;
     }
 
-    public boolean photoDisplayed(int photos) {
-        Log.log(Level.FINE, "Starts photoDisplayed: " + photos);
-        List<WebElement> pics = findListCss("XCUIElementTypeStaticText");
-        int i = 0;
-        for (WebElement textInView : pics) {
-            Log.log(Level.FINE, "Photo: " + textInView.getText());
-            if (textInView.getText().contains("Photo-"))
-                i++;
-        }
-        return photos == i;
+    public boolean photoDisplayed(int expectedPhotos) {
+        Log.log(Level.FINE, "Starts photoDisplayed: " + expectedPhotos);
+        // List of files is inside a visible collection view
+        List<WebElement> collections = findListCss("XCUIElementTypeCollectionView");
+        WebElement visibleCollection = collections.stream()
+                .filter(WebElement::isDisplayed)
+                .findFirst()
+                .orElseThrow(() -> new NoSuchElementException("No visible XCUIElementTypeCollectionView found"));
+        // One XCUIElementTypeCell for each item in the list. The footer is also a cell!!
+        List<WebElement> cells = visibleCollection.findElements(By.className("XCUIElementTypeCell"));
+
+        Log.log(Level.FINE, "Number of elements +1: " + cells.size()
+                + " Expected: " + expectedPhotos);
+        // The footer is also a cell, not interesting for us
+        return (cells.size() -1 ) == expectedPhotos;
     }
 }

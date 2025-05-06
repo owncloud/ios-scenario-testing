@@ -42,7 +42,7 @@ public class FolderPickerPage extends CommonPage {
 
     public void selectSpace(String action) {
         Log.log(Level.FINE, "Start: Select space");
-        if (!authType.equals("OIDC")) {
+        if (!System.getProperty("backend").equals("oCIS")) {
             Log.log(Level.FINE, "Not OIDC, just selecting Files");
             filesList.click();
         } else {

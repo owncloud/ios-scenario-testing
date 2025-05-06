@@ -31,7 +31,7 @@ public class CommonAPI {
     protected final String graphDrivesEndpoint = "/graph/v1.0/me/drives";
     protected String davEndpoint = "";
     protected String space = "";
-    boolean isOidc;
+    boolean isOCIS = System.getProperty("backend").equals("oCIS");
     protected HashMap<String, String> personalSpaces;
 
     protected String basicPropfindBody = "<?xml version='1.0' encoding='UTF-8' ?>\n" +
@@ -66,12 +66,8 @@ public class CommonAPI {
             "  </D:set>\n" +
             "</D:propertyupdate>";
 
-    public CommonAPI()
-            throws IOException {
-        AuthAPI authAPI = AuthAPI.getInstance();
-        isOidc = authAPI.isOidc();
-        //ftm, OIDC == oCIS. Bad.
-        if (isOidc) {
+    public CommonAPI() throws IOException {
+        if (isOCIS) {
             personalSpaces = new HashMap<>();
             personalSpaces.put("Alice", getPersonalDrives(urlServer, "Alice"));
             personalSpaces.put("Bob", getPersonalDrives(urlServer, "Bob"));
@@ -84,7 +80,7 @@ public class CommonAPI {
 
     public String getEndpoint(String userName) {
         String endpoint;
-        if (isOidc) {
+        if (isOCIS) {
             endpoint = spacesEndpoint + personalSpaces.get(userName);
         } else {
             endpoint = davEndpoint = webdavEndpoint + "/" + user;
@@ -93,7 +89,7 @@ public class CommonAPI {
     }
 
     public String getEndpoint() {
-        if (isOidc) {
+        if (isOCIS) {
             return spacesEndpoint + personalSpaces.get("Alice");
         } else {
             return davEndpoint = webdavEndpoint + "/" + user;

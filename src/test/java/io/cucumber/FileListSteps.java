@@ -63,6 +63,10 @@ public class FileListSteps {
         return type;
     }
 
+    @ParameterType("(?: not)?")
+    public String typePosNeg(String type) {
+        return type == null ? "" : type;
+    }
 
     @Given("the following items have been created in {word} account")
     public void items_created_in_account(String userName, DataTable table) throws Throwable {
@@ -349,28 +353,24 @@ public class FileListSteps {
         assertFalse(world.filesAPI.itemExist(itemName, user));
     }
 
-    @Then("Alice should see {word} in {typeOfList}")
-    public void item_in_quickaccess(String itemName, String itemSidebar) {
+    @Then("Alice should{typePosNeg} see {word} in {typeOfList}")
+    public void item_in_quickaccess(String sense, String itemName, String itemSidebar) {
         StepLogger.logCurrentStep(Level.FINE);
-        assertTrue(world.fileListPage.isItemInList(itemName));
+        if (sense.isEmpty()) {
+            assertTrue(world.fileListPage.isItemInList(itemName));
+        } else if (sense.equals("not")){
+            assertFalse(world.fileListPage.isItemInScreen(itemName));
+        }
     }
 
-    @Then("Alice should not see {word} in {typeOfList}")
-    public void item_not_in_quickaccess(String itemName, String typeView) {
+    @Then("Alice should{typePosNeg} see {word} in sidebar")
+    public void item_in_sidebar(String sense, String itemName) {
         StepLogger.logCurrentStep(Level.FINE);
-        assertFalse(world.fileListPage.isItemInScreen(itemName));
-    }
-
-    @Then("Alice should see {word} in sidebar")
-    public void item_in_sidebar(String itemName) {
-        StepLogger.logCurrentStep(Level.FINE);
-        assertTrue(world.fileListPage.isItemInSidebar(itemName));
-    }
-
-    @Then("Alice should not see {word} in sidebar")
-    public void item_not_in_sidebar(String itemName) {
-        StepLogger.logCurrentStep(Level.FINE);
-        assertFalse(world.fileListPage.isItemInSidebar(itemName));
+        if (sense.isEmpty()) {
+            assertTrue(world.fileListPage.isItemInSidebar(itemName));
+        } else if (sense.equals("not")) {
+            assertFalse(world.fileListPage.isItemInSidebar(itemName));
+        }
     }
 
     @Then("{itemtype} {word} is opened in the app")
@@ -418,17 +418,15 @@ public class FileListSteps {
         assertFalse(world.fileListPage.isItemInScreen(itemName));
     }
 
-    @Then("Alice should see the item {word} as av.offline")
-    public void item_as_avoffline(String itemName) {
+    @Then("Alice should{typePosNeg} see the item {word} as av.offline")
+    public void item_as_avoffline(String sense, String itemName) {
         StepLogger.logCurrentStep(Level.FINE);
-        assertTrue(world.fileListPage.isMarkedAsAvOffline(itemName));
-        close_actions_menu("Actions");
-    }
-
-    @Then("Alice should not see the item {word} as av.offline")
-    public void item_not_avoffline(String itemName) {
-        StepLogger.logCurrentStep(Level.FINE);
-        assertFalse(world.fileListPage.isMarkedAsAvOffline(itemName));
+        if (sense.isEmpty()) {
+            assertTrue(world.fileListPage.isMarkedAsAvOffline(itemName));
+            close_actions_menu("Actions");
+        } else if (sense.equals(" not")) {
+            assertFalse(world.fileListPage.isMarkedAsAvOffline(itemName));
+        }
     }
 
     @Then("Av. offline option is not available for item {word}")
