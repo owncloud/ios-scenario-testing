@@ -589,7 +589,7 @@
 		</dict>
 		<key>Frameworks/ownCloudAppShared.framework/ownCloudAppShared</key>
 		<data>
-		q7z5n057aDeP2aNQp7Shv8Wcpqo=
+		/yzWApRZtYEAUASW/7dBANzLB1o=
 		</data>
 		<key>Frameworks/ownCloudAppShared.framework/owncloud-logo.tvg</key>
 		<data>
@@ -1054,7 +1054,7 @@
 		</dict>
 		<key>Info.plist</key>
 		<data>
-		fYcPI+K2I1OaAUgiIMoguthMqOw=
+		fSb/E2vgXq1J5lpXrsWULHJMLZM=
 		</data>
 		<key>LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib</key>
 		<data>
@@ -3474,7 +3474,7 @@
 		</dict>
 		<key>ownCloud.debug.dylib</key>
 		<data>
-		N3pAL9qteiXfMDMorCKxX9tB7C8=
+		hSVfXGhhdcMbj/fr+0U5gKLGnRw=
 		</data>
 		<key>pt-BR.lproj/InfoPlist.strings</key>
 		<dict>
@@ -4474,7 +4474,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			akAXr78brc1mhzG7aYm+OgEjBWw76PIEM+2TOs99vlU=
+			uNcBdYGrCkmfllSso+K6pgQ62zOUDedqT2GQJOSBXtY=
 			</data>
 		</dict>
 		<key>Frameworks/ownCloudAppShared.framework/owncloud-logo.tvg</key>
@@ -8422,7 +8422,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			LOt++BShfzPx2vNFrTLYh0rUd0/pXfIJHACaBtyhZtw=
+			IECaXon4g3NgiIdWwZgzzlB2AoNCtWjB0ITqii++BAU=
 			</data>
 		</dict>
 		<key>pt-BR.lproj/InfoPlist.strings</key>

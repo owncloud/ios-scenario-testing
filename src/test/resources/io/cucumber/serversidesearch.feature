@@ -1,4 +1,4 @@
-@serversidesearch
+@serversidesearch @nooc10
 Feature: Server Side Search
 
   As a user

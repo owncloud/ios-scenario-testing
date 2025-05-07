@@ -1,4 +1,4 @@
-@shortcuts
+@shortcuts @nooc10
 Feature: Shortcuts
 
   As a user

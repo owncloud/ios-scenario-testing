@@ -1,4 +1,4 @@
-@links
+@links @nooc10
 Feature: Public Links
 
   As an user
