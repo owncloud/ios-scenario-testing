@@ -37,28 +37,11 @@ public class PublicLinkSteps {
         List<List<String>> listItems = table.asLists();
         for (List<String> rows : listItems) {
             switch (rows.get(0)) {
-                case "password": {
-                    world.publicLinkPage.setPassword(rows.get(1));
-                    break;
-                }
-                case "password-auto": {
-                    world.publicLinkPage.setPasswordAuto();
-                    break;
-                }
-                case "permission": {
-                    world.publicLinkPage.setPermission(rows.get(1));
-                    break;
-                }
-                case "expiration": {
-                    world.publicLinkPage.setExpiration(rows.get(1));
-                    break;
-                }
-                case "name": {
-                    world.publicLinkPage.setName(rows.get(1));
-                    break;
-                }
-                default:
-                    break;
+                case "password" -> world.publicLinkPage.setPassword(rows.get(1));
+                case "password-auto" -> world.publicLinkPage.setPasswordAuto();
+                case "permission" -> world.publicLinkPage.setPermission(rows.get(1));
+                case "expiration" -> world.publicLinkPage.setExpiration(rows.get(1));
+                case "name" -> world.publicLinkPage.setName(rows.get(1));
             }
         }
         world.publicLinkPage.submitLink();
@@ -71,20 +54,9 @@ public class PublicLinkSteps {
         world.sharePage.openPublicLink();
         for (List<String> rows : listItems) {
             switch (rows.get(0)) {
-                case "permissions": {
-                    world.publicLinkPage.setPermission(rows.get(1));
-                    break;
-                }
-                case "password": {
-                    world.publicLinkPage.setPassword(rows.get(1));
-                    break;
-                }
-                case "expiration": {
-                    world.publicLinkPage.setExpiration(rows.get(1));
-                    break;
-                }
-                default:
-                    break;
+                case "permissions" -> world.publicLinkPage.setPermission(rows.get(1));
+                case "password" -> world.publicLinkPage.setPassword(rows.get(1));
+                case "expiration" -> world.publicLinkPage.setExpiration(rows.get(1));
             }
         }
         world.publicLinkPage.saveChanges();
@@ -106,40 +78,19 @@ public class PublicLinkSteps {
         List<List<String>> listItems = table.asLists();
         for (List<String> rows : listItems) {
             switch (rows.get(0)) {
-                case "permission": {
-                    //a lot of flakyness by asserting sharePage.isLinkPermissionCorrect
-                    break;
-                }
-                case "name": {
-                    assertTrue(world.sharePage.isNameCorrect(rows.get(1)));
-                    break;
-                }
-                default:
-                    break;
+                case "permission" -> {} //a lot of flakyness by asserting sharePage.isLinkPermissionCorrect
+                case "name" -> assertTrue(world.sharePage.isNameCorrect(rows.get(1)));
             }
         }
         //1.2. Checking in link page
         world.sharePage.openPublicLink();
         for (List<String> rows : listItems) {
             switch (rows.get(0)) {
-                case "password": {
-                    assertTrue(world.publicLinkPage.isPasswordEnabled(itemName, rows.get(1)));
-                    break;
-                }
-                case "permission": {
+                case "password" -> assertTrue(world.publicLinkPage.isPasswordEnabled(itemName, rows.get(1)));
+                case "permission" -> {}
                     //TODO: Check how assert ticked value in UI
-                    break;
-                }
-                case "expiration": {
-                    assertTrue(world.publicLinkPage.isExpirationCorrect(rows.get(1)));
-                    break;
-                }
-                case "name": {
-                    assertTrue(world.publicLinkPage.isNameCorrect(rows.get(1)));
-                    break;
-                }
-                default:
-                    break;
+                case "expiration" -> assertTrue(world.publicLinkPage.isExpirationCorrect(rows.get(1)));
+                case "name" -> assertTrue(world.publicLinkPage.isNameCorrect(rows.get(1)));
             }
         }
         //2. Asserts in server via API

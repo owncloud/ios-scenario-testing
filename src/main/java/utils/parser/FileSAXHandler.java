@@ -29,43 +29,18 @@ public class FileSAXHandler extends DefaultHandler {
     @Override
     public void endElement(String uri, String localName, String node) {
         switch (node) {
-            case "d:href": {
-                file.setPath(text);
-                break;
-            }
-            case "oc:permissions": {
-                file.setPermissions(text);
-                break;
-            }
-            case "oc:size": {
-                file.setSize(text);
-                break;
-            }
-            case "oc:privatelink": {
-                file.setPrivateLink(text);
-                break;
-            }
-            case "d:getlastmodified": {
-                file.setLastModified(text);
-                break;
-            }
-            case "d:response": {
+            case "d:href" -> file.setPath(text);
+            case "oc:permissions" -> file.setPermissions(text);
+            case "oc:size" -> file.setSize(text);
+            case "oc:privatelink" -> file.setPrivateLink(text);
+            case "d:getlastmodified" -> file.setLastModified(text);
+            case "d:response" -> {
                 file.setName(getFileNameFromPath(file.getPath()));
                 listFiles.add(file);
-                break;
             }
-            case "d:getcontenttype": {
-                file.setType(text);
-                break;
-            }
-            case "oc:favorite": {
-                file.setFavorite(text);
-                break;
-            }
-            default:
-                break;
+            case "d:getcontenttype" -> file.setType(text);
+            case "oc:favorite" -> file.setFavorite(text);
         }
-
     }
 
     @Override

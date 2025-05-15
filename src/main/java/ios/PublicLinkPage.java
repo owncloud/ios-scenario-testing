@@ -83,18 +83,9 @@ public class PublicLinkPage extends CommonPage {
     public void setPermission(String permission) {
         Log.log(Level.FINE, "Starts: Set link permission: " + permission);
         switch (permission) {
-            case ("Viewer"): {
-                viewer.click();
-                break;
-            }
-            case ("Editor"): {
-                editor.click();
-                break;
-            }
-            case ("Secret"): {
-                secretFileDrop.click();
-                break;
-            }
+            case ("Viewer") -> viewer.click();
+            case ("Editor") -> editor.click();
+            case ("Secret") -> secretFileDrop.click();
         }
     }
 

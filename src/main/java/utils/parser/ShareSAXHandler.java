@@ -18,12 +18,8 @@ public class ShareSAXHandler extends DefaultHandler {
     public void startElement(String uri, String localName, String node, Attributes attributes) {
         text.setLength(0);
         switch (node) {
-            case ("ocs"): {
-                allShares = new ArrayList<>();
-            }
-            case ("element"): {
-                share = new OCShare();
-            }
+            case ("ocs") -> allShares = new ArrayList<>();
+            case ("element") -> share = new OCShare();
         }
     }
 
@@ -31,41 +27,15 @@ public class ShareSAXHandler extends DefaultHandler {
     public void endElement(String uri, String localName, String node) {
         String value = text.toString().trim();
         switch (node) {
-            case ("id"): {
-                share.setId(value);
-                break;
-            }
-            case ("uid_file_owner"): {
-                share.setOwner(value);
-                break;
-            }
-            case ("share_type"): {
-                share.setType(value);
-                break;
-            }
-            case ("share_with"): {
-                share.setShareeName(value);
-                break;
-            }
-            case ("name"): {
-                share.setLinkName(value);
-                break;
-            }
-            case ("path"): {
-                share.setItemName(text.substring(1, value.length()));
-                break;
-            }
-            case ("permissions"): {
-                share.setPermissions(value);
-                break;
-            }
-            case ("expiration"): {
-                share.setExpiration(value);
-                break;
-            }
-            case ("element"): {
-                allShares.add(share);
-            }
+            case ("id") -> share.setId(value);
+            case ("uid_file_owner") -> share.setOwner(value);
+            case ("share_type") -> share.setType(value);
+            case ("share_with") -> share.setShareeName(value);
+            case ("name") -> share.setLinkName(value);
+            case ("path") -> share.setItemName(text.substring(1, value.length()));
+            case ("permissions") -> share.setPermissions(value);
+            case ("expiration") -> share.setExpiration(value);
+            case ("element") -> allShares.add(share);
         }
     }
 

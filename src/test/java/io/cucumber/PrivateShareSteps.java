@@ -105,22 +105,13 @@ public class PrivateShareSteps {
         world.sharePage.openPrivateShare(sharee);
         for (List<String> rows : listItems) {
             switch (rows.get(0)) {
-                case "sharee":
-                case "group": {
+                case "sharee", "group" -> {
                     Log.log(Level.FINE, "Checking sharee/group: " + rows.get(1));
                     assertTrue(world.privateSharePage.isNameCorrect(rows.get(1)));
-                    break;
                 }
-                case "permission": {
+                case "permission" -> {}
                     //TODO: Check how assert ticked value in UI
-                    break;
-                }
-                case "expiration": {
-                    assertTrue(world.privateSharePage.isExpirationCorrect(rows.get(1)));
-                    break;
-                }
-                default:
-                    break;
+                case "expiration" -> assertTrue(world.privateSharePage.isExpirationCorrect(rows.get(1)));
             }
         }
         //Asserts in server via API

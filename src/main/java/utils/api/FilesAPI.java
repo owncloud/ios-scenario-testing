@@ -93,16 +93,16 @@ public class FilesAPI extends CommonAPI {
         response = httpClient.newCall(request).execute();
         response.close();
         switch (response.code() / 100) {
-            case (2): {
+            case (2) -> {
                 Log.log(Level.FINE, "Response " + response.code() + ". Item exists");
                 return true;
             }
-            case (4): {
+            case (4) -> {
                 Log.log(Level.FINE, "Response " + response.code() + " "
                         + response.message() + ". Item does not exist");
                 return false;
             }
-            default: {
+            default -> {
                 Log.log(Level.WARNING, "Response neither 4xx nor 2xx. " +
                         "Something went wrong");
                 return false;

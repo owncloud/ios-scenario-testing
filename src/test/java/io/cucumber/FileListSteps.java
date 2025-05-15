@@ -77,47 +77,19 @@ public class FileListSteps {
             String itemName = rows.get(1);
             if (!world.filesAPI.itemExist(itemName, userName)) {
                 switch (type) {
-                    case ("folder"):
-                    case ("item"): {
-                        world.filesAPI.createFolder(itemName, userName);
-                        break;
-                    }
-                    case ("file"): {
-                        world.filesAPI.pushFile(itemName, userName);
-                        break;
-                    }
-                    case ("shortcut"): {
-                        world.filesAPI.pushFileByMime(itemName, "text/uri-list");
-                        break;
-                    }
-                    case ("image"): {
-                        world.filesAPI.pushFileByMime(itemName, "image/jpg");
-                        break;
-                    }
-                    case ("pdf"): {
-                        world.filesAPI.pushFileByMime(itemName, "application/pdf");
-                        break;
-                    }
-                    case ("audio"): {
-                        world.filesAPI.pushFileByMime(itemName, "audio/mpeg3");
-                        break;
-                    }
-                    case ("video"): {
-                        world.filesAPI.pushFileByMime(itemName, "video/mp4");
-                        break;
-                    }
-                    case ("txt"): {
-                        world.filesAPI.pushFileByMime(itemName, "text/plain");
-                        break;
-                    }
-                    case ("docx"): {
-                        world.filesAPI.pushFileByMime(itemName, "application/vnd.openxmlformats-" +
+                    case "folder", "item" -> world.filesAPI.createFolder(itemName, userName);
+                    case "file" -> world.filesAPI.pushFile(itemName, userName);
+                    case ("shortcut") -> world.filesAPI.pushFileByMime(itemName, "text/uri-list");
+                    case ("image") -> world.filesAPI.pushFileByMime(itemName, "image/jpg");
+                    case ("pdf") -> world.filesAPI.pushFileByMime(itemName, "application/pdf");
+                    case ("audio") -> world.filesAPI.pushFileByMime(itemName, "audio/mpeg3");
+                    case ("video") -> world.filesAPI.pushFileByMime(itemName, "video/mp4");
+                    case ("txt") -> world.filesAPI.pushFileByMime(itemName, "text/plain");
+                    case ("docx") -> world.filesAPI.pushFileByMime(itemName, "application/vnd.openxmlformats-" +
                                 "officedocument.wordprocessingml.document");
-                        break;
                     }
                 }
             }
-        }
         world.fileListPage.refreshBySwipe();
     }
 
@@ -514,18 +486,9 @@ public class FileListSteps {
     public void file_should_be_opened_and_previewed(String type, String itemName) {
         StepLogger.logCurrentStep(Level.FINE);
         switch (type) {
-            case ("file"): {
-                assertTrue(world.previewPage.isTextFilePreviewed(itemName));
-                break;
-            }
-            case ("image"): {
-                assertTrue(world.previewPage.isImagePreviewed(itemName));
-                break;
-            }
-            case ("pdf"): {
-                assertTrue(world.previewPage.isPdfPreviewed(itemName));
-                break;
-            }
+            case ("file") -> assertTrue(world.previewPage.isTextFilePreviewed(itemName));
+            case ("image") -> assertTrue(world.previewPage.isImagePreviewed(itemName));
+            case ("pdf") -> assertTrue(world.previewPage.isPdfPreviewed(itemName));
         }
     }
 
@@ -541,7 +504,7 @@ public class FileListSteps {
         assertFalse(world.fileListPage.isOpenInVisible());
     }
 
-    @Then("Alice will see no matches")
+    @Then("Alice should see no matches")
     public void no_matches_server_side_search() {
         StepLogger.logCurrentStep(Level.FINE);
         assertTrue(world.fileListPage.areNotMatches());

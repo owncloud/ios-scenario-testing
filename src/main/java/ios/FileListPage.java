@@ -203,28 +203,20 @@ public class FileListPage extends CommonPage {
     public void openItemSidebar(String itemName) {
         Log.log(Level.FINE, "Starts: Open Item in sidebar: " + itemName);
         switch (itemName) {
-            case "shared with me": {
+            case "shared with me"-> {
                 findXpath("//XCUIElementTypeStaticText[@name=\"Shares\"]").click();
                 findXpath("//XCUIElementTypeStaticText[@name=\"Shared with me\"]").click();
-                break;
             }
-            case "shared by me": {
+            case "shared by me"-> {
                 findXpath("//XCUIElementTypeStaticText[@name=\"Shares\"]").click();
                 findXpath("//XCUIElementTypeStaticText[@name=\"Shared by me\"]").click();
-                break;
             }
-            case "shared by link": {
+            case "shared by link"-> {
                 findXpath("//XCUIElementTypeStaticText[@name=\"Shares\"]").click();
                 findXpath("//XCUIElementTypeStaticText[@name=\"Shared by link\"]").click();
-                break;
             }
-            case "search": {
-                findXpath("//XCUIElementTypeStaticText[@name=\"Search\"]").click();
-                break;
-            }
-            default:
-                findXpath("(//XCUIElementTypeStaticText[@name=\"" + itemName + "\"])[2]").click();
-                break;
+            case "search"-> findXpath("//XCUIElementTypeStaticText[@name=\"Search\"]").click();
+            default -> findXpath("(//XCUIElementTypeStaticText[@name=\"" + itemName + "\"])[2]").click();
         }
     }
 
@@ -232,14 +224,14 @@ public class FileListPage extends CommonPage {
         Log.log(Level.FINE, "Starts: execute operation: " + operation + " " +
                 itemName + " " + menu);
         switch (menu) {
-            case "Actions":
+            case "Actions" -> {
                 selectItemListActions(itemName);
                 selectOperationFromActions(operation);
-                break;
-            case "Contextual":
+            }
+            case "Contextual" -> {
                 selectItemListContextual(itemName);
                 selectOperationFromContextual(operation);
-                break;
+            }
         }
     }
 
@@ -254,13 +246,13 @@ public class FileListPage extends CommonPage {
 
     private void selectSearchCriteria(String searchType) {
         switch (searchType) {
-            case ("contents"): {
+            case ("contents") -> {
                 if (!serverSearchScopeNameContents.isEmpty()) { //switch options
                     serverSearchScopeNameContents.get(0).click();
                     serverSearchScopeContents.get(0).click();
                 }
             }
-            case ("name and contents"): {
+            case ("name and contents") -> {
                 if (!serverSearchScopeContents.isEmpty()) { //switch options
                     serverSearchScopeContents.get(0).click();
                     serverSearchScopeNameContents.get(0).click();
@@ -399,51 +391,20 @@ public class FileListPage extends CommonPage {
         WebElement operation = null;
         Log.log(Level.FINE, "Starts actions: " + operationName);
         switch (operationName) {
-            case "delete":
-                operation = findXpath(xpath_delete);
-                break;
-            case "rename":
-                operation = findXpath(xpath_rename);
-                break;
-            case "move":
-                operation = findXpath(xpath_move);
-                break;
-            case "copy":
-                operation = findXpath(xpath_copy);
-                break;
-            case "duplicate":
-                operation = findXpath(xpath_duplicate);
-                break;
-            case "make available offline":
-                operation = findId(id_avoffline);
-                //The file take some to download
-                break;
-            case "cut":
-                operation = findXpath(xpath_cut);
-                break;
-            case "paste":
-                operation = findXpath(xpath_paste);
-                break;
-            case "share":
-                operation = findId(id_sharing);
-                break;
-            case "favorite":
-                operation = findId(id_favorite);
-                break;
-            case "unfavorite":
-                operation = findId(id_unfavorite);
-                break;
-            case "add to the sidebar":
-                operation = findId(id_addSidebar);
-                break;
-            case "remove from the sidebar":
-                operation = findId(id_removeSidebar);
-                break;
-            case "open in":
-                operation = findXpath(xpath_openin);
-                break;
-            default:
-                break;
+            case "delete" -> operation = findXpath(xpath_delete);
+            case "rename" -> operation = findXpath(xpath_rename);
+            case "move" -> operation = findXpath(xpath_move);
+            case "copy" -> operation = findXpath(xpath_copy);
+            case "duplicate" -> operation = findXpath(xpath_duplicate);
+            case "make available offline" -> operation = findId(id_avoffline);
+            case "cut" -> operation = findXpath(xpath_cut);
+            case "paste" -> operation = findXpath(xpath_paste);
+            case "share" -> operation = findId(id_sharing);
+            case "favorite" -> operation = findId(id_favorite);
+            case "unfavorite" -> operation = findId(id_unfavorite);
+            case "add to the sidebar" -> operation = findId(id_addSidebar);
+            case "remove from the sidebar" -> operation = findId(id_removeSidebar);
+            case "open in" -> operation = findXpath(xpath_openin);
         }
         operation.click();
         if (operationName.equals("copy")) {
@@ -458,47 +419,19 @@ public class FileListPage extends CommonPage {
         WebElement operation = null;
         Log.log(Level.FINE, "Starts contextual: " + operationName);
         switch (operationName) {
-            case "delete":
-                operation = findId(id_delete);
-                break;
-            case "rename":
-                operation = findId(id_rename);
-                break;
-            case "move":
-                operation = findId(id_move);
-                break;
-            case "copy":
-                operation = findId(id_copy);
-                break;
-            case "cut":
-                operation = findId(id_cut);
-                break;
-            case "duplicate":
-                operation = findId(id_duplicate);
-                break;
-            case "make available offline":
-                operation = findId(id_avoffline);
-                break;
-            case "share":
-                operation = findId(id_sharing_c);
-                break;
-            case "favorite":
-                operation = findId(id_favorite);
-                break;
-            case "unfavorite":
-                operation = findId(id_unfavorite);
-                break;
-            case "add to the sidebar":
-                operation = findId(id_addSidebar);
-                break;
-            case "remove from the sidebar":
-                operation = findId(id_removeSidebar);
-                break;
-            case "open in":
-                operation = findId(id_openin);
-                break;
-            default:
-                break;
+            case "delete" -> operation = findId(id_delete);
+            case "rename" -> operation = findId(id_rename);
+            case "move" -> operation = findId(id_move);
+            case "copy" -> operation = findId(id_copy);
+            case "cut" -> operation = findId(id_cut);
+            case "duplicate" -> operation = findId(id_duplicate);
+            case "make available offline" -> operation = findId(id_avoffline);
+            case "share" -> operation = findId(id_sharing_c);
+            case "favorite" -> operation = findId(id_favorite);
+            case "unfavorite" -> operation = findId(id_unfavorite);
+            case "add to the sidebar" -> operation = findId(id_addSidebar);
+            case "remove from the sidebar" -> operation = findId(id_removeSidebar);
+            case "open in" -> operation = findId(id_openin);
         }
         operation.click();
         if (operationName.equals("copy")) {
