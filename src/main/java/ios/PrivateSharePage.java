@@ -13,14 +13,14 @@ import utils.log.Log;
 
 public class PrivateSharePage extends CommonPage {
 
-    @iOSXCUITFindBy(id = "Can view")
+    @iOSXCUITFindBy(id = "Can view View and download.")
     private WebElement viewer;
 
-    @iOSXCUITFindBy(id = "Can edit without versions")
-    private WebElement editor;
-
-    @iOSXCUITFindBy(id = "Can upload")
+    @iOSXCUITFindBy(id = "Can upload View, download and upload.")
     private WebElement uploader;
+
+    @iOSXCUITFindBy(id = "Can edit without versions View, download, upload, edit, add and delete.")
+    private WebElement editor;
 
     @iOSXCUITFindBy(xpath = "//XCUIElementTypeStaticText[@name=\"Add\"]")
     private WebElement addExpirationDate;
@@ -71,13 +71,11 @@ public class PrivateSharePage extends CommonPage {
 
     public boolean isNameCorrect(String name){
         Log.log(Level.FINE, "Starts: Checking sharee name: " + name);
-
         return findXpath("(//XCUIElementTypeStaticText[@name=\"" + name + "\"])[2]").isDisplayed();
     }
 
     public void setPermissions(String permission) {
         Log.log(Level.FINE, "Starts: Set permissions: " + permission);
-
         switch (permission) {
             case "Viewer" -> viewer.click();
             case "Editor" -> editor.click();
@@ -86,14 +84,24 @@ public class PrivateSharePage extends CommonPage {
         }
     }
 
+    public boolean isPermissionEnabled (String permission) {
+        Log.log(Level.FINE, "Starts: Check permission enabled: " + permission);
+        String checkmarkId = "checkmark";
+        return switch (permission) {
+            case ("Viewer") -> viewer.findElement(By.id(checkmarkId)).isDisplayed();
+            case ("Editor") -> editor.findElement(By.id(checkmarkId)).isDisplayed();
+            case ("Upload") -> uploader.findElement(By.id(checkmarkId)).isDisplayed();
+            default -> false;
+        };
+    }
+
     public void setExpiration(String expirationDay) {
         Log.log(Level.FINE, "Starts: Set expiration date: " + expirationDay);
-
         if (!expirationDay.equals("0")){
-        addExpirationDate.click();
-        datePicker.click();
-        nextMonth.click();
-        findId(expirationDay).click();
+            addExpirationDate.click();
+            datePicker.click();
+            nextMonth.click();
+            findId(expirationDay).click();
         } else {
             if (hasExpiration()){
                 removeExpiration();
@@ -130,19 +138,16 @@ public class PrivateSharePage extends CommonPage {
 
     public void savePermissions() {
         Log.log(Level.FINE, "Starts: Save permissions private share");
-
         inviteButton.click();
     }
 
     public void deletePrivateShare() {
         Log.log(Level.FINE, "Starts: delete/unshare private share");
-
         unshare.click();
     }
 
     public void saveChanges() {
         Log.log(Level.FINE, "Starts: Save changes private share");
-
         saveChanges.click();
     }
 }

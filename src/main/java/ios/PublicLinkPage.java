@@ -16,13 +16,13 @@ public class PublicLinkPage extends CommonPage {
     @iOSXCUITFindBy(id = "Name")
     private WebElement linkName;
 
-    @iOSXCUITFindBy(id = "Can view")
+    @iOSXCUITFindBy(id = "Can view View, download")
     private WebElement viewer;
 
-    @iOSXCUITFindBy(id = "Can edit")
+    @iOSXCUITFindBy(id = "Can edit View, upload, edit, download, delete")
     private WebElement editor;
 
-    @iOSXCUITFindBy(id = "Secret File Drop")
+    @iOSXCUITFindBy(id = "Secret File Drop Upload only, existing content is not revealed")
     private WebElement secretFileDrop;
 
     @iOSXCUITFindBy(id = "Set")
@@ -87,6 +87,17 @@ public class PublicLinkPage extends CommonPage {
             case ("Editor") -> editor.click();
             case ("Secret") -> secretFileDrop.click();
         }
+    }
+
+    public boolean isPermissionEnabled (String permission) {
+        Log.log(Level.FINE, "Starts: Check permission enabled: " + permission);
+        String checkmarkId = "checkmark";
+        return switch (permission) {
+            case ("Viewer") -> viewer.findElement(By.id(checkmarkId)).isDisplayed();
+            case ("Editor") -> editor.findElement(By.id(checkmarkId)).isDisplayed();
+            case ("Secret") -> secretFileDrop.findElement(By.id(checkmarkId)).isDisplayed();
+            default -> false;
+        };
     }
 
     public void setPassword(String password) {

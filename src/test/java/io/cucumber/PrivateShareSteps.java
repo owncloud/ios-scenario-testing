@@ -109,9 +109,14 @@ public class PrivateShareSteps {
                     Log.log(Level.FINE, "Checking sharee/group: " + rows.get(1));
                     assertTrue(world.privateSharePage.isNameCorrect(rows.get(1)));
                 }
-                case "permission" -> {}
-                    //TODO: Check how assert ticked value in UI
-                case "expiration" -> assertTrue(world.privateSharePage.isExpirationCorrect(rows.get(1)));
+                case "permission" -> {
+                    Log.log(Level.FINE, "Checking permission: " + rows.get(1));
+                    assertTrue(world.privateSharePage.isPermissionEnabled(rows.get(1)));
+                }
+                case "expiration" -> {
+                    Log.log(Level.FINE, "Checking expiration: " + rows.get(1));
+                    assertTrue(world.privateSharePage.isExpirationCorrect(rows.get(1)));
+                }
             }
         }
         //Asserts in server via API

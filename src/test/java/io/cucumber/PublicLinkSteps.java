@@ -87,8 +87,7 @@ public class PublicLinkSteps {
         for (List<String> rows : listItems) {
             switch (rows.get(0)) {
                 case "password" -> assertTrue(world.publicLinkPage.isPasswordEnabled(itemName, rows.get(1)));
-                case "permission" -> {}
-                    //TODO: Check how assert ticked value in UI
+                case "permission" -> assertTrue(world.publicLinkPage.isPermissionEnabled(rows.get(1)));
                 case "expiration" -> assertTrue(world.publicLinkPage.isExpirationCorrect(rows.get(1)));
                 case "name" -> assertTrue(world.publicLinkPage.isNameCorrect(rows.get(1)));
             }
