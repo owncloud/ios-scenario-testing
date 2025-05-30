@@ -176,7 +176,7 @@ public class FileListPage extends CommonPage {
         openPlusButton();
         uploadFile.click();
         acceptLibraryPermission();
-        waitById(WAIT_TIME, "Cancel");
+        waitById( "Cancel");
     }
 
     public void openSidebar() {

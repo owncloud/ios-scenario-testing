@@ -6,7 +6,7 @@
 	<dict>
 		<key>Info.plist</key>
 		<data>
-		vltbq6agtSSVdIWpLVRP9fYUgnQ=
+		IUMKUqgKUX+jQGQDSoRYPPhS7Vc=
 		</data>
 		<key>PLCrashReporter_CrashReporter.bundle/Info.plist</key>
 		<data>
@@ -44,6 +44,15 @@
 		<data>
 		sxb+HAwFcLhJDw4h1amdMXJIfJA=
 		</data>
+		<key>ca.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			dwJJgO/4Eummv8wWinICBQte1qg=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
 		<key>cs.lproj/Localizable.strings</key>
 		<dict>
 			<key>hash</key>
@@ -212,6 +221,15 @@
 			<data>
 			2JX9zdBt+x6gNTYuJwZ5P2OiL8M+kscQuLD4glQQpZs=
 			</data>
+		</dict>
+		<key>ca.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			2mJKZdx/p3HkOW20pToPArVRFP6LzgOFvICylWwZ6TU=
+			</data>
+			<key>optional</key>
+			<true/>
 		</dict>
 		<key>cs.lproj/Localizable.strings</key>
 		<dict>

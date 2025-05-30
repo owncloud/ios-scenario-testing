@@ -92,7 +92,7 @@ Feature: Public Links
 
   @editlink
   Rule: Edit an existing public link
-
+  @expiration
   Scenario Outline: Edit existing share on a folder, changing permissions
     Given the following items have been created in Alice account
       | folder | <item> |

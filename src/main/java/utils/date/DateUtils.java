@@ -1,6 +1,7 @@
 package utils.date;
 
 import java.time.Instant;
+import java.time.LocalDate;
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
@@ -37,16 +38,18 @@ public class DateUtils {
         return getCorrectTZ(dateToTz);
     }
 
-    //Builds the string with the date displayed in the app
     public static String displayedDate(String day) {
-        String year = Integer.toString(DateUtils.todayYear()).substring(2);
-        String month = Integer.toString(DateUtils.todayMonth() + 1);
-        Log.log(Level.FINE, "Day: " + day + " Month: " + month + " Year: " + year);
-        if (month.equals("12")) { //Jump to next year
-            year = String.valueOf(Integer.parseInt(year) + 1);
-            month = "1";
-        }
-        return day + "/" + month + "/" + year;
+        //By default, datepicker gets 7 days later than today.
+        LocalDate todayPlus7 = LocalDate.now().plusDays(7);
+        LocalDate targetDate = todayPlus7.plusMonths(1).
+                withDayOfMonth(Integer.parseInt(day));
+
+        String formattedDay = String.format("%02d", targetDate.getDayOfMonth());
+        String formattedMonth = String.valueOf(targetDate.getMonthValue());
+        String year = String.format("%02d", targetDate.getYear() % 100);
+
+        Log.log(Level.FINE, "Day: " + formattedDay + " Month: " + formattedMonth + " Year: " + year);
+        return formattedDay + "/" + formattedMonth + "/" + year;
     }
 
     //Builds the string with the current time, moved to UTC (used in shares)

@@ -62,7 +62,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		P9pFLZS3WDy7m+R9ua305zTTZ+Q=
+		0rJF90hkQc1DhtpJb/pD+g8DgKA=
 		</data>
 		<key>PocketSVG_PocketSVG.bundle/Info.plist</key>
 		<data>
@@ -100,6 +100,15 @@
 		<data>
 		AkBxtJKUSc7AVQjiTFj3PKKktMM=
 		</data>
+		<key>ca.lproj/InfoPlist.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			hG2RQgqBIzGU5jC0Z360kwx4mVA=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
 		<key>cs.lproj/InfoPlist.strings</key>
 		<dict>
 			<key>hash</key>
@@ -165,7 +174,7 @@
 		</dict>
 		<key>ownCloud Action Extension.debug.dylib</key>
 		<data>
-		3XbMNFOKuNlIMQ98d+a7sYLIOMA=
+		SV+L2Stp1KiRyO2sk4nmUwHXn0U=
 		</data>
 		<key>ru.lproj/InfoPlist.strings</key>
 		<dict>
@@ -367,6 +376,15 @@
 			HXgowG0VLWUnQNNu2qFcJbJgH+lTlQq0Tm/WWjCBScU=
 			</data>
 		</dict>
+		<key>ca.lproj/InfoPlist.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			QwMzjIkhRWG8GxL6lsFzK6qMdQ0MEUb5SRwINNcnWVU=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
 		<key>cs.lproj/InfoPlist.strings</key>
 		<dict>
 			<key>hash2</key>
@@ -434,7 +452,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			QSAO+lEHYXL37XQme4PdriCa3YZPQJImstnBd0+hgZo=
+			1oKqySey0iFA4gdrqZIVOcGaRfnkXcjXtG/AWxetheQ=
 			</data>
 		</dict>
 		<key>ru.lproj/InfoPlist.strings</key>

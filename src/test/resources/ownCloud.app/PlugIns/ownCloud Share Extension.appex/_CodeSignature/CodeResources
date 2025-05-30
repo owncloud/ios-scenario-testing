@@ -66,7 +66,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		O6/3s/vlx8VBxi2eddsa2tZmaOg=
+		Xu+VI31+bw/pHJhxB0FZxJOLKcg=
 		</data>
 		<key>PocketSVG_PocketSVG.bundle/Info.plist</key>
 		<data>
@@ -118,6 +118,24 @@
 			<key>hash</key>
 			<data>
 			muTI+AHnU9mLW1kCTIqZsqHIrmU=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>ca.lproj/InfoPlist.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			PB6iX64hj55bQFNQA73nzQ86iKw=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>ca.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			1CC5kRFkCcB62eXp1joicY60Wa0=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -322,7 +340,7 @@
 		</dict>
 		<key>ownCloud Share Extension.debug.dylib</key>
 		<data>
-		tBYHzAmF3TjUZqL5mMXi/WxBYQA=
+		5b7tWnfUm9mg4HqWXQsmlSjKwrM=
 		</data>
 		<key>pt-BR.lproj/InfoPlist.strings</key>
 		<dict>
@@ -639,6 +657,24 @@
 			<key>optional</key>
 			<true/>
 		</dict>
+		<key>ca.lproj/InfoPlist.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			QLpEWEyg6R306qq54n4+yrFQkOBpX7NwTPumHjKlE2Q=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>ca.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			/rlOgwzFJTnEHcz9MrVW7A6I4BcwKoVKPFLlJeQW4nk=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
 		<key>cs.lproj/InfoPlist.strings</key>
 		<dict>
 			<key>hash2</key>
@@ -841,7 +877,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			jfZix4A3uUm2yEt6E+FTUDAk9noiqEg/6mjOd4Vqj4E=
+			GahvqQxTc5SO0F0SAz3en7c0I1z79cPlZ8JeCQXpyHQ=
 			</data>
 		</dict>
 		<key>pt-BR.lproj/InfoPlist.strings</key>

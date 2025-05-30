@@ -60,6 +60,7 @@ public class SpacesSteps {
     public void user_should_see_following_spaces(DataTable table) {
         StepLogger.logCurrentStep(Level.FINE);
         List<List<String>> listItems = table.asLists();
+        world.spacesPage.waitBySpaces();
         assertTrue(world.spacesPage.areAllSpacesVisible(listItems));
     }
 

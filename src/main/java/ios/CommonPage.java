@@ -48,35 +48,35 @@ public class CommonPage {
     protected static IOSDriver driver = AppiumManager.getManager().getDriver();
     protected static Actions actions;
     private static final SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMdd_HHmmss");
-    protected static final int WAIT_TIME = 7;
+    protected static final int WAIT_TIME = 10;
+    protected static WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(WAIT_TIME));
 
     public CommonPage() {
         actions = new Actions(driver);
     }
 
-    public static void waitByXpath(int timeToWait, String resourceXpath) {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeToWait));
+    public static void waitByXpath(String resourceXpath) {
         wait.until(ExpectedConditions.visibilityOfElementLocated(AppiumBy.xpath(resourceXpath)));
     }
 
-    public static void waitById(int timeToWait, String resourceId) {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeToWait));
+    public static void waitById(String resourceId) {
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.id(resourceId)));
     }
 
-    public static void waitById(int timeToWait, WebElement mobileElement) {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeToWait));
+    public static void waitById(WebElement mobileElement) {
         wait.until(ExpectedConditions.visibilityOf(mobileElement));
     }
 
-    public static void waitByIdInvisible(int timeToWait, String resourceId) {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeToWait));
+    public static void waitByIdInvisible(String resourceId) {
         wait.until(ExpectedConditions.invisibilityOfElementLocated(By.id(resourceId)));
     }
 
-    public static void waitByIdInvisible(int timeToWait, WebElement mobileElement) {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeToWait));
+    public static void waitByIdInvisible(WebElement mobileElement) {
         wait.until(ExpectedConditions.invisibilityOf(mobileElement));
+    }
+
+    public void waitBySpaces() {
+        wait.until(ExpectedConditions.invisibilityOfElementLocated(AppiumBy.id("No spaces")));
     }
 
     public WebElement findXpath(String xpath) {
@@ -92,7 +92,7 @@ public class CommonPage {
     }
 
     public WebElement findId(String id) {
-        return (WebElement) driver.findElement(AppiumBy.id(id));
+        return driver.findElement(AppiumBy.id(id));
     }
 
     public List<WebElement> findListId(String id) {
@@ -201,7 +201,7 @@ public class CommonPage {
             FileUtils.copyFile(screenShotFile, new File("screenshots/" + name + "_" + sd + ".png"));
             Log.log(Level.FINE, "Take screenshot " + name + " at: " + sd);
         } catch (IOException e) {
-            e.printStackTrace();
+            Log.log(Level.FINE, e.getMessage());
         }
     }
 
@@ -221,7 +221,7 @@ public class CommonPage {
         try {
             Files.write(path, data);
         } catch (IOException e) {
-            e.printStackTrace();
+            Log.log(Level.FINE, e.getMessage());
         }
     }
 }

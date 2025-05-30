@@ -21,7 +21,6 @@ Feature: Spaces
         | Space1 | First space  |
         | Space2 | Second space |
 
-    @ignore
     Scenario: Add a new space with correct name and subtitle
       Given the following spaces have been created in Alice account
         | Space3 | Third space |
