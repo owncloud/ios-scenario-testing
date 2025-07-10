@@ -54,7 +54,7 @@ public class GraphAPI extends CommonAPI {
         return body;
     }
 
-    private List<OCSpace> geyMySpaces() throws IOException {
+    public List<OCSpace> getMySpaces() throws IOException {
         Log.log(Level.FINE, "GET my SPACES");
         String url = urlServer + graphPath + myDrives;
         Request request = getRequest(url, user);
@@ -66,7 +66,7 @@ public class GraphAPI extends CommonAPI {
 
     public void removeSpacesOfUser() throws IOException {
         Log.log(Level.FINE, "REMOVE custom SPACES of: " + user);
-        List<OCSpace> spacesOfUser = geyMySpaces();
+        List<OCSpace> spacesOfUser = getMySpaces();
         for (OCSpace space : spacesOfUser) {
             String url = urlServer + graphPath + drives + space.getId();
             Log.log(Level.FINE, "URL remove space: " + url);
@@ -123,7 +123,7 @@ public class GraphAPI extends CommonAPI {
     }
 
     private String getSpaceIdFromName(String name, String description) throws IOException {
-        List<OCSpace> mySpaces = geyMySpaces();
+        List<OCSpace> mySpaces = getMySpaces();
         for (OCSpace space : mySpaces) {
             if (space.getName().trim().equals(name) && space.getDescription().trim().equals(description)) {
                 return space.getId();
@@ -149,6 +149,12 @@ public class GraphAPI extends CommonAPI {
                 JSONObject owner = jsonObject.getJSONObject("owner");
                 JSONObject user = owner.getJSONObject("user");
                 space.setOwner(user.getString("id"));
+                JSONObject root = jsonObject.getJSONObject("root");
+                if (root.has("deleted")) {
+                    space.setStatus("deleted");
+                } else {
+                    space.setStatus("active");
+                }
                 spaces.add(space);
                 Log.log(Level.FINE, "Space id returned: " + space.getId() + " " + space.getName());
             }

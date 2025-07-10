@@ -7,6 +7,7 @@ public class OCSpace {
     private String name;
     private String description;
     private String owner;
+    private String status;
 
     public OCSpace() {
     }
@@ -52,4 +53,11 @@ public class OCSpace {
         this.description = description;
     }
 
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
 }

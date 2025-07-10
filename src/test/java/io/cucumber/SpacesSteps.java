@@ -17,6 +17,8 @@ import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import utils.entities.OCSpace;
+import utils.log.Log;
 import utils.log.StepLogger;
 
 public class SpacesSteps {
@@ -44,6 +46,34 @@ public class SpacesSteps {
         world.fileListPage.openSpacesList();
     }
 
+    @When("Alice selects to create a new space with the following fields")
+    public void user_creates_new_space(DataTable table) {
+        StepLogger.logCurrentStep(Level.FINE);
+        List<List<String>> listItems = table.asLists();
+        for (List<String> rows : listItems) {
+            String name = rows.get(0);
+            String description = rows.get(1);
+            world.spacesPage.createSpace(name, description);
+        }
+    }
+
+    @When("Alice selects to edit a space with the following fields")
+    public void user_edit_new_space(DataTable table) {
+        StepLogger.logCurrentStep(Level.FINE);
+        List<List<String>> listItems = table.asLists();
+        String name = listItems.get(0).get(0);
+        String description = listItems.get(0).get(1);
+        world.spacesPage.editSpace(name, description);
+    }
+
+    @When("Alice selects to disable the following spaces:")
+    public void disable_space(DataTable table) {
+        StepLogger.logCurrentStep(Level.FINE);
+        List<List<String>> listItems = table.asLists();
+        String name = listItems.get(0).get(0);
+        world.spacesPage.disableSpace(name);
+    }
+
     @When("following space is disabled in server")
     public void space_disabled_server(DataTable table)
             throws IOException {
@@ -69,5 +99,65 @@ public class SpacesSteps {
         StepLogger.logCurrentStep(Level.FINE);
         List<List<String>> listItems = table.asLists();
         assertFalse(world.spacesPage.areAllSpacesVisible(listItems));
+    }
+
+    @Then("Alice should see the following spaces in the list of disabled spaces")
+    public void space_in_disabled_list(DataTable table) {
+        StepLogger.logCurrentStep(Level.FINE);
+        List<List<String>> listItems = table.asLists();
+        assertTrue(world.spacesPage.isSpaceInDisabledList(listItems));
+    }
+
+    @Then("Spaces should be created/updated in server with the following fields")
+    public void spaces_created_in_server(DataTable table) throws IOException {
+        StepLogger.logCurrentStep(Level.FINE);
+        // Spaces in scenario definition
+        List<List<String>> listItems = table.asLists();
+        // Spaces in server
+        List<OCSpace> spaces = world.graphAPI.getMySpaces();
+        boolean matches = true;
+        for (List<String> rows : listItems) {
+            String name = rows.get(0);
+            String description = rows.get(1);
+            for (OCSpace space : spaces) {
+                Log.log(Level.FINE, "Space in server: " + space.getName() + " "
+                        + space.getDescription());
+                Log.log(Level.FINE, "Space in scenario: " + name + " " + description);
+                if (!(space.getName().equals(name) && space.getDescription().equals(description))) {
+                    matches = false;
+                    break;
+                }
+            }
+        }
+        // Check if all spaces in scenario definition match with spaces in server
+        assertTrue(matches);
+    }
+
+    @Then("Spaces should be disabled in server with the following fields")
+    public void spaces_disabled_in_server(DataTable table) throws IOException {
+        StepLogger.logCurrentStep(Level.FINE);
+        // Spaces in scenario definition
+        List<List<String>> listItems = table.asLists();
+        // Spaces in server
+        List<OCSpace> spaces = world.graphAPI.getMySpaces();
+        boolean matches = true;
+        for (List<String> rows : listItems) {
+            String name = rows.get(0);
+            String description = rows.get(1);
+            for (OCSpace space : spaces) {
+                Log.log(Level.FINE, "Space in server: " + space.getName() + " "
+                        + space.getDescription() + " " + space.getStatus());
+                Log.log(Level.FINE, "Space in scenario: " + name + " " + description);
+                Log.log(Level.FINE, String.valueOf(space.getName().equals(name)));
+                Log.log(Level.FINE, String.valueOf(space.getDescription().equals(description)));
+                if ((!(space.getName().equals(name) || space.getDescription().equals(description)))
+                        && (space.getStatus().equals("deleted"))) {
+                    matches = false;
+                    break;
+                }
+            }
+        }
+        // Check if all spaces in scenario definition match with spaces in server
+        assertTrue(matches);
     }
 }
