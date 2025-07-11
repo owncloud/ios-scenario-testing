@@ -40,6 +40,17 @@ public class SpacesSteps {
         }
     }
 
+    @Given("the following spaces have been disabled in Alice account")
+    public void spaces_have_been_disabled(DataTable table) throws IOException {
+        StepLogger.logCurrentStep(Level.FINE);
+        List<List<String>> listItems = table.asLists();
+        for (List<String> rows : listItems) {
+            String name = rows.get(0);
+            String description = rows.get(1);
+            world.graphAPI.disableSpace(name, description);
+        }
+    }
+
     @When("Alice selects the spaces view")
     public void user_selects_spaces_view() {
         StepLogger.logCurrentStep(Level.FINE);
@@ -66,12 +77,29 @@ public class SpacesSteps {
         world.spacesPage.editSpace(name, description);
     }
 
-    @When("Alice selects to disable the following spaces:")
+    @When("Alice selects to disable the following spaces")
     public void disable_space(DataTable table) {
         StepLogger.logCurrentStep(Level.FINE);
         List<List<String>> listItems = table.asLists();
         String name = listItems.get(0).get(0);
         world.spacesPage.disableSpace(name);
+    }
+
+    @When("Alice selects to enable the following spaces")
+    public void enable_space(DataTable table) {
+        StepLogger.logCurrentStep(Level.FINE);
+        List<List<String>> listItems = table.asLists();
+        String name = listItems.get(0).get(0);
+        world.spacesPage.enableSpace(name);
+    }
+
+    @When("Alice {word} disabled spaces")
+    public void show_disabled_spaces(String action) {
+        StepLogger.logCurrentStep(Level.FINE);
+        switch (action) {
+            case ("shows") -> world.spacesPage.showDisabledSpaces();
+            case ("hides") -> world.spacesPage.hideDisabledSpaces();
+        }
     }
 
     @When("following space is disabled in server")
@@ -98,7 +126,7 @@ public class SpacesSteps {
     public void user_should_not_see_following_spaces(DataTable table) {
         StepLogger.logCurrentStep(Level.FINE);
         List<List<String>> listItems = table.asLists();
-        assertFalse(world.spacesPage.areAllSpacesVisible(listItems));
+        assertTrue(world.spacesPage.areAllSpacesNotVisible(listItems));
     }
 
     @Then("Alice should see the following spaces in the list of disabled spaces")
