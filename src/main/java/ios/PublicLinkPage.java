@@ -126,6 +126,7 @@ public class PublicLinkPage extends CommonPage {
             addExpirationDate.click();
             datePicker.click();
             nextMonth.click();
+            waitById(expirationDay);
             findId(expirationDay).click();
         } else {
             //If the expiration date is set, remove it

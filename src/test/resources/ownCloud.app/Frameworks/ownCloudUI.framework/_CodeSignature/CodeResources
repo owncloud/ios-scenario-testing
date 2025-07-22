@@ -12,6 +12,15 @@
 		<data>
 		xcimj0uAkps+ZvBU83u54WB4hH8=
 		</data>
+		<key>ca.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			SLaUcKKiN5MBrmKTztC4RYyqtBc=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
 		<key>cs.lproj/Localizable.strings</key>
 		<dict>
 			<key>hash</key>
@@ -174,6 +183,15 @@
 			<data>
 			fVRQyy0UJlG4r6MVtfI478gF2tgn2RujZ9hRa8nUnno=
 			</data>
+		</dict>
+		<key>ca.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			M/47/jdXEFzpkyDZ6EEXOjs1hiOEwvSbP6fYef2dy8s=
+			</data>
+			<key>optional</key>
+			<true/>
 		</dict>
 		<key>cs.lproj/Localizable.strings</key>
 		<dict>

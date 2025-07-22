@@ -34,8 +34,8 @@ public class SpacesPage extends CommonPage {
     protected WebElement spaceCreateButton;
 
     // More button for the first space in the list
-    @iOSXCUITFindBy(xpath = "(//XCUIElementTypeButton[@name=\"More\"])[1]")
-    protected WebElement moreButton;
+    @iOSXCUITFindBy(xpath = "(//XCUIElementTypeButton[@name=\"More\"])")
+    protected List<WebElement> moreButton;
 
     @iOSXCUITFindBy(xpath = "//XCUIElementTypeButton[@name=\"Save\"]")
     protected WebElement saveButton;
@@ -76,9 +76,8 @@ public class SpacesPage extends CommonPage {
 
     public void editSpace (String name, String subtitle) {
         Log.log(Level.FINE, "Starts: edit space with name: " + name + " and subtitle: " + subtitle);
-        // Wait for the space to be visible
-        waitById(moreButton);
-        moreButton.click();
+        waitByList(moreButton);
+        moreButton.get(0).click();
         editSpaceAction.click();
         writeSpaceNameSubtitle(name, subtitle);
         saveButton.click();
@@ -92,15 +91,17 @@ public class SpacesPage extends CommonPage {
         spaceSubtitle.sendKeys(subtitle);
     }
 
-    public void disableSpace(String name) {
-        Log.log(Level.FINE, "Starts: disable space with name: " + name);
-        moreButton.click();
+    public void disableSpace() {
+        Log.log(Level.FINE, "Starts: disable space ");
+        waitByList(moreButton);
+        moreButton.get(0).click();
         disableSpaceAction.click();
     }
 
-    public void enableSpace(String name) {
-        Log.log(Level.FINE, "Starts: enable space with name: " + name);
-        moreButton.click();
+    public void enableSpace() {
+        Log.log(Level.FINE, "Starts: enable space");
+        waitByList(moreButton);
+        moreButton.get(0).click();
         enableSpaceAction.click();
     }
 

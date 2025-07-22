@@ -99,7 +99,7 @@ public class AppiumManager {
 
         capabilities.setCapability("appium:commandTimeouts", 5000);
 
-        capabilities.setCapability("appium:platformVersion", "18.4");
+        capabilities.setCapability("appium:platformVersion", "18.5");
 
         capabilities.setCapability("appium:useNewWDA", false);
 

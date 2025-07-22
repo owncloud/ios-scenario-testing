@@ -122,6 +122,8 @@ YOU SHOULD NOT USE THIS BETA VERSION WITH PRODUCTION SYSTEMS, PRODUCTION DATA OR
 	<string>¿Está seguro que desea eliminar estos elementos de su servidor?</string>
 	<key>Are you sure you want to delete this item from the server?</key>
 	<string>¿Esta seguro de que desea borrar este elemento del servidor?</string>
+	<key>Are you sure you want to delete this space? This action cannot be undone.</key>
+	<string>Are you sure you want to delete this space? This action cannot be undone.</string>
 	<key>Are you sure you want to unshare these items?</key>
 	<string>¿Está seguro que desea dejar de compartir estos elementos?</string>
 	<key>Are you sure you want to unshare this item?</key>
@@ -166,6 +168,8 @@ YOU SHOULD NOT USE THIS BETA VERSION WITH PRODUCTION SYSTEMS, PRODUCTION DATA OR
 	<string>Disponible offline</string>
 	<key>Available offline</key>
 	<string>Available offline</string>
+	<key>Available space</key>
+	<string>Available space</string>
 	<key>Average</key>
 	<string>Promedio</string>
 	<key>Back</key>
@@ -186,8 +190,12 @@ YOU SHOULD NOT USE THIS BETA VERSION WITH PRODUCTION SYSTEMS, PRODUCTION DATA OR
 	<string>Busy</string>
 	<key>By feature</key>
 	<string>por característica</string>
+	<key>Bytes</key>
+	<string>Bytes</string>
 	<key>Camera details</key>
 	<string>Detalles de la cámara</string>
+	<key>Can't edit only manager</key>
+	<string>Can't edit only manager</string>
 	<key>Cancel</key>
 	<string>Cancelar</string>
 	<key>Cannot connect to </key>
@@ -222,6 +230,8 @@ Abra 'Detalles Certificado' para más información.</string>
 	<string>Change password</string>
 	<key>Changed {{settingID}} to {{newValue}}.</key>
 	<string>Changed {{settingID}} to {{newValue}}.</string>
+	<key>Choose an image for the space</key>
+	<string>Choose an image for the space</string>
 	<key>Choose destination directory…</key>
 	<string>Elegir carpeta de destino...</string>
 	<key>Clear</key>
@@ -230,6 +240,8 @@ Abra 'Detalles Certificado' para más información.</string>
 	<string>Cleared all.</string>
 	<key>Cleared {{settingID}}.</key>
 	<string>Cleared {{settingID}}.</string>
+	<key>Close</key>
+	<string>Close</string>
 	<key>Close Search</key>
 	<string>Cerrar búsqueda</string>
 	<key>Close Window</key>
@@ -298,12 +310,16 @@ Abra 'Detalles Certificado' para más información.</string>
 	<string>Crear</string>
 	<key>Create folder</key>
 	<string>Crear carpeta</string>
+	<key>Create image</key>
+	<string>Create image</string>
 	<key>Create link</key>
 	<string>Crear enlace</string>
 	<key>Create one file per page</key>
 	<string>Crear un fichero por página</string>
 	<key>Create shortcut</key>
 	<string>Create shortcut</string>
+	<key>Create space</key>
+	<string>Create space</string>
 	<key>Creating %ld folders…</key>
 	<string>Creando %ld carpetas...</string>
 	<key>Creative</key>
@@ -344,6 +360,8 @@ Abra 'Detalles Certificado' para más información.</string>
 	<string>¿Eliminar todos los logs?</string>
 	<key>Delete code</key>
 	<string>Eliminar código</string>
+	<key>Delete space "{{driveName}}"?</key>
+	<string>Delete space "{{driveName}}"?</string>
 	<key>Delete unused local copies</key>
 	<string>Borrar copias locales no usadas</string>
 	<key>Deleting %ld items…</key>
@@ -356,6 +374,8 @@ Abra 'Detalles Certificado' para más información.</string>
 	<string>Descripción</string>
 	<key>Deselect All</key>
 	<string>Deseleccionar todo</string>
+	<key>Details</key>
+	<string>Details</string>
 	<key>Diagnostic Overview</key>
 	<string>Descripción general del diagnóstico</string>
 	<key>Diagnostics</key>
@@ -368,6 +388,10 @@ Abra 'Detalles Certificado' para más información.</string>
 	<string>Disable</string>
 	<key>Disable gestures</key>
 	<string>Deshabilitar gestos</string>
+	<key>Disable space</key>
+	<string>Disable space</string>
+	<key>Disabled</key>
+	<string>Disabled</string>
 	<key>Discard changes</key>
 	<string>Descartar cambios</string>
 	<key>Disconnect</key>
@@ -406,6 +430,14 @@ Abra 'Detalles Certificado' para más información.</string>
 	<string>Editar</string>
 	<key>Edit account</key>
 	<string>Modificar cuenta</string>
+	<key>Edit description</key>
+	<string>Edit description</string>
+	<key>Edit image</key>
+	<string>Edit image</string>
+	<key>Edit space</key>
+	<string>Edit space</string>
+	<key>Emoji or text</key>
+	<string>Emoji or text</string>
 	<key>Enable</key>
 	<string>Activar</string>
 	<key>Enable Pro Features (QA)</key>
@@ -418,6 +450,8 @@ Abra 'Detalles Certificado' para más información.</string>
 	<string>Habilitar el modo de presentación evitará que la pantalla pase al modo de suspensión hasta que se cierre la vista.</string>
 	<key>Enabling this option will attempt to mask private data, so it does not become part of any log. Since logging is a development and debugging feature, though, we can't guarantee that the log file will be free of any private data even with this option enabled. Therefore, please look through any log file and verify its free of any data you're not comfortable sharing before sharing it with anybody.</key>
 	<string>Habilitar esta opción intentará enmascarar los datos privados, por lo que no aparecerán en los logs. Sin embargo, dado que el log es una función de desarrollo y depuración, no podemos garantizar que el archivo de log esté libre de datos privados, incluso con esta opción habilitada. Por lo tanto, revise cualquier log y verifique que esté libre de cualquier dato susceptible antes de compartirlo.</string>
+	<key>Enter a emoji or text</key>
+	<string>Enter a emoji or text</string>
 	<key>Enter a new code with %ld digits</key>
 	<string>Ingrese un nuevo código %!d</string>
 	<key>Enter a search term</key>
@@ -430,8 +464,16 @@ Abra 'Detalles Certificado' para más información.</string>
 	<string>Introduzca el usuario o grupo que quiera invitar.</string>
 	<key>Error</key>
 	<string>Error</string>
+	<key>Error creating space</key>
+	<string>Error creating space</string>
 	<key>Error creating {{itemName}}</key>
 	<string>Error creando {{itemName}}</string>
+	<key>Error deleting {{driveName}}</key>
+	<string>Error deleting {{driveName}}</string>
+	<key>Error disabling {{driveName}}</key>
+	<string>Error disabling {{driveName}}</string>
+	<key>Error enabling {{driveName}}</key>
+	<string>Error enabling {{driveName}}</string>
 	<key>Error fetching transactions</key>
 	<string>Se produjo un error al recuperar las transacciones</string>
 	<key>Error importing %@</key>
@@ -532,6 +574,8 @@ Por favor, use la app para acceder a sus ficheros.</string>
 	<string>Gratis en %@</string>
 	<key>Full Screen</key>
 	<string>Pantalla completa</string>
+	<key>GB</key>
+	<string>GB</string>
 	<key>GPS Location</key>
 	<string>Ubicación GPS</string>
 	<key>General</key>
@@ -556,12 +600,16 @@ Por favor, use la app para acceder a sus ficheros.</string>
 	<string>Help &amp; Contact</string>
 	<key>Hide</key>
 	<string>Hide</string>
+	<key>Hide disabled spaces</key>
+	<string>Hide disabled spaces</string>
 	<key>Histogram</key>
 	<string>Histograma</string>
 	<key>How should this file be saved?</key>
 	<string>¿Cómo debe ser guardado este archivo?</string>
 	<key>ISO</key>
 	<string>ISO</string>
+	<key>If only one member is a manager, that member's permissions can't be edited.</key>
+	<string>If only one member is a manager, that member's permissions can't be edited.</string>
 	<key>If you 'Continue', you will be prompted to allow the '{{app.name}}' app to open the login page where you can enter your credentials.</key>
 	<string>If you 'Continue', you will be prompted to allow the '{{app.name}}' app to open the login page where you can enter your credentials.</string>
 	<key>If you 'Continue', you will be prompted to allow the '{{app.name}}' app to open the {{authmethodName}} login page where you can enter your credentials.</key>
@@ -578,6 +626,8 @@ Por favor, use la app para acceder a sus ficheros.</string>
 	<string>If you'd like to give the account a custom name, please enter it below:</string>
 	<key>Ignore updates</key>
 	<string>Ignorar actualizaciones</string>
+	<key>Image Playground</key>
+	<string>Image Playground</string>
 	<key>Image details</key>
 	<string>Detalles de la imagen</string>
 	<key>Image grid</key>
@@ -630,6 +680,8 @@ Por favor, use la app para acceder a sus ficheros.</string>
 	<string>Rejilla de elementos</string>
 	<key>Item with same name already exists</key>
 	<string>Ya existe un elemento con el mismo nombre</string>
+	<key>KB</key>
+	<string>KB</string>
 	<key>Keywords</key>
 	<string>Palabras clave</string>
 	<key>Landscape</key>
@@ -646,6 +698,8 @@ Por favor, use la app para acceder a sus ficheros.</string>
 	<string>Serie de lentes</string>
 	<key>Light</key>
 	<string>Claro</string>
+	<key>Limit space</key>
+	<string>Limit space</string>
 	<key>Limited Photo Access</key>
 	<string>Acceso limitado a fotos</string>
 	<key>Link</key>
@@ -684,6 +738,8 @@ Por favor, use la app para acceder a sus ficheros.</string>
 	<string>Registrando</string>
 	<key>Login</key>
 	<string>Usuario</string>
+	<key>MB</key>
+	<string>MB</string>
 	<key>Make available offline</key>
 	<string>Hacer disponible offline</string>
 	<key>Make unavailable offline</key>
@@ -692,6 +748,8 @@ Por favor, use la app para acceder a sus ficheros.</string>
 	<string>Administrar</string>
 	<key>Manual</key>
 	<string>Manual</string>
+	<key>Markdown</key>
+	<string>Markdown</string>
 	<key>Markup</key>
 	<string>Marcar</string>
 	<key>Markup Documents</key>
@@ -708,6 +766,8 @@ Por favor, use la app para acceder a sus ficheros.</string>
 	<string>Subir multimedia</string>
 	<key>Media import</key>
 	<string>importar media</string>
+	<key>Members</key>
+	<string>Members</string>
 	<key>Messages</key>
 	<string>Messages</string>
 	<key>Metering</key>
@@ -856,6 +916,8 @@ Por favor, use la app para acceder a sus ficheros.</string>
 	<string>Sobreescribir original</string>
 	<key>Owner</key>
 	<string>Propietario</string>
+	<key>PB</key>
+	<string>PB</string>
 	<key>PDF Documents</key>
 	<string>Documentos PDF</string>
 	<key>Page</key>
@@ -902,6 +964,8 @@ Desactive el bloqueo con contraseña en la configuración de la aplicación.</st
 	<string>Elige un tipo de documento para crear:</string>
 	<key>Pick a name</key>
 	<string>Coja un nombre</string>
+	<key>Pick a photo</key>
+	<string>Pick a photo</string>
 	<key>Pick file or folder</key>
 	<string>Pick file or folder</string>
 	<key>Place</key>
@@ -912,6 +976,8 @@ Desactive el bloqueo con contraseña en la configuración de la aplicación.</st
 	<string>Elija cuántos dígitos desea usar para el bloqueo por código.</string>
 	<key>Please configure an email account</key>
 	<string>Por favor configure una cuenta de correo electrónico</string>
+	<key>Please enter a quota equal or less than 1 PB.</key>
+	<string>Please enter a quota equal or less than 1 PB.</string>
 	<key>Please note: Folders can only be pasted into the %@ app and the same account.</key>
 	<string>Tenga en cuenta que: Las carpetas solo pueden ser pegadas dentro de la aplicación %@ y en la misma cuenta.</string>
 	<key>Please open the app and select the account to re-authenticate.</key>
@@ -942,6 +1008,8 @@ Desactive el bloqueo con contraseña en la configuración de la aplicación.</st
 	<string>Conservar los nombres de los archivos multimedia originales</string>
 	<key>Prevent dragging of files and folders and multiselection using system defined gestures</key>
 	<string>Evite el arrastre de archivos y carpetas y la selección múltiple mediante gestos definidos por el sistema</string>
+	<key>Preview</key>
+	<string>Preview</string>
 	<key>Previous</key>
 	<string>Anterior</string>
 	<key>Previous item</key>
@@ -964,6 +1032,8 @@ Desactive el bloqueo con contraseña en la configuración de la aplicación.</st
 	<string>Programa</string>
 	<key>Public Link</key>
 	<string>Enlace público</string>
+	<key>Public Links</key>
+	<string>Public Links</string>
 	<key>Purchase</key>
 	<string>Compra</string>
 	<key>Purchase failed</key>
@@ -972,6 +1042,10 @@ Desactive el bloqueo con contraseña en la configuración de la aplicación.</st
 	<string>Compras &amp; Suscripciones</string>
 	<key>Quick Access</key>
 	<string>Acceso rápido</string>
+	<key>Quota</key>
+	<string>Quota</string>
+	<key>Quota too high</key>
+	<string>Quota too high</string>
 	<key>RGB</key>
 	<string>RGB</string>
 	<key>Read</key>
@@ -980,6 +1054,8 @@ Desactive el bloqueo con contraseña en la configuración de la aplicación.</st
 	<string>¿Realmente desea eliminar '%@'?</string>
 	<key>Really include available offline files?</key>
 	<string>Desea realmente incluir ficheros disponibles offline?</string>
+	<key>Recent locations</key>
+	<string>Recent locations</string>
 	<key>Recents</key>
 	<string>Recientes</string>
 	<key>Recommend to a friend</key>
@@ -1190,6 +1266,8 @@ Desactive el bloqueo con contraseña en la configuración de la aplicación.</st
 	<string>Show</string>
 	<key>Show all</key>
 	<string>Mostrar todo</string>
+	<key>Show disabled spaces</key>
+	<string>Show disabled spaces</string>
 	<key>Show folders on top</key>
 	<string>Mostrar carpetas encima</string>
 	<key>Show hidden files and folders</key>
@@ -1224,6 +1302,8 @@ Desactive el bloqueo con contraseña en la configuración de la aplicación.</st
 	<string>Sort by {{attribute}} in {{direction}} order</string>
 	<key>Space</key>
 	<string>Space</string>
+	<key>Space Actions</key>
+	<string>Space Actions</string>
 	<key>Spaces</key>
 	<string>Spaces</string>
 	<key>Spot</key>
@@ -1242,12 +1322,16 @@ Desactive el bloqueo con contraseña en la configuración de la aplicación.</st
 	<string>Subscribirse</string>
 	<key>Subscribe Now</key>
 	<string>Subscríbase ahora</string>
+	<key>Subtitle</key>
+	<string>Subtitle</string>
 	<key>Switch Theme Style</key>
 	<string>Cambiar estilo del tema</string>
 	<key>System</key>
 	<string>Sistema</string>
 	<key>System Appeareance</key>
 	<string>Aspecto del sistema</string>
+	<key>TB</key>
+	<string>TB</string>
 	<key>TIFF</key>
 	<string>TIFF</string>
 	<key>Tab %@</key>
@@ -1264,6 +1348,8 @@ Desactive el bloqueo con contraseña en la configuración de la aplicación.</st
 	<string>Términos de uso</string>
 	<key>Text</key>
 	<string>Texto</string>
+	<key>Text/Emoji</key>
+	<string>Text/Emoji</string>
 	<key>Thank you for using %@.
 </key>
 	<string>Gracias por usar %@. 
@@ -1388,6 +1474,8 @@ SI le gustó nuestra aplicación, por favor deje una reseña en la AppStore.
 	<string>Usar refrescado en segundo plano</string>
 	<key>Use ownCloud actions in Shortcuts.</key>
 	<string>Use acciones de ownCloud en Atajos</string>
+	<key>User</key>
+	<string>User</string>
 	<key>User Interface</key>
 	<string>Interfaz de usuario</string>
 	<key>User-approved certificates</key>
@@ -1482,6 +1570,8 @@ SI le gustó nuestra aplicación, por favor deje una reseña en la AppStore.
 	<string>compartido</string>
 	<key>size</key>
 	<string>tamaño</string>
+	<key>space</key>
+	<string>space</string>
 	<key>undated</key>
 	<string>undated</string>
 	<key>unknown</key>
@@ -1492,6 +1582,8 @@ SI le gustó nuestra aplicación, por favor deje una reseña en la AppStore.
 	<string>{{fileName}} (file)</string>
 	<key>{{folderName}} (folder)</key>
 	<string>{{folderName}} (folder)</string>
+	<key>{{freeSpace}} of {{totalSpace}} available</key>
+	<string>{{freeSpace}} of {{totalSpace}} available</string>
 	<key>{{itemCount}} items with {{totalSize}} total ({{fileCount}} files, {{folderCount}} folders)</key>
 	<string>{{itemCount}} elementos con {{totalSize}} en total, ({{fileCount}} ficheros, {{folderCount}} carpetas)</string>
 	<key>{{itemName}} ({{link}}) | password: {{password}}</key>

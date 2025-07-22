@@ -63,20 +63,16 @@ public class CommonPage {
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.id(resourceId)));
     }
 
-    public static void waitById(WebElement mobileElement) {
-        wait.until(ExpectedConditions.visibilityOf(mobileElement));
-    }
-
     public static void waitByIdInvisible(String resourceId) {
         wait.until(ExpectedConditions.invisibilityOfElementLocated(By.id(resourceId)));
     }
 
-    public static void waitByIdInvisible(WebElement mobileElement) {
-        wait.until(ExpectedConditions.invisibilityOf(mobileElement));
-    }
-
     public void waitBySpaces() {
         wait.until(ExpectedConditions.invisibilityOfElementLocated(AppiumBy.id("No spaces")));
+    }
+
+    public void waitByList(List<WebElement> elementList) {
+        wait.until(driver -> !elementList.isEmpty() && elementList.get(0).isDisplayed());
     }
 
     public WebElement findXpath(String xpath) {

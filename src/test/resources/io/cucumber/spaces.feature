@@ -72,7 +72,7 @@ Feature: Spaces
   @remotespace
   Rule: Remote operations on spaces
 
-  Scenario: Create a new space remotelly with correct name and subtitle
+  Scenario: Create a new space remotely with correct name and subtitle
     Given the following spaces have been created in Alice account
       | Space5 | Fifth space |
       | Space6 | Sixth space |
@@ -82,7 +82,7 @@ Feature: Spaces
       | Space5 | Fifth space |
       | Space6 | Sixth space |
 
-    Scenario: Add a new space remotelly with correct name and subtitle
+    Scenario: Add a new space remotely with correct name and subtitle
     Given the following spaces have been created in Alice account
       | Space7 | Seventh space |
     And Alice opens the sidebar
@@ -93,7 +93,7 @@ Feature: Spaces
       | Space7 | Seventh space |
       | Space8 | Eighth space  |
 
-    Scenario: Disable a space remotelly
+    Scenario: Disable a space remotely
     Given the following spaces have been created in Alice account
       | Space9  | Ninth space |
       | Space10 | Tenth space |
@@ -105,3 +105,5 @@ Feature: Spaces
       | Space10 | Tenth space |
     And Alice should not see the following spaces
       | Space9 | Ninth space |
+
+  Rule: Membership

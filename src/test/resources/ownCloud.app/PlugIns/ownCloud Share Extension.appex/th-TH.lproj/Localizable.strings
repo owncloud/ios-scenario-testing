@@ -122,6 +122,8 @@ YOU SHOULD NOT USE THIS BETA VERSION WITH PRODUCTION SYSTEMS, PRODUCTION DATA OR
 	<string>คุณแน่ใจหรือว่าต้องการลบรายการเหล่านี้ออกจากเซิร์ฟเวอร์?</string>
 	<key>Are you sure you want to delete this item from the server?</key>
 	<string>คุณแน่ใจว่าต้องการลบรายการนี้ออกจากเซิร์ฟเวอร์?</string>
+	<key>Are you sure you want to delete this space? This action cannot be undone.</key>
+	<string>Are you sure you want to delete this space? This action cannot be undone.</string>
 	<key>Are you sure you want to unshare these items?</key>
 	<string>คุณแน่ใจว่าต้องการยกเลิกการแชร์รายการเหล่านี้?</string>
 	<key>Are you sure you want to unshare this item?</key>
@@ -166,6 +168,8 @@ YOU SHOULD NOT USE THIS BETA VERSION WITH PRODUCTION SYSTEMS, PRODUCTION DATA OR
 	<string>พร้อมใช้งานแบบออฟไลน์แล้ว</string>
 	<key>Available offline</key>
 	<string>Available offline</string>
+	<key>Available space</key>
+	<string>Available space</string>
 	<key>Average</key>
 	<string>เฉลี่ย</string>
 	<key>Back</key>
@@ -186,8 +190,12 @@ YOU SHOULD NOT USE THIS BETA VERSION WITH PRODUCTION SYSTEMS, PRODUCTION DATA OR
 	<string>Busy</string>
 	<key>By feature</key>
 	<string>ตามคุณลักษณะ</string>
+	<key>Bytes</key>
+	<string>Bytes</string>
 	<key>Camera details</key>
 	<string>รายละเอียดกล้อง</string>
+	<key>Can't edit only manager</key>
+	<string>Can't edit only manager</string>
 	<key>Cancel</key>
 	<string>ยกเลิก</string>
 	<key>Cannot connect to </key>
@@ -222,6 +230,8 @@ Open 'Certificate Details' for more informations.</key>
 	<string>Change password</string>
 	<key>Changed {{settingID}} to {{newValue}}.</key>
 	<string>Changed {{settingID}} to {{newValue}}.</string>
+	<key>Choose an image for the space</key>
+	<string>Choose an image for the space</string>
 	<key>Choose destination directory…</key>
 	<string>เลือกไดเร็กทอรีปลายทาง...</string>
 	<key>Clear</key>
@@ -230,6 +240,8 @@ Open 'Certificate Details' for more informations.</key>
 	<string>Cleared all.</string>
 	<key>Cleared {{settingID}}.</key>
 	<string>Cleared {{settingID}}.</string>
+	<key>Close</key>
+	<string>Close</string>
 	<key>Close Search</key>
 	<string>ปิดการค้นหา</string>
 	<key>Close Window</key>
@@ -298,12 +310,16 @@ Open 'Certificate Details' for more informations.</key>
 	<string>สร้าง</string>
 	<key>Create folder</key>
 	<string>สร้างโฟลเดอร์</string>
+	<key>Create image</key>
+	<string>Create image</string>
 	<key>Create link</key>
 	<string>Create link</string>
 	<key>Create one file per page</key>
 	<string>สร้างหนึ่งไฟล์ต่อหนึ่งหน้า</string>
 	<key>Create shortcut</key>
 	<string>Create shortcut</string>
+	<key>Create space</key>
+	<string>Create space</string>
 	<key>Creating %ld folders…</key>
 	<string>กำลังสร้าง %ld โฟลเดอร์</string>
 	<key>Creative</key>
@@ -344,6 +360,8 @@ Open 'Certificate Details' for more informations.</key>
 	<string>ลบไฟล์ log ทั้งหมด?</string>
 	<key>Delete code</key>
 	<string>ลบรหัส</string>
+	<key>Delete space "{{driveName}}"?</key>
+	<string>Delete space "{{driveName}}"?</string>
 	<key>Delete unused local copies</key>
 	<string>ลบสำเนาที่ไม่ได้ใช้ในเครื่อง</string>
 	<key>Deleting %ld items…</key>
@@ -356,6 +374,8 @@ Open 'Certificate Details' for more informations.</key>
 	<string>รายละเอียด</string>
 	<key>Deselect All</key>
 	<string>ยกเลิกการเลือกทั้งหมด</string>
+	<key>Details</key>
+	<string>Details</string>
 	<key>Diagnostic Overview</key>
 	<string>ภาพรวมการวินิจฉัย</string>
 	<key>Diagnostics</key>
@@ -368,6 +388,10 @@ Open 'Certificate Details' for more informations.</key>
 	<string>Disable</string>
 	<key>Disable gestures</key>
 	<string>Disable gestures</string>
+	<key>Disable space</key>
+	<string>Disable space</string>
+	<key>Disabled</key>
+	<string>Disabled</string>
 	<key>Discard changes</key>
 	<string>ยกเลิกการเปลี่ยนแปลง</string>
 	<key>Disconnect</key>
@@ -406,6 +430,14 @@ Open 'Certificate Details' for more informations.</key>
 	<string>แก้ไข</string>
 	<key>Edit account</key>
 	<string>แก้ไขบัญชี</string>
+	<key>Edit description</key>
+	<string>Edit description</string>
+	<key>Edit image</key>
+	<string>Edit image</string>
+	<key>Edit space</key>
+	<string>Edit space</string>
+	<key>Emoji or text</key>
+	<string>Emoji or text</string>
 	<key>Enable</key>
 	<string>เปิดใช้งาน</string>
 	<key>Enable Pro Features (QA)</key>
@@ -418,6 +450,8 @@ Open 'Certificate Details' for more informations.</key>
 	<string>เปิดใช้งานโหมดการนำเสนอ เพื่อป้องกันไม่ให้จอเข้าสู่โหมดสลีปจนกว่าจะปิดมุมมอง</string>
 	<key>Enabling this option will attempt to mask private data, so it does not become part of any log. Since logging is a development and debugging feature, though, we can't guarantee that the log file will be free of any private data even with this option enabled. Therefore, please look through any log file and verify its free of any data you're not comfortable sharing before sharing it with anybody.</key>
 	<string>การเปิดใช้งานตัวเลือกนี้จะพยายามปกปิดข้อมูลส่วนตัวดังนั้นจึงไม่มีการเก็บบันทึกใดๆ เนื่องจาก log เป็นคุณลักษณะการพัฒนาและดีบัก แม้ว่าจะเปิดใช้งานตัวเลือกนี้เราไม่สามารถรับประกันได้ว่าไฟล์ log จะไม่มีข้อมูลส่วนตัวใดๆ  ดังนั้นโปรดดูไฟล์ log เพื่อความแน่ใจ</string>
+	<key>Enter a emoji or text</key>
+	<string>Enter a emoji or text</string>
 	<key>Enter a new code with %ld digits</key>
 	<string>ใส่รหัสใหม่ %ld ตัวอักษร</string>
 	<key>Enter a search term</key>
@@ -430,8 +464,16 @@ Open 'Certificate Details' for more informations.</key>
 	<string>Enter the user or group you want to invite.</string>
 	<key>Error</key>
 	<string>ข้อผิดพลาด</string>
+	<key>Error creating space</key>
+	<string>Error creating space</string>
 	<key>Error creating {{itemName}}</key>
 	<string>Error creating {{itemName}}</string>
+	<key>Error deleting {{driveName}}</key>
+	<string>Error deleting {{driveName}}</string>
+	<key>Error disabling {{driveName}}</key>
+	<string>Error disabling {{driveName}}</string>
+	<key>Error enabling {{driveName}}</key>
+	<string>Error enabling {{driveName}}</string>
 	<key>Error fetching transactions</key>
 	<string>เกิดข้อผิดพลาดขณะดึงข้อมูลธุรกรรม</string>
 	<key>Error importing %@</key>
@@ -532,6 +574,8 @@ Please use the app to access your files.</string>
 	<string>ฟรีบน %@</string>
 	<key>Full Screen</key>
 	<string>เต็มจอ</string>
+	<key>GB</key>
+	<string>GB</string>
 	<key>GPS Location</key>
 	<string>ตำแหน่ง GPS</string>
 	<key>General</key>
@@ -556,12 +600,16 @@ Please use the app to access your files.</string>
 	<string>Help &amp; Contact</string>
 	<key>Hide</key>
 	<string>Hide</string>
+	<key>Hide disabled spaces</key>
+	<string>Hide disabled spaces</string>
 	<key>Histogram</key>
 	<string>ฮิสโตแกรม</string>
 	<key>How should this file be saved?</key>
 	<string>ไฟล์นี้ควรถูกบันทึก?</string>
 	<key>ISO</key>
 	<string>ISO</string>
+	<key>If only one member is a manager, that member's permissions can't be edited.</key>
+	<string>If only one member is a manager, that member's permissions can't be edited.</string>
 	<key>If you 'Continue', you will be prompted to allow the '{{app.name}}' app to open the login page where you can enter your credentials.</key>
 	<string>If you 'Continue', you will be prompted to allow the '{{app.name}}' app to open the login page where you can enter your credentials.</string>
 	<key>If you 'Continue', you will be prompted to allow the '{{app.name}}' app to open the {{authmethodName}} login page where you can enter your credentials.</key>
@@ -578,6 +626,8 @@ Please use the app to access your files.</string>
 	<string>If you'd like to give the account a custom name, please enter it below:</string>
 	<key>Ignore updates</key>
 	<string>ไม่สนใจการอัปเดต</string>
+	<key>Image Playground</key>
+	<string>Image Playground</string>
 	<key>Image details</key>
 	<string>รายละเอียดรูปภาพ</string>
 	<key>Image grid</key>
@@ -630,6 +680,8 @@ Please use the app to access your files.</string>
 	<string>Item grid</string>
 	<key>Item with same name already exists</key>
 	<string>มีชื่อรายการซ้ำโปรดใช้ชื่ออื่น</string>
+	<key>KB</key>
+	<string>KB</string>
 	<key>Keywords</key>
 	<string>คีย์เวิร์ด</string>
 	<key>Landscape</key>
@@ -646,6 +698,8 @@ Please use the app to access your files.</string>
 	<string>เลนส์อนุกรม</string>
 	<key>Light</key>
 	<string>สว่าง</string>
+	<key>Limit space</key>
+	<string>Limit space</string>
 	<key>Limited Photo Access</key>
 	<string>จำกัดการเข้าถึงภาพถ่าย</string>
 	<key>Link</key>
@@ -684,6 +738,8 @@ Please use the app to access your files.</string>
 	<string>กำลังเก็บบันทึก</string>
 	<key>Login</key>
 	<string>เข้าสู่ระบบ</string>
+	<key>MB</key>
+	<string>MB</string>
 	<key>Make available offline</key>
 	<string>ทำให้พร้อมใช้งานแบบออฟไลน์</string>
 	<key>Make unavailable offline</key>
@@ -692,6 +748,8 @@ Please use the app to access your files.</string>
 	<string>การจัดการ</string>
 	<key>Manual</key>
 	<string>ด้วยตนเอง</string>
+	<key>Markdown</key>
+	<string>Markdown</string>
 	<key>Markup</key>
 	<string>มาร์กอัป</string>
 	<key>Markup Documents</key>
@@ -708,6 +766,8 @@ Please use the app to access your files.</string>
 	<string>การอัปโหลดสื่อ</string>
 	<key>Media import</key>
 	<string>นำเข้าสื่อ</string>
+	<key>Members</key>
+	<string>Members</string>
 	<key>Messages</key>
 	<string>Messages</string>
 	<key>Metering</key>
@@ -856,6 +916,8 @@ Please use the app to access your files.</string>
 	<string>เขียนทับต้นฉบับ</string>
 	<key>Owner</key>
 	<string>เจ้าของ</string>
+	<key>PB</key>
+	<string>PB</string>
 	<key>PDF Documents</key>
 	<string>เอกสาร PDF</string>
 	<key>Page</key>
@@ -902,6 +964,8 @@ Please disable passcode lock in the app settings.</key>
 	<string>Pick a document type to create:</string>
 	<key>Pick a name</key>
 	<string>Pick a name</string>
+	<key>Pick a photo</key>
+	<string>Pick a photo</string>
 	<key>Pick file or folder</key>
 	<string>Pick file or folder</string>
 	<key>Place</key>
@@ -912,6 +976,8 @@ Please disable passcode lock in the app settings.</key>
 	<string>โปรดเลือกจำนวนตัวอักษรที่คุณต้องการใช้สำหรับรหัสปลดล็อค</string>
 	<key>Please configure an email account</key>
 	<string>โปรดกำหนดค่าบัญชีอีเมล</string>
+	<key>Please enter a quota equal or less than 1 PB.</key>
+	<string>Please enter a quota equal or less than 1 PB.</string>
 	<key>Please note: Folders can only be pasted into the %@ app and the same account.</key>
 	<string>โปรดทราบ: สามารถวางโฟลเดอร์ลงในแอพ %@ ด้วยบัญชีเดียวกันเท่านั้น</string>
 	<key>Please open the app and select the account to re-authenticate.</key>
@@ -942,6 +1008,8 @@ Please disable passcode lock in the app settings.</key>
 	<string>รักษาชื่อไฟล์ดั้งเดิม</string>
 	<key>Prevent dragging of files and folders and multiselection using system defined gestures</key>
 	<string>ป้องกันการลากไฟล์และโฟลเดอร์และการเลือกหลายรายการโดยใช้ท่าทางที่ระบบกำหนด</string>
+	<key>Preview</key>
+	<string>Preview</string>
 	<key>Previous</key>
 	<string>ก่อนหน้า</string>
 	<key>Previous item</key>
@@ -964,6 +1032,8 @@ Please disable passcode lock in the app settings.</key>
 	<string>โปรแกรม</string>
 	<key>Public Link</key>
 	<string>ลิงก์สาธารณะ</string>
+	<key>Public Links</key>
+	<string>Public Links</string>
 	<key>Purchase</key>
 	<string>การสั่งซื้อ</string>
 	<key>Purchase failed</key>
@@ -972,6 +1042,10 @@ Please disable passcode lock in the app settings.</key>
 	<string>Purchases &amp; Subscriptions</string>
 	<key>Quick Access</key>
 	<string>เข้าถึงด่วน</string>
+	<key>Quota</key>
+	<string>Quota</string>
+	<key>Quota too high</key>
+	<string>Quota too high</string>
 	<key>RGB</key>
 	<string>RGB</string>
 	<key>Read</key>
@@ -980,6 +1054,8 @@ Please disable passcode lock in the app settings.</key>
 	<string>ต้องการลบ '%@'?</string>
 	<key>Really include available offline files?</key>
 	<string>รวมไฟล์ออฟไลน์ที่มีอยู่?</string>
+	<key>Recent locations</key>
+	<string>Recent locations</string>
 	<key>Recents</key>
 	<string>ล่าสุด</string>
 	<key>Recommend to a friend</key>
@@ -1191,6 +1267,8 @@ Please disable passcode lock in the app settings.</key>
 	<string>Show</string>
 	<key>Show all</key>
 	<string>แสดงทั้งหมด</string>
+	<key>Show disabled spaces</key>
+	<string>Show disabled spaces</string>
 	<key>Show folders on top</key>
 	<string>แสดงโฟลเดอร์ด้านบน</string>
 	<key>Show hidden files and folders</key>
@@ -1225,6 +1303,8 @@ Please disable passcode lock in the app settings.</key>
 	<string>Sort by {{attribute}} in {{direction}} order</string>
 	<key>Space</key>
 	<string>Space</string>
+	<key>Space Actions</key>
+	<string>Space Actions</string>
 	<key>Spaces</key>
 	<string>Spaces</string>
 	<key>Spot</key>
@@ -1243,12 +1323,16 @@ Please disable passcode lock in the app settings.</key>
 	<string>สมัครรับข้อมูล</string>
 	<key>Subscribe Now</key>
 	<string>สมัครเดี๋ยวนี้</string>
+	<key>Subtitle</key>
+	<string>Subtitle</string>
 	<key>Switch Theme Style</key>
 	<string>เปลี่ยนรูปแบบธีม</string>
 	<key>System</key>
 	<string>ระบบ</string>
 	<key>System Appeareance</key>
 	<string>ลักษณะของระบบ</string>
+	<key>TB</key>
+	<string>TB</string>
 	<key>TIFF</key>
 	<string>TIFF</string>
 	<key>Tab %@</key>
@@ -1265,6 +1349,8 @@ Please disable passcode lock in the app settings.</key>
 	<string>ข้อตกลงในการใช้งาน</string>
 	<key>Text</key>
 	<string>ข้อความ</string>
+	<key>Text/Emoji</key>
+	<string>Text/Emoji</string>
 	<key>Thank you for using %@.
 </key>
 	<string>ขอบคุณที่ใช้ %@</string>
@@ -1387,6 +1473,8 @@ If you like our App, please leave an AppStore review.
 	<string>ใช้การรีเฟรชพื้นหลัง</string>
 	<key>Use ownCloud actions in Shortcuts.</key>
 	<string>สร้างทางลัด ownCloud</string>
+	<key>User</key>
+	<string>User</string>
 	<key>User Interface</key>
 	<string>หน้าจอผู้ใช้</string>
 	<key>User-approved certificates</key>
@@ -1481,6 +1569,8 @@ If you like our App, please leave an AppStore review.
 	<string>ถูกแชร์</string>
 	<key>size</key>
 	<string>ขนาด</string>
+	<key>space</key>
+	<string>space</string>
 	<key>undated</key>
 	<string>undated</string>
 	<key>unknown</key>
@@ -1491,6 +1581,8 @@ If you like our App, please leave an AppStore review.
 	<string>{{fileName}} (file)</string>
 	<key>{{folderName}} (folder)</key>
 	<string>{{folderName}} (folder)</string>
+	<key>{{freeSpace}} of {{totalSpace}} available</key>
+	<string>{{freeSpace}} of {{totalSpace}} available</string>
 	<key>{{itemCount}} items with {{totalSize}} total ({{fileCount}} files, {{folderCount}} folders)</key>
 	<string>{{itemCount}} items with {{totalSize}} total ({{fileCount}} files, {{folderCount}} folders)</string>
 	<key>{{itemName}} ({{link}}) | password: {{password}}</key>

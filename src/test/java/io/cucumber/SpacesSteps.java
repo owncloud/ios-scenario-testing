@@ -81,16 +81,14 @@ public class SpacesSteps {
     public void disable_space(DataTable table) {
         StepLogger.logCurrentStep(Level.FINE);
         List<List<String>> listItems = table.asLists();
-        String name = listItems.get(0).get(0);
-        world.spacesPage.disableSpace(name);
+        world.spacesPage.disableSpace();
     }
 
     @When("Alice selects to enable the following spaces")
     public void enable_space(DataTable table) {
         StepLogger.logCurrentStep(Level.FINE);
         List<List<String>> listItems = table.asLists();
-        String name = listItems.get(0).get(0);
-        world.spacesPage.enableSpace(name);
+        world.spacesPage.enableSpace();
     }
 
     @When("Alice {word} disabled spaces")

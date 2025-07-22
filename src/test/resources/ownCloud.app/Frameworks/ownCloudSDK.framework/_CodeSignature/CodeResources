@@ -10,7 +10,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		yPegiMmCfKSQlt9cFA6RHQLaIik=
+		q5n8wy3lSoHc7kBCVHQnLq+e9Bc=
 		</data>
 		<key>LICENSE</key>
 		<data>
@@ -20,6 +20,15 @@
 		<data>
 		aCRf7U0n+/Ek683eGgMUuVd80IE=
 		</data>
+		<key>ca.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			vHqhWMX9GgstiDDKS4R0sGJVztU=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
 		<key>cs.lproj/Localizable.strings</key>
 		<dict>
 			<key>hash</key>
@@ -196,6 +205,15 @@
 			<data>
 			pKLyQYGdmMAMP31Q1282BeET9AuqQGjpF6Wqg7M+pHY=
 			</data>
+		</dict>
+		<key>ca.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			Ac1EvHS6aHJPgz9dvTRr95YFyo1Yv+Z4Mro0xT5oh4g=
+			</data>
+			<key>optional</key>
+			<true/>
 		</dict>
 		<key>cs.lproj/Localizable.strings</key>
 		<dict>
