@@ -13,7 +13,7 @@ import utils.log.Log;
 public class LoginPage extends CommonPage {
 
     @iOSXCUITFindBy(xpath = "//XCUIElementTypeButton[@name=\"Start setup\"]")
-    private WebElement startSetup;
+    private List<WebElement> startSetup;
 
     @iOSXCUITFindBy(xpath = "//XCUIElementTypeTextField[@name=\"Server URL\"]")
     private List<WebElement> urlServer;
@@ -48,7 +48,6 @@ public class LoginPage extends CommonPage {
     @iOSXCUITFindBy(xpath = "//XCUIElementTypeStaticText[@name=\"Files\"]")
     private WebElement files;
 
-    //For the regular tests
     private final String server = System.getProperty("server");
     public static LoginPage instance;
 
@@ -65,7 +64,7 @@ public class LoginPage extends CommonPage {
     }
 
     public boolean loggedIn() {
-        if (!findListId("Alice").isEmpty()) {
+        if (startSetup.isEmpty()) {
             Log.log(Level.FINE, "Logged IN");
             return true;
         } else {
@@ -88,7 +87,7 @@ public class LoginPage extends CommonPage {
     }
 
     public void addAccount() {
-        startSetup.click();
+        startSetup.get(0).click();
     }
 
     public void typeCredentials(String username, String password) {
@@ -105,7 +104,6 @@ public class LoginPage extends CommonPage {
     }
 
     public void selectDrive() {
-        //assuming OIDC == oCIS. Bad, but works ftm
         selectFirstBookmark();
         if (System.getProperty("backend").equals("oCIS")) {
             personal.click();

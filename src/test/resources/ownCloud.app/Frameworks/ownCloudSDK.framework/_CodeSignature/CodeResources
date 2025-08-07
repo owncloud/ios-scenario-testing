@@ -10,11 +10,15 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		q5n8wy3lSoHc7kBCVHQnLq+e9Bc=
+		xvoR2yFmI306gOlrhTxxDrP9oRk=
 		</data>
 		<key>LICENSE</key>
 		<data>
 		hiS82uVbru8AzRHV38+mD2hxCgI=
+		</data>
+		<key>SHA3IUF.LICENSE</key>
+		<data>
+		gylbNVGttFz3U0a8eeg/7fDv3sU=
 		</data>
 		<key>Signal Handling.md</key>
 		<data>
@@ -197,6 +201,13 @@
 			<key>hash2</key>
 			<data>
 			jOtLnuWt7d5Hsx6XXB2QxzrSe2sWWh3NgMfFRetluQM=
+			</data>
+		</dict>
+		<key>SHA3IUF.LICENSE</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			4cv6L4QBZGt4+xNYq83WLd/hnMPqOUi9IY083T/X4Oc=
 			</data>
 		</dict>
 		<key>Signal Handling.md</key>

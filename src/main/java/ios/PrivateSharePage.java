@@ -101,6 +101,7 @@ public class PrivateSharePage extends CommonPage {
             addExpirationDate.click();
             datePicker.click();
             nextMonth.click();
+            waitById(expirationDay);
             findId(expirationDay).click();
         } else {
             if (hasExpiration()){
