@@ -17,7 +17,7 @@ public class FolderPickerPage extends CommonPage {
     @iOSXCUITFindBy(id = "Create folder")
     private WebElement createFolder;
 
-    @iOSXCUITFindBy(xpath = "(//XCUIElementTypeCell[@name=\"Personal\"])[2]/XCUIElementTypeOther[1]/XCUIElementTypeOther")
+    @iOSXCUITFindBy(xpath = "(//XCUIElementTypeImage[@name=\"person\"])[2]")
     private WebElement personalList;
 
     @iOSXCUITFindBy(xpath = "(//XCUIElementTypeCell[@name=\"Files\"])[2]/XCUIElementTypeOther[1]/XCUIElementTypeOther")

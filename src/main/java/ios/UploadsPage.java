@@ -16,8 +16,14 @@ import utils.log.Log;
 
 public class UploadsPage extends CommonPage {
 
+    @iOSXCUITFindBy(id = "PXGGridLayout-Group")
+    private WebElement photos_sectioned_layout;
+
     @iOSXCUITFindBy(xpath = "(//XCUIElementTypeButton[@name=\"Add\"])[2]")
     private WebElement add;
+
+    @iOSXCUITFindBy(xpath = "//XCUIElementTypeButton[@name=\"Add\" and @label=\"Done\"]")
+    private WebElement done;
 
     public static UploadsPage instance;
 
@@ -35,17 +41,16 @@ public class UploadsPage extends CommonPage {
 
     public void selectPhotoGallery(int selection) {
         Log.log(Level.FINE, "Starts: Select Photo Gallery");
-        List<WebElement> images = driver.findElements(By.className("XCUIElementTypeImage"));
+        List<WebElement> images = photos_sectioned_layout.findElements((By.name("PXGGridLayout-Info")));
+        Log.log(Level.FINE, "Number of images found: " + images.size());
         int j = 0;
         for (int i = 0; i < images.size() && j < selection; i++) {
             WebElement image = images.get(i);
-            //select only in the group of images available
-            if (image.getAttribute("accessible").equals("true")) {
-                image.click();
-                j++;
-            }
+            //For any reason, the normal click does not work here
+            tap(image);
+            j++;
         }
-        add.click();
+        done.click();
     }
 
     public boolean photoUploaded(ArrayList<OCFile> listFiles, int photos) {

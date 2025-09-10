@@ -23,7 +23,7 @@ public class ShortcutPage extends CommonPage {
     @iOSXCUITFindBy(id = "Pick file or folder")
     private WebElement pickFile;
 
-    @iOSXCUITFindBy(xpath = "(//XCUIElementTypeCell[@name=\"Personal\"])[2]/XCUIElementTypeOther[1]/XCUIElementTypeOther")
+    @iOSXCUITFindBy(xpath = "(//XCUIElementTypeImage[@name=\"person\"])[2]")
     private WebElement personalList;
 
     @iOSXCUITFindBy(id = "Safari")

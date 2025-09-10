@@ -117,28 +117,60 @@ public class CommonPage {
     }
 
     public void longPress(WebElement element) {
+        // Get the top-left corner coordinates of the element
         Point location = element.getLocation();
+        // Create a touch input source named "longp"
         PointerInput pointerInput = new PointerInput(PointerInput.Kind.TOUCH, "longp");
+        // Create a new sequence of touch actions
         Sequence longPress = new Sequence(pointerInput, 0);
+        // Move instantly to the element's location
         longPress.addAction(pointerInput.createPointerMove(Duration.ZERO,
                 PointerInput.Origin.viewport(), location.x, location.y));
+        // Touch down (finger pressed on the screen)
         longPress.addAction(pointerInput.createPointerDown(PointerInput.MouseButton.LEFT.asArg()));
+        // Stay pressed on the same spot for 1 second (long press)
         longPress.addAction(pointerInput.createPointerMove(Duration.ofSeconds(1),
                 PointerInput.Origin.viewport(), location.x, location.y));
+        // Release the touch (finger lifted)
         longPress.addAction(pointerInput.createPointerUp(PointerInput.MouseButton.LEFT.asArg()));
+        // Execute the sequence on the device
         driver.perform(ImmutableList.of(longPress));
-
     }
 
     public void tap(int X, int Y) {
+        // Log the coordinates where the tap will be performed
         Log.log(Level.FINE, "Starts: tap on X: " + X + ", Y: " + Y);
+        // Create a touch input source named "finger"
         PointerInput finger = new PointerInput(PointerInput.Kind.TOUCH, "finger");
+        // Create a new sequence of touch actions with id = 1
         Sequence tapSeq = new Sequence(finger, 1);
-        tapSeq.addAction(finger.createPointerMove(Duration.ofSeconds(4), PointerInput.Origin.viewport(), X, Y))
+        // Move the finger to the specified (X, Y) coordinates
+        tapSeq.addAction(finger.createPointerMove(Duration.ofSeconds(4),
+                        PointerInput.Origin.viewport(), X, Y))
+                // Touch down (finger pressed on the screen)
                 .addAction(finger.createPointerDown(PointerInput.MouseButton.LEFT.asArg()))
+                // Release immediately (finger lifted) -> completes the tap
                 .addAction(finger.createPointerUp(PointerInput.MouseButton.LEFT.asArg()));
+        // Execute the sequence on the device
         driver.perform(Arrays.asList(tapSeq));
     }
+
+
+    public void tap(WebElement element) {
+        Point location = element.getLocation();
+        PointerInput pointerInput = new PointerInput(PointerInput.Kind.TOUCH, "tap");
+        Sequence tap = new Sequence(pointerInput, 0);
+        // Move the pointer instantly to the element's location
+        tap.addAction(pointerInput.createPointerMove(Duration.ZERO,
+                PointerInput.Origin.viewport(), location.x, location.y));
+        // Press down (touch start)
+        tap.addAction(pointerInput.createPointerDown(PointerInput.MouseButton.LEFT.asArg()));
+        // Release immediately (touch end) -> simple click/tap
+        tap.addAction(pointerInput.createPointerUp(PointerInput.MouseButton.LEFT.asArg()));
+        // Execute the sequence
+        driver.perform(ImmutableList.of(tap));
+    }
+
 
     public void browse(String folderName) {
         Log.log(Level.FINE, "Starts: browse to " + folderName);

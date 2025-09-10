@@ -11,7 +11,7 @@ Feature: Private Share
   @createshare
   Rule: Create a share
 
-  @smoke
+  @smoke @expiration
   Scenario Outline: Correct share with user and expiration
     Given the following items have been created in Alice account
       | <type> | <item> |
@@ -32,7 +32,7 @@ Feature: Private Share
       | folder | Share2     | Editor      | Bob    | Contextual | 0          |
       | folder | Share3     | Upload      | Bob    | Actions    | 14         |
 
-  @smoke
+  @smoke @expiration
   Scenario Outline: Correct share with group
     Given the following items have been created in Alice account
       | <type> | <item> |
