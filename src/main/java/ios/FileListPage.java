@@ -332,10 +332,12 @@ public class FileListPage extends CommonPage {
     public void openPrivateLink(String privateLink) {
         Log.log(Level.FINE, "Starts: Open private link: " + privateLink);
         //Accept opening files in oC. Just one time...
-        if (!findListId("Open").isEmpty()) {
-            findId("Open").click();
-        }
         driver.get(privateLink);
+        try {
+            driver.switchTo().alert().accept();
+        } catch (Exception e) {
+            // If alert is not present, do nothing
+        }
     }
 
     public void openFakePrivateLink() {
