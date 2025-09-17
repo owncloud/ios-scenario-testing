@@ -678,6 +678,8 @@ Please use the app to access your files.</string>
 	<string>Issues</string>
 	<key>Item grid</key>
 	<string>Item grid</string>
+	<key>Item removed</key>
+	<string>Item removed</string>
 	<key>Item with same name already exists</key>
 	<string>Item with same name already exists</string>
 	<key>KB</key>
@@ -1400,6 +1402,8 @@ If you like our App, please leave an AppStore review.
 	<string>This folder is empty. Fill it with content:</string>
 	<key>This folder no longer exists on the server.</key>
 	<string>此文件夹已不存在于服务器上。</string>
+	<key>This item no longer exists on the server.</key>
+	<string>This item no longer exists on the server.</string>
 	<key>This permission is needed to upload photos and videos from your photo library.</key>
 	<string>需要此权限才能从你的图片库中上传照片和视频。</string>
 	<key>This shortcut points to:

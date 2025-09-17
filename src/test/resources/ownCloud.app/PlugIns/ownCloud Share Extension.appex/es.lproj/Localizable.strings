@@ -678,6 +678,8 @@ Por favor, use la app para acceder a sus ficheros.</string>
 	<string>Problemas</string>
 	<key>Item grid</key>
 	<string>Rejilla de elementos</string>
+	<key>Item removed</key>
+	<string>Item removed</string>
 	<key>Item with same name already exists</key>
 	<string>Ya existe un elemento con el mismo nombre</string>
 	<key>KB</key>
@@ -1400,6 +1402,8 @@ SI le gustó nuestra aplicación, por favor deje una reseña en la AppStore.
 	<string>Carpeta vacía. Añada contenido:</string>
 	<key>This folder no longer exists on the server.</key>
 	<string>Esa carpeta ya no existe en el servidor.</string>
+	<key>This item no longer exists on the server.</key>
+	<string>This item no longer exists on the server.</string>
 	<key>This permission is needed to upload photos and videos from your photo library.</key>
 	<string>Este permiso es necesario para subir fotos y videos desde su biblioteca de fotos.</string>
 	<key>This shortcut points to:

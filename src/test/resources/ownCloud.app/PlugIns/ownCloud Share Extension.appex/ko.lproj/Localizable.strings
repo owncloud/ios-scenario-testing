@@ -678,6 +678,8 @@ Please use the app to access your files.</string>
 	<string>문제점</string>
 	<key>Item grid</key>
 	<string>Item grid</string>
+	<key>Item removed</key>
+	<string>Item removed</string>
 	<key>Item with same name already exists</key>
 	<string>동일한 이름의 항목이 이미 존재합니다.</string>
 	<key>KB</key>
@@ -1399,6 +1401,8 @@ If you like our App, please leave an AppStore review.
 	<string>This folder is empty. Fill it with content:</string>
 	<key>This folder no longer exists on the server.</key>
 	<string>이 폴더는 더 이상 서버에 존재하지 않습니다.</string>
+	<key>This item no longer exists on the server.</key>
+	<string>This item no longer exists on the server.</string>
 	<key>This permission is needed to upload photos and videos from your photo library.</key>
 	<string>사진 보관함에서 사진 및 동영상을 업로드하려면 이 권한이 필요합니다.</string>
 	<key>This shortcut points to:

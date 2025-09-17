@@ -678,6 +678,8 @@ Please use the app to access your files.</string>
 	<string>ปัญหา</string>
 	<key>Item grid</key>
 	<string>Item grid</string>
+	<key>Item removed</key>
+	<string>Item removed</string>
 	<key>Item with same name already exists</key>
 	<string>มีชื่อรายการซ้ำโปรดใช้ชื่ออื่น</string>
 	<key>KB</key>
@@ -1399,6 +1401,8 @@ If you like our App, please leave an AppStore review.
 	<string>This folder is empty. Fill it with content:</string>
 	<key>This folder no longer exists on the server.</key>
 	<string>โฟลเดอร์นี้ไม่มีอยู่บนเซิร์ฟเวอร์อีกต่อไป</string>
+	<key>This item no longer exists on the server.</key>
+	<string>This item no longer exists on the server.</string>
 	<key>This permission is needed to upload photos and videos from your photo library.</key>
 	<string>จำเป็นต้องได้รับอนุญาตเพื่ออัปโหลดรูปภาพและวิดีโอจากคลังรูปภาพของคุณ</string>
 	<key>This shortcut points to:

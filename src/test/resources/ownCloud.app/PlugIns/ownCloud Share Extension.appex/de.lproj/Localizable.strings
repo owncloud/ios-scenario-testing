@@ -678,6 +678,8 @@ Bitte verwenden Sie die App, um auf Ihre Dateien zuzugreifen.</string>
 	<string>Probleme</string>
 	<key>Item grid</key>
 	<string>Element-Kacheln</string>
+	<key>Item removed</key>
+	<string>Item removed</string>
 	<key>Item with same name already exists</key>
 	<string>Element mit demselben Namen existiert bereits</string>
 	<key>KB</key>
@@ -1400,6 +1402,8 @@ Wenn Ihnen unsere App gefällt, hinterlassen Sie bitte eine AppStore-Rezension.
 	<string>Dieser Ordner ist leer. Füllen Sie ihn mit Inhalt:</string>
 	<key>This folder no longer exists on the server.</key>
 	<string>Dieser Ordner existiert nicht mehr auf dem Server</string>
+	<key>This item no longer exists on the server.</key>
+	<string>This item no longer exists on the server.</string>
 	<key>This permission is needed to upload photos and videos from your photo library.</key>
 	<string>Diese Berechtigung ist erforderlich, um Fotos und Videos aus dem Fotoalbum hochzuladen.</string>
 	<key>This shortcut points to:

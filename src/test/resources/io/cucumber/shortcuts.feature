@@ -62,3 +62,19 @@ Feature: Shortcuts
     Examples:
       | type | name      |
       | file | shortcut4 |
+
+  Scenario Outline: Open shortcut over non-existing file
+    Given the following items have been created in Alice account
+      | <type> | <name>.txt |
+    And Alice selects the option Create Shortcut
+    And Alice creates a file shortcut with the following fields
+      | <name>.txt | <name> |
+    And Alice selects to delete the file <name>.txt using the Actions menu
+    And Alice confirms the deletion
+    When Alice opens the <type> <name>.url
+    Then Alice should see the following error
+      | The destination this shortcut points to could not be found |
+
+      Examples:
+      | type | name      |
+      | file | shortcut5 |

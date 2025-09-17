@@ -678,6 +678,8 @@ Ju lutemi, për të hyrë te kartelat tuaja përdorni aplikacionin.</string>
 	<string>Probleme</string>
 	<key>Item grid</key>
 	<string>Mozaik objektesh</string>
+	<key>Item removed</key>
+	<string>Item removed</string>
 	<key>Item with same name already exists</key>
 	<string>Ka tashmë një objekt me të njëjtin emër</string>
 	<key>KB</key>
@@ -1400,6 +1402,8 @@ Nëse e pëlqeni Aplikacionin tonë, ju lutemi, lini një shqyrtim te AppStore.
 	<string>Kjo dosje është e zbrazët. Mbusheni me lëndë:</string>
 	<key>This folder no longer exists on the server.</key>
 	<string>Kjo dosje s’ekziston më te shërbyesi.</string>
+	<key>This item no longer exists on the server.</key>
+	<string>This item no longer exists on the server.</string>
 	<key>This permission is needed to upload photos and videos from your photo library.</key>
 	<string>Kjo leje është e domosdoshme për të ngarkuar foto dhe video prej fototekës tuaj.</string>
 	<key>This shortcut points to:

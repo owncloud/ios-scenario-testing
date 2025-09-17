@@ -678,6 +678,8 @@ Please use the app to access your files.</string>
 	<string>Проблемы</string>
 	<key>Item grid</key>
 	<string>Сетка предметов</string>
+	<key>Item removed</key>
+	<string>Item removed</string>
 	<key>Item with same name already exists</key>
 	<string>Элемент с тем же именем уже существует</string>
 	<key>KB</key>
@@ -1400,6 +1402,8 @@ If you like our App, please leave an AppStore review.
 	<string>Эта папка пуста. Заполните ее содержимым:</string>
 	<key>This folder no longer exists on the server.</key>
 	<string>Эта папка больше не существует на сервере.</string>
+	<key>This item no longer exists on the server.</key>
+	<string>This item no longer exists on the server.</string>
 	<key>This permission is needed to upload photos and videos from your photo library.</key>
 	<string>Это разрешение необходимо для загрузки фото и видео из вашей библиотеки.</string>
 	<key>This shortcut points to:

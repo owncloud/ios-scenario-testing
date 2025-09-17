@@ -8,6 +8,7 @@ import java.util.List;
 import java.util.logging.Level;
 import java.util.regex.Pattern;
 
+import io.appium.java_client.AppiumBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import io.appium.java_client.pagefactory.iOSXCUITFindBy;
 import utils.LocProperties;
@@ -153,6 +154,10 @@ public class FileListPage extends CommonPage {
     public void openShortcutLink() {
         Log.log(Level.FINE, "Starts: open shortcut link");
         openLink.click();
+        //If notification arises...
+        if (!findListId("Open link").isEmpty()){
+            findListId("Open link").get(0).click();
+        }
     }
 
     public void openThreeDotButton() {
@@ -289,6 +294,11 @@ public class FileListPage extends CommonPage {
             dontAllow.get(0).click();
         }
         return !findListId(itemName).isEmpty();
+    }
+
+    public boolean isTextInScreen(String text) {
+        Log.log(Level.FINE, "Starts: Check if text is in screen: " + text);
+        return findIOSPredicateSubText(text).isDisplayed();
     }
 
     public boolean isItemInSidebar(String itemName) {

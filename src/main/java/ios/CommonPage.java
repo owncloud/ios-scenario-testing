@@ -99,6 +99,12 @@ public class CommonPage {
         return driver.findElements(AppiumBy.cssSelector(cssClass));
     }
 
+    public WebElement findIOSPredicateSubText(String text) {
+        return driver.findElement(AppiumBy.iOSNsPredicateString(
+                "label CONTAINS '" + text + "' OR name CONTAINS '" + text + "'"
+        ));
+    }
+
     public static void swipe(double startx, double starty, double endx, double endy) {
         Dimension size = driver.manage().window().getSize();
         int startY = (int) (size.height * starty);

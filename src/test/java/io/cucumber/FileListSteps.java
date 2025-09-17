@@ -466,7 +466,7 @@ public class FileListSteps {
         List<List<String>> listItems = table.asLists();
         String error = listItems.get(0).get(0);
         Log.log(Level.FINE, "Error message to check: " + error);
-        assertTrue(world.fileListPage.isItemInScreen(error));
+        assertTrue(world.fileListPage.isTextInScreen(error));
     }
 
     @Then("Alice should see the browser")
