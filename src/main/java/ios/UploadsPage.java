@@ -50,7 +50,8 @@ public class UploadsPage extends CommonPage {
             tap(image);
             j++;
         }
-        done.click();
+        //For iOS 26: done.click
+        add.click();
     }
 
     public boolean photoUploaded(ArrayList<OCFile> listFiles, int photos) {
