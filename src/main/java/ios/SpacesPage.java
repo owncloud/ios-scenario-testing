@@ -91,14 +91,14 @@ public class SpacesPage extends CommonPage {
         spaceSubtitle.sendKeys(subtitle);
     }
 
-    public void disableSpace() {
+    public void disableSpace(String name, String subtitle) {
         Log.log(Level.FINE, "Starts: disable space ");
         waitByList(moreButton);
         moreButton.get(0).click();
         disableSpaceAction.click();
     }
 
-    public void enableSpace() {
+    public void enableSpace(String name) {
         Log.log(Level.FINE, "Starts: enable space");
         waitByList(moreButton);
         moreButton.get(0).click();
@@ -117,39 +117,24 @@ public class SpacesPage extends CommonPage {
         hideDisabledSpacesAction.click();
     }
 
-    public boolean isSpaceInDisabledList(List<List<String>> spaces) {
-        Log.log(Level.FINE, "Starts: check space is in disabled list");
-        spaceActions.click();
-        showDisabledSpacesAction.click();
+    public boolean isSpaceInDisabledList(String name, String subtitle) throws InterruptedException {
+        Log.log(Level.FINE, "Starts: check space" + name + "is in disabled list");
+        showDisabledSpaces();
         boolean disabledText = findTextByXpath("Disabled").isDisplayed();
-        return disabledText && areAllSpacesVisible(spaces);
+        return disabledText && isSpaceVisible(name, subtitle);
     }
 
-    public boolean areAllSpacesVisible(List<List<String>> spaces){
-        Log.log(Level.FINE, "Starts: check all spaces are visible");
-        for (List<String> rows : spaces) {
-            String name = rows.get(0);
-            String description = rows.get(1);
-            Log.log(Level.FINE, "Space name: " + name + " Space description: " + description);
-            if (findListId(name).isEmpty() && findListId(description).isEmpty()){
-                Log.log(Level.FINE, "Space not found");
-                return false;
-            } else {
-                Log.log(Level.FINE, "Space found");
-            }
+    public boolean isSpaceVisible(String name, String subtitle) throws InterruptedException {
+        Log.log(Level.FINE, "Starts: check " + name + " space are visible");
+        //Ugly waiter because space list refreshes randomly
+        Thread.sleep(5000);
+        Log.log(Level.FINE, "Space name: " + name + " Space description: " + subtitle);
+        if (findListId(name).isEmpty() && findListId(subtitle).isEmpty()){
+            Log.log(Level.FINE, "Space not found");
+            return false;
+        } else {
+            Log.log(Level.FINE, "Space found");
+            return true;
         }
-        return true;
-    }
-
-    public boolean areAllSpacesNotVisible(List<List<String>> spaces){
-        Log.log(Level.FINE, "Starts: check all spaces are not visible");
-        for (List<String> rows : spaces) {
-            String name = rows.get(0);
-            String description = rows.get(1);
-            if (!findListId(name).isEmpty() && !findListId(description).isEmpty()){
-                return false;
-            }
-        }
-        return true;
     }
 }
