@@ -14,10 +14,11 @@ Feature: Public Links
   @smoke
   Scenario Outline: Create a public link with name
     Given the following items have been created in Alice account
+      | type   | name   |
       | <type> | <item> |
     When Alice selects to share the <type> <item> using the <menu> menu
     And Alice creates link on <type> <item> with the following fields
-      | permission    | <permission> |
+      | permissions   | <permission> |
       | password-auto |              |
       | name          | <name>       |
     Then link should be created on <item> with the following fields
@@ -31,11 +32,12 @@ Feature: Public Links
 
   Scenario Outline: Create a public link with password created by user
     Given the following items have been created in Alice account
+      | type   | name   |
       | <type> | <item> |
     When Alice selects to share the <type> <item> using the Actions menu
     And Alice creates link on <type> <item> with the following fields
-      | permission | Viewer     |
-      | password   | <password> |
+      | permissions | Viewer     |
+      | password    | <password> |
     Then link should be created on <item> with the following fields
       | password | <password> |
 
@@ -46,10 +48,11 @@ Feature: Public Links
 
   Scenario Outline: Create a public link with password generated automatically
     Given the following items have been created in Alice account
+      | type   | name   |
       | <type> | <item> |
     When Alice selects to share the <type> <item> using the Actions menu
     And Alice creates link on <type> <item> with the following fields
-      | permission    | Viewer |
+      | permissions   | Viewer |
       | password-auto |        |
     Then link should be created on <item> with the following fields
       | password | <password> |
@@ -61,10 +64,11 @@ Feature: Public Links
 
   Scenario Outline: Create a public link with expiration date
     Given the following items have been created in Alice account
+      | type   | name   |
       | <type> | <item> |
     When Alice selects to share the <type> <item> using the Actions menu
     And Alice creates link on <type> <item> with the following fields
-      | permission    | Viewer       |
+      | permissions   | Viewer       |
       | expiration    | <expiration> |
       | password-auto |              |
     Then link should be created on <item> with the following fields
@@ -76,10 +80,11 @@ Feature: Public Links
 
   Scenario Outline: Create a public link with permissions on a folder
     Given the following items have been created in Alice account
+      | type   | name   |
       | folder | <item> |
     When Alice selects to share the folder <item> using the Actions menu
     And Alice creates link on folder <item> with the following fields
-      | permission    | <permissions> |
+      | permissions   | <permissions> |
       | password-auto |               |
     Then link should be created on <item> with the following fields
       | permission | <permissions> |
@@ -95,12 +100,13 @@ Feature: Public Links
   @expiration
   Scenario Outline: Edit existing share on a folder, changing permissions
     Given the following items have been created in Alice account
+      | type   | name   |
       | folder | <item> |
     And Alice has shared the folder <item> by link
     When Alice selects to share the folder <item> using the Actions menu
     And Alice edits the link on <item> with the following fields
       | permissions | <permissions> |
-      | expiration  | 20             |
+      | expiration  | 20            |
     Then link should be created on <item> with the following fields
       | permissions | <permissions> |
       | expiration  | 20            |
@@ -112,6 +118,7 @@ Feature: Public Links
 
   Scenario: Edit existing link removing password
     Given the following items have been created in Alice account
+      | type   | name    |
       | folder | Links13 |
     And Alice has shared the folder Links13 by link
     When Alice selects to share the folder Links13 using the Contextual menu
@@ -125,6 +132,7 @@ Feature: Public Links
 
   Scenario Outline: Delete existing link
     Given the following items have been created in Alice account
+      | type   | name   |
       | <type> | <item> |
     And Alice has shared the <type> <item> by link
     When Alice selects to share the <type> <item> using the Contextual menu
@@ -140,6 +148,7 @@ Feature: Public Links
 
   Scenario Outline: Check shared by link in list
     Given the following items have been created in Alice account
+      | type   | name   |
       | <type> | <item> |
     And Alice has shared the folder <item> by link
     When Alice opens the sidebar

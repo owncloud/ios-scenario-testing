@@ -82,10 +82,9 @@ public class SharePage extends CommonPage {
         createLinkButton.click();
     }
 
-    public boolean checkCorrectShare(OCShare remoteShare, List<List<String>> dataList) {
+    public boolean checkCorrectShare(OCShare remoteShare, Map<String, String> dataList) {
         Log.log(Level.FINE, "Starts: Check correct share");
-        HashMap<String, String> mapFields = turnListToHashmap(dataList);
-        for (Map.Entry<String, String> entry : mapFields.entrySet()) {
+        for (Map.Entry<String, String> entry : dataList.entrySet()) {
             Log.log(Level.FINE, "Entry KEY: " + entry.getKey() + " - VALUE: " + entry.getValue());
             switch (entry.getKey()) {
                 case "id" -> {

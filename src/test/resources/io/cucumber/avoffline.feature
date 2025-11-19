@@ -10,6 +10,7 @@ Feature: Set items as available offline (downloaded and synced)
 
   Scenario Outline: Set a file as available offline using the Actions menu
     Given the following items have been created in Alice account
+      | type   | name     |
       | <type> | <item> |
     When Alice selects to make available offline the <type> <item> using the <menu> menu
     Then Alice should see the item <item> as av.offline
@@ -21,6 +22,7 @@ Feature: Set items as available offline (downloaded and synced)
 
   Scenario: Inserting a file inside an av.offline folder, turns the file av.offline
     Given the following items have been created in Alice account
+      | type   | name       |
       | file   | file3.pdf  |
       | folder | folderTest |
     When Alice selects to make available offline the folder folderTest using the Contextual menu
@@ -33,6 +35,7 @@ Feature: Set items as available offline (downloaded and synced)
   #Ignored till problem with dialogs in DOM si fixed
   Scenario: Moving a file inside an av.offline folder to a non av.offline folder, it turns not av.offline
     Given the following items have been created in Alice account
+      | type   | name                  |
       | folder | folderTest2           |
       | file   | folderTest2/file4.txt |
     When Alice selects to make available offline the folder folderTest2 using the Contextual menu
@@ -46,6 +49,7 @@ Feature: Set items as available offline (downloaded and synced)
 
   Scenario: Av.offline item is available in "Av.offline" quick access
     Given the following items have been created in Alice account
+      | type   | name      |
       | file   | file5.txt |
       | folder | folder5   |
     And Alice selects to make available offline the file file5.txt using the Contextual menu

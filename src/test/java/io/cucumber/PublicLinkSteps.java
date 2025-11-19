@@ -4,7 +4,7 @@ import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
 import java.util.ArrayList;
-import java.util.List;
+import java.util.Map;
 import java.util.logging.Level;
 
 import io.cucumber.datatable.DataTable;
@@ -34,14 +34,16 @@ public class PublicLinkSteps {
     public void create_link_with_fields(String type, String itemName, DataTable table) {
         StepLogger.logCurrentStep(Level.FINE);
         world.sharePage.createLink();
-        List<List<String>> listItems = table.asLists();
-        for (List<String> rows : listItems) {
-            switch (rows.get(0)) {
-                case "password" -> world.publicLinkPage.setPassword(rows.get(1));
+        Map<String, String> fields = table.asMap(String.class, String.class);
+        for (Map.Entry<String, String> entry : fields.entrySet()) {
+            String key = entry.getKey();
+            String value = entry.getValue();
+            switch (key) {
+                case "password" -> world.publicLinkPage.setPassword(value);
                 case "password-auto" -> world.publicLinkPage.setPasswordAuto();
-                case "permission" -> world.publicLinkPage.setPermission(rows.get(1));
-                case "expiration" -> world.publicLinkPage.setExpiration(rows.get(1));
-                case "name" -> world.publicLinkPage.setName(rows.get(1));
+                case "permissions" -> world.publicLinkPage.setPermission(value);
+                case "expiration" -> world.publicLinkPage.setExpiration(value);
+                case "name" -> world.publicLinkPage.setName(value);
             }
         }
         world.publicLinkPage.submitLink();
@@ -50,13 +52,15 @@ public class PublicLinkSteps {
     @When("Alice edits the link on {word} with the following fields")
     public void edit_public_link(String itemName, DataTable table) {
         StepLogger.logCurrentStep(Level.FINE);
-        List<List<String>> listItems = table.asLists();
+        Map<String, String> fields = table.asMap(String.class, String.class);
         world.sharePage.openPublicLink();
-        for (List<String> rows : listItems) {
-            switch (rows.get(0)) {
-                case "permissions" -> world.publicLinkPage.setPermission(rows.get(1));
-                case "password" -> world.publicLinkPage.setPassword(rows.get(1));
-                case "expiration" -> world.publicLinkPage.setExpiration(rows.get(1));
+        for (Map.Entry<String, String> entry : fields.entrySet()) {
+            String key = entry.getKey();
+            String value = entry.getValue();
+            switch (key) {
+                case "permissions" -> world.publicLinkPage.setPermission(value);
+                case "password" -> world.publicLinkPage.setPassword(value);
+                case "expiration" -> world.publicLinkPage.setExpiration(value);
             }
         }
         world.publicLinkPage.saveChanges();
@@ -75,26 +79,30 @@ public class PublicLinkSteps {
         StepLogger.logCurrentStep(Level.FINE);
         //1. Asserts in UI
         //1.1 Checking in Shares page
-        List<List<String>> listItems = table.asLists();
-        for (List<String> rows : listItems) {
-            switch (rows.get(0)) {
-                case "permission" -> {} //a lot of flakyness by asserting sharePage.isLinkPermissionCorrect
-                case "name" -> assertTrue(world.sharePage.isNameCorrect(rows.get(1)));
+        Map<String, String> fields = table.asMap(String.class, String.class);
+        for (Map.Entry<String, String> entry : fields.entrySet()) {
+            String key = entry.getKey();
+            String value = entry.getValue();
+            switch (key) {
+                case "permissions" -> {} //a lot of flakyness by asserting sharePage.isLinkPermissionCorrect
+                case "name" -> assertTrue(world.sharePage.isNameCorrect(value));
             }
         }
         //1.2. Checking in link page
         world.sharePage.openPublicLink();
-        for (List<String> rows : listItems) {
-            switch (rows.get(0)) {
-                case "password" -> assertTrue(world.publicLinkPage.isPasswordEnabled(itemName, rows.get(1)));
-                case "permission" -> assertTrue(world.publicLinkPage.isPermissionEnabled(rows.get(1)));
-                case "expiration" -> assertTrue(world.publicLinkPage.isExpirationCorrect(rows.get(1)));
-                case "name" -> assertTrue(world.publicLinkPage.isNameCorrect(rows.get(1)));
+        for (Map.Entry<String, String> entry : fields.entrySet()) {
+            String key = entry.getKey();
+            String value = entry.getValue();
+            switch (key) {
+                case "password" -> assertTrue(world.publicLinkPage.isPasswordEnabled(itemName, value));
+                case "permissions" -> assertTrue(world.publicLinkPage.isPermissionEnabled(value));
+                case "expiration" -> assertTrue(world.publicLinkPage.isExpirationCorrect(value));
+                case "name" -> assertTrue(world.publicLinkPage.isNameCorrect(value));
             }
         }
         //2. Asserts in server via API
         OCShare share = world.shareAPI.getShare(itemName);
-        assertTrue(world.sharePage.checkCorrectShare(share, listItems));
+        assertTrue(world.sharePage.checkCorrectShare(share, fields));
     }
 
     @Then("link on {word} should not exist anymore")
@@ -105,5 +113,4 @@ public class PublicLinkSteps {
         ArrayList<OCShare> shares = world.shareAPI.getLinksByDefault();
         assertTrue(shares.isEmpty());
     }
-
 }

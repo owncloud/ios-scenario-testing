@@ -15,7 +15,8 @@ Feature: Shortcuts
   Scenario Outline: Create correct shortcut over URL
     When Alice selects the option Create Shortcut
     And Alice creates a web shortcut with the following fields
-      | <url> | <name> |
+      | shortcutName | <name>    |
+      | targetFile   | <url>.txt |
     Then Alice should see <name>.url in the filelist
 
     Examples:
@@ -24,10 +25,12 @@ Feature: Shortcuts
 
   Scenario Outline: Create correct shortcut over file
     Given the following items have been created in Alice account
+      | type   | name       |
       | <type> | <name>.txt |
     When Alice selects the option Create Shortcut
     And Alice creates a file shortcut with the following fields
-      | <name>.txt | <name> |
+      | shortcutName | <name>  |
+      | targetFile   | <name>.txt |
     Then Alice should see <name>.url in the filelist
 
     Examples:
@@ -40,6 +43,7 @@ Feature: Shortcuts
   @smoke @ignore
   Scenario Outline: Open shortcut over URL
     Given the following items have been created in Alice account
+      | type   | name       |
       | <type> | <name>.url |
     When Alice opens the shortcut <name>.url
     And Alice opens the link
@@ -52,10 +56,12 @@ Feature: Shortcuts
 
   Scenario Outline: Open shortcut over file
     Given the following items have been created in Alice account
+      | type   | name       |
       | <type> | <name>.txt |
     And Alice selects the option Create Shortcut
     And Alice creates a file shortcut with the following fields
-      | <name>.txt | <name> |
+      | shortcutName | <name>     |
+      | targetFile   | <name>.txt |
     When Alice opens the <type> <name>.url
     Then Alice should see the file <name>.txt with textExample
 
@@ -65,10 +71,12 @@ Feature: Shortcuts
 
   Scenario Outline: Open shortcut over non-existing file
     Given the following items have been created in Alice account
+      | type   | name       |
       | <type> | <name>.txt |
     And Alice selects the option Create Shortcut
     And Alice creates a file shortcut with the following fields
-      | <name>.txt | <name> |
+      | shortcutName | <name>     |
+      | targetFile   | <name>.txt |
     And Alice selects to delete the file <name>.txt using the Actions menu
     And Alice confirms the deletion
     When Alice opens the <type> <name>.url

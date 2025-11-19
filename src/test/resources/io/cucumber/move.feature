@@ -11,6 +11,7 @@ Feature: Move item
   @smoke
   Scenario Outline: Move an existent folder to another location using the Contextual menu
     Given the following items have been created in Alice account
+      | type       | name           |
       | <itemType> | <itemName>     |
       | folder     | <targetFolder> |
     When Alice selects to move the <itemType> <itemName> using the <menu> menu
@@ -24,6 +25,7 @@ Feature: Move item
 
   Scenario Outline: Move an existent file to another location using the Contextual menu
     Given the following items have been created in Alice account
+      | type       | name           |
       | <itemType> | <itemName>     |
       | folder     | <targetFolder> |
     When Alice selects to move the <itemType> <itemName> using the <menu> menu
@@ -37,6 +39,7 @@ Feature: Move item
 
   Scenario Outline: Move an existent item to a new created folder in the picker
     Given the following items have been created in Alice account
+      | type       | name       |
       | <itemType> | <itemName> |
     When Alice selects to move the <itemType> <itemName> using the <menu> menu
     And Alice creates new folder <targetFolder> in the folder picker to move inside
@@ -50,6 +53,7 @@ Feature: Move item
   @nooc10
   Scenario Outline: Move an existent item to same location is not allowed
     Given the following items have been created in Alice account
+      | type       | name       |
       | <itemType> | <itemName> |
     When Alice selects to move the <itemType> <itemName> using the <menu> menu
     And Alice selects <targetFolder> as target folder of the move operation
@@ -63,6 +67,7 @@ Feature: Move item
   #Ignored till problem with dialogs in DOM si fixed
   Scenario: Move a folder to another place with same item name
     Given the following items have been created in Alice account
+      | type   | name        |
       | folder | move7       |
       | folder | move8       |
       | folder | move7/move8 |

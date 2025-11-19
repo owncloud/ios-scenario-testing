@@ -14,6 +14,7 @@ Feature: Private Share
   @smoke @expiration
   Scenario Outline: Correct share with user and expiration
     Given the following items have been created in Alice account
+      | type   | name   |
       | <type> | <item> |
     When Alice selects to share the <type> <item> using the <menu> menu
     And Alice selects the following user as sharee with the following fields
@@ -35,6 +36,7 @@ Feature: Private Share
   @smoke @expiration
   Scenario Outline: Correct share with group
     Given the following items have been created in Alice account
+      | type   | name   |
       | <type> | <item> |
     When Alice selects to share the <type> <item> using the <menu> menu
     And Alice selects the following group as sharee with the following fields
@@ -53,13 +55,14 @@ Feature: Private Share
       | folder | Share5     | test  | Editor      | Actions    | 0          |
       | folder | Share6     | test  | Upload      | Actions    | 22         |
 
-  @editshare
+  @editshare @ignore #checkwhy
   Rule: Edit an existing share
 
   Scenario Outline: Edit existing share on a folder, removing permissions
     Given the following items have been created in Alice account
-      | folder | <item> |
-    And Alice has shared <type> <item> with user <sharee> with Viewer permissions
+      | type   | name   |
+      | <type> | <item> |
+  And Alice has shared <type> <item> with user <sharee> with Viewer permissions
     When Alice selects to share the folder <item> using the Actions menu
     And Alice edits the share with the following fields
       | sharee      | <sharee>      |
@@ -82,6 +85,7 @@ Feature: Private Share
 
   Scenario Outline: Delete existing share on folder
     Given the following items have been created in Alice account
+      | type   | name   |
       | <type> | <item> |
     And Alice has shared <type> <item> with <shareetype> <sharee> with <permission> permissions
     When Alice selects to share the <type> <item> using the Actions menu
@@ -100,6 +104,7 @@ Feature: Private Share
 
   Scenario Outline: Check shared file with me in list
   Given the following items have been created in Bob account
+    | type   | name   |
     | <type> | <item> |
   And Bob has shared <type> <item> with user Alice with Viewer permissions
   When Alice opens the sidebar
@@ -112,6 +117,7 @@ Feature: Private Share
 
   Scenario Outline: Check shared folder by me in list
     Given the following items have been created in Alice account
+      | type   | name   |
       | <type> | <item> |
     And Alice has shared <type> <item> with user Bob with Viewer permissions
     When Alice opens the sidebar

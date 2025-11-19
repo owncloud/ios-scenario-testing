@@ -5,6 +5,7 @@ import static org.junit.Assert.assertTrue;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 import java.util.logging.Level;
 
 import io.cucumber.datatable.DataTable;
@@ -71,10 +72,10 @@ public class FileListSteps {
     @Given("the following items have been created in {word} account")
     public void items_created_in_account(String userName, DataTable table) throws Throwable {
         StepLogger.logCurrentStep(Level.FINE);
-        List<List<String>> listItems = table.asLists();
-        for (List<String> rows : listItems) {
-            String type = rows.get(0);
-            String itemName = rows.get(1);
+        List<Map<String, String>> rows = table.asMaps(String.class, String.class);
+        for (Map<String, String> row : rows) {
+            String type = row.get("type");
+            String itemName = row.get("name");
             if (!world.filesAPI.itemExist(itemName, userName)) {
                 switch (type) {
                     case "folder", "item" -> world.filesAPI.createFolder(itemName, userName);
@@ -285,15 +286,13 @@ public class FileListSteps {
     @When("Alice creates a {shortcutType} shortcut with the following fields")
     public void user_creates_shortcut_url(String shortcutType, DataTable table){
         StepLogger.logCurrentStep(Level.FINE);
-        List<List<String>> listItems = table.asLists();
-        for (List<String> rows : listItems) {
-            String target = rows.get(0);
-            String shortcutName = rows.get(1);
-            if (shortcutType.equals("web")) {
-                world.shortcutPage.createShortcutWeb(target, shortcutName);
-            } else {
-                world.shortcutPage.createShortcutFile(target, shortcutName);
-            }
+        Map<String, String> fields = table.asMap(String.class, String.class);
+        String shortcutName = fields.get("shortcutName");
+        String targetFile = fields.get("targetFile");
+        if (shortcutType.equals("web")) {
+            world.shortcutPage.createShortcutWeb(targetFile, shortcutName);
+        } else {
+            world.shortcutPage.createShortcutFile(targetFile, shortcutName);
         }
     }
 

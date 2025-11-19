@@ -8,11 +8,13 @@ Feature: Cut/Paste item
   Background: User is logged in
     Given user Alice is logged in
     And the following items have been created in Alice account
+      | type   | name           |
       | folder | DocumentsPaste |
 
   @smoke
   Scenario: Cut an existent folder to another location using the Actions menu
     Given the following items have been created in Alice account
+      | type   | name |
       | folder | cut1 |
     When Alice selects to cut the folder cut1 using the Actions menu
     And Alice browses into folder DocumentsPaste
@@ -22,6 +24,7 @@ Feature: Cut/Paste item
 
   Scenario: Cut an existent folder to another location using the Contextual menu
     Given the following items have been created in Alice account
+      | type | name     |
       | file | cut2.txt |
     When Alice selects to cut the file cut2.txt using the Contextual menu
     And Alice browses into folder DocumentsPaste

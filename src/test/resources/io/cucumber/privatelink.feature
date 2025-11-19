@@ -11,6 +11,7 @@ Feature: Private Links
   @smoke
   Scenario Outline: Item in root folder
     Given the following items have been created in Alice account
+      | type | name       |
       | folder | privlink |
       | <type> | <path>   |
     When Alice opens a private link pointing to <path> with scheme owncloud
@@ -24,6 +25,7 @@ Feature: Private Links
   @nooc10 @sharedlink
   Scenario Outline: Item in shared jail
     Given the following items have been created in Bob account
+      | type   | name   |
       | <type> | <item> |
     Given Bob has shared <type> <item> with user Alice with Viewer permissions
     When Alice opens a private link pointing to shared <item> with scheme owncloud

@@ -10,6 +10,7 @@ Feature: Previews
 
     Scenario Outline: preview of different kind of files
       Given the following items have been created in Alice account
+        | type   | name   |
         | <type> | <name> |
       When Alice opens the file <name>
       Then the <type> <name> should be opened and previewed

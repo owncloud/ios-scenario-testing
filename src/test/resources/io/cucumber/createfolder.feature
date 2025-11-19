@@ -20,6 +20,7 @@ Feature: Create a new folder
 
   Scenario Outline: Create a new folder with an incorrect name
     And the following items have been created in Alice account
+      | type   | name      |
       | folder | <newName> |
     When Alice selects the option Create Folder
     And Alice sets <newName> as new name

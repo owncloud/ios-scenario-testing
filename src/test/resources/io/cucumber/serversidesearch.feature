@@ -12,6 +12,7 @@ Feature: Server Side Search
 
     Scenario Outline: Search for content in a file with one match
       Given the following items have been created in Alice account
+        | type        | name            |
         | <type>      | <itemWithMatch> |
         | <typeItem1> | <fakeItem1>     |
         | <typeItem2> | <fakeItem2>     |
@@ -32,6 +33,7 @@ Feature: Server Side Search
 
     Scenario: Search for content with no matches
       Given the following items have been created in Alice account
+        | type  | name      |
         | image | blank.jpg |
         | video | video.mp4 |
       When Alice search by content in the server files containing two
@@ -41,6 +43,7 @@ Feature: Server Side Search
 
     Scenario Outline: Search for name and content using only name in a file with one match
       Given the following items have been created in Alice account
+        | type        | name            |
         | <type>      | <itemWithMatch> |
         | <typeItem1> | <fakeItem1>     |
         | <typeItem2> | <fakeItem2>     |
@@ -59,6 +62,7 @@ Feature: Server Side Search
 
       Scenario Outline: Search for name and content using both in a file with one match of each type
         Given the following items have been created in Alice account
+          | type        | name            |
           | <type>      | <itemWithMatch> |
           | <typeItem1> | <fakeItem1>     |
           | <typeItem2> | <fakeItem2>     |
@@ -76,6 +80,7 @@ Feature: Server Side Search
 
       Scenario: Search for name and content with no matches
       Given the following items have been created in Alice account
+        | type  | name      |
         | image | blank.jpg |
         | video | video.mp4 |
       When Alice search by name and contents in the server files containing nothing

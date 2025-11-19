@@ -11,6 +11,7 @@ Feature: Sidebar
   @smoke
   Scenario: Add folder to sidebar
     Given the following items have been created in Alice account
+      | type   | name                  |
       | folder | sidebar1              |
       | file   | sidebar1/sidebar1.txt |
     When Alice selects to add to the sidebar the folder sidebar1 using the Actions menu
@@ -20,6 +21,7 @@ Feature: Sidebar
 
   Scenario: Remove file from sidebar
     Given the following items have been created in Alice account
+      | type   | name     |
       | folder | sidebar2 |
     When Alice selects to add to the sidebar the folder sidebar2 using the Contextual menu
     And Alice selects to remove from the sidebar the folder sidebar2 using the Actions menu
@@ -28,7 +30,8 @@ Feature: Sidebar
 
   Scenario Outline: Check default search criteria
     Given the following items have been created in Alice account
-      | <type> | <file>   |
+      | type   | name       |
+      | <type> | <file>     |
       | file   | finally.sh |
     And Alice opens the sidebar
     When Alice opens the option search in sidebar
