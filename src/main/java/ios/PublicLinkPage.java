@@ -4,6 +4,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
+import java.time.ZoneId;
+import java.time.ZonedDateTime;
 import java.util.logging.Level;
 
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
@@ -163,8 +165,8 @@ public class PublicLinkPage extends CommonPage {
 
     public boolean isExpirationCorrect(String day) {
         Log.log(Level.FINE, "Starts: Check expiration day: " + day);
-        if (!day.equals("0")) { //Adding 1 to the day, because UTC retrieved by the server
-            String displayedDate = DateUtils.displayedDate(String.valueOf(Integer.parseInt(day) +1 ));
+        if (!day.equals("0")) {
+            String displayedDate = DateUtils.displayedDate(String.valueOf(Integer.parseInt(day)));
             Log.log(Level.FINE, "Date to check: " + displayedDate);
             String dateInPicker = datePicker.getAttribute("value");
             Log.log(Level.FINE, "Date to check in the screen: " + dateInPicker);

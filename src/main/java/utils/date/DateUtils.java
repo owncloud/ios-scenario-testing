@@ -40,9 +40,11 @@ public class DateUtils {
 
     public static String displayedDate(String day) {
         //By default, datepicker gets 7 days later than today.
-        LocalDate todayPlus7 = LocalDate.now().plusDays(7);
-        LocalDate targetDate = todayPlus7.plusMonths(1).
-                withDayOfMonth(Integer.parseInt(day));
+        ZoneId zone = ZoneId.of("UTC");
+        ZonedDateTime nowUtc = ZonedDateTime.now(zone);
+        LocalDate todayPlus7 = nowUtc.plusDays(7).toLocalDate();
+        LocalDate targetDate = todayPlus7.plusMonths(1)
+                .withDayOfMonth(Integer.parseInt(day));
 
         String formattedDay = String.format("%02d", targetDate.getDayOfMonth());
         String formattedMonth = String.valueOf(targetDate.getMonthValue());
@@ -85,13 +87,7 @@ public class DateUtils {
         return switch (month) {
             case 1, 3, 5 ,7, 8, 10, 12 -> 31;
             case 4, 6, 9, 11 -> 30;
-            case 2 -> {
-                if (isLeapYear(year)) {
-                    yield 29;
-                } else {
-                    yield 28;
-                }
-            }
+            case 2 -> isLeapYear(year) ? 29 : 28;
             default -> 0;
         };
     }

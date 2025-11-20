@@ -51,7 +51,6 @@ public class PrivateShareSteps {
             String key = entry.getKey();
             String value = entry.getValue();
             switch (key) {
-                //case "sharee","group" -> world.privateSharePage.searchSharee(value);
                 case "permissions" -> world.privateSharePage.setPermissions(value);
                 case "expiration" -> world.privateSharePage.setExpiration(value);
             }
