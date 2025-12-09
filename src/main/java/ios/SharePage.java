@@ -16,7 +16,7 @@ import utils.log.Log;
 
 public class SharePage extends CommonPage {
 
-    @iOSXCUITFindBy(id = "Invite")
+    @iOSXCUITFindBy(id = "//XCUIElementTypeStaticText[@name=\"Add members\"]")
     private WebElement inviteButton;
 
     @iOSXCUITFindBy(id = "person.3.fill")
@@ -59,7 +59,7 @@ public class SharePage extends CommonPage {
 
     public void invite() {
         Log.log(Level.FINE, "Starts: Invite");
-        inviteButton.click();
+        findXpath("//XCUIElementTypeStaticText[@name=\"Add members\"]").click();
     }
 
     public void openPublicLink(String linkName) {

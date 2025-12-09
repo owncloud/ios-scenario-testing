@@ -74,6 +74,8 @@ YOU SHOULD NOT USE THIS BETA VERSION WITH PRODUCTION SYSTEMS, PRODUCTION DATA OR
 	<string>Add account</string>
 	<key>Add item</key>
 	<string>Add item</string>
+	<key>Add members</key>
+	<string>Add members</string>
 	<key>Add to sidebar</key>
 	<string>Add to sidebar</string>
 	<key>Advanced settings</key>
@@ -288,6 +290,8 @@ Open 'Certificate Details' for more informations.</string>
 	<string>Copy</string>
 	<key>Copy "{{itemName}}"</key>
 	<string>Copy "{{itemName}}"</string>
+	<key>Copy Permanent Link</key>
+	<string>Copy Permanent Link</string>
 	<key>Copy Private Link</key>
 	<string>Copy Private Link</string>
 	<key>Copy here</key>
@@ -946,6 +950,8 @@ Please disable passcode lock in the app settings.</string>
 	<string>Pattern</string>
 	<key>Pending</key>
 	<string>Pending</string>
+	<key>Permanent Link</key>
+	<string>Permanent Link</string>
 	<key>Permissions</key>
 	<string>Permissions</string>
 	<key>Photo Pro Features</key>
@@ -1328,6 +1334,10 @@ Please disable passcode lock in the app settings.</string>
 	<string>Subtitle</string>
 	<key>Switch Theme Style</key>
 	<string>Switch Theme Style</string>
+	<key>Sync disabled</key>
+	<string>Sync disabled</string>
+	<key>Sync enabled</key>
+	<string>Sync enabled</string>
 	<key>System</key>
 	<string>System</string>
 	<key>System Appeareance</key>

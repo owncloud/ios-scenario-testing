@@ -74,6 +74,8 @@ YOU SHOULD NOT USE THIS BETA VERSION WITH PRODUCTION SYSTEMS, PRODUCTION DATA OR
 	<string>Adicionar uma conta</string>
 	<key>Add item</key>
 	<string>Adicionar item</string>
+	<key>Add members</key>
+	<string>Add members</string>
 	<key>Add to sidebar</key>
 	<string>Add to sidebar</string>
 	<key>Advanced settings</key>
@@ -288,6 +290,8 @@ Abra "Detalhes do certificado" para mais informações.</string>
 	<string>Copiar</string>
 	<key>Copy "{{itemName}}"</key>
 	<string>Copiar "{{itemName}}"</string>
+	<key>Copy Permanent Link</key>
+	<string>Copy Permanent Link</string>
 	<key>Copy Private Link</key>
 	<string>Copiar Linque Privado</string>
 	<key>Copy here</key>
@@ -946,6 +950,8 @@ Desative o bloqueio por senha nas configurações do aplicativo. </string>
 	<string>Padrão</string>
 	<key>Pending</key>
 	<string>Pendente</string>
+	<key>Permanent Link</key>
+	<string>Permanent Link</string>
 	<key>Permissions</key>
 	<string>Permissões</string>
 	<key>Photo Pro Features</key>
@@ -1328,6 +1334,10 @@ Desative o bloqueio por senha nas configurações do aplicativo. </string>
 	<string>Subtitle</string>
 	<key>Switch Theme Style</key>
 	<string>Mudar o Estilo do Tema</string>
+	<key>Sync disabled</key>
+	<string>Sync disabled</string>
+	<key>Sync enabled</key>
+	<string>Sync enabled</string>
 	<key>System</key>
 	<string>Sistema</string>
 	<key>System Appeareance</key>

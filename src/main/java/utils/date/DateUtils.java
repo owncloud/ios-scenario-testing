@@ -19,9 +19,6 @@ public class DateUtils {
         int year = todayYear();
         int month = todayMonth();
         int dayToday = todayDay();
-        if (month == 12) { //Jump to next year
-            year++;
-        }
 
         //By default, expiration date is one week later. In the last week of the month
         //the expiration date in the following month will jump to the next month

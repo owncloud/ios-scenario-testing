@@ -62,7 +62,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		NB9NOyXOIZLUdZUfOODb9qLW17s=
+		9oYUI15uC3yXLZg9sVx41FJa/uA=
 		</data>
 		<key>PocketSVG_PocketSVG.bundle/Info.plist</key>
 		<data>
@@ -154,7 +154,25 @@
 			<key>optional</key>
 			<true/>
 		</dict>
+		<key>it.lproj/InfoPlist.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			wV9eKvYcGs6k2GYyfFJHeg3KJyA=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
 		<key>ko.lproj/InfoPlist.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			Rajbu5O0CFOoxTJ8CoztrDZkuzo=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>lo.lproj/InfoPlist.strings</key>
 		<dict>
 			<key>hash</key>
 			<data>
@@ -174,7 +192,7 @@
 		</dict>
 		<key>ownCloud Action Extension.debug.dylib</key>
 		<data>
-		RoNcPsnETVP9RiW8J/ipch6EEvg=
+		OEyuOHGGZtjxl8E6o/kLyL9sDfY=
 		</data>
 		<key>ru.lproj/InfoPlist.strings</key>
 		<dict>
@@ -190,6 +208,15 @@
 			<key>hash</key>
 			<data>
 			BsbglXv2gllj4errRJ3Z8QKeLXg=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>sv.lproj/InfoPlist.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			Rajbu5O0CFOoxTJ8CoztrDZkuzo=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -430,7 +457,25 @@
 			<key>optional</key>
 			<true/>
 		</dict>
+		<key>it.lproj/InfoPlist.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			qmoSrZ2qL7Usl9RwpBmDiIRBbJRMmeyihhnicAYZ/T4=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
 		<key>ko.lproj/InfoPlist.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			stmNWzl83hL/lTwDfVSuFLnw86L+yQgJdfXQUPTx+aU=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>lo.lproj/InfoPlist.strings</key>
 		<dict>
 			<key>hash2</key>
 			<data>
@@ -452,7 +497,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			PQgvxnb4I3I6T2tGdAzX3UC8U7Hypaf2cTDJ0rqaL+E=
+			rwICtJzdmrleevlYOPI5zLZDFqfpWwB7zoXzZ+vHp/8=
 			</data>
 		</dict>
 		<key>ru.lproj/InfoPlist.strings</key>
@@ -469,6 +514,15 @@
 			<key>hash2</key>
 			<data>
 			tFG6WepSNSz2aHJL8AwX430yVkp811bMBxMgIXITVE8=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>sv.lproj/InfoPlist.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			stmNWzl83hL/lTwDfVSuFLnw86L+yQgJdfXQUPTx+aU=
 			</data>
 			<key>optional</key>
 			<true/>

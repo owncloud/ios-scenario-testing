@@ -42,7 +42,7 @@ public class PublicLinkPage extends CommonPage {
     @iOSXCUITFindBy(id = "Remove password")
     private WebElement removePassword;
 
-    @iOSXCUITFindBy(xpath = "//XCUIElementTypeStaticText[@name=\"Add\"]")
+    @iOSXCUITFindBy(xpath = "//XCUIElementTypeCell[@name=\"Expiration date \"]/XCUIElementTypeOther[2]")
     private WebElement addExpirationDate;
 
     @iOSXCUITFindBy(id = "Date Picker")
@@ -125,7 +125,8 @@ public class PublicLinkPage extends CommonPage {
         Log.log(Level.FINE, "Starts: Set Expiration date: " + expirationDay);
         if (!expirationDay.equals("0")){
             //Given the expiration day, selected the day within the following month
-            addExpirationDate.click();
+            addExpirationDate.findElement(
+                    By.xpath("//XCUIElementTypeStaticText[@name=\"Set\"]")).click();
             datePicker.click();
             nextMonth.click();
             waitById(expirationDay);

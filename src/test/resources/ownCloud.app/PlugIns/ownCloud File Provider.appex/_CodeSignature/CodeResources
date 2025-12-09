@@ -6,7 +6,7 @@
 	<dict>
 		<key>Info.plist</key>
 		<data>
-		3WdfM0RbipXqu9Mf1NztCpX3eEg=
+		2eXyspq5lk0LQlIAgUhDNOBU79w=
 		</data>
 		<key>PLCrashReporter_CrashReporter.bundle/Info.plist</key>
 		<data>
@@ -98,7 +98,25 @@
 			<key>optional</key>
 			<true/>
 		</dict>
+		<key>it.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			V/4nB9F4LAkteRuHPH9AVZNbb8M=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
 		<key>ko.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			dwJJgO/4Eummv8wWinICBQte1qg=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>lo.lproj/Localizable.strings</key>
 		<dict>
 			<key>hash</key>
 			<data>
@@ -118,7 +136,7 @@
 		</dict>
 		<key>ownCloud File Provider.debug.dylib</key>
 		<data>
-		xcArcKjyr69oQ1WPPYV+AX3f3Xg=
+		8d7Ah+/9uIPhuoHg1AHOil8CQJc=
 		</data>
 		<key>ru.lproj/Localizable.strings</key>
 		<dict>
@@ -134,6 +152,15 @@
 			<key>hash</key>
 			<data>
 			Hk8L04RvSC76WCDUI/7ICbGrdjM=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>sv.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			dwJJgO/4Eummv8wWinICBQte1qg=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -276,7 +303,25 @@
 			<key>optional</key>
 			<true/>
 		</dict>
+		<key>it.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			MiODkPBlMwrz2B6YYyfeSd6MfDrZKVW58ygqo0t3owM=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
 		<key>ko.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			2mJKZdx/p3HkOW20pToPArVRFP6LzgOFvICylWwZ6TU=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>lo.lproj/Localizable.strings</key>
 		<dict>
 			<key>hash2</key>
 			<data>
@@ -298,7 +343,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			q/dExLfTHRBXjzmhImBHiwsP3tumnzUtpFV12pq8fus=
+			pKlQAEvy3mU1QEnZWUJr9aNE/B+KkdIcL8XUeX6h1cs=
 			</data>
 		</dict>
 		<key>ru.lproj/Localizable.strings</key>
@@ -315,6 +360,15 @@
 			<key>hash2</key>
 			<data>
 			AVzv14Jj1b2Aelhwgdj/hFRFff+DdnP/dn8zccEKCSM=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>sv.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			2mJKZdx/p3HkOW20pToPArVRFP6LzgOFvICylWwZ6TU=
 			</data>
 			<key>optional</key>
 			<true/>

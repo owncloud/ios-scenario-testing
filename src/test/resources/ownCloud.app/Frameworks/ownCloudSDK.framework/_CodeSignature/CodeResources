@@ -10,7 +10,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		dFC9ah60jmhk7hO1lfxicspQhd4=
+		53hKW/+Dqa1zBUlIumpL4XvhInQ=
 		</data>
 		<key>LICENSE</key>
 		<data>
@@ -46,7 +46,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			pyM6OgSy8Vb+NBv2atUsAOTIspw=
+			5fi0jqvxYtv6vyT8g9RWmnVr3Dg=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -87,11 +87,29 @@
 			<key>optional</key>
 			<true/>
 		</dict>
+		<key>it.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			9gP+CPLDFEIY5ojWKO7Ndk/qDeU=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
 		<key>ko.lproj/Localizable.strings</key>
 		<dict>
 			<key>hash</key>
 			<data>
 			iDP8wPhL2iGyG8Xp5PzE3fksGqQ=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>lo.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			vHqhWMX9GgstiDDKS4R0sGJVztU=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -155,6 +173,15 @@
 			<key>hash</key>
 			<data>
 			g+50re6EEt0hBIIwFKvsNZOlEts=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>sv.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			M9z2oQVHC3CR+oWzmPpgdmOdYgA=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -239,7 +266,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			C1anVAib05HHFKv8+ygZJje+nw1ZhhVb8imgmJMOBpY=
+			0HqTLAgsY8GEVsa418D5NjWAZYiApjdtcysdT8TtWFg=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -280,11 +307,29 @@
 			<key>optional</key>
 			<true/>
 		</dict>
+		<key>it.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			9g+AP/ZYXRNdDEOL3JFj2HmTFHn7bCFLhNhFzBo8kTY=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
 		<key>ko.lproj/Localizable.strings</key>
 		<dict>
 			<key>hash2</key>
 			<data>
 			NZfaycKGGED6aa7zx0Hfk1vvz1sb/rj+s45BRVLUE+Y=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>lo.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			Ac1EvHS6aHJPgz9dvTRr95YFyo1Yv+Z4Mro0xT5oh4g=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -348,6 +393,15 @@
 			<key>hash2</key>
 			<data>
 			ZoevbISLEqNkVPgFyi9d52fAoj0lOahPMSb+OvRbOPI=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>sv.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			IYgrspIEqxifQF25fAJ1l3QGYQm4Np5wv0ju5HqZGZ4=
 			</data>
 			<key>optional</key>
 			<true/>

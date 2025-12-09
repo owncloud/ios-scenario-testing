@@ -22,7 +22,7 @@ public class PrivateSharePage extends CommonPage {
     @iOSXCUITFindBy(id = "Can edit without versions View, download, upload, edit, add and delete.")
     private WebElement editor;
 
-    @iOSXCUITFindBy(xpath = "//XCUIElementTypeStaticText[@name=\"Add\"]")
+    @iOSXCUITFindBy(xpath = "//XCUIElementTypeStaticText[@name=\"Set\"]")
     private WebElement addExpirationDate;
 
     @iOSXCUITFindBy(id = "Remove expiration date")
@@ -34,8 +34,8 @@ public class PrivateSharePage extends CommonPage {
     @iOSXCUITFindBy(id = "DatePicker.NextMonth")
     private WebElement nextMonth;
 
-    @iOSXCUITFindBy(xpath = "//XCUIElementTypeButton[@name=\"Invite\"]")
-    private WebElement inviteButton;
+    @iOSXCUITFindBy(xpath = "//XCUIElementTypeButton[@name=\"Share\"]")
+    private WebElement shareButton;
 
     @iOSXCUITFindBy(xpath = "//XCUIElementTypeButton[@name=\"Save changes\"]")
     private WebElement saveChanges;
@@ -139,7 +139,7 @@ public class PrivateSharePage extends CommonPage {
 
     public void savePermissions() {
         Log.log(Level.FINE, "Starts: Save permissions private share");
-        inviteButton.click();
+        shareButton.click();
     }
 
     public void deletePrivateShare() {

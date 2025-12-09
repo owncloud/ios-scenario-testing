@@ -74,6 +74,8 @@ SIE SOLLTEN DIESE BETA-VERSION NICHT MIT PRODUKTIONSSYSTEMEN, PRODUKTIONSDATEN O
 	<string>Konto hinzufügen</string>
 	<key>Add item</key>
 	<string>Element hinzufügen</string>
+	<key>Add members</key>
+	<string>Mitglieder hinzufügen</string>
 	<key>Add to sidebar</key>
 	<string>Zur Seitenleiste hinzufügen</string>
 	<key>Advanced settings</key>
@@ -288,6 +290,8 @@ Open 'Certificate Details' for more informations.</key>
 	<string>Kopieren</string>
 	<key>Copy "{{itemName}}"</key>
 	<string>Kopiere "{{itemName}}"</string>
+	<key>Copy Permanent Link</key>
+	<string>Permanenter Link</string>
 	<key>Copy Private Link</key>
 	<string>Privaten Link kopieren</string>
 	<key>Copy here</key>
@@ -946,6 +950,8 @@ Bitte deaktivieren Sie die PIN-Sperre in den App-Einstellungen.</string>
 	<string>Muster</string>
 	<key>Pending</key>
 	<string>Ausstehend</string>
+	<key>Permanent Link</key>
+	<string>Permanenter Link</string>
 	<key>Permissions</key>
 	<string>Berechtigungen</string>
 	<key>Photo Pro Features</key>
@@ -1328,6 +1334,10 @@ Bitte deaktivieren Sie die PIN-Sperre in den App-Einstellungen.</string>
 	<string>Untertitel</string>
 	<key>Switch Theme Style</key>
 	<string>Theme wechseln</string>
+	<key>Sync disabled</key>
+	<string>Synchronisation deaktiviert</string>
+	<key>Sync enabled</key>
+	<string>Synchronisation aktiviert</string>
 	<key>System</key>
 	<string>System</string>
 	<key>System Appeareance</key>
