@@ -120,6 +120,12 @@ public class SpacesSteps {
         }
     }
 
+    @When("Alice opens the members menu")
+    public void opens_members_menu() throws InterruptedException {
+        StepLogger.logCurrentStep(Level.FINE);
+        world.spacesPage.openMembers();
+    }
+
     @Then("Alice should{typePosNeg} see the following spaces")
     public void user_should_see_following_spaces(String sense, DataTable table) throws InterruptedException {
         StepLogger.logCurrentStep(Level.FINE);

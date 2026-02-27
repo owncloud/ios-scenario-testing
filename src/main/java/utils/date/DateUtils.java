@@ -2,6 +2,7 @@ package utils.date;
 
 import java.time.Instant;
 import java.time.LocalDate;
+import java.time.OffsetDateTime;
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
@@ -61,6 +62,12 @@ public class DateUtils {
         return dateFormat;
     }
 
+    public static String convertDate(String dateToTransform) {
+        LocalDate date = LocalDate.parse(dateToTransform);
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("d/M/yy");
+        return date.format(formatter);
+    }
+
     //Takes care of correct UTC format
     public static Instant parseToInstantUTC(String date) {
         String dateUTC = date.replace(" ", "T");
@@ -109,3 +116,4 @@ public class DateUtils {
     }
 
 }
+

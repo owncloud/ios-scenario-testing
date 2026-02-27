@@ -727,7 +727,7 @@ Bitte verwenden Sie die App, um auf Ihre Dateien zuzugreifen.</string>
 	<key>Location permission denied</key>
 	<string>Standortberechtigung verweigert</string>
 	<key>Locations</key>
-	<string>Umgebungen</string>
+	<string>Orte</string>
 	<key>Lock application</key>
 	<string>Anwendung sperren</string>
 	<key>Log Destinations</key>
@@ -1425,7 +1425,7 @@ Wenn Ihnen unsere App gefällt, hinterlassen Sie bitte eine AppStore-Rezension.
 	<key>Time</key>
 	<string>Zeit</string>
 	<key>Time measured since uploading, editing, downloading or viewing the respective file through this device. Does not apply to files downloaded via the Available Offline feature. Local copies may be deleted before the given period of time has passed, f.ex. because there's a newer version of a file on the server - or through the manual deletion of offline copies. Also, local copies may not be deleted after the given period of time has passed, f.ex. if an action is performed on it, the file is still in use - or the account holding the file hasn't been used in the app.</key>
-	<string>Gemessene Zeit seit dem Hochladen, Bearbeiten, Herunterladen oder Anzeigen der jeweiligen Datei über dieses Gerät. Gilt nicht für Dateien, die über die Funktion offline verfügbar heruntergeladen wurden. Lokale Kopien können vor Ablauf des angegebenen Zeitraums gelöscht werden, z.B. weil es eine neuere Version einer Datei auf dem Server gibt - oder durch das manuelle Löschen von Offline-Kopien. Außerdem dürfen lokale Kopien nach Ablauf der angegebenen Zeit nicht gelöscht werden, z.B. wenn eine Aktion an ihr durchgeführt wird, die Datei noch in Gebrauch ist - oder das Konto, das die Datei enthält, nicht in der App verwendet wurde.</string>
+	<string>Gemessene Zeit seit dem Hochladen, Bearbeiten, Herunterladen oder Anzeigen der jeweiligen Datei über dieses Gerät. Gilt nicht für Dateien, die über die Funktion offline verfügbar heruntergeladen wurden. Lokale Kopien können vor Ablauf des angegebenen Zeitraums gelöscht werden, z.B. weil es eine neuere Version einer Datei auf dem Server gibt - oder durch das manuelle Löschen von Offline-Kopien. Außerdem können lokale Kopien ggf. auch nach Ablauf der angegebenen Zeit nicht gelöscht werden, z.B. wenn eine Aktion an ihr durchgeführt wird, die Datei noch in Gebrauch ist - oder das Konto, das die Datei enthält, nicht in der App verwendet wurde.</string>
 	<key>To use the app, you need to create a passcode.</key>
 	<string>Sie müssen die PIN-Sperre konfigurieren, um die App zu nutzen</string>
 	<key>Toggle Search Scope</key>

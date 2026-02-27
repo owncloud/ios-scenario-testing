@@ -6,7 +6,7 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		08aeP+0YiKYdg1ZdctBQlhEDliE=
+		lhpXGliaCU48+lZH44JeY0Ox1TQ=
 		</data>
 		<key>Down_Down.bundle/DownView (macOS).bundle/css/down.min.css</key>
 		<data>
@@ -42,11 +42,11 @@
 		</data>
 		<key>Down_Down.bundle/Info.plist</key>
 		<data>
-		1neZ6Ibmz9Q7Md3zuZjaYvAw+Lc=
+		vfXN24heW5bsRAB0DBzEXIEf5gM=
 		</data>
 		<key>Down_Down.bundle/_CodeSignature/CodeDirectory</key>
 		<data>
-		Bcjipp7j/zKMhuwlUHLMO0VFA4k=
+		Iva8feTOD1PAzT4hkh1ENI1oW4I=
 		</data>
 		<key>Down_Down.bundle/_CodeSignature/CodeRequirements</key>
 		<data>
@@ -54,7 +54,7 @@
 		</data>
 		<key>Down_Down.bundle/_CodeSignature/CodeRequirements-1</key>
 		<data>
-		CB0qGG9ZnXB0NVJe8GtixOX7K+A=
+		2mLQ2BenUjnka2OR+G0qVLgQnoU=
 		</data>
 		<key>Down_Down.bundle/_CodeSignature/CodeResources</key>
 		<data>
@@ -66,11 +66,11 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		uRrnU3Itg4myTiEZ3dV6e5puPDA=
+		/o12Ep2u9aq68kEIoiu6bEVR9sw=
 		</data>
 		<key>PocketSVG_PocketSVG.bundle/Info.plist</key>
 		<data>
-		LLnTPgtNhqeDYyyYOin2vzMRbys=
+		wd+V9To5dbukL7NqlKMNNHQMIKg=
 		</data>
 		<key>PocketSVG_PocketSVG.bundle/SVGColors.plist</key>
 		<data>
@@ -78,7 +78,7 @@
 		</data>
 		<key>PocketSVG_PocketSVG.bundle/_CodeSignature/CodeDirectory</key>
 		<data>
-		++Bm6avBzZNhslx/PB0KtBAE/nw=
+		hHsVc1W0tV6zf/0I3Q/pDorJ510=
 		</data>
 		<key>PocketSVG_PocketSVG.bundle/_CodeSignature/CodeRequirements</key>
 		<data>
@@ -86,7 +86,7 @@
 		</data>
 		<key>PocketSVG_PocketSVG.bundle/_CodeSignature/CodeRequirements-1</key>
 		<data>
-		lMhwJR+lm5ptIg3jO9YDkKmrysI=
+		KoO3HDM1MBrhHWRLSJwn+LNRsiI=
 		</data>
 		<key>PocketSVG_PocketSVG.bundle/_CodeSignature/CodeResources</key>
 		<data>
@@ -162,7 +162,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			2hjYJ0DqLXWsEa2Zu4LEaV4Vl8s=
+			bUlYZcHhbmwcF9j/xutpCfuFyoo=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -331,7 +331,7 @@
 		</dict>
 		<key>ownCloud Action Extension.debug.dylib</key>
 		<data>
-		hBYw0hXbSS5HotoNGLXkcXQGQHI=
+		EVQS8UVNfEMO2sLIiXYuGqBHwfo=
 		</data>
 		<key>pt-BR.lproj/Localizable.strings</key>
 		<dict>
@@ -457,7 +457,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			XcDFEGrpUqntNFuyPx38aRq3NCzSsfzkI80qSGdXqz4=
+			x4lbCcjrMouKgKZayLbqcru2iuCWjc6Bc60AX5QFr60=
 			</data>
 		</dict>
 		<key>Down_Down.bundle/DownView (macOS).bundle/css/down.min.css</key>
@@ -520,14 +520,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			YQH3ml/mg3cJOv/8sn0ZiWvFN79hlG1ZACbzQE0ir1g=
+			4KvcEqoMpP8HSM1fHd8M0RMZbe+SpMHL/1vGBYociQE=
 			</data>
 		</dict>
 		<key>Down_Down.bundle/_CodeSignature/CodeDirectory</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			1U7ErQmF6O0KDWlrJcIXCZWQ8iOKzXhQtxKEtg3ftgY=
+			f04sGNwEA62HnoDVw9s+ZOqZNBoNM8y7/Z/a2tYWnqU=
 			</data>
 		</dict>
 		<key>Down_Down.bundle/_CodeSignature/CodeRequirements</key>
@@ -541,7 +541,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Y8D8Iy9719PpdbpP/J16ATrf2wg3pJcAIJF3R5ge5xc=
+			wzIGg/EDXdF7P04/MFSBd8pCPrTcBZS4VyuBIyeQgmY=
 			</data>
 		</dict>
 		<key>Down_Down.bundle/_CodeSignature/CodeResources</key>
@@ -562,7 +562,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			S49uiW4e/bDUus9mqHhWx7FTeXwf/HfTN8TWTiPZ4cU=
+			vXTWLqEQk3wvgst87XIwofqpbeMFzmjTJlTJSdNpgjU=
 			</data>
 		</dict>
 		<key>PocketSVG_PocketSVG.bundle/SVGColors.plist</key>
@@ -576,7 +576,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			o6KDjQ+5/SQYaDpzl+i5UcXzgbR8+n2BHCW5ThWIoHo=
+			vTXbtKxKUqHcQiSTH3/SB9KYreMeItNuaRPXl4Xv0Vg=
 			</data>
 		</dict>
 		<key>PocketSVG_PocketSVG.bundle/_CodeSignature/CodeRequirements</key>
@@ -590,7 +590,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			afr/KwDRys7M7wSZVZc5aRAuV9Q1CUcsH01JAn/cjkg=
+			wJnocnDZ2GEsJxt2lRlbjOT1TbWvb45cy/gGw/DzeGo=
 			</data>
 		</dict>
 		<key>PocketSVG_PocketSVG.bundle/_CodeSignature/CodeResources</key>
@@ -679,7 +679,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Wks46mVnPPF7d2YgihD+Ta4K0BdFeaQSTLC5BndFn4M=
+			diK8PfgOA8QW+pQ+0ava+zc6sJpvT2rjL5hgwGbopEk=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -850,7 +850,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			gzFPLFsBpSPvpmI63zh1AdCc848vBxGqxv3/0xtRxDg=
+			ou3sODS+BMNDTJvNdFxWF8EC8CstRhy1mdu+54T5V1s=
 			</data>
 		</dict>
 		<key>pt-BR.lproj/Localizable.strings</key>

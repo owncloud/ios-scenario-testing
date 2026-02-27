@@ -132,4 +132,42 @@ Feature: Spaces
       | name   | subtitle    |
       | Space9 | Ninth space |
 
-  Rule: Membership
+  @memberspace
+  Rule: Space Membership
+
+    Scenario Outline: Add a member to a space
+      Given the following spaces have been created in Alice account
+        | name   | subtitle   |
+        | <name> | <subtitle> |
+      And Alice opens the sidebar
+      And Alice selects the spaces view
+      And Alice opens the members menu
+      And Alice adds Bob to the space <name> with
+        | permission | <permissions> |
+      Then Bob should be member of the space <name> with
+        | permission | <permissions> |
+
+      Examples:
+        | name    | subtitle       | permissions |
+        | Space10 | Tenth space    | Can view    |
+        | Space11 | Eleventh space | Can edit    |
+        | Space12 | Twelfth space  | Can manage  |
+
+    Scenario Outline: Add a member to a space with expiration date
+      Given the following spaces have been created in Alice account
+        | name   | subtitle   |
+        | <name> | <subtitle> |
+      And Alice opens the sidebar
+      And Alice selects the spaces view
+      And Alice opens the members menu
+      And Alice adds Bob to the space <name> with
+        | permission     | <permissions>    |
+        | expirationDate | <expirationDate> |
+      Then Bob should be member of the space <name> with
+        | description    | <subtitle>       |
+        | permission     | <permissions>    |
+        | expirationDate | <expirationDate> |
+
+      Examples:
+        | name    | subtitle         | permissions | expirationDate |
+        | Space13 | Thirteenth space | Can view    | 25             |

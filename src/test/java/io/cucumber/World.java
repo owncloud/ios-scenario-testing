@@ -11,6 +11,7 @@ import ios.PrivateSharePage;
 import ios.PublicLinkPage;
 import ios.SharePage;
 import ios.ShortcutPage;
+import ios.SpaceMembersPage;
 import ios.SpacesPage;
 import ios.UploadsPage;
 import utils.api.FilesAPI;
@@ -29,6 +30,7 @@ public class World {
     public PublicLinkPage publicLinkPage = PublicLinkPage.getInstance();
     public SharePage sharePage = SharePage.getInstance();
     public SpacesPage spacesPage = SpacesPage.getInstance();
+    public SpaceMembersPage spaceMembersPage = SpaceMembersPage.getInstance();
     public UploadsPage uploadsPage = UploadsPage.getInstance();
     public ShortcutPage shortcutPage = ShortcutPage.getInstance();
     public PreviewPage previewPage = PreviewPage.getInstance();

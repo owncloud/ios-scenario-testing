@@ -15,6 +15,9 @@ public class SpacesPage extends CommonPage {
     @iOSXCUITFindBy(id = "client.space-actions")
     protected WebElement spaceActions;
 
+    @iOSXCUITFindBy(id = "Members")
+    protected WebElement membersAction;
+
     @iOSXCUITFindBy(id = "Create space")
     protected WebElement createSpaceAction;
 
@@ -81,6 +84,13 @@ public class SpacesPage extends CommonPage {
         editSpaceAction.click();
         writeSpaceNameSubtitle(name, subtitle);
         saveButton.click();
+    }
+
+    public void openMembers() throws InterruptedException {
+        Log.log(Level.FINE, "Starts: Hide disabled spaces");
+        waitByXpath("(//XCUIElementTypeButton[@name=\"More\"])[1]");
+        moreButton.get(0).click();
+        membersAction.click();
     }
 
     private void writeSpaceNameSubtitle(String name, String subtitle) {

@@ -6,11 +6,11 @@
 	<dict>
 		<key>Info.plist</key>
 		<data>
-		Nt0guI+zzjhiMX7jla+uswolOLs=
+		Ds5EVcLo6bZUEErU/aws2jaUq74=
 		</data>
 		<key>PLCrashReporter_CrashReporter.bundle/Info.plist</key>
 		<data>
-		B/wc8siOAfHph6bf4VOkyWYVagE=
+		sQdkSYn4hC2zajRk1zg7oltqRLU=
 		</data>
 		<key>PLCrashReporter_CrashReporter.bundle/PrivacyInfo.xcprivacy</key>
 		<data>
@@ -18,7 +18,7 @@
 		</data>
 		<key>PLCrashReporter_CrashReporter.bundle/_CodeSignature/CodeDirectory</key>
 		<data>
-		jgC7WqAvWUp48Mln84OYMuEeA0Q=
+		JlJRdhGhPIXS7YHPTD/lnM4kGGA=
 		</data>
 		<key>PLCrashReporter_CrashReporter.bundle/_CodeSignature/CodeRequirements</key>
 		<data>
@@ -26,7 +26,7 @@
 		</data>
 		<key>PLCrashReporter_CrashReporter.bundle/_CodeSignature/CodeRequirements-1</key>
 		<data>
-		rAAA7Y4GjWB+g+WHjofAFfShTIQ=
+		0lkRhhJu+iviFISKZBBtl/GyAOE=
 		</data>
 		<key>PLCrashReporter_CrashReporter.bundle/_CodeSignature/CodeResources</key>
 		<data>
@@ -136,7 +136,7 @@
 		</dict>
 		<key>ownCloud File Provider.debug.dylib</key>
 		<data>
-		X8aQULh4RWhug5St4nzFdI78JW4=
+		dcviW8Ke/MXV0aY0hKwXjkw20e0=
 		</data>
 		<key>ru.lproj/Localizable.strings</key>
 		<dict>
@@ -190,7 +190,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			0TqIzvqu4VeIvT6MZQZAyhMm/LUXytPjH1UMOOzjRS8=
+			jcfMwSBCf8lVUMuPBKiAF7Ze3CeR2SLrpPCJk/SK8fQ=
 			</data>
 		</dict>
 		<key>PLCrashReporter_CrashReporter.bundle/PrivacyInfo.xcprivacy</key>
@@ -204,7 +204,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Nl4dPK1qN5e/Q5UOIXAxCVk6SKieSyLlCYtEq9SkY00=
+			+I+7zQlrwQr/NwhZunSTSrXG2qtFhu4x/N3Jywkiyyc=
 			</data>
 		</dict>
 		<key>PLCrashReporter_CrashReporter.bundle/_CodeSignature/CodeRequirements</key>
@@ -218,7 +218,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			NpHXpDUvSYhK8F7IdTEJCcRKx+Oe3s2wbkyBekcbUes=
+			+5paBKxfNY5iaF85dyZguw4Skj2p3jw01zOqChBHjPs=
 			</data>
 		</dict>
 		<key>PLCrashReporter_CrashReporter.bundle/_CodeSignature/CodeResources</key>
@@ -343,7 +343,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			/WMTi+txwYWxCbjP8F+mesS0tODhhYd8B47YA9XYpFQ=
+			tfl6BLf1JmrrPhV3G3POKAhI/v9SHpSS4Q52atg0T80=
 			</data>
 		</dict>
 		<key>ru.lproj/Localizable.strings</key>

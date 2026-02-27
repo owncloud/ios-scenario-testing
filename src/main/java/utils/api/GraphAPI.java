@@ -14,13 +14,16 @@ import okhttp3.RequestBody;
 import okhttp3.Response;
 import utils.LocProperties;
 import utils.entities.OCSpace;
+import utils.entities.OCSpaceMember;
 import utils.log.Log;
+import utils.parser.OCMemberJSONHandler;
 
 public class GraphAPI extends CommonAPI {
 
     private final String graphPath = "/graph/v1.0/";
     private final String drives = "drives/";
     private final String myDrives = "me/drives/";
+    private final String members = "/graph/v1beta1/drives/";
     private final String owner = LocProperties.getProperties().getProperty("userNameDefault");
 
     public static GraphAPI instance;
@@ -81,7 +84,7 @@ public class GraphAPI extends CommonAPI {
 
     public void disableSpace(String name, String description) throws IOException {
         Log.log(Level.FINE, "DISABLE SPACE: " + name + " " + description);
-        String spaceId = getSpaceIdFromName(name, description);
+        String spaceId = getSpaceIdFromNameAndDescription(name, description);
         String url = urlServer + graphPath + drives + spaceId;
         Log.log(Level.FINE, "URL: " + url);
         Request request = deleteRequest(url, user);
@@ -122,11 +125,40 @@ public class GraphAPI extends CommonAPI {
         return id;
     }
 
-    private String getSpaceIdFromName(String name, String description) throws IOException {
+    private String getSpaceIdFromNameAndDescription(String name, String description) throws IOException {
         List<OCSpace> mySpaces = getMySpaces();
         for (OCSpace space : mySpaces) {
             if (space.getName().trim().equals(name) && space.getDescription().trim().equals(description)) {
                 return space.getId();
+            }
+        }
+        return null;
+    }
+
+    public String getSpaceIdFromName(String name) throws IOException {
+        Log.log(Level.FINE, "Look for space ID or null: " + name);
+        List<OCSpace> mySpaces = getMySpaces();
+        for (OCSpace space : mySpaces) {
+            if (space.getName().trim().equals(name)) {
+                Log.log(Level.FINE, "FOUND: ID of space: " + space.getId() + " " + space.getName());
+                return space.getId();
+            }
+        }
+        return null;
+    }
+
+    public OCSpaceMember getMemberOfSpace(String spaceName, String userName) throws IOException {
+        Log.log(Level.FINE, "Get member of space: " + spaceName + " user: " + userName);
+        String spaceId = getSpaceIdFromName(spaceName);
+        String url = urlServer + members + spaceId + "/root/permissions";
+        Log.log(Level.FINE, "URL: " + url);
+        Request request = getRequest(url, userName);
+        Response response = httpClient.newCall(request).execute();
+        List<OCSpaceMember> spaceMembers =  OCMemberJSONHandler.parse(response.body().string());
+        for (OCSpaceMember member : spaceMembers){
+            Log.log(Level.FINE, "Checking " + member.getDisplayName());
+            if (member.getDisplayName().equals(userName)) {
+                return member;
             }
         }
         return null;

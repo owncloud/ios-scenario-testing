@@ -196,7 +196,8 @@ public class FileListPage extends CommonPage {
     }
 
     public void openSpacesList() {
-        Log.log(Level.FINE, "Starts: Open Spces list");
+        Log.log(Level.FINE, "Starts: Open Spaces list");
+        waitByXpath("//XCUIElementTypeStaticText[@name=\"Spaces\"]");
         spaces.click();
     }
 
