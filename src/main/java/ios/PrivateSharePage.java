@@ -19,8 +19,11 @@ public class PrivateSharePage extends CommonPage {
     @iOSXCUITFindBy(id = "Can upload View, download and upload.")
     private WebElement uploader;
 
-    @iOSXCUITFindBy(id = "Can edit without versions View, download, upload, edit, add and delete.")
+    @iOSXCUITFindBy(id = "Can edit View, download, upload, edit and add.")
     private WebElement editor;
+
+    @iOSXCUITFindBy(id = "Can edit with trashbin View, download, upload, edit, add and delete.")
+    private WebElement editorTrashbin;
 
     @iOSXCUITFindBy(xpath = "//XCUIElementTypeStaticText[@name=\"Set\"]")
     private WebElement addExpirationDate;
@@ -80,6 +83,7 @@ public class PrivateSharePage extends CommonPage {
             case "Viewer" -> viewer.click();
             case "Editor" -> editor.click();
             case "Upload" -> uploader.click();
+            case "EditorTrashbin" -> editorTrashbin.click();
             default -> Log.log(Level.WARNING, "Unknown permission: " + permission);
         }
     }
@@ -91,6 +95,7 @@ public class PrivateSharePage extends CommonPage {
             case ("Viewer") -> viewer.findElement(By.id(checkmarkId)).isDisplayed();
             case ("Editor") -> editor.findElement(By.id(checkmarkId)).isDisplayed();
             case ("Upload") -> uploader.findElement(By.id(checkmarkId)).isDisplayed();
+            case ("EditorTrashbin") -> editorTrashbin.findElement(By.id(checkmarkId)).isDisplayed();
             default -> false;
         };
     }
@@ -102,7 +107,7 @@ public class PrivateSharePage extends CommonPage {
             datePicker.click();
             nextMonth.click();
             waitById(expirationDay);
-            findId(expirationDay).click();
+            driver.findElement(By.id(expirationDay)).click();
         } else {
             if (hasExpiration()){
                 removeExpiration();
@@ -112,7 +117,6 @@ public class PrivateSharePage extends CommonPage {
 
     public void removeExpiration() {
         Log.log(Level.FINE, "Starts: Remove expiration date");
-
         removeExpirationDate.click();
     }
 

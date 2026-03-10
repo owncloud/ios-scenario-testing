@@ -1,5 +1,6 @@
 package ios;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
@@ -31,8 +32,11 @@ public class SharePage extends CommonPage {
     @iOSXCUITFindBy(id = "Can view")
     private WebElement viewerPermission;
 
-    @iOSXCUITFindBy(id = "Can edit without versions")
+    @iOSXCUITFindBy(id = "Can edit")
     private WebElement editorPermission;
+
+    @iOSXCUITFindBy(id = "Can edit with trashbin")
+    private WebElement editorTrashbin;
 
     @iOSXCUITFindBy(id = "Can upload")
     private WebElement uploadPermission;
@@ -64,13 +68,18 @@ public class SharePage extends CommonPage {
 
     public void openPublicLink(String linkName) {
         Log.log(Level.FINE, "Starts: open public link: " + linkName);
-        findId(linkName).click();
+        if (linkName.equals("")){
+            final String linkOpener = "link";
+            driver.findElement(By.id(linkOpener)).click();
+        } else {
+            driver.findElement(By.id(linkName)).click();
+        }
     }
 
     public void openPublicLink() {
         Log.log(Level.FINE, "Starts: open public link with default name");
         final String linkOpener = "link";
-        findId(linkOpener).click();
+        driver.findElement(By.id(linkOpener)).click();
     }
 
     public void openPrivateShare(String sharee) {
@@ -197,6 +206,7 @@ public class SharePage extends CommonPage {
         return switch (permissionName) {
             case "Viewer" -> viewerPermission.isDisplayed();
             case "Editor" -> editorPermission.isDisplayed();
+            case "EditorTrashbin" -> editorTrashbin.isDisplayed();
             case "Upload" -> uploadPermission.isDisplayed();
             default -> false;
         };

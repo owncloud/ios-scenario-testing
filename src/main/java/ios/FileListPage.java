@@ -197,8 +197,9 @@ public class FileListPage extends CommonPage {
 
     public void openSpacesList() {
         Log.log(Level.FINE, "Starts: Open Spaces list");
+        waitByXpath("//XCUIElementTypeImage[@name=\"square.grid.2x2\"]");
         waitByXpath("//XCUIElementTypeStaticText[@name=\"Spaces\"]");
-        spaces.click();
+        findXpath("//XCUIElementTypeCell[@name=\"Spaces\"]/XCUIElementTypeOther[2]").click();
     }
 
     public void openQuickAccessOption(String option){

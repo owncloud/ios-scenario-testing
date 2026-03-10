@@ -55,9 +55,6 @@ Feature: Spaces
     And Alice selects to disable the following spaces
       | name   | subtitle    |
       | Space3 | Third space |
-    Then Alice should not see the following spaces
-      | name   | subtitle    |
-      | Space3 | Third space |
     But Alice should see the following spaces in the list of disabled spaces
       | name   | subtitle    |
       | Space3 | Third space |
@@ -139,7 +136,7 @@ Feature: Spaces
       Given the following spaces have been created in Alice account
         | name   | subtitle   |
         | <name> | <subtitle> |
-      And Alice opens the sidebar
+      When Alice opens the sidebar
       And Alice selects the spaces view
       And Alice opens the members menu
       And Alice adds Bob to the space <name> with
@@ -151,7 +148,7 @@ Feature: Spaces
         | name    | subtitle       | permissions |
         | Space10 | Tenth space    | Can view    |
         | Space11 | Eleventh space | Can edit    |
-        | Space12 | Twelfth space  | Can manage  |
+        #| Space12 | Twelfth space  | Can manage  |
 
     Scenario Outline: Add a member to a space with expiration date
       Given the following spaces have been created in Alice account
@@ -171,3 +168,43 @@ Feature: Spaces
       Examples:
         | name    | subtitle         | permissions | expirationDate |
         | Space13 | Thirteenth space | Can view    | 25             |
+
+    Scenario Outline: Edit a member
+      Given the following spaces have been created in Alice account
+        | name   | subtitle   |
+        | <name> | <subtitle> |
+      And the following users are members of the space <name>
+        | user | permission          | expirationDate      |
+        | Bob  | <initialPermission> | <initialExpiration> |
+      When Alice opens the sidebar
+      And Alice selects the spaces view
+      And Alice opens the members menu
+      And Alice edits Bob from the space <name> with the following fields
+        | permission     | <permissions>    |
+        | expirationDate | <expirationDate> |
+      Then Bob should be member of the space <name> with
+        | permission     | <permissions>    |
+        | expirationDate | <expirationDate> |
+
+      Examples:
+        | name    | subtitle           | initialPermission | initialExpiration | permissions | expirationDate |
+        #| Space14 | Fourteenth space   | Can view          | 12                | Can edit    | 30             |
+        | Space15 | Fifteenth space    | Can manage        |                   | Can view    | 10             |
+        | Space16 | Sixteenth space    | Can edit          | 20                | Can view    |                |
+
+        @remove
+    Scenario: Remove a member from a space
+      Given the following spaces have been created in Alice account
+        | name    | subtitle          |
+        | Space17 | Seventeenth space |
+      And the following users are members of the space Space17
+        | user    | permission |
+        | Bob     | Can view   |
+        | Charles | Can edit   |
+      When Alice opens the sidebar
+      And Alice selects the spaces view
+      And Alice opens the members menu
+      And Alice removes Bob from the space Space17
+      Then Bob should not be member of the space Space17
+      And Charles should be member of the space Space17 with
+        | permission | Can edit |

@@ -6,6 +6,7 @@ import java.time.OffsetDateTime;
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
+import java.time.temporal.ChronoUnit;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 import java.util.logging.Level;
@@ -113,6 +114,11 @@ public class DateUtils {
     public static int todayYear() {
         GregorianCalendar gregorianCalendar = new GregorianCalendar();
         return gregorianCalendar.get(Calendar.YEAR);
+    }
+
+    public static String daysToUTCForExpiration (String days){
+        Instant expirationInstant = Instant.now().plus(Integer.parseInt(days.trim()), ChronoUnit.DAYS);
+        return DateTimeFormatter.ISO_INSTANT.format(expirationInstant);
     }
 
 }

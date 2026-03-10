@@ -86,11 +86,16 @@ public class SpacesPage extends CommonPage {
         saveButton.click();
     }
 
-    public void openMembers() throws InterruptedException {
-        Log.log(Level.FINE, "Starts: Hide disabled spaces");
+    public void openMembers() {
+        Log.log(Level.FINE, "Starts: Open Members");
         waitByXpath("(//XCUIElementTypeButton[@name=\"More\"])[1]");
         moreButton.get(0).click();
         membersAction.click();
+    }
+
+    public void openEditMember(String userName) {
+        Log.log(Level.FINE, "Starts: Open Edit Member: " + userName);
+        findId(userName).click();
     }
 
     private void writeSpaceNameSubtitle(String name, String subtitle) {
@@ -146,5 +151,17 @@ public class SpacesPage extends CommonPage {
             Log.log(Level.FINE, "Space found");
             return true;
         }
+    }
+
+    public boolean isMemberOfSpace(String userName) {
+        Log.log(Level.FINE, "Starts: check if " + userName + " is member of the space");
+        List<WebElement> listUSers = findListCss("XCUIElementTypeCell");
+        for (WebElement user : listUSers) {
+            Log.log(Level.FINE, "User: " + user.getAttribute("name"));
+            if (user.getAttribute("name").contains(userName)) {
+                return true;
+            }
+        }
+        return false;
     }
 }

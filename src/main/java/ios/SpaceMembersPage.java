@@ -20,8 +20,17 @@ public class SpaceMembersPage extends CommonPage {
     @iOSXCUITFindBy(xpath = "//XCUIElementTypeButton[@name=\"Share\"]")
     private WebElement share;
 
+    @iOSXCUITFindBy(xpath = "//XCUIElementTypeButton[@name=\"Save changes\"]")
+    private WebElement saveChanges;
+
     @iOSXCUITFindBy(xpath = "//XCUIElementTypeButton[@name=\"Set\"]")
-    private WebElement setExpirationDate;
+    private List<WebElement> setExpirationDate;
+
+    @iOSXCUITFindBy(id = "Remove expiration date")
+    private WebElement removeExpirationDate;
+
+    @iOSXCUITFindBy(id = "Unshare")
+    private WebElement removeMember;
 
     public static SpaceMembersPage instance;
 
@@ -49,28 +58,56 @@ public class SpaceMembersPage extends CommonPage {
 
     public void setPermission(String permission) {
         Log.log(Level.FINE, "Starts: add permission " + permission);
+        waitById("PERMISSIONS");
         findId(permission).click();
     }
 
     public void setExpirationDate(String days) {
         Log.log(Level.FINE, "Starts: Add expiration date in days " + days);
-        setExpirationDate.click();
-        findId("Date Picker").click();
-        findId("DatePicker.NextMonth").click();
-        waitById(days);
-        findId(days).click();
+        days = normalizeOptional(days);
+        boolean hasDays = days != null;
+        if (setExpirationDate.size() > 0) { // there is no expiration date
+            setExpirationDate.get(0).click();
+            findId("Date Picker").click();
+            findId("DatePicker.NextMonth").click();
+            waitById(days);
+            findId(days).click();
+        } else {
+            if (!hasDays) {
+                removeExpirationDate.click();
+                return;
+            }
+            findId("Date Picker").click();
+            findId("DatePicker.NextMonth").click();
+            waitById(days);
+            findId(days).click();
+        }
     }
 
     public boolean isExpirationDateCorrect(String days){
         Log.log(Level.FINE, "Starts: Check expiration date correct " + days);
-        String date = DateUtils.displayedDate(days);
-        Log.log(Level.FINE, "Date displayed: " + date);
-        WebElement element = findIOSPredicateSubText(date);
-        return element!=null;
+        days = normalizeOptional(days);
+        boolean hasDays = days != null;
+        if (hasDays) {
+            String date = DateUtils.displayedDate(days);
+            Log.log(Level.FINE, "Date displayed: " + date);
+            WebElement element = findIOSPredicateSubText(date);
+            return element!=null;
+        } else {
+            return !hasDays;
+        }
     }
 
     public void shareWithMember(){
         share.click();
+    }
+
+    public void saveChanges(){
+        saveChanges.click();
+    }
+
+    public void removeMember(){
+        removeMember.click();
     }
 
     public boolean isUserMember(String userName, String permission) {
@@ -78,6 +115,7 @@ public class SpaceMembersPage extends CommonPage {
         List<WebElement> cells = findListCss("XCUIElementTypeCell");
         for (WebElement cell : cells) {
             String text = cell.getAttribute("name");
+            Log.log(Level.FINE, "quien: " + text);
             if (text.contains(userName) && text.contains(permission)) {
                 return true;
             }

@@ -28,12 +28,12 @@ Feature: Private Share
     And user <sharee> should have access to <item>
 
     Examples:
-      | type   | item       | permissions | sharee | menu       | expiration |
-      | file   | Share1.txt | Viewer      | Bob    | Actions    | 19         |
-      | folder | Share2     | Editor      | Bob    | Contextual | 0          |
-      | folder | Share3     | Upload      | Bob    | Actions    | 14         |
+      | type   | item       | permissions     | sharee | menu       | expiration |
+      | file   | Share1.txt | Viewer          | Bob    | Actions    | 19         |
+      | folder | Share2     | Editor          | Bob    | Contextual | 0          |
+      | folder | Share3     | EditorTrashbin  | Bob    | Actions    | 14         |
 
-  @smoke @expiration
+  @smoke @expiration @bbbb
   Scenario Outline: Correct share with group
     Given the following items have been created in Alice account
       | type   | name   |
@@ -50,10 +50,10 @@ Feature: Private Share
     And group <group> should have access to <item>
 
     Examples:
-      | type   | item       | group | permissions | menu       | expiration |
-      | file   | Share4.txt | test  | Viewer      | Contextual | 11         |
-      | folder | Share5     | test  | Editor      | Actions    | 0          |
-      | folder | Share6     | test  | Upload      | Actions    | 22         |
+      | type   | item       | group | permissions     | menu       | expiration |
+      | file   | Share4.txt | test  | Viewer          | Contextual | 21         |
+      | folder | Share5     | test  | Editor          | Actions    | 0          |
+      | folder | Share6     | test  | EditorTrashbin  | Actions    | 22         |
 
   @editshare @ignore #checkwhy
   Rule: Edit an existing share
@@ -78,7 +78,7 @@ Feature: Private Share
     Examples:
       | type   | item       | sharee | permissions | expiration |
       | file   | Share7.txt | Bob    | Editor      | 12         |
-      | folder | Share8     | Bob    | Upload      | 0          |
+      | folder | Share8     | Bob    | Viewer      | 0          |
 
   @deleteshare
   Rule: Delete an existing share

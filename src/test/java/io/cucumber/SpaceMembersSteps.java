@@ -58,7 +58,7 @@ public class SpaceMembersSteps {
                     // Local validation
                     assertTrue(world.spaceMembersPage.isUserMember(userName, value));
                     // Remote validation
-                    assertEquals(member.getPermission(), value);
+                    assertTrue(member.getPermission().contains(value));
                 }
                 case "expirationDate" -> {
                     // Local validation

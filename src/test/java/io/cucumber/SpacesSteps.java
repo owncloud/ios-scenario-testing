@@ -52,6 +52,19 @@ public class SpacesSteps {
         }
     }
 
+    @Given("the following users are members of the space {word}")
+    public void users_members_of_space(String spaceName, DataTable table) throws IOException {
+        StepLogger.logCurrentStep(Level.FINE);
+        List<Map<String, String>> rows = table.asMaps(String.class, String.class);
+        for (Map<String, String> row : rows) {
+            String userName = row.get("user");
+            String permission = row.get("permission");
+            String expDate = row.get("expirationDate");
+            String expirationDate = (expDate == null) ? "" : expDate.trim();
+            world.graphAPI.addMemberToSpace(spaceName, userName, permission, expirationDate);
+        }
+    }
+
     @When("Alice selects the spaces view")
     public void user_selects_spaces_view() {
         StepLogger.logCurrentStep(Level.FINE);
@@ -124,6 +137,30 @@ public class SpacesSteps {
     public void opens_members_menu() throws InterruptedException {
         StepLogger.logCurrentStep(Level.FINE);
         world.spacesPage.openMembers();
+    }
+
+    @When("Alice edits {word} from the space {word} with the following fields")
+    public void edit_member_space(String userName, String spaceName, DataTable table) {
+        StepLogger.logCurrentStep(Level.FINE);
+        //world.spacesPage.openMembers();
+        world.spacesPage.openEditMember(userName);
+        Map<String, String> fields = table.asMap(String.class, String.class);
+        for (Map.Entry<String, String> entry : fields.entrySet()) {
+            String key = entry.getKey();
+            String value = entry.getValue();
+            switch (key) {
+                case "permission" -> world.spaceMembersPage.setPermission(value);
+                case "expirationDate" -> world.spaceMembersPage.setExpirationDate(value);
+            }
+        }
+        world.spaceMembersPage.saveChanges();
+    }
+
+    @When("Alice removes {word} from the space {word}")
+    public void remove_user_form_space(String userName, String spaceName) {
+        StepLogger.logCurrentStep(Level.FINE);
+        world.spacesPage.openEditMember(userName);
+        world.spaceMembersPage.removeMember();
     }
 
     @Then("Alice should{typePosNeg} see the following spaces")
@@ -202,4 +239,12 @@ public class SpacesSteps {
         // Check if all spaces in scenario definition match with spaces in server
         assertTrue(matches);
     }
+
+    @Then("{word} should not be member of the space {word}")
+    public void is_user_member(String userName, String spaceName) {
+        StepLogger.logCurrentStep(Level.FINE);
+        assertFalse(world.spacesPage.isMemberOfSpace(userName));
+    }
+
+
 }

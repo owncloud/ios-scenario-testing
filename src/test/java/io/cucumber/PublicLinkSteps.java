@@ -79,17 +79,21 @@ public class PublicLinkSteps {
         StepLogger.logCurrentStep(Level.FINE);
         //1. Asserts in UI
         //1.1 Checking in Shares page
+        String linkName = "";
         Map<String, String> fields = table.asMap(String.class, String.class);
         for (Map.Entry<String, String> entry : fields.entrySet()) {
             String key = entry.getKey();
             String value = entry.getValue();
             switch (key) {
                 case "permissions" -> {} //a lot of flakyness by asserting sharePage.isLinkPermissionCorrect
-                case "name" -> assertTrue(world.sharePage.isNameCorrect(value));
+                case "name" -> {
+                    linkName = value;
+                    assertTrue(world.sharePage.isNameCorrect(value));
+                }
             }
         }
         //1.2. Checking in link page
-        world.sharePage.openPublicLink();
+        world.sharePage.openPublicLink(linkName);
         for (Map.Entry<String, String> entry : fields.entrySet()) {
             String key = entry.getKey();
             String value = entry.getValue();

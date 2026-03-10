@@ -20,8 +20,8 @@ Feature: Move item
     And Alice should see <itemName> inside the folder <targetFolder>
 
     Examples:
-      | itemType | itemName | targetFolder | menu       |
-      | folder   | move1    | Documents1   | Contextual |
+      | itemType | itemName | targetFolder | menu      |
+      | folder   | move1    | Documents1   | Actions   |
 
   Scenario Outline: Move an existent file to another location using the Contextual menu
     Given the following items have been created in Alice account
@@ -34,8 +34,8 @@ Feature: Move item
     And Alice should see <itemName> inside the folder <targetFolder>
 
     Examples:
-      | itemType | itemName  | targetFolder | menu       |
-      | file     | move2.txt | Documents3   | Contextual |
+      | itemType | itemName  | targetFolder | menu     |
+      | file     | move2.txt | Documents3   | Actions  |
 
   Scenario Outline: Move an existent item to a new created folder in the picker
     Given the following items have been created in Alice account

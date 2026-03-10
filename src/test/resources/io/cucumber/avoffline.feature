@@ -25,7 +25,7 @@ Feature: Set items as available offline (downloaded and synced)
       | type   | name       |
       | file   | file3.pdf  |
       | folder | folderTest |
-    When Alice selects to make available offline the folder folderTest using the Contextual menu
+    When Alice selects to make available offline the folder folderTest using the Actions menu
     And Alice selects to move the file file3.pdf using the Actions menu
     And Alice selects folderTest as target folder of the move operation
     Then Alice should see the item folderTest as av.offline
@@ -52,8 +52,8 @@ Feature: Set items as available offline (downloaded and synced)
       | type   | name      |
       | file   | file5.txt |
       | folder | folder5   |
-    And Alice selects to make available offline the file file5.txt using the Contextual menu
-    And Alice selects to make available offline the folder folder5 using the Contextual menu
+    And Alice selects to make available offline the file file5.txt using the Actions menu
+    And Alice selects to make available offline the folder folder5 using the Actions menu
     When Alice opens the sidebar
     When Alice opens the Available Offline collection of Quick Access
     Then Alice should see file5.txt in Quick Access

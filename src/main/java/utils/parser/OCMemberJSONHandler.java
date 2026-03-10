@@ -7,9 +7,13 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.logging.Level;
+
+import javax.sound.sampled.LineEvent;
 
 import utils.entities.OCSpaceMember;
 import utils.entities.OCSpacePermission;
+import utils.log.Log;
 
 public class OCMemberJSONHandler {
 
@@ -30,7 +34,7 @@ public class OCMemberJSONHandler {
 
     public static List<OCSpaceMember> parse(String jsonText) {
         JSONObject root = new JSONObject(jsonText);
-
+        Log.log(Level.FINE, "Text to parse: " + jsonText);
         // 1. Mapping roles
         Map<String, String> rolesMap = new HashMap<>();
         JSONArray rolesArray = root

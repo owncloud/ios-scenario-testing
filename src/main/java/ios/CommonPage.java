@@ -88,7 +88,7 @@ public class CommonPage {
     }
 
     public WebElement findId(String id) {
-        return driver.findElement(AppiumBy.id(id));
+        return driver.findElement(AppiumBy.iOSNsPredicateString("name CONTAINS '" + id + "'"));
     }
 
     public List<WebElement> findListId(String id) {

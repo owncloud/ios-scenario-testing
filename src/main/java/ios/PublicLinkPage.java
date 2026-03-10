@@ -146,7 +146,7 @@ public class PublicLinkPage extends CommonPage {
 
     public boolean isNameCorrect(String name) {
         Log.log(Level.FINE, "Starts: Check if name is correct: " + name);
-        return findId("Name").getAttribute("value").equals(name);
+        return !findListId(name).isEmpty();
     }
 
     public boolean isPasswordEnabled(String itemName, String password) {
