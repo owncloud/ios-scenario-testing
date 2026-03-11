@@ -129,7 +129,7 @@ Feature: Spaces
       | name   | subtitle    |
       | Space9 | Ninth space |
 
-  @memberspace
+  @spacemembership
   Rule: Space Membership
 
     Scenario Outline: Add a member to a space
@@ -148,7 +148,7 @@ Feature: Spaces
         | name    | subtitle       | permissions |
         | Space10 | Tenth space    | Can view    |
         | Space11 | Eleventh space | Can edit    |
-        #| Space12 | Twelfth space  | Can manage  |
+        | Space12 | Twelfth space  | Can manage |
 
     Scenario Outline: Add a member to a space with expiration date
       Given the following spaces have been created in Alice account
@@ -169,6 +169,7 @@ Feature: Spaces
         | name    | subtitle         | permissions | expirationDate |
         | Space13 | Thirteenth space | Can view    | 25             |
 
+    @editmember
     Scenario Outline: Edit a member
       Given the following spaces have been created in Alice account
         | name   | subtitle   |
@@ -188,11 +189,10 @@ Feature: Spaces
 
       Examples:
         | name    | subtitle           | initialPermission | initialExpiration | permissions | expirationDate |
-        #| Space14 | Fourteenth space   | Can view          | 12                | Can edit    | 30             |
+        | Space14 | Fourteenth space   | Can view          | 12                | Can edit    | 22             |
         | Space15 | Fifteenth space    | Can manage        |                   | Can view    | 10             |
-        | Space16 | Sixteenth space    | Can edit          | 20                | Can view    |                |
+        | Space16 | Sixteenth space    | Can edit          | 20                | Can manage  |                |
 
-        @remove
     Scenario: Remove a member from a space
       Given the following spaces have been created in Alice account
         | name    | subtitle          |

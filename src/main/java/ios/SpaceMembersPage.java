@@ -56,10 +56,19 @@ public class SpaceMembersPage extends CommonPage {
         findId(userName).click();
     }
 
+    public void openMember(String userName){
+        Log.log(Level.FINE, "Starts: open member: " + userName);
+        findId(userName).click();
+    }
+
+
     public void setPermission(String permission) {
         Log.log(Level.FINE, "Starts: add permission " + permission);
         waitById("PERMISSIONS");
-        findId(permission).click();
+        List<WebElement> permissions = findListId(permission);
+        Log.log(Level.FINE, permissions.size() + " permissions found");
+        // The second in the list with the exact name of the required permission. To improve somehow...
+        permissions.get(1).click();
     }
 
     public void setExpirationDate(String days) {
@@ -84,16 +93,20 @@ public class SpaceMembersPage extends CommonPage {
         }
     }
 
-    public boolean isExpirationDateCorrect(String days){
+    public boolean isExpirationDateCorrect(String userName, String days){
         Log.log(Level.FINE, "Starts: Check expiration date correct " + days);
         days = normalizeOptional(days);
         boolean hasDays = days != null;
+       openMember(userName);
         if (hasDays) {
             String date = DateUtils.displayedDate(days);
-            Log.log(Level.FINE, "Date displayed: " + date);
-            WebElement element = findIOSPredicateSubText(date);
-            return element!=null;
+            String dateDisplayed = findId("Date Picker").getAttribute("value");
+            Log.log(Level.FINE, "Date to check: " + date);
+            Log.log(Level.FINE, "Date displayed: " + dateDisplayed);
+            findXpath("//XCUIElementTypeButton[@name=\"Cancel\"]").click();
+            return dateDisplayed.equals(date);
         } else {
+            findXpath("//XCUIElementTypeButton[@name=\"Cancel\"]").click();
             return !hasDays;
         }
     }
@@ -115,7 +128,7 @@ public class SpaceMembersPage extends CommonPage {
         List<WebElement> cells = findListCss("XCUIElementTypeCell");
         for (WebElement cell : cells) {
             String text = cell.getAttribute("name");
-            Log.log(Level.FINE, "quien: " + text);
+            Log.log(Level.FINE, "Cell text: " + text);
             if (text.contains(userName) && text.contains(permission)) {
                 return true;
             }

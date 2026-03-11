@@ -33,7 +33,7 @@ Feature: Private Share
       | folder | Share2     | Editor          | Bob    | Contextual | 0          |
       | folder | Share3     | EditorTrashbin  | Bob    | Actions    | 14         |
 
-  @smoke @expiration @bbbb
+  @smoke @expiration
   Scenario Outline: Correct share with group
     Given the following items have been created in Alice account
       | type   | name   |

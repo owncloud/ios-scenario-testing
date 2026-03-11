@@ -92,7 +92,9 @@ public class CommonPage {
     }
 
     public List<WebElement> findListId(String id) {
-        return driver.findElements(AppiumBy.id(id));
+        return driver.findElements(AppiumBy.iOSNsPredicateString(
+                "label CONTAINS '" + id + "' OR name CONTAINS '" + id + "'"
+        ));
     }
 
     public List<WebElement> findListCss(String cssClass) {

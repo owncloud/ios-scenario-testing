@@ -62,7 +62,7 @@ public class SpaceMembersSteps {
                 }
                 case "expirationDate" -> {
                     // Local validation
-                    assertTrue(world.spaceMembersPage.isExpirationDateCorrect(value));
+                    assertTrue(world.spaceMembersPage.isExpirationDateCorrect(userName, value));
                     // Remote validation
                     Log.log(Level.FINE, "Remote date: " + member.getExpirationDate());
                     if (value != null) {
