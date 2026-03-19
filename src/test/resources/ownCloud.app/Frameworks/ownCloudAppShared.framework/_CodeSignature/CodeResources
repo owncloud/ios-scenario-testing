@@ -12,6 +12,10 @@
 		<data>
 		kbt1FkOY/hL1Y7tL3uM2PAKpUik=
 		</data>
+		<key>FontAwesome.LICENSE</key>
+		<data>
+		CD95ANeO+eqGI9QoOSWfQmFmrPM=
+		</data>
 		<key>Info.plist</key>
 		<data>
 		d4HcU3ykw+Igcc6o4eJMbOnQH2I=
@@ -24,14 +28,6 @@
 		<data>
 		CEJnK7wCb2hL8rKRQWJ6xdCsTTs=
 		</data>
-		<key>application-pdf.tvg</key>
-		<data>
-		Yz1X31sJ3eoyT1XOKoGIaEP0uZ0=
-		</data>
-		<key>application.tvg</key>
-		<data>
-		fc5/upt88ye2G1328VT3tYDHw3o=
-		</data>
 		<key>ar.lproj/Localizable.strings</key>
 		<dict>
 			<key>hash</key>
@@ -41,10 +37,6 @@
 			<key>optional</key>
 			<true/>
 		</dict>
-		<key>audio.tvg</key>
-		<data>
-		a4VUpZ/lHZMaYXT7MmI/2NSqWa0=
-		</data>
 		<key>ca.lproj/Localizable.strings</key>
 		<dict>
 			<key>hash</key>
@@ -108,38 +100,6 @@
 			<key>optional</key>
 			<true/>
 		</dict>
-		<key>file.tvg</key>
-		<data>
-		LbsXtuIRRwqoL8cUy8TNvlyTZwo=
-		</data>
-		<key>folder-create.tvg</key>
-		<data>
-		ocsOaOPTHHu++4gqm+/2BN0DV6g=
-		</data>
-		<key>folder-drag-accept.tvg</key>
-		<data>
-		m+rd9r8ApKKOTGBBgw30iU8k0n4=
-		</data>
-		<key>folder-external.tvg</key>
-		<data>
-		kfmkDy8eqgNjvqJrwNGkIFh1ZW8=
-		</data>
-		<key>folder-public.tvg</key>
-		<data>
-		amIxMwuxaQw6thDmLqTCsnGMjmg=
-		</data>
-		<key>folder-shared.tvg</key>
-		<data>
-		BMS1AwgWbHRxFfcauSXEHf3GLYM=
-		</data>
-		<key>folder-starred.tvg</key>
-		<data>
-		U3q2YVNcM9vFSZJmTh2gv4inX0E=
-		</data>
-		<key>folder.tvg</key>
-		<data>
-		IOUPAQufbe1jVG0bMLSjT1mraj4=
-		</data>
 		<key>fr.lproj/Localizable.strings</key>
 		<dict>
 			<key>hash</key>
@@ -149,26 +109,6 @@
 			<key>optional</key>
 			<true/>
 		</dict>
-		<key>icon-available-offline.tvg</key>
-		<data>
-		eZRKBzQceP7uCoscP7icjtSZ6W4=
-		</data>
-		<key>icon-locked.tvg</key>
-		<data>
-		5iorpq4CoPZIYM9CvC1psAiLwUc=
-		</data>
-		<key>icon-password-manager.tvg</key>
-		<data>
-		WgV9W86p8zDCkh/Zf0JdOkoKvog=
-		</data>
-		<key>icon-search.tvg</key>
-		<data>
-		TYrHZemOQpbsNeI4UQgrgo8RM7k=
-		</data>
-		<key>image.tvg</key>
-		<data>
-		ZTYPhzmWrjYGlQ56UFBMWq8JAKQ=
-		</data>
 		<key>it.lproj/Localizable.strings</key>
 		<dict>
 			<key>hash</key>
@@ -223,14 +163,6 @@
 			<key>optional</key>
 			<true/>
 		</dict>
-		<key>owncloud-logo.tvg</key>
-		<data>
-		QuNYDYB7DE5fZuzPLvbhpMUw11E=
-		</data>
-		<key>package-x-generic.tvg</key>
-		<data>
-		IjdS0xMlyrcA0yQCcydgUJDOTQM=
-		</data>
 		<key>pt-BR.lproj/Localizable.strings</key>
 		<dict>
 			<key>hash</key>
@@ -258,10 +190,6 @@
 			<key>optional</key>
 			<true/>
 		</dict>
-		<key>space.tvg</key>
-		<data>
-		D45/FgLnsB+Tb1tZgMSQeZGRg/c=
-		</data>
 		<key>sq.lproj/Localizable.strings</key>
 		<dict>
 			<key>hash</key>
@@ -271,10 +199,6 @@
 			<key>optional</key>
 			<true/>
 		</dict>
-		<key>status-flash.tvg</key>
-		<data>
-		VSLAb2Ctz1Tek6Q1YyWgeRiL1DQ=
-		</data>
 		<key>sv.lproj/Localizable.strings</key>
 		<dict>
 			<key>hash</key>
@@ -284,26 +208,6 @@
 			<key>optional</key>
 			<true/>
 		</dict>
-		<key>text-calendar.tvg</key>
-		<data>
-		oEFKnR3/BGul3W0Ftwg3if8ZJ4k=
-		</data>
-		<key>text-code.tvg</key>
-		<data>
-		jmlyrinlluezrP6psDxOs1wHzI0=
-		</data>
-		<key>text-uri-list.tvg</key>
-		<data>
-		eoORS1FinfS0s1oZdGJPIBLLDmo=
-		</data>
-		<key>text-vcard.tvg</key>
-		<data>
-		HdOwjobFxg36+jAV1n3PuG9Mvzo=
-		</data>
-		<key>text.tvg</key>
-		<data>
-		n+BxLXXl2Jg+WovqoZ48+No2dyQ=
-		</data>
 		<key>th-TH.lproj/Localizable.strings</key>
 		<dict>
 			<key>hash</key>
@@ -322,21 +226,137 @@
 			<key>optional</key>
 			<true/>
 		</dict>
-		<key>video.tvg</key>
+		<key>tvg-icons/archive.tvg</key>
 		<data>
-		K5AbGfpFEkCvhqui/1uhyyW4KC4=
+		oQg9J0RTohWCcSDWA90aKUDox5E=
 		</data>
-		<key>x-office-document.tvg</key>
+		<key>tvg-icons/audio.tvg</key>
 		<data>
-		QV79h4UUcXH3zlmu3teiJmFn6JM=
+		vfAomOrl5v2ys3CJuAUjdMlNN4k=
 		</data>
-		<key>x-office-presentation.tvg</key>
+		<key>tvg-icons/calendar.tvg</key>
 		<data>
-		NORjRqr/JV0GqlyCvMPpOk+2QC8=
+		N8imASHwpu2AeG/BS6d+KuG0X3c=
 		</data>
-		<key>x-office-spreadsheet.tvg</key>
+		<key>tvg-icons/code.tvg</key>
 		<data>
-		6dW6A8NIBiESSOVnzPF2JaTmUL8=
+		lFd6uMpFE8XfTQycrnwXg+lsWaI=
+		</data>
+		<key>tvg-icons/document.tvg</key>
+		<data>
+		4j6N3mIogm5RYVYWYv7s7N8C3ks=
+		</data>
+		<key>tvg-icons/drawio.tvg</key>
+		<data>
+		mpOzYFeJJvA/ETmn1tzAQcT2qmI=
+		</data>
+		<key>tvg-icons/epub.tvg</key>
+		<data>
+		IqJqnL1gElZmIA34sPaG7oIn8mg=
+		</data>
+		<key>tvg-icons/file.tvg</key>
+		<data>
+		9jQvE5LKdW56wS+toQ8bdyqzGow=
+		</data>
+		<key>tvg-icons/folder-create.tvg</key>
+		<data>
+		ocsOaOPTHHu++4gqm+/2BN0DV6g=
+		</data>
+		<key>tvg-icons/folder.tvg</key>
+		<data>
+		8BBGHSktaHHhCfdvzwosB8JLT5Y=
+		</data>
+		<key>tvg-icons/form.tvg</key>
+		<data>
+		k1izdEnA5/5qmAKgKrUHhIe4mho=
+		</data>
+		<key>tvg-icons/icon-available-offline.tvg</key>
+		<data>
+		K7I9nMHq8LdHkGrThyQbEMUIcW4=
+		</data>
+		<key>tvg-icons/icon-locked.tvg</key>
+		<data>
+		5iorpq4CoPZIYM9CvC1psAiLwUc=
+		</data>
+		<key>tvg-icons/icon-map.json</key>
+		<data>
+		TXhftTZc21tqzpEdVblJUL8pfR4=
+		</data>
+		<key>tvg-icons/icon-password-manager.tvg</key>
+		<data>
+		WgV9W86p8zDCkh/Zf0JdOkoKvog=
+		</data>
+		<key>tvg-icons/ifc.tvg</key>
+		<data>
+		fUYVxGsug3ANsSIXzIYwID2q1wo=
+		</data>
+		<key>tvg-icons/image.tvg</key>
+		<data>
+		7gY+j1a9c2k895txQDLlwK4YLFU=
+		</data>
+		<key>tvg-icons/ipynb.tvg</key>
+		<data>
+		0B6s3rdDPK1DxEkeQqL5dSkuFJI=
+		</data>
+		<key>tvg-icons/markdown.tvg</key>
+		<data>
+		g2OmZxdXvESuOPPXXDH4EhnI7xY=
+		</data>
+		<key>tvg-icons/odg.tvg</key>
+		<data>
+		7dFQzKQ+BoEm3+VAh9YvO/rqZk0=
+		</data>
+		<key>tvg-icons/owncloud-logo.tvg</key>
+		<data>
+		QuNYDYB7DE5fZuzPLvbhpMUw11E=
+		</data>
+		<key>tvg-icons/pdf.tvg</key>
+		<data>
+		6/J1KusHPfmhQFaLiAZOGhqVXTQ=
+		</data>
+		<key>tvg-icons/presentation.tvg</key>
+		<data>
+		cq5gVqsR+IvKy7hN0tw5W8hdi5A=
+		</data>
+		<key>tvg-icons/psec.tvg</key>
+		<data>
+		ApWEqdQvHYDwU297aczcF73FqjY=
+		</data>
+		<key>tvg-icons/root.tvg</key>
+		<data>
+		3ixS4xw0AZo+a48VAqHJK+F0hP8=
+		</data>
+		<key>tvg-icons/space.tvg</key>
+		<data>
+		HbKs4RHHx+jDhPUIuoXjwA36mMw=
+		</data>
+		<key>tvg-icons/spreadsheet.tvg</key>
+		<data>
+		7wex3lde13GxTFnJiSx0fa9hkSE=
+		</data>
+		<key>tvg-icons/status-flash.tvg</key>
+		<data>
+		VSLAb2Ctz1Tek6Q1YyWgeRiL1DQ=
+		</data>
+		<key>tvg-icons/text.tvg</key>
+		<data>
+		tnuhaU1uZb9lROdKappE3U6B1oc=
+		</data>
+		<key>tvg-icons/url.tvg</key>
+		<data>
+		zIfP+A/t95SvZBLzdhJKdq3vxSU=
+		</data>
+		<key>tvg-icons/vcard.tvg</key>
+		<data>
+		+tVNbLPeQ3y4ksNqKdpSUgHN3ms=
+		</data>
+		<key>tvg-icons/video.tvg</key>
+		<data>
+		EoW20hVW0OWTpXgoafrTDVXPK3o=
+		</data>
+		<key>tvg-icons/visio.tvg</key>
+		<data>
+		CMrBubXrzCZ1IndKwts+jGGDpDg=
 		</data>
 		<key>zh-Hans.lproj/Localizable.strings</key>
 		<dict>
@@ -364,6 +384,13 @@
 			6xmOBVbZpHu5SKKDY0b8vC5oepoWvSVqKJ7L2nP9FtI=
 			</data>
 		</dict>
+		<key>FontAwesome.LICENSE</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			dIrsyIFIk+M7jqcAttR04qXlHsUTusP2wBfQfefGYiU=
+			</data>
+		</dict>
 		<key>PasscodeViewController.nib</key>
 		<dict>
 			<key>hash2</key>
@@ -378,20 +405,6 @@
 			3ks2kcrEby5hugTxz4/yOyGbMnsPhLW4pa2fu4YVEsI=
 			</data>
 		</dict>
-		<key>application-pdf.tvg</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			ry4aeAugHno54cLwJytXrLdsGo8VSBw2Si9axsFypqc=
-			</data>
-		</dict>
-		<key>application.tvg</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			zp9fq69lz+nUaNm9Vn6EKtHnx3d5JDcLPkiPgRNT7gY=
-			</data>
-		</dict>
 		<key>ar.lproj/Localizable.strings</key>
 		<dict>
 			<key>hash2</key>
@@ -400,13 +413,6 @@
 			</data>
 			<key>optional</key>
 			<true/>
-		</dict>
-		<key>audio.tvg</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			t/E/+RjouetoIBMFkFi3dKeseXdk78XoqxBJBsbayh0=
-			</data>
 		</dict>
 		<key>ca.lproj/Localizable.strings</key>
 		<dict>
@@ -471,62 +477,6 @@
 			<key>optional</key>
 			<true/>
 		</dict>
-		<key>file.tvg</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			zePiR2NdqAYGrBlBAG8/N3FhASOluHqWVSUUBthzmjc=
-			</data>
-		</dict>
-		<key>folder-create.tvg</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			GJdAU+ZGyKjnzS4s1W6ahFe5Gk29cTPR3hl/n8/v9yI=
-			</data>
-		</dict>
-		<key>folder-drag-accept.tvg</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			mIoSLLftwcsaz2gRV6iK/sR9v3faoXdqCJA5o6W4rA8=
-			</data>
-		</dict>
-		<key>folder-external.tvg</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			KaP0Ti26R41syAcJr5GpqMiNlgDEgpLcGrLUqoBtC24=
-			</data>
-		</dict>
-		<key>folder-public.tvg</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			KwA2s6SfNYAf0zLBfupPznKoj+h3hiDRRnls7JLKHjQ=
-			</data>
-		</dict>
-		<key>folder-shared.tvg</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			d82LofCRxUlpd/iPLainjzqyb/ZX5uZTZ+GgNWUseXw=
-			</data>
-		</dict>
-		<key>folder-starred.tvg</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			zyTYzIZWQofEv2SufAj175YWKKrSwoY5I6z1uFSXF4k=
-			</data>
-		</dict>
-		<key>folder.tvg</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			pDm67/7LucZOCrO+vqXRAHCx94eHr0E9/IFLmGzXlk4=
-			</data>
-		</dict>
 		<key>fr.lproj/Localizable.strings</key>
 		<dict>
 			<key>hash2</key>
@@ -535,41 +485,6 @@
 			</data>
 			<key>optional</key>
 			<true/>
-		</dict>
-		<key>icon-available-offline.tvg</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			1sQsB8SrbmrswMo18aEwrNhviTrJsgmPbFwIL6LxwMw=
-			</data>
-		</dict>
-		<key>icon-locked.tvg</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			URCZVbsr46xxzaEpDWTy7DGGCFk3DYSNGivzPrNFrEw=
-			</data>
-		</dict>
-		<key>icon-password-manager.tvg</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			U+mVqUP98DDqsEHOSdofIFAYNYFD/ldYAuhnfJ1ok3g=
-			</data>
-		</dict>
-		<key>icon-search.tvg</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			7eBlPH2kCsUqODmqXm2eCm5yPOPY4EEN1TfiNhvZZwo=
-			</data>
-		</dict>
-		<key>image.tvg</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			fGZ6E5YndHaPNeZZclLob/8wcQUF00BFeO21U/xOgzw=
-			</data>
 		</dict>
 		<key>it.lproj/Localizable.strings</key>
 		<dict>
@@ -625,20 +540,6 @@
 			<key>optional</key>
 			<true/>
 		</dict>
-		<key>owncloud-logo.tvg</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			MBgCF5cmOnv8LdJyFuSP5fsTYCvPTe0GiHAp4vdNzw4=
-			</data>
-		</dict>
-		<key>package-x-generic.tvg</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			temSU9rw80UeZmncditByMqATETrX7CmaauTjpR4gWI=
-			</data>
-		</dict>
 		<key>pt-BR.lproj/Localizable.strings</key>
 		<dict>
 			<key>hash2</key>
@@ -666,13 +567,6 @@
 			<key>optional</key>
 			<true/>
 		</dict>
-		<key>space.tvg</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			Ciz9QL06pf8tE9+1HnenrkTwDQlTkatmV6LU6qxII0k=
-			</data>
-		</dict>
 		<key>sq.lproj/Localizable.strings</key>
 		<dict>
 			<key>hash2</key>
@@ -682,13 +576,6 @@
 			<key>optional</key>
 			<true/>
 		</dict>
-		<key>status-flash.tvg</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			RNRvvwiTrJJZbBVMwfCJs52tbaM66OMg6+EaU50klPE=
-			</data>
-		</dict>
 		<key>sv.lproj/Localizable.strings</key>
 		<dict>
 			<key>hash2</key>
@@ -697,41 +584,6 @@
 			</data>
 			<key>optional</key>
 			<true/>
-		</dict>
-		<key>text-calendar.tvg</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			3+AjnIpoKN9JvzzKTjLqIByZGAv6fyz9zQLIY57vwes=
-			</data>
-		</dict>
-		<key>text-code.tvg</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			QL5UolH2T4+Cy2ePewAK3XfLOdMhXvNSLKXM2fdS64c=
-			</data>
-		</dict>
-		<key>text-uri-list.tvg</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			2gWoKwHlDYF9qL5e8MOclahBY7t6n7gpzBLBLJWCEJE=
-			</data>
-		</dict>
-		<key>text-vcard.tvg</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			ikUttjd9eB/BbzBBZKyNZ+comRSO6C7WUka2NLVh+BU=
-			</data>
-		</dict>
-		<key>text.tvg</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			LaVOA4SDfeT4CnmeWwp/lFQoDpMb6BiusMNHceGc8q0=
-			</data>
 		</dict>
 		<key>th-TH.lproj/Localizable.strings</key>
 		<dict>
@@ -751,32 +603,235 @@
 			<key>optional</key>
 			<true/>
 		</dict>
-		<key>video.tvg</key>
+		<key>tvg-icons/archive.tvg</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			c8zz6kK9Q47cHZ9r99nhsvwmwg7eqtyuZaXU0pG0bOs=
+			dPqOBWP75viN9+RXKVKpEUxEe8ti4CyGBPrUqOUKN1A=
 			</data>
 		</dict>
-		<key>x-office-document.tvg</key>
+		<key>tvg-icons/audio.tvg</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			E3/ZsPDTFsc14YMJdmOL7X+VafauOpGzy8ONNWTOeo8=
+			6dhQzT/5B+xrBOg4zhCZZeKlQ85UvuHSt9IKKO3ZmZ8=
 			</data>
 		</dict>
-		<key>x-office-presentation.tvg</key>
+		<key>tvg-icons/calendar.tvg</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			nPSGNSbAPLx1kb/NtxsJDKTEl9kRQuctbPuzcNNMvTw=
+			2VJaLBck/ivFN8ZXVgLAsrY1AgWBexWcGDiNW9g5/Vc=
 			</data>
 		</dict>
-		<key>x-office-spreadsheet.tvg</key>
+		<key>tvg-icons/code.tvg</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			0r1x1R4xFVMyh5OVp/F8OJKRSvJUglygZjwIJNgSVnw=
+			1K8iatR9Lj5MfQDdtpf5btPmO/phmsTmYlwXiNTDYnY=
+			</data>
+		</dict>
+		<key>tvg-icons/document.tvg</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			aOVjzebCCjbJD2jqd0vL8VJyfNK4VUdFqVOtQ0W6WRU=
+			</data>
+		</dict>
+		<key>tvg-icons/drawio.tvg</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			C/1kQKHpCfsmwqKwNQ2vvFFUoe6Bztgo8JIaue2Nw4E=
+			</data>
+		</dict>
+		<key>tvg-icons/epub.tvg</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			cEnzS+2rphdA9Diw7A+6L4j9/mSxXhsiRnMemgpU080=
+			</data>
+		</dict>
+		<key>tvg-icons/file.tvg</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			YHmnUmhpzTy42Ent7NlsThTa8xEzlUXXWfg9lMP39uc=
+			</data>
+		</dict>
+		<key>tvg-icons/folder-create.tvg</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			GJdAU+ZGyKjnzS4s1W6ahFe5Gk29cTPR3hl/n8/v9yI=
+			</data>
+		</dict>
+		<key>tvg-icons/folder.tvg</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			LSqyF/JqaInPeMJ6BBCi3Hi2G7s5rmBZc6dPMv0eGfA=
+			</data>
+		</dict>
+		<key>tvg-icons/form.tvg</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			7ieZT6GK1cUekf9JinlQcKSze3/S0DtpKEk+FDoY3RE=
+			</data>
+		</dict>
+		<key>tvg-icons/icon-available-offline.tvg</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			KDUq6/hoJSKlBhWl/swzkgofMflZ2p8xQvKdz66WWwg=
+			</data>
+		</dict>
+		<key>tvg-icons/icon-locked.tvg</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			URCZVbsr46xxzaEpDWTy7DGGCFk3DYSNGivzPrNFrEw=
+			</data>
+		</dict>
+		<key>tvg-icons/icon-map.json</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			KzuLQ9wcjQE/EXOsPVQFfVRtPLoO62CY1q/iCUm41q0=
+			</data>
+		</dict>
+		<key>tvg-icons/icon-password-manager.tvg</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			U+mVqUP98DDqsEHOSdofIFAYNYFD/ldYAuhnfJ1ok3g=
+			</data>
+		</dict>
+		<key>tvg-icons/ifc.tvg</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			f+OQu5PC4UeGJGwummBXkN+nGNVPsezIVbEwDBuM8mk=
+			</data>
+		</dict>
+		<key>tvg-icons/image.tvg</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			NEXJH5a8KdisNGZhE3jegNxmQ+u7pldPQYy2z4sW4AI=
+			</data>
+		</dict>
+		<key>tvg-icons/ipynb.tvg</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			cb9ZuzinQw5jzZvMlpv2MHiqfDcdyXPhQEJq0jn5Z94=
+			</data>
+		</dict>
+		<key>tvg-icons/markdown.tvg</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			biHG4nyQVT1JWjG+pHTc2TCU2iafy41fdaJ5J+e1dng=
+			</data>
+		</dict>
+		<key>tvg-icons/odg.tvg</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			GNXf0qD43gcK97Lwi7sDuimAMPXPKgQK2Q3l3MPIv04=
+			</data>
+		</dict>
+		<key>tvg-icons/owncloud-logo.tvg</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			MBgCF5cmOnv8LdJyFuSP5fsTYCvPTe0GiHAp4vdNzw4=
+			</data>
+		</dict>
+		<key>tvg-icons/pdf.tvg</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			hZlRinfpokmsegUa/Ou/nsJ9yqdvkGWwFT+f9rytCTE=
+			</data>
+		</dict>
+		<key>tvg-icons/presentation.tvg</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			TfE1jsOTB1D2VurRp/Z2t49Yp/qiz8QSH2ws4Z9IZXY=
+			</data>
+		</dict>
+		<key>tvg-icons/psec.tvg</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			y2rh3Ks1kEh93UMfeHGiaqjbSVNO2G+Fpl8TXxJZ0Q8=
+			</data>
+		</dict>
+		<key>tvg-icons/root.tvg</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			ZvezwI/F4uVBwNE4wUQbI8tK/m39rB4yktVQNpn8xXc=
+			</data>
+		</dict>
+		<key>tvg-icons/space.tvg</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			vBNUw5pi15vJOz5t4C8AWd01fLeinAv1wKy/o7FFqpU=
+			</data>
+		</dict>
+		<key>tvg-icons/spreadsheet.tvg</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			J+DSC441odoHAJE3ihXH1gVU/J9mUL6dLUnJ7/dHtHw=
+			</data>
+		</dict>
+		<key>tvg-icons/status-flash.tvg</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			RNRvvwiTrJJZbBVMwfCJs52tbaM66OMg6+EaU50klPE=
+			</data>
+		</dict>
+		<key>tvg-icons/text.tvg</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			TrmKhRBuKvgezyePJWmC4ey7QD6QWVgTF5HVW8HH/D0=
+			</data>
+		</dict>
+		<key>tvg-icons/url.tvg</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			0u4SSeGV1dOf3fc2hjzbPf8Ay54+sbwUQ+x7M0dYE8U=
+			</data>
+		</dict>
+		<key>tvg-icons/vcard.tvg</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			zpnKAgH4XI47jfez6CYjbVbb9b9j9cmYPdT9uB98oHI=
+			</data>
+		</dict>
+		<key>tvg-icons/video.tvg</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			LrbO2jkvE52aft6lcYRWPRHDp1CUxPSOuG67WJq+kwE=
+			</data>
+		</dict>
+		<key>tvg-icons/visio.tvg</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			3CNf555g/DsDQDRL4wPM/AAjsqjxleZs492/BfLWy1I=
 			</data>
 		</dict>
 		<key>zh-Hans.lproj/Localizable.strings</key>

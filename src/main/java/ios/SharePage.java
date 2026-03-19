@@ -182,9 +182,14 @@ public class SharePage extends CommonPage {
         return true;
     }
 
-    public boolean isItemInListLinks() {
+    public boolean isItemInListLinks(String linkName) {
         Log.log(Level.FINE, "Starts: link in list");
-        return !findListId("Link").isEmpty();
+        return !findLinkByName().isEmpty();
+    }
+
+    private List<WebElement> findLinkByName() {
+        // Default name for links
+        return driver.findElements(By.id("Link"));
     }
 
     public boolean isItemInListPrivateShares(String sharee) {

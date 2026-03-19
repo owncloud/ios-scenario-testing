@@ -122,7 +122,7 @@ Feature: Public Links
         | type   | name    |
         | folder | Links13 |
       And Alice has shared the folder Links13 by link
-      When Alice selects to share the folder Links13 using the Contextual menu
+      When Alice selects to share the folder Links13 using the Actions menu
       And Alice edits the link on Links13 with the following fields
         | password | "" |
         Then link should be created on Links13 with the following fields
@@ -136,7 +136,7 @@ Feature: Public Links
         | type   | name   |
         | <type> | <item> |
       And Alice has shared the <type> <item> by link
-      When Alice selects to share the <type> <item> using the Contextual menu
+      When Alice selects to share the <type> <item> using the Actions menu
       And Alice deletes the link on <item>
       Then link on <item> should not exist anymore
 

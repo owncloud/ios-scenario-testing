@@ -113,7 +113,7 @@ public class PublicLinkSteps {
     public void link_not_existing(String itemName)
             throws Throwable {
         StepLogger.logCurrentStep(Level.FINE);
-        assertFalse(world.sharePage.isItemInListLinks());
+        assertFalse(world.sharePage.isItemInListLinks(itemName));
         ArrayList<OCShare> shares = world.shareAPI.getLinksByDefault();
         assertTrue(shares.isEmpty());
     }
