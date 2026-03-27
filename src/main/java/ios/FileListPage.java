@@ -215,9 +215,9 @@ public class FileListPage extends CommonPage {
                 findXpath("//XCUIElementTypeStaticText[@name=\"Shares\"]").click();
                 findXpath("//XCUIElementTypeStaticText[@name=\"Shared with me\"]").click();
             }
-            case "shared by me"-> {
+            case "shared with others"-> {
                 findXpath("//XCUIElementTypeStaticText[@name=\"Shares\"]").click();
-                findXpath("//XCUIElementTypeStaticText[@name=\"Shared by me\"]").click();
+                findXpath("//XCUIElementTypeStaticText[@name=\"Shared with others\"]").click();
             }
             case "shared by link"-> {
                 findXpath("//XCUIElementTypeStaticText[@name=\"Shares\"]").click();

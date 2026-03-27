@@ -1244,14 +1244,14 @@ Ju lutemi, çaktivizoni kyçjen me frazëkalim, që nga rregullimet e aplikacion
 	<string>Shared</string>
 	<key>Shared by link</key>
 	<string>Të ndara me lidhje</string>
-	<key>Shared by me</key>
-	<string>Ndarë nga unë</string>
 	<key>Shared by {{owner}}</key>
 	<string>Ndarë me të tjerë nga {{owner}}</string>
 	<key>Shared with</key>
 	<string>Ndarë me:</string>
 	<key>Shared with me</key>
 	<string>Ndarë me mua</string>
+	<key>Shared with others</key>
+	<string>Ndarë nga unë</string>
 	<key>Shared with {{recipients}}</key>
 	<string>Ndarë me {{recipients}}</string>
 	<key>Shared with {{recipient}}</key>

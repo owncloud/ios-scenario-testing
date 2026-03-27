@@ -996,14 +996,14 @@ Please disable passcode lock in the app settings.</key>
 	<string>مشاركة مع</string>
 	<key>Shared by link</key>
 	<string>مشاركة بواسطة الرابط</string>
-	<key>Shared by me</key>
-	<string>Shared by me</string>
 	<key>Shared by {{owner}}</key>
 	<string>Shared by {{owner}}</string>
 	<key>Shared with</key>
 	<string>تمت المشاركة مع</string>
 	<key>Shared with me</key>
 	<string>Shared with me</string>
+	<key>Shared with others</key>
+	<string>Shared with others</string>
 	<key>Shared with {{recipients}}</key>
 	<string>Shared with {{recipients}}</string>
 	<key>Shared with {{recipient}}</key>

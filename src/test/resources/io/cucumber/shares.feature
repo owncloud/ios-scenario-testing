@@ -121,8 +121,8 @@ Feature: Private Share
       | <type> | <item> |
     And Alice has shared <type> <item> with user Bob with Viewer permissions
     When Alice opens the sidebar
-    And Alice opens the option shared by me in sidebar
-    Then Alice should see <item> in shared by me
+    And Alice opens the option shared with others in sidebar
+    Then Alice should see <item> in shared with others
 
     Examples:
       | type   | item    |

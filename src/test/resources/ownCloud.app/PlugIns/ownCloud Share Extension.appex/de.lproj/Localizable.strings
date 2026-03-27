@@ -1244,14 +1244,14 @@ Bitte deaktivieren Sie die PIN-Sperre in den App-Einstellungen.</string>
 	<string>Geteilt</string>
 	<key>Shared by link</key>
 	<string>Über einen Link geteilt</string>
-	<key>Shared by me</key>
-	<string>Geteilt von mir</string>
 	<key>Shared by {{owner}}</key>
 	<string>Geteilt von {{owner}}</string>
 	<key>Shared with</key>
 	<string>Geteilt mit</string>
 	<key>Shared with me</key>
 	<string>Mit mir geteilt</string>
+	<key>Shared with others</key>
+	<string>Geteilt von mir</string>
 	<key>Shared with {{recipients}}</key>
 	<string>Geteilt mit {{recipients}}</string>
 	<key>Shared with {{recipient}}</key>

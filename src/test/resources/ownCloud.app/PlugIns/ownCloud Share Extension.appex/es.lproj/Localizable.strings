@@ -1244,14 +1244,14 @@ Desactive el bloqueo con contraseña en la configuración de la aplicación.</st
 	<string>Shared</string>
 	<key>Shared by link</key>
 	<string>Compartido por enlace</string>
-	<key>Shared by me</key>
-	<string>Compartido por mi</string>
 	<key>Shared by {{owner}}</key>
 	<string>Compartido por {{owner}}</string>
 	<key>Shared with</key>
 	<string>Compartido con</string>
 	<key>Shared with me</key>
 	<string>Compartido conmigo</string>
+	<key>Shared with others</key>
+	<string>Compartido por mi</string>
 	<key>Shared with {{recipients}}</key>
 	<string>Compartido con {{recipients}}</string>
 	<key>Shared with {{recipient}}</key>

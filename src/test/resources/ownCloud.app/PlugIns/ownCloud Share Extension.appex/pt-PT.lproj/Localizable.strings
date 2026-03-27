@@ -1244,14 +1244,14 @@ Please disable passcode lock in the app settings.</string>
 	<string>Shared</string>
 	<key>Shared by link</key>
 	<string>Shared by link</string>
-	<key>Shared by me</key>
-	<string>Shared by me</string>
 	<key>Shared by {{owner}}</key>
 	<string>Shared by {{owner}}</string>
 	<key>Shared with</key>
 	<string>Partilhado com:</string>
 	<key>Shared with me</key>
 	<string>Shared with me</string>
+	<key>Shared with others</key>
+	<string>Shared with others</string>
 	<key>Shared with {{recipients}}</key>
 	<string>Shared with {{recipients}}</string>
 	<key>Shared with {{recipient}}</key>
