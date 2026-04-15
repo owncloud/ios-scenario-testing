@@ -199,7 +199,7 @@ public class SharePage extends CommonPage {
 
     public boolean isNameCorrect(String name) {
         Log.log(Level.FINE, "Starts: Check link name: " + name);
-        return findId(name).isDisplayed();
+        return !findListId((name)).isEmpty();
     }
 
     public boolean isGroup() {

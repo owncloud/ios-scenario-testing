@@ -41,10 +41,6 @@
 	<dict>
 		<key>DownView (macOS).bundle/css/down.min.css</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			g0mYzwGZNdTgctb++IMm8cyK0aI=
-			</data>
 			<key>hash2</key>
 			<data>
 			2tGCB8Vtb/eBR/odLC1m5TWnT9v8naS3yDmZC4JYuRg=
@@ -52,10 +48,6 @@
 		</dict>
 		<key>DownView (macOS).bundle/index.html</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			9QaDWT3BNNFS1bEWHNW28L8aSJo=
-			</data>
 			<key>hash2</key>
 			<data>
 			pi1q7V0m+B/BpgBxfczCKTvC2MxlYcfZTvdCv/U81O0=
@@ -63,10 +55,6 @@
 		</dict>
 		<key>DownView (macOS).bundle/js/down.js</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			8LrOO017xH/QGyMZQE+V/XKMo2k=
-			</data>
 			<key>hash2</key>
 			<data>
 			YHeVqd2WLa0J3wk2gF0P0CdqsJNz6yjuGXqoFPs6uaY=
@@ -74,10 +62,6 @@
 		</dict>
 		<key>DownView (macOS).bundle/js/highlight.min.js</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			UQUTJbuDx1qlfkOMBSncX1A/YR8=
-			</data>
 			<key>hash2</key>
 			<data>
 			hDjviO7sEznduRttN/RkycPlUG5N4V2DZ1H9ZeNmh8Q=
@@ -85,10 +69,6 @@
 		</dict>
 		<key>DownView.bundle/css/down.min.css</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			UsbfB49HAkf5DmzhVacGg9ESopc=
-			</data>
 			<key>hash2</key>
 			<data>
 			nPs+mLZOFsLctHaiJM/M6B5nA4SB5KVNp8bGHafw+7o=
@@ -96,10 +76,6 @@
 		</dict>
 		<key>DownView.bundle/index.html</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			rXr20cRxF9zNgx+BGU656IMReGE=
-			</data>
 			<key>hash2</key>
 			<data>
 			kcED26H1Au79DqF7znftoVJN2AibvQpyC4PSsglNaGQ=
@@ -107,10 +83,6 @@
 		</dict>
 		<key>DownView.bundle/js/down.js</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			Uk3FfQUzfvIuSVgbAowGQJ5XC0M=
-			</data>
 			<key>hash2</key>
 			<data>
 			nP0EI9B9ad8IoFUti2q7EQBabcE5MS5v0nkvRfUbYnM=
@@ -118,10 +90,6 @@
 		</dict>
 		<key>DownView.bundle/js/highlight.min.js</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			UQUTJbuDx1qlfkOMBSncX1A/YR8=
-			</data>
 			<key>hash2</key>
 			<data>
 			hDjviO7sEznduRttN/RkycPlUG5N4V2DZ1H9ZeNmh8Q=

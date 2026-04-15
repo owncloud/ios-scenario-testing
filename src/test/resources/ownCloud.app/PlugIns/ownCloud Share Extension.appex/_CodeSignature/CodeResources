@@ -6,7 +6,7 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		iDBC8vo7QA/tJfi6CE0ZKQjY9js=
+		LLC8DfvQo0kytLqo785/6bJQ0D0=
 		</data>
 		<key>Down_Down.bundle/DownView (macOS).bundle/css/down.min.css</key>
 		<data>
@@ -42,23 +42,19 @@
 		</data>
 		<key>Down_Down.bundle/Info.plist</key>
 		<data>
-		vfXN24heW5bsRAB0DBzEXIEf5gM=
+		0KPjvd9KhetftlxvzcYiKllCRuI=
 		</data>
 		<key>Down_Down.bundle/_CodeSignature/CodeDirectory</key>
 		<data>
-		Iva8feTOD1PAzT4hkh1ENI1oW4I=
+		MxNBQO+Nk1x7e/ICkLy2CESevro=
 		</data>
 		<key>Down_Down.bundle/_CodeSignature/CodeRequirements</key>
 		<data>
 		OnX22wWFKRSOFN1+obRynMCeyXM=
 		</data>
-		<key>Down_Down.bundle/_CodeSignature/CodeRequirements-1</key>
-		<data>
-		2mLQ2BenUjnka2OR+G0qVLgQnoU=
-		</data>
 		<key>Down_Down.bundle/_CodeSignature/CodeResources</key>
 		<data>
-		AEM8mxDIZS2l8hGYNh4QiPkkq8U=
+		DirAunHjkbU95XpnUnarIo96WBk=
 		</data>
 		<key>Down_Down.bundle/_CodeSignature/CodeSignature</key>
 		<data>
@@ -66,11 +62,11 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		3DbXdMwYzC8sfYfucPZEugRo0zM=
+		K6/LzM/qgPxg3iAvnSyzeIm4tiM=
 		</data>
 		<key>PocketSVG_PocketSVG.bundle/Info.plist</key>
 		<data>
-		wd+V9To5dbukL7NqlKMNNHQMIKg=
+		6NvfvElcIL+Mj5Pj3dPVFrhZdpE=
 		</data>
 		<key>PocketSVG_PocketSVG.bundle/SVGColors.plist</key>
 		<data>
@@ -78,19 +74,15 @@
 		</data>
 		<key>PocketSVG_PocketSVG.bundle/_CodeSignature/CodeDirectory</key>
 		<data>
-		hHsVc1W0tV6zf/0I3Q/pDorJ510=
+		SOxTiCWFQkHgysg6gQTo35Eb7+U=
 		</data>
 		<key>PocketSVG_PocketSVG.bundle/_CodeSignature/CodeRequirements</key>
 		<data>
 		OnX22wWFKRSOFN1+obRynMCeyXM=
 		</data>
-		<key>PocketSVG_PocketSVG.bundle/_CodeSignature/CodeRequirements-1</key>
-		<data>
-		KoO3HDM1MBrhHWRLSJwn+LNRsiI=
-		</data>
 		<key>PocketSVG_PocketSVG.bundle/_CodeSignature/CodeResources</key>
 		<data>
-		E2rDJx1Y/TvBcVe+GTVw0br2EZk=
+		39XEaPEvv857zAmCQFzwsNdMUnw=
 		</data>
 		<key>PocketSVG_PocketSVG.bundle/_CodeSignature/CodeSignature</key>
 		<data>
@@ -102,7 +94,7 @@
 		</data>
 		<key>__preview.dylib</key>
 		<data>
-		pLY87iEgtlbc3VHRcvA/gBN7kDM=
+		XlyjsNjr3jPOe68riRSHjrIy4WM=
 		</data>
 		<key>ar.lproj/InfoPlist.strings</key>
 		<dict>
@@ -376,7 +368,7 @@
 		</dict>
 		<key>ownCloud Share Extension.debug.dylib</key>
 		<data>
-		A5RgHBChpD6tthiKXBwS/qhzApY=
+		/aAlWsWdzqX6f+2Ej1PmIgMY074=
 		</data>
 		<key>pt-BR.lproj/InfoPlist.strings</key>
 		<dict>
@@ -529,7 +521,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			9IkQcncbg/XWLgDwhTCRfYa0uZ1yKqWAylBYTfxatls=
+			ae0MB2rQ2SAf+lteNnD5SChz42/W+HgMHLDiTzN91mk=
 			</data>
 		</dict>
 		<key>Down_Down.bundle/DownView (macOS).bundle/css/down.min.css</key>
@@ -592,14 +584,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			4KvcEqoMpP8HSM1fHd8M0RMZbe+SpMHL/1vGBYociQE=
+			HnP8qjaEWrXwSlJ9S86hGI3kPykt6WYZwd2/5HLEDxo=
 			</data>
 		</dict>
 		<key>Down_Down.bundle/_CodeSignature/CodeDirectory</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			f04sGNwEA62HnoDVw9s+ZOqZNBoNM8y7/Z/a2tYWnqU=
+			evHlEtuCfho6DZVuz/2v9ZfYIYLzkneSmEwmWg9U7+o=
 			</data>
 		</dict>
 		<key>Down_Down.bundle/_CodeSignature/CodeRequirements</key>
@@ -609,18 +601,11 @@
 			mHkgkE6rZQ51eIwFSqCwUk5qgL/HGqMt+NI3phdD+YY=
 			</data>
 		</dict>
-		<key>Down_Down.bundle/_CodeSignature/CodeRequirements-1</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			wzIGg/EDXdF7P04/MFSBd8pCPrTcBZS4VyuBIyeQgmY=
-			</data>
-		</dict>
 		<key>Down_Down.bundle/_CodeSignature/CodeResources</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			IU/pQ6b4pNlVPiQJ5Wj7QKdv5t2b6oIbbP/fvugETUo=
+			JFL0KRj1COVBg+fJ+Ky2483rfR80oZPSOgMnnt7emIk=
 			</data>
 		</dict>
 		<key>Down_Down.bundle/_CodeSignature/CodeSignature</key>
@@ -634,7 +619,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			vXTWLqEQk3wvgst87XIwofqpbeMFzmjTJlTJSdNpgjU=
+			9rECMC7JakJECVrsxDeYRI9Tc2qpeF22aEbV6vyHfNc=
 			</data>
 		</dict>
 		<key>PocketSVG_PocketSVG.bundle/SVGColors.plist</key>
@@ -648,7 +633,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			vTXbtKxKUqHcQiSTH3/SB9KYreMeItNuaRPXl4Xv0Vg=
+			tI2ESZ8RQKWl6CZmnnZl2R1VM2UDibefaUjzgu0lc7s=
 			</data>
 		</dict>
 		<key>PocketSVG_PocketSVG.bundle/_CodeSignature/CodeRequirements</key>
@@ -658,18 +643,11 @@
 			mHkgkE6rZQ51eIwFSqCwUk5qgL/HGqMt+NI3phdD+YY=
 			</data>
 		</dict>
-		<key>PocketSVG_PocketSVG.bundle/_CodeSignature/CodeRequirements-1</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			wJnocnDZ2GEsJxt2lRlbjOT1TbWvb45cy/gGw/DzeGo=
-			</data>
-		</dict>
 		<key>PocketSVG_PocketSVG.bundle/_CodeSignature/CodeResources</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			NHsEv7EHSjKjtgTzenoMJux6+cgbABclVQHpfJwYZG4=
+			LF0a00u3VMPxskFROvZqXM/7zGQCZ1LjHtHEw13Hx4g=
 			</data>
 		</dict>
 		<key>PocketSVG_PocketSVG.bundle/_CodeSignature/CodeSignature</key>
@@ -690,7 +668,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			/z195uze1N0Oz4dOWCZrv7QuId0nJR9NrzxcTvsDfew=
+			HoMtI/4ysfQdHX5ho1vWRIrJvgZnWuhSihxwqOygZgg=
 			</data>
 		</dict>
 		<key>ar.lproj/InfoPlist.strings</key>
@@ -967,7 +945,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Fyb6d4tUwWzsI2n+vg5IhMH2SP9HfrnikfYHORIrw+U=
+			7plCz8wEOJc9H44fwx6n5m/4Hmm5QQMC+mm0rUphy2w=
 			</data>
 		</dict>
 		<key>pt-BR.lproj/InfoPlist.strings</key>

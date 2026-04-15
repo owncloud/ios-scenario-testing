@@ -46,8 +46,8 @@ public class DateUtils {
                 .withDayOfMonth(Integer.parseInt(day));
 
         String formattedDay = String.format("%02d", targetDate.getDayOfMonth());
-        String formattedMonth = String.valueOf(targetDate.getMonthValue());
-        String year = String.format("%02d", targetDate.getYear() % 100);
+        String formattedMonth = String.format("%02d", targetDate.getMonthValue());
+        String year = String.format("%04d", targetDate.getYear());
 
         Log.log(Level.FINE, "Day: " + formattedDay + " Month: " + formattedMonth + " Year: " + year);
         return formattedDay + "/" + formattedMonth + "/" + year;
@@ -65,7 +65,7 @@ public class DateUtils {
 
     public static String convertDate(String dateToTransform) {
         LocalDate date = LocalDate.parse(dateToTransform);
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("d/M/yy");
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
         return date.format(formatter);
     }
 

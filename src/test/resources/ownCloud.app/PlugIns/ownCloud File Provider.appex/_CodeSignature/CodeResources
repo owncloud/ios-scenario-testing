@@ -6,11 +6,11 @@
 	<dict>
 		<key>Info.plist</key>
 		<data>
-		yvdy9E7ZjQddC6IPygPNhDx3PCA=
+		/GY/zLh7CFLIZJ3mB11U3FA5SzU=
 		</data>
 		<key>PLCrashReporter_CrashReporter.bundle/Info.plist</key>
 		<data>
-		sQdkSYn4hC2zajRk1zg7oltqRLU=
+		VXDc9yc151q6dMk99XwLx4PPDUc=
 		</data>
 		<key>PLCrashReporter_CrashReporter.bundle/PrivacyInfo.xcprivacy</key>
 		<data>
@@ -18,19 +18,15 @@
 		</data>
 		<key>PLCrashReporter_CrashReporter.bundle/_CodeSignature/CodeDirectory</key>
 		<data>
-		JlJRdhGhPIXS7YHPTD/lnM4kGGA=
+		bsbHvW6qO5HBM8qISs9ml3sZeSM=
 		</data>
 		<key>PLCrashReporter_CrashReporter.bundle/_CodeSignature/CodeRequirements</key>
 		<data>
 		OnX22wWFKRSOFN1+obRynMCeyXM=
 		</data>
-		<key>PLCrashReporter_CrashReporter.bundle/_CodeSignature/CodeRequirements-1</key>
-		<data>
-		0lkRhhJu+iviFISKZBBtl/GyAOE=
-		</data>
 		<key>PLCrashReporter_CrashReporter.bundle/_CodeSignature/CodeResources</key>
 		<data>
-		Ak8dAVlbwmx7MIODKWaB8fH/eFk=
+		+f9QbHIwz/oYdfZbkp33fAA2Cpc=
 		</data>
 		<key>PLCrashReporter_CrashReporter.bundle/_CodeSignature/CodeSignature</key>
 		<data>
@@ -42,7 +38,7 @@
 		</data>
 		<key>__preview.dylib</key>
 		<data>
-		abN9fc8O91E5aEUJmkiTwZEKFj0=
+		vNi55Lsa0kbD1eGSrDE1EWmbgvw=
 		</data>
 		<key>ca.lproj/Localizable.strings</key>
 		<dict>
@@ -136,7 +132,7 @@
 		</dict>
 		<key>ownCloud File Provider.debug.dylib</key>
 		<data>
-		dcviW8Ke/MXV0aY0hKwXjkw20e0=
+		dmbweTW78I3wDTORZhXEDWTdlVo=
 		</data>
 		<key>ru.lproj/Localizable.strings</key>
 		<dict>
@@ -190,7 +186,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			jcfMwSBCf8lVUMuPBKiAF7Ze3CeR2SLrpPCJk/SK8fQ=
+			e1RDaci+1AILcRPIEjWxrY929+wKVEYEuxs2OEH39y0=
 			</data>
 		</dict>
 		<key>PLCrashReporter_CrashReporter.bundle/PrivacyInfo.xcprivacy</key>
@@ -204,7 +200,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			+I+7zQlrwQr/NwhZunSTSrXG2qtFhu4x/N3Jywkiyyc=
+			kx75DBFHsJaQdgZSWfNFO7Ke2rdVD2CI/wpaIoMLw3k=
 			</data>
 		</dict>
 		<key>PLCrashReporter_CrashReporter.bundle/_CodeSignature/CodeRequirements</key>
@@ -214,18 +210,11 @@
 			mHkgkE6rZQ51eIwFSqCwUk5qgL/HGqMt+NI3phdD+YY=
 			</data>
 		</dict>
-		<key>PLCrashReporter_CrashReporter.bundle/_CodeSignature/CodeRequirements-1</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			+5paBKxfNY5iaF85dyZguw4Skj2p3jw01zOqChBHjPs=
-			</data>
-		</dict>
 		<key>PLCrashReporter_CrashReporter.bundle/_CodeSignature/CodeResources</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			n6yF6D0aa8/X9NJByA9Emi4Ufvs38ZVJxHDHW3ZflS8=
+			tVVuFtfuTjTKLqwQqJb2Svp6c7LXQPMdbZbyCGgN4Bg=
 			</data>
 		</dict>
 		<key>PLCrashReporter_CrashReporter.bundle/_CodeSignature/CodeSignature</key>
@@ -246,7 +235,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			TaIhh6yAKdzv88CJsF2nkpo3fJDGI1Lo4/IZIKbFT+8=
+			QyABYKSHQl2YqiMn6wRSwcBHBwyADbEdZAuazUvuJ0A=
 			</data>
 		</dict>
 		<key>ca.lproj/Localizable.strings</key>
@@ -343,7 +332,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			tfl6BLf1JmrrPhV3G3POKAhI/v9SHpSS4Q52atg0T80=
+			tA94dNUuaClobDxznpzFvoAJoOS4UxFJna3d6m6a80w=
 			</data>
 		</dict>
 		<key>ru.lproj/Localizable.strings</key>
