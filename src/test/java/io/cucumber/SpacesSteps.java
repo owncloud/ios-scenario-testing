@@ -134,26 +134,9 @@ public class SpacesSteps {
     }
 
     @When("Alice opens the members menu")
-    public void opens_members_menu() throws InterruptedException {
+    public void opens_members_menu() {
         StepLogger.logCurrentStep(Level.FINE);
         world.spacesPage.openMembers();
-    }
-
-    @When("Alice edits {word} from the space {word} with the following fields")
-    public void edit_member_space(String userName, String spaceName, DataTable table) {
-        StepLogger.logCurrentStep(Level.FINE);
-        //world.spacesPage.openMembers();
-        world.spacesPage.openEditMember(userName);
-        Map<String, String> fields = table.asMap(String.class, String.class);
-        for (Map.Entry<String, String> entry : fields.entrySet()) {
-            String key = entry.getKey();
-            String value = entry.getValue();
-            switch (key) {
-                case "permission" -> world.spaceMembersPage.setPermission(value);
-                case "expirationDate" -> world.spaceMembersPage.setExpirationDate(value);
-            }
-        }
-        world.spaceMembersPage.saveChanges();
     }
 
     @When("Alice removes {word} from the space {word}")
@@ -245,6 +228,4 @@ public class SpacesSteps {
         StepLogger.logCurrentStep(Level.FINE);
         assertFalse(world.spacesPage.isMemberOfSpace(userName));
     }
-
-
 }

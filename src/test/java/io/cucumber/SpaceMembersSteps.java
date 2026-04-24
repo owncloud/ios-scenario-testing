@@ -8,8 +8,6 @@ import java.util.Map;
 import java.util.logging.Level;
 
 import io.cucumber.datatable.DataTable;
-import io.cucumber.java.PendingException;
-import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import utils.date.DateUtils;
@@ -39,7 +37,22 @@ public class SpaceMembersSteps {
             }
         }
         world.spaceMembersPage.shareWithMember();
+    }
 
+    @When("Alice edits {word} from the space {word} with the following fields")
+    public void edit_member_space(String userName, String spaceName, DataTable table) {
+        StepLogger.logCurrentStep(Level.FINE);
+        world.spacesPage.openEditMember(userName);
+        Map<String, String> fields = table.asMap(String.class, String.class);
+        for (Map.Entry<String, String> entry : fields.entrySet()) {
+            String key = entry.getKey();
+            String value = entry.getValue();
+            switch (key) {
+                case "permission" -> world.spaceMembersPage.setPermission(value);
+                case "expirationDate" -> world.spaceMembersPage.editExpirationDate(value);
+            }
+        }
+        world.spaceMembersPage.saveChanges();
     }
 
     @Then("{word} should be member of the space {word} with")

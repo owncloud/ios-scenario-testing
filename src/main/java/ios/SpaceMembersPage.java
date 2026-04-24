@@ -14,21 +14,16 @@ import utils.log.Log;
 
 public class SpaceMembersPage extends CommonPage {
 
-    @iOSXCUITFindBy(xpath = " //XCUIElementTypeStaticText[@name=\"Add members\"]")
+    @iOSXCUITFindBy(xpath = "//XCUIElementTypeStaticText[@name=\"Add members\"]")
     private WebElement addMembers;
-
     @iOSXCUITFindBy(xpath = "//XCUIElementTypeButton[@name=\"Share\"]")
     private WebElement share;
-
     @iOSXCUITFindBy(xpath = "//XCUIElementTypeButton[@name=\"Save changes\"]")
     private WebElement saveChanges;
-
     @iOSXCUITFindBy(xpath = "//XCUIElementTypeButton[@name=\"Set\"]")
     private List<WebElement> setExpirationDate;
-
     @iOSXCUITFindBy(id = "Remove expiration date")
     private WebElement removeExpirationDate;
-
     @iOSXCUITFindBy(id = "Unshare")
     private WebElement removeMember;
 
@@ -74,22 +69,31 @@ public class SpaceMembersPage extends CommonPage {
     public void setExpirationDate(String days) {
         Log.log(Level.FINE, "Starts: Add expiration date in days " + days);
         days = normalizeOptional(days);
+        setExpirationDate.get(0).click();
+        findId("Date Picker").click();
+        findId("DatePicker.NextMonth").click();
+        waitById(days);
+        findId(days).click();
+    }
+
+    public void editExpirationDate(String days) {
+        Log.log(Level.FINE, "Starts: Edit expiration date in days " + days);
+        days = normalizeOptional(days);
         boolean hasDays = days != null;
-        if (setExpirationDate.size() > 0) { // there is no expiration date
-            setExpirationDate.get(0).click();
-            findId("Date Picker").click();
-            findId("DatePicker.NextMonth").click();
-            waitById(days);
-            findId(days).click();
+        if (!setExpirationDate.isEmpty()) { // there is no expiration date, because "Set" button is visible
+            Log.log(Level.FINE, "No expiration date set");
+            setExpirationDate(days);
         } else {
-            if (!hasDays) {
+            if (!hasDays) { // remove existing expiration date
+                Log.log(Level.FINE, "Remove existing expiration date");
                 removeExpirationDate.click();
-                return;
+            } else { // change existing expiration date
+                Log.log(Level.FINE, "Change existing expiration date to " + days);
+                findId("Date Picker").click();
+                //findId("DatePicker.NextMonth").click();
+                waitById(days);
+                findId(days).click();
             }
-            findId("Date Picker").click();
-            findId("DatePicker.NextMonth").click();
-            waitById(days);
-            findId(days).click();
         }
     }
 
@@ -97,8 +101,9 @@ public class SpaceMembersPage extends CommonPage {
         Log.log(Level.FINE, "Starts: Check expiration date correct " + days);
         days = normalizeOptional(days);
         boolean hasDays = days != null;
-       openMember(userName);
         if (hasDays) {
+            waitByXpath("//XCUIElementTypeImage[@name=\"calendar\"]");
+            openMember(userName);
             String date = DateUtils.displayedDate(days);
             String dateDisplayed = findId("Date Picker").getAttribute("value");
             Log.log(Level.FINE, "Date to check: " + date);
@@ -106,6 +111,7 @@ public class SpaceMembersPage extends CommonPage {
             findXpath("//XCUIElementTypeButton[@name=\"Cancel\"]").click();
             return dateDisplayed.equals(date);
         } else {
+            openMember(userName);
             findXpath("//XCUIElementTypeButton[@name=\"Cancel\"]").click();
             return !hasDays;
         }
@@ -128,7 +134,6 @@ public class SpaceMembersPage extends CommonPage {
         List<WebElement> cells = findListCss("XCUIElementTypeCell");
         for (WebElement cell : cells) {
             String text = cell.getAttribute("name");
-            Log.log(Level.FINE, "Cell text: " + text);
             if (text.contains(userName) && text.contains(permission)) {
                 return true;
             }
