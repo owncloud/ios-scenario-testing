@@ -20,13 +20,7 @@ public class DateUtils {
         Log.log(Level.FINE, "Starts: Turns days in date with server response format");
         int year = todayYear();
         int month = todayMonth();
-        int dayToday = todayDay();
-
-        //In the last week of the month, jump to the next month
-        if (daysOfMonth(todayMonth(), todayYear()) - dayToday < 7) {
-            month++;
-        }
-        GregorianCalendar gregorianCalendar = new GregorianCalendar(year, month, days);
+        GregorianCalendar gregorianCalendar = new GregorianCalendar(year, month +1, days);
         Log.log(Level.FINE, "Date to format: " + gregorianCalendar.getTime());
         String dateFormat = gregorianCalendar.get(Calendar.YEAR)
                 + "-" + formatInt(gregorianCalendar.get(Calendar.MONTH))
