@@ -1,46 +1,26 @@
+# iOS Scenario Testing
 
-Scenarios contained in feature files written in Gherkin language.
-Available scenarios can be found
-[here](ios-scenario-testing/src/test/resources/io/cucumber).
+<!-- OSPO-managed README | Generated: 2026-04-16 | v2 -->
 
-Defined for the [ownCloud iOS app](https://github.com/owncloud/ios)
+[![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE) [![ownCloud OSPO](https://img.shields.io/badge/OSPO-ownCloud-blue)](https://kiteworks.com/opensource)
 
+End-to-end test automation framework for the ownCloud iOS app, using Gherkin-syntax feature files processed by Cucumber with Appium for device and simulator interaction. Written in Java, this project defines and executes behavioral scenarios against the iOS app to verify functionality across releases.
 
-## Global overview
+## Part of the ownCloud Mobile Ecosystem
 
-- Scenarios are defined with [Gherkin
-Syntax](https://cucumber.io/docs/gherkin/).
+This repository provides automated scenario tests for the [ownCloud iOS app](https://github.com/owncloud/ios-app). Test results are published via [Cucumber Reports](https://reports.cucumber.io/).
 
-- Steps are interpreted by [Cucumber](https://cucumber.io/).
+## Getting Started
 
-- Step implementation language:
-[Java](https://docs.oracle.com/javase/7/docs/)
+Follow the steps below to set up and run the end-to-end test suite.
 
-- Device interaction with [Appium](http://appium.io/)
+### Prerequisites
 
-- Reports generated with [Cucumber Reports](https://reports.cucumber.io/)
-
-![](architecture.png)
-
-## Get the code
-
-- With git:
-
-`git clone https://github.com/owncloud/ios-scenario-testing.git`
-
-- Download a [zip
-file](https://github.com/owncloud/ios-scenario-testing/archive/master.zip)
-
-
-## Requirements
-
-Different requirements:
-
-* `Appium` instance running and reachable. 
-
-* At least, one iOS simulator attached and reachable.
-
-* The following libraries and dependencies to be installed:
+- Java JDK
+- Gradle
+- Appium instance running and reachable
+- iOS simulator attached and reachable
+- The following libraries and dependencies to be installed:
 
 	* `authorize-ios`: A little utility that pre-authorizes Instruments to run UIAutomation scripts against iOS devices
 	* `ios-deploy` : Allows install and debug iOS apps from the command line
@@ -48,9 +28,13 @@ Different requirements:
 	* `ios-webkit-debug-proxy`: Allows to send commands to MobileSafari and UIWebViews
 	* `ios-sim` : Simulator manager (start, launch...)
 
-## How to test
+### Global architecture
 
-### 1. Build app
+![](architecture.png)
+
+### Running Tests
+
+#### 1. Build app
 
 First, build the [app](https://github.com/owncloud/ios-app) from the expected branch/commit to get the test object, by using the [buildapp](https://github.com/owncloud/ios-scenario-testing/blob/master/buildapp/buildapp.sh) script in the current repository.
 
@@ -66,15 +50,15 @@ Check the script's variables for the proper setup in your own environment or CI 
 In the current repository there will be always an `owncloud.app` file located in `/src/test/resources`, as example or fallback.
 
 
-### 2. Execute tests
+#### 2. Execute tests
 
 The script `executeTests` will launch the tests. The following environment variables must be set in advance
 
-		$OC_SERVER_URL (mandatory): URL of ownCloud server to test against
-		$UDID_DEVICE (optional): UDID of the device to execute the tests against.
-			To get the UDID of available simulators, use the  command `xcrun simctl list`
-		$APPIUM_URL (optional): Appium server URL.
-			If Appium Server is not specified, will be used "localhost:4723/wd/hub"
+| Variable | Required | Default | Description |
+|---|---|---|---|
+| `$OC_SERVER_URL` | Yes | -- | ownCloud server URL to test against |
+| `$APPIUM_URL` | No | `localhost:4723/wd/hub` | Appium server URL |
+| `$UDID_DEVICE` | No | -- | Simulator UDID (from `xcrun simctl list`) |
 
 The script needs some parameters. Check help `executeTests -h`
 
@@ -102,31 +86,87 @@ This command will execute tests that are not ignored and suitable for oCIS. If t
 `./executeTests -t "not @ignore and not @nooc10"`<br>
 This command will execute tests that are not ignored and suitable for oC10. If this command is run over an oCIS instance, some tests will fail.
 
+## Documentation
 
-## Results
+- [Gherkin Syntax Reference](https://cucumber.io/docs/gherkin/)
+- [Appium Documentation](http://appium.io/)
 
-In the folder `target`, you will find a report with the execution results in html and json formats.
+## Version Matrix
 
-Besides of that, by setting the `cucumber.properties` file allow to integrate reports with [Cucumber reports](https://cucumber.io/docs/cucumber/reporting/?lang=java). An account in such platform (integrated with GitHub) is enough to use it. A new env variable must be set in advance in order to send reports to the platform. Token is provided in the Cucumber Reports account for every collection:
+| Component | Version |
+|---|---|
+| Cucumber | 7.21.1 |
+| Appium | 2.18.0 |
+| Appium XCUITest Driver | 7.26.4 |
+| Java Client | 9.4.0 |
 
-	export CUCUMBER_PUBLISH_TOKEN=d97...
 
-Also, in `cucumber.properties` file with the following values (disabled by default):
+## Community & Support
 
-	cucumber.publish.quiet=false
-	cucumber.publish.enabled=true
+**[Star](https://github.com/owncloud/ios-scenario-testing)** this repo and **Watch** for release notifications!
 
-**Note**: This repository was forked from [Cucumber-java
-skeleton](https://github.com/cucumber/cucumber-java-skeleton)
-repository, which contains the base skeleton to start working.
+- [ownCloud Website](https://owncloud.com)
+- [Community Discussions](https://github.com/orgs/owncloud/discussions)
+- [Matrix Chat](https://app.element.io/#/room/#owncloud:matrix.org)
+- [Documentation](https://doc.owncloud.com)
+- [Enterprise Support](https://owncloud.com/contact-us/)
+- [OSPO Home](https://kiteworks.com/opensource)
 
-## Versioning
+## Contributing
 
-Up to date: 07/May/2025
+We welcome contributions! Please read the [Contributing Guidelines](CONTRIBUTING.md)
+and our [Code of Conduct](CODE_OF_CONDUCT.md) before getting started.
 
-||        |
-|:-- |:------:|
-| [Cucumber version](https://cucumber.io/docs/installation/java/) | 7.21.1 |
-| [Appium version](https://github.com/appium/appium/releases)| 2.18.0 |
-| [Appium xcuitest driver version](https://github.com/appium/appium-xcuitest-driver/releases)| 7.26.4 |
-| [Java client version](https://github.com/appium/java-client/releases) | 9.4.0  |
+### Workflow
+
+- **Rebase Early, Rebase Often!** We use a rebase workflow. Always rebase on the target branch before submitting a PR.
+- **Dependabot**: Automated dependency updates are managed via Dependabot. Review and merge dependency PRs promptly.
+- **Signed Commits**: All commits **must** be PGP/GPG signed. See [GitHub's signing guide](https://docs.github.com/en/authentication/managing-commit-signature-verification).
+- **DCO Sign-off**: Every commit must carry a `Signed-off-by` line:
+  ```
+  git commit -s -S -m "your commit message"
+  ```
+- **GitHub Actions Policy**: Workflows may only use actions that are (a) owned by `owncloud`, (b) created by GitHub (`actions/*`), or (c) verified in the GitHub Marketplace.
+
+## Security
+
+**Do not open a public GitHub issue for security vulnerabilities.**
+
+Report vulnerabilities at **<https://security.owncloud.com>** -- see [SECURITY.md](SECURITY.md).
+
+Bug bounty: [YesWeHack ownCloud Program](https://yeswehack.com/programs/owncloud-bug-bounty-program)
+
+## License
+
+This project is licensed under the [MIT](LICENSE).
+
+## About the ownCloud OSPO
+
+The [Kiteworks Open Source Program Office](https://kiteworks.com/opensource), operating under
+the [ownCloud](https://owncloud.com) brand, launched on May 5, 2026, to steward the open source
+ecosystem around ownCloud's products. The OSPO ensures transparent governance, license compliance,
+community health, and sustainable collaboration between the open source community and
+[Kiteworks](https://www.kiteworks.com), which acquired ownCloud in 2023.
+
+- **OSPO Home**: <https://kiteworks.com/opensource>
+- **GitHub**: <https://github.com/owncloud>
+- **ownCloud**: <https://owncloud.com>
+
+For questions about the OSPO or licensing, contact ospo@kiteworks.com.
+
+### License Migration to Apache 2.0
+
+The OSPO is driving a strategic relicensing of ownCloud repositories toward the
+[Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0), following
+the [Apache Software Foundation's third-party license policy](https://www.apache.org/legal/resolved.html).
+
+Individual repositories will migrate as their audit is completed. The LICENSE file
+in each repo reflects its **current** license status (not the target).
+
+**Current license: MIT** (Category A per Apache policy -- permissive, compatible with Apache-2.0).
+
+Migration prerequisites for this repository:
+
+- **CLA/DCO coverage**: All past contributors must have signed agreements permitting relicensing
+- **Header updates**: All source file headers must be updated from MIT to Apache-2.0 notice
+- **Dependency audit**: Verify no incompatible transitive dependencies
