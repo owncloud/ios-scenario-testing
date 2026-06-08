@@ -49,15 +49,15 @@ public class Hooks {
         //First, remove leftovers in root folder for every user
         ArrayList<String> userNames = new ArrayList<>(Arrays.asList("Alice", "Bob"));
         for (String userToClean: userNames) {
-            ArrayList<OCFile> filesRoot = world.filesAPI.listItems("", userToClean);
+            ArrayList<OCFile> filesRoot = world.filesAPI().listItems("", userToClean);
             for (OCFile iterator : filesRoot) {
-                world.filesAPI.removeItem(iterator.getName(), userToClean);
+                world.filesAPI().removeItem(iterator.getName(), userToClean);
             }
             //Empty trashbin
-            world.trashbinAPI.emptyTrashbin(userToClean);
+            world.trashbinAPI().emptyTrashbin(userToClean);
         }
         if (System.getProperty("backend").equals("oCIS")){ //remove spaces
-            world.graphAPI.removeSpacesOfUser();
+            world.graphAPI().removeSpacesOfUser();
         }
         Log.log(Level.FINE, "CLEAN UP ENDS");
     }

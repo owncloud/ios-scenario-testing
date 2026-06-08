@@ -32,7 +32,7 @@ public class SharesSteps {
     public void item_already_shared(String sharingUser, int sharelevel, String type, String itemName,
                                     String userType, String recipientUser, String permissions) throws Throwable {
         StepLogger.logCurrentStep(Level.FINE);
-        world.shareAPI.createShare(sharingUser, itemName, recipientUser, "0",
-                world.sharePage.translatePermissionsToInt(permissions), "", "", sharelevel);
+        world.shareAPI().createShare(sharingUser, itemName, recipientUser, "0",
+                world.sharePage().translatePermissionsToInt(permissions), "", "", sharelevel);
     }
 }

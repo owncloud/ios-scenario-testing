@@ -26,39 +26,39 @@ public class SpaceMembersSteps {
     @When("Alice adds {word} to the space {word} with")
     public void add_member_space(String userName, String spaceName, DataTable table) {
         StepLogger.logCurrentStep(Level.FINE);
-        world.spaceMembersPage.addMember(userName);
+        world.spaceMembersPage().addMember(userName);
         Map<String, String> fields = table.asMap(String.class, String.class);
         for (Map.Entry<String, String> entry : fields.entrySet()) {
             String key = entry.getKey();
             String value = entry.getValue();
             switch (key) {
-                case "permission" -> world.spaceMembersPage.setPermission(value);
-                case "expirationDate" -> world.spaceMembersPage.setExpirationDate(value);
+                case "permission" -> world.spaceMembersPage().setPermission(value);
+                case "expirationDate" -> world.spaceMembersPage().setExpirationDate(value);
             }
         }
-        world.spaceMembersPage.shareWithMember();
+        world.spaceMembersPage().shareWithMember();
     }
 
     @When("Alice edits {word} from the space {word} with the following fields")
     public void edit_member_space(String userName, String spaceName, DataTable table) {
         StepLogger.logCurrentStep(Level.FINE);
-        world.spacesPage.openEditMember(userName);
+        world.spacesPage().openEditMember(userName);
         Map<String, String> fields = table.asMap(String.class, String.class);
         for (Map.Entry<String, String> entry : fields.entrySet()) {
             String key = entry.getKey();
             String value = entry.getValue();
             switch (key) {
-                case "permission" -> world.spaceMembersPage.setPermission(value);
-                case "expirationDate" -> world.spaceMembersPage.editExpirationDate(value);
+                case "permission" -> world.spaceMembersPage().setPermission(value);
+                case "expirationDate" -> world.spaceMembersPage().editExpirationDate(value);
             }
         }
-        world.spaceMembersPage.saveChanges();
+        world.spaceMembersPage().saveChanges();
     }
 
     @Then("{word} should be member of the space {word} with")
     public void should_be_member_of_space(String userName, String spaceName, DataTable table) throws IOException {
         StepLogger.logCurrentStep(Level.FINE);
-        OCSpaceMember member = world.graphAPI.getMemberOfSpace(spaceName, userName);
+        OCSpaceMember member = world.graphAPI().getMemberOfSpace(spaceName, userName);
         Log.log(Level.FINE, "Member from backend: " + member.getDisplayName() +
                 " " + member.getPermission() +
                 " " + member.getExpirationDate());
@@ -69,13 +69,13 @@ public class SpaceMembersSteps {
             switch (key) {
                 case "permission" -> {
                     // Local validation
-                    assertTrue(world.spaceMembersPage.isUserMember(userName, value));
+                    assertTrue(world.spaceMembersPage().isUserMember(userName, value));
                     // Remote validation
                     assertTrue(member.getPermission().contains(value));
                 }
                 case "expirationDate" -> {
                     // Local validation
-                    assertTrue(world.spaceMembersPage.isExpirationDateCorrect(userName, value));
+                    assertTrue(world.spaceMembersPage().isExpirationDateCorrect(userName, value));
                     // Remote validation
                     Log.log(Level.FINE, "Remote date: " + member.getExpirationDate());
                     if (value != null) {

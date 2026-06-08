@@ -9,6 +9,7 @@ import java.util.logging.Level;
 import java.util.regex.Pattern;
 
 import io.appium.java_client.AppiumBy;
+import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import io.appium.java_client.pagefactory.iOSXCUITFindBy;
 import utils.LocProperties;
@@ -116,18 +117,9 @@ public class FileListPage extends CommonPage {
     private final String id_removeSidebar = "Remove from sidebar";
     private final String id_openin = "Open in";
 
-    public static FileListPage instance;
-
-    private FileListPage() {
-        super();
+    public FileListPage(IOSDriver driver) {
+        super(driver);
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
-    }
-
-    public static FileListPage getInstance() {
-        if (instance == null) {
-            instance = new FileListPage();
-        }
-        return instance;
     }
 
     public void openItemInList(String itemName) {

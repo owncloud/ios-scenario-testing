@@ -26,17 +26,17 @@ public class PrivateShareSteps {
     public void select_sharee_default(String type, DataTable table) {
         StepLogger.logCurrentStep(Level.FINE);
         Map<String, String> fields = table.asMap(String.class, String.class);
-        world.sharePage.invite();
+        world.sharePage().invite();
         for (Map.Entry<String, String> entry : fields.entrySet()) {
             String key = entry.getKey();
             String value = entry.getValue();
             switch (key){
-                case "sharee", "group" -> world.privateSharePage.searchSharee(value);
-                case "permissions" -> world.privateSharePage.setPermissions(value);
-                case "expiration" -> world.privateSharePage.setExpiration(value);
+                case "sharee", "group" -> world.privateSharePage().searchSharee(value);
+                case "permissions" -> world.privateSharePage().setPermissions(value);
+                case "expiration" -> world.privateSharePage().setExpiration(value);
             }
         }
-        world.privateSharePage.savePermissions();
+        world.privateSharePage().savePermissions();
     }
 
     @When("Alice edits the share with the following fields")
@@ -46,15 +46,15 @@ public class PrivateShareSteps {
         Map<String, String> fields = table.asMap(String.class, String.class);
         // To open the correct menu
         String sharee = fields.get("sharee");
-        world.sharePage.openPrivateShare(sharee);
+        world.sharePage().openPrivateShare(sharee);
         for (Map.Entry<String, String> entry : fields.entrySet()) {
             String key = entry.getKey();
             String value = entry.getValue();
             switch (key) {
-                case "permissions" -> world.privateSharePage.setPermissions(value);
-                case "expiration" -> world.privateSharePage.setExpiration(value);
+                case "permissions" -> world.privateSharePage().setPermissions(value);
+                case "expiration" -> world.privateSharePage().setExpiration(value);
             }
-            world.privateSharePage.saveChanges();
+            world.privateSharePage().saveChanges();
         }
     }
 
@@ -63,8 +63,8 @@ public class PrivateShareSteps {
         StepLogger.logCurrentStep(Level.FINE);
         List<List<String>> list = table.asLists();
         String sharee = list.get(0).get(0);
-        world.sharePage.openPrivateShare(sharee);
-        world.privateSharePage.deletePrivateShare();
+        world.sharePage().openPrivateShare(sharee);
+        world.privateSharePage().deletePrivateShare();
     }
 
     @Then("{usertype} {word} should have access to {word}")
@@ -72,9 +72,9 @@ public class PrivateShareSteps {
             throws Throwable {
         StepLogger.logCurrentStep(Level.FINE);
         if (type.equals("user")) {
-            assertTrue(world.shareAPI.isSharedWithMe(itemName, shareeName, false));
+            assertTrue(world.shareAPI().isSharedWithMe(itemName, shareeName, false));
         } else if (type.equals("group")) {
-            assertTrue(world.shareAPI.isSharedWithMe(itemName, shareeName, true));
+            assertTrue(world.shareAPI().isSharedWithMe(itemName, shareeName, true));
         }
     }
 
@@ -82,7 +82,7 @@ public class PrivateShareSteps {
     public void sharee_does_not_have_access(String userName, String itemName)
             throws Throwable {
         StepLogger.logCurrentStep(Level.FINE);
-        assertFalse(world.shareAPI.isSharedWithMe(itemName, userName, false));
+        assertFalse(world.shareAPI().isSharedWithMe(itemName, userName, false));
     }
 
     @Then("share should be created/edited on {word} with the following fields")
@@ -101,44 +101,44 @@ public class PrivateShareSteps {
                 case "group" -> {
                     Log.log(Level.FINE, "Checking group: " + value);
                     sharee = value;
-                    assertTrue(world.sharePage.isItemInListPrivateShares(value));
-                    assertTrue(world.sharePage.isGroup());
+                    assertTrue(world.sharePage().isItemInListPrivateShares(value));
+                    assertTrue(world.sharePage().isGroup());
                 }
                 case "sharee" -> {
                     Log.log(Level.FINE, "Checking sharee: " + value);
                     sharee = value;
-                    assertTrue(world.sharePage.isItemInListPrivateShares(value));
-                    assertFalse(world.sharePage.isGroup());
+                    assertTrue(world.sharePage().isItemInListPrivateShares(value));
+                    assertFalse(world.sharePage().isGroup());
                 }
                 case "permissions" -> {
                     Log.log(Level.FINE, "Checking permissions: " + value);
-                    assertTrue(world.sharePage.isSharePermissionCorrect(value));
+                    assertTrue(world.sharePage().isSharePermissionCorrect(value));
                 }
             }
         }
         //1.2 Checking in share page
-        world.sharePage.openPrivateShare(sharee);
+        world.sharePage().openPrivateShare(sharee);
         for (Map.Entry<String, String> entry : fields.entrySet()) {
             String key = entry.getKey();
             String value = entry.getValue();
             switch (key) {
                 case "sharee", "group" -> {
                     Log.log(Level.FINE, "Checking sharee/group: " + value);
-                    assertTrue(world.privateSharePage.isNameCorrect(value));
+                    assertTrue(world.privateSharePage().isNameCorrect(value));
                 }
                 case "permissions" -> {
                     Log.log(Level.FINE, "Checking permission: " + value);
-                    assertTrue(world.privateSharePage.isPermissionEnabled(value));
+                    assertTrue(world.privateSharePage().isPermissionEnabled(value));
                 }
                 case "expiration" -> {
                     Log.log(Level.FINE, "Checking expiration: " + value);
-                    assertTrue(world.privateSharePage.isExpirationCorrect(value));
+                    assertTrue(world.privateSharePage().isExpirationCorrect(value));
                 }
             }
         }
         //Asserts in server via API
-        OCShare share = world.shareAPI.getShare(itemName);
-        assertTrue(world.sharePage.checkCorrectShare(share, fields));
+        OCShare share = world.shareAPI().getShare(itemName);
+        assertTrue(world.sharePage().checkCorrectShare(share, fields));
     }
 
     @Then("{word} should not be shared anymore with")
@@ -146,6 +146,6 @@ public class PrivateShareSteps {
         StepLogger.logCurrentStep(Level.FINE);
         List<List<String>> list = table.asLists();
         String sharee = list.get(0).get(0);
-        assertFalse(world.sharePage.isItemInListPrivateShares(sharee));
+        assertFalse(world.sharePage().isItemInListPrivateShares(sharee));
     }
 }
