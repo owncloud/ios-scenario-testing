@@ -6,6 +6,7 @@ import org.openqa.selenium.support.PageFactory;
 import java.util.List;
 import java.util.logging.Level;
 
+import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import io.appium.java_client.pagefactory.iOSXCUITFindBy;
 import utils.log.Log;
@@ -49,18 +50,10 @@ public class LoginPage extends CommonPage {
     private WebElement files;
 
     private final String server = System.getProperty("server");
-    public static LoginPage instance;
 
-    private LoginPage() {
-        super();
+    public LoginPage(IOSDriver driver) {
+        super(driver);
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
-    }
-
-    public static LoginPage getInstance() {
-        if (instance == null) {
-            instance = new LoginPage();
-        }
-        return instance;
     }
 
     public boolean loggedIn() {

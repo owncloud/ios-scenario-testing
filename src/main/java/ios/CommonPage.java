@@ -45,14 +45,16 @@ public class CommonPage {
     @iOSXCUITFindBy(id = "Allow")
     protected List<WebElement> allow;
 
-    protected static IOSDriver driver = AppiumManager.getManager().getDriver();
+    protected static IOSDriver driver;
     protected static Actions actions;
     private static final SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMdd_HHmmss");
     protected static final int WAIT_TIME = 10;
-    protected static WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(WAIT_TIME));
+    protected static WebDriverWait wait;
 
-    public CommonPage() {
+    public CommonPage(IOSDriver driver) {
+        this.driver = driver;
         actions = new Actions(driver);
+        wait = new WebDriverWait(driver, Duration.ofSeconds(WAIT_TIME));
     }
 
     public static void waitByXpath(String resourceXpath) {

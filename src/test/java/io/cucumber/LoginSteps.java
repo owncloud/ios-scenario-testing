@@ -18,15 +18,15 @@ public class LoginSteps {
     public void logged(String userName)
             throws Throwable {
         StepLogger.logCurrentStep(Level.FINE);
-        if (!world.loginPage.loggedIn()) {
+        if (!world.loginPage().loggedIn()) {
             String password = LocProperties.getProperties().getProperty("pwdDefault");
-            world.loginPage.addAccount();
-            world.loginPage.typeURL();
-            world.loginPage.typeCredentials(userName, password);
-            world.loginPage.submitLogin();
-            world.loginPage.selectDrive();
+            world.loginPage().addAccount();
+            world.loginPage().typeURL();
+            world.loginPage().typeCredentials(userName, password);
+            world.loginPage().submitLogin();
+            world.loginPage().selectDrive();
         } else {
-            world.loginPage.selectFirstBookmark();
+            world.loginPage().selectFirstBookmark();
         }
     }
 }

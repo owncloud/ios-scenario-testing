@@ -37,7 +37,7 @@ public class SpacesSteps {
         for (Map<String, String> row : rows) {
             String name = row.get("name");
             String subtitle = row.get("subtitle") != null ? row.get("subtitle") : "";
-            world.graphAPI.createSpace(name, subtitle, userName);
+            world.graphAPI().createSpace(name, subtitle, userName);
         }
     }
 
@@ -48,7 +48,7 @@ public class SpacesSteps {
         for (Map<String, String> row : rows) {
             String name = row.get("name");
             String subtitle = row.get("subtitle") != null ? row.get("subtitle") : "";
-            world.graphAPI.disableSpace(name, subtitle);
+            world.graphAPI().disableSpace(name, subtitle);
         }
     }
 
@@ -61,14 +61,14 @@ public class SpacesSteps {
             String permission = row.get("permission");
             String expDate = row.get("expirationDate");
             String expirationDate = (expDate == null) ? "" : expDate.trim();
-            world.graphAPI.addMemberToSpace(spaceName, userName, permission, expirationDate);
+            world.graphAPI().addMemberToSpace(spaceName, userName, permission, expirationDate);
         }
     }
 
     @When("Alice selects the spaces view")
     public void user_selects_spaces_view() {
         StepLogger.logCurrentStep(Level.FINE);
-        world.fileListPage.openSpacesList();
+        world.fileListPage().openSpacesList();
     }
 
     @When("Alice selects to create a new space with the following fields")
@@ -78,7 +78,7 @@ public class SpacesSteps {
         String name = fields.get("name");
         // Description can be null
         String subtitle = fields.get("subtitle") != null ? fields.get("subtitle") : "";
-        world.spacesPage.createSpace(name, subtitle);
+        world.spacesPage().createSpace(name, subtitle);
     }
 
     @When("Alice selects to edit a space with the following fields")
@@ -88,7 +88,7 @@ public class SpacesSteps {
         String name = fields.get("name");
         // Description can be null
         String subtitle = fields.get("subtitle") != null ? fields.get("subtitle") : "";
-        world.spacesPage.editSpace(name, subtitle);
+        world.spacesPage().editSpace(name, subtitle);
     }
 
     @When("Alice selects to disable the following spaces")
@@ -98,7 +98,7 @@ public class SpacesSteps {
         for (Map<String, String> row : rows) {
             String name = row.get("name");
             String subtitle = row.get("subtitle") != null ? row.get("subtitle") : "";
-            world.spacesPage.disableSpace(name, subtitle);
+            world.spacesPage().disableSpace(name, subtitle);
         }
     }
 
@@ -108,7 +108,7 @@ public class SpacesSteps {
         List<Map<String, String>> rows = table.asMaps(String.class, String.class);
         for (Map<String, String> row : rows) {
             String name = row.get("name");
-            world.spacesPage.enableSpace(name);
+            world.spacesPage().enableSpace(name);
         }
     }
 
@@ -116,8 +116,8 @@ public class SpacesSteps {
     public void show_disabled_spaces(String action) {
         StepLogger.logCurrentStep(Level.FINE);
         switch (action) {
-            case ("shows") -> world.spacesPage.showDisabledSpaces();
-            case ("hides") -> world.spacesPage.hideDisabledSpaces();
+            case ("shows") -> world.spacesPage().showDisabledSpaces();
+            case ("hides") -> world.spacesPage().hideDisabledSpaces();
         }
     }
 
@@ -129,21 +129,21 @@ public class SpacesSteps {
         for (List<String> rows : listItems) {
             String name = rows.get(0);
             String description = rows.get(1);
-            world.graphAPI.disableSpace(name, description);
+            world.graphAPI().disableSpace(name, description);
         }
     }
 
     @When("Alice opens the members menu")
     public void opens_members_menu() {
         StepLogger.logCurrentStep(Level.FINE);
-        world.spacesPage.openMembers();
+        world.spacesPage().openMembers();
     }
 
     @When("Alice removes {word} from the space {word}")
     public void remove_user_form_space(String userName, String spaceName) {
         StepLogger.logCurrentStep(Level.FINE);
-        world.spacesPage.openEditMember(userName);
-        world.spaceMembersPage.removeMember();
+        world.spacesPage().openEditMember(userName);
+        world.spaceMembersPage().removeMember();
     }
 
     @Then("Alice should{typePosNeg} see the following spaces")
@@ -154,9 +154,9 @@ public class SpacesSteps {
             String name = row.get("name");
             String subtitle = row.get("subtitle") != null ? row.get("subtitle") : "";
             if (sense.isEmpty()) {
-                assertTrue(world.spacesPage.isSpaceVisible(name, subtitle));
+                assertTrue(world.spacesPage().isSpaceVisible(name, subtitle));
             } else if (sense.equals(" not")) {
-                assertFalse(world.spacesPage.isSpaceVisible(name, subtitle));
+                assertFalse(world.spacesPage().isSpaceVisible(name, subtitle));
             }
         }
     }
@@ -168,7 +168,7 @@ public class SpacesSteps {
         for (Map<String, String> row : rows) {
             String name = row.get("name");
             String subtitle = row.get("subtitle") != null ? row.get("subtitle") : "";
-            assertTrue(world.spacesPage.isSpaceInDisabledList(name, subtitle));
+            assertTrue(world.spacesPage().isSpaceInDisabledList(name, subtitle));
         }
     }
 
@@ -181,7 +181,7 @@ public class SpacesSteps {
         // Description can be null
         String subtitle = fields.get("subtitle") != null ? fields.get("subtitle") : "";
         // Spaces in server
-        List<OCSpace> spaces = world.graphAPI.getMySpaces();
+        List<OCSpace> spaces = world.graphAPI().getMySpaces();
         boolean matches = true;
         for (OCSpace space : spaces) {
             Log.log(Level.FINE, "Space in server: " + space.getName() + " "
@@ -205,7 +205,7 @@ public class SpacesSteps {
         // Description can be null
         String subtitle = fields.get("subtitle") != null ? fields.get("subtitle") : "";
         // Spaces in server
-        List<OCSpace> spaces = world.graphAPI.getMySpaces();
+        List<OCSpace> spaces = world.graphAPI().getMySpaces();
         boolean matches = true;
         for (OCSpace space : spaces) {
             Log.log(Level.FINE, "Space in server: " + space.getName() + " "
@@ -226,6 +226,6 @@ public class SpacesSteps {
     @Then("{word} should not be member of the space {word}")
     public void is_user_member(String userName, String spaceName) {
         StepLogger.logCurrentStep(Level.FINE);
-        assertFalse(world.spacesPage.isMemberOfSpace(userName));
+        assertFalse(world.spacesPage().isMemberOfSpace(userName));
     }
 }

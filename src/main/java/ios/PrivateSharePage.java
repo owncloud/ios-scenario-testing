@@ -6,6 +6,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import java.util.logging.Level;
 
+import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import io.appium.java_client.pagefactory.iOSXCUITFindBy;
 import utils.date.DateUtils;
@@ -46,18 +47,9 @@ public class PrivateSharePage extends CommonPage {
     @iOSXCUITFindBy(xpath = "//XCUIElementTypeButton[@name=\"Unshare\"]")
     private WebElement unshare;
 
-    public static PrivateSharePage instance;
-
-    private PrivateSharePage() {
-        super();
+    public PrivateSharePage(IOSDriver driver) {
+        super(driver);
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
-    }
-
-    public static PrivateSharePage getInstance() {
-        if (instance == null) {
-            instance = new PrivateSharePage();
-        }
-        return instance;
     }
 
     public void searchSharee(String shareeName) {

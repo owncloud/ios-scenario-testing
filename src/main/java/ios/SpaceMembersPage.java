@@ -7,6 +7,7 @@ import java.util.List;
 import java.util.logging.Level;
 
 import io.appium.java_client.AppiumBy;
+import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import io.appium.java_client.pagefactory.iOSXCUITFindBy;
 import utils.date.DateUtils;
@@ -27,18 +28,9 @@ public class SpaceMembersPage extends CommonPage {
     @iOSXCUITFindBy(id = "Unshare")
     private WebElement removeMember;
 
-    public static SpaceMembersPage instance;
-
-    private SpaceMembersPage() {
-        super();
+    public SpaceMembersPage(IOSDriver driver) {
+        super(driver);
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
-    }
-
-    public static SpaceMembersPage getInstance() {
-        if (instance == null) {
-            instance = new SpaceMembersPage();
-        }
-        return instance;
     }
 
     public void addMember(String userName){

@@ -5,6 +5,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import java.util.logging.Level;
 
+import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import io.appium.java_client.pagefactory.iOSXCUITFindBy;
 import utils.log.Log;
@@ -29,18 +30,9 @@ public class ShortcutPage extends CommonPage {
     @iOSXCUITFindBy(id = "Safari")
     private WebElement safariBrowser;
 
-    public static ShortcutPage instance;
-
-    private ShortcutPage() {
-        super();
+    public ShortcutPage(IOSDriver driver) {
+        super(driver);
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
-    }
-
-    public static ShortcutPage getInstance() {
-        if (instance == null) {
-            instance = new ShortcutPage();
-        }
-        return instance;
     }
 
     public void createShortcutWeb(String urlTo, String name) {

@@ -10,6 +10,7 @@ import java.util.List;
 import java.util.logging.Level;
 
 import io.appium.java_client.AppiumBy;
+import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import io.appium.java_client.pagefactory.iOSXCUITFindBy;
 import utils.entities.OCFile;
@@ -26,18 +27,9 @@ public class UploadsPage extends CommonPage {
     @iOSXCUITFindBy(xpath = "//XCUIElementTypeButton[@name=\"Add\" and @label=\"Done\"]")
     private WebElement done;
 
-    public static UploadsPage instance;
-
-    private UploadsPage() {
-        super();
+    public UploadsPage(IOSDriver driver) {
+        super(driver);
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
-    }
-
-    public static UploadsPage getInstance() {
-        if (instance == null) {
-            instance = new UploadsPage();
-        }
-        return instance;
     }
 
     public void selectPhotoGallery(int selection) {

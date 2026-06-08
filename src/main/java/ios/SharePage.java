@@ -9,6 +9,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.logging.Level;
 
+import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import io.appium.java_client.pagefactory.iOSXCUITFindBy;
 import utils.date.DateUtils;
@@ -47,18 +48,9 @@ public class SharePage extends CommonPage {
     @iOSXCUITFindBy(id = "Done")
     private WebElement doneButton;
 
-    public static SharePage instance;
-
-    private SharePage() {
-        super();
+    public SharePage(IOSDriver driver) {
+        super(driver);
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
-    }
-
-    public static SharePage getInstance() {
-        if (instance == null) {
-            instance = new SharePage();
-        }
-        return instance;
     }
 
     public void invite() {
