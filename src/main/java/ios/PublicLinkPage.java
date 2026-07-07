@@ -8,6 +8,7 @@ import java.time.ZoneId;
 import java.time.ZonedDateTime;
 import java.util.logging.Level;
 
+import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import io.appium.java_client.pagefactory.iOSXCUITFindBy;
 import utils.date.DateUtils;
@@ -63,18 +64,9 @@ public class PublicLinkPage extends CommonPage {
     @iOSXCUITFindBy(xpath = "//XCUIElementTypeButton[@name=\"Unshare\"]")
     private WebElement unshareLink;
 
-    public static PublicLinkPage instance;
-
-    private PublicLinkPage() {
-        super();
+    public PublicLinkPage(IOSDriver driver) {
+        super(driver);
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
-    }
-
-    public static PublicLinkPage getInstance() {
-        if (instance == null) {
-            instance = new PublicLinkPage();
-        }
-        return instance;
     }
 
     public void setName(String name) {

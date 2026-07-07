@@ -6,6 +6,7 @@ import org.openqa.selenium.support.PageFactory;
 import java.util.List;
 import java.util.logging.Level;
 
+import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import io.appium.java_client.pagefactory.iOSXCUITFindBy;
 import utils.log.Log;
@@ -55,18 +56,9 @@ public class SpacesPage extends CommonPage {
     @iOSXCUITFindBy(id ="Delete")
     protected WebElement deleteSpaceAction;
 
-    public static SpacesPage instance;
-
-    private SpacesPage(){
-        super();
+    public SpacesPage(IOSDriver driver){
+        super(driver);
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
-    }
-
-    public static SpacesPage getInstance() {
-        if (instance == null) {
-            instance = new SpacesPage();
-        }
-        return instance;
     }
 
     public void createSpace (String name, String subtitle) {

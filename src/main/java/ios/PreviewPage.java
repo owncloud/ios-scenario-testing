@@ -5,6 +5,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import java.util.logging.Level;
 
+import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import io.appium.java_client.pagefactory.iOSXCUITFindBy;
 import utils.log.Log;
@@ -22,18 +23,9 @@ public class PreviewPage extends CommonPage {
     @iOSXCUITFindBy(id = "Outline")
     private WebElement outlinePdf;
 
-    public static PreviewPage instance;
-
-    private PreviewPage() {
-        super();
+    public PreviewPage(IOSDriver driver) {
+        super(driver);
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
-    }
-
-    public static PreviewPage getInstance() {
-        if (instance == null) {
-            instance = new PreviewPage();
-        }
-        return instance;
     }
 
     public boolean isTextFilePreviewed(String itemName) {

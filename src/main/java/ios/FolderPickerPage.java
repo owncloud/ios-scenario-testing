@@ -5,6 +5,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import java.util.logging.Level;
 
+import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import io.appium.java_client.pagefactory.iOSXCUITFindBy;
 import utils.log.Log;
@@ -26,18 +27,9 @@ public class FolderPickerPage extends CommonPage {
     private String xpath_move = "//XCUIElementTypeButton[@name=\"Move here\"]";
     private String xpath_copy = "//XCUIElementTypeButton[@name=\"Copy here\"]";
 
-    public static FolderPickerPage instance;
-
-    private FolderPickerPage() {
-        super();
+    public FolderPickerPage(IOSDriver driver) {
+        super(driver);
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
-    }
-
-    public static FolderPickerPage getInstance() {
-        if (instance == null) {
-            instance = new FolderPickerPage();
-        }
-        return instance;
     }
 
     public void selectSpace(String action) {
