@@ -176,6 +176,7 @@ def configureCucumberTask = { Test task,
  * - target/gradle-test-reports/main/index.html
  */
 test {
+    include '**/RunCucumberTest.class'
     doFirst {
         delete cucumberReportsDir
         delete gradleTestReportsDir
