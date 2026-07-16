@@ -44,43 +44,38 @@ jobs:
 
       - name: Patch source for test builds
         run: |
-          gsed -i 's/.showBetaWarning : true/.showBetaWarning : false/i' \
-            ownCloudAppShared/Tools/VendorServices.swift
+          gsed -i 's/.showBetaWarning : true/.showBetaWarning : false/i' ownCloudAppShared/Tools/VendorServices.swift
+          grep .showBetaWarning ownCloudAppShared/Tools/VendorServices.swift
 
-          gsed -i 's/.isBetaBuild : false/.isBetaBuild : true/i' \
-            ownCloudAppShared/Tools/VendorServices.swift
+          gsed -i 's/.isBetaBuild : false/.isBetaBuild : true/i' ownCloudAppShared/Tools/VendorServices.swift
+          grep .isBetaBuild ownCloudAppShared/Tools/VendorServices.swift
 
-          gsed -i 's/value: OCLicenseQAProvider.isQAUnlockEnabled,/value: true,/i' \
-            ownCloud/Settings/DisplaySettingsSection.swift
+          gsed -i 's/value: OCLicenseQAProvider.isQAUnlockEnabled,/value: true,/i' ownCloud/Settings/DisplaySettingsSection.swift
+          grep .isQAUnlockEnabled ownCloud/Settings/DisplaySettingsSection.swift
 
-          gsed -i '170,200d' \
-            'ownCloud/Release Notes/ReleaseNotesHostViewController.swift'
+          gsed -i '170,200d' ownCloud/Release\ Notes/ReleaseNotesHostViewController.swift
+          grep -C 2 shouldShowReleaseNotes ownCloud/Release\ Notes/ReleaseNotesHostViewController.swift
 
-          gsed -i '144i OCConnectionAllowedAuthenticationMethodIDs      : @[ OCAuthenticationMethodIdentifierBasicAuth ],' \
-            ios-sdk/ownCloudSDK/Connection/OCConnection.m
+          gsed -i '144i OCConnectionAllowedAuthenticationMethodIDs      : @[ OCAuthenticationMethodIdentifierBasicAuth ],' ios-sdk/ownCloudSDK/Connection/OCConnection.m
+          gsed -i 's|self?\.expirationDate = \.now\.addingTimeInterval(24 \* 3600 \* 7)|self?.expirationDate = Calendar.current.date(byAdding: .day, value: 1, to: Calendar.current.startOfDay(for: .now))?.addingTimeInterval(-1)|' ownCloudAppShared/Client/Sharing/ShareViewController.swift
 
-          gsed -i \
-            's|self?\.expirationDate = \.now\.addingTimeInterval(24 \* 3600 \* 7)|self?.expirationDate = Calendar.current.date(byAdding: .day, value: 1, to: Calendar.current.startOfDay(for: .now))?.addingTimeInterval(-1)|' \
-            ownCloudAppShared/Client/Sharing/ShareViewController.swift
-
-          gsed -i \
-            's|self?.expirationDate = expirationDate.addingTimeInterval(7 \* 24 \* 60 \* 60)|self?.expirationDate = Calendar.current.date(byAdding: .day, value: 1, to: Calendar.current.startOfDay(for: .now))?.addingTimeInterval(-1)|' \
-            ownCloudAppShared/Client/Sharing/ShareViewController.swift
+          grep Calendar.current.startOfDay ownCloudAppShared/Client/Sharing/ShareViewController.swift
+          gsed -i 's|self?.expirationDate = expirationDate.addingTimeInterval(7 \* 24 \* 60 \* 60)|self?.expirationDate = Calendar.current.date(byAdding: .day, value: 1, to: Calendar.current.startOfDay(for: .now))?.addingTimeInterval(-1)|' ownCloudAppShared/Client/Sharing/ShareViewController.swift
 
       - name: Resolve Swift packages
         run: |
           xcrun xcodebuild \
             -resolvePackageDependencies \
-            -workspace ownCloud.xcworkspace \
+            -project ownCloud.xcodeproj \
             -scheme ownCloud
 
       - name: Build for simulator
         run: |
           xcrun xcodebuild clean build \
-            -workspace ownCloud.xcworkspace \
+            -project ownCloud.xcodeproj \
             -scheme ownCloud \
             -configuration Debug \
-            -destination "platform=iOS Simulator,name=iPhone 17e,OS=26.2" \
+            -destination "generic/platform=iOS Simulator" \
             OTHER_SWIFT_FLAGS="-no-explicit-module-build" \
             -derivedDataPath DerivedData
 
