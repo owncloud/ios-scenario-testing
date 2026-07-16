@@ -1,0 +1,98 @@
+name: Build iOS App
+
+on:
+  workflow_dispatch:
+    inputs:
+      ios-app-ref:
+        description: 'Commit hash, tag, or branch of owncloud/ios-app to build'
+        required: true
+        type: string
+  workflow_call:
+    inputs:
+      ios-app-ref:
+        description: 'Commit hash, tag, or branch of owncloud/ios-app to build'
+        required: true
+        type: string
+    outputs:
+      artifact-name:
+        description: 'Name of the uploaded artifact containing the .app bundle'
+        value: ${{ jobs.build.outputs.artifact-name }}
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: macos-15
+
+    outputs:
+      artifact-name: ${{ steps.set-artifact-name.outputs.artifact-name }}
+
+    steps:
+      - name: Checkout ios-app at requested ref
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          repository: owncloud/ios-app
+          ref: ${{ inputs.ios-app-ref }}
+          submodules: recursive
+
+      - name: Select Xcode
+        run: sudo xcode-select -s /Applications/Xcode_26.3.app
+
+      - name: Install GNU sed
+        run: brew install gnu-sed
+
+      - name: Patch source for test builds
+        run: |
+          gsed -i 's/.showBetaWarning : true/.showBetaWarning : false/i' \
+            ownCloudAppShared/Tools/VendorServices.swift
+
+          gsed -i 's/.isBetaBuild : false/.isBetaBuild : true/i' \
+            ownCloudAppShared/Tools/VendorServices.swift
+
+          gsed -i 's/value: OCLicenseQAProvider.isQAUnlockEnabled,/value: true,/i' \
+            ownCloud/Settings/DisplaySettingsSection.swift
+
+          gsed -i '170,200d' \
+            'ownCloud/Release Notes/ReleaseNotesHostViewController.swift'
+
+          gsed -i '144i OCConnectionAllowedAuthenticationMethodIDs      : @[ OCAuthenticationMethodIdentifierBasicAuth ],' \
+            ios-sdk/ownCloudSDK/Connection/OCConnection.m
+
+          gsed -i \
+            's|self?\.expirationDate = \.now\.addingTimeInterval(24 \* 3600 \* 7)|self?.expirationDate = Calendar.current.date(byAdding: .day, value: 1, to: Calendar.current.startOfDay(for: .now))?.addingTimeInterval(-1)|' \
+            ownCloudAppShared/Client/Sharing/ShareViewController.swift
+
+          gsed -i \
+            's|self?.expirationDate = expirationDate.addingTimeInterval(7 \* 24 \* 60 \* 60)|self?.expirationDate = Calendar.current.date(byAdding: .day, value: 1, to: Calendar.current.startOfDay(for: .now))?.addingTimeInterval(-1)|' \
+            ownCloudAppShared/Client/Sharing/ShareViewController.swift
+
+      - name: Resolve Swift packages
+        run: |
+          xcrun xcodebuild \
+            -resolvePackageDependencies \
+            -workspace ownCloud.xcworkspace \
+            -scheme ownCloud
+
+      - name: Build for simulator
+        run: |
+          xcrun xcodebuild clean build \
+            -workspace ownCloud.xcworkspace \
+            -scheme ownCloud \
+            -configuration Debug \
+            -destination "platform=iOS Simulator,name=iPhone 17e,OS=26.2" \
+            OTHER_SWIFT_FLAGS="-no-explicit-module-build" \
+            -derivedDataPath DerivedData
+
+      - name: Set artifact name
+        id: set-artifact-name
+        run: |
+          echo "artifact-name=owncloud-ios-app-${{ inputs.ios-app-ref }}" >> "$GITHUB_OUTPUT"
+
+      - name: Upload .app artifact
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: ${{ steps.set-artifact-name.outputs.artifact-name }}
+          path: DerivedData/Build/Products/Debug-iphonesimulator/ownCloud.app
+          retention-days: 3
+          if-no-files-found: error
