@@ -1,0 +1,15 @@
+name: Test Build iOS App
+
+on:
+  workflow_dispatch:
+    inputs:
+      ios-app-ref:
+        description: 'Commit hash, tag, or branch of owncloud/ios-app to build'
+        required: true
+        type: string
+
+jobs:
+  call-build:
+    uses: owncloud/ios-scenario-testing/.github/workflows/build-ios-app.yml@technical/ci_adaption
+    with:
+      ios-app-ref: ${{ inputs.ios-app-ref }}
