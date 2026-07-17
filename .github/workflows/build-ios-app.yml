@@ -30,7 +30,7 @@ jobs:
 
     steps:
       - name: Checkout ios-app at requested ref
-        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd #v6.0.2
         with:
           repository: owncloud/ios-app
           ref: ${{ inputs.ios-app-ref }}
@@ -56,9 +56,9 @@ jobs:
           gsed -i '170,200d' ownCloud/Release\ Notes/ReleaseNotesHostViewController.swift
           grep -C 2 shouldShowReleaseNotes ownCloud/Release\ Notes/ReleaseNotesHostViewController.swift
 
-          gsed -i '144i OCConnectionAllowedAuthenticationMethodIDs      : @[ OCAuthenticationMethodIdentifierBasicAuth ],' ios-sdk/ownCloudSDK/Connection/OCConnection.m
-          gsed -i 's|self?\.expirationDate = \.now\.addingTimeInterval(24 \* 3600 \* 7)|self?.expirationDate = Calendar.current.date(byAdding: .day, value: 1, to: Calendar.current.startOfDay(for: .now))?.addingTimeInterval(-1)|' ownCloudAppShared/Client/Sharing/ShareViewController.swift
+          gsed -i '144c\    OCConnectionAllowedAuthenticationMethodIDs      : @[ OCAuthenticationMethodIdentifierBasicAuth ],' ios-sdk/ownCloudSDK/Connection/OCConnection.m
 
+          gsed -i 's|self?\.expirationDate = \.now\.addingTimeInterval(24 \* 3600 \* 7)|self?.expirationDate = Calendar.current.date(byAdding: .day, value: 1, to: Calendar.current.startOfDay(for: .now))?.addingTimeInterval(-1)|' ownCloudAppShared/Client/Sharing/ShareViewController.swift
           grep Calendar.current.startOfDay ownCloudAppShared/Client/Sharing/ShareViewController.swift
           gsed -i 's|self?.expirationDate = expirationDate.addingTimeInterval(7 \* 24 \* 60 \* 60)|self?.expirationDate = Calendar.current.date(byAdding: .day, value: 1, to: Calendar.current.startOfDay(for: .now))?.addingTimeInterval(-1)|' ownCloudAppShared/Client/Sharing/ShareViewController.swift
 
@@ -69,25 +69,95 @@ jobs:
             -project ownCloud.xcodeproj \
             -scheme ownCloud
 
-      - name: Build for simulator
+      - name: Set up derived data and build output folders
         run: |
-          xcrun xcodebuild clean build \
+          mkdir -p DerivedData
+
+      # Build the app for the iOS Simulator without code signing
+      - name: Build .app for Simulator (always compatible)
+        run: |
+          # Define paths
+          DERIVED_DATA="DerivedData"
+          CONFIGURATION="Debug"
+          APP_PATH="$DERIVED_DATA/Build/Products/$CONFIGURATION-iphonesimulator/ownCloud.app"
+          BIN="$APP_PATH/ownCloud"
+          # Build the app for simulator
+          xcodebuild \
             -project ownCloud.xcodeproj \
             -scheme ownCloud \
-            -configuration Debug \
+            -sdk iphonesimulator \
             -destination "generic/platform=iOS Simulator" \
-            OTHER_SWIFT_FLAGS="-no-explicit-module-build" \
-            -derivedDataPath DerivedData
+            -configuration $CONFIGURATION \
+            -derivedDataPath $DERIVED_DATA \
+            -skipPackagePluginValidation \
+            -skipMacroValidation \
+            ARCHS="x86_64 arm64" \
+            OTHER_SWIFT_FLAGS="-no-explicit-module-build"
+            build | tee build.log | xcpretty
+          # Verify binary exists
+          if [ ! -f "$BIN" ]; then
+            echo "❌ Binary not found at $BIN"
+            exit 1
+          fi
+          # Inspect binary architecture
+          echo "🔍 Inspecting binary architecture:"
+          file "$BIN"
+          ARCHS=$(lipo -info "$BIN" | sed 's/.*are: //; s/.*architecture: //')
+          echo "📦 Detected architectures: $ARCHS"
+          # Fail if not simulator-compatible
+          if echo "$ARCHS" | grep -qE "(x86_64|arm64)"; then
+            echo "✅ Binary includes simulator-compatible architecture."
+          else
+            echo "❌ Binary not compatible with iOS Simulator (expected x86_64 or arm64)."
+            exit 1
+          fi
+          # Prepare artifacts folder
+          ditto "$APP_PATH" "artifacts/ownCloud.app"
+          echo "✅ Artifacts ready in ./artifacts/ownCloud.app"
 
-      - name: Set artifact name
-        id: set-artifact-name
+      # Show the contents of the artifacts folder
+      - name: Show content of artifacts folder
         run: |
-          echo "artifact-name=owncloud-ios-app-${{ inputs.ios-app-ref }}" >> "$GITHUB_OUTPUT"
+          ls -al artifacts
+          du -sh artifacts/ownCloud.app
 
-      - name: Upload .app artifact
-        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+      # List the openssl.framework inside the app bundle and verify file types
+      - name: List openssl.framework content and file type
+        run: |
+          ls -l ./DerivedData/Build/Products/Debug-iphonesimulator/ownCloud.app/Frameworks/openssl.framework
+
+      # Zip the .app folder to upload as artifact
+      - name: Zip .app
+        run: |
+          echo "Zipping artifacts/ownCloud.app into ownCloud.app.zip"
+          ditto -c -k --sequesterRsrc --keepParent artifacts/ownCloud.app "ownCloud.app.zip"
+
+      # Upload the zipped .app as a GitHub Actions artifact
+      - name: Upload zipped .app
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a #v7.0.1
         with:
-          name: ${{ steps.set-artifact-name.outputs.artifact-name }}
-          path: DerivedData/Build/Products/Debug-iphonesimulator/ownCloud.app
-          retention-days: 3
-          if-no-files-found: error
+          name: ownCloud.app.zip
+          path: ownCloud.app.zip
+
+      # Zip the log as artifact
+      - name: Zip build log
+        if: always()
+        run: |
+          echo "Zipping build.log into build.log.zip"
+          ditto -c -k --sequesterRsrc build.log build.log.zip || true
+
+      # Upload the zipped log as a GitHub Actions artifact
+      - name: Upload zipped build log
+        if: always()
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a #v7.0.1
+        with:
+          name: build-log
+          path: build.log.zip
+
+      # Clean up temporary build directories, runs even if previous steps fail
+      - name: Clean build artifacts
+        if: always()
+        run: |
+          echo "Cleaning DerivedData and temporary files"
+          rm -rf DerivedData
+          echo "Cleaned."
