@@ -13,3 +13,8 @@ jobs:
     uses: owncloud/ios-scenario-testing/.github/workflows/build-ios-app.yml@technical/ci_adaption
     with:
       ios-app-ref: ${{ inputs.ios-app-ref }}
+
+  call-e2e-tests:
+    needs: call-build
+    uses: owncloud/ios-scenario-testing/.github/workflows/run-e2e-tests.yml@technical/ci_adaption
+    secrets: inherit
