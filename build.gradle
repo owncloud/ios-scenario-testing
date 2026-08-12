@@ -117,10 +117,7 @@ def configureCommonCucumberSystemProperties = { Test task ->
  * declare the compiled test classes and runtime classpath. Otherwise Gradle may
  * consider them NO-SOURCE and skip them, even when the Cucumber rerun file exists.
  */
-def configureCucumberTask = { Test task,
-                              String features,
-                              String jsonFileName,
-                              String rerunOutputFileName = null,
+def configureCucumberTask = { Test task, String features, String jsonFileName, String rerunOutputFileName = null,
                               boolean ignoreFailuresValue = false ->
 
     task.useJUnit()
@@ -133,6 +130,7 @@ def configureCucumberTask = { Test task,
      * explicitly prevents cucumberRerun1/cucumberRerun2 from being skipped as
      * NO-SOURCE after the main execution generates a rerun file.
      */
+    task.include '**/RunCucumberTest.class'
     task.testClassesDirs = sourceSets.test.output.classesDirs
     task.classpath = sourceSets.test.runtimeClasspath
 
@@ -176,7 +174,6 @@ def configureCucumberTask = { Test task,
  * - target/gradle-test-reports/main/index.html
  */
 test {
-    include '**/RunCucumberTest.class'
     doFirst {
         delete cucumberReportsDir
         delete gradleTestReportsDir
@@ -215,7 +212,7 @@ test {
  * - target/cucumber-reports/rerun/rerun-1.txt
  * - target/gradle-test-reports/rerun-1/index.html
  */
-task cucumberRerun1(type: Test) {
+tasks.register('cucumberRerun1', Test) {
     onlyIf {
         def rerunFile = file("${cucumberRerunDir}/rerun.txt")
         rerunFile.exists() && rerunFile.text.trim()
@@ -249,7 +246,7 @@ task cucumberRerun1(type: Test) {
  * - target/cucumber-reports/json/cucumber-rerun-2.json
  * - target/gradle-test-reports/rerun-2/index.html
  */
-task cucumberRerun2(type: Test) {
+tasks.register('cucumberRerun2', Test) {
     onlyIf {
         def rerunFile = file("${cucumberRerunDir}/rerun-1.txt")
         rerunFile.exists() && rerunFile.text.trim()
@@ -298,4 +295,6 @@ task cucumberRerun2(type: Test) {
 test.finalizedBy cucumberRerun1
 cucumberRerun1.finalizedBy cucumberRerun2
 
+cucumberRerun1.mustRunAfter test
+cucumberRerun2.mustRunAfter cucumberRerun1
 cucumberRerun2.mustRunAfter cucumberRerun1
