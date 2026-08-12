@@ -1,0 +1,123 @@
+name: Run E2E Tests
+
+on:
+  workflow_call:
+    inputs:
+      artifact-name:
+        description: 'Name of the artifact containing the .app bundle'
+        required: false
+        type: string
+        default: 'ownCloud.app.zip'
+      test-tags:
+        description: 'Cucumber tag expression to filter tests (e.g. @createfolder)'
+        required: false
+        type: string
+        default: '@createfolder'
+      backend:
+        description: 'Backend type: oCIS or oC10'
+        required: false
+        type: string
+        default: 'oCIS'
+      device-name:
+        description: 'iOS Simulator device name'
+        required: false
+        type: string
+        default: 'iPhone 17e'
+
+permissions:
+  contents: read
+
+jobs:
+  e2e-tests:
+    runs-on: macos-15
+
+    steps:
+      - name: Checkout ios-scenario-testing
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd #v6.0.2
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@ad2b38190b15e4d6bdf0c97fb4fca8412226d287 #v5.3.0
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+
+      - name: Select Xcode
+        run: sudo xcode-select -s /Applications/Xcode_26.3.app
+
+      - name: Download .app artifact
+        uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 #v4.3.0
+        with:
+          name: ${{ inputs.artifact-name }}
+
+      - name: Unzip .app to test resources
+        run: |
+          mkdir -p src/test/resources
+          ditto -x -k ownCloud.app.zip src/test/resources/
+          echo "App bundle placed at src/test/resources/ownCloud.app"
+          ls -la src/test/resources/
+
+      - name: Boot iOS Simulator
+        id: simulator
+        run: |
+          DEVICE_NAME="${{ inputs.device-name }}"
+          UDID=$(xcrun simctl list devices available | grep "$DEVICE_NAME" | head -1 | awk -F'[()]' '{print $2}')
+          if [ -z "$UDID" ]; then
+            echo "No simulator found matching '$DEVICE_NAME'"
+            xcrun simctl list devices available
+            exit 1
+          fi
+          echo "Booting simulator: $DEVICE_NAME ($UDID)"
+          xcrun simctl boot "$UDID" 2>/dev/null || true
+          xcrun simctl bootstatus "$UDID" -b
+          echo "udid=$UDID" >> $GITHUB_OUTPUT
+
+      - name: Install Appium and XCUITest driver
+        run: |
+          npm install -g appium
+          appium driver install xcuitest
+
+      - name: Start Appium server
+        run: |
+          appium --log appium.log &
+          for i in {1..30}; do
+            curl -sf http://127.0.0.1:4723/status && break || sleep 2
+          done
+
+      - name: Write local.properties
+        run: |
+          cat > local.properties << 'EOF'
+          appName=ownCloud.app
+          appiumURL=http\://127.0.0.1\:4723/
+          appPackage=com.owncloud.ios-app
+          userNameDefault=Alice
+          userToShare=Bob
+          pwdDefault=a
+          groupToShare=test
+          userAgent=ownCloudApp/12.7 (App/200; iOS/26.4; iPhone)
+          EOF
+          sed -i '' 's/^[[:space:]]*//' local.properties
+
+      - name: Run E2E tests
+        env:
+          OC_SERVER_URL: ${{ secrets.OC_SERVER_URL }}
+          UDID_DEVICE: ${{ steps.simulator.outputs.udid }}
+          APPIUM_URL: http://127.0.0.1:4723/
+          BACKEND: ${{ inputs.backend }}
+        run: ./executeTests -t "${{ inputs.test-tags }}"
+
+      - name: Upload test reports
+        if: always()
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a #v7.0.1
+        with:
+          name: test-reports
+          path: |
+            target/cucumber-reports/
+            target/gradle-test-reports/
+          retention-days: 30
+
+      - name: Upload Appium log
+        if: always()
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a #v7.0.1
+        with:
+          name: appium-log
+          path: appium.log
