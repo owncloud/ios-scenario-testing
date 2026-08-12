@@ -122,7 +122,7 @@ public class PublicLinkPage extends CommonPage {
             datePicker.click();
             nextMonth.click();
             waitById(expirationDay);
-            findId(expirationDay).click();
+            findXpath("//XCUIElementTypeStaticText[@name=\"" + expirationDay + "\"]").click();
         } else {
             //If the expiration date is set, remove it
             if (hasExpiration()){
