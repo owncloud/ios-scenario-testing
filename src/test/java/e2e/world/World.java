@@ -2,6 +2,11 @@ package e2e.world;
 
 import java.io.IOException;
 
+import e2e.api.FilesAPI;
+import e2e.api.GraphAPI;
+import e2e.api.ShareAPI;
+import e2e.api.TrashbinAPI;
+import e2e.assertions.FileListAssertions;
 import e2e.pages.AppiumManager;
 import e2e.pages.FileListPage;
 import e2e.pages.FolderPickerPage;
@@ -15,11 +20,10 @@ import e2e.pages.ShortcutPage;
 import e2e.pages.SpaceMembersPage;
 import e2e.pages.SpacesPage;
 import e2e.pages.UploadsPage;
+import e2e.preconditions.FileListPreconditions;
+import e2e.preconditions.LoginPreconditions;
+import e2e.tasks.FileListTasks;
 import io.appium.java_client.ios.IOSDriver;
-import e2e.api.FilesAPI;
-import e2e.api.GraphAPI;
-import e2e.api.ShareAPI;
-import e2e.api.TrashbinAPI;
 
 public class World {
 
@@ -43,6 +47,12 @@ public class World {
     private FilesAPI filesAPI;
     private GraphAPI graphAPI;
     private TrashbinAPI trashbinAPI;
+
+    private LoginPreconditions loginPreconditions;
+
+    private FileListPreconditions fileListPreconditions;
+    private FileListTasks fileListTasks;
+    private FileListAssertions fileListAssertions;
 
     public World() {
         this.driver = AppiumManager.getManager().getDriver();
@@ -159,5 +169,33 @@ public class World {
             trashbinAPI = new TrashbinAPI();
         }
         return trashbinAPI;
+    }
+
+    public LoginPreconditions loginPreconditions() {
+        if (loginPreconditions == null) {
+            loginPreconditions = new LoginPreconditions(this);
+        }
+        return loginPreconditions;
+    }
+
+    public FileListPreconditions fileListPreconditions() {
+        if (fileListPreconditions == null) {
+            fileListPreconditions = new FileListPreconditions(this);
+        }
+        return fileListPreconditions;
+    }
+
+    public FileListTasks fileListTasks() {
+        if (fileListTasks == null) {
+            fileListTasks = new FileListTasks(this);
+        }
+        return fileListTasks;
+    }
+
+    public FileListAssertions fileListAssertions() {
+        if (fileListAssertions == null) {
+            fileListAssertions = new FileListAssertions(this);
+        }
+        return fileListAssertions;
     }
 }
