@@ -1,0 +1,111 @@
+package e2e.pages;
+
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.PageFactory;
+
+import java.util.List;
+import java.util.logging.Level;
+
+import io.appium.java_client.ios.IOSDriver;
+import io.appium.java_client.pagefactory.AppiumFieldDecorator;
+import io.appium.java_client.pagefactory.iOSXCUITFindBy;
+import e2e.support.log.Log;
+
+public class LoginPage extends CommonPage {
+
+    @iOSXCUITFindBy(xpath = "//XCUIElementTypeButton[@name=\"Start setup\"]")
+    private List<WebElement> startSetup;
+
+    @iOSXCUITFindBy(xpath = "//XCUIElementTypeTextField[@name=\"Server URL\"]")
+    private List<WebElement> urlServer;
+
+    @iOSXCUITFindBy(xpath = "//XCUIElementTypeStaticText[@name=\"Proceed\"]")
+    private WebElement proceed;
+
+    @iOSXCUITFindBy(xpath = "//XCUIElementTypeStaticText[@name=\"Back\"]")
+    private WebElement back;
+
+    @iOSXCUITFindBy(accessibility = "Approve")
+    private List<WebElement> approveButton;
+
+    @iOSXCUITFindBy(accessibility = "Cancel")
+    private WebElement cancelButton;
+
+    @iOSXCUITFindBy(accessibility = "Server Username")
+    private WebElement usernameInput;
+
+    @iOSXCUITFindBy(accessibility = "Server Password")
+    private WebElement passwordInput;
+
+    @iOSXCUITFindBy(xpath = "//XCUIElementTypeStaticText[@name=\"Login\"]")
+    private WebElement login;
+
+    @iOSXCUITFindBy(xpath = "//XCUIElementTypeButton[@name=\"Done\"]")
+    private WebElement done;
+
+    @iOSXCUITFindBy(xpath = "//XCUIElementTypeStaticText[@name=\"Personal\"]")
+    private WebElement personal;
+
+    @iOSXCUITFindBy(xpath = "//XCUIElementTypeStaticText[@name=\"Files\"]")
+    private WebElement files;
+
+    private final String server = System.getProperty("server");
+
+    public LoginPage(IOSDriver driver) {
+        super(driver);
+        PageFactory.initElements(new AppiumFieldDecorator(driver), this);
+    }
+
+    public boolean loggedIn() {
+        if (startSetup.isEmpty()) {
+            Log.log(Level.FINE, "Logged IN");
+            return true;
+        } else {
+            Log.log(Level.FINE, "Logged OUT");
+            return false;
+        }
+    }
+
+    public void typeURL() {
+        Log.log(Level.FINE, "Starts: Type URL.");
+        urlServer.get(0).sendKeys(server);
+        proceed.click();
+        if (!approveButton.isEmpty()) {
+            approveIssue();
+        }
+    }
+
+    public void approveIssue() {
+        approveButton.get(0).click();
+    }
+
+    public void addAccount() {
+        startSetup.get(0).click();
+    }
+
+    public void typeCredentials(String username, String password) {
+        Log.log(Level.FINE, "Starts: Type credentials: username: "
+                + username + " - password: " + password);
+        usernameInput.sendKeys(username);
+        passwordInput.sendKeys(password);
+    }
+
+    public void submitLogin() {
+        Log.log(Level.FINE, "Starts: Submit login");
+        login.click();
+        done.click();
+    }
+
+    public void selectDrive() {
+        selectFirstBookmark();
+        if (System.getProperty("backend").equals("oCIS")) {
+            personal.click();
+        } else {
+            files.click();
+        }
+    }
+
+    public void selectFirstBookmark() {
+        findId("Alice").click();
+    }
+}
