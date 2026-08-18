@@ -1,3 +1,9 @@
+/**
+ * ownCloud iOS Scenario Tests
+ *
+ * @author Jesús Recio Rincón (@jesmrec)
+ */
+
 package e2e.steps;
 
 import java.util.logging.Level;
@@ -9,7 +15,7 @@ import e2e.support.log.StepLogger;
 
 public class SharesSteps {
 
-    private World world;
+    private final World world;
 
     public SharesSteps(World world) {
         this.world = world;
@@ -23,9 +29,9 @@ public class SharesSteps {
     @ParameterType("shared|reshared")
     public int sharelevel(String type) {
         if (type.equals("shared")) {
-            return 0; //share, first level
+            return 0;
         } else {
-            return 1; //reshare
+            return 1;
         }
     }
 
@@ -33,7 +39,6 @@ public class SharesSteps {
     public void item_already_shared(String sharingUser, int sharelevel, String type, String itemName,
                                     String userType, String recipientUser, String permissions) throws Throwable {
         StepLogger.logCurrentStep(Level.FINE);
-        world.shareAPI().createShare(sharingUser, itemName, recipientUser, "0",
-                world.sharePage().translatePermissionsToInt(permissions), "", "", sharelevel);
+        world.sharesPreconditions().itemAlreadyShared(sharingUser, sharelevel, itemName, recipientUser, permissions);
     }
 }
