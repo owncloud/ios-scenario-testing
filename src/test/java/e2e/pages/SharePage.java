@@ -4,16 +4,12 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 import java.util.logging.Level;
 
 import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import io.appium.java_client.pagefactory.iOSXCUITFindBy;
-import e2e.support.date.DateUtils;
-import e2e.model.OCShare;
 import e2e.support.log.Log;
 
 public class SharePage extends CommonPage {
@@ -83,97 +79,6 @@ public class SharePage extends CommonPage {
         createLinkButton.click();
     }
 
-    public boolean checkCorrectShare(OCShare remoteShare, Map<String, String> dataList) {
-        Log.log(Level.FINE, "Starts: Check correct share");
-        for (Map.Entry<String, String> entry : dataList.entrySet()) {
-            Log.log(Level.FINE, "Entry KEY: " + entry.getKey() + " - VALUE: " + entry.getValue());
-            switch (entry.getKey()) {
-                case "id" -> {
-                    if (!remoteShare.getId().equalsIgnoreCase(entry.getValue())) {
-                        Log.log(Level.FINE, "ID does not match - Remote: " + remoteShare.getId()
-                                + " - Expected: " + entry.getValue());
-                        return false;
-                    }
-                }
-                case "group", "user" -> {
-                    if (remoteShare.getType().equals("0")) { // private share
-                        if (!remoteShare.getShareeName().equalsIgnoreCase(entry.getValue())) {
-                            Log.log(Level.FINE, "Sharee does not match - Remote: " + remoteShare.getShareeName()
-                                    + " - Expected: " + entry.getValue());
-                            return false;
-                        }
-                    }
-                }
-                case "password" -> {
-                    if (!(remoteShare.getType().equals("3") && remoteShare.hasPassword())
-                            && !entry.getValue().equals("\"\"")) {
-                        Log.log(Level.FINE, "Password not present");
-                        return false;
-                    }
-                }
-                case "name" -> {
-                    if (!remoteShare.getLinkName().equals(entry.getValue())) {
-                        Log.log(Level.FINE, "Item name does not match - Remote: " + remoteShare.getLinkName()
-                                + " - Expected: " + entry.getValue());
-                        return false;
-                    }
-                }
-                case "path" -> {
-                    if (!remoteShare.getItemName().equals(entry.getValue())) {
-                        Log.log(Level.FINE, "Item path does not match - Remote: " + remoteShare.getItemName()
-                                + " - Expected: " + entry.getValue());
-                        return false;
-                    }
-                }
-                case "uid_owner" -> {
-                    if (!remoteShare.getOwner().equalsIgnoreCase(entry.getValue())) {
-                        Log.log(Level.FINE, "Owner name does not match - Remote: " + remoteShare.getOwner()
-                                + " - Expected: " + entry.getValue());
-                        return false;
-                    }
-                }
-                case "permission" -> {
-                    if (!translatePermissionstoString(remoteShare.getPermissions()).equals(entry.getValue())) {
-                        Log.log(Level.FINE, translatePermissionstoString(remoteShare.getPermissions()) + " " + entry.getValue());
-                        Log.log(Level.FINE, "Permissions do not match - Remote: " + translatePermissionstoString(remoteShare.getPermissions())
-                                + " - Expected: " + entry.getValue());
-                        return false;
-                    }
-                }
-                case "expiration" -> {
-                    String expirationDay = entry.getValue();
-                    Log.log(Level.FINE, "Checking remote expiration: Get day: " + expirationDay);
-                    if (!expirationDay.equals("0")) {
-                        //First, preparing the remote date
-                        String remoteDate = remoteShare.getExpiration();
-                        Log.log(Level.FINE, "Expiration date remote: " + remoteShare.getExpiration());
-                        //Get the timestamp creation, that was some instants before and will
-                        //help to build the correct date to compare
-                        String timestamp = remoteDate.substring(11);
-                        String remoteDateTZ = DateUtils.getCorrectTZ(remoteDate);
-                        Log.log(Level.FINE, "Expiration date remote moved to TZ: " + remoteDateTZ);
-                        //Second, preparing the local date
-                        String localDate = DateUtils.dateInDaysWithServerFormat(
-                                Integer.valueOf(entry.getValue()), timestamp);
-                        Log.log(Level.FINE, "Expiration dates: Remote: " + remoteDateTZ
-                                + " - Local: " + localDate);
-                        if (!remoteDateTZ.equals(localDate)) {
-                            Log.log(Level.FINE, "Expiration dates do not match");
-                            return false;
-                        }
-                    } else {
-                        if (remoteShare.getExpiration() != null && !remoteShare.getExpiration().isEmpty()) {
-                            Log.log(Level.FINE, "Expiration date not expected " + remoteShare.getExpiration());
-                            return false;
-                        }
-                    }
-                }
-            }
-        }
-        Log.log(Level.FINE, "All fields match. Returning true");
-        return true;
-    }
-
     public boolean isItemInListLinks(String linkName) {
         Log.log(Level.FINE, "Starts: link in list");
         return !findLinkByName().isEmpty();
@@ -209,35 +114,4 @@ public class SharePage extends CommonPage {
         };
     }
 
-    //Permissions from server come in numeric format. This method translates
-    private String translatePermissionstoString(String permission) {
-        Log.log(Level.FINE, "Permission to translate: " + permission);
-        return switch (permission) {
-            case "1" -> "Viewer";
-            case "3" -> "Editor";
-            case "15" -> "Editor";
-            case "4" -> "Secret";
-            case "5" -> "Contributor";
-            default -> "";
-        };
-    }
-
-    public String translatePermissionsToInt(String permission) {
-        Log.log(Level.FINE, "Permission to translate: " + permission);
-        return switch (permission) {
-            case "Viewer" -> "17";
-            case "Editor" -> "15";
-            case "Uploader" -> "4";
-            case "Contributor" -> "5";
-            default -> "";
-        };
-    }
-
-    private HashMap<String, String> turnListToHashmap(List<List<String>> dataList) {
-        HashMap<String, String> mapFields = new HashMap<String, String>();
-        for (List<String> rows : dataList) {
-            mapFields.put(rows.get(0), rows.get(1));
-        }
-        return mapFields;
-    }
 }

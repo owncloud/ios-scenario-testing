@@ -10,12 +10,9 @@ import java.util.logging.LogRecord;
 import java.util.logging.Logger;
 import java.util.logging.SimpleFormatter;
 
-import e2e.pages.SharePage;
-
 public class Log {
 
-    static Logger Log = Logger.getLogger(SharePage.class.getName());
-    //static private Handler consoleHandler = null;
+    static Logger Log = Logger.getLogger(Log.class.getName());
     static Handler fileHandler = null;
 
     public static void init() {

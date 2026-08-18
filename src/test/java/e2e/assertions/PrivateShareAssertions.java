@@ -13,6 +13,7 @@ import java.util.Map;
 import java.util.logging.Level;
 
 import e2e.model.OCShare;
+import e2e.support.shares.ShareUtils;
 import e2e.support.log.Log;
 import e2e.world.World;
 
@@ -76,7 +77,7 @@ public class PrivateShareAssertions {
             }
         }
         OCShare share = world.shareAPI().getShare(itemName);
-        assertTrue(world.sharePage().checkCorrectShare(share, fields));
+        assertTrue(ShareUtils.checkCorrectShare(share, fields));
     }
 
     public void shareIsDeleted(String sharee) {

@@ -18,6 +18,7 @@ import java.util.Map;
 import javax.xml.parsers.ParserConfigurationException;
 
 import e2e.model.OCShare;
+import e2e.support.shares.ShareUtils;
 import e2e.world.World;
 
 public class PublicLinkAssertions {
@@ -47,7 +48,7 @@ public class PublicLinkAssertions {
             }
         }
         OCShare share = world.shareAPI().getShare(itemName);
-        assertTrue(world.sharePage().checkCorrectShare(share, fields));
+        assertTrue(ShareUtils.checkCorrectShare(share, fields));
     }
 
     public void linkNotExisting(String itemName)

@@ -45,11 +45,11 @@ public class CommonPage {
     @iOSXCUITFindBy(id = "Allow")
     protected List<WebElement> allow;
 
-    protected static IOSDriver driver;
-    protected static Actions actions;
+    protected IOSDriver driver;
+    protected Actions actions;
     private static final SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMdd_HHmmss");
     protected static final int WAIT_TIME = 10;
-    protected static WebDriverWait wait;
+    protected WebDriverWait wait;
 
     public CommonPage(IOSDriver driver) {
         this.driver = driver;
@@ -57,15 +57,15 @@ public class CommonPage {
         wait = new WebDriverWait(driver, Duration.ofSeconds(WAIT_TIME));
     }
 
-    public static void waitByXpath(String resourceXpath) {
+    public void waitByXpath(String resourceXpath) {
         wait.until(ExpectedConditions.visibilityOfElementLocated(AppiumBy.xpath(resourceXpath)));
     }
 
-    public static void waitById(String resourceId) {
+    public void waitById(String resourceId) {
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.id(resourceId)));
     }
 
-    public static void waitByIdInvisible(String resourceId) {
+    public void waitByIdInvisible(String resourceId) {
         wait.until(ExpectedConditions.invisibilityOfElementLocated(By.id(resourceId)));
     }
 
@@ -109,7 +109,7 @@ public class CommonPage {
         ));
     }
 
-    public static void swipe(double startx, double starty, double endx, double endy) {
+    public void swipe(double startx, double starty, double endx, double endy) {
         Dimension size = driver.manage().window().getSize();
         int startY = (int) (size.height * starty);
         int endY = (int) (size.height * endy);
@@ -232,7 +232,7 @@ public class CommonPage {
         driver.activateApp("com.owncloud.ios-app");
     }
 
-    public static void takeScreenshot(String name) {
+    public void takeScreenshot(String name) {
         try {
             String sd = sdf.format(new Timestamp(System.currentTimeMillis()).getTime());
             File screenShotFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
@@ -243,14 +243,14 @@ public class CommonPage {
         }
     }
 
-    public static void startRecording() {
+    public void startRecording() {
         IOSStartScreenRecordingOptions iOSStartScreenRecordingOptions =
                 new IOSStartScreenRecordingOptions()
                         .withVideoQuality(VideoQuality.MEDIUM);
         driver.startRecordingScreen(iOSStartScreenRecordingOptions);
     }
 
-    public static void stopRecording(String filename) {
+    public void stopRecording(String filename) {
         String base64String = driver.stopRecordingScreen();
         byte[] data = Base64.decodeBase64(base64String);
         String destinationPath = "video/" + filename + "_" +

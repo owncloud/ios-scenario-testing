@@ -6,6 +6,7 @@
 
 package e2e.preconditions;
 
+import e2e.support.shares.ShareUtils;
 import e2e.world.World;
 
 public class SharesPreconditions {
@@ -19,6 +20,6 @@ public class SharesPreconditions {
     public void itemAlreadyShared(String sharingUser, int sharelevel, String itemName,
                                   String recipientUser, String permissions) throws Throwable {
         world.shareAPI().createShare(sharingUser, itemName, recipientUser, "0",
-                world.sharePage().translatePermissionsToInt(permissions), "", "", sharelevel);
+                ShareUtils.permissionToInt(permissions), "", "", sharelevel);
     }
 }
