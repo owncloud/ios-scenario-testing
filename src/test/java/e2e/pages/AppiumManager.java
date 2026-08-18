@@ -1,6 +1,6 @@
 /******
  *
- * ownCloud Android Scenario Tests
+ * ownCloud iOS Scenario Tests
  *
  * @author Jesús Recio Rincón (@jesmrec)
  *
@@ -10,8 +10,6 @@
 
 package e2e.pages;
 
-import org.openqa.selenium.remote.DesiredCapabilities;
-
 import java.io.File;
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -19,6 +17,7 @@ import java.time.Duration;
 import java.util.logging.Level;
 
 import io.appium.java_client.ios.IOSDriver;
+import io.appium.java_client.ios.options.XCUITestOptions;
 import io.appium.java_client.remote.AutomationName;
 import utils.LocProperties;
 import e2e.support.log.Log;
@@ -41,16 +40,15 @@ public class AppiumManager {
         File appDir = new File(rootPath, "src/test/resources");
         app = new File(appDir, LocProperties.getProperties().getProperty("appName"));
 
-        DesiredCapabilities capabilities = new DesiredCapabilities();
-        setCapabilities(capabilities);
+        XCUITestOptions options = buildOptions();
 
         try {
             if (!driverURL.isEmpty()) {
                 Log.log(Level.FINE, "Appium driver located in: " + driverURL);
-                driver = new IOSDriver(new URL(driverURL), capabilities);
+                driver = new IOSDriver(new URL(driverURL), options);
             } else {
                 Log.log(Level.FINE, "Appium driver located in: " + driverDefect);
-                driver = new IOSDriver(new URL(driverDefect), capabilities);
+                driver = new IOSDriver(new URL(driverDefect), options);
             }
         } catch (MalformedURLException e) {
             Log.log(Level.SEVERE, "Driver could not be created: " + e.getMessage());
@@ -71,38 +69,27 @@ public class AppiumManager {
     }
 
     //Check https://appium.github.io/appium-xcuitest-driver/latest/reference/capabilities/
-    private static void setCapabilities(DesiredCapabilities capabilities) {
-
-        capabilities.setCapability("appium:platformName", "IOS");
+    private static XCUITestOptions buildOptions() {
+        XCUITestOptions options = new XCUITestOptions();
 
         if (System.getProperty("device") != null && !System.getProperty("device").isEmpty()) {
-            capabilities.setCapability("appium:deviceName", System.getProperty("device"));
+            options.setDeviceName(System.getProperty("device"));
         } else {
-            capabilities.setCapability("appium:deviceName", "iPhone 17e");
+            options.setDeviceName("iPhone 17e");
         }
 
-        capabilities.setCapability("appium:udid", System.getProperty("udid"));
+        options.setUdid(System.getProperty("udid"));
+        options.setApp(app.getAbsolutePath());
+        options.setAutomationName(AutomationName.IOS_XCUI_TEST);
+        options.setShowXcodeLog(true);
+        options.setFullReset(false);
+        options.setNoReset(false);
+        options.setNewCommandTimeout(Duration.ofSeconds(60));
+        options.setCapability("appium:commandTimeouts", 5000);
+        options.setPlatformVersion("26.4");
+        options.setCapability("appium:useNewWDA", false);
+        options.setCapability("appium:autoFillPasswords", false);
 
-        capabilities.setCapability("appium:app", app.getAbsolutePath());
-
-        capabilities.setCapability("appium:automationName", AutomationName.IOS_XCUI_TEST);
-
-        capabilities.setCapability("appium:showXcodeLog", true);
-
-        //The following capabilities prevents reinstalling the app every test.
-        capabilities.setCapability("appium:fullReset", false);
-
-        capabilities.setCapability("appium:noReset", false);
-
-        capabilities.setCapability("appium:newCommandTimeout", 60);
-
-        capabilities.setCapability("appium:commandTimeouts", 5000);
-
-        capabilities.setCapability("appium:platformVersion", "26.4");
-
-        capabilities.setCapability("appium:useNewWDA", false);
-
-        capabilities.setCapability("appium:autoFillPasswords", false);
-
+        return options;
     }
 }

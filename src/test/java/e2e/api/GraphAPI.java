@@ -44,10 +44,11 @@ public class GraphAPI extends CommonAPI {
 
     private RequestBody createBodySpace(String name, String description) {
         Log.log(Level.FINE, "BODY SPACE: Name: " + name + " . Description: " + description);
-        String json = "{\"name\":\" " + name + " \",\"driveType\":\"project\", \"description\":\" " + description + " \"}";
-        MediaType JSON = MediaType.parse("application/json; charset=utf-8");
-        RequestBody body = RequestBody.create(JSON, json);
-        return body;
+        JSONObject jsonObj = new JSONObject();
+        jsonObj.put("name", name);
+        jsonObj.put("driveType", "project");
+        jsonObj.put("description", description);
+        return RequestBody.create(JSON, jsonObj.toString());
     }
 
     public List<OCSpace> getMySpaces() throws IOException {
@@ -76,12 +77,12 @@ public class GraphAPI extends CommonAPI {
         for (OCSpace space : spacesOfUser) {
             String url = urlServer + graphPath + drives + space.getId();
             Log.log(Level.FINE, "URL remove space: " + url);
-            //First, disable
-            Request requestDisable = deleteRequest(url, user);
-            httpClient.newCall(requestDisable).execute();
-            //Then, delete
-            Request requestDelete = deleteSpaceRequest(url);
-            httpClient.newCall(requestDelete).execute();
+            try (Response disableResponse = httpClient.newCall(deleteRequest(url, user)).execute()) {
+                Log.log(Level.FINE, "Disable response: " + disableResponse.code());
+            }
+            try (Response deleteResponse = httpClient.newCall(deleteSpaceRequest(url)).execute()) {
+                Log.log(Level.FINE, "Delete response: " + deleteResponse.code());
+            }
         }
     }
 
@@ -202,28 +203,19 @@ public class GraphAPI extends CommonAPI {
         boolean hasExpiration = expirationDate != null && !expirationDate.trim().isEmpty();
         String url = urlServer + members + spaceId + "/root/invite";
         Log.log(Level.FINE, "URL: " + url);
-        StringBuilder jsonBuilder = new StringBuilder();
-        jsonBuilder.append("{");
+        JSONObject recipient = new JSONObject();
+        recipient.put("@libre.graph.recipient.type", "user");
+        recipient.put("objectId", userId);
+        JSONObject jsonObj = new JSONObject();
         if (hasExpiration) {
             String expirationFormatted = DateUtils.daysToUTCForExpiration(expirationDate);
             Log.log(Level.FINE, "Formatted date: " + expirationFormatted);
-            jsonBuilder.append("\"expirationDateTime\": \"")
-                    .append(expirationFormatted)
-                    .append("\",");
+            jsonObj.put("expirationDateTime", expirationFormatted);
         }
-        jsonBuilder.append("\"recipients\": [")
-                .append("  {")
-                .append("    \"@libre.graph.recipient.type\": \"user\",")
-                .append("    \"objectId\": \"").append(userId).append("\"")
-                .append("  }")
-                .append("],")
-                .append("\"roles\": [")
-                .append("  \"").append(permissionId).append("\"")
-                .append("]")
-                .append("}");
-        String json = jsonBuilder.toString();
-        Log.log(Level.FINE, "Body: " + json);
-        RequestBody body = RequestBody.create(JSON, json);
+        jsonObj.put("recipients", new JSONArray().put(recipient));
+        jsonObj.put("roles", new JSONArray().put(permissionId));
+        Log.log(Level.FINE, "Body: " + jsonObj);
+        RequestBody body = RequestBody.create(JSON, jsonObj.toString());
         Request request = postRequest(url, body, "Alice");
         Response response = httpClient.newCall(request).execute();
         Log.log(Level.FINE, "Response Code: " + response.code());

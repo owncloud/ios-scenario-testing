@@ -7,31 +7,24 @@ import java.time.ZoneOffset;
 import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
-import java.util.Calendar;
-import java.util.GregorianCalendar;
 import java.util.logging.Level;
 
 import e2e.support.log.Log;
 
 public class DateUtils {
 
-    //Received the day of the following month in which it expiration date is set
     public static String dateInDaysWithServerFormat(int days, String timestamp) {
         Log.log(Level.FINE, "Starts: Turns days in date with server response format");
-        int year = todayYear();
-        int month = todayMonth();
-        GregorianCalendar gregorianCalendar = new GregorianCalendar(year, month +1, days);
-        Log.log(Level.FINE, "Date to format: " + gregorianCalendar.getTime());
-        String dateFormat = gregorianCalendar.get(Calendar.YEAR)
-                + "-" + formatInt(gregorianCalendar.get(Calendar.MONTH))
-                + "-" + formatInt(gregorianCalendar.get(Calendar.DAY_OF_MONTH));
-        String dateToTz = dateFormat + "T"+ timestamp;
+        LocalDate date = LocalDate.now().plusMonths(1).withDayOfMonth(days);
+        String dateFormat = date.getYear()
+                + "-" + String.format("%02d", date.getMonthValue())
+                + "-" + String.format("%02d", date.getDayOfMonth());
+        String dateToTz = dateFormat + "T" + timestamp;
         Log.log(Level.FINE, "Date formatted: " + dateToTz);
         return getCorrectTZ(dateToTz);
     }
 
     public static String displayedDate(String day) {
-        //By default, datepicker gets 7 days later than today.
         ZoneId zone = ZoneId.of("UTC");
         ZonedDateTime nowUtc = ZonedDateTime.now(zone);
         LocalDate today = nowUtc.toLocalDate();
@@ -46,10 +39,8 @@ public class DateUtils {
         return formattedDay + "/" + formattedMonth + "/" + year;
     }
 
-    //Builds the string with the current time, moved to UTC (used in shares)
     public static String getCorrectTZ(String date) {
         ZonedDateTime localDateTime = parseToInstantUTC(date).atZone(ZoneId.systemDefault());
-        //Set as string
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
         String dateFormat = localDateTime.format(formatter);
         Log.log(Level.FINE, "From " + date  + " to " + dateFormat);
@@ -62,23 +53,12 @@ public class DateUtils {
         return date.format(formatter);
     }
 
-    //Takes care of correct UTC format
     public static Instant parseToInstantUTC(String date) {
         String dateUTC = date.replace(" ", "T");
         if (!dateUTC.endsWith("Z")) {
             dateUTC += "Z";
         }
         return Instant.parse(dateUTC);
-    }
-
-    private static String formatInt(int dateNumber) {
-        String day;
-        if (dateNumber < 10) {
-            day = "0" + dateNumber;
-        } else {
-            day = String.valueOf(dateNumber);
-        }
-        return day;
     }
 
     public static int daysOfMonth(int month, int year) {
@@ -95,31 +75,24 @@ public class DateUtils {
     }
 
     public static int todayDay() {
-        GregorianCalendar gregorianCalendar = new GregorianCalendar();
-        return gregorianCalendar.get(Calendar.DAY_OF_MONTH);
+        return LocalDate.now().getDayOfMonth();
     }
 
     public static int todayMonth() {
-        GregorianCalendar gregorianCalendar = new GregorianCalendar();
-        return gregorianCalendar.get(Calendar.MONTH) + 1;
+        return LocalDate.now().getMonthValue();
     }
 
     public static int todayYear() {
-        GregorianCalendar gregorianCalendar = new GregorianCalendar();
-        return gregorianCalendar.get(Calendar.YEAR);
+        return LocalDate.now().getYear();
     }
 
-    public static String daysToUTCForExpiration (String day){
+    public static String daysToUTCForExpiration(String day) {
         int targetDay = Integer.parseInt(day.trim());
-
         ZonedDateTime now = ZonedDateTime.now(ZoneOffset.UTC);
         ZonedDateTime nextMonthDate = now
                 .plusMonths(1)
                 .withDayOfMonth(targetDay)
                 .truncatedTo(ChronoUnit.DAYS);
-
         return DateTimeFormatter.ISO_INSTANT.format(nextMonthDate.toInstant());
     }
-
 }
-

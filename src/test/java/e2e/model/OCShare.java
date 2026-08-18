@@ -56,7 +56,7 @@ public class OCShare {
     }
 
     public boolean hasPassword() {
-        return type.equals("3") && shareeName != "" && shareeName != null;
+        return type.equals("3") && shareeName != null && !shareeName.isEmpty();
     }
 
     public String getItemName() {

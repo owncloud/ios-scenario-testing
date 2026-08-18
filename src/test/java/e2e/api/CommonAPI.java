@@ -79,20 +79,18 @@ public class CommonAPI {
     }
 
     public String getEndpoint(String userName) {
-        String endpoint;
         if (isOCIS) {
-            endpoint = spacesEndpoint + personalSpaces.get(userName);
+            return spacesEndpoint + personalSpaces.get(userName);
         } else {
-            endpoint = davEndpoint = webdavEndpoint + "/" + user;
+            return webdavEndpoint + "/" + user;
         }
-        return endpoint;
     }
 
     public String getEndpoint() {
         if (isOCIS) {
             return spacesEndpoint + personalSpaces.get("Alice");
         } else {
-            return davEndpoint = webdavEndpoint + "/" + user;
+            return webdavEndpoint + "/" + user;
         }
     }
 

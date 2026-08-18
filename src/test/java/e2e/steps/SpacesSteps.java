@@ -106,14 +106,14 @@ public class SpacesSteps {
     }
 
     @Then("Alice should{typePosNeg} see the following spaces")
-    public void user_should_see_following_spaces(String sense, DataTable table) throws InterruptedException {
+    public void user_should_see_following_spaces(String sense, DataTable table) {
         StepLogger.logCurrentStep(Level.FINE);
         List<Map<String, String>> rows = table.asMaps(String.class, String.class);
         world.spacesAssertions().shouldSeeFollowingSpaces(sense, rows);
     }
 
     @Then("Alice should see the following spaces in the list of disabled spaces")
-    public void space_in_disabled_list(DataTable table) throws InterruptedException {
+    public void space_in_disabled_list(DataTable table) {
         StepLogger.logCurrentStep(Level.FINE);
         List<Map<String, String>> rows = table.asMaps(String.class, String.class);
         world.spacesAssertions().spaceInDisabledList(rows);

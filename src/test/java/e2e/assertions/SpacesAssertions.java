@@ -26,7 +26,7 @@ public class SpacesAssertions {
         this.world = world;
     }
 
-    public void shouldSeeFollowingSpaces(String sense, List<Map<String, String>> rows) throws InterruptedException {
+    public void shouldSeeFollowingSpaces(String sense, List<Map<String, String>> rows) {
         for (Map<String, String> row : rows) {
             String name = row.get("name");
             String subtitle = row.get("subtitle") != null ? row.get("subtitle") : "";
@@ -38,7 +38,7 @@ public class SpacesAssertions {
         }
     }
 
-    public void spaceInDisabledList(List<Map<String, String>> rows) throws InterruptedException {
+    public void spaceInDisabledList(List<Map<String, String>> rows) {
         for (Map<String, String> row : rows) {
             String name = row.get("name");
             String subtitle = row.get("subtitle") != null ? row.get("subtitle") : "";

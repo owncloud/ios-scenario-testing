@@ -1,5 +1,6 @@
 package e2e.pages;
 
+import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
@@ -124,24 +125,22 @@ public class SpacesPage extends CommonPage {
         hideDisabledSpacesAction.click();
     }
 
-    public boolean isSpaceInDisabledList(String name, String subtitle) throws InterruptedException {
+    public boolean isSpaceInDisabledList(String name, String subtitle) {
         Log.log(Level.FINE, "Starts: check space" + name + "is in disabled list");
         showDisabledSpaces();
         boolean disabledText = findTextByXpath("Disabled").isDisplayed();
         return disabledText && isSpaceVisible(name, subtitle);
     }
 
-    public boolean isSpaceVisible(String name, String subtitle) throws InterruptedException {
+    public boolean isSpaceVisible(String name, String subtitle) {
         Log.log(Level.FINE, "Starts: check " + name + " space are visible");
-        //Ugly waiter because space list refreshes randomly
-        Thread.sleep(5000);
-        Log.log(Level.FINE, "Space name: " + name + " Space description: " + subtitle);
-        if (findListId(name).isEmpty() && findListId(subtitle).isEmpty()){
-            Log.log(Level.FINE, "Space not found");
-            return false;
-        } else {
-            Log.log(Level.FINE, "Space found");
+        try {
+            wait.until(d -> !findListId(name).isEmpty() || !findListId(subtitle).isEmpty());
+            Log.log(Level.FINE, "Space found: " + name);
             return true;
+        } catch (TimeoutException e) {
+            Log.log(Level.FINE, "Space not found: " + name);
+            return false;
         }
     }
 

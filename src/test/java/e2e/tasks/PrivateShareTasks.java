@@ -38,8 +38,8 @@ public class PrivateShareTasks {
                 case "permissions" -> world.privateSharePage().setPermissions(entry.getValue());
                 case "expiration" -> world.privateSharePage().setExpiration(entry.getValue());
             }
-            world.privateSharePage().saveChanges();
         }
+        world.privateSharePage().saveChanges();
     }
 
     public void deleteShare(String sharee) {

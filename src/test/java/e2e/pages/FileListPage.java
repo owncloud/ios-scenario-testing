@@ -302,8 +302,7 @@ public class FileListPage extends CommonPage {
 
     public void selectItemListActions(String itemName) {
         Log.log(Level.FINE, "Starts: select actions item from list: " + itemName);
-        String name = itemName;
-        name = browseTo(itemName);
+        String name = browseTo(itemName);
         openCard(name);
     }
 
@@ -351,14 +350,7 @@ public class FileListPage extends CommonPage {
 
     public boolean isItemOpened(String itemType, String itemName) {
         Log.log(Level.FINE, "Starts: checking if item is opened: " + itemType + " " + itemName);
-        if (itemType.equals("file")) {
-            Log.log(Level.FINE, "Opening file");
-            return findId(itemName).isDisplayed();
-        } else if (itemType.equals("folder")) {
-            Log.log(Level.FINE, "Opening folder");
-            return findId(itemName).isDisplayed();
-        }
-        return false;
+        return findId(itemName).isDisplayed();
     }
 
     public boolean isExternalApp() {
