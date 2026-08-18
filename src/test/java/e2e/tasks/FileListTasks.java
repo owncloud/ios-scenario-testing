@@ -43,12 +43,10 @@ public class FileListTasks {
     public void openPrivateLinkShared(String fileName, String scheme)
             throws IOException, ParserConfigurationException, SAXException {
         ArrayList<OCFile> listShared = world.filesAPI().listShared();
-        OCFile item = null;
-        for (OCFile ocFile : listShared) {
-            if (ocFile.getName().equals(fileName)) {
-                item = ocFile;
-            }
-        }
+        OCFile item = listShared.stream()
+                .filter(f -> f.getName().equals(fileName))
+                .findFirst()
+                .orElseThrow(() -> new IllegalStateException("File not found in shared list: " + fileName));
         String privateLink = world.fileListPage().getPrivateLink(scheme, item.getPrivateLink());
         world.fileListPage().openPrivateLink(privateLink);
     }

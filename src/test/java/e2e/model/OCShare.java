@@ -4,7 +4,7 @@ public class OCShare {
 
     private String id;
     private String owner;
-    private String type;
+    private ShareType type;
     private String itemName;
     private String shareeName;
     private String linkName;
@@ -31,12 +31,12 @@ public class OCShare {
         this.owner = owner;
     }
 
-    public String getType() {
+    public ShareType getType() {
         return type;
     }
 
     public void setType(String type) {
-        this.type = type;
+        this.type = ShareType.from(type);
     }
 
     public String getLinkName() {
@@ -56,7 +56,7 @@ public class OCShare {
     }
 
     public boolean hasPassword() {
-        return type.equals("3") && shareeName != null && !shareeName.isEmpty();
+        return type == ShareType.PUBLIC_LINK && shareeName != null && !shareeName.isEmpty();
     }
 
     public String getItemName() {

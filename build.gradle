@@ -263,4 +263,3 @@ cucumberRerun1.finalizedBy cucumberRerun2
 
 cucumberRerun1.mustRunAfter test
 cucumberRerun2.mustRunAfter cucumberRerun1
-cucumberRerun2.mustRunAfter cucumberRerun1

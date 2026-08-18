@@ -50,16 +50,10 @@ public class SpacesAssertions {
         String name = fields.get("name");
         String subtitle = fields.get("subtitle") != null ? fields.get("subtitle") : "";
         List<OCSpace> spaces = world.graphAPI().getMySpaces();
-        boolean matches = true;
-        for (OCSpace space : spaces) {
-            Log.log(Level.FINE, "Space in server: " + space.getName() + " " + space.getDescription());
-            Log.log(Level.FINE, "Space in scenario: " + name + " " + subtitle);
-            if (!(space.getName().equals(name) && space.getDescription().equals(subtitle))) {
-                matches = false;
-                break;
-            }
-        }
-        assertTrue(matches);
+        Log.log(Level.FINE, "Looking for space — name: " + name + " subtitle: " + subtitle);
+        boolean found = spaces.stream()
+                .anyMatch(s -> s.getName().equals(name) && s.getDescription().equals(subtitle));
+        assertTrue(found);
     }
 
     public void spacesDisabledInServer(Map<String, String> fields) throws IOException {

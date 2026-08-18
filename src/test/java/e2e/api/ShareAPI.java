@@ -18,6 +18,7 @@ import okhttp3.RequestBody;
 import okhttp3.Response;
 import utils.LocProperties;
 import e2e.model.OCShare;
+import e2e.model.ShareType;
 import e2e.support.log.Log;
 import e2e.support.parser.ShareSAXHandler;
 
@@ -87,7 +88,7 @@ public class ShareAPI extends CommonAPI {
         ArrayList<OCShare> shares = getSharesFromRequest(response.body().string());
         ArrayList<OCShare> linksInShares = new ArrayList<>();
         for (OCShare linkInShare : shares) {
-            if (linkInShare.getType().equals("3")) {
+            if (linkInShare.getType() == ShareType.PUBLIC_LINK) {
                 linksInShares.add(linkInShare);
             }
         }

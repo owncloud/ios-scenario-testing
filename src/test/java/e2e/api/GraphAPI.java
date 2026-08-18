@@ -36,10 +36,10 @@ public class GraphAPI extends CommonAPI {
         String url = urlServer + graphPath + drives;
         Log.log(Level.FINE, "URL: " + url);
         Request request = postRequest(url, createBodySpace(name, description), userName);
-        Response response = httpClient.newCall(request).execute();
-        Log.log(Level.FINE, "Response Code: " + response.code());
-        Log.log(Level.FINE, "Response Body: " + response.body().string());
-        response.close();
+        try (Response response = httpClient.newCall(request).execute()) {
+            Log.log(Level.FINE, "Response Code: " + response.code());
+            Log.log(Level.FINE, "Response Body: " + response.body().string());
+        }
     }
 
     private RequestBody createBodySpace(String name, String description) {
@@ -55,20 +55,18 @@ public class GraphAPI extends CommonAPI {
         Log.log(Level.FINE, "GET my SPACES");
         String url = urlServer + graphPath + myDrives;
         Request request = getRequest(url, user);
-        Response response = httpClient.newCall(request).execute();
-        List<OCSpace> mySpaces = getSpacesFromResponse(response);
-        response.close();
-        return mySpaces;
+        try (Response response = httpClient.newCall(request).execute()) {
+            return getSpacesFromResponse(response);
+        }
     }
 
     public List<OCSpace> getMySpaces(String userName) throws IOException {
         Log.log(Level.FINE, "GET my SPACES");
         String url = urlServer + graphPath + myDrives;
         Request request = getRequest(url, userName);
-        Response response = httpClient.newCall(request).execute();
-        List<OCSpace> mySpaces = getSpacesFromResponse(response);
-        response.close();
-        return mySpaces;
+        try (Response response = httpClient.newCall(request).execute()) {
+            return getSpacesFromResponse(response);
+        }
     }
 
     public void removeSpacesOfUser() throws IOException {
@@ -92,10 +90,10 @@ public class GraphAPI extends CommonAPI {
         String url = urlServer + graphPath + drives + spaceId;
         Log.log(Level.FINE, "URL: " + url);
         Request request = deleteRequest(url, user);
-        Response response = httpClient.newCall(request).execute();
-        Log.log(Level.FINE, "Response Code: " + response.code());
-        Log.log(Level.FINE, "Response Body: " + response.body().string());
-        response.close();
+        try (Response response = httpClient.newCall(request).execute()) {
+            Log.log(Level.FINE, "Response Code: " + response.code());
+            Log.log(Level.FINE, "Response Body: " + response.body().string());
+        }
     }
 
     private Request deleteSpaceRequest(String url) {
@@ -115,10 +113,9 @@ public class GraphAPI extends CommonAPI {
         Log.log(Level.FINE, "GET id OF: " + user);
         String url = urlServer + graphPath + "me";
         Request request = getRequest(url, userName);
-        Response response = httpClient.newCall(request).execute();
-        String userId = getIdFromResponse(response);
-        response.close();
-        return userId;
+        try (Response response = httpClient.newCall(request).execute()) {
+            return getIdFromResponse(response);
+        }
     }
 
     private String getIdFromResponse(Response httpResponse) throws IOException {
@@ -157,8 +154,10 @@ public class GraphAPI extends CommonAPI {
         String url = urlServer + members + spaceId + "/root/permissions";
         Log.log(Level.FINE, "URL: " + url);
         Request request = getRequest(url, userName);
-        Response response = httpClient.newCall(request).execute();
-        List<OCSpaceMember> spaceMembers =  OCMemberJSONHandler.parse(response.body().string());
+        List<OCSpaceMember> spaceMembers;
+        try (Response response = httpClient.newCall(request).execute()) {
+            spaceMembers = OCMemberJSONHandler.parse(response.body().string());
+        }
         for (OCSpaceMember member : spaceMembers){
             Log.log(Level.FINE, "Checking " + member.getDisplayName());
             if (member.getDisplayName().equals(userName)) {
@@ -173,8 +172,9 @@ public class GraphAPI extends CommonAPI {
         String url = urlServer + graphPath + "users?%24search=%22" + userName + "%22&%24orderby=displayName";
         Log.log(Level.FINE, "URL: " + url);
         Request request = getRequest(url);
-        Response response = httpClient.newCall(request).execute();
-        return OCUserJSONHandler.parse(response.body().string());
+        try (Response response = httpClient.newCall(request).execute()) {
+            return OCUserJSONHandler.parse(response.body().string());
+        }
     }
 
     private String getPermissionId(String spaceId, String permissionName) throws IOException {
@@ -182,8 +182,10 @@ public class GraphAPI extends CommonAPI {
         String url = urlServer + members + spaceId + "/root/permissions";
         Log.log(Level.FINE, "URL: " + url);
         Request request = getRequest(url);
-        Response response = httpClient.newCall(request).execute();
-        List<OCSpacePermission> spacePermissions =  OCMemberJSONHandler.parsePermissions(response.body().string());
+        List<OCSpacePermission> spacePermissions;
+        try (Response response = httpClient.newCall(request).execute()) {
+            spacePermissions = OCMemberJSONHandler.parsePermissions(response.body().string());
+        }
         for (OCSpacePermission permission : spacePermissions){
             if (permission.getPermissionName().contains(permissionName)) {
                 Log.log(Level.FINE, "Found Permission: " + permission.getPermissionName() + " :" + permission.getPermissionId());
@@ -217,10 +219,10 @@ public class GraphAPI extends CommonAPI {
         Log.log(Level.FINE, "Body: " + jsonObj);
         RequestBody body = RequestBody.create(JSON, jsonObj.toString());
         Request request = postRequest(url, body, "Alice");
-        Response response = httpClient.newCall(request).execute();
-        Log.log(Level.FINE, "Response Code: " + response.code());
-        Log.log(Level.FINE, "Response Body: " + response.body().string());
-        response.close();
+        try (Response response = httpClient.newCall(request).execute()) {
+            Log.log(Level.FINE, "Response Code: " + response.code());
+            Log.log(Level.FINE, "Response Body: " + response.body().string());
+        }
     }
 
     private List<OCSpace> getSpacesFromResponse(Response httpResponse) throws IOException {

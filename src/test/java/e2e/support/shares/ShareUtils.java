@@ -10,6 +10,7 @@ import java.util.Map;
 import java.util.logging.Level;
 
 import e2e.model.OCShare;
+import e2e.model.ShareType;
 import e2e.support.date.DateUtils;
 import e2e.support.log.Log;
 
@@ -50,7 +51,7 @@ public class ShareUtils {
                     }
                 }
                 case "group", "user" -> {
-                    if (remoteShare.getType().equals("0")) {
+                    if (remoteShare.getType() == ShareType.PRIVATE) {
                         if (!remoteShare.getShareeName().equalsIgnoreCase(entry.getValue())) {
                             Log.log(Level.FINE, "Sharee does not match - Remote: " + remoteShare.getShareeName()
                                     + " - Expected: " + entry.getValue());
@@ -59,7 +60,7 @@ public class ShareUtils {
                     }
                 }
                 case "password" -> {
-                    if (!(remoteShare.getType().equals("3") && remoteShare.hasPassword())
+                    if (!(remoteShare.getType() == ShareType.PUBLIC_LINK && remoteShare.hasPassword())
                             && !entry.getValue().equals("\"\"")) {
                         Log.log(Level.FINE, "Password not present");
                         return false;

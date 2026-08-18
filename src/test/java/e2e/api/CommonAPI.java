@@ -168,40 +168,26 @@ public class CommonAPI {
         return request;
     }
 
-    private String getPersonalDrives(String url)
-            throws IOException {
-        Log.log(Level.FINE, "Starts: GET personal drives: " + url);
-        Request request = getRequest(url + graphDrivesEndpoint, user);
-        Response response = httpClient.newCall(request).execute();
-        String body = response.body().string();
-        response.close();
-        String personalId = DrivesJSONHandler.getPersonalDriveId(body);
-        Log.log(Level.FINE, "Personal Drive ID: " + personalId);
-        return personalId;
-    }
-
     private String getPersonalDrives(String url, String userName)
             throws IOException {
         Log.log(Level.FINE, "Starts: GET personal drives: " + url);
         Request request = getRequest(url + graphDrivesEndpoint, userName);
-        Response response = httpClient.newCall(request).execute();
-        String body = response.body().string();
-        response.close();
-        String personalId = DrivesJSONHandler.getPersonalDriveId(body);
-        Log.log(Level.FINE, "Personal Drive ID: " + personalId);
-        return personalId;
+        try (Response response = httpClient.newCall(request).execute()) {
+            String personalId = DrivesJSONHandler.getPersonalDriveId(response.body().string());
+            Log.log(Level.FINE, "Personal Drive ID: " + personalId);
+            return personalId;
+        }
     }
 
     private String getSharesDrives(String url)
             throws IOException {
-        Log.log(Level.FINE, "Starts: GET personal drives: " + url);
+        Log.log(Level.FINE, "Starts: GET shares drives: " + url);
         Request request = getRequest(url + graphDrivesEndpoint, user);
-        Response response = httpClient.newCall(request).execute();
-        String body = response.body().string();
-        response.close();
-        String sharesId = DrivesJSONHandler.getSharesDriveId(body);
-        Log.log(Level.FINE, "Shares Drive ID: " + sharesId);
-        return sharesId;
+        try (Response response = httpClient.newCall(request).execute()) {
+            String sharesId = DrivesJSONHandler.getSharesDriveId(response.body().string());
+            Log.log(Level.FINE, "Shares Drive ID: " + sharesId);
+            return sharesId;
+        }
     }
 
     private String credentialsBuilder(String userName) {
