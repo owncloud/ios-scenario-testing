@@ -7,6 +7,7 @@ import e2e.api.GraphAPI;
 import e2e.api.ShareAPI;
 import e2e.api.TrashbinAPI;
 import e2e.assertions.FileListAssertions;
+import e2e.assertions.PublicLinkAssertions;
 import e2e.pages.AppiumManager;
 import e2e.pages.FileListPage;
 import e2e.pages.FolderPickerPage;
@@ -22,7 +23,9 @@ import e2e.pages.SpacesPage;
 import e2e.pages.UploadsPage;
 import e2e.preconditions.FileListPreconditions;
 import e2e.preconditions.LoginPreconditions;
+import e2e.preconditions.PublicLinkPreconditions;
 import e2e.tasks.FileListTasks;
+import e2e.tasks.PublicLinkTasks;
 import io.appium.java_client.ios.IOSDriver;
 
 public class World {
@@ -53,6 +56,10 @@ public class World {
     private FileListPreconditions fileListPreconditions;
     private FileListTasks fileListTasks;
     private FileListAssertions fileListAssertions;
+
+    private PublicLinkPreconditions publicLinkPreconditions;
+    private PublicLinkTasks publicLinkTasks;
+    private PublicLinkAssertions publicLinkAssertions;
 
     public World() {
         this.driver = AppiumManager.getManager().getDriver();
@@ -197,5 +204,26 @@ public class World {
             fileListAssertions = new FileListAssertions(this);
         }
         return fileListAssertions;
+    }
+
+    public PublicLinkPreconditions publicLinkPreconditions() {
+        if (publicLinkPreconditions == null) {
+            publicLinkPreconditions = new PublicLinkPreconditions(this);
+        }
+        return publicLinkPreconditions;
+    }
+
+    public PublicLinkTasks publicLinkTasks() {
+        if (publicLinkTasks == null) {
+            publicLinkTasks = new PublicLinkTasks(this);
+        }
+        return publicLinkTasks;
+    }
+
+    public PublicLinkAssertions publicLinkAssertions() {
+        if (publicLinkAssertions == null) {
+            publicLinkAssertions = new PublicLinkAssertions(this);
+        }
+        return publicLinkAssertions;
     }
 }
