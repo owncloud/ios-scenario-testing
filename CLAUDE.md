@@ -13,7 +13,7 @@ End-to-end test automation for the ownCloud iOS app. Gherkin feature files drive
 - A running Appium server
 - An iOS simulator or device reachable via UDID
 - An `ownCloud.app` build placed in `src/test/resources/` (built with the `buildapp/buildapp.sh` script)
-- `local.properties` filled out (see file for required keys: `appName`, `appPackage`, `appiumURL`, `userNameDefault`, `pwdDefault`, `userAgent`, etc.)
+- `local.properties` filled out (see file for required keys: `appName`, `appPackage`, `appiumURL`, `userNameDefault`, `pwdDefault`, `userAgent`, `userToShare`, etc.)
 
 ### Execute tests
 
@@ -51,36 +51,75 @@ The build runs up to three passes automatically (`test` → `cucumberRerun1` →
 ### Source layout
 
 ```
-src/main/java/
-  ios/          – Page Object Model: CommonPage (base) + one class per screen
-  ios/AppiumManager.java   – Singleton that creates and holds the IOSDriver
-  utils/api/    – REST API helpers (FilesAPI, ShareAPI, GraphAPI, TrashbinAPI)
-  utils/entities/ – Plain data objects (OCFile, OCShare, OCSpace, …)
-  utils/log/    – Log and StepLogger wrappers
-  utils/network/, utils/parser/  – HTTP client and response parsers
-
 src/test/java/
-  io/cucumber/  – Cucumber step definitions, World, Hooks, RunCucumberTest
-  e2e/LocProperties.java  – Reads local.properties at runtime
+  e2e/
+    api/          – REST API clients (CommonAPI base + FilesAPI, ShareAPI, GraphAPI, TrashbinAPI)
+    assertions/   – Assertion classes (FileList, PrivateShare, PublicLink, SpaceMembers, Spaces)
+    hooks/        – Cucumber lifecycle hooks (Hooks.java)
+    model/        – Plain data objects (OCFile, OCShare, OCSpace, OCSpaceMember, OCSpacePermission, ShareType)
+    pages/        – Page Object Model: CommonPage (base) + one class per screen + AppiumManager
+    preconditions/– API-driven setup classes (FileList, Login, PublicLink, Shares, Spaces)
+    runner/       – RunCucumberTest (JUnit entry point)
+    steps/        – Cucumber step definitions (thin dispatchers only)
+    support/
+      date/       – DateUtils (java.time utilities)
+      log/        – Log and StepLogger wrappers
+      network/    – oCHttpClient (OkHttpClient factory)
+      parser/     – SAX/JSON response parsers
+      shares/     – ShareUtils (share domain logic: permission mapping, share validation)
+    tasks/        – UI-driven action classes (FileList, PrivateShare, PublicLink, SpaceMembers, Spaces)
+    world/        – World.java (per-scenario lazy factory)
 
 src/test/resources/io/cucumber/  – Gherkin .feature files (one per functional area)
 ```
 
-### Key design decisions
+### Layered design (ScreenPlay-lite)
 
-**Page Object Model.** All UI interaction lives in `src/main/java/ios/`. `CommonPage` holds the driver reference and provides shared low-level gestures (swipe, longPress, tap, waitById, …). Every screen subclasses it, declares `@iOSXCUITFindBy` fields and exposes higher-level methods to steps.
+Every feature area follows a strict 5-layer pattern. Steps are thin dispatchers — no logic lives in them:
 
-**World as lazy factory.** `World` (injected into every step class via Cucumber PicoContainer) lazily instantiates page objects and API clients on first access, sharing the single `IOSDriver` across all steps in a scenario.
+```
+Steps  →  Preconditions / Tasks / Assertions  →  Pages  →  API  →  Model
+```
 
-**Hooks manage lifecycle.** `@Before` activates the app; `@After` cleans up all server-side state via API (removes files, empties trashbin, deletes spaces) then terminates the app.
+- **Preconditions** set up server state via API before the UI is involved.
+- **Tasks** drive UI interactions through page objects.
+- **Assertions** verify state either in the UI (via pages) or on the server (via API).
+- **Pages** (`e2e/pages/`) hold all `@iOSXCUITFindBy` field declarations and low-level UI methods.
+- **API clients** (`e2e/api/`) make direct REST calls for setup and verification.
 
-**Two backends.** Tests tagged `@noocis` run only against oC10; tests tagged `@nooc10` run only against oCIS. Branching on `System.getProperty("backend")` appears where behaviour differs (e.g. `LoginPage.selectDrive()`).
+### World as lazy factory
 
-**Rerun files.** Failed scenarios are written to `target/cucumber-reports/rerun/rerun.txt` (and `rerun-1.txt`) so subsequent Gradle tasks can retry exactly those scenarios.
+`World` (injected into every step class via Cucumber PicoContainer) lazily instantiates all page objects, API clients, preconditions, tasks, and assertions on first access, sharing the single `IOSDriver` across all steps in a scenario.
+
+### Hooks manage lifecycle
+
+`@Before` activates the app. `@After` cleans up all server-side state via API (removes files, empties trashbin, removes spaces) then terminates the app.
+
+### Two backends
+
+Tests tagged `@noocis` run only against oC10; tests tagged `@nooc10` run only against oCIS. Branching on `System.getProperty("backend")` appears where behaviour differs (e.g. `LoginPage.selectDrive()`, space endpoint resolution in `CommonAPI`).
+
+### Appium driver
+
+`AppiumManager` (in `e2e/pages/`) is a singleton that creates and holds the `IOSDriver`. It uses `XCUITestOptions` (java-client 9.x typed options, not the deprecated `DesiredCapabilities`). Driver capabilities are configured via `local.properties` and system properties.
+
+### Key model types
+
+- `OCFile` — file/folder metadata from WebDAV responses
+- `OCShare` — share metadata; `type` field is a `ShareType` enum (`PRIVATE`, `GROUP`, `PUBLIC_LINK`, `REMOTE`)
+- `OCSpace` / `OCSpaceMember` / `OCSpacePermission` — oCIS spaces and their members
+
+### Dependencies
+
+Managed via Gradle version catalog (`gradle/libs.versions.toml`) with bundles. All dependencies are `testImplementation`. Main bundles: `cucumber`, `appium`, `http`, `commons`, `testing`.
 
 ### Configuration
 
-`local.properties` (not committed) drives both the Appium setup and API defaults. `LocProperties` (`e2e` package in test; `utils` package in main) reads it lazily as a singleton.
+`local.properties` (not committed) drives both the Appium setup and API defaults. `LocProperties` reads it lazily as a singleton.
+
+### Rerun files
+
+Failed scenarios are written to `target/cucumber-reports/rerun/rerun.txt` (and `rerun-1.txt`) so subsequent Gradle tasks can retry exactly those scenarios.
 
 ### Commit requirements
 
