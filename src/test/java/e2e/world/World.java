@@ -9,6 +9,8 @@ import e2e.api.TrashbinAPI;
 import e2e.assertions.FileListAssertions;
 import e2e.assertions.PrivateShareAssertions;
 import e2e.assertions.PublicLinkAssertions;
+import e2e.assertions.SpaceMembersAssertions;
+import e2e.assertions.SpacesAssertions;
 import e2e.pages.AppiumManager;
 import e2e.pages.FileListPage;
 import e2e.pages.FolderPickerPage;
@@ -26,9 +28,12 @@ import e2e.preconditions.FileListPreconditions;
 import e2e.preconditions.LoginPreconditions;
 import e2e.preconditions.PublicLinkPreconditions;
 import e2e.preconditions.SharesPreconditions;
+import e2e.preconditions.SpacesPreconditions;
 import e2e.tasks.FileListTasks;
 import e2e.tasks.PrivateShareTasks;
 import e2e.tasks.PublicLinkTasks;
+import e2e.tasks.SpaceMembersTasks;
+import e2e.tasks.SpacesTasks;
 import io.appium.java_client.ios.IOSDriver;
 
 public class World {
@@ -67,6 +72,12 @@ public class World {
     private SharesPreconditions sharesPreconditions;
     private PrivateShareTasks privateShareTasks;
     private PrivateShareAssertions privateShareAssertions;
+
+    private SpacesPreconditions spacesPreconditions;
+    private SpacesTasks spacesTasks;
+    private SpacesAssertions spacesAssertions;
+    private SpaceMembersTasks spaceMembersTasks;
+    private SpaceMembersAssertions spaceMembersAssertions;
 
     public World() {
         this.driver = AppiumManager.getManager().getDriver();
@@ -253,5 +264,40 @@ public class World {
             privateShareAssertions = new PrivateShareAssertions(this);
         }
         return privateShareAssertions;
+    }
+
+    public SpacesPreconditions spacesPreconditions() {
+        if (spacesPreconditions == null) {
+            spacesPreconditions = new SpacesPreconditions(this);
+        }
+        return spacesPreconditions;
+    }
+
+    public SpacesTasks spacesTasks() {
+        if (spacesTasks == null) {
+            spacesTasks = new SpacesTasks(this);
+        }
+        return spacesTasks;
+    }
+
+    public SpacesAssertions spacesAssertions() {
+        if (spacesAssertions == null) {
+            spacesAssertions = new SpacesAssertions(this);
+        }
+        return spacesAssertions;
+    }
+
+    public SpaceMembersTasks spaceMembersTasks() {
+        if (spaceMembersTasks == null) {
+            spaceMembersTasks = new SpaceMembersTasks(this);
+        }
+        return spaceMembersTasks;
+    }
+
+    public SpaceMembersAssertions spaceMembersAssertions() {
+        if (spaceMembersAssertions == null) {
+            spaceMembersAssertions = new SpaceMembersAssertions(this);
+        }
+        return spaceMembersAssertions;
     }
 }

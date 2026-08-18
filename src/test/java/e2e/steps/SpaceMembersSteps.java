@@ -1,7 +1,10 @@
-package e2e.steps;
+/**
+ * ownCloud iOS Scenario Tests
+ *
+ * @author Jesús Recio Rincón (@jesmrec)
+ */
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
+package e2e.steps;
 
 import java.io.IOException;
 import java.util.Map;
@@ -11,14 +14,11 @@ import e2e.world.World;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import e2e.support.date.DateUtils;
-import e2e.model.OCSpaceMember;
-import e2e.support.log.Log;
 import e2e.support.log.StepLogger;
 
 public class SpaceMembersSteps {
 
-    private World world;
+    private final World world;
 
     public SpaceMembersSteps(World world) {
         this.world = world;
@@ -27,71 +27,21 @@ public class SpaceMembersSteps {
     @When("Alice adds {word} to the space {word} with")
     public void add_member_space(String userName, String spaceName, DataTable table) {
         StepLogger.logCurrentStep(Level.FINE);
-        world.spaceMembersPage().addMember(userName);
         Map<String, String> fields = table.asMap(String.class, String.class);
-        for (Map.Entry<String, String> entry : fields.entrySet()) {
-            String key = entry.getKey();
-            String value = entry.getValue();
-            switch (key) {
-                case "permission" -> world.spaceMembersPage().setPermission(value);
-                case "expirationDate" -> world.spaceMembersPage().setExpirationDate(value);
-            }
-        }
-        world.spaceMembersPage().shareWithMember();
+        world.spaceMembersTasks().addMemberToSpace(userName, fields);
     }
 
     @When("Alice edits {word} from the space {word} with the following fields")
     public void edit_member_space(String userName, String spaceName, DataTable table) {
         StepLogger.logCurrentStep(Level.FINE);
-        world.spacesPage().openEditMember(userName);
         Map<String, String> fields = table.asMap(String.class, String.class);
-        for (Map.Entry<String, String> entry : fields.entrySet()) {
-            String key = entry.getKey();
-            String value = entry.getValue();
-            switch (key) {
-                case "permission" -> world.spaceMembersPage().setPermission(value);
-                case "expirationDate" -> world.spaceMembersPage().editExpirationDate(value);
-            }
-        }
-        world.spaceMembersPage().saveChanges();
+        world.spaceMembersTasks().editMemberInSpace(userName, fields);
     }
 
     @Then("{word} should be member of the space {word} with")
     public void should_be_member_of_space(String userName, String spaceName, DataTable table) throws IOException {
         StepLogger.logCurrentStep(Level.FINE);
-        OCSpaceMember member = world.graphAPI().getMemberOfSpace(spaceName, userName);
-        Log.log(Level.FINE, "Member from backend: " + member.getDisplayName() +
-                " " + member.getPermission() +
-                " " + member.getExpirationDate());
         Map<String, String> fields = table.asMap(String.class, String.class);
-        for (Map.Entry<String, String> entry : fields.entrySet()) {
-            String key = entry.getKey();
-            String value = entry.getValue();
-            switch (key) {
-                case "permission" -> {
-                    // Local validation
-                    assertTrue(world.spaceMembersPage().isUserMember(userName, value));
-                    // Remote validation
-                    assertTrue(member.getPermission().contains(value));
-                }
-                case "expirationDate" -> {
-                    // Local validation
-                    assertTrue(world.spaceMembersPage().isExpirationDateCorrect(userName, value));
-                    // Remote validation
-                    Log.log(Level.FINE, "Remote date: " + member.getExpirationDate());
-                    if (value != null) {
-                        // Normalize dates to compare them
-                        String dateLocal = DateUtils.displayedDate(value);
-                        String dateRemote = DateUtils.convertDate(member.getExpirationDate().substring(0, 10));
-                        Log.log(Level.FINE, "Days: " + value);
-                        Log.log(Level.FINE, "Date in server: " + dateRemote);
-                        Log.log(Level.FINE, "Date in local: " + dateLocal);
-                        assertEquals(dateLocal, dateRemote);
-                    } else { // if value is null, remote should be null as well
-                        assertEquals(null, member.getExpirationDate());
-                    }
-                }
-            }
-        }
+        world.spaceMembersAssertions().shouldBeMemberOfSpace(userName, spaceName, fields);
     }
 }
