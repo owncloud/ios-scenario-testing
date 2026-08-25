@@ -56,7 +56,7 @@ jobs:
           gsed -i '170,200d' ownCloud/Release\ Notes/ReleaseNotesHostViewController.swift
           grep -C 2 shouldShowReleaseNotes ownCloud/Release\ Notes/ReleaseNotesHostViewController.swift
 
-          gsed -i '144c\    OCConnectionAllowedAuthenticationMethodIDs      : @[ OCAuthenticationMethodIdentifierBasicAuth ],' ios-sdk/ownCloudSDK/Connection/OCConnection.m
+          gsed -i '144i OCConnectionAllowedAuthenticationMethodIDs      : @[ OCAuthenticationMethodIdentifierBasicAuth ],' ios-sdk/ownCloudSDK/Connection/OCConnection.m
 
           gsed -i 's|self?\.expirationDate = \.now\.addingTimeInterval(24 \* 3600 \* 7)|self?.expirationDate = Calendar.current.date(byAdding: .day, value: 1, to: Calendar.current.startOfDay(for: .now))?.addingTimeInterval(-1)|' ownCloudAppShared/Client/Sharing/ShareViewController.swift
           grep Calendar.current.startOfDay ownCloudAppShared/Client/Sharing/ShareViewController.swift
@@ -67,15 +67,20 @@ jobs:
           xcrun xcodebuild \
             -resolvePackageDependencies \
             -project ownCloud.xcodeproj \
-            -scheme ownCloud
+            -scheme ownCloud \
+            -derivedDataPath DerivedData
 
       - name: Set up derived data and build output folders
         run: |
-          mkdir -p DerivedData
+          mkdir -p DerivedData artifacts
+
+      - name: Install xcpretty
+        run: gem install xcpretty --no-document
 
       # Build the app for the iOS Simulator without code signing
       - name: Build .app for Simulator (always compatible)
         run: |
+          set -o pipefail
           # Define paths
           DERIVED_DATA="DerivedData"
           CONFIGURATION="Debug"
@@ -91,9 +96,8 @@ jobs:
             -derivedDataPath $DERIVED_DATA \
             -skipPackagePluginValidation \
             -skipMacroValidation \
-            ARCHS="x86_64 arm64" \
-            OTHER_SWIFT_FLAGS="-no-explicit-module-build"
-            build | tee build.log | xcpretty
+            CODE_SIGN_IDENTITY="-" \
+            build 2>&1 | tee build.log | xcpretty
           # Verify binary exists
           if [ ! -f "$BIN" ]; then
             echo "❌ Binary not found at $BIN"
@@ -126,33 +130,20 @@ jobs:
         run: |
           ls -l ./DerivedData/Build/Products/Debug-iphonesimulator/ownCloud.app/Frameworks/openssl.framework
 
-      # Zip the .app folder to upload as artifact
-      - name: Zip .app
-        run: |
-          echo "Zipping artifacts/ownCloud.app into ownCloud.app.zip"
-          ditto -c -k --sequesterRsrc --keepParent artifacts/ownCloud.app "ownCloud.app.zip"
-
-      # Upload the zipped .app as a GitHub Actions artifact
-      - name: Upload zipped .app
+      # Upload the .app as a GitHub Actions artifact
+      - name: Upload .app
         uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a #v7.0.1
         with:
-          name: ownCloud.app.zip
-          path: ownCloud.app.zip
+          name: ownCloud.app
+          path: artifacts/ownCloud.app
 
-      # Zip the log as artifact
-      - name: Zip build log
-        if: always()
-        run: |
-          echo "Zipping build.log into build.log.zip"
-          ditto -c -k --sequesterRsrc build.log build.log.zip || true
-
-      # Upload the zipped log as a GitHub Actions artifact
-      - name: Upload zipped build log
+      # Upload build log as artifact
+      - name: Upload build log
         if: always()
         uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a #v7.0.1
         with:
           name: build-log
-          path: build.log.zip
+          path: build.log
 
       # Clean up temporary build directories, runs even if previous steps fail
       - name: Clean build artifacts
