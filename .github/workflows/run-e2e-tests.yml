@@ -7,7 +7,7 @@ on:
         description: 'Name of the artifact containing the .app bundle'
         required: false
         type: string
-        default: 'ownCloud.app.zip'
+        default: 'ownCloud.app'
       test-tags:
         description: 'Cucumber tag expression to filter tests (e.g. @createfolder)'
         required: false
@@ -22,7 +22,7 @@ on:
         description: 'iOS Simulator device name'
         required: false
         type: string
-        default: 'iPhone 17e'
+        default: 'iPhone 16'
 
 permissions:
   contents: read
@@ -42,25 +42,24 @@ jobs:
           distribution: 'temurin'
 
       - name: Select Xcode
-        run: sudo xcode-select -s /Applications/Xcode_26.3.app
+        run: sudo xcode-select -s /Applications/Xcode_16.3.app
 
       - name: Download .app artifact
         uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 #v4.3.0
         with:
           name: ${{ inputs.artifact-name }}
+          path: src/test/resources/ownCloud.app
 
-      - name: Unzip .app to test resources
+      - name: Verify .app placement
         run: |
-          mkdir -p src/test/resources
-          ditto -x -k ownCloud.app.zip src/test/resources/
           echo "App bundle placed at src/test/resources/ownCloud.app"
-          ls -la src/test/resources/
+          ls -la src/test/resources/ownCloud.app
 
       - name: Boot iOS Simulator
         id: simulator
         run: |
           DEVICE_NAME="${{ inputs.device-name }}"
-          UDID=$(xcrun simctl list devices available | grep "$DEVICE_NAME" | head -1 | awk -F'[()]' '{print $2}')
+          UDID=$(xcrun simctl list devices available | grep -E "^\s+${DEVICE_NAME} \(" | head -1 | awk -F'[()]' '{print $2}')
           if [ -z "$UDID" ]; then
             echo "No simulator found matching '$DEVICE_NAME'"
             xcrun simctl list devices available
