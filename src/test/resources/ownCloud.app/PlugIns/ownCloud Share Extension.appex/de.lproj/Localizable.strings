@@ -812,6 +812,8 @@ Bitte verwenden Sie die App, um auf Ihre Dateien zuzugreifen.</string>
 	<string>Name der gespeicherten Suche</string>
 	<key>Name of template</key>
 	<string>Name der Vorlage</string>
+	<key>Navigate</key>
+	<string>Navigieren</string>
 	<key>Network unavailable</key>
 	<string>Netzwerk nicht verfügbar</string>
 	<key>New Folder</key>
@@ -880,6 +882,8 @@ Bitte verwenden Sie die App, um auf Ihre Dateien zuzugreifen.</string>
 	<string>Offline-Dateien verwenden</string>
 	<key>Online</key>
 	<string>Online</string>
+	<key>Open</key>
+	<string>Öffnen</string>
 	<key>Open Selected</key>
 	<string>Ausgewähltes öffnen</string>
 	<key>Open app</key>
@@ -1398,6 +1402,8 @@ Wenn Ihnen unsere App gefällt, hinterlassen Sie bitte eine AppStore-Rezension.
 	<string>Die Verknüpfung verweist auf eine URL, aber die Konfiguration dieser App untersagt das Öffnen.</string>
 	<key>The shortcut points to another item, but the configuration of this app prohibits opening it.</key>
 	<string>Die Verknüpfung verweist auf ein anderes Element, aber die Konfiguration dieser App untersagt das Öffnen.</string>
+	<key>The web app attempted to open the URL below. Opening was denied by configuration.</key>
+	<string>Die Webanwendung hat versucht die nachstehende URL zu öffnen. Das Öffnen wurde per Konfiguration abgelehnt.</string>
 	<key>The {{app.name}} share extension is not available on this system.</key>
 	<string>Die {{app.name}} Share-Extension ist auf diesem System nicht verfügbar.</string>
 	<key>Theme</key>
@@ -1524,6 +1530,8 @@ Wenn Ihnen unsere App gefällt, hinterlassen Sie bitte eine AppStore-Rezension.
 	<string>Warte auf Server-Antwort…</string>
 	<key>Warning</key>
 	<string>Warnung</string>
+	<key>Web app requests to open link</key>
+	<string>Webanwendung möchte Link öffnen</string>
 	<key>Welcome to %@</key>
 	<string>Willkommen bei %@</string>
 	<key>When activated, logs may impact performance and include sensitive information. However the logs are not subject to automatic submission to %@ servers. Sharing logs with others is sole user responsibility.</key>

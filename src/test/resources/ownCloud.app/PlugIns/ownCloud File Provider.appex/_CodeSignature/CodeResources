@@ -6,11 +6,11 @@
 	<dict>
 		<key>Info.plist</key>
 		<data>
-		/GY/zLh7CFLIZJ3mB11U3FA5SzU=
+		Q8YlcC1AhOARIpIGH4fUwP90/Lw=
 		</data>
 		<key>PLCrashReporter_CrashReporter.bundle/Info.plist</key>
 		<data>
-		VXDc9yc151q6dMk99XwLx4PPDUc=
+		98oJ+Qx4B8WykeFmd5g8dsDlV6s=
 		</data>
 		<key>PLCrashReporter_CrashReporter.bundle/PrivacyInfo.xcprivacy</key>
 		<data>
@@ -18,7 +18,7 @@
 		</data>
 		<key>PLCrashReporter_CrashReporter.bundle/_CodeSignature/CodeDirectory</key>
 		<data>
-		bsbHvW6qO5HBM8qISs9ml3sZeSM=
+		Dy5SwNZ0sKAMbPocOjHCMUtnW9w=
 		</data>
 		<key>PLCrashReporter_CrashReporter.bundle/_CodeSignature/CodeRequirements</key>
 		<data>
@@ -38,7 +38,7 @@
 		</data>
 		<key>__preview.dylib</key>
 		<data>
-		vNi55Lsa0kbD1eGSrDE1EWmbgvw=
+		JiVfKln3Qin66j4Yuz1Aw4jxxEo=
 		</data>
 		<key>ca.lproj/Localizable.strings</key>
 		<dict>
@@ -132,7 +132,7 @@
 		</dict>
 		<key>ownCloud File Provider.debug.dylib</key>
 		<data>
-		dmbweTW78I3wDTORZhXEDWTdlVo=
+		qTtzGvKn+LZiRpEw2/a3r6XiT2k=
 		</data>
 		<key>ru.lproj/Localizable.strings</key>
 		<dict>
@@ -186,7 +186,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			e1RDaci+1AILcRPIEjWxrY929+wKVEYEuxs2OEH39y0=
+			iqBpScV/jRYkMcFh3SYi+Jvsmn6IYDozZTC6KCI8xYw=
 			</data>
 		</dict>
 		<key>PLCrashReporter_CrashReporter.bundle/PrivacyInfo.xcprivacy</key>
@@ -200,7 +200,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			kx75DBFHsJaQdgZSWfNFO7Ke2rdVD2CI/wpaIoMLw3k=
+			U2TG8Ljkf0T44esz1xXwKWIP1EAYLCnVAirD0XnlMGc=
 			</data>
 		</dict>
 		<key>PLCrashReporter_CrashReporter.bundle/_CodeSignature/CodeRequirements</key>
@@ -235,7 +235,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			QyABYKSHQl2YqiMn6wRSwcBHBwyADbEdZAuazUvuJ0A=
+			Tzb2tyum8wVb8hYrLJE4JeEQ45AFo8FiCMbKy0AtYmM=
 			</data>
 		</dict>
 		<key>ca.lproj/Localizable.strings</key>
@@ -332,7 +332,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			tA94dNUuaClobDxznpzFvoAJoOS4UxFJna3d6m6a80w=
+			JU1n/BlW81Fs9ajecyzANzlCbKoYeDvnj8ddouTrYyk=
 			</data>
 		</dict>
 		<key>ru.lproj/Localizable.strings</key>

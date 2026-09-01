@@ -58,11 +58,11 @@
 		</data>
 		<key>Down_Down.bundle/Info.plist</key>
 		<data>
-		0KPjvd9KhetftlxvzcYiKllCRuI=
+		DofSZ4T2QnDyxdjegXBHwy6yYnE=
 		</data>
 		<key>Down_Down.bundle/_CodeSignature/CodeDirectory</key>
 		<data>
-		MxNBQO+Nk1x7e/ICkLy2CESevro=
+		NoKlVmXp4GVquFXLqjwdCn0Banw=
 		</data>
 		<key>Down_Down.bundle/_CodeSignature/CodeRequirements</key>
 		<data>
@@ -78,11 +78,11 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		vJPq9NQ5zmiATZD9rp+1Z4mlor8=
+		RYR6F/b2vscOwZtzPxqA+jA7/Ws=
 		</data>
 		<key>PocketSVG_PocketSVG.bundle/Info.plist</key>
 		<data>
-		6NvfvElcIL+Mj5Pj3dPVFrhZdpE=
+		Mi9mPdYZ+8H3ukuWB+ZB/z8MJNE=
 		</data>
 		<key>PocketSVG_PocketSVG.bundle/SVGColors.plist</key>
 		<data>
@@ -90,7 +90,7 @@
 		</data>
 		<key>PocketSVG_PocketSVG.bundle/_CodeSignature/CodeDirectory</key>
 		<data>
-		SOxTiCWFQkHgysg6gQTo35Eb7+U=
+		+8ghmRXw9NoIi6a/mH3G8AbnRpM=
 		</data>
 		<key>PocketSVG_PocketSVG.bundle/_CodeSignature/CodeRequirements</key>
 		<data>
@@ -110,11 +110,11 @@
 		</data>
 		<key>__preview.dylib</key>
 		<data>
-		DY/NRTEzz9bqpunMAVO70bLhtdQ=
+		INLz6uFEovbt+7jHkKI1RptKy1M=
 		</data>
 		<key>ownCloud File Provider UI.debug.dylib</key>
 		<data>
-		gqROsdg8jk+YYGv0qzIQQQchGd0=
+		GJjyieT4YSr++0BP89tfOa+VtyY=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -214,14 +214,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			HnP8qjaEWrXwSlJ9S86hGI3kPykt6WYZwd2/5HLEDxo=
+			XhXKTb7cAPW6VLxoVezzfJzqUeAp/5p4L92/hdlCJr4=
 			</data>
 		</dict>
 		<key>Down_Down.bundle/_CodeSignature/CodeDirectory</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			evHlEtuCfho6DZVuz/2v9ZfYIYLzkneSmEwmWg9U7+o=
+			jNMw/s6lgJErV6KytPSf7sigWDsEwbICZ1i2YHXCNNw=
 			</data>
 		</dict>
 		<key>Down_Down.bundle/_CodeSignature/CodeRequirements</key>
@@ -249,7 +249,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			9rECMC7JakJECVrsxDeYRI9Tc2qpeF22aEbV6vyHfNc=
+			S19hGXqkmRjNqt4o3lQ/M1adXiuZ0hjEZVTQ5PB/rnA=
 			</data>
 		</dict>
 		<key>PocketSVG_PocketSVG.bundle/SVGColors.plist</key>
@@ -263,7 +263,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			tI2ESZ8RQKWl6CZmnnZl2R1VM2UDibefaUjzgu0lc7s=
+			HEX6fwyLMD8iLyGe+F+cEziI62HSPz72FqoGRnkSB8k=
 			</data>
 		</dict>
 		<key>PocketSVG_PocketSVG.bundle/_CodeSignature/CodeRequirements</key>
@@ -298,14 +298,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			ch+N34VCaECuAi7SVR1E5xHznSzMlPgptm9DEXJGCXI=
+			8Z/2azFKkda53U3oHlUH0V/yEfe2+W6stvfA1PCKHdk=
 			</data>
 		</dict>
 		<key>ownCloud File Provider UI.debug.dylib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			gazPRmrHnH/EhGSaksobeuFcz7u9zUg2ZUt+fkR+wqM=
+			guS44TPqn5yHqgu3HA9n6O4KvAtieQPDlGZAKJxvoYw=
 			</data>
 		</dict>
 	</dict>

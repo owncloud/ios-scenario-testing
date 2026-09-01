@@ -6,11 +6,11 @@
 	<dict>
 		<key>Info.plist</key>
 		<data>
-		u3OAC23h+KAgWgVdqG6AGMbCWFI=
+		6OcAZCRU9SsRtQXt8mJUWAWdyVQ=
 		</data>
 		<key>PocketSVG_PocketSVG.bundle/Info.plist</key>
 		<data>
-		6NvfvElcIL+Mj5Pj3dPVFrhZdpE=
+		Mi9mPdYZ+8H3ukuWB+ZB/z8MJNE=
 		</data>
 		<key>PocketSVG_PocketSVG.bundle/SVGColors.plist</key>
 		<data>
@@ -18,7 +18,7 @@
 		</data>
 		<key>PocketSVG_PocketSVG.bundle/_CodeSignature/CodeDirectory</key>
 		<data>
-		SOxTiCWFQkHgysg6gQTo35Eb7+U=
+		+8ghmRXw9NoIi6a/mH3G8AbnRpM=
 		</data>
 		<key>PocketSVG_PocketSVG.bundle/_CodeSignature/CodeRequirements</key>
 		<data>
@@ -39,7 +39,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			9rECMC7JakJECVrsxDeYRI9Tc2qpeF22aEbV6vyHfNc=
+			S19hGXqkmRjNqt4o3lQ/M1adXiuZ0hjEZVTQ5PB/rnA=
 			</data>
 		</dict>
 		<key>PocketSVG_PocketSVG.bundle/SVGColors.plist</key>
@@ -53,7 +53,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			tI2ESZ8RQKWl6CZmnnZl2R1VM2UDibefaUjzgu0lc7s=
+			HEX6fwyLMD8iLyGe+F+cEziI62HSPz72FqoGRnkSB8k=
 			</data>
 		</dict>
 		<key>PocketSVG_PocketSVG.bundle/_CodeSignature/CodeRequirements</key>
