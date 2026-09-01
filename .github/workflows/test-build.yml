@@ -17,4 +17,6 @@ jobs:
   call-e2e-tests:
     needs: call-build
     uses: owncloud/ios-scenario-testing/.github/workflows/run-e2e-tests.yml@technical/ci_adaption
+    with:
+      artifact-name: ${{ needs.call-build.outputs.artifact-name }}
     secrets: inherit
