@@ -21,7 +21,7 @@ public class FolderPickerPage extends CommonPage {
     @iOSXCUITFindBy(xpath = "(//XCUIElementTypeImage[@name=\"person\"])[2]")
     private WebElement personalList;
 
-    @iOSXCUITFindBy(xpath = "(//XCUIElementTypeCell[@name=\"Files\"])[2]/XCUIElementTypeOther[1]/XCUIElementTypeOther")
+    @iOSXCUITFindBy(xpath = "(//XCUIElementTypeStaticText[@name=\"Files\"])[3]")
     private WebElement filesList;
 
     private String xpath_move = "//XCUIElementTypeButton[@name=\"Move here\"]";
