@@ -1,5 +1,5 @@
 [versions]
-cucumber = "7.34.7"
+cucumber = "8.0.4"
 apacheCommonsExec = "1.6.0"
 apacheCommonsLang = "3.21.0"
 apacheCommonsText = "1.15.0"
