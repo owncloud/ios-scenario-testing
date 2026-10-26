@@ -8,6 +8,9 @@ on:
         required: true
         type: string
 
+permissions:
+  contents: read
+
 jobs:
   call-build:
     uses: owncloud/ios-scenario-testing/.github/workflows/build-ios-app.yml@technical/ci_adaption
