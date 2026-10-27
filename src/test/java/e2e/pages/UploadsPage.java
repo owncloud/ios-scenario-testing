@@ -2,7 +2,7 @@ package e2e.pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.PageFactory;
+import io.appium.java_client.support.PageFactory;
 
 import java.util.ArrayList;
 import java.util.List;

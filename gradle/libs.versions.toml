@@ -8,7 +8,8 @@ apacheCommonsCodec = "1.23.0"
 apacheCommonsIo = "2.22.0"
 byteBuddy = "1.18.15"
 guava = "33.7.2-jre"
-javaClient = "10.1.1"
+javaClient = "11.0.0"
+selenium = "4.50.0"
 okhttp = "5.5.0"
 okio = "3.18.2"
 json = "20260814"
@@ -33,6 +34,7 @@ byte-buddy = { module = "net.bytebuddy:byte-buddy", version.ref = "byteBuddy" }
 guava = { module = "com.google.guava:guava", version.ref = "guava" }
 
 appium-java-client = { module = "io.appium:java-client", version.ref = "javaClient" }
+selenium-support = { module = "org.seleniumhq.selenium:selenium-support", version.ref = "selenium" }
 
 okhttp = { module = "com.squareup.okhttp3:okhttp", version.ref = "okhttp" }
 okio = { module = "com.squareup.okio:okio", version.ref = "okio" }
@@ -58,6 +60,7 @@ cucumber = [
 
 appium   = [
     "appium-java-client",
+    "selenium-support",
     "byte-buddy",
     "guava"
 ]
