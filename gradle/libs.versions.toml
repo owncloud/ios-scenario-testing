@@ -1,5 +1,6 @@
 [versions]
-cucumber = "7.34.7"
+cucumber = "8.0.4"
+jackson = "2.19.2"
 apacheCommonsExec = "1.6.0"
 apacheCommonsLang = "3.21.0"
 apacheCommonsText = "1.15.0"
@@ -44,6 +45,9 @@ junit = { module = "junit:junit", version.ref = "junit" }
 
 assertj-core = { module = "org.assertj:assertj-core", version.ref = "assertjCore" }
 
+jackson-databind = { module = "com.fasterxml.jackson.core:jackson-databind", version.ref = "jackson" }
+jackson-datatype-jdk8 = { module = "com.fasterxml.jackson.datatype:jackson-datatype-jdk8", version.ref = "jackson" }
+
 [bundles]
 cucumber = [
     "cucumber-java",
@@ -73,5 +77,7 @@ commons  = [
 testing  = [
     "junit",
     "assertj-core",
-    "slf4j-api"
+    "slf4j-api",
+    "jackson-databind",
+    "jackson-datatype-jdk8"
 ]
