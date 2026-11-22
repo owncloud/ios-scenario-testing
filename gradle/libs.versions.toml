@@ -2,7 +2,7 @@
 cucumber = "8.0.4"
 jackson = "2.23.0"
 apacheCommonsExec = "1.6.0"
-apacheCommonsLang = "3.21.0"
+apacheCommonsLang = "3.22.0"
 apacheCommonsText = "1.15.0"
 apacheCommonsCodec = "1.23.0"
 apacheCommonsIo = "2.22.0"
